@@ -1,0 +1,123 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+/* line 2, ../sass/components/_draft-pending-views.scss */
+body.user-logged-in .view-content tr.published-no {
+  background-color: pink;
+  border: 3px solid red;
+  overflow: hidden;
+}
+
+/* line 8, ../sass/components/_draft-pending-views.scss */
+body.user-logged-in .view-content tr.published-no.pending-draft {
+  background-color: #FFECA9;
+  border: 3px solid orange;
+  overflow: hidden;
+}
+
+/* line 14, ../sass/components/_draft-pending-views.scss */
+body.user-logged-in .view-content table.dataTable {
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+/**** Components Node for unpublished content *****/
+/* Note that drupal-bootstrap-not-cdn.min.css sets the background-color to #fff4f4 for body.is-unpublished */
+/* line 5, ../sass/components/_node.scss */
+body.user-anonymous #edit-body-etuf-fr-0-format,
+body.user-anonymous #edit-body-0-format {
+  display: none;
+}
+
+/* line 12, ../sass/components/_node.scss */
+body.user-logged-in.published-no article {
+  background-color: pink;
+  border: 3px solid hotpink;
+}
+/* line 16, ../sass/components/_node.scss */
+body.user-logged-in.published-no div.region-header h1 {
+  background-color: pink;
+  border: 3px solid hotpink;
+}
+
+/* The following code will override the body.is-unpublished background-color that drupal sets by default */
+/* line 23, ../sass/components/_node.scss */
+body.is-unpublished {
+  background-color: white;
+}
+
+/* Unpublished revision pending to overwrite the published revision */
+/* line 29, ../sass/components/_node.scss */
+body.user-logged-in.published-no.pending-draft article {
+  background-color: #FFECA9;
+  border: 3px solid orange;
+}
+/* line 33, ../sass/components/_node.scss */
+body.user-logged-in.published-no.pending-draft div.region-header h1 {
+  background-color: #FFECA9;
+  border: 3px solid orange;
+}
+
+/* line 40, ../sass/components/_node.scss */
+body.user-logged-in[class*='archiv'] article {
+  background-color: blanchedalmond;
+  border: 3px solid saddlebrown;
+}
+/* line 44, ../sass/components/_node.scss */
+body.user-logged-in[class*='archiv'] div.region-header h1 {
+  background-color: blanchedalmond;
+  border: 3px solid saddlebrown;
+}
+
+/* line 2, ../sass/anonymous/_restrictions.scss */
+body.role-is-anonymous.path-node.published-yes .region-header nav.tabs,
+body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
+  display: none !important;
+}
+
+/* line 2, ../sass/components/_status_message.scss */
+div.alert.alert-success.access_unpublished {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+/* line 5, ../sass/components/_status_message.scss */
+div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
+  font-size: x-large;
+  margin-left: 10px;
+  position: absolute;
+  bottom: -4px;
+}
+
+/* line 29, ../sass/styles.scss */
+html[lang="fr"] .english-only {
+  display: none !important;
+}
+
+/* line 33, ../sass/styles.scss */
+html[lang="en"] .french-only {
+  display: none !important;
+}
+
+/* line 37, ../sass/styles.scss */
+body > div > div.container {
+  border-right: 1px solid #99999b;
+  border-left: 1px solid #99999b;
+}
+
+/* line 42, ../sass/styles.scss */
+#wb-bnr {
+  background: #007852 !important;
+}
+
+/* line 46, ../sass/styles.scss */
+.icon.glyphicon.glyphicon-log-in {
+  min-height: 20px;
+}
+
+/* line 51, ../sass/styles.scss */
+.region.region-content-footer {
+  padding-top: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

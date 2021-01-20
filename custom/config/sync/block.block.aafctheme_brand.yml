@@ -1,0 +1,27 @@
+uuid: 5e363ddd-9c1e-4b8e-8104-150b66c6771b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.brand
+  module:
+    - system
+  theme:
+    - aafctheme
+_core:
+  default_config_hash: yA2ceTKyWYK9PAZQ8NriHRNrt6TpcuCuWbo4nI-EKCk
+id: aafctheme_brand
+theme: aafctheme
+region: branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:brand'
+settings:
+  id: 'system_menu_block:brand'
+  label: Brand
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

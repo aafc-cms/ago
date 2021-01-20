@@ -1,0 +1,29 @@
+uuid: 59aa4482-72b8-4efe-8c24-6660d1000824
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - wxt_library
+  theme:
+    - aafctheme
+third_party_settings:
+  block_class:
+    classes: col-md-12
+_core:
+  default_config_hash: 0tbnpDe4lDmzX8R-oZnej549njgAHBGcuaEqAsGHTZs
+id: aafctheme_datemodifiedblock
+theme: aafctheme
+region: content_footer
+weight: -9
+provider: null
+plugin: date_modified_block
+settings:
+  id: date_modified_block
+  label: 'Date Modified'
+  provider: wxt_library
+  label_display: '0'
+  date_format:
+    page: page
+  date_modified: tiny
+visibility: {  }

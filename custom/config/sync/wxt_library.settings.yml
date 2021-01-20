@@ -14,7 +14,7 @@ url:
 theme:
   visibility: 1
   themes:
-    grstheme_bootstrap: grstheme_bootstrap
+    aafctheme: aafctheme
     wxt_bootstrap: wxt_bootstrap
 minimized:
   options: 0
@@ -23,6 +23,6 @@ files:
     css: css
     js: js
 wxt:
-  theme: theme-gc-intranet
+  theme: theme-gcweb
 _core:
   default_config_hash: wySaZOTDOfei02XOFjTh44VOsR2nmpjHgm8Yzro2_WI

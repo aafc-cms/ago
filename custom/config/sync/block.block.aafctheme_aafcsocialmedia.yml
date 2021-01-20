@@ -1,0 +1,41 @@
+uuid: 955d509b-89b2-41b2-b6da-e85f8faa5706
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b290c5dc-03ed-4f0b-bcf3-fa489258543c'
+  module:
+    - block_class
+    - block_content
+    - system
+    - wxt_library
+  theme:
+    - aafctheme
+third_party_settings:
+  block_class:
+    classes: col-md-3
+id: aafctheme_aafcsocialmedia
+theme: aafctheme
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:b290c5dc-03ed-4f0b-bcf3-fa489258543c'
+settings:
+  id: 'block_content:b290c5dc-03ed-4f0b-bcf3-fa489258543c'
+  label: 'AAFC Social media'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  panels_title:
+    id: panels_title
+    enabled: 0
+    negate: false
+    context_mapping: {  }

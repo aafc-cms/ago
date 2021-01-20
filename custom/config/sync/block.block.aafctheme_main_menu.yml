@@ -1,0 +1,33 @@
+uuid: c74cab60-2369-45b9-85bf-920135ac39e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+    - wxt_library
+  theme:
+    - aafctheme
+_core:
+  default_config_hash: I4uZb4MsSTE13ag2UXqeYlR2ohUTh4LWyLbMvoj2TNc
+id: aafctheme_main_menu
+theme: aafctheme
+region: navigation
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility:
+  panels_title:
+    id: panels_title
+    enabled: 0
+    negate: false
+    context_mapping: {  }

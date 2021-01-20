@@ -1,0 +1,35 @@
+uuid: 3e078530-f510-4374-8b34-5e1f291bad63
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - wxt_library
+  theme:
+    - aafctheme
+_core:
+  default_config_hash: rDfD0GieZcyjvYmlABJfLEvbrf-Y-woidTTKOFzNIbc
+id: aafctheme_page_title
+theme: aafctheme
+region: header
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  panels_title:
+    id: panels_title
+    enabled: 1
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

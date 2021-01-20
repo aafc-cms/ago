@@ -1,0 +1,55 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+
+@import 'global/variables';
+//@import 'global/forms';
+
+@import 'components/draft-pending-views';
+@import 'components/node';
+@import 'anonymous/restrictions';
+@import 'components/status_message';
+
+//@import 'layouts/header';
+//@import 'layouts/footer';
+//@import 'layouts/front';
+//@import 'layouts/sidebar';
+//@import 'components/blocks/blocks_global';
+//@import 'components/_carousel';
+//@import 'components/iframe';
+//@import 'components/search';
+//@import 'components/socialmedia';
+//@import 'components/video_embed';
+//@import 'pages/landing_page';
+//@import 'pages/all_pages';
+//@import 'legacy/classes';
+//@import 'views/_viewname_view';
+
+html[lang="fr"] .english-only {
+  display: none !important;
+}
+
+html[lang="en"] .french-only {
+  display: none !important;
+}
+
+body > div > div.container {
+  border-right: 1px solid $aafctheme-border;
+  border-left: 1px solid $aafctheme-border;
+}
+
+#wb-bnr {
+  background: $aafctheme-button-color !important;
+}
+
+.icon.glyphicon.glyphicon-log-in
+{
+  min-height: 20px;
+}
+
+.region.region-content-footer
+{
+  padding-top: 20px;
+}
+

@@ -1,0 +1,269 @@
+<?php
+
+use Drupal\agri_admin\Utils;
+
+/**
+ * @file
+ * WxT Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function aafctheme_theme_suggestions_block_alter(&$suggestions, $variables) {
+
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('aafctheme_', 'wxt_bootstrap_', $suggestion);
+  }
+}
+
+/**
+ * @file
+ * WxT Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+function aafctheme_preprocess_html(&$variables) {
+  $route_match = Utils::getRouteName();
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['langID'] = $langId;
+  $theme = \Drupal\bootstrap\Bootstrap::getTheme();
+  $themedir = $theme->getPath();
+  $variables['current_path'] = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  // Add class attribute (current role names) to the body class (for styling).
+  // Ex: administrator, comms, reviewer, anonymous.
+  $roles = \Drupal::currentUser()->getRoles();
+  foreach ($roles as $role_name) {
+    $variables['attributes']['class'][] = $role_name;
+  }
+
+  // Begin logic to grab moderation state and add it to the body class for styling.
+  // This section is required for view node identify draft revisions as 'pink'.
+  // Corresponding draft pink css is in css/style.scss.
+
+  $variables['current_path'] = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  // Add node id to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $node_revision = \Drupal::routeMatch()->getParameter('node_revision');
+  $routeMatchParams = \Drupal::routeMatch()->getParameters();
+  $nid = 0;
+  $vid = 0;
+  $revision_is_object = FALSE;
+  $nodeLoaded = 0;
+  $archived = '';
+  if ($node) {
+    // Workaround for https://www.drupal.org/project/drupal/issues/2730631 .
+    // Workaround for inconsistent router behaviour, see comments in issue 2730631.
+    // TODO, follow up on issue 2730631.
+    $published = 'published-yes';
+    $is_unpublished = '';
+    $is_pending_draft = '';
+    $nodeType = '';
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+    if(is_string($node) && is_numeric($node)) {
+      $nid = $node;
+    }
+    else if (gettype($node) == 'object') {
+      $nid = $node->id();
+      $nodeType = $node->getType();
+      $vid = $node->getRevisionId();
+      // Load a single node.
+      $nodeLoaded = $node_storage->load($nid);
+    }
+
+    $variables['attributes']['class'][] = 'node-' . $nid;
+
+    if (is_string($node_revision) && is_numeric($node_revision)) {
+      $vid = $node_revision;
+    }
+
+    if (gettype($node_revision) == 'object') {
+      $revision_is_object = TRUE;
+      $vid = $node_revision->revision_id();
+    }
+
+    if ($vid == 0 && gettype($node_revision) == 'object') {
+      // Get the revision id.
+      $vid = $nodeLoaded->getRevisionId();
+    }
+
+    if ($vid) {
+      // Load the revision.
+      $this_revision = $node_revision;
+      if (!$revision_is_object) {
+        $this_revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($vid);
+      }
+      if ($this_revision->hasTranslation($langId)) {
+        // Get current language revision.
+        $this_revision = $this_revision->getTranslation($langId);
+      }
+      // Get the revisions moderation state.
+      $this_revision_state = $this_revision->get('moderation_state')->getString();
+      if ($this_revision_state != 'published' && $this_revision_state != 'archived') {
+        $published = 'published-no';
+        $is_unpublished = 'is-unpublished';
+        // Determine if revision is pending-draft (unpublished with previous published revision).
+        if (!$this_revision->isDefaultRevision()) {
+          // Since this is NOT the default revision, it means that the current revision state is not draft.
+          // So given our workflow configuration we can assume that this is a 'pending-draft'.
+          $is_pending_draft = 'pending-draft';
+        }
+      }
+      if ($this_revision_state == 'archived') {
+        $published = 'published-no-is-archived';
+        $archived = 'archived';
+      }
+      $nodeType = $this_revision->getType();
+    }
+
+    if (!empty($nodeType)) {
+      $variables['attributes']['class'][] = $nodeType;
+    }
+    $variables['attributes']['class'][] = 'node-' . $nid;
+    // Add node published status to body class.
+    $variables['attributes']['class'][] = $published;
+    if (!empty($archived)) {
+      $variables['attributes']['class'][] = $archived;
+    }
+    if (!empty($is_unpublished)) {
+      $variables['attributes']['class'][] = $is_unpublished;
+    }
+    if (!empty($is_pending_draft)) {
+      $variables['attributes']['class'][] = $is_pending_draft;
+    }
+
+  }
+  // End of logic to grab moderation state and add it to the body class for styling.
+  
+  $host = \Drupal::request()->getHost();
+  $prod = FALSE;
+  if (stripos($host, 'wip') > 0 || stripos($host, 'agr.gc.ca') > 0) {
+    $prod = TRUE;
+  }
+  // Adobe Analytics JS library.
+  if (\Drupal::currentUser()->isAnonymous() && $prod) {
+    $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmprodjs';
+  } 
+  else {
+    $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmstagingjs';
+  }
+
+
+}
+
+
+/**
+ * Implments hook_preprocess_node.
+ */
+function aafctheme_preprocess_field(&$variables, $hook) {
+  if ($variables['element']['#field_name'] == 'field_classification') {
+    $block = \Drupal\agri_admin\UtilsBlock::getRendered('employment_classification_groups');
+    $variables['empl_classification_block'] = $block;
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_textarea().
+ */
+function aafctheme_preprocess_textarea(&$variables) {
+  if (is_object($variables['attributes'])) {
+    $attribute_obj = $variables['attributes'];
+    $attr_array = $attribute_obj->toArray();
+    if (isset($attr_array['aria-describedby'])) {
+      if ($attr_array['aria-describedby'] == 'edit-body-0-summary--description') {
+        $attribute_obj->removeAttribute('aria-describedby');
+        $variables['attributes'] = $attribute_obj;
+        //\Drupal\agri_admin\AgriAdminHelper::addToLog('debug : <pre>' . print_r($attr_array,TRUE) . '</pre>' , TRUE);
+      }
+
+      if ($attr_array['aria-describedby'] == 'edit-body-etuf-fr-0-summary--description') {
+        $attribute_obj->removeAttribute('aria-describedby');
+        $variables['attributes'] = $attribute_obj;
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_input().
+ */
+function aafctheme_preprocess_input(&$variables) {
+  if (\Drupal::currentUser()->isAnonymous()) {
+    if (is_object($variables['attributes'])) {
+      $attribute_obj = $variables['attributes'];
+      $attr_array = $attribute_obj->toArray();
+      if (isset($attr_array['id']) ) {
+        if ($attr_array['id'] == 'edit-field-date-closing-0-value-date' ) {
+          $attribute_obj->removeAttribute('aria-required');
+          $variables['attributes'] = $attribute_obj;
+        }
+
+        if ($attr_array['id'] == 'edit-field-posted-0-value-date' ) {
+          $attribute_obj->removeAttribute('aria-required');
+          $variables['attributes'] = $attribute_obj;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_field_multiple_value_form().
+ */
+function aafctheme_preprocess_field_multiple_value_form(&$vars) {
+  if (!\Drupal::currentUser()->isAnonymous()) { return; }
+  // Anonymous only logic below.
+
+  // Remove weight option for multivalue fields.
+  if (isset($vars['table']['#tabledrag'])) {
+    unset($vars['table']['#tabledrag']);
+    array_pop($vars['table']['#header']);
+    foreach ($vars['table']['#rows'] as &$row) {
+      foreach ($row['data'] as $key => $rowrowdata) {
+        if (!$rowrowdata['data']) {
+          unset($row['data'][$key]);
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_fieldset().
+ */
+function aafctheme_preprocess_fieldset(&$variables) {
+  unset($variables['attributes']['required']);
+  unset($variables['attributes']['aria-required']);
+  unset($variables['attributes']['aria-invalid']);
+}
+
+
+
+/**
+ * Implements hook_preprocess_form_element_label().
+ */
+function aafctheme_preprocess_form_element_label(&$variables) {
+  if (\Drupal::currentUser()->isAnonymous()) {
+    if (isset($variables['attributes']['for']) && $variables['attributes']['for']) {
+      if ($variables['attributes']['for'] == 'edit-advanced' ) {
+        // This squelches w3c error for label that has no element.
+        // Since we have removed edit-advanced section we also adjust its label.
+        unset($variables['element']);
+        unset($variables['attributes']['for']);
+        unset($variables['attributes']['class']);
+        $variables['attributes']['class'] = 'sr-only';
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "entreprise7pro/aafctheme",
+    "type": "drupal-custom-theme",
+    "description": "AAFC theme is a sub theme of wxt_bootstrap (which it'self is also a sub theme of Bootstrap https://www.drupal.org/bootstrap) for Drupal WxT.",
+    "license": "GPL-2.0+",
+    "require": {
+      "composer/installers": "^1.2"
+    }
+}

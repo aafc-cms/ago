@@ -1,0 +1,25 @@
+uuid: 9cc2eacf-d30a-48af-aed0-4988e2cafeac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aafctheme
+_core:
+  default_config_hash: Ay7JxVDkyzI58DHuuz5I5ZzGsktewzwPp8AorHybNkQ
+id: aafctheme_sitebranding
+theme: aafctheme
+region: banner
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

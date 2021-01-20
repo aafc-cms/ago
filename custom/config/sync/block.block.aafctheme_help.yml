@@ -1,0 +1,22 @@
+uuid: e9cf8f4b-c697-4464-b196-1766ae39b423
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - aafctheme
+_core:
+  default_config_hash: 4eMiBJNSNMAbB-qQ8aoD-BtvjkUpZ7YUN9uBZty2724
+id: aafctheme_help
+theme: aafctheme
+region: help
+weight: -11
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

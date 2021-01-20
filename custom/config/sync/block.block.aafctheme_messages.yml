@@ -1,0 +1,22 @@
+uuid: b2c37254-ac6e-49ac-b93d-d29e895989ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aafctheme
+_core:
+  default_config_hash: bhu62DFASk1snGjvMt7JVIX30x2uQWxObJ83FtQNBd4
+id: aafctheme_messages
+theme: aafctheme
+region: highlighted
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
