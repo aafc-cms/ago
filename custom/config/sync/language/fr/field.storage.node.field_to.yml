@@ -1,8 +1,0 @@
-settings:
-  allowed_values:
-    -
-      label: 'Tous les employés'
-    -
-      label: Autre
-    -
-      label: 'Autres régions (pas RCN)'

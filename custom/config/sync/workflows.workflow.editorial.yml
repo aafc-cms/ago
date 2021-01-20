@@ -4,9 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - node.type.empl
     - node.type.landing_page
-    - node.type.news
     - node.type.page
   module:
     - content_moderation
@@ -65,8 +63,6 @@ type_settings:
     block_content:
       - basic
     node:
-      - empl
       - landing_page
-      - news
       - page
   default_moderation_state: draft
