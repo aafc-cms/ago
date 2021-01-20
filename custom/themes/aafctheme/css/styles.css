@@ -99,23 +99,12 @@ html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 37, ../sass/styles.scss */
-body > div > div.container {
-  border-right: 1px solid #99999b;
-  border-left: 1px solid #99999b;
-}
-
 /* line 42, ../sass/styles.scss */
-#wb-bnr {
-  background: #007852 !important;
-}
-
-/* line 46, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
