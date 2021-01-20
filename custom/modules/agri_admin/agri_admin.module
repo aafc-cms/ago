@@ -58,13 +58,13 @@ function agri_admin_preprocess_html(&$variables) {
  */
 function agri_admin_page_attachments(array &$page) {
   $user = \Drupal::currentUser();
-  if ($user->hasPermission('agrisource admin styles')) {
+  if ($user->hasPermission('aafc admin styles')) {
     $page['#attached']['library'][] = 'agri_admin/agri-admin';
     $current_route = \Drupal::routeMatch()->getRouteName();
     if ($current_route == 'content_moderation.admin_moderated_content' || $current_route == 'system.admin_content') {
       $page['#attached']['library'][] = 'agri_admin/legacy-support';
       $page['#attached']['library'][] = 'agri_admin/content-plugins-changes';
-      $page['#attached']['drupalSettings']['agrisource']['show_restricted_plugins_permissions'] = $user->hasPermission('agrisource show restricted plugins');
+      $page['#attached']['drupalSettings']['aafc']['show_restricted_plugins_permissions'] = $user->hasPermission('aafc show restricted plugins');
     }
   }
 }
@@ -126,7 +126,7 @@ function agri_admin_preprocess_views_view_field(&$variables) {
   $hasPermission = FALSE;
   if ($variables['logged_in']) {
     $user = \Drupal::currentUser();
-    $hasPermission = $user->hasPermission('agrisource pending drafts');
+    $hasPermission = $user->hasPermission('aafc pending drafts');
   }
   $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $otherLang = 'fr';
@@ -1294,92 +1294,10 @@ function agri_admin_content_moderation_notification_mail_data_alter(Drupal\Core\
   if ($entitiyLang == 'en'){
     $currentModState = $entity->get('moderation_state')->getString();
     $nType = $entity->bundle();
-    if ($nType == 'news'){
-      //only send the email when the first draft is created
-      if ($currentModState == 'draft' &&  \Drupal::currentUser()->isAnonymous()){
-        $data['to'][] = $entity->get('field_newssubmitteremail')->value;
-        $data['to'][] = $entity->get('field_newsreviewedby')->value;
-        //The following emails will be read from the settings.local.php file if specified 
-        //news_generic_email: aafc.newsatwork-nouvellesalouvrage.aac@canada.ca on prod
-        //and aafc.cmswebapps-sgcappsweb.aac@canada.ca on all other environments
-        $data['to'][] = Settings::get('news_generic_email');
-        $data['to'][] = Settings::get('comm_advisor_1');
-        $data['to'][] = Settings::get('comm_advisor_2');
-      }
-      elseif ($currentModState == 'published'){
-        //When publishing all recepients specified above will recieve an email except the comm_advisor_2
-        $data['to'][] = $entity->get('field_newssubmitteremail')->value;
-        $data['to'][] = $entity->get('field_newsreviewedby')->value;
-        $data['to'][] = Settings::get('comm_advisor_1');
-        $data['to'][] = Settings::get('news_generic_email');
-      }
-      else {
-        $data['to'] = [];
-      }
-    }
-    elseif ($nType == 'empl'){
-      //only send the email when the first draft is created
-      if ($currentModState == 'draft' &&  \Drupal::currentUser()->isAnonymous()){
-        $data['to'][] = $entity->get('field_employmentrequestoremail')->value;
-        //The following emails will be read from the settings.local.php file if specified
-        //empl_generic_email: aafc.hrcentrerh.aac@canada.ca on prod
-        //and aafc.cmswebapps-sgcappsweb.aac@canada.ca on all other environments
-        $data['to'][] = Settings::get('empl_generic_email');
-        //Get classification information to display in the email
-        $classification   = '';
-        if ($paragraph_field_items =  $entity->get('field_classification')->getValue()) {
-          $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
-          // Collect paragraph field's ids.
-          $ids = array_column($paragraph_field_items, 'target_id');
-          // Load all paragraph objects.
-          $paragraphs_objects = $paragraph_storage->loadMultiple($ids);
-          foreach ($paragraphs_objects as $paragraph) {
-            // Get field from the paragraph.
-            $groupval    = $paragraph->get('field_class_id')->value;
-            $subgroupval = $paragraph->get('field_class_sub')->value;
-            $levelval    = $paragraph->get('field_class_level')->value;
-            $tmpText     = '';
-            // Do something with $text...
-            if ($subgroupval) {
-              $tmpText = $groupval.'-'.$subgroupval.'-'.$levelval;
-            }
-            else {
-              $tmpText = $groupval.'-'.$levelval;
-            }
-            if ( strlen($classification) >0 ) {
-              $classification = $classification.', '. $tmpText;
-            }
-            else {
-              $classification = $tmpText;
-            }
-          }
-        }
-        $emplMessage = "<p>Le français suit</p>
-        <p>Your request ". "\""."<strong>[agri-admin:title]". ": (".$classification.")</strong>". "\"". " has been submitted and will be processed for publication on AgriSource by Human Resources within 2 working days.</p>" .
-        "<p>To preview this opportunity, visit:&nbsp; [agri-admin:unpublished-url]</p>" .
-        "<p>If you have any questions or concerns, please contact your&nbsp;<a data-auth='NotApplicable' 
-         href='http://intranet.agr.gc.ca/agrisourceprev/AgriDoc.do?id=1548432&amp;lang=eng' rel='noopener noreferrer' 
-         target='_blank'>Human Resource Advisor, Staffing.</a>
-         <hr />
-         <p>Votre demande relative à la possibilité d'emploi «&nbsp;<strong>[agri-admin:translation-title]". ": (".$classification.")</strong>&nbsp;» a été présentée et sera traitée aux fins de publication dans AgriSource par les Ressources humaines dans les deux jours ouvrables.</p>
-         <p>Pour voir un aperçu de cette possibilité, consultez&nbsp;:&nbsp; [agri-admin:translation-unpublished-url]</p>" .
-        "<p>Pour toute question ou préoccupation, veuillez communiquer avec votre&nbsp;<a data-auth='NotApplicable' 
-          href='http://intranet.agr.gc.ca/agrisourceprev/AgriDoc.do?id=1548428&amp;lang=fra' rel='noopener noreferrer'
-          target='_blank'>conseiller(ère) en ressources humaines responsable de la dotation.</a>";
-                          
-        $data['params']['subject'] = "Your employment opportunity " . "\"" . "[node:title]" . "\"" ." request has been submitted / Votre demande relative à la possibilité d'emploi «&nbsp;[agri-admin:translation-title]&nbsp;» a été présentée.";
-        $data['params']['message'] = $emplMessage;
-      }
-      elseif ($currentModState != 'archived') {
-        $data['to'] = [];
-      }      
-    }
     //For basic and landing page CT, default email list will be used when publishing happens and no emails will be sent when drafts are created
-    else {
-      if ($currentModState == 'draft'){
-        $data['to'] = [];
-      }      
-    }
+    if ($currentModState == 'draft'){
+      $data['to'] = [];
+    }      
   }
   if ($entitiyLang == 'fr'){
     $data['to'] = [];

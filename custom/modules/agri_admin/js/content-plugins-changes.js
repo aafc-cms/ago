@@ -57,7 +57,7 @@ var ContentPluginsChanges = function() {
           $(el).insertAfter($('select option[value=unpublish_current]'));
         }
         if ($(el).attr('value') == 'convert_bundles_on_node') {
-          if (!drupalSettings.agrisource.show_restricted_plugins_permissions) {
+          if (!drupalSettings.aafc.show_restricted_plugins_permissions) {
             $(el).attr('hidden', 'hidden');
           }
         }

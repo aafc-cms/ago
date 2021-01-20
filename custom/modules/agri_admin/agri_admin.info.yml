@@ -1,6 +1,6 @@
-name: Agri Admin
-description: 'Provides general administration features for Agrisource.'
-package: Agrisource
+name: AAFC Agri Admin
+description: 'Provides general administration features for AAFCOnline.'
+package: AAFC
 type: module
 core: 8.x
 core_version_requirement: ^8 || ^9

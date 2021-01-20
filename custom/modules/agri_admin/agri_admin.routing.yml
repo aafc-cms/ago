@@ -4,4 +4,4 @@ agri_admin.legacydcr:
 #    _title: 'Legacy DCR'
     _controller: '\Drupal\agri_admin\Controller\LegacySupportController::build'
   requirements:
-    _permission: 'agrisource admin styles'
+    _permission: 'aafc admin styles'

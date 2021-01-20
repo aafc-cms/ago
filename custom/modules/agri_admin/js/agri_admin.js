@@ -1,14 +1,14 @@
 /**
  * @file
- * Agri Admin behaviors.
+ * AAFC Agri Admin behaviors.
  */
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.agriAdmin = {
     attach: function (context, settings) {
-      Agrisource.sortMediaDisplayModes('[data-drupal-selector="edit-attributes-data-view-mode"]'); // Call this for all attach events.
-      Agrisource.sortMediaDisplayModes('[data-drupal-selector="edit-images-thumbnail-image-style"]'); // Call this for all attach events.
+      AAFCOnline.sortMediaDisplayModes('[data-drupal-selector="edit-attributes-data-view-mode"]'); // Call this for all attach events.
+      AAFCOnline.sortMediaDisplayModes('[data-drupal-selector="edit-images-thumbnail-image-style"]'); // Call this for all attach events.
       if (context == document) {
-        Agrisource.init();
+        AAFCOnline.init();
         if ($('body').hasClass('user-logged-in')) {
           // Check if the actual 'admin' user is logged in, based on the name displayed in the toolbar.
           // There is a small delay before this information is available, so set a timer.
@@ -31,7 +31,7 @@
           }
 
           //make sure in ETUF the french language is french (it defaults to english if creating node in french UI)
-          if (Agrisource.lang == 'fr') {
+          if (AAFCOnline.lang == 'fr') {
             $('#edit-langcode-0-value option[value="en"]').removeAttr("selected");
             $('#edit-langcode-0-value option[value="fr"]').attr("selected","selected");
           }
@@ -88,7 +88,7 @@
             '</form>';
             $('#edit-menu div.form-type--checkbox').prepend(disabledMenuLinkHtml);
             $('#edit-menu option').each(function(index, element) {
-              var aiguille = Agrisource.lang == 'en' ? 'disabled)' : 'désactivé)';
+              var aiguille = AAFCOnline.lang == 'en' ? 'disabled)' : 'désactivé)';
               if (~$(element).text().indexOf(aiguille)) {
                 $(element).hide();
               }
@@ -102,7 +102,7 @@
             }
             $("#menu-disabled-links-switch").click(function(e) {
               $('select.menu-parent-select').first().find('option').each(function(index, element) {
-                var aiguille = Agrisource.lang == 'en' ? 'disabled)' : 'désactivé)';
+                var aiguille = AAFCOnline.lang == 'en' ? 'disabled)' : 'désactivé)';
                 if (~$(element).text().indexOf(aiguille) > 0) {
                   var is_hidden = $(element).css('display') == 'none';
                   if (is_hidden) {
@@ -140,7 +140,7 @@
 })(jQuery, Drupal, drupalSettings);
 
 
-var Agrisource = function() {
+var AAFCOnline = function() {
   var initialized = false;   // Flag to indicate that this class has been initialized
   var form_required_valid = true; // Flag to indicate that the validation is for the News and EO forms
   var lang = 'en';           // Will be 'en' or 'fr' regardless of how the url segment is formed (currently eng or fra)
@@ -157,60 +157,60 @@ var Agrisource = function() {
 
     // Get the current UI language
     $ = jQuery;
-    Agrisource.lang = $('html').attr('lang');
+    AAFCOnline.lang = $('html').attr('lang');
 
-    if (Agrisource.isIE()) {
+    if (AAFCOnline.isIE()) {
       $('body').addClass('isIE');
     }
 
     //Determine the page type
     if ($('body').hasClass('path-frontpage')) {
-      Agrisource.page_type = 'front'; // Front page <front> ex, /en or /fr.
+      AAFCOnline.page_type = 'front'; // Front page <front> ex, /en or /fr.
     }
     else if ($('body').hasClass('employment-opportunity-request-form-page')) {
-      Agrisource.page_type = 'add-empl-special';
+      AAFCOnline.page_type = 'add-empl-special';
     }
     else if ($('body').hasClass('news-article-form-page')) {
-      Agrisource.page_type = 'add-news-special';
+      AAFCOnline.page_type = 'add-news-special';
     }
     else if ($('body').hasClass('nodeaddlanding_page')) {
-      Agrisource.page_type = 'add-landing-page';
+      AAFCOnline.page_type = 'add-landing-page';
     }
     else if ($('body').hasClass('nodeaddempl')) {
-      Agrisource.page_type = 'add-empl';
+      AAFCOnline.page_type = 'add-empl';
     }
     else if ($('body').hasClass('nodeaddnews')) {
-      Agrisource.page_type = 'add-news';
+      AAFCOnline.page_type = 'add-news';
     }
     else if ($('body').hasClass('nodeaddpage')) {
-      Agrisource.page_type = 'add-page';
+      AAFCOnline.page_type = 'add-page';
     }
     else if ($('body').hasClass('node-edit') && $('body').hasClass('page-node-type-landing-page')) {
-      Agrisource.page_type = 'edit-landing-page';
+      AAFCOnline.page_type = 'edit-landing-page';
     }
     else if ($('body').hasClass('node-edit') && $('body').hasClass('page-node-type-page')) {
-      Agrisource.page_type = 'edit-page';
+      AAFCOnline.page_type = 'edit-page';
     }
     else if ($('body').hasClass('node-edit') && $('body').hasClass('page-node-type-news')) {
-      Agrisource.page_type = 'edit-news';
+      AAFCOnline.page_type = 'edit-news';
     }
     else if ($('body').hasClass('node-edit') && $('body').hasClass('page-node-type-empl')) {
-      Agrisource.page_type = 'edit-empl';
+      AAFCOnline.page_type = 'edit-empl';
     }
     else if ($('body').hasClass('path-webform')) {
-      Agrisource.page_type = 'webforms';
+      AAFCOnline.page_type = 'webforms';
     }
     else if ($('body').hasClass('grstheme-bootstrap') && $('body').hasClass('path-node')) {
-      Agrisource.page_type = 'content'; // Content pages generated by grstheme_bootstrap.
+      AAFCOnline.page_type = 'content'; // Content pages generated by grstheme_bootstrap.
     }
     else if ($('body').hasClass('path-admin')) {
-      Agrisource.page_type = 'admin'; // Other admin page.
+      AAFCOnline.page_type = 'admin'; // Other admin page.
     }
 
-    if (Agrisource.page_type == 'edit-page' ||
-        Agrisource.page_type == 'add-page' ||
-        Agrisource.page_type == 'add-landing-page' ||
-        Agrisource.page_type == 'edit-landing-page'
+    if (AAFCOnline.page_type == 'edit-page' ||
+        AAFCOnline.page_type == 'add-page' ||
+        AAFCOnline.page_type == 'add-landing-page' ||
+        AAFCOnline.page_type == 'edit-landing-page'
     ) {
       setLayoutDefaults();
     }
@@ -223,10 +223,10 @@ var Agrisource = function() {
         // Add a copy-link icon to the unpublished link, if one exists
         var access_link = $('a.access-unpublished');
         if (access_link.length > 0) {
-          var spn = $('<span class="glyphicon glyphicon-copy" style="margin-left: 10px" title="'+(Agrisource.lang=='fr'?'Copier le lien':'Copy link')+'"></span>');
+          var spn = $('<span class="glyphicon glyphicon-copy" style="margin-left: 10px" title="'+(AAFCOnline.lang=='fr'?'Copier le lien':'Copy link')+'"></span>');
           $(access_link).parent().append(spn);
           $(spn).click(function() {
-            Agrisource.copyLink(window.location.origin + $(access_link).attr('href'));
+            AAFCOnline.copyLink(window.location.origin + $(access_link).attr('href'));
           });
         }
       }
@@ -255,19 +255,19 @@ var Agrisource = function() {
   function setLayoutDefaults() {
     // Set the layout defaults.
     var layoutElement = $("#edit-layout-selection");
-    if (Agrisource.page_type == 'add-page') {
+    if (AAFCOnline.page_type == 'add-page') {
       layoutElement.val('node_page_default_default'); // Default to the default layout value.
     }
-    if (Agrisource.page_type == 'add-landing-page') {
+    if (AAFCOnline.page_type == 'add-landing-page') {
       layoutElement.val('node_landing_page_full_default'); // Default to the default layout value.
     }
 
-    if (Agrisource.page_type == 'edit-landing-page') {
+    if (AAFCOnline.page_type == 'edit-landing-page') {
       if (layoutElement.val() == '_none') {
         layoutElement.val('node_landing_page_full_default'); // Default to the default layout value.
       }
     }
-    if (Agrisource.page_type == 'edit-page') {
+    if (AAFCOnline.page_type == 'edit-page') {
       if (layoutElement.val() == '_none') {
         layoutElement.val('node_page_default_default'); // Default to the default layout value.
       }
@@ -284,8 +284,8 @@ var Agrisource = function() {
    * Keep track of mouse movements.
    */
   function onMouseMove(event) {
-    Agrisource.mouse.x = event.clientX;
-    Agrisource.mouse.y = event.clientY;
+    AAFCOnline.mouse.x = event.clientX;
+    AAFCOnline.mouse.y = event.clientY;
   }
 
   /**
@@ -309,15 +309,15 @@ var Agrisource = function() {
     }
 
     // Display a popup message to indicate the link was copied, then fade it out
-    lang = Agrisource.lang;
+    lang = AAFCOnline.lang;
     var copied_msg = $('<div>'+(lang=='fr'?'Copié':'Copied')+'</div>').css({
       'position': 'fixed',
       'background-color': 'black',
       'border-radius': '6px',
       'color': 'white',
       'padding': '10px 15px',
-      'top': Agrisource.mouse.y,
-      'left': Agrisource.mouse.x,
+      'top': AAFCOnline.mouse.y,
+      'left': AAFCOnline.mouse.x,
       'z-index': 10700
     })
     $('body').append(copied_msg);

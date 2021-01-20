@@ -1,14 +1,14 @@
-agrisource menu helper:
-  title: 'Agrisource menu helper'
+aafc menu helper:
+  title: 'AAFC menu helper'
   description: 'When this permission is granted, when a basic page or a landing page is saved and a main navigation parent menu item is selected, the menu link translation is automatically generated and a sidebar entry is automatically created and translated provided that a parent menu item was set in the main navigation.'
-agrisource pending drafts:
-  title: 'Agrisource pending drafts'
+aafc pending drafts:
+  title: 'AAFC pending drafts'
   description: 'When this permission is granted, pending drafts (where configured in agri_admin.module code and corresponding views and css) will be flagged as orange and pending values will replace the current published values but only when "logged in" and has this permission'
-agrisource admin styles:
-  title: 'Agrisource admin styles'
+aafc admin styles:
+  title: 'AAFC admin styles'
   description: 'Use the Agrisource admin styles, needed for elevated roles that have editing priviledges'
   restrict access: true
-agrisource show restricted plugins:
-  title: 'Agrisource show restricted plugins'
+aafc show restricted plugins:
+  title: 'AAFC show restricted plugins'
   description: 'Enable this permission to display restricted access plugins like convert entity bundles, this currently affects the admin/content and admin/content/moderation pages'
   restrict access: true
