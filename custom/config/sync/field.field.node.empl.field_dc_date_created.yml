@@ -1,0 +1,24 @@
+uuid: 0e55b7e3-bc75-4146-aa4a-127c8d19a559
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_date_created
+    - node.type.empl
+  module:
+    - datetime
+id: node.empl.field_dc_date_created
+field_name: field_dc_date_created
+entity_type: node
+bundle: empl
+label: dc.date.created
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

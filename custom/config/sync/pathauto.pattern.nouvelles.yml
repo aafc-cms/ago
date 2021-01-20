@@ -1,0 +1,33 @@
+uuid: 934a2fe9-fbab-474a-be9e-13c682c5d93c
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: nouvelles
+label: Nouvelles
+type: 'canonical_entities:node'
+pattern: 'nouvelles/nouvelleslouvrage/[node:title]'
+selection_criteria:
+  b54089b5-b83d-4bca-8f03-6c9a76008c06:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b54089b5-b83d-4bca-8f03-6c9a76008c06
+  b1c1c3b5-297f-418d-891b-901d0257040c:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: b1c1c3b5-297f-418d-891b-901d0257040c
+selection_logic: and
+weight: -7
+relationships:
+  'node:langcode:language':
+    label: Language

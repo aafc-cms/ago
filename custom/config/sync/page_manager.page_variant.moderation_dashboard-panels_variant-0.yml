@@ -1,0 +1,148 @@
+uuid: 36d37735-1168-4124-9ba4-82c4553d7727
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.moderation_dashboard
+    - views.view.moderation_dashboard_content_locked
+    - views.view.moderation_dashboard_in_draft
+    - views.view.moderation_dashboard_my_content_in_review
+    - views.view.moderation_dashboard_recent_changes
+  enforced:
+    module:
+      - moderation_dashboard
+  module:
+    - panels
+    - views
+_core:
+  default_config_hash: XHjA0_Myfby6ldNgF6_8QmhgM1dfSjKsAVM1yot-FRQ
+id: moderation_dashboard-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    53cbeb2b-ea02-4bf1-9a37-25b049bc8583:
+      id: 'views_block:moderation_dashboard_recent_changes-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: -7
+      uuid: 53cbeb2b-ea02-4bf1-9a37-25b049bc8583
+      context_mapping: {  }
+    0f29eadf-5708-4a3c-804e-70550bf7ecbf:
+      id: 'views_block:moderation_dashboard_in_draft-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: -3
+      uuid: 0f29eadf-5708-4a3c-804e-70550bf7ecbf
+      context_mapping: {  }
+    6f1e3c0a-3baf-4fa7-a976-93cfa256f987:
+      id: 'views_block:moderation_dashboard_in_draft-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: -4
+      uuid: 6f1e3c0a-3baf-4fa7-a976-93cfa256f987
+      context_mapping: {  }
+    8546c763-701f-4335-a636-b39661bce800:
+      id: 'views_block:moderation_dashboard_my_content_in_review-block_4'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -2
+      uuid: 8546c763-701f-4335-a636-b39661bce800
+      context_mapping: {  }
+    a13b69c9-5687-4550-a3a0-6911e7f7067a:
+      id: 'views_block:moderation_dashboard_content_locked-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: -5
+      uuid: a13b69c9-5687-4550-a3a0-6911e7f7067a
+      context_mapping: {  }
+    fc514d95-5ede-4ed8-ab78-f43e1c93538a:
+      id: 'views_block:moderation_dashboard_my_content_in_review-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -6
+      uuid: fc514d95-5ede-4ed8-ab78-f43e1c93538a
+      context_mapping: {  }
+    1ea1d410-4b8c-4828-b149-41e1f2852e5d:
+      id: 'views_block:moderation_dashboard_recent_changes-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -3
+      uuid: 1ea1d410-4b8c-4828-b149-41e1f2852e5d
+      context_mapping: {  }
+    9b04076b-fc5f-47d2-830b-317143f7087d:
+      id: 'views_block:moderation_dashboard_my_content_in_review-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: -8
+      uuid: 9b04076b-fc5f-47d2-830b-317143f7087d
+      context_mapping: {  }
+    52173ce8-f7ad-4191-be58-70e0e348431f:
+      id: 'views_block:moderation_dashboard_my_content_in_review-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: '5'
+      region: middle
+      weight: -7
+      uuid: 52173ce8-f7ad-4191-be58-70e0e348431f
+      context_mapping: {  }
+    56de38ec-1db6-4056-9acb-7002d11c4ad4:
+      id: 'views_block:moderation_dashboard_in_draft-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: -8
+      uuid: 56de38ec-1db6-4056-9acb-7002d11c4ad4
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 4267dc51-27a4-4f19-bb07-19fe044527fa
+  label: null
+  weight: 0
+  layout: moderation_dashboard
+  layout_settings: {  }
+  page_title: 'Moderation Dashboard'
+  storage_type: page_manager
+  storage_id: moderation_dashboard-panels_variant-0
+  builder: standard
+page: moderation_dashboard
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

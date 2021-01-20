@@ -1,0 +1,20 @@
+uuid: d601a8cf-2e44-4a0b-945a-4c2a8d403025
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_french
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      entity_translation_unified_form_theme: EntityTranslationUnifiedFormInlineMode
+      entity_translation_unified_form_enable: '0'
+      untranslatable_fields_hide: '0'
+id: block_content.footer_french
+target_entity_type_id: block_content
+target_bundle: footer_french
+default_langcode: current_interface
+language_alterable: false

@@ -1,0 +1,15 @@
+uuid: 60721744-f455-4818-b125-1057a1da7a40
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  keywords: 'AgriSource home page'
+  shortlink: '[site:url]'
+  dcterms_title: Home
+  dcterms_description: 'AgriSource is the Department''s intranet site. It is a comprehensive source for AAFC corporate news, information, tools and services. It helps support our Team-based way of working as one Department and helps us to deliver on our business outcomes through '
+  dcterms_subject: 'Government on-line;Web publishing'

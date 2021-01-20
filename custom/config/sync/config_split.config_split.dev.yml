@@ -1,0 +1,24 @@
+uuid: d10ff24a-982a-4e32-8c36-bece169dd5ea
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+description: 'dev environment settings.'
+folder: modules/custom/config/splits/dev
+module:
+  dblog: 0
+  git_status: 0
+  mailsystem: 0
+  smtp: 0
+theme: {  }
+blacklist:
+  - smtp.settings
+  - swiftmailer.transport
+  - system.logging
+  - system.performance
+  - system.site
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

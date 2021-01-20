@@ -1,0 +1,29 @@
+uuid: 84efa1b8-7797-460e-8848-e015e267fe8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_type
+    - node.type.news
+    - taxonomy.vocabulary.aafc_type
+id: node.news.field_meta_type
+field_name: field_meta_type
+entity_type: node
+bundle: news
+label: 'dcterms:type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      aafc_type: aafc_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

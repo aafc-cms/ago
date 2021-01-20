@@ -1,0 +1,17 @@
+uuid: e7fe9806-c697-4a44-858f-57d05bc97752
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3O2hLDkBqWHgODHLr5cVpx1nv3DEiHLWjsW4_dFf12M
+name: slideshow
+label: 'Slideshow (555x134)'
+effects:
+  9eb4bfbd-a03e-44a1-8fc3-c616cbcf01c6:
+    uuid: 9eb4bfbd-a03e-44a1-8fc3-c616cbcf01c6
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 555
+      height: 134
+      anchor: center-center

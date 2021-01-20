@@ -1,0 +1,140 @@
+uuid: e771b24e-197e-4502-8ab6-776ba7d2a917
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: publishing
+label: Publishing
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      published: false
+      default_revision: true
+      label: Archived
+      weight: 2
+    author_reviewing:
+      published: false
+      default_revision: false
+      label: Reject
+      weight: -2
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -4
+    emergency_publish:
+      published: true
+      default_revision: true
+      label: 'Emergency Publish'
+      weight: 1
+    published:
+      published: true
+      default_revision: true
+      label: Publish
+      weight: 0
+    reject_delete:
+      published: false
+      default_revision: false
+      label: 'Reject delete'
+      weight: 5
+    review_by_reviewer:
+      published: false
+      default_revision: false
+      label: 'Send to review'
+      weight: -3
+    to_be_deleted:
+      published: false
+      default_revision: true
+      label: Delete
+      weight: -1
+    with_reviewer:
+      published: false
+      default_revision: false
+      label: 'With reviewer'
+      weight: 3
+    with_reviewer_for_delete:
+      published: false
+      default_revision: false
+      label: 'With reviewer for delete'
+      weight: 4
+  transitions:
+    delete:
+      label: 'Approve delete'
+      from:
+        - with_reviewer_for_delete
+      to: archived
+      weight: 9
+    emergency_publish:
+      label: 'Emergency publish'
+      from:
+        - draft
+        - emergency_publish
+        - published
+      to: emergency_publish
+      weight: 8
+    publish:
+      label: 'Approve publish'
+      to: published
+      weight: 2
+      from:
+        - with_reviewer
+    re_publish_archived:
+      label: 'Publish archived content'
+      from:
+        - archived
+      to: draft
+      weight: 7
+    reject:
+      label: Reject
+      from:
+        - with_reviewer
+      to: author_reviewing
+      weight: -2
+    reject_delete:
+      label: 'Reject delete'
+      from:
+        - with_reviewer_for_delete
+      to: reject_delete
+      weight: 12
+    save_as_a_draft:
+      label: 'Save as a draft'
+      from:
+        - author_reviewing
+        - draft
+        - emergency_publish
+        - published
+      to: draft
+      weight: -1
+    send_for_deletion:
+      label: 'Send for deletion'
+      from:
+        - draft
+        - emergency_publish
+        - published
+      to: to_be_deleted
+      weight: 5
+    send_to_reviewer:
+      label: 'Send to reviewer'
+      from:
+        - author_reviewing
+        - draft
+        - emergency_publish
+        - published
+      to: review_by_reviewer
+      weight: -3
+    take:
+      label: Take
+      from:
+        - review_by_reviewer
+      to: with_reviewer
+      weight: 10
+    take_for_deletion:
+      label: 'Take for deletion'
+      from:
+        - to_be_deleted
+      to: with_reviewer_for_delete
+      weight: 11
+  entity_types: {  }
+  default_moderation_state: draft

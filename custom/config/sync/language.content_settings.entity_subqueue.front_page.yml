@@ -1,0 +1,20 @@
+uuid: acef1d84-97b4-461b-9f7f-c9490995f6b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.front_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      entity_translation_unified_form_theme: EntityTranslationUnifiedFormInlineMode
+      entity_translation_unified_form_enable: '0'
+      untranslatable_fields_hide: '0'
+id: entity_subqueue.front_page
+target_entity_type_id: entity_subqueue
+target_bundle: front_page
+default_langcode: site_default
+language_alterable: false

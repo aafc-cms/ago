@@ -1,0 +1,29 @@
+uuid: 6fd76c5f-78bb-40bd-b6ab-c18254d973e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_type
+    - node.type.landing_page
+    - taxonomy.vocabulary.aafc_type
+id: node.landing_page.field_meta_type
+field_name: field_meta_type
+entity_type: node
+bundle: landing_page
+label: 'dcterms:type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      aafc_type: aafc_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

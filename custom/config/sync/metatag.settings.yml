@@ -1,0 +1,25 @@
+entity_type_groups:
+  entity_subqueue:
+    front_page:
+      basic: basic
+      dublin_core: dublin_core
+  node:
+    empl:
+      basic: basic
+      dublin_core: dublin_core
+    landing_page:
+      basic: basic
+      dublin_core: dublin_core
+    news:
+      basic: basic
+      dublin_core: dublin_core
+    page:
+      basic: basic
+      dublin_core: dublin_core
+    webform:
+      basic: basic
+      dublin_core: dublin_core
+  webform_submission:
+    publishing_and_creative_services:
+      basic: basic
+      dublin_core: dublin_core

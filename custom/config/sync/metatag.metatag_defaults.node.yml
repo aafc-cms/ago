@@ -1,0 +1,18 @@
+uuid: 29453963-8dea-4887-99d7-6a5c253ad812
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  canonical_url: '[node:url]'
+  news_keywords: '[node:field_keywords]'
+  keywords: '[node:field_keywords]'
+  dcterms_type: '[node:field_meta_type]'
+  dcterms_title: '[node:title] - [site:slogan]'
+  dcterms_language: '[language:langcode]-ca'
+  dcterms_creator: 'Agriculture and Agri-Food Canada'
+  dcterms_description: '[node:field_description] [node:summary]'
+  dcterms_subject: '[node:field_subject]'

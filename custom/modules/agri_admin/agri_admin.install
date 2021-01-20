@@ -1,0 +1,208 @@
+<?php
+
+use \Drupal\field\Entity\FieldStorageConfig;
+use \Drupal\field\Entity\FieldConfig;
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Agri Admin module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function agri_admin_install() {
+  \Drupal::service('module_installer')->install(['entity_translation_unified_form']);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function agri_admin_uninstall() {
+}
+
+
+/**
+ * Implements hook_requirements().
+ */
+/*function agri_admin_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'runtime') {
+    $value = mt_rand(0, 100);
+    $requirements['agri_admin_status'] = [
+      'title' => t('Agri Admin status'),
+      'value' => t('Agri Admin value: @value', ['@value' => $value]),
+      'severity' => $value > 50 ? REQUIREMENT_INFO : REQUIREMENT_WARNING,
+    ];
+  }
+
+  return $requirements;
+}*/
+
+/**
+ * Force disabled menu links for 'page' nodes AND add menu link for custom block library.
+ */
+function agri_admin_update_8001() {
+  // For Huan agrcms/d8#141
+  $query = \Drupal::entityQuery('node')->condition('type', 'page')
+    ->condition('status', 1);
+  $nids = $query->execute();
+  $count_success = 0;
+  foreach ($nids as $vid => $nid) {
+    $result = \Drupal\agri_admin\AgriAdminHelper::disableMenuLinkByNid($nid, 'main');
+    if ($result !== FALSE) {
+      $count_success++;
+    }
+  }
+
+  // For Deepani issue #65 agrcms/d8#65.
+  $item = \Drupal\menu_link_content\Entity\MenuLinkContent::create([
+    'link' => ['uri' => 'internal:/admin/structure/block/block-content'],
+    'title' => 'Custom block library',
+    'menu_name' => 'admin',
+    //'parent' => 'system.admin_structure',
+    'parent' => 'system.admin_content',
+  ]);
+  $options['attributes']['class'] = ['creator-only agrisource-not-for-admin-link'];
+  $item->link->options = $options;
+  $item->save();
+  return (string) "\n\r1) Updated menu links that link for $count_success basic pages and disabled those links as they are for breadcrumb only. \n\r2) Added new menu link for creators under the admin content menu.";
+}
+
+
+/**
+ * Fix source / track elements on imported content.
+ */
+function agri_admin_update_8002() {
+  // For Huan agrcms/d8#141
+  $query = \Drupal::entityQuery('node')->condition('type', 'page')
+    ->condition('status', 1);
+  $and1 = $query->orConditionGroup()
+    ->condition('body', '/track>', 'CONTAINS');
+  $and2 = $query->orConditionGroup()
+    ->condition('body', '/source>', 'CONTAINS');
+  $query->condition($and1)
+    ->condition($and2);
+  $nids = $query->execute();
+  $count_success = 0;
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  \Drupal::messenger()->addMessage("agri_admin_update_8002()", 'warning', TRUE);
+  $num_updated = 0;
+  $connection = \Drupal::database();
+  foreach ($nids as $vid => $nid) {
+    $node = $node_storage->load($nid);
+    \Drupal::messenger()->addMessage("Use a self closing source / track tag for nid = $nid title = " . $node->getTitle(), 'warning', TRUE);
+    $body_html = $node->body->value; 
+    $self_closing = preg_replace('/<source(.*?)><\/source>/is', '<source$1 />', $body_html);
+    $self_closing = preg_replace('/<track(.*?)><\/track>/is', '<track$1 />', $self_closing);
+/*    $num_updated += $connection->update('node__body')
+      ->fields([
+        'body_value' => $self_closing,
+      ])
+      ->condition('entity_id', $nid, '=')
+      ->condition('revision_id', $vid, '=')
+      ->execute();*/
+    $node->set('body', array('value' => $self_closing, 'format' => 'full_html', 'summary' => text_summary($self_closing)));
+    $node->save();
+    \Drupal::messenger()->addMessage("Saved $nid", 'warning', TRUE);
+  }
+//  \Drupal::messenger()->addMessage("Updated node__body body_value $num_updated time(s)", 'warning', TRUE);
+}
+
+/**
+ * Add new menu link to the admin/content/moderated page (view) for creators.
+ */
+function agri_admin_update_8003() {
+  // For Lakshman issue #169 agrcms/d8#169 .
+  $item = \Drupal\menu_link_content\Entity\MenuLinkContent::create([
+    'link' => ['uri' => 'internal:/admin/content/moderated'],
+    'title' => 'Moderated Content',
+    'menu_name' => 'admin',
+    'parent' => 'system.admin_content',
+  ]);
+  $options['attributes']['class'] = ['creator-only agrisource-not-for-admin-link'];
+  $item->link->options = $options;
+  $item->save();
+  return (string) "\n\r1) Created a new menu link that link to the admin/content/moderated view for creators under the admin content menu.";
+
+}
+
+//Uncomment this after next migration.
+//function agri_admin_update_8004() {
+//  agri_admin_update_8001();
+//}
+
+
+/**
+ * Change node__field_created_by from string 25 to string 100.
+ */
+function agri_admin_update_8004() {
+  $database = \Drupal::database();
+  $table = 'node__field_created_by';
+  $entity_type = 'node';
+  $field_name = 'field_created_by';
+
+  $field_storage = FieldStorageConfig::loadByName($entity_type, $field_name);
+
+  if (is_null($field_storage)) {
+    return;
+  }
+
+  $rows = NULL;
+
+  if ($database->schema()->tableExists($table)) {
+    // The table data to restore after the update is completed.
+    $rows = $database->select($table, 'n')
+      ->fields('n')
+      ->execute()
+      ->fetchAll();
+  }
+
+  $new_fields = array();
+
+  // Use existing field config for new field.
+  foreach ($field_storage->getBundles() as $bundle => $label) {
+    $field = FieldConfig::loadByName($entity_type, $bundle, $field_name);
+    $new_field = $field->toArray();
+    $new_field['field_type'] = 'string';
+    $new_field['settings'] = array();
+
+    $new_fields[] = $new_field;
+  }
+
+  // Deleting field storage which will also delete bundles(fields).
+  $new_field_storage = $field_storage->toArray();
+  $new_field_storage['type'] = 'string';
+  $new_field_storage['settings'] = array(
+    'max_length' => 100,
+    'is_ascii' => FALSE,
+    'case_sensitive' => FALSE,
+  );
+
+  $field_storage->delete();
+
+  // Purge field data now to allow new field and field_storage with same name
+  // to be created. You may need to increase batch size.
+  field_purge_batch(10);
+
+  // Create new field storage.
+  $new_field_storage = FieldStorageConfig::create($new_field_storage);
+  $new_field_storage->save();
+
+  // Create new fields.
+  foreach ($new_fields as $new_field) {
+    $new_field = FieldConfig::create($new_field);
+    $new_field->save();
+  }
+
+  // Restore existing data in the same table.
+  if (!is_null($rows)) {
+    foreach ($rows as $row) {
+      $database->insert($table)
+        ->fields((array) $row)
+        ->execute();
+    }
+  }
+
+}

@@ -17,6 +17,26 @@
         {
             "type": "composer",
             "url": "https://drupalwxt.github.io/composer-extdeps/"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/agri_admin"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/agri_reports"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/wxt_overrides"
+        },
+        {
+            "type": "path",
+            "url": "custom/themes/aafctheme"
+        },
+        {
+            "type": "path",
+            "url": "custom/config"
         }
     ],
     "scripts": {
@@ -105,6 +125,11 @@
     },
     "require": {
         "entreprise7pro/dxbase": "^3.0.0-alpha6",
+        "entreprise7pro/aafctheme": "*",
+        "entreprise7pro/agri_admin": "*",
+        "entreprise7pro/agri_reports": "*",
+        "entreprise7pro/wxt_overrides": "*",
+        "junhuang/idol_feed_api": "*",
         "drupal/linkit": "6.0-beta2 as 5.0-beta11"
     },
     "authors": [

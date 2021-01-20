@@ -1,0 +1,20 @@
+uuid: 724ec06c-4b5e-4b91-948d-6ef01360adf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.classification
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      entity_translation_unified_form_theme: EntityTranslationUnifiedFormInlineMode
+      entity_translation_unified_form_enable: '0'
+      untranslatable_fields_hide: '0'
+id: paragraph.classification
+target_entity_type_id: paragraph
+target_bundle: classification
+default_langcode: site_default
+language_alterable: false

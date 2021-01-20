@@ -1,0 +1,33 @@
+uuid: 00f3cfc4-b48e-41cf-b05a-adb582417f81
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: employment_opportunity_fr
+label: 'opportunité d''emploi'
+type: 'canonical_entities:node'
+pattern: 'ressources-humaines/possibilites-demploi-a-linterne/[node:title]'
+selection_criteria:
+  be2ee5a6-547f-4e22-884d-21824d1f8e53:
+    id: node_type
+    bundles:
+      empl: empl
+    negate: false
+    context_mapping:
+      node: node
+    uuid: be2ee5a6-547f-4e22-884d-21824d1f8e53
+  b8dbbe73-3e44-4234-a641-98a14dbbcdcd:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: b8dbbe73-3e44-4234-a641-98a14dbbcdcd
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,105 @@
+uuid: 03b2ad91-c2a5-46f5-acb5-10600d4356bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 0bVELtfx9sXhjZ6s6W-dJo8SW-IR9jiEIEylzm-2Cro
+format: rich_text
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - '-'
+            - RemoveFormat
+            - SpecialChar
+            - Superscript
+            - Subscript
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyBlock
+            - JustifyRight
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+            - Indent
+            - Outdent
+            - Blockquote
+            - Table
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - HorizontalRule
+            - DrupalImage
+            - DrupalMediaLibrary
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+        -
+          name: Editing
+          items:
+            - Maximize
+            - Undo
+            - Redo
+            - Copy
+            - Cut
+            - Paste
+  plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: urltodocument
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+    codemirror:
+      enable: true
+      startupMode: wysiwyg
+      mode: htmlmixed
+      theme: monokai
+      options:
+        lineNumbers: true
+        lineWrapping: false
+        matchBrackets: true
+        autoCloseTags: true
+        autoCloseBrackets: true
+        enableSearchTools: true
+        enableCodeFolding: true
+        enableCodeFormatting: true
+        autoFormatOnStart: true
+        autoFormatOnModeChange: true
+        autoFormatOnUncomment: true
+    tokenbrowser:
+      token_types: {  }
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 900
+    height: null

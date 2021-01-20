@@ -1,0 +1,100 @@
+uuid: 66b3fdc3-7e28-4779-ad6d-835b4b8a1f5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - Strike
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyBlock
+            - JustifyRight
+            - RemoveFormat
+            - SpecialChar
+            - Superscript
+            - Subscript
+            - Format
+            - Styles
+            - Outdent
+            - Indent
+            - HorizontalRule
+            - Table
+            - Blockquote
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - node
+            - DrupalMediaLibrary
+        -
+          name: Tools
+          items:
+            - Source
+            - ShowBlocks
+        -
+          name: Editing
+          items:
+            - Maximize
+            - Copy
+            - Cut
+            - Paste
+            - Undo
+            - Redo
+  plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: urltodocument
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+    codemirror:
+      enable: true
+      startupMode: wysiwyg
+      mode: htmlmixed
+      theme: monokai
+      options:
+        lineNumbers: true
+        lineWrapping: false
+        matchBrackets: true
+        autoCloseTags: true
+        autoCloseBrackets: true
+        enableSearchTools: true
+        enableCodeFolding: true
+        enableCodeFormatting: true
+        autoFormatOnStart: true
+        autoFormatOnModeChange: true
+        autoFormatOnUncomment: true
+    tokenbrowser:
+      token_types: {  }
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: 20M
+  max_dimensions:
+    width: 2000
+    height: 2000

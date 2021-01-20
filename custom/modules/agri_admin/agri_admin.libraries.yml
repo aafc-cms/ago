@@ -1,0 +1,45 @@
+agri-admin:
+  css:
+    component:
+      css/agri_admin.css: {}
+  js:
+    js/agri_admin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+page:
+  css:
+    component:
+      page-add-edit/css/page-edit.css: {}
+
+menu-navigation-hide-disabled:
+  css:
+    component:
+      css/menu-navigation.css: {}
+  js:
+    js/menu-navigation.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+legacy-support:
+  css:
+    component:
+      css/legacy-support.css: {}
+      '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': { type: external }
+  js:
+    js/legacy-support.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+content-plugins-changes:
+  css:
+    component:
+      css/content-plugins-changes.css: {}
+  js:
+    js/content-plugins-changes.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

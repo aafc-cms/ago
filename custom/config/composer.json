@@ -1,0 +1,8 @@
+{
+  "name": "entreprise7pro/config",
+  "type": "drupal-custom-module",
+  "require": {
+    "composer/installers": "^1.2"
+  }
+}
+

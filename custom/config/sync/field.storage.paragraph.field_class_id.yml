@@ -1,0 +1,156 @@
+uuid: ee50502e-4125-48e9-9bd6-8b0e7b66aa28
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_class_id
+field_name: field_class_id
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: AC
+      label: AC
+    -
+      value: AG
+      label: AG
+    -
+      value: AS
+      label: AS
+    -
+      value: AU
+      label: AU
+    -
+      value: BI
+      label: BI
+    -
+      value: CH
+      label: CH
+    -
+      value: CM
+      label: CM
+    -
+      value: CO
+      label: CO
+    -
+      value: CR
+      label: CR
+    -
+      value: CS
+      label: CS
+    -
+      value: DA
+      label: DA
+    -
+      value: DD
+      label: DD
+    -
+      value: EC
+      label: EC
+    -
+      value: ED
+      label: ED
+    -
+      value: EG
+      label: EG
+    -
+      value: EL
+      label: EL
+    -
+      value: EN
+      label: EN
+    -
+      value: EX
+      label: EX
+    -
+      value: FI
+      label: FI
+    -
+      value: FS
+      label: FS
+    -
+      value: GL
+      label: GL
+    -
+      value: GS
+      label: GS
+    -
+      value: GT
+      label: GT
+    -
+      value: HP
+      label: HP
+    -
+      value: IN
+      label: IN
+    -
+      value: IS
+      label: IS
+    -
+      value: LS
+      label: LS
+    -
+      value: MM
+      label: MM
+    -
+      value: MS
+      label: MS
+    -
+      value: OE
+      label: OE
+    -
+      value: OM
+      label: OM
+    -
+      value: PC
+      label: PC
+    -
+      value: PE
+      label: PE
+    -
+      value: PG
+      label: PG
+    -
+      value: PI
+      label: PI
+    -
+      value: PL
+      label: PL
+    -
+      value: PM
+      label: PM
+    -
+      value: PR
+      label: PR
+    -
+      value: PY
+      label: PY
+    -
+      value: SE
+      label: SE
+    -
+      value: SG
+      label: SG
+    -
+      value: ST
+      label: ST
+    -
+      value: TI
+      label: TI
+    -
+      value: VM
+      label: VM
+    -
+      value: ZZ
+      label: ZZ
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

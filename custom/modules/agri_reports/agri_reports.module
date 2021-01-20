@@ -1,0 +1,98 @@
+<?php
+
+use Drupal\agri_admin\AgriAdminHelper;
+use Drupal\agri_admin\Utils;
+
+/**
+ * @file
+ * Primary module hooks for AgriSource Reports module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+function agri_reports_page_attachments(array &$page) {
+  $current_route = \Drupal::routeMatch()->getRouteName();
+  if ($current_route == 'view.publish_activity_reporting.page_1') {
+    // Only load this css for the publish activity reporting view page.
+    $page['#attached']['library'][] = 'agri_reports/publish-activity';
+  }
+  if ($current_route == 'view.publish_activity_for_meta_tags.page_1') {
+    // Only load this css for the publish activity reporting view page.
+    $page['#attached']['library'][] = 'agri_reports/publish-activity-meta';
+  }
+}
+
+function agri_reports_views_data_export_row_alter(&$row, \Drupal\views\ResultRow $result, \Drupal\views\ViewExecutable $view) {
+  if ($view->id() == 'publish_activity_reporting') {
+    $date_issued = $result->_entity->get('field_issued')->value;
+
+    $row['field_issued'] = '';
+    $values = $view->getExposedInput();
+    if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
+      $date_from = $values["revision_timestamp"]['min'];
+      $date_issued_date_only = date('Y-m-d',strtotime($date_issued));
+      $date_from_date_only = date('Y-m-d',strtotime($date_from));
+      if ($date_issued_date_only < $date_from_date_only) {
+        $row['field_issued'] = 'Modified';
+      } 
+      else {
+        $row['field_issued'] = 'New';
+      }
+    }
+  } 
+}
+
+/*
+ * Implements hook_preprocess_views_view_field() for replacing current field values
+ * with calculated values
+ */
+function agri_reports_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+
+  if ($view->id() == 'publish_activity_reporting') {
+    $field = $variables['field'];
+    $row = $variables['row'];
+    $nid = $row->_entity->id();
+    $row_entity = $row->_entity;
+
+    if ($field->field == 'field_issued') {
+      $date_issued = $row_entity->get('field_issued')->value;
+      $variables['output'] = '';
+      $values = $view->getExposedInput();
+      if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
+        $date_from = $values["revision_timestamp"]['min'];
+        $date_issued_date_only = date('Y-m-d',strtotime($date_issued));
+        $date_from_date_only = date('Y-m-d',strtotime($date_from));
+        if ($date_issued_date_only < $date_from_date_only) {
+          $variables['output'] = 'Modified';
+        } 
+        else {
+          $variables['output'] = 'New';
+        }
+      }
+    }
+  } 
+}
+
+/**
+ * Implements agri_reports_views_pre_view hook.
+ */
+
+function agri_reports_views_pre_view($view, $display_id, &$args) {
+  if ($view->id() == 'publish_activity_for_meta_tags') {
+    $values = $view->getExposedInput();
+    if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
+      $date_from = $values["revision_timestamp"]['min'];
+      $values['field_issued_value'] = $date_from;
+      $view->setExposedInput($values);
+    }
+    else {
+      $values["revision_timestamp"]['min'] = ' ';
+      $values["revision_timestamp"]['max'] = ' ';
+      $values['field_issued_value'] = ' ';
+      $view->setExposedInput($values);      
+    }
+  }
+}
