@@ -1,6 +1,5 @@
 module:
   webform_clientside_validation: -1
-  aafc_page: 0
   access_unpublished: 0
   action: 0
   admin_toolbar: 0
