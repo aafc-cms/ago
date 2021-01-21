@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5a000ba30ac7e1e6f6a2232b89d0acc",
+    "content-hash": "438a06b25609e810adf435ed3f6fdb4f",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -11076,17 +11076,17 @@
         },
         {
             "name": "drupal/safedelete",
-            "version": "1.0.18",
+            "version": "1.0.19",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/safedelete.git",
-                "reference": "1.0.18"
+                "reference": "1.0.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.18.zip",
-                "reference": "1.0.18",
-                "shasum": "46d456b67a6fb5f14b827f2936a5a5ece5948d89"
+                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.19.zip",
+                "reference": "1.0.19",
+                "shasum": "c5c5be032cec04362a9852de8066be996ce8fdbf"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -11095,8 +11095,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.18",
-                    "datestamp": "1611075788",
+                    "version": "1.0.19",
+                    "datestamp": "1611211055",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13924,6 +13924,58 @@
             "time": "2020-12-24T09:42:20+00:00"
         },
         {
+            "name": "entreprise7pro/aafctheme",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/themes/aafctheme",
+                "reference": "4c9dc5c510cff4130ba5fee4828c651ad4b0c5ce"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-theme",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "AAFC theme is a sub theme of wxt_bootstrap (which it'self is also a sub theme of Bootstrap https://www.drupal.org/bootstrap) for Drupal WxT.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "entreprise7pro/agri_admin",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/agri_admin",
+                "reference": "93c453a9fc7516e74423a7c51c18ceefefcd14f2"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "entreprise7pro/agri_reports",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/agri_reports",
+                "reference": "3a83bff0206dd8c66109be34cedc7407893f9cae"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "entreprise7pro/dxbase",
             "version": "3.0.0-alpha6",
             "source": {
@@ -14160,6 +14212,22 @@
                 "source": "https://github.com/entreprise7pro/dxbase/tree/3.0.0-alpha6"
             },
             "time": "2021-01-19T22:19:10+00:00"
+        },
+        {
+            "name": "entreprise7pro/wxt_overrides",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/wxt_overrides",
+                "reference": "e1f16e593941da1fa6c8ac7976f3ac2f1f85f639"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "ezyang/htmlpurifier",
