@@ -124,7 +124,7 @@
         }
     },
     "require": {
-        "entreprise7pro/dxbase": "^3.0.0-alpha6",
+        "entreprise7pro/dxbase": "^3.0.0-alpha7",
         "entreprise7pro/aafctheme": "*",
         "entreprise7pro/agri_admin": "*",
         "entreprise7pro/agri_reports": "*",

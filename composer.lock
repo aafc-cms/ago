@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "438a06b25609e810adf435ed3f6fdb4f",
+    "content-hash": "ae2fdd2af5e2e709f85376fcee706920",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -13977,7 +13977,7 @@
         },
         {
             "name": "entreprise7pro/dxbase",
-            "version": "3.0.0-alpha6",
+            "version": "3.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/entreprise7pro/dxbase.git",
@@ -14209,7 +14209,7 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://github.com/entreprise7pro/dxbase/issues",
-                "source": "https://github.com/entreprise7pro/dxbase/tree/3.0.0-alpha6"
+                "source": "https://github.com/entreprise7pro/dxbase/tree/3.0.0-alpha7"
             },
             "time": "2021-01-19T22:19:10+00:00"
         },
