@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae2fdd2af5e2e709f85376fcee706920",
+    "content-hash": "a1cd3ba1d8bb54a60a5e431980a1eda4",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -135,6 +135,312 @@
             "time": "2020-09-16T21:11:58+00:00"
         },
         {
+            "name": "agrcmsx/aafctheme",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/themes/aafctheme",
+                "reference": "d889180f53984b6e967b1f6616a62dfffb9ea9f6"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-theme",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "AAFC theme is a sub theme of wxt_bootstrap (which it'self is also a sub theme of Bootstrap https://www.drupal.org/bootstrap) for Drupal WxT.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "agrcmsx/agri_admin",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/agri_admin",
+                "reference": "b210de0ce9f5f7ade446174eb851c93ed1027999"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "agrcmsx/agri_reports",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/agri_reports",
+                "reference": "e1fdc5d7ea5a12e5937adbd96aace998f8bc94b9"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "agrcmsx/dxbase",
+            "version": "3.0.0-alpha7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/agrcmsx/dxbase.git",
+                "reference": "87d0a150f29608aa63facf410772ba33e06389b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/87d0a150f29608aa63facf410772ba33e06389b8",
+                "reference": "87d0a150f29608aa63facf410772ba33e06389b8",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2",
+                "cweagans/composer-patches": "^1.6.7",
+                "drupal/access_unpublished": "^1.0",
+                "drupal/autologout": "^1.3",
+                "drupal/better_exposed_filters": "^5.0@beta",
+                "drupal/bigmenu": "^2.0",
+                "drupal/clientside_validation": "^3.0",
+                "drupal/conditional_fields": "^1.0",
+                "drupal/config_ignore": "2.x-dev@dev",
+                "drupal/config_split": "^1.6",
+                "drupal/config_update": "^1.7",
+                "drupal/console": "^1.9",
+                "drupal/content_lock": "^2.0",
+                "drupal/content_moderation_notifications": "3.x-dev",
+                "drupal/convert_bundles": "^1.0",
+                "drupal/core-composer-scaffold": "*",
+                "drupal/devel": "^4.0",
+                "drupal/devel_entity_updates": "^3.0",
+                "drupal/devel_kint_extras": "^1.0",
+                "drupal/dynamic_entity_reference": "^2.0@alpha",
+                "drupal/entity_translation_unified_form": "^1.0",
+                "drupal/entityqueue": "^1.0",
+                "drupal/file_delete": "^1.0",
+                "drupal/filehash": "^1.4",
+                "drupal/form_options_attributes": "^2.0",
+                "drupal/formblock": "^2.0.0-beta2",
+                "drupal/git_status": "^1.0",
+                "drupal/honeypot": "^2.0.1",
+                "drupal/jquery_ui_datepicker": "^1.0",
+                "drupal/jsonapi_explorer": "^1.0",
+                "drupal/libraries": "^3.0@beta",
+                "drupal/link_attributes": "^1.10",
+                "drupal/linkchecker": "^1.0@alpha",
+                "drupal/linkit": "6.0-beta2 as 5.0-beta11",
+                "drupal/memcache": "^2.0",
+                "drupal/menu_admin_per_menu": "^1.3",
+                "drupal/moderated_content_bulk_publish": "^2.0",
+                "drupal/purge": "^3.0@beta",
+                "drupal/recreate_block_content": "2.x-dev",
+                "drupal/safedelete": "^1.0.19",
+                "drupal/scanner": "1.x-dev",
+                "drupal/sharedemail": "^2.1",
+                "drupal/smtp": "1.x-dev",
+                "drupal/swiftmailer": "^2.0",
+                "drupal/telephone_validation": "^2.3",
+                "drupal/token": "~1.0",
+                "drupal/ultimate_cron": "^2.0@alpha",
+                "drupal/varnish_purger": "^1.12",
+                "drupal/views_data_export": "^1.0",
+                "drupal/views_published_or_roles": "^1.0",
+                "drupal/w3c_validator": "^1.4",
+                "drupal/warmer": "^1.1",
+                "drupal/workflow": "^1.4",
+                "drupalwxt/wxt": "dev-8.x-3.x",
+                "drush/drush": "^10.0",
+                "psr/container": "^1.0",
+                "scssphp/scssphp": "^1.1"
+            },
+            "require-dev": {
+                "behat/behat": "^3.0",
+                "behat/mink": "~1.7",
+                "behat/mink-extension": "*",
+                "behat/mink-goutte-driver": "*",
+                "behat/mink-selenium2-driver": "*",
+                "composer/composer": "^1.4",
+                "drupal/coder": "^8.3.7",
+                "drupal/drupal-extension": "~3.4.0",
+                "jcalderonzumba/gastonjs": "~1.0.2",
+                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+                "mikey179/vfsstream": "~1.2",
+                "pdepend/pdepend": "2.1.0",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^4.8.35 || ^6.1",
+                "sebastian/phpcpd": "*",
+                "squizlabs/php_codesniffer": "3.*",
+                "symfony/css-selector": "~2.8|~3.0",
+                "symfony/phpunit-bridge": "^3.4.3"
+            },
+            "type": "project",
+            "extra": {
+                "merge-plugin": {
+                    "include": [
+                        "html/modules/contrib/webform/composer.libraries.json"
+                    ]
+                },
+                "drupal-scaffold": {
+                    "locations": {
+                        "web-root": "html/"
+                    }
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset",
+                    "custom-module",
+                    "custom-theme"
+                ],
+                "installer-paths": {
+                    "html/core": [
+                        "type:drupal-core"
+                    ],
+                    "html/libraries/{$name}": [
+                        "type:drupal-console-library",
+                        "type:drupal-library",
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ],
+                    "html/modules/custom/{$name}": [
+                        "drupal/wxt_library",
+                        "type:drupal-custom-module"
+                    ],
+                    "html/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "html/profiles/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "html/themes/custom/{$name}": [
+                        "drupal/wxt_bootstrap",
+                        "type:drupal-custom-theme"
+                    ],
+                    "html/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/contrib/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "composer-exit-on-patch-failure": true,
+                "enable-patching": true,
+                "patchLevel": {
+                    "drupal/core": "-p2"
+                },
+                "patches": {
+                    "drupal/core": {
+                        "Node previews are cached by dynamic page cache": "https://www.drupal.org/files/issues/2020-04-13/d8_node_preview.patch",
+                        "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
+                        "core views module fix for breadcrumb title and page title": "https://www.drupal.org/files/issues/2020-08-06/2716019-99-d88x.patch",
+                        "Improve wysiwyg entity embed media dialog add label to media hyperlinked to media": "https://www.drupal.org/files/issues/2020-11-11/D9-add_label_and_link_to_EditorMediaDialog-3182027-6.patch",
+                        "core views module fix for contextual filter": "https://www.drupal.org/files/issues/2628130-11.patch",
+                        "safedelete entity_translation_unified_form form set error squelch noise about #parent element": "https://www.drupal.org/files/issues/2019-08-31/3027240-12.patch",
+                        "w3c valid self closing source and track tags": "https://www.drupal.org/files/issues/2020-07-13/D89x-self_closing_correct-2857273-13.patch",
+                        "allow field groups to be compatible": "https://www.drupal.org/files/issues/2020-02-05/2546212-119.patch",
+                        "remove hreflang attribute from language switcher li element": "https://www.drupal.org/files/issues/2019-06-05/2454289-82.patch",
+                        "Node preview block visibility": "https://www.drupal.org/files/issues/2020-06-30/D888-preview_block-2890758-50.patch",
+                        "Node preview current language": "https://www.drupal.org/files/issues/2020-06-20/node-preview_current_language-3150728-12.patch",
+                        "Language negotiation core fix, needed by access_unpublished and content moderation for forward draft revisions in non default language.": "https://www.drupal.org/files/issues/2019-05-30/drupal-2951294-21-fix-fallback.patch",
+                        "Harden SubProcess process plugin - Please remove this patch prior to upgrading to Drupal 8.9.x or Drupal 9.x.": "https://www.drupal.org/files/issues/2020-07-15/3126063-30.patch",
+                        "Options module uses '_none' as a special value.": "https://www.drupal.org/files/issues/2020-08-25/1585930-56.patch"
+                    },
+                    "drupal/access_unpublished": {
+                        "Adds a twig extension for access unpublished hash key link, patch 9.": "https://www.drupal.org/files/issues/2019-11-21/access_unpublished-3054536-9.patch",
+                        "Fix token-create while editing a French node": "https://www.drupal.org/files/issues/2019-03-20/access_unpublished-create_per_language_tokens-2958800-3.patch",
+                        "Edge case can result in null route - hasPendingRevision() validate for null.": "https://www.drupal.org/files/issues/2019-12-09/access_unpublished-TypeError_hasPendingRevision_null_fix-3099663-2.patch"
+                    },
+                    "drupal/bootstrap": {
+                        "views submit button name attribute cannot be empty for w3c": "https://www.drupal.org/files/issues/2020-07-10/3061891-27.patch",
+                        "fix array_unique warnings on node/49 page": "https://www.drupal.org/files/issues/2020-09-29/bootstrap-3173776-3.patch"
+                    },
+                    "drupal/entity_embed": {
+                        "entity_embed-remove_image_attributes_from_div-3086162": "https://www.drupal.org/files/issues/2020-06-15/entity_embed-remove_image_attributes_from_div-3086162-13_0.patch"
+                    },
+                    "drupal/file_delete": {
+                        "Add functionality to immediately delete files and override usage check": "https://www.drupal.org/files/issues/2020-10-20/3115158-6.patch"
+                    },
+                    "drupal/linkit": {
+                        "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2021-01-14/3078075-22.patch"
+                    },
+                    "drupal/lightning_media": {
+                        "Bulk media upload should have an option to select the target media entity bundle": "https://www.drupal.org/files/issues/2019-11-29/lightning_bulk_upload_form-3097516-2.patch"
+                    },
+                    "drupal/linkchecker": {
+                        "Extraction status": "https://www.drupal.org/files/issues/2020-12-08/3184613-extraction-status.patch",
+                        "Broken links view should not show status code -1": "https://www.drupal.org/files/issues/2020-12-17/3118914-4.patch",
+                        "Update empty value for last_check field on broken links report": "https://www.drupal.org/files/issues/2020-12-25/3112537-12.patch",
+                        "Auto-select extractor if there is only one available": "https://www.drupal.org/files/issues/2020-12-18/3133925-2.patch",
+                        "Undefined offset error fix": "https://www.drupal.org/files/issues/2020-08-24/undefined-offset-error-3065045-13.patch"
+                    },
+                    "drupal/moderation_sidebar": {
+                        "Synchronize moderation states between all translations of the entity": "https://www.drupal.org/files/issues/2020-06-17/sync_all_translations_states-3143559-18.patch"
+                    },
+                    "drupal/token": {
+                        "Token module patch issue 2906445.": "https://www.drupal.org/files/issues/2020-01-04/2906445-token-entity-reference-returns-default-language-5.patch"
+                    },
+                    "drupal/scanner": {
+                        "Support field translations for search and replace and other fixes.": "https://www.drupal.org/files/issues/2020-08-19/scanner-handle_languages_for_fields-3154633-10.patch",
+                        "Allow creator role to use the search and replace functionality.": "https://www.drupal.org/files/issues/2020-06-22/scanner-grant_without_administer_nodes-3153873-2.patch"
+                    },
+                    "drupal/views_data_export": {
+                        "Allow altering row data for csv export, adds a hook called hook_views_data_export_row_alter": "https://www.drupal.org/files/issues/2020-08-18/views-data-export-row-hook-3015117-7.patch",
+                        "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
+                    },
+                    "drupal/wxt_bootstrap": {
+                        "W3C - make image twig output empty ALT attribute when no ALT text is provided": "https://www.drupal.org/files/issues/2021-01-19/D9-W3C-make-image-twig-output-empty-ALT-attribute-when-no-ALT-text-is-provided-3193622-5.patch",
+                        "WCAG - Add roles to all menu UL LI and AHREF / LINK 3164631": "https://www.drupal.org/files/issues/2020-10-16/wcag-add-roles-to-all-menu-ul-li-ahref-link-3164631-17.patch",
+                        "WCAG - unnecessary roles.": "https://www.drupal.org/files/issues/2020-12-17/wxt_bootstrap-w3c_warnings_unnecessary_roles-3154001-11.patch"
+                    }
+                },
+                "patches-ignore": {
+                    "acquia/lightning": {
+                        "drupal/core": {
+                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                        }
+                    },
+                    "drupal/lightning_core": {
+                        "drupal/core": {
+                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                        }
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
+            "support": {
+                "issues": "https://github.com/agrcmsx/dxbase/issues",
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.0-alpha7"
+            },
+            "time": "2021-01-22T17:47:51+00:00"
+        },
+        {
+            "name": "agrcmsx/wxt_overrides",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/wxt_overrides",
+                "reference": "6b8e73884634653af6e02e4a0f089ab694896f57"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "alchemy/zippy",
             "version": "0.4.9",
             "source": {
@@ -260,16 +566,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.19",
+            "version": "3.171.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e786e4a8b2ec85b258833d0570ff6b61348cbdb6"
+                "reference": "0455d92bb12d44f80db96a4e70861d186063e9e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e786e4a8b2ec85b258833d0570ff6b61348cbdb6",
-                "reference": "e786e4a8b2ec85b258833d0570ff6b61348cbdb6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0455d92bb12d44f80db96a4e70861d186063e9e5",
+                "reference": "0455d92bb12d44f80db96a4e70861d186063e9e5",
                 "shasum": ""
             },
             "require": {
@@ -344,16 +650,16 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.19"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.21"
             },
-            "time": "2021-01-15T19:26:11+00:00"
+            "time": "2021-01-21T19:15:43+00:00"
         },
         {
             "name": "bower-asset/cropper",
             "version": "v2.3.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:fengyuanchen/cropper.git",
+                "url": "https://github.com/fengyuanchen/cropper.git",
                 "reference": "30c58b29ee21010e17e58ebab165fbd84285c685"
             },
             "dist": {
@@ -5170,7 +5476,7 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.1.2",
+            "version": "9.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -5214,7 +5520,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.1.2"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.1.3"
             },
             "time": "2020-08-07T22:30:13+00:00"
         },
@@ -9621,7 +9927,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.15",
-                    "datestamp": "1607188979",
+                    "datestamp": "1611210662",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13922,312 +14228,6 @@
                 "source": "https://github.com/oscarotero/Embed/tree/v3.4.13"
             },
             "time": "2020-12-24T09:42:20+00:00"
-        },
-        {
-            "name": "entreprise7pro/aafctheme",
-            "version": "3.0.x-dev",
-            "dist": {
-                "type": "path",
-                "url": "custom/themes/aafctheme",
-                "reference": "4c9dc5c510cff4130ba5fee4828c651ad4b0c5ce"
-            },
-            "require": {
-                "composer/installers": "^1.2"
-            },
-            "type": "drupal-custom-theme",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "AAFC theme is a sub theme of wxt_bootstrap (which it'self is also a sub theme of Bootstrap https://www.drupal.org/bootstrap) for Drupal WxT.",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "entreprise7pro/agri_admin",
-            "version": "3.0.x-dev",
-            "dist": {
-                "type": "path",
-                "url": "custom/modules/agri_admin",
-                "reference": "93c453a9fc7516e74423a7c51c18ceefefcd14f2"
-            },
-            "require": {
-                "composer/installers": "^1.2"
-            },
-            "type": "drupal-custom-module",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "entreprise7pro/agri_reports",
-            "version": "3.0.x-dev",
-            "dist": {
-                "type": "path",
-                "url": "custom/modules/agri_reports",
-                "reference": "3a83bff0206dd8c66109be34cedc7407893f9cae"
-            },
-            "require": {
-                "composer/installers": "^1.2"
-            },
-            "type": "drupal-custom-module",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "entreprise7pro/dxbase",
-            "version": "3.0.0-alpha7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/entreprise7pro/dxbase.git",
-                "reference": "d46b60c6e2080d43f1e7f655847ab0489f72f401"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/entreprise7pro/dxbase/zipball/d46b60c6e2080d43f1e7f655847ab0489f72f401",
-                "reference": "d46b60c6e2080d43f1e7f655847ab0489f72f401",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.2",
-                "cweagans/composer-patches": "^1.6.7",
-                "drupal/access_unpublished": "^1.0",
-                "drupal/autologout": "^1.3",
-                "drupal/better_exposed_filters": "^5.0@beta",
-                "drupal/bigmenu": "^2.0",
-                "drupal/clientside_validation": "^3.0",
-                "drupal/conditional_fields": "^1.0",
-                "drupal/config_ignore": "2.x-dev@dev",
-                "drupal/config_split": "^1.6",
-                "drupal/config_update": "^1.7",
-                "drupal/console": "^1.9",
-                "drupal/content_lock": "^2.0",
-                "drupal/content_moderation_notifications": "3.x-dev",
-                "drupal/convert_bundles": "^1.0",
-                "drupal/core-composer-scaffold": "*",
-                "drupal/devel": "^4.0",
-                "drupal/devel_entity_updates": "^3.0",
-                "drupal/devel_kint_extras": "^1.0",
-                "drupal/dynamic_entity_reference": "^2.0@alpha",
-                "drupal/entity_translation_unified_form": "^1.0",
-                "drupal/entityqueue": "^1.0",
-                "drupal/file_delete": "^1.0",
-                "drupal/filehash": "^1.4",
-                "drupal/form_options_attributes": "^2.0",
-                "drupal/formblock": "^2.0.0-beta2",
-                "drupal/git_status": "^1.0",
-                "drupal/honeypot": "^2.0.1",
-                "drupal/jquery_ui_datepicker": "^1.0",
-                "drupal/jsonapi_explorer": "^1.0",
-                "drupal/libraries": "^3.0@beta",
-                "drupal/link_attributes": "^1.10",
-                "drupal/linkchecker": "^1.0@alpha",
-                "drupal/linkit": "6.0-beta2 as 5.0-beta11",
-                "drupal/memcache": "^2.0",
-                "drupal/menu_admin_per_menu": "^1.3",
-                "drupal/moderated_content_bulk_publish": "^2.0",
-                "drupal/purge": "^3.0@beta",
-                "drupal/recreate_block_content": "2.x-dev",
-                "drupal/safedelete": "^1.0.18",
-                "drupal/scanner": "1.x-dev",
-                "drupal/sharedemail": "^2.1",
-                "drupal/smtp": "1.x-dev",
-                "drupal/swiftmailer": "^2.0",
-                "drupal/telephone_validation": "^2.3",
-                "drupal/token": "~1.0",
-                "drupal/ultimate_cron": "^2.0@alpha",
-                "drupal/varnish_purger": "^1.12",
-                "drupal/views_data_export": "^1.0",
-                "drupal/views_published_or_roles": "^1.0",
-                "drupal/w3c_validator": "^1.4",
-                "drupal/warmer": "^1.1",
-                "drupal/workflow": "^1.4",
-                "drupalwxt/wxt": "dev-8.x-3.x",
-                "drush/drush": "^10.0",
-                "psr/container": "^1.0",
-                "scssphp/scssphp": "^1.1"
-            },
-            "require-dev": {
-                "behat/behat": "^3.0",
-                "behat/mink": "~1.7",
-                "behat/mink-extension": "*",
-                "behat/mink-goutte-driver": "*",
-                "behat/mink-selenium2-driver": "*",
-                "composer/composer": "^1.4",
-                "drupal/coder": "^8.3.7",
-                "drupal/drupal-extension": "~3.4.0",
-                "jcalderonzumba/gastonjs": "~1.0.2",
-                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-                "mikey179/vfsstream": "~1.2",
-                "pdepend/pdepend": "2.1.0",
-                "phpmd/phpmd": "@stable",
-                "phpunit/phpunit": "^4.8.35 || ^6.1",
-                "sebastian/phpcpd": "*",
-                "squizlabs/php_codesniffer": "3.*",
-                "symfony/css-selector": "~2.8|~3.0",
-                "symfony/phpunit-bridge": "^3.4.3"
-            },
-            "type": "project",
-            "extra": {
-                "merge-plugin": {
-                    "include": [
-                        "html/modules/contrib/webform/composer.libraries.json"
-                    ]
-                },
-                "drupal-scaffold": {
-                    "locations": {
-                        "web-root": "html/"
-                    }
-                },
-                "installer-types": [
-                    "bower-asset",
-                    "npm-asset",
-                    "custom-module",
-                    "custom-theme"
-                ],
-                "installer-paths": {
-                    "html/core": [
-                        "type:drupal-core"
-                    ],
-                    "html/libraries/{$name}": [
-                        "type:drupal-console-library",
-                        "type:drupal-library",
-                        "type:bower-asset",
-                        "type:npm-asset"
-                    ],
-                    "html/modules/custom/{$name}": [
-                        "drupal/wxt_library",
-                        "type:drupal-custom-module"
-                    ],
-                    "html/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "html/profiles/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "html/themes/custom/{$name}": [
-                        "drupal/wxt_bootstrap",
-                        "type:drupal-custom-theme"
-                    ],
-                    "html/themes/contrib/{$name}": [
-                        "type:drupal-theme"
-                    ],
-                    "drush/contrib/{$name}": [
-                        "type:drupal-drush"
-                    ]
-                },
-                "composer-exit-on-patch-failure": true,
-                "enable-patching": true,
-                "patchLevel": {
-                    "drupal/core": "-p2"
-                },
-                "patches": {
-                    "drupal/core": {
-                        "Node previews are cached by dynamic page cache": "https://www.drupal.org/files/issues/2020-04-13/d8_node_preview.patch",
-                        "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
-                        "core views module fix for breadcrumb title and page title": "https://www.drupal.org/files/issues/2020-08-06/2716019-99-d88x.patch",
-                        "Improve wysiwyg entity embed media dialog add label to media hyperlinked to media": "https://www.drupal.org/files/issues/2020-11-11/D9-add_label_and_link_to_EditorMediaDialog-3182027-6.patch",
-                        "core views module fix for contextual filter": "https://www.drupal.org/files/issues/2628130-11.patch",
-                        "safedelete entity_translation_unified_form form set error squelch noise about #parent element": "https://www.drupal.org/files/issues/2019-08-31/3027240-12.patch",
-                        "w3c valid self closing source and track tags": "https://www.drupal.org/files/issues/2020-07-13/D89x-self_closing_correct-2857273-13.patch",
-                        "allow field groups to be compatible": "https://www.drupal.org/files/issues/2020-02-05/2546212-119.patch",
-                        "remove hreflang attribute from language switcher li element": "https://www.drupal.org/files/issues/2019-06-05/2454289-82.patch",
-                        "Node preview block visibility": "https://www.drupal.org/files/issues/2020-06-30/D888-preview_block-2890758-50.patch",
-                        "Node preview current language": "https://www.drupal.org/files/issues/2020-06-20/node-preview_current_language-3150728-12.patch",
-                        "Language negotiation core fix, needed by access_unpublished and content moderation for forward draft revisions in non default language.": "https://www.drupal.org/files/issues/2019-05-30/drupal-2951294-21-fix-fallback.patch",
-                        "Harden SubProcess process plugin - Please remove this patch prior to upgrading to Drupal 8.9.x or Drupal 9.x.": "https://www.drupal.org/files/issues/2020-07-15/3126063-30.patch",
-                        "Options module uses '_none' as a special value.": "https://www.drupal.org/files/issues/2020-08-25/1585930-56.patch"
-                    },
-                    "drupal/access_unpublished": {
-                        "Adds a twig extension for access unpublished hash key link, patch 9.": "https://www.drupal.org/files/issues/2019-11-21/access_unpublished-3054536-9.patch",
-                        "Fix token-create while editing a French node": "https://www.drupal.org/files/issues/2019-03-20/access_unpublished-create_per_language_tokens-2958800-3.patch",
-                        "Edge case can result in null route - hasPendingRevision() validate for null.": "https://www.drupal.org/files/issues/2019-12-09/access_unpublished-TypeError_hasPendingRevision_null_fix-3099663-2.patch"
-                    },
-                    "drupal/bootstrap": {
-                        "views submit button name attribute cannot be empty for w3c": "https://www.drupal.org/files/issues/2020-07-10/3061891-27.patch",
-                        "fix array_unique warnings on node/49 page": "https://www.drupal.org/files/issues/2020-09-29/bootstrap-3173776-3.patch"
-                    },
-                    "drupal/entity_embed": {
-                        "entity_embed-remove_image_attributes_from_div-3086162": "https://www.drupal.org/files/issues/2020-06-15/entity_embed-remove_image_attributes_from_div-3086162-13_0.patch"
-                    },
-                    "drupal/file_delete": {
-                        "Add functionality to immediately delete files and override usage check": "https://www.drupal.org/files/issues/2020-10-20/3115158-6.patch"
-                    },
-                    "drupal/linkit": {
-                        "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2021-01-14/3078075-22.patch"
-                    },
-                    "drupal/lightning_media": {
-                        "Bulk media upload should have an option to select the target media entity bundle": "https://www.drupal.org/files/issues/2019-11-29/lightning_bulk_upload_form-3097516-2.patch"
-                    },
-                    "drupal/linkchecker": {
-                        "Extraction status": "https://www.drupal.org/files/issues/2020-12-08/3184613-extraction-status.patch",
-                        "Broken links view should not show status code -1": "https://www.drupal.org/files/issues/2020-12-17/3118914-4.patch",
-                        "Update empty value for last_check field on broken links report": "https://www.drupal.org/files/issues/2020-12-25/3112537-12.patch",
-                        "Auto-select extractor if there is only one available": "https://www.drupal.org/files/issues/2020-12-18/3133925-2.patch",
-                        "Undefined offset error fix": "https://www.drupal.org/files/issues/2020-08-24/undefined-offset-error-3065045-13.patch"
-                    },
-                    "drupal/moderation_sidebar": {
-                        "Synchronize moderation states between all translations of the entity": "https://www.drupal.org/files/issues/2020-06-17/sync_all_translations_states-3143559-18.patch"
-                    },
-                    "drupal/token": {
-                        "Token module patch issue 2906445.": "https://www.drupal.org/files/issues/2020-01-04/2906445-token-entity-reference-returns-default-language-5.patch"
-                    },
-                    "drupal/scanner": {
-                        "Support field translations for search and replace and other fixes.": "https://www.drupal.org/files/issues/2020-08-19/scanner-handle_languages_for_fields-3154633-10.patch",
-                        "Allow creator role to use the search and replace functionality.": "https://www.drupal.org/files/issues/2020-06-22/scanner-grant_without_administer_nodes-3153873-2.patch"
-                    },
-                    "drupal/views_data_export": {
-                        "Allow altering row data for csv export, adds a hook called hook_views_data_export_row_alter": "https://www.drupal.org/files/issues/2020-08-18/views-data-export-row-hook-3015117-7.patch",
-                        "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
-                    },
-                    "drupal/wxt_bootstrap": {
-                        "W3C - make image twig output empty ALT attribute when no ALT text is provided": "https://www.drupal.org/files/issues/2021-01-19/D9-W3C-make-image-twig-output-empty-ALT-attribute-when-no-ALT-text-is-provided-3193622-5.patch",
-                        "WCAG - Add roles to all menu UL LI and AHREF / LINK 3164631": "https://www.drupal.org/files/issues/2020-10-16/wcag-add-roles-to-all-menu-ul-li-ahref-link-3164631-17.patch",
-                        "WCAG - unnecessary roles.": "https://www.drupal.org/files/issues/2020-12-17/wxt_bootstrap-w3c_warnings_unnecessary_roles-3154001-11.patch"
-                    }
-                },
-                "patches-ignore": {
-                    "acquia/lightning": {
-                        "drupal/core": {
-                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                        }
-                    },
-                    "drupal/lightning_core": {
-                        "drupal/core": {
-                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                        }
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
-            "support": {
-                "issues": "https://github.com/entreprise7pro/dxbase/issues",
-                "source": "https://github.com/entreprise7pro/dxbase/tree/3.0.0-alpha7"
-            },
-            "time": "2021-01-19T22:19:10+00:00"
-        },
-        {
-            "name": "entreprise7pro/wxt_overrides",
-            "version": "3.0.x-dev",
-            "dist": {
-                "type": "path",
-                "url": "custom/modules/wxt_overrides",
-                "reference": "e1f16e593941da1fa6c8ac7976f3ac2f1f85f639"
-            },
-            "require": {
-                "composer/installers": "^1.2"
-            },
-            "type": "drupal-custom-module",
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -19466,12 +19466,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -19509,8 +19509,8 @@
                 "validate"
             ],
             "support": {
-                "issues": "https://github.com/webmozart/assert/issues",
-                "source": "https://github.com/webmozart/assert/tree/master"
+                "issues": "https://github.com/webmozarts/assert/issues",
+                "source": "https://github.com/webmozarts/assert/tree/1.9.1"
             },
             "time": "2020-07-08T17:02:28+00:00"
         },

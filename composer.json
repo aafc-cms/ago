@@ -1,5 +1,5 @@
 {
-    "name": "entreprise7pro/internet",
+    "name": "agrcmsx/internet",
     "description": "WxT based internet sub project",
     "type": "project",
     "license": "GPL-2.0+",
@@ -124,11 +124,11 @@
         }
     },
     "require": {
-        "entreprise7pro/dxbase": "^3.0.0-alpha7",
-        "entreprise7pro/aafctheme": "*",
-        "entreprise7pro/agri_admin": "*",
-        "entreprise7pro/agri_reports": "*",
-        "entreprise7pro/wxt_overrides": "*",
+        "agrcmsx/dxbase": "^3.0.0-alpha7",
+        "agrcmsx/aafctheme": "*",
+        "agrcmsx/agri_admin": "*",
+        "agrcmsx/agri_reports": "*",
+        "agrcmsx/wxt_overrides": "*",
         "drupal/linkit": "6.0-beta2 as 5.0-beta11"
     },
     "authors": [
