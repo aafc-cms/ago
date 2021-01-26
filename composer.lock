@@ -188,16 +188,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.0-alpha7",
+            "version": "3.0.0-alpha9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "87d0a150f29608aa63facf410772ba33e06389b8"
+                "reference": "3cf3caa38e9ae5d4c04f23c4cceeb591259a6fb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/87d0a150f29608aa63facf410772ba33e06389b8",
-                "reference": "87d0a150f29608aa63facf410772ba33e06389b8",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/3cf3caa38e9ae5d4c04f23c4cceeb591259a6fb0",
+                "reference": "3cf3caa38e9ae5d4c04f23c4cceeb591259a6fb0",
                 "shasum": ""
             },
             "require": {
@@ -335,6 +335,7 @@
                 },
                 "patches": {
                     "drupal/core": {
+                        "BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-01-24/3194462.patch",
                         "Node previews are cached by dynamic page cache": "https://www.drupal.org/files/issues/2020-04-13/d8_node_preview.patch",
                         "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
                         "core views module fix for breadcrumb title and page title": "https://www.drupal.org/files/issues/2020-08-06/2716019-99-d88x.patch",
@@ -366,7 +367,7 @@
                         "Add functionality to immediately delete files and override usage check": "https://www.drupal.org/files/issues/2020-10-20/3115158-6.patch"
                     },
                     "drupal/linkit": {
-                        "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2021-01-14/3078075-22.patch"
+                        "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2021-01-25/3078075-24_0.patch"
                     },
                     "drupal/lightning_media": {
                         "Bulk media upload should have an option to select the target media entity bundle": "https://www.drupal.org/files/issues/2019-11-29/lightning_bulk_upload_form-3097516-2.patch"
@@ -419,10 +420,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "issues": "https://github.com/agrcmsx/dxbase/issues",
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.0-alpha7"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.0-alpha9"
             },
-            "time": "2021-01-22T17:47:51+00:00"
+            "time": "2021-01-26T02:10:43+00:00"
         },
         {
             "name": "agrcmsx/wxt_overrides",
@@ -566,16 +566,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.171.21",
+            "version": "3.172.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "0455d92bb12d44f80db96a4e70861d186063e9e5"
+                "reference": "5a5e66c4d54c392042820703eeb8a6bd3d222924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0455d92bb12d44f80db96a4e70861d186063e9e5",
-                "reference": "0455d92bb12d44f80db96a4e70861d186063e9e5",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5a5e66c4d54c392042820703eeb8a6bd3d222924",
+                "reference": "5a5e66c4d54c392042820703eeb8a6bd3d222924",
                 "shasum": ""
             },
             "require": {
@@ -650,9 +650,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.171.21"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.172.0"
             },
-            "time": "2021-01-21T19:15:43+00:00"
+            "time": "2021-01-22T19:21:38+00:00"
         },
         {
             "name": "bower-asset/cropper",
