@@ -1,6 +1,6 @@
 uuid: 00d2121a-924e-41e5-949e-2aa35bc844df
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.sidebar
