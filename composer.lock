@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1cd3ba1d8bb54a60a5e431980a1eda4",
+    "content-hash": "8692d5c1f41811f2de4b0f085686a76a",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -177,6 +177,22 @@
                 "type": "path",
                 "url": "custom/modules/agri_reports",
                 "reference": "e1fdc5d7ea5a12e5937adbd96aace998f8bc94b9"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "agrcmsx/config",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/config",
+                "reference": "a39bb0ef61a5d432368f42a9a5678eabe4fbfdcd"
             },
             "require": {
                 "composer/installers": "^1.2"
@@ -19935,7 +19951,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "agrcmsx/config": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
