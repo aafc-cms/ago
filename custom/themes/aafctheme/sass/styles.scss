@@ -34,6 +34,11 @@ html[lang="en"] .french-only {
   display: none !important;
 }
 
+footer#wb-info .landscape div.contextual.open {
+  ul.contextual-links li a {
+    color: #333 !important;
+  }
+}
 //body > div > div.container {
 //  border-right: 1px solid $aafctheme-border;
 //  border-left: 1px solid $aafctheme-border;

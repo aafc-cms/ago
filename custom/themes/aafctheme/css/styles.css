@@ -99,12 +99,17 @@ html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
+footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
+  color: #333 !important;
+}
+
+/* line 47, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
