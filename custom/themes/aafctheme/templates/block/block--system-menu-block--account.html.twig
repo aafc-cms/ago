@@ -34,18 +34,5 @@
  */
 #}
 {# DISACTIVATED
-{% set heading_id = attributes.id ~ 'usermenu'|clean_id %}
+  Disactivated.
  END OF DISACTIVATED #}
-{# DISACTIVATED
-<nav aria-labelledby="{{ heading_id }}"{{ attributes.setAttribute('id', 'wb-sec').removeClass('clearfix', 'container')|without('role', 'aria-labelledby') }}>
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('sr-only') %}
-  {% endif %}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</nav>
-END OF DISACTIVATED #}
