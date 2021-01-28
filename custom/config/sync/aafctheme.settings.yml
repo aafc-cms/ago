@@ -19,7 +19,7 @@ logo:
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
 wxt_gcweb_cdn: 1
-wxt_gcweb_cdn_footer_enable: 1
+wxt_gcweb_cdn_footer_enable: 0
 wxt_gcweb_cdn_goc_init: 1
 wxt_gcweb_search: 1
 table_responsive: '-1'
@@ -37,7 +37,7 @@ region_wells:
   content: ''
   content_footer: ''
   sidebar_first: ''
-  sidebar_second: well
+  sidebar_second: ''
   footer: ''
 cdn_theme: ''
 cdn_cache_ttl_versions: 0

@@ -71,11 +71,11 @@
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
       <div id="wb-bnr" class="{{ container }}">
-        <section id="wb-lng" class="text-right">
-          <h2 class="wb-inv">{{ 'Language selection'|t }}</h2>
-          {{ page.language_toggle }}
-        </section>
         <div class="row">
+          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+            <h2 class="wb-inv">{{ 'Language selection'|t }}</h2>
+            {{ page.language_toggle }}
+          </section>
           {{ page.banner }}
           {{ page.search }}
         </div>
@@ -83,7 +83,7 @@
       <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
         <div class="{{ container }}">
           <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
-          <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+          <button type="button" aria-haspopup="true" aria-expanded="false">{{ main_menu_label|raw }}</button>
           {{ page.navigation }}
         </div>
       </nav>
@@ -103,20 +103,6 @@
         {% block highlighted  %}
           <div class="highlighted">{{ page.highlighted }}</div>
         {% endblock %}
-      {% endif %}
-
-      {# Access Unpublished Links #}
-      {% set accessUnpublishedUrl = getHashTag(node.id()) %}
-      {% if accessUnpublishedUrl is not empty %}
-        {% if not node.isPublished() %}
-          {% set hashLinkTitle = 'Access unpublished hash link allows unpublished access to content.' %}
-          {% set linkClass = 'link access-unpublished' %}
-        <div class="alert alert-success access_unpublished alert-dismissible" role="status" aria-label="{{ 'Status message'|t }}">
-          <button type="button" role="button" class="close" data-dismiss="alert" aria-label="{{ 'Close'|t }}"><span aria-hidden="true">×</span></button>
-          <b><a href="{{ accessUnpublishedUrl }}" class="{{ linkClass }}">{{ hashLinkTitle|t }}</a></b>
-          <h2 class="sr-only">{{ 'Status message'|t }}</h2>
-        </div>
-        {% endif %}
       {% endif %}
 
       {# Content #}
@@ -226,6 +212,8 @@
     <footer id="wb-info" data-ajax-append="{{ gcweb_cdn_footer_url }}{{ language }}.html .brand">
       <div class="landscape" data-ajax-replace="{{ gcweb_cdn_footer_url }}{{ language }}.html .wb-navcurr"></div>
     </footer>
+  {% elseif gcweb_cdn_footer_canada_ca_enabled %}
+    {{ return_footer_structure() }}
   {% else %}
     {% block footer %}
       <footer id="wb-info">
