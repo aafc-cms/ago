@@ -13,7 +13,7 @@ dependencies:
     - aafctheme
 third_party_settings:
   block_class:
-    classes: col-md-3
+    classes: 'col-md-3 pull-right'
 id: aafctheme_aafcsocialmedia
 theme: aafctheme
 region: content

@@ -24,7 +24,7 @@ settings:
   id: 'menu_block:footer-fr'
   label: 'Footer fr'
   provider: menu_block
-  label_display: visible
+  label_display: '0'
   follow: false
   follow_parent: child
   level: 1

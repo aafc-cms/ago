@@ -1,36 +1,38 @@
-uuid: 5e363ddd-9c1e-4b8e-8104-150b66c6771b
+uuid: 85f7e963-e4e2-440c-b9c2-46124d974385
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.brand
+    - system.menu.brand-fr
   module:
     - language
-    - system
+    - menu_block
     - wxt_library
   theme:
     - aafctheme
-_core:
-  default_config_hash: yA2ceTKyWYK9PAZQ8NriHRNrt6TpcuCuWbo4nI-EKCk
-id: aafctheme_brand
+id: brandfr
 theme: aafctheme
 region: branding
 weight: 0
 provider: null
-plugin: 'system_menu_block:brand'
+plugin: 'menu_block:brand-fr'
 settings:
-  id: 'system_menu_block:brand'
-  label: Brand
-  provider: system
-  label_display: visible
+  id: 'menu_block:brand-fr'
+  label: 'Brand fr'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
   level: 1
   depth: 0
-  expand_all_items: false
+  expand: false
+  parent: 'brand-fr:'
+  suggestion: brand_fr
 visibility:
   language:
     id: language
     langcodes:
-      en: en
+      fr: fr
     negate: false
     context_mapping:
       language: '@language.current_language_context:language_interface'

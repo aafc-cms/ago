@@ -19,7 +19,6 @@ logo:
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
 wxt_gcweb_cdn: 1
-wxt_gcweb_cdn_footer_enable: 0
 wxt_gcweb_cdn_goc_init: 1
 wxt_gcweb_search: 1
 table_responsive: '-1'
@@ -46,3 +45,4 @@ cdn_cache_ttl_assets: 0
 cdn_cache_ttl_library: 0
 reset_http_request_cache: ''
 table: ''
+wxt_gcweb_footer_twig_extension: 0
