@@ -24,7 +24,7 @@ settings:
   page: true
   page_submit_path: /branches-and-offices/public-affairs-branch/publishing-and-creative-services-request-form
   page_confirm_path: ''
-  page_theme_name: grstheme_bootstrap
+  page_theme_name: aafctheme
   form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
