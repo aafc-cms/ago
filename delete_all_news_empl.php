@@ -50,6 +50,55 @@
 //ALTER TABLE node_field_revision AUTO_INCREMENT=1;
 //truncate content_moderation_state_field_revision
 //ALTER TABLE file_managed AUTO_INCREMENT=1;
-//ALTER TABLE migrate_message_wxt_media AUTO_INCREMENT=1;
+//ALTER TABLE migrate_messqueryage_wxt_media AUTO_INCREMENT=1;
 //ALTER TABLE migrate_message_wxt_media_slideshow AUTO_INCREMENT=1;
 //ALTER TABLE migrate_message_wxt_file AUTO_INCREMENT=1;
+
+$database = \Drupal::database();
+$query = $database->query("ALTER TABLE {node} AUTO_INCREMENT=1")->execute();
+$query = $database->query("ALTER TABLE {node_revision} AUTO_INCREMENT=1")->execute();
+$query = $database->query("ALTER TABLE {node_field_data} AUTO_INCREMENT=1")->execute();
+$query = $database->query("ALTER TABLE {node_field_revision} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("truncate {content_moderation_state_field_revision}")->execute();
+$query = $database->query("ALTER TABLE {file_managed} AUTO_INCREMENT=1")->execute();
+$query = $database->query("DELETE from {content_moderation_state_field_revision} where content_entity_type_id='node' OR content_entity_type_id='media'")->execute();
+//$query = $database->query("ALTER TABLE {migrate_messqueryage_wxt_media} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {migrate_message_wxt_media_slideshow} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {migrate_message_wxt_file} AUTO_INCREMENT=1")->execute();
+
+//delete menu_name. main and External, sidebar
+/*$menuLinks = array('main');
+foreach ($menuLinks as $menuLink) {
+  $database = \Drupal::database();
+  $sql = "SELECT id FROM menu_link_content_data WHERE external = :external and menu_name = :menuname";
+  $result = $database->query($sql, [':external' => 1, ':menuname' => $menuLink ]);
+  if ($result) {
+    while ($row = $result->fetchAssoc()) {
+      // $row['column']
+      echo print_r($row, true);
+      $menu_link = \Drupal::entityTypeManager()->getStorage('menu_link_content')->load($row['id']);
+      if(!empty($menu_link)){
+        echo print_r($menu_link->getTitle() , true);
+        $menu_link->delete();
+      }
+    }
+  }
+}*/
+
+$menuLinks = array('main', 'sidebar');
+foreach ($menuLinks as $menuLink) {
+  $database = \Drupal::database();
+  $sql = "SELECT id FROM menu_link_content_data WHERE menu_name = :menuname";
+  $result = $database->query($sql, [':menuname' => $menuLink ]);
+  if ($result) {
+    while ($row = $result->fetchAssoc()) {
+      // $row['column']
+      echo print_r($row, true);
+      $menu_link = \Drupal::entityTypeManager()->getStorage('menu_link_content')->load($row['id']);
+      if(!empty($menu_link)){
+        echo print_r($menu_link->getTitle() , true);
+        $menu_link->delete();
+      }
+    }
+  }
+}
