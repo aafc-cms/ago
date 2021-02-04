@@ -70,6 +70,15 @@ body.user-logged-in[class*='archiv'] div.region-header h1 {
   border: 3px solid saddlebrown;
 }
 
+/* line 1, ../sass/components/_front.scss */
+.background-class {
+  background-image: url("/themes/custom/aafctheme/images/aafc_homepage_banner_nov18.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  margin-top: 15px;
+}
+
 /* line 2, ../sass/anonymous/_restrictions.scss */
 body.role-is-anonymous.path-node.published-yes .region-header nav.tabs,
 body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
@@ -89,27 +98,27 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
   bottom: -4px;
 }
 
-/* line 29, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 52, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
