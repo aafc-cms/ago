@@ -123,4 +123,11 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   padding-top: 20px;
 }
 
+/* line 57, ../sass/styles.scss */
+.navbar img {
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
