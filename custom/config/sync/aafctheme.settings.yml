@@ -4,8 +4,8 @@ schemas:
   aafctheme: 8000
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: profiles/wxt/favicon.ico
-  url: 'https://agr-dev.9pro.ca/profiles/wxt/favicon.ico'
+  path: libraries/theme-gcweb/assets/favicon.ico
+  url: 'https://agr-dev.9pro.ca/libraries/theme-gcweb/assets/favicon.ico'
   use_default: 0
 features:
   comment_user_picture: 1
@@ -13,13 +13,12 @@ features:
   favicon: 1
   node_user_picture: 1
 logo:
-  path: profiles/wxt/wxt.svg
+  path: libraries/theme-gcweb/assets/sig-blk-en.svg
   url: ''
   use_default: 0
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
 wxt_gcweb_cdn: 1
-wxt_gcweb_cdn_goc_init: 1
 wxt_gcweb_search: 1
 table_responsive: '-1'
 region_wells:

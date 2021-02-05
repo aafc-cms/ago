@@ -1,7 +1,19 @@
-.background-class{
+.ip-covers-img {
   background-image: url("/themes/custom/aafctheme/images/aafc_homepage_banner_nov18.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 767px) {
+.ip-cover-hide-mobile {
+  background-image: url("none") !important;
+}
+}
+@media screen and (max-width: 991px) {
+
+.ip-cover-hide-tablet {
+background-image: url("none") !important;
+}
 }

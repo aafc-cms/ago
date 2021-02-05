@@ -67,11 +67,11 @@ $query = $database->query("DELETE from {content_moderation_state_field_revision}
 //$query = $database->query("ALTER TABLE {migrate_message_wxt_file} AUTO_INCREMENT=1")->execute();
 
 //delete menu_name. main and External, sidebar
-/*$menuLinks = array('main');
-foreach ($menuLinks as $menuLink) {
+/*$menus = array('main');
+foreach ($menus as $menuName) {
   $database = \Drupal::database();
   $sql = "SELECT id FROM menu_link_content_data WHERE external = :external and menu_name = :menuname";
-  $result = $database->query($sql, [':external' => 1, ':menuname' => $menuLink ]);
+  $result = $database->query($sql, [':external' => 1, ':menuname' => $menuName ]);
   if ($result) {
     while ($row = $result->fetchAssoc()) {
       // $row['column']
@@ -85,11 +85,11 @@ foreach ($menuLinks as $menuLink) {
   }
 }*/
 
-$menuLinks = array('main', 'sidebar');
-foreach ($menuLinks as $menuLink) {
+$menus = array('main', 'sidebar');
+foreach ($menus as $menuName) {
   $database = \Drupal::database();
   $sql = "SELECT id FROM menu_link_content_data WHERE menu_name = :menuname";
-  $result = $database->query($sql, [':menuname' => $menuLink ]);
+  $result = $database->query($sql, [':menuname' => $menuName ]);
   if ($result) {
     while ($row = $result->fetchAssoc()) {
       // $row['column']
