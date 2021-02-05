@@ -131,7 +131,8 @@
         "agrcmsx/wxt_overrides": "*",
         "agrcmsx/config": "3.0.x-dev",
         "drupal/linkit": "6.0-beta2 as 5.0-beta11",
-        "drupal/wxt_bootstrap": "dev-4.x as 1.26"
+        "drupal/wxt_bootstrap": "dev-4.x as 1.26",
+        "drupal/file_replace": "^1.2"
     },
     "authors": [
         {
