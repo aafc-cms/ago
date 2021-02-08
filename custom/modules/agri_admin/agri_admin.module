@@ -1558,7 +1558,7 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
   $warnings = [];
   $warning = '';
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
-  if (!$file->id() && \Drupal::currentUser()->hasPermission('access files overview')) {
+  if (!$file->id()) {
     foreach (agri_admin_algos() as $algo) {
       $query = \Drupal::database()->select('filehash');
       $query->addField('filehash', 'fid');
