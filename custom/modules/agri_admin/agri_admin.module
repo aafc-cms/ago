@@ -11,6 +11,8 @@ use Drupal\user\Entity\User;
 use Drupal\views\ViewExecutable;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\file\Entity\File;
+use Drupal\file\FileInterface;
 
 
 /**
@@ -1534,5 +1536,62 @@ function agri_admin_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\Form
       }
     }
   }
+}
+
+
+/**
+ * Implements hook_file_validate().
+ */
+function agri_admin_file_validate(FileInterface $file) {
+  //Check if the filehash configuration setting allow the duplicate file or not
+  if (!(\Drupal::config('filehash.settings')->get('dedupe'))) {
+    //if filehash allows the duplicate file, we will provide the warning message when the duplicate file occurs
+    agri_admin_validate_dedupe_warning($file);
+  }
+}
+
+
+/**
+ * Checks that file is not a duplicate.
+ */
+function agri_admin_validate_dedupe_warning(FileInterface $file) {
+  $warnings = [];
+  $warning ='';
+  if (!$file->id()) {
+    foreach (agri_admin_algos() as $algo) {
+      $query = \Drupal::database()->select('filehash');
+      $query->addField('filehash', 'fid');
+      $query->condition($algo, $file->filehash[$algo]);
+      $query->range(0, 1);
+      if ($fid = $query->execute()->fetchField()) {
+        if (\Drupal::currentUser()->hasPermission('access files overview')) {
+          try {
+            $url = Url::fromRoute('view.files.page_2', ['arg_0' => $fid], ['attributes' => ['target' => '_blank']]);
+            $warning = $warning . t('This file has already been uploaded as %filename.', [
+              '%filename' => Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString(),
+            ]);
+          }
+          catch (Exception $e) {
+            // Maybe the view was disabled?
+          }
+        }
+        array_push($warnings, $warning);
+        break;
+      }
+    }
+  }
+  //out put all warning messages
+  foreach($warnings as $msg) {
+    \Drupal::messenger()->addWarning(t($msg));
+  }
+  return [];
+}
+
+
+/**
+ * Returns array of enabled hash algorithms.
+ */
+function agri_admin_algos() {
+  return array_diff(\Drupal::config('filehash.settings')->get('algos'), [0]);
 }
 
