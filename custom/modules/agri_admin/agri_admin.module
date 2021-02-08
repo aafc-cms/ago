@@ -1568,28 +1568,15 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
         if (\Drupal::currentUser()->hasPermission('access files overview')) {
           try {
             $url = Url::fromRoute('view.files.page_2', ['arg_0' => $fid], ['attributes' => ['target' => '_blank']]);
-            if ($langId == 'en') {
-              $warning =  t('This file has already been uploaded as %filename.', [
-                '%filename' => Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString(),
-              ]);
-            }
-            else {
-              $warning =  t('Ce fichier a déjà été téléchargé as %filename.', [
-                '%filename' => Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString(),
-              ]);
-            }
+            $filename = Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString();
+            $warning =  t('This file has already been uploaded as ' . $filename . '.');
           }
           catch (Exception $e) {
             // Maybe the view was disabled?
           }
         }
         else {
-          if ($langId == 'en') {
-            $warning = t('This file has already been uploaded.');
-          }
-          else {
-            $warning = t('Ce fichier a déjà été téléchargé.');
-          }
+          $warning = t('This file has already been uploaded.');
         }
         array_push($warnings, $warning);
         break;
