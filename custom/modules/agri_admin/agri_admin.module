@@ -1556,7 +1556,8 @@ function agri_admin_file_validate(FileInterface $file) {
  */
 function agri_admin_validate_dedupe_warning(FileInterface $file) {
   $warnings = [];
-  $warning ='';
+  $warning = '';
+  $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
   if (!$file->id()) {
     foreach (agri_admin_algos() as $algo) {
       $query = \Drupal::database()->select('filehash');
@@ -1567,12 +1568,27 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
         if (\Drupal::currentUser()->hasPermission('access files overview')) {
           try {
             $url = Url::fromRoute('view.files.page_2', ['arg_0' => $fid], ['attributes' => ['target' => '_blank']]);
-            $warning = $warning . t('This file has already been uploaded as %filename.', [
-              '%filename' => Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString(),
-            ]);
+            if ($langId == 'en') {
+              $warning =  t('This file has already been uploaded as %filename.', [
+                '%filename' => Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString(),
+              ]);
+            }
+            else {
+              $warning =  t('Ce fichier a déjà été téléchargé as %filename.', [
+                '%filename' => Link::fromTextAndUrl(File::load($fid)->label(), $url)->toString(),
+              ]);
+            }
           }
           catch (Exception $e) {
             // Maybe the view was disabled?
+          }
+        }
+        else {
+          if ($langId == 'en') {
+            $warning = t('This file has already been uploaded.');
+          }
+          else {
+            $warning = t('Ce fichier a déjà été téléchargé.');
           }
         }
         array_push($warnings, $warning);
@@ -1580,9 +1596,9 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
       }
     }
   }
-  //out put all warning messages
+  //output all warning messages
   foreach($warnings as $msg) {
-    \Drupal::messenger()->addWarning(t($msg));
+    \Drupal::messenger()->addWarning($msg,TRUE);
   }
   return [];
 }
@@ -1594,4 +1610,3 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
 function agri_admin_algos() {
   return array_diff(\Drupal::config('filehash.settings')->get('algos'), [0]);
 }
-
