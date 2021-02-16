@@ -64,6 +64,8 @@ $query = $database->query("ALTER TABLE {media_field_revision} AUTO_INCREMENT=1")
 //$query = $database->query("truncate {content_moderation_state_field_revision}")->execute();
 $query = $database->query("ALTER TABLE {file_managed} AUTO_INCREMENT=1")->execute();
 $query = $database->query("DELETE from {content_moderation_state_field_revision} where content_entity_type_id='node' OR content_entity_type_id='media'")->execute();
+// TODO: content_moderation_state_field_data CLEANUP
+//
 //$query = $database->query("ALTER TABLE {migrate_messqueryage_wxt_media} AUTO_INCREMENT=1")->execute();
 //$query = $database->query("ALTER TABLE {migrate_message_wxt_media_slideshow} AUTO_INCREMENT=1")->execute();
 //$query = $database->query("ALTER TABLE {migrate_message_wxt_file} AUTO_INCREMENT=1")->execute();
