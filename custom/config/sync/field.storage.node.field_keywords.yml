@@ -9,7 +9,7 @@ field_name: field_keywords
 entity_type: node
 type: string
 settings:
-  max_length: 512
+  max_length: 1024
   is_ascii: false
   case_sensitive: false
 module: core

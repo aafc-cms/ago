@@ -1,0 +1,17 @@
+uuid: ba7d9380-fc01-40ee-ab3f-bd5268d77626
+langcode: en
+status: true
+dependencies:
+  module:
+    - safedelete
+title: 'Default cron handler'
+id: safedelete_cron
+weight: 0
+module: safedelete
+callback: safedelete_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database
