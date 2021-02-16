@@ -1,0 +1,29 @@
+warmers:
+  cdn:
+    id: cdn
+    frequency: '300'
+    batchSize: '50'
+    urls: {  }
+    headers: {  }
+    verify: 1
+  sitemap:
+    id: sitemap
+    frequency: '300'
+    batchSize: '50'
+    sitemaps: {  }
+    minPriority: '0'
+    headers: {  }
+    verify: 1
+  entity:
+    id: entity
+    frequency: 300
+    batchSize: 100
+    entity_types:
+      'node:landing_page': 'node:landing_page'
+      'node:page': 'node:page'
+      'node:webform': 'node:webform'
+      'node_type:node_type': 'node_type:node_type'
+      'page_variant:page_variant': 'page_variant:page_variant'
+      'page:page': 'page:page'
+_core:
+  default_config_hash: wLhhL58IKPWkAbhxcI6gpCna7d431Q7kM0y-Om92BUQ
