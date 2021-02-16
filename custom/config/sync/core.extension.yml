@@ -147,6 +147,7 @@ module:
   scanner: 0
   search: 0
   serialization: 0
+  safedelete: 0
   sharedemail: 0
   shortcut: 0
   simple_gmap: 0
