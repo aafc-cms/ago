@@ -1177,6 +1177,62 @@ function agri_admin_system_breadcrumb_alter(\Drupal\Core\Breadcrumb\Breadcrumb &
       $breadcrumb->addLink($linkStaffing);
     }
   }
+
+  // logic is for rebuilding the Breadcrumb for the preview latest vesrion and authentication user to edit the page
+  $regpath = '/\/node\/([1-9])\d*\/(latest|moderation-history|layout|delete|edit|revisions)/';
+  $regpathlatest = '/\/node\/([1-9])\d*\/(latest|layout)/';
+  $latest_bool = FALSE;
+  if (preg_match($regpathlatest, $result)) {
+    $latest_bool = TRUE;
+  }
+  if (preg_match($regpath, $result )) {
+    $links = $breadcrumb->getlinks();
+    $breadcrumb = new \Drupal\Core\Breadcrumb\Breadcrumb();
+    $breadcrumb->addLink($links[0]);
+    // www.drupal.org/node/2876622 addCacheContexts for new breadcrumb.
+    $breadcrumb->addCacheContexts(['url.path', 'languages']);
+    $tmpstr = explode('/', $result);
+    if (isset($tmpstr[2]) && is_numeric($tmpstr[2])) {
+      $nid = $tmpstr[2];
+      $langcode = \Drupal\agri_admin\AgriAdminHelper::getLang();
+      $url_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'. $nid, $langcode);
+      $aliapthArray = explode('/', $url_alias);
+      if ( $latest_bool) {
+        // do not add the last menu item
+        array_pop($aliapthArray);
+      }
+      $tmpPath = '';
+      array_shift ($aliapthArray);
+      foreach ($aliapthArray as $nodetitle) {
+        $tmpPath =  $tmpPath . '/' . $nodetitle;
+        $path = \Drupal::service('path.alias_manager')->getPathByAlias($tmpPath);
+        $tmpnidarray = explode('/', $path);
+        if (isset($tmpnidarray[2]) && is_numeric($tmpnidarray[2])) {
+          $nid = $tmpnidarray[2];
+          $link = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+          if ($link) {
+            if ($link->hasTranslation($langcode)) {
+              $link = $link->getTranslation($langcode);
+            }
+            // retrieve Menu title based on langcode
+            $system_uri = 'entity:node/' . $nid;
+            $result = \Drupal\agri_admin\Utils::getMenuItemTitle($system_uri, $langcode);
+            if (isset($result)) {
+              $title = $result ;
+            }
+            else {
+              // assign the default node title
+              $title = $link->getTitle();
+            }
+            $linkNew = $link->toLink($title);
+            if (isset ($linkNew)) {
+              $breadcrumb->addLink($linkNew);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /**
