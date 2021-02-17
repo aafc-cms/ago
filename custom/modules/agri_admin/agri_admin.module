@@ -551,8 +551,8 @@ function _helperUpdateProcess($action, $entity_id, $bundle) {
     $menu_link_ids = AgriAdminHelper::postCreateOrUpdateAutoTranslate($action, $entity_id, $bundle);
     //AgriAdminHelper::postUpdateProcess($action, $entity_id, $bundle);
     if ($bundle == 'page') {
-      AgriAdminHelper::disableMenuLink(NULL, $entity_id, 'main', TRUE);
-      AgriAdminHelper::disableMenuLink(NULL, $entity_id, 'sidebar');
+      //AgriAdminHelper::disableMenuLink(NULL, $entity_id, 'sidebar', TRUE);
+      AgriAdminHelper::disableMenuLink(NULL, $entity_id, 'sidebar', TRUE);
     }
 
     if (\Drupal::currentUser()->isAuthenticated()) {
@@ -561,7 +561,7 @@ function _helperUpdateProcess($action, $entity_id, $bundle) {
       if ($content_type == 'page') {
         $moderation_state = $entity->moderation_state->value;
         if ($moderation_state == 'archived') {
-          if (AgriAdminHelper::menuLinkAction($entity_id, 'main', 'delete')) {
+          if (AgriAdminHelper::menuLinkAction($entity_id, 'sidebar', 'delete')) {
             AgriAdminHelper::addMessage(t('Menu link deleted for "%type" now "archived" node id: %id', [
                  '%id' => $entity_id,
                '%type' => 'Internal page']
@@ -576,7 +576,7 @@ function _helperUpdateProcess($action, $entity_id, $bundle) {
       if ($content_type == 'landing_page') {
         $moderation_state = $entity->moderation_state->value;
         if ($moderation_state == 'archived') {
-          if (AgriAdminHelper::menuLinkAction($entity_id, 'main', 'disable')) {
+          if (AgriAdminHelper::menuLinkAction($entity_id, 'sidebar', 'disable')) {
             AgriAdminHelper::addMessage(t('Menu link disabled for "%type" now "archived" node id: %id', [
                  '%id' => $entity_id,
                '%type' => 'Landing page']
@@ -587,8 +587,8 @@ function _helperUpdateProcess($action, $entity_id, $bundle) {
             AgriAdminHelper::addMessage(t('Menu link not found for now "archived" %type node id: %id', ['%id' => $entity_id, '%type' => 'Landing page']));
           }
         }
-        if ($moderation_state != 'archived' && AgriAdminHelper::menuLinkExists($entity_id, 'main')) {
-          $result_code = AgriAdminHelper::menuLinkAction($entity_id, 'main', 'enable');
+        if ($moderation_state != 'archived' && AgriAdminHelper::menuLinkExists($entity_id, 'sidebar')) {
+          $result_code = AgriAdminHelper::menuLinkAction($entity_id, 'sidebar', 'enable');
         }
       }
     }
