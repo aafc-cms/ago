@@ -144,10 +144,10 @@ module:
   reroute_email: 0
   responsive_image: 0
   rest: 0
+  safedelete: 0
   scanner: 0
   search: 0
   serialization: 0
-  safedelete: 0
   sharedemail: 0
   shortcut: 0
   simple_gmap: 0

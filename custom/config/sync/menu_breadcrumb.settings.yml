@@ -9,8 +9,8 @@ add_home: true
 exclude_empty_url: false
 menu_breadcrumb_menus:
   main:
-    enabled: 1
     weight: -10
+    enabled: 0
     taxattach: 0
     langhandle: 0
   admin:
@@ -24,11 +24,6 @@ menu_breadcrumb_menus:
     taxattach: 0
     langhandle: 0
   brand-fr:
-    weight: 0
-    enabled: 0
-    taxattach: 0
-    langhandle: 0
-  devel:
     weight: 0
     enabled: 0
     taxattach: 0
@@ -54,8 +49,8 @@ menu_breadcrumb_menus:
     taxattach: 0
     langhandle: 0
   sidebar:
+    enabled: 1
     weight: 0
-    enabled: 0
     taxattach: 0
     langhandle: 0
   sidebar-fr:
