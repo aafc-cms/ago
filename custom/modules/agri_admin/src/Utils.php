@@ -441,7 +441,7 @@ class Utils {
       ->fields('ml_tbl',['title'])
       ->condition('link__uri', $link_uri)
       ->condition('langcode',  $langcode)
-      ->condition('menu_name', 'main');
+      ->condition('menu_name', 'sidebar');
     $result = $query->execute()->fetchField();
     return $result;
   }

@@ -1226,7 +1226,7 @@ function agri_admin_system_breadcrumb_alter(\Drupal\Core\Breadcrumb\Breadcrumb &
             }
             $linkNew = $link->toLink($title);
             if (isset ($linkNew)) {
-              $breadcrumb->addLink($linkNew );
+              $breadcrumb->addLink($linkNew);
             }
           }
         }
