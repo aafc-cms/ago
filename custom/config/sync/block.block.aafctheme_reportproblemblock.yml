@@ -43,3 +43,4 @@ visibility:
     enabled: 0
     negate: false
     context_mapping: {  }
+    is_panelized: {  }

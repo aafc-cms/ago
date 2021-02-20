@@ -26,12 +26,20 @@ settings:
   share_settings:
     share_widget: ''
   share_widget:
+    email: email
     facebook: facebook
     gmail: gmail
+    linkedin: linkedin
+    myspace: myspace
+    pinterest: pinterest
+    reddit: reddit
+    tumblr: tumblr
     twitter: twitter
+    yahoomail: yahoomail
 visibility:
   panels_title:
     id: panels_title
     enabled: 0
     negate: false
     context_mapping: {  }
+    is_panelized: {  }

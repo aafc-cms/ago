@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b3e419b374d505244870c32c1d957af",
+    "content-hash": "6f6d7d0b904b7d22f43366eda8342f8c",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -204,16 +204,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.4",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "5c9d48edaf595ca6b8a2d38d7c33e7414c861bd1"
+                "reference": "f0c00bcc5eea65276b51f562114b0061aa88c935"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/5c9d48edaf595ca6b8a2d38d7c33e7414c861bd1",
-                "reference": "5c9d48edaf595ca6b8a2d38d7c33e7414c861bd1",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/f0c00bcc5eea65276b51f562114b0061aa88c935",
+                "reference": "f0c00bcc5eea65276b51f562114b0061aa88c935",
                 "shasum": ""
             },
             "require": {
@@ -272,6 +272,7 @@
                 "drupal/warmer": "^1.1",
                 "drupal/workflow": "^1.4",
                 "drupal/wxt_bootstrap": "4.x-dev@dev as 1.26",
+                "drupal/wxt_library": "4.x-dev@dev as 1.22",
                 "drupalwxt/wxt": "dev-8.x-3.x",
                 "drush/drush": "^10.0",
                 "psr/container": "^1.0",
@@ -377,6 +378,9 @@
                         "views submit button name attribute cannot be empty for w3c": "https://www.drupal.org/files/issues/2020-07-10/3061891-27.patch",
                         "fix array_unique warnings on node/49 page": "https://www.drupal.org/files/issues/2020-09-29/bootstrap-3173776-3.patch"
                     },
+                    "drupalwxt/diff": {
+                        "fix French revisions page always shows English revision state": "https://www.drupal.org/files/issues/2021-02-19/diff-show-correct-workflow-state-on-french-revisions-page-3199354-2.patch"
+                    },
                     "drupal/entity_embed": {
                         "entity_embed-remove_image_attributes_from_div-3086162": "https://www.drupal.org/files/issues/2020-06-15/entity_embed-remove_image_attributes_from_div-3086162-13_0.patch"
                     },
@@ -410,6 +414,7 @@
                         "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
                     },
                     "drupal/wxt_library": {
+                        "search block bug fix": "https://www.drupal.org/files/issues/2021-02-20/wxt_library4x_undefined_variable_notice-3119471-3.patch",
                         "part 1 When installing and enabling the Canada.ca theme, the footer is missing the menu and other elements. Stats Can provides a CDN for footer markup, but as far as I know Canada.ca doesn't provide this. It would be nice to have the footer complete on install.": "https://www.drupal.org/files/issues/2021-01-27/wxt-library-add-canada-ca-footer-twig-extension-3195014-2.patch"
                     },
                     "drupal/wxt_bootstrap": {
@@ -437,9 +442,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.4"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.7"
             },
-            "time": "2021-02-19T19:54:46+00:00"
+            "time": "2021-02-20T21:15:37+00:00"
         },
         {
             "name": "agrcmsx/wxt_overrides",
@@ -694,7 +699,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -1794,51 +1799,34 @@
         },
         {
             "name": "consolidation/site-alias",
-            "version": "3.0.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-alias.git",
-                "reference": "fd40a03f80f8fd4684b10bef8c8c4ec5a9a9bf26"
+                "reference": "9ed3c590be9fcf9fea69c73456c2fd4b27f5204c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/fd40a03f80f8fd4684b10bef8c8c4ec5a9a9bf26",
-                "reference": "fd40a03f80f8fd4684b10bef8c8c4ec5a9a9bf26",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/9ed3c590be9fcf9fea69c73456c2fd4b27f5204c",
+                "reference": "9ed3c590be9fcf9fea69c73456c2fd4b27f5204c",
                 "shasum": ""
             },
             "require": {
                 "consolidation/config": "^1.2.1|^2",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "symfony/finder": "~2.3|^3|^4.4|^5"
             },
             "require-dev": {
-                "consolidation/robo": "^1.2.3|^2",
-                "g1a/composer-test-scenarios": "^3",
-                "knplabs/github-api": "^2.7",
-                "php-coveralls/php-coveralls": "^2.2",
-                "php-http/guzzle6-adapter": "^1.1",
-                "phpunit/phpunit": "^6",
-                "squizlabs/php_codesniffer": "^2.8",
-                "symfony/yaml": "~2.3|^3|^4.4|^5"
+                "php-coveralls/php-coveralls": "^2.4.2",
+                "phpunit/phpunit": ">=7",
+                "squizlabs/php_codesniffer": "^3",
+                "symfony/var-dumper": "^4",
+                "yoast/phpunit-polyfills": "^0.2.0"
             },
             "type": "library",
             "extra": {
-                "scenarios": {
-                    "phpunit5": {
-                        "require-dev": {
-                            "phpunit/phpunit": "^5.7.27"
-                        },
-                        "remove": [
-                            "php-coveralls/php-coveralls"
-                        ],
-                        "config": {
-                            "platform": {
-                                "php": "5.6.33"
-                            }
-                        }
-                    }
-                },
                 "branch-alias": {
-                    "dev-master": "3.x-dev"
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -1863,9 +1851,9 @@
             "description": "Manage alias records for local and remote sites.",
             "support": {
                 "issues": "https://github.com/consolidation/site-alias/issues",
-                "source": "https://github.com/consolidation/site-alias/tree/3.0.1"
+                "source": "https://github.com/consolidation/site-alias/tree/3.1.0"
             },
-            "time": "2020-05-28T00:33:41+00:00"
+            "time": "2021-02-20T20:03:10+00:00"
         },
         {
             "name": "consolidation/site-process",
@@ -2379,16 +2367,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.11.1",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "ce77a7ba1770462cd705a91a151b6c3746f9c6ad"
+                "reference": "ebec9b1708c95d7602245c8172773f6b4e0c3be1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/ce77a7ba1770462cd705a91a151b6c3746f9c6ad",
-                "reference": "ce77a7ba1770462cd705a91a151b6c3746f9c6ad",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/ebec9b1708c95d7602245c8172773f6b4e0c3be1",
+                "reference": "ebec9b1708c95d7602245c8172773f6b4e0c3be1",
                 "shasum": ""
             },
             "require": {
@@ -2403,11 +2391,6 @@
                 "phpunit/phpunit": "^7.5 || ^9.1.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.11.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
@@ -2448,9 +2431,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.11.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.12.0"
             },
-            "time": "2020-10-26T10:28:16+00:00"
+            "time": "2021-02-14T13:22:18+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -13736,17 +13719,11 @@
         },
         {
             "name": "drupal/wxt_library",
-            "version": "1.22.0",
+            "version": "dev-4.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_library.git",
-                "reference": "8.x-1.22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/wxt_library-8.x-1.22.zip",
-                "reference": "8.x-1.22",
-                "shasum": "04535cb9e32a75e38681eb520c9d61e2bb88d318"
+                "reference": "9daff419dd738cae9f56836ad67efeb912761445"
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -13764,12 +13741,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.22",
-                    "datestamp": "1612137753",
+                    "version": "8.x-4.3+1-dev",
+                    "datestamp": "1612143144",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "installer-paths": {
@@ -20201,12 +20181,19 @@
             "version": "dev-4.x",
             "alias": "1.26",
             "alias_normalized": "1.26.0.0"
+        },
+        {
+            "package": "drupal/wxt_library",
+            "version": "dev-4.x",
+            "alias": "1.22",
+            "alias_normalized": "1.22.0.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "agrcmsx/config": 20,
-        "drupal/wxt_bootstrap": 20
+        "drupal/wxt_bootstrap": 20,
+        "drupal/wxt_library": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
