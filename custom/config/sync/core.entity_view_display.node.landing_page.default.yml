@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.landing_page.body
     - field.field.node.landing_page.comment
     - field.field.node.landing_page.field_created_by
@@ -19,18 +18,14 @@ dependencies:
     - field.field.node.landing_page.field_subject
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
-    - field.field.node.landing_page.layout_builder__layout
     - field.field.node.landing_page.layout_builder__translation
     - field.field.node.landing_page.layout_selection
     - node.type.landing_page
   module:
-    - comment
-    - datetime
     - layout_builder
     - layout_builder_restrictions
     - layout_library
-    - metatag
-    - options
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -51,120 +46,30 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  comment:
-    weight: 15
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
-  field_created_by:
-    weight: 14
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_dc_date_created:
-    weight: 13
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_description:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_issued:
-    weight: 1
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_keywords:
-    weight: 6
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_meta_tags:
-    type: metatag_empty_formatter
+  body:
+    type: text_default
+    weight: 0
     region: content
     label: hidden
-    weight: 0
     settings: {  }
     third_party_settings: {  }
-  field_meta_type:
-    weight: 9
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_modified:
-    weight: 7
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_peer_review:
-    weight: 12
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_subject:
-    weight: 8
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tracking_number:
-    weight: 10
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_update_date_modified:
-    weight: 11
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
 hidden:
-  body: true
+  comment: true
   content_moderation_control: true
+  field_created_by: true
+  field_dc_date_created: true
+  field_description: true
+  field_issued: true
+  field_keywords: true
+  field_meta_tags: true
+  field_meta_type: true
+  field_modified: true
+  field_peer_review: true
   field_queue: true
+  field_subject: true
+  field_tracking_number: true
+  field_update_date_modified: true
   langcode: true
-  layout_builder__layout: true
   layout_builder__translation: true
   layout_selection: true
   links: true
