@@ -50,7 +50,7 @@ function agri_admin_update_8001() {
   $nids = $query->execute();
   $count_success = 0;
   foreach ($nids as $vid => $nid) {
-    $result = \Drupal\agri_admin\AgriAdminHelper::disableMenuLinkByNid($nid, 'main');
+    $result = \Drupal\agri_admin\AgriAdminHelper::disableMenuLinkByNid($nid, 'sidebar');
     if ($result !== FALSE) {
       $count_success++;
     }
@@ -206,3 +206,22 @@ function agri_admin_update_8004() {
   }
 
 }
+
+/**
+ * Force menu link disable.
+ *
+ */
+function agri_admin_update_8005() {
+  // For Huan agrcms/d8#141
+  $query = \Drupal::entityQuery('node')->condition('type', 'page')
+    ->condition('status', 1);
+  $nids = $query->execute();
+  $count_success = 0;
+  foreach ($nids as $vid => $nid) {
+    $result = \Drupal\agri_admin\AgriAdminHelper::disableMenuLinkByNid($nid, 'sidebar');
+    if ($result !== FALSE) {
+      $count_success++;
+    }
+  }
+}
+
