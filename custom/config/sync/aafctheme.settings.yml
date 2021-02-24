@@ -5,7 +5,7 @@ schemas:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: libraries/theme-gcweb/assets/favicon.ico
-  url: '/libraries/theme-gcweb/assets/favicon.ico'
+  url: 'https://aafc-mo.9pro.ca/libraries/theme-gcweb/assets/favicon.ico'
   use_default: 0
 features:
   comment_user_picture: 1
@@ -46,3 +46,4 @@ reset_http_request_cache: ''
 table: ''
 wxt_gcweb_footer_twig_extension: 0
 breadcrumb_title: 0
+breadcrumb_home: 0

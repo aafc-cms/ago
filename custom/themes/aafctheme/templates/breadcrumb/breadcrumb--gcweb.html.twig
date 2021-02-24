@@ -15,15 +15,13 @@
     <h2{{ title_attributes.setAttribute('id', 'breadcrumbTitle') }}>{{ 'You are here'|t }}</h2>
     <div class="{{ container }}">
       <ol class="breadcrumb">
-        {% for item in breadcrumb %}
-        {% if ('Home' == item.text) %}
-        {% set item=item|merge({'text':'Agriculture and Agri-Food Canada'}) %}
-        <li {{ item.attributes }}><a href="https://canada.ca/en">Canada.ca</a></li>
-        {% elseif ('Accueil' == item.text) %}
-        {% set item=item|merge({'text':'Agriculture et Agroalimentaire Canada'}) %}
-        <li {{ item.attributes }}><a href="https://canada.ca/fr">Canada.ca</a></li>
+        <li><a href="https://canada.ca/{{ language }}">Canada.ca</a></li>
+        {% if language == 'en' %}
+        <li><a href="/{{ language }}">Agriculture and Agri-Food Canada</a></li>
         {% else %}
+        <li><a href="/{{ language }}">Agriculture et Agroalimentaire Canada</a></li>
         {% endif %}
+        {% for item in breadcrumb %}
           <li {{ item.attributes }}>
             {% if item.url %}
               <a href="{{ item.url }}">{{ item.text }}</a>
