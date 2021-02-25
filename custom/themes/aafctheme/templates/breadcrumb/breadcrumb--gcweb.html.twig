@@ -11,26 +11,40 @@
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {% if breadcrumb %}
-  <nav id="wb-bc" property="breadcrumb" aria-labelledby="breadcrumbTitle">
-    <h2{{ title_attributes.setAttribute('id', 'breadcrumbTitle') }}>{{ 'You are here'|t }}</h2>
-    <div class="{{ container }}">
-      <ol class="breadcrumb">
-        <li><a href="https://canada.ca/{{ language }}">Canada.ca</a></li>
-        {% if language == 'en' %}
-        <li><a href="/{{ language }}">Agriculture and Agri-Food Canada</a></li>
-        {% else %}
-        <li><a href="/{{ language }}">Agriculture et Agroalimentaire Canada</a></li>
-        {% endif %}
-        {% for item in breadcrumb %}
-          <li {{ item.attributes }}>
-            {% if item.url %}
-              <a href="{{ item.url }}">{{ item.text }}</a>
-            {% else %}
-              {{ item.text }}
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ol>
+<nav id="wb-bc" property="breadcrumb" aria-labelledby="breadcrumbTitle">
+  <h2{{ title_attributes.setAttribute('id', 'breadcrumbTitle') }}>{{ 'You are here'|t }}</h2>
+  <div class="{{ container }}">
+    <ol class="breadcrumb">
+      <li><a href="https://canada.ca/{{ language }}">Canada.ca</a></li>
+      {% if language == 'en' %}
+      <li><a href="/{{ language }}">Agriculture and Agri-Food Canada</a></li>
+      {% else %}
+      <li><a href="/{{ language }}">Agriculture et Agroalimentaire Canada</a></li>
+      {% endif %}
+      {% for item in breadcrumb %}
+        <li {{ item.attributes }}>
+          {% if item.url %}
+            <a href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
+{% else %}
+<nav id="wb-bc" property="breadcrumb" aria-labelledby="breadcrumbTitle">
+  <h2{{ title_attributes.setAttribute('id', 'breadcrumbTitle') }}>{{ 'You are here'|t }}</h2>
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="https://canada.ca/{{ language }}">Canada.ca</a></li>
+      {% if language == 'en' %}
+      <li><a href="/{{ language }}">Agriculture and Agri-Food Canada</a></li>
+      {% else %}
+      <li><a href="/{{ language }}">Agriculture et Agroalimentaire Canada</a></li>
+      {% endif %}
+    </ol>
   </div>
 </nav>
 {% endif %}
