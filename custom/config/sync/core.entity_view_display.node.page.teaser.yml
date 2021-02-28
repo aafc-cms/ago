@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.page.field_subject
     - field.field.node.page.field_tracking_number
     - field.field.node.page.field_update_date_modified
+    - field.field.node.page.layout_builder__layout
     - field.field.node.page.layout_builder__translation
     - field.field.node.page.layout_selection
     - node.type.page
@@ -43,8 +44,6 @@ content:
   links:
     weight: 101
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   comment: true
   content_moderation_control: true
@@ -62,5 +61,6 @@ hidden:
   field_tracking_number: true
   field_update_date_modified: true
   langcode: true
+  layout_builder__layout: true
   layout_builder__translation: true
   layout_selection: true

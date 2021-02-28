@@ -44,6 +44,15 @@
     }
 }
 
+
+// Should only run this step if needed:
+//foreach (Drupal::entityTypeManager()->getStorage("taxonomy_term")->loadByProperties(["vid" => ["category", "aafc_type"]]) as $term) {
+//  $term->delete();
+//}
+
+
+
+//
 //ALTER TABLE node AUTO_INCREMENT=1;
 //ALTER TABLE node_revision AUTO_INCREMENT=1;
 //ALTER TABLE node_field_data AUTO_INCREMENT=1;

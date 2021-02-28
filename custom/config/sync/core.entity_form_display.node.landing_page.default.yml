@@ -18,11 +18,13 @@ dependencies:
     - field.field.node.landing_page.field_subject
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
+    - field.field.node.landing_page.layout_builder__layout
     - field.field.node.landing_page.layout_builder__translation
     - field.field.node.landing_page.layout_selection
     - node.type.landing_page
     - workflows.workflow.editorial
   module:
+    - comment
     - content_moderation
     - datetime
     - field_group
@@ -54,7 +56,7 @@ third_party_settings:
       children:
         - field_subject
       parent_name: ''
-      weight: 10
+      weight: 12
       format_type: details_sidebar
       region: content
       format_settings:
@@ -96,6 +98,12 @@ content:
       summary_rows: 2
       show_summary: false
     third_party_settings: {  }
+    region: content
+  comment:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   created:
     type: datetime_timestamp
@@ -152,7 +160,7 @@ content:
     type: datetime_default
     region: content
   field_peer_review:
-    weight: 13
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -164,7 +172,7 @@ content:
     type: options_buttons
     region: content
   field_tracking_number:
-    weight: 11
+    weight: 13
     settings:
       size: 60
       placeholder: 'Workflow submissions grouped by this field value.'
@@ -172,7 +180,7 @@ content:
     type: string_textfield
     region: content
   field_update_date_modified:
-    weight: 12
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
@@ -228,10 +236,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  comment: true
   field_meta_tags: true
   field_queue: true
   langcode: true
+  layout_builder__layout: true
   layout_builder__translation: true
   promote: true
   sticky: true
