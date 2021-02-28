@@ -11,6 +11,7 @@
 @import 'components/front';
 @import 'anonymous/restrictions';
 @import 'components/status_message';
+@import 'legacy-styles';
 
 //@import 'layouts/header';
 //@import 'layouts/footer';
@@ -61,4 +62,16 @@ footer#wb-info .landscape div.contextual.open {
     max-width: 100%;
     height: auto;
   }
-  
+
+/*BUG FIX FOR LAYOUT BUILDER*/
+
+#drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
+#drupal-off-canvas *:after, #drupal-off-canvas *:before {
+  all: revert;
+}
+
+.ui-dialog.ui-dialog-off-canvas {
+  background: #efefef;
+}
+
+/* END BUG FIX FOR LAYOUT BUILDER */
