@@ -126,7 +126,7 @@ body.path-frontpage main.col-md-12 {
 }
 
 /* line 15, ../sass/_legacy-styles.scss */
-body .home h1 {
+body.home h1 {
   border-bottom-width: 1px;
 }
 
