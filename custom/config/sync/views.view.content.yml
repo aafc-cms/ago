@@ -1669,6 +1669,7 @@ display:
           selected_actions:
             - archive_current
             - convert_bundles_on_node
+            - publish_latest
             - unpublish_current
           plugin_id: node_bulk_form
           entity_type: node
