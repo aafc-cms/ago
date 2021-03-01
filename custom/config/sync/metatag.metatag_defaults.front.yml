@@ -8,8 +8,8 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
-  keywords: 'AgriSource home page'
+  keywords: 'Agriculture and Agri-Food Canada home page'
   shortlink: '[site:url]'
   dcterms_title: Home
-  dcterms_description: 'AgriSource is the Department''s intranet site. It is a comprehensive source for AAFC corporate news, information, tools and services. It helps support our Team-based way of working as one Department and helps us to deliver on our business outcomes through '
-  dcterms_subject: 'Government on-line;Web publishing'
+  dcterms_description: 'Agriculture and Agri-Food Canada (AAFC) Home page - We work with farmers and food producers to support the growth and development of the agriculture and agri-food sector. Our policies, programs, research and technology help them succeed in Canadian and global markets. '
+  dcterms_subject: 'policy'
