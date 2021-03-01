@@ -61,7 +61,7 @@ entity_browser_block: 1.0.0
 entity_embed: 1.0.0
 entity_reference: 8.8.1
 entity_reference_revisions: 1.7.0
-entity_translation_unified_form: 1.0.0-beta7
+entity_translation_unified_form: 1.0.0-beta11
 entityqueue: 1.0.0-beta5
 field: 8.8.1
 field_formatter: 1.2.0
