@@ -53,7 +53,6 @@ module:
   entity_embed: 0
   entity_reference: 0
   entity_reference_revisions: 0
-  entity_translation_unified_form: 0
   entityqueue: 0
   field: 0
   field_formatter: 0

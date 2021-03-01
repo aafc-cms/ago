@@ -25,19 +25,46 @@ dependencies:
   module:
     - layout_builder
     - layout_builder_restrictions
+    - layout_discovery
     - layout_library
     - text
     - user
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4f681acf-739c-422d-9f73-03562ad0b02b:
+            uuid: 4f681acf-739c-422d-9f73-03562ad0b02b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:body'
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
   layout_library:
-    enable: true
+    enable: false
   layout_builder_restrictions:
     entity_view_mode_restriction:
       allowed_layouts: {  }
-      whitelisted_blocks: {  }
+      whitelisted_blocks:
+        'Content fields':
+          - 'field_block:node:landing_page:body'
+        'WxT Library': {  }
+        core: {  }
       blacklisted_blocks: {  }
     allowed_block_categories: {  }
 _core:

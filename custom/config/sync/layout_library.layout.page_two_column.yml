@@ -1,6 +1,9 @@
+uuid: f8468ed2-33ce-4e90-b3b3-c8fe0681bb5d
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: jYVh8Epfmnyruruw9mvA0muLgCUeWj7UjNe6c8voaxw
 id: page_two_column
 label: Two-column
 targetEntityType: node
@@ -9,6 +12,7 @@ layout:
   -
     layout_id: layout_twocol_section
     layout_settings:
+      label: ''
       column_widths: 67-33
     components:
       54ecf9a4-9d35-49a3-828a-50986ed55ae6:
@@ -79,6 +83,3 @@ layout:
         additional: {  }
         weight: 2
     third_party_settings: {  }
-_core:
-  default_config_hash: jYVh8Epfmnyruruw9mvA0muLgCUeWj7UjNe6c8voaxw
-uuid: f8468ed2-33ce-4e90-b3b3-c8fe0681bb5d
