@@ -1,4 +1,8 @@
 
+nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
+  border-top: 3px solid #38414d;
+}
+
 body.path-frontpage main.col-md-12 {
   padding-left: 0;
   padding-right: 0;
@@ -13,6 +17,7 @@ body.path-frontpage main.col-md-12 {
 
 
 body.home h1 {
+  font-weight: 700;
   border-bottom-width: 1px;
 }
 

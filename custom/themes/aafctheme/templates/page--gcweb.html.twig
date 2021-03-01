@@ -144,6 +144,15 @@
           {% block breadcrumb %}
             {{ breadcrumb }}
           {% endblock %}
+        {% elseif is_front %}
+        <nav id="wb-bc" property="breadcrumb" aria-labelledby="breadcrumbTitle">
+          <h2{{ title_attributes.setAttribute('id', 'breadcrumbTitle') }}>{{ 'You are here'|t }}</h2>
+          <div class="container">
+          <ol class="breadcrumb">
+            <li><a href="https://canada.ca/{{ language }}">Canada.ca</a></li>
+          </ol>
+          </div>
+        </nav>
         {% endif %}
 
         {# Action Links #}
