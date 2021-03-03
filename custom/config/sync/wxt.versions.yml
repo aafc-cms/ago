@@ -114,7 +114,7 @@ recreate_block_content: 0.0.0
 redirect: 1.5.0
 reroute_email: 1.3.0
 rest: 8.8.8
-safedelete: 1.0.0
+safedelete: 1.0.19
 scanner: 0.0.0
 serialization: 8.8.8
 simple_gmap: 1.4.0

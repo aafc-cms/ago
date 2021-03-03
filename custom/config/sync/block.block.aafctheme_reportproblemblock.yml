@@ -27,7 +27,7 @@ settings:
   provider: wxt_ext_webform
   label_display: '0'
   webform_id: contact
-  inline_webform: ''
+  inline_webform: 1
   report_problem_settings:
     webform_id: ''
     default_data: ''
