@@ -302,10 +302,16 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 
 /*Report a problem webform layout */
 /* line 80, ../sass/styles.scss */
-.form-report-a-problem-on-this-page .form-item-chkbox-securekeyconciergebankingcredentialaccess, .form-report-a-problem-on-this-page .form-item-chkbox-gckeyaccess,
-.form-report-a-problem-on-this-page .form-item-chkbox-pacproblemsoreiacproblems, .form-report-a-problem-on-this-page .form-item-chkbox-sininvalidationproblems,
-.form-report-a-problem-on-this-page .form-item-chkbox-otherloginerrornotinlist {
-  padding-left: 20px;
+.webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-securekeyconciergebankingcredentialaccess, .webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-gckeyaccess,
+.webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-pacproblemsoreiacproblems, .webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-sininvalidationproblems,
+.webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-otherloginerrornotinlist {
+  padding-left: 25px;
+}
+
+/* temporarily add this to hide captcha in the search form where we do not need CAPTCHA*/
+/* line 89, ../sass/styles.scss */
+body.role-is-anonymous form#wxt-search-canada-block-form div.captcha {
+  display: none;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */

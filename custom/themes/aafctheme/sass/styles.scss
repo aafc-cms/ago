@@ -76,11 +76,18 @@ footer#wb-info .landscape div.contextual.open {
 }
 
 /*Report a problem webform layout */
-.form-report-a-problem-on-this-page {
+.webform-submission-report-a-problem-on-this-page-form {
   .form-item-chkbox-securekeyconciergebankingcredentialaccess, .form-item-chkbox-gckeyaccess,
   .form-item-chkbox-pacproblemsoreiacproblems, .form-item-chkbox-sininvalidationproblems,
   .form-item-chkbox-otherloginerrornotinlist {
-    padding-left: 20px;
+    padding-left: 25px;
+  }
+}
+
+/* temporarily add this to hide captcha in the search form where we do not need CAPTCHA*/
+body.role-is-anonymous {
+  form#wxt-search-canada-block-form div.captcha {
+    display: none;
   }
 }
 /* END BUG FIX FOR LAYOUT BUILDER */
