@@ -300,6 +300,14 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   background: #efefef;
 }
 
+/*Report a problem webform layout */
+/* line 80, ../sass/styles.scss */
+.form-report-a-problem-on-this-page .form-item-chkbox-securekeyconciergebankingcredentialaccess, .form-report-a-problem-on-this-page .form-item-chkbox-gckeyaccess,
+.form-report-a-problem-on-this-page .form-item-chkbox-pacproblemsoreiacproblems, .form-report-a-problem-on-this-page .form-item-chkbox-sininvalidationproblems,
+.form-report-a-problem-on-this-page .form-item-chkbox-otherloginerrornotinlist {
+  padding-left: 20px;
+}
+
 /* END BUG FIX FOR LAYOUT BUILDER */
 
 /*# sourceMappingURL=styles.css.map */
