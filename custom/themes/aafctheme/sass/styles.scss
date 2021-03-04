@@ -75,4 +75,12 @@ footer#wb-info .landscape div.contextual.open {
   background: #efefef;
 }
 
+/*Report a problem webform layout */
+.form-report-a-problem-on-this-page {
+  .form-item-chkbox-securekeyconciergebankingcredentialaccess, .form-item-chkbox-gckeyaccess,
+  .form-item-chkbox-pacproblemsoreiacproblems, .form-item-chkbox-sininvalidationproblems,
+  .form-item-chkbox-otherloginerrornotinlist {
+    padding-left: 20px;
+  }
+}
 /* END BUG FIX FOR LAYOUT BUILDER */

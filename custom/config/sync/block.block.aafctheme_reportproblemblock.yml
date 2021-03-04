@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - webform.webform.contact
+    - webform.webform.report_a_problem_on_this_page
   module:
     - block_class
     - wxt_ext_webform
@@ -26,14 +26,14 @@ settings:
   label: 'Report Problem block'
   provider: wxt_ext_webform
   label_display: '0'
-  webform_id: contact
+  webform_id: report_a_problem_on_this_page
   inline_webform: 1
   report_problem_settings:
     webform_id: ''
     default_data: ''
     redirect: false
   default_data:
-    webform_id: contact
+    webform_id: report_a_problem_on_this_page
     default_data: ''
     redirect: true
   redirect: true
