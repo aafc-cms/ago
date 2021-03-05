@@ -1,7 +1,0 @@
-uuid: 13cc3ae6-296c-4ad9-822c-9a381adb683d
-langcode: en
-status: true
-dependencies: {  }
-formId: report_a_problem_on_this_page
-captchaType: image_captcha/Image
-label: 'Report a Problem on this page'
