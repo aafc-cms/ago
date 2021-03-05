@@ -12,7 +12,7 @@ id: report_a_problem_on_this_page
 title: 'Report a problem on this page'
 description: ''
 category: 'Report a problem'
-elements: "lbl_pleaseselectall:\n  '#type': label\n  '#title': 'Please select all that apply:'\nchkbox_linkbuttonorvideoisnotworking:\n  '#type': checkbox\n  '#title': 'A link, button or video is not working'\nchkbox_hasaspellingmistake:\n  '#type': checkbox\n  '#title': 'It has a spelling mistake'\nchkbox_informationismissing:\n  '#type': checkbox\n  '#title': 'Information is missing'\nchkbox_informationisoutdatedorwrong:\n  '#type': checkbox\n  '#title': 'Information is outdated or wrong'\nchkbox_loginerrorwhentryingtoaccessanaccount:\n  '#type': checkbox\n  '#title': 'Login error when trying to access an account (e.g. My Service Canada Account)'\nchkbox_gckeyaccess:\n  '#type': checkbox\n  '#title': 'GC Key access'\nchkbox_securekeyconciergebankingcredentialaccess:\n  '#type': checkbox\n  '#title': 'SecureKey Concierge (Banking Credential) access '\nchkbox_pacproblemsoreiacproblems:\n  '#type': checkbox\n  '#title': 'Personal Access Code (PAC) problems or EI Access Code (AC) problems'\nchkbox_sininvalidationproblems:\n  '#type': checkbox\n  '#title': 'Social Insurance Number (SIN) validation problems'\nchkbox_otherloginerrornotinlist:\n  '#type': checkbox\n  '#title': 'Other login error not in this list'\nchkbox_cannotfindlookingfor:\n  '#type': checkbox\n  '#title': 'I can''t find what I''m looking for'\nchbox_otherissuenotinlist:\n  '#type': checkbox\n  '#title': 'Other issue not in this list'"
+elements: "wf_reportaproblem:\n  '#type': checkboxes\n  '#title': 'Please select all that apply:'\n  '#options':\n    'A link, button or video is not working': 'A link, button or video is not working'\n    'It has a spelling mistake': 'It has a spelling mistake'\n    'Information is missing': 'Information is missing'\n    'Information is outdated or wrong': 'Information is outdated or wrong'\n    'Login error when trying to access an account (e.g. My Service Canada Account)': 'Login error when trying to access an account (e.g. My Service Canada Account)'\n    'GC Key access': 'GC Key access'\n    'SecureKey Concierge (Banking Credential) access': 'SecureKey Concierge (Banking Credential) access'\n    'Personal Access Code (PAC) problems or EI Access Code (AC) problems': 'Personal Access Code (PAC) problems or EI Access Code (AC) problems'\n    'Social Insurance Number (SIN) validation problems': 'Social Insurance Number (SIN) validation problems'\n    'Other login error not in this list': 'Other login error not in this list'\n    'I can''t find what I''m looking for': 'I can''t find what I''m looking for'\n    'Other issue not in this list': 'Other issue not in this list'\n  '#required': true\n  '#required_error': 'The form could not be submitted: Please select at least one item.'"
 css: ''
 javascript: ''
 settings:
@@ -112,12 +112,12 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_type: inline
+  confirmation_title: 'Thank you for your help!'
+  confirmation_message: "<h3>Thank you for your help!</h3>\r\n\r\n<p>You will not receive a reply. For enquiries,&nbsp;<a href=\"https://www.canada.ca/en/contact/index.html\">contact us</a>.</p>"
   confirmation_url: ''
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false

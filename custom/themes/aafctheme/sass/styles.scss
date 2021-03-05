@@ -77,17 +77,21 @@ footer#wb-info .landscape div.contextual.open {
 
 /*Report a problem webform layout */
 .webform-submission-report-a-problem-on-this-page-form {
-  .form-item-chkbox-securekeyconciergebankingcredentialaccess, .form-item-chkbox-gckeyaccess,
-  .form-item-chkbox-pacproblemsoreiacproblems, .form-item-chkbox-sininvalidationproblems,
-  .form-item-chkbox-otherloginerrornotinlist {
-    padding-left: 25px;
+  legend {
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 20px;
   }
-}
-
-/* temporarily add this to hide captcha in the search form where we do not need CAPTCHA*/
-body.role-is-anonymous {
-  form#wxt-search-canada-block-form div.captcha {
+  legend span::after {
     display: none;
+  }
+
+  div.form-item-wf-reportaproblem-gc-key-access,
+  div.form-item-wf-reportaproblem-securekey-concierge-banking-credential-access,
+  div.form-item-wf-reportaproblem-personal-access-code-pac-problems-or-ei-access-code-ac-problems,
+  div.form-item-wf-reportaproblem-social-insurance-number-sin-validation-problems,
+  div.form-item-wf-reportaproblem-other-login-error-not-in-this-list {
+    margin-left: 40px;
   }
 }
 /* END BUG FIX FOR LAYOUT BUILDER */
