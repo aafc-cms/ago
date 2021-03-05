@@ -302,16 +302,22 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 
 /*Report a problem webform layout */
 /* line 80, ../sass/styles.scss */
-.webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-securekeyconciergebankingcredentialaccess, .webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-gckeyaccess,
-.webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-pacproblemsoreiacproblems, .webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-sininvalidationproblems,
-.webform-submission-report-a-problem-on-this-page-form .form-item-chkbox-otherloginerrornotinlist {
-  padding-left: 25px;
+.webform-submission-report-a-problem-on-this-page-form legend {
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 20px;
 }
-
-/* temporarily add this to hide captcha in the search form where we do not need CAPTCHA*/
-/* line 89, ../sass/styles.scss */
-body.role-is-anonymous form#wxt-search-canada-block-form div.captcha {
+/* line 85, ../sass/styles.scss */
+.webform-submission-report-a-problem-on-this-page-form legend span::after {
   display: none;
+}
+/* line 89, ../sass/styles.scss */
+.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-gc-key-access,
+.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-securekey-concierge-banking-credential-access,
+.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-personal-access-code-pac-problems-or-ei-access-code-ac-problems,
+.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-social-insurance-number-sin-validation-problems,
+.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-other-login-error-not-in-this-list {
+  margin-left: 40px;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
