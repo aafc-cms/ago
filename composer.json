@@ -104,6 +104,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "patches": {
+            "drupal/wxt": {
+                "wcag - fix the report a problem webform markup":
+                "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
+            }
+        },
         "patches-ignore": {
             "acquia/lightning": {
                 "drupal/core": {
