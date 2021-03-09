@@ -1,0 +1,23 @@
+uuid: 60561d1d-a307-4b7a-94ed-6721d88eaa0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_large
+    - node.type.page
+id: node.page.field_large
+field_name: field_large
+entity_type: node
+bundle: page
+label: 'Large mode (Wide mode)'
+description: 'wide content'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
