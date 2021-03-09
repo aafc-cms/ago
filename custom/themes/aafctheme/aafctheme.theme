@@ -297,4 +297,47 @@ function aafctheme_preprocess_page(&$vars) {
       }
     }
   }
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $vars['large_mode'] = false;
+  if(is_string($node) && is_numeric($node)) {
+    $nid = $node;
+    $node = $node_storage->load($nid);
+  }
+  if (is_object($node)) {
+    $large_mode = $node->get('field_large')->value;
+    $vars['large_mode'] = $large_mode;
+  }
 }
+
+function aafctheme_preprocess_region__header__gcweb(&$vars) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $vars['large_mode'] = false;
+  if(is_string($node) && is_numeric($node)) {
+    $nid = $node;
+    $node = $node_storage->load($nid);
+  }
+  if (is_object($node)) {
+    $large_mode = $node->get('field_large')->value;
+    $vars['large_mode'] = $large_mode;
+  }
+
+}
+
+function aafctheme_preprocess_region__content_footer__gcweb(&$vars) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $vars['large_mode'] = false;
+  if(is_string($node) && is_numeric($node)) {
+    $nid = $node;
+    $node = $node_storage->load($nid);
+  }
+  if (is_object($node)) {
+    $large_mode = $node->get('field_large')->value;
+    $vars['large_mode'] = $large_mode;
+  }
+
+}
+
+

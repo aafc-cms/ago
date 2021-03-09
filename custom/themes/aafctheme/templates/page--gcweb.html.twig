@@ -95,7 +95,7 @@
 {# Main #}
 {% block main %}
 
-  <div class="{{ (is_front) ? "container-fluid" : container }}">
+  <div class="{{ ((is_front) or (large_mode)) ? "container-fluid" : container }}">
     <div class="row">
 
       {# Highlighted #}

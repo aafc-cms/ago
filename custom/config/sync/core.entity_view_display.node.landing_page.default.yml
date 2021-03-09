@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.landing_page.field_description
     - field.field.node.landing_page.field_issued
     - field.field.node.landing_page.field_keywords
+    - field.field.node.landing_page.field_large
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_meta_type
     - field.field.node.landing_page.field_modified
@@ -54,6 +55,24 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
+          ac78a552-c190-4cd8-9271-780ceb8bb0e5:
+            uuid: ac78a552-c190-4cd8-9271-780ceb8bb0e5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_large'
+              formatter:
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+                type: boolean
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
   layout_library:
     enable: false
@@ -81,6 +100,16 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_large:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
 hidden:
   comment: true
   content_moderation_control: true

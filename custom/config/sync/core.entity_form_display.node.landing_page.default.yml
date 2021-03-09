@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.landing_page.field_description
     - field.field.node.landing_page.field_issued
     - field.field.node.landing_page.field_keywords
+    - field.field.node.landing_page.field_large
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_meta_type
     - field.field.node.landing_page.field_modified
@@ -56,7 +57,7 @@ third_party_settings:
       children:
         - field_subject
       parent_name: ''
-      weight: 12
+      weight: 10
       format_type: details_sidebar
       region: content
       format_settings:
@@ -82,6 +83,23 @@ third_party_settings:
         classes: aafc-dcterm-gctype-group
         open: false
       label: aafc-dcterms-gctype
+    group_details:
+      children:
+        - field_update_date_modified
+        - field_tracking_number
+        - field_peer_review
+        - field_large
+      parent_name: ''
+      weight: 15
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: false
+      label: Details
 _core:
   default_config_hash: 93TnkIzh65W5fSqt_74vYO-VnxfJ92GSYGlKHFraxlA
 id: node.landing_page.default
@@ -100,7 +118,7 @@ content:
     third_party_settings: {  }
     region: content
   comment:
-    weight: 26
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: comment_default
@@ -147,6 +165,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_large:
+    type: boolean_checkbox
+    weight: 32
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_meta_type:
     weight: 15
     settings: {  }
@@ -160,7 +185,7 @@ content:
     type: datetime_default
     region: content
   field_peer_review:
-    weight: 15
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -172,7 +197,7 @@ content:
     type: options_buttons
     region: content
   field_tracking_number:
-    weight: 13
+    weight: 30
     settings:
       size: 60
       placeholder: 'Workflow submissions grouped by this field value.'
@@ -180,7 +205,7 @@ content:
     type: string_textfield
     region: content
   field_update_date_modified:
-    weight: 14
+    weight: 29
     settings:
       display_label: true
     third_party_settings: {  }
