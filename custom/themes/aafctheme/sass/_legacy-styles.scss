@@ -63,7 +63,12 @@ body.home h1 {
   font-weight: 700;
   border-bottom-width: 1px;
 }
-
+body.anonymous #wb-lng li {
+  padding-right: 0; 
+}
+body.user-logged-in #wb-lng li {
+margin-right: 15px !important; 
+}
 .most-requested h2 {
        font-size: 1.2em;
 }
