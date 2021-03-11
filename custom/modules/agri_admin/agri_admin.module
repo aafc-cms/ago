@@ -1437,13 +1437,12 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
       }
     }
   }
-  if ($type == 'agri-admin') {
+  // Add token for webform only
+  if ($type == 'agri-admin' && !(isset($data['entity']) && $data['entity'] instanceof \Drupal\node\NodeInterface)) {
     foreach ($tokens as $name => $original) {
       switch ($name) {
         case 'user-agent':
           $useragent = $_SERVER['HTTP_USER_AGENT'];
-          \Drupal::logger('agri-admin')->notice("Assign value to user agent token");
-          \Drupal::logger('agri-admin')->notice($useragent);
           $replacements[$original] = $useragent;
           break;
       }

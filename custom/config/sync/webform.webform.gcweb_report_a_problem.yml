@@ -209,7 +209,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'AAFC: Report a Problem Form [current-page:title]'
-      body: "The following issue(s) were reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
+      body: "The following issue(s) were reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
