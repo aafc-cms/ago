@@ -1434,8 +1434,17 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
         case 'translation-unpublished-url':
           $replacements[$original] = $translated_unpublished_url;
           break;
+      }
+    }
+  }
+  if ($type == 'agri-admin') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
         case 'user-agent':
-          $replacements[$original] = $_SERVER['HTTP_USER_AGENT'];
+          $useragent = $_SERVER['HTTP_USER_AGENT'];
+          \Drupal::logger('agri-admin')->notice("Assign value to user agent token");
+          \Drupal::logger('agri-admin')->notice($useragent);
+          $replacements[$original] = $useragent;
           break;
       }
     }

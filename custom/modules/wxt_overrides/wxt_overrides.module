@@ -4,6 +4,7 @@
 use Drupal\agri_admin\AgriAdminHelper;
 use Drupal\agri_admin\Utils;
 use \Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\Utility\Token;
 
 /**
  * @file
@@ -472,6 +473,40 @@ function wxt_overrides_link_alter(&$variables) {
     }
   }
 }
+
+
+/**
+ * Implements hook_token_info().
+ */
+function wxt_overrides_token_info() {
+  $info = [];
+  $info['tokens']['wxt_overrides']['user-agent'] = ['name' => t('User agent'), 'description' => t('A token to display the information of user agent')];
+  return $info;
+}
+
+
+/**
+ * Implements hook_tokens().
+ */
+function wxt_overrides_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  if ($type == 'wxt_overrides') {
+    $useragent = $_SERVER['HTTP_USER_AGENT'];
+    \Drupal::logger('wxt_overrides')->notice("Assign value to user agent token");
+    \Drupal::logger('wxt_overrides')->notice($useragent);
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'user-agent':
+          $replacements[$original] = $useragent;
+          break;
+        default:
+          break;
+        }
+    }
+  }
+  return $replacements;
+}
+
 
 /** 
 function wxt_overrides_cron() {
