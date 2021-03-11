@@ -199,7 +199,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: aafc.cmswebapps-sgcappsweb.aac@canada.ca
+      to_mail: james.yao2@canada.ca
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -208,12 +208,12 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: _default
-      body: _default
+      subject: 'AAFC: Report a Problem Form [current-page:title]'
+      body: "The following issue(s) were reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]<br />\r\n<br />\r\n[webform_submission:values]</a>"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
-      exclude_empty_checkbox: false
+      exclude_empty_checkbox: true
       exclude_attachments: false
       html: true
       attachments: false
