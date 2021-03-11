@@ -30,19 +30,19 @@ var Error404 = function() {
     if (initialized) {
       return;
     }
-    Agrisource.init();
+    AAFCOnline.init();
 
     // Get the current UI language
-    if (Agrisource.lang == 'en') {
+    if (AAFCOnline.lang == 'en') {
       console.log('Error 404');
-      document.title = "We couldn't find that Web page (Error 404) - Agrisource";
+      document.title = "We couldn't find that Web page (Error 404)";
       $('head meta[property*="title"]').remove();
       $('head').prepend('<meta property="dcterms:title" content="404 Error - Page not found">');
     }
     else {
       console.log('Erreur 404!');
       $('head meta[property*="title"]').remove();
-      document.title = "Nous ne pouvons trouver cette page Web (Erreur 404) - Agrisource";
+      document.title = "Nous ne pouvons trouver cette page Web (Erreur 404)";
       $('head').prepend('<meta property="dcterms:title" content="Erreur 404 - Page non trouvée" lang="fr">');
     }
     $('head').prepend('<meta property="robots" content="noindex, nofollow, noarchive">');

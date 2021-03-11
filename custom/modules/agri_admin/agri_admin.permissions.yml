@@ -6,7 +6,7 @@ aafc pending drafts:
   description: 'When this permission is granted, pending drafts (where configured in agri_admin.module code and corresponding views and css) will be flagged as orange and pending values will replace the current published values but only when "logged in" and has this permission'
 aafc admin styles:
   title: 'AAFC admin styles'
-  description: 'Use the Agrisource admin styles, needed for elevated roles that have editing priviledges'
+  description: 'Use the AAFCOnline admin styles, needed for elevated roles that have editing priviledges'
   restrict access: true
 aafc show restricted plugins:
   title: 'AAFC show restricted plugins'
