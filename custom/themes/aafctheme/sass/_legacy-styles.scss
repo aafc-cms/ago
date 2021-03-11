@@ -15,7 +15,50 @@ body.path-frontpage main.col-md-12 {
        margin-top: 0
 }
 
-
+/*
+ * Site menu
+ */
+/* Special style for the home page - GCWeb v5 (gcweb-menu) */
+.home .gcweb-menu {
+  border-top: 1px solid #ddd;
+  color: #284162;
+  margin-left: 0px;
+}
+.home .gcweb-menu button[aria-haspopup=true] {
+  background-color: #26374a;
+  border-color: #26374a;
+  color: #FFF;
+}
+.home .gcweb-menu button[aria-haspopup=true]:hover {
+  background-color: #444;
+  color: #fff;
+}
+#wb-bc{
+  margin-left: -30px;
+  margin-top: 15px;
+}
+.navbar img {
+  width: auto !important;
+}
+.col-sm-12.bs-region.bs-region--bottom{
+  padding-right: 0;
+}
+.container-fluid {
+  margin-right: 15px;
+}
+.region.region-search{
+  margin-top: -0.75em;
+  right: 15px;
+}
+#wb-srch input, .srchbox input {
+  margin-right: 90px;
+}
+.breadcrumb {
+  padding: 8px 20px;
+}
+header .brand {
+  margin-top: -13px;
+}
 body.home h1 {
   font-weight: 700;
   border-bottom-width: 1px;
