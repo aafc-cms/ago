@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.landing_page.field_modified
     - field.field.node.landing_page.field_peer_review
     - field.field.node.landing_page.field_queue
+    - field.field.node.landing_page.field_special
     - field.field.node.landing_page.field_subject
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
@@ -55,6 +56,24 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
+          e5fb1d4c-888b-40cc-a234-7bff548b8124:
+            uuid: e5fb1d4c-888b-40cc-a234-7bff548b8124
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_special'
+              formatter:
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+                type: boolean
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
   layout_library:
     enable: false
@@ -84,6 +103,16 @@ content:
     third_party_settings: {  }
   field_large:
     weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_special:
+    weight: 2
     label: above
     settings:
       format: default

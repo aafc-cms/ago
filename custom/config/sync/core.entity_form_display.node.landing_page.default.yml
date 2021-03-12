@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.landing_page.field_modified
     - field.field.node.landing_page.field_peer_review
     - field.field.node.landing_page.field_queue
+    - field.field.node.landing_page.field_special
     - field.field.node.landing_page.field_subject
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
@@ -88,6 +89,7 @@ third_party_settings:
         - field_update_date_modified
         - field_tracking_number
         - field_peer_review
+        - field_special
         - field_large
       parent_name: ''
       weight: 15
@@ -167,7 +169,7 @@ content:
     region: content
   field_large:
     type: boolean_checkbox
-    weight: 32
+    weight: 33
     region: content
     settings:
       display_label: true
@@ -189,6 +191,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_special:
+    weight: 32
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_subject:
     weight: 16

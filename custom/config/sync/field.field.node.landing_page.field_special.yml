@@ -1,0 +1,23 @@
+uuid: 8dca16e9-635b-4b64-a73c-b63423d3dd98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special
+    - node.type.landing_page
+id: node.landing_page.field_special
+field_name: field_special
+entity_type: node
+bundle: landing_page
+label: 'Special Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

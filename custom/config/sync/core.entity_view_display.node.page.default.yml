@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.page.field_meta_type
     - field.field.node.page.field_modified
     - field.field.node.page.field_peer_review
+    - field.field.node.page.field_special
     - field.field.node.page.field_subject
     - field.field.node.page.field_tracking_number
     - field.field.node.page.field_update_date_modified
@@ -256,6 +257,24 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          63101f74-8e00-4210-b15c-9fdb05a7c855:
+            uuid: 63101f74-8e00-4210-b15c-9fdb05a7c855
+            region: top
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_special'
+              formatter:
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+                type: boolean
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
     allow_custom: false
   layout_library:
@@ -363,6 +382,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: top
+  field_special:
+    weight: 17
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: top
   field_subject:
     weight: 9

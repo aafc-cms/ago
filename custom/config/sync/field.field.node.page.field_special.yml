@@ -1,0 +1,23 @@
+uuid: 3bc7c5b9-9ab2-4bdb-8cef-b7a4e9f6867b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special
+    - node.type.page
+id: node.page.field_special
+field_name: field_special
+entity_type: node
+bundle: page
+label: 'Special Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
