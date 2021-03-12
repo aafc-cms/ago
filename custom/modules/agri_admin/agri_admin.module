@@ -698,6 +698,7 @@ function agri_admin_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInte
     //add validation functionality to prevent the broken links or misused linkit before the page is published.
     if ($content_type == 'page' || $content_type == 'landing_page') {
       $form['#validate'][] = 'agri_admin_publishpage_referredlinks_validation';
+      $form['#attached']['library'][] = 'agri_admin/special'; // For page and landing page edit/add js.
     }
     // custom action after the data is submitted.
     //$form['actions'][$action]['#submit'][] = 'agri_admin_form_submit'i;

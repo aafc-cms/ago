@@ -43,3 +43,10 @@ content-plugins-changes:
   dependencies:
     - core/jquery
     - core/drupalSettings
+
+special:
+  js:
+    js/special.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
