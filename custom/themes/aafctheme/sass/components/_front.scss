@@ -17,3 +17,8 @@
 background-image: url("none") !important;
 }
 }
+html:lang(en) body.path-frontpage {
+  h1 {
+    padding-top: 0.8em;
+  }
+}

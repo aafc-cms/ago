@@ -91,6 +91,11 @@ body.user-logged-in[class*='archiv'] div.region-header h1 {
     background-image: url("none") !important;
   }
 }
+/* line 21, ../sass/components/_front.scss */
+html:lang(en) body.path-frontpage h1 {
+  padding-top: 0.8em;
+}
+
 /* line 2, ../sass/components/_container-fluid.scss */
 div.container-fluid main nav.tabs.mrgn-tp-md.mrgn-bttm-md {
   margin-left: 13em;
