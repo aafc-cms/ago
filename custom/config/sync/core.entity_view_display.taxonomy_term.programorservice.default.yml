@@ -1,0 +1,30 @@
+uuid: 5e4f196a-b9f9-4df1-8a72-cbf73f05cbd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programorservice.field_toemailaddress
+    - taxonomy.vocabulary.programorservice
+  module:
+    - text
+id: taxonomy_term.programorservice.default
+targetEntityType: taxonomy_term
+bundle: programorservice
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_toemailaddress:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true
