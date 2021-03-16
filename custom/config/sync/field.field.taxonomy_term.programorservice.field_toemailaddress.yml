@@ -1,0 +1,19 @@
+uuid: 9dc2fdb5-2d2e-4291-889f-601eed627e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_toemailaddress
+    - taxonomy.vocabulary.programorservice
+id: taxonomy_term.programorservice.field_toemailaddress
+field_name: field_toemailaddress
+entity_type: taxonomy_term
+bundle: programorservice
+label: 'To Email Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
