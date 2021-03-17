@@ -1,9 +1,9 @@
-uuid: 430004e1-8709-4566-919b-5f64ff861834
+uuid: 4204509e-5a3e-4d9a-9da6-2e5d47159665
 langcode: en
 status: true
 dependencies: {  }
-id: 47e333ca49
-name: d8purger
+id: 8ac9fec4fb
+name: d8xpurger
 invalidationtype: tag
 hostname: localhost
 port: 8000
