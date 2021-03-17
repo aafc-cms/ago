@@ -1,0 +1,29 @@
+uuid: 5d31f075-6dc9-4fc4-ad15-6ce35216f145
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:search:ac4e5499-76c7-40e4-8421-44879378417c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - aafctheme
+third_party_settings:
+  block_class:
+    classes: pull-right
+id: customsearchblockform
+theme: aafctheme
+region: search
+weight: 0
+provider: null
+plugin: 'block_content:ac4e5499-76c7-40e4-8421-44879378417c'
+settings:
+  id: 'block_content:ac4e5499-76c7-40e4-8421-44879378417c'
+  label: 'Custom Search Block Form'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }
