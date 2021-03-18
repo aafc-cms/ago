@@ -198,6 +198,11 @@ if [ ! -L html/sites/default/files/splashimages ]; then
   ln -s ../../../../custom/splash/sites/default/files/splashimages splashimages
   popd;
 fi
+if [ ! -L html/res ]; then
+  pushd html;
+  ln -s ../custom/js/res res
+  popd;
+fi
 
 if [ $live -eq 1 ]; then
   echo "Do not use minified css";
