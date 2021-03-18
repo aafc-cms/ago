@@ -14,7 +14,15 @@ body.path-frontpage main.col-md-12 {
        line-height: 26px;
        margin-top: 0
 }
-
+#wb-srch{
+margin-right: 15px;
+}
+#wb-srch input, .srchbox input {
+  margin-right: 125px;
+}
+#wb-lng li {
+  margin-right: 0 !important;
+}
 /*
  * Site menu
  */
@@ -32,6 +40,14 @@ body.path-frontpage main.col-md-12 {
 .home .gcweb-menu button[aria-haspopup=true]:hover {
   background-color: #444;
   color: #fff;
+}
+// .gcweb-menu button[aria-haspopup=true]:focus {
+//   background-color: #26374a;
+//   border: 1px dotted #26374a;
+//   color: #fff;
+// }
+#searchoptions{
+  line-height: 1.25em;
 }
 #wb-bc{
   margin-left: -30px;
@@ -65,9 +81,6 @@ body.home h1 {
 }
 body.anonymous #wb-lng li {
   padding-right: 0; 
-}
-body.user-logged-in #wb-lng li {
-margin-right: 15px !important; 
 }
 .most-requested h2 {
        font-size: 1.2em;
