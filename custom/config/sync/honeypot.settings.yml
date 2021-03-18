@@ -6,8 +6,8 @@ unprotected_forms:
   - honeypot_settings_form
 protect_all_forms: false
 log: false
-element_name: webformpage
-time_limit: 5
+element_name: emailaddress
+time_limit: 0
 expire: 300
 form_settings:
   user_register_form: false
