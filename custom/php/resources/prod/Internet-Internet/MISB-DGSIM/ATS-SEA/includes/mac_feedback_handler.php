@@ -1,6 +1,6 @@
 <?php
 // Recipients
-$to = "deepani.waidyaratne@canada.ca";
+$to = "deepani.waidyaratne@canada.ca,j@7pro.ca";
 //$to = "marc.gervais@canada.ca,laurie.bernardi@canada.ca,benoit.aupy@canada.ca";
 
 // Catch $_POST, declare local variables and set defaults
