@@ -474,6 +474,17 @@ function wxt_overrides_link_alter(&$variables) {
   }
 }
 
+
+function wxt_overrides_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform_submission_yourfeedback_programsandservices_add_form') {
+    //Discussed passing PS id through the request query string with Huan, She approved this approach
+    $ps_id = \Drupal::request()->query->get('ps_id');
+    //set the default Program or Service based on calling program page
+    $form['elements']['programorservice']['#default_value'] = $ps_id;
+  }
+}
+
+
 /** 
 function wxt_overrides_cron() {
   $view = \Drupal\views\Views::getView('broken_links_report');
