@@ -1,16 +1,16 @@
-uuid: b1a7c951-f97c-460c-80bc-4d06d9433900
+uuid: 6c6ea768-cb37-446a-b7a0-d626922eb3a0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_category
-    - node.type.page
-    - taxonomy.vocabulary.category
-id: node.page.field_category
-field_name: field_category
+    - field.storage.node.field_dcterms_subject
+    - node.type.landing_page
+    - taxonomy.vocabulary.dcterms_subject
+id: node.landing_page.field_dcterms_subject
+field_name: field_dcterms_subject
 entity_type: node
-bundle: page
-label: category
+bundle: landing_page
+label: 'dcterms:subject'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      category: category
+      dcterms_subject: dcterms_subject
     sort:
       field: name
       direction: asc

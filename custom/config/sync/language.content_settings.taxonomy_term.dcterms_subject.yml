@@ -1,0 +1,16 @@
+uuid: ec5a31e4-b06b-4d1c-b960-792e02fa483c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.dcterms_subject
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.dcterms_subject
+target_entity_type_id: taxonomy_term
+target_bundle: dcterms_subject
+default_langcode: site_default
+language_alterable: false

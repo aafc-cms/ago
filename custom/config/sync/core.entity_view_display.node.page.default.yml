@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.comment
-    - field.field.node.page.field_category
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
+    - field.field.node.page.field_dcterms_subject
     - field.field.node.page.field_description
     - field.field.node.page.field_issued
     - field.field.node.page.field_keywords
@@ -281,14 +281,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_category:
-    weight: 2
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: top
   field_created_by:
     weight: 15
     label: above
@@ -305,6 +297,14 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: top
+  field_dcterms_subject:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: top
   field_description:
     weight: 7

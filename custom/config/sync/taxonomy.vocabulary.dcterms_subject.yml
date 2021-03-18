@@ -1,0 +1,8 @@
+uuid: deaf9913-6390-4fc7-98dc-a55fc6be9f34
+langcode: en
+status: true
+dependencies: {  }
+name: 'dcterms:subject'
+vid: dcterms_subject
+description: ''
+weight: 0

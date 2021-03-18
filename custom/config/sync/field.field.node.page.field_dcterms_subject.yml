@@ -1,16 +1,16 @@
-uuid: 73c6d5d4-9f45-4b81-98d0-bbc7f982294a
+uuid: de045b8a-a99c-4400-b8ba-e86a22a19c84
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_subject
+    - field.storage.node.field_dcterms_subject
     - node.type.page
-    - taxonomy.vocabulary.category
-id: node.page.field_subject
-field_name: field_subject
+    - taxonomy.vocabulary.dcterms_subject
+id: node.page.field_dcterms_subject
+field_name: field_dcterms_subject
 entity_type: node
 bundle: page
-label: 'aafc:subject'
+label: 'dcterms:subject'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      category: category
+      dcterms_subject: dcterms_subject
     sort:
       field: name
       direction: asc
