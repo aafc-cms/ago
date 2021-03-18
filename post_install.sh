@@ -117,6 +117,12 @@ if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
 fi
 htaccess_file=html/.htaccess
+if ! grep -q "mac_feedback" $htaccess_file; then
+   search_str="^( +)# Allow access to test-specific PHP files:";
+   new_setting="\1# Allow access to custom aafc PHP files:\n\1RewriteCond \%\{REQUEST_URI\} \!\/resources\/prod\/Internet-Internet\/MISB-DGSIM\/ATS-SEA\/includes\/mac_feedback_handler.php\$\n\1# Allow access to test-specific PHP files:\n";
+   sed -r "s/${search_str}/${new_setting}/gm" $htaccess_file > ${htaccess_file}_temp;
+   cp ${htaccess_file}_temp ${htaccess_file}
+fi
 if ! grep -q "upgrade-insecure-requests" $htaccess_file; then
   if [ -z $1 ]; then
     echo "dev environment setup.\n";
@@ -201,6 +207,11 @@ fi
 if [ ! -L html/res ]; then
   pushd html;
   ln -s ../custom/js/res res
+  popd;
+fi
+if [ ! -L html/resources ]; then
+  pushd html;
+  ln -s ../custom/php/resources resources
   popd;
 fi
 
