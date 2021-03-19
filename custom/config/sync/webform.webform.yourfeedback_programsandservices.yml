@@ -207,15 +207,15 @@ handlers:
         - completed
       to_mail: _default
       to_options: {  }
-      cc_mail: ''
+      cc_mail: aafc.voc-vdc.aac@canada.ca
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: _default
+      from_mail: AAFC.CMS-DONOTREPLY-DEV-NEPASREPONDRE-SGC.AAC@AGR.GC.CA
       from_options: {  }
-      from_name: _default
-      subject: _default
-      body: _default
+      from_name: 'Do Not Reply / Ne Pas Répondre (aafc/aac) '
+      subject: 'AAFC Programs and Services contact form - [webform_submission:values:programorservice]'
+      body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: 0
       exclude_empty: true
