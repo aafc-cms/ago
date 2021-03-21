@@ -191,7 +191,7 @@ body.path-frontpage main.col-md-12 {
 
 /* line 49, ../sass/_legacy-styles.scss */
 ol, ul {
-  padding-left: unset;
+  padding-left: 2.1em;
 }
 
 /* line 52, ../sass/_legacy-styles.scss */
