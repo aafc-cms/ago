@@ -8,7 +8,6 @@ id: node
 label: Content
 tags:
   canonical_url: '[node:url]'
-  news_keywords: '[node:field_keywords]'
   keywords: '[node:field_keywords]'
   dcterms_type: '[node:field_meta_type]'
   dcterms_relation: '[node:field_subject]'
