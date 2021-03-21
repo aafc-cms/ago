@@ -128,7 +128,7 @@ function wxt_overrides_page_attachments(array &$page) {
   if (!isset($node)) {
     return;
   }
-
+  $has_keywords = FALSE;
   // Add page meta.
   $route_match = Utils::getRouteName();
   if ($route_match == 'entity.node.canonical' && isset($page['#attached']['html_head'])) {
@@ -151,6 +151,9 @@ function wxt_overrides_page_attachments(array &$page) {
           unset($page['#attached']['html_head'][$key]);
           // Transfer metatag from default dublincore to aafc/gc custom.
           $page['#attached']['html_head'][] = [$dctermsdescription, 'dcterms:description'];
+        }
+        if ($name == 'keywords') {
+          $has_keywords = TRUE;
         }
         if ($name == 'dcterms.creator') {
           $content = $value[0]['#attributes']['content'];
@@ -283,6 +286,16 @@ function wxt_overrides_page_attachments(array &$page) {
         'content'   => $modified_date,
       ],
     ];
+    if (!$has_keywords) {
+      $keywords = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'property'  => 'keywords',
+          'content'   => '',
+        ],
+      ];
+      $page['#attached']['html_head'][] = [$keywords, 'keywords'];
+    }
     $page['#attached']['html_head'][] = [$dctermsissued, 'dcterms:issued'];
     $page['#attached']['html_head'][] = [$dctermsmodified, 'dcterms:modified'];
     $page['#attached']['html_head'][] = [$dctermstype, 'dcterms:type'];
