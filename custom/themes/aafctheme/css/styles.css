@@ -190,109 +190,114 @@ body.path-frontpage main.col-md-12 {
 }
 
 /* line 49, ../sass/_legacy-styles.scss */
+ol, ul {
+  padding-left: unset;
+}
+
+/* line 52, ../sass/_legacy-styles.scss */
 #searchoptions {
   line-height: 1.25em;
 }
 
-/* line 52, ../sass/_legacy-styles.scss */
+/* line 55, ../sass/_legacy-styles.scss */
 #wb-bc {
   margin-left: -30px;
   margin-top: 15px;
 }
 
-/* line 56, ../sass/_legacy-styles.scss */
+/* line 59, ../sass/_legacy-styles.scss */
 .navbar img {
   width: auto !important;
 }
 
-/* line 59, ../sass/_legacy-styles.scss */
+/* line 62, ../sass/_legacy-styles.scss */
 .col-sm-12.bs-region.bs-region--bottom {
   padding-right: 0;
 }
 
-/* line 62, ../sass/_legacy-styles.scss */
+/* line 65, ../sass/_legacy-styles.scss */
 .container-fluid {
   margin-right: 15px;
 }
 
-/* line 65, ../sass/_legacy-styles.scss */
+/* line 68, ../sass/_legacy-styles.scss */
 .region.region-search {
   margin-top: -0.75em;
   right: 15px;
 }
 
-/* line 69, ../sass/_legacy-styles.scss */
+/* line 72, ../sass/_legacy-styles.scss */
 #wb-srch input, .srchbox input {
   margin-right: 90px;
 }
 
-/* line 72, ../sass/_legacy-styles.scss */
+/* line 75, ../sass/_legacy-styles.scss */
 .breadcrumb {
   padding: 8px 20px;
 }
 
-/* line 75, ../sass/_legacy-styles.scss */
+/* line 78, ../sass/_legacy-styles.scss */
 header .brand {
   margin-top: -13px;
 }
 
-/* line 78, ../sass/_legacy-styles.scss */
+/* line 81, ../sass/_legacy-styles.scss */
 body.home h1 {
   font-weight: 700;
   border-bottom-width: 1px;
 }
 
-/* line 82, ../sass/_legacy-styles.scss */
+/* line 85, ../sass/_legacy-styles.scss */
 body.anonymous #wb-lng li {
   padding-right: 0;
 }
 
-/* line 85, ../sass/_legacy-styles.scss */
+/* line 88, ../sass/_legacy-styles.scss */
 .most-requested h2 {
   font-size: 1.2em;
 }
 
-/* line 89, ../sass/_legacy-styles.scss */
+/* line 92, ../sass/_legacy-styles.scss */
 .ip-btn {
   font-size: 1em;
 }
 
 /* supports the 3 column layout for MR instead of 4 columns */
-/* line 94, ../sass/_legacy-styles.scss */
+/* line 97, ../sass/_legacy-styles.scss */
 .list-responsive-3 > li {
   float: left;
   padding-right: 5px;
   width: 50%;
 }
 
-/* line 100, ../sass/_legacy-styles.scss */
+/* line 103, ../sass/_legacy-styles.scss */
 .list-responsive-3 > li:nth-child(2n+2) {
   clear: right;
 }
 
-/* line 104, ../sass/_legacy-styles.scss */
+/* line 107, ../sass/_legacy-styles.scss */
 .list-responsive-3:before,
 .list-responsive-3:after {
   content: " ";
   display: table;
 }
 
-/* line 110, ../sass/_legacy-styles.scss */
+/* line 113, ../sass/_legacy-styles.scss */
 .list-responsive-3:after {
   clear: both;
 }
 
-/* line 114, ../sass/_legacy-styles.scss */
+/* line 117, ../sass/_legacy-styles.scss */
 .followus {
   background-color: #f5f5f5;
 }
 
-/* line 118, ../sass/_legacy-styles.scss */
+/* line 121, ../sass/_legacy-styles.scss */
 .followus ul li a {
   border: solid 2px #f5f5f5;
 }
 
-/* line 122, ../sass/_legacy-styles.scss */
+/* line 125, ../sass/_legacy-styles.scss */
 .featured {
   margin-bottom: 0em;
   padding-top: 20px;
@@ -300,56 +305,56 @@ body.anonymous #wb-lng li {
   background: #31708f;
 }
 
-/* line 129, ../sass/_legacy-styles.scss */
+/* line 132, ../sass/_legacy-styles.scss */
 .featured a {
   color: #fff;
 }
 
-/* line 133, ../sass/_legacy-styles.scss */
+/* line 136, ../sass/_legacy-styles.scss */
 ul.feeds-cont li a {
   font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 139, ../sass/_legacy-styles.scss */
+  /* line 142, ../sass/_legacy-styles.scss */
   .featured {
     padding-left: .8em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 145, ../sass/_legacy-styles.scss */
+  /* line 148, ../sass/_legacy-styles.scss */
   .list-responsive-3 > li {
     width: 33%;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 152, ../sass/_legacy-styles.scss */
+  /* line 155, ../sass/_legacy-styles.scss */
   .btn-call-to-action {
     font-size: 19px !important;
   }
 
-  /* line 156, ../sass/_legacy-styles.scss */
+  /* line 159, ../sass/_legacy-styles.scss */
   .most-requested li {
     font-size: 19px;
   }
 
-  /* line 160, ../sass/_legacy-styles.scss */
+  /* line 163, ../sass/_legacy-styles.scss */
   .list-responsive-3 > li {
     clear: right;
     width: 100%;
   }
 
-  /* line 165, ../sass/_legacy-styles.scss */
+  /* line 168, ../sass/_legacy-styles.scss */
   .mobile-left {
     float: left !important;
   }
 
-  /* line 169, ../sass/_legacy-styles.scss */
+  /* line 172, ../sass/_legacy-styles.scss */
   .ip-cover-hide-mobile {
     background-image: url("none") !important;
   }
 }
-/* line 174, ../sass/_legacy-styles.scss */
+/* line 177, ../sass/_legacy-styles.scss */
 .featured {
   margin-bottom: 0em;
   padding-top: 20px;

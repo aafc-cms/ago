@@ -46,6 +46,9 @@ margin-right: 15px;
 //   border: 1px dotted #26374a;
 //   color: #fff;
 // }
+ol, ul {
+  padding-left: unset;
+}
 #searchoptions{
   line-height: 1.25em;
 }
