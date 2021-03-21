@@ -88,6 +88,7 @@ var AAFCFrontend = function() {
     //AAFCFrontend.initAnalytics();
 
     AAFCFrontend.initSlideshow();
+    searchInterface();
     initialized = true;
   }
 
@@ -148,6 +149,59 @@ var AAFCFrontend = function() {
   }
 
 
+  function updateformaction(){
+    var searchval = $('#q').val();
+    var slection =  $("#searchoptions").val();
+    switch (slection)
+    {
+      case "agr.gc.ca":
+        if (AAFCFrontend.lang == 'en') {
+          $("#custom-search-block-form").attr('action','https://www.canada.ca/en/agriculture-agri-food/search.html?_charset_=UTF-8&q='+searchval+'&wb-srch-sub=#wb-land');
+        }
+        else {
+          $("#custom-search-block-form").attr('action','https://www.canada.ca/fr/agriculture-agroalimentaire/rechercher.html?_charset_=UTF-8&q='+searchval+'&wb-srch-sub=#wb-land');
+        }
+        break;
+      case "canada.ca":
+        var searchval = $('#q').val();
+        if (AAFCFrontend.lang == 'en') {
+          $("#custom-search-block-form").attr('action','https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q='+searchval+'&_charset_=UTF-8&wb-srch-sub=');
+        }
+        else {
+          $("#custom-search-block-form").attr('action','https://www.canada.ca/fr/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q='+searchval+'&_charset_=UTF-8&wb-srch-sub=');
+        }
+        break;
+      default:
+        if (AAFCFrontend.lang == 'en') {
+          $("#custom-search-block-form").attr('action','https://www.canada.ca/en/agriculture-agri-food/search.html?_charset_=UTF-8&q='+searchval+'&wb-srch-sub=#wb-land');
+        }
+        else {
+          $("#custom-search-block-form").attr('action','https://www.canada.ca/fr/agriculture-agroalimentaire/rechercher.html?_charset_=UTF-8&q='+searchval+'&wb-srch-sub=#wb-land');
+        }
+    }
+  }
+
+
+  function searchInterface() {
+    //if(!AAFCOnline.isIE()){
+    //  alert('notIE');
+    //}
+    AAFCFrontend.updateformaction();
+    $("#q").change(function(){
+      var searchval = $('#q').val();
+      AAFCFrontend.updateformaction();
+    });
+    $("#searchoptions").change(function(){
+      AAFCFrontend.updateformaction();
+      if ($("#searchoptions").val() == 'canada.ca') {
+        $('#q').attr("placeholder", Drupal.t("Search canada.ca"));
+      }
+      else{
+        $('#q').attr("placeholder", Drupal.t("Search agr.gc.ca"));
+      }
+    });
+  }
+
   function removeRoleFromSummary() {
     // WCAG fix see : https://github.com/wet-boew/GCWeb/issues/1716
     var hrefElements = $('summary.mb-item[role]').each(function(index, element) {
@@ -170,6 +224,7 @@ var AAFCFrontend = function() {
     delay: delay,
     initAnalytics: initAnalytics,
     initSlideshow: initSlideshow,
+    updateformaction: updateformaction,
     page_type: page_type,
     removeRoleFromSummary: removeRoleFromSummary
   }
