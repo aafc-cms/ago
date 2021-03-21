@@ -76,7 +76,7 @@ function wxt_overrides_page_attachments(array &$page) {
     '#tag' => 'meta',
     '#attributes' => [
       'property'  => 'dcterms:accessRights',
-      'content'   => '3',
+      'content'   => '2',
     ],
   ];
 
