@@ -30,6 +30,7 @@ function wxt_overrides_page_attachments(array &$page) {
     fwrite($fp, print_r($page, TRUE) . "\n");
     fclose($fp);
   }
+  $dctermssubject = [];
 
   $metatags_module_head = $page['#attached']['html_head'];
   if (!isset($metatags_module_head)) {
@@ -300,7 +301,9 @@ function wxt_overrides_page_attachments(array &$page) {
     $page['#attached']['html_head'][] = [$dctermsmodified, 'dcterms:modified'];
     $page['#attached']['html_head'][] = [$dctermstype, 'dcterms:type'];
     $page['#attached']['html_head'][] = [$aafcsubject, 'aafc:subject'];
-    $page['#attached']['html_head'][] = [$dctermssubject, 'dcterms:subject'];
+    if (!empty($dctermssubject)) {
+      $page['#attached']['html_head'][] = [$dctermssubject, 'dcterms:subject'];
+    }
 
   }
 

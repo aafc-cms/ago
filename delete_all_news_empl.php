@@ -46,7 +46,7 @@
 
 
 // Should only run this step if needed:
-foreach (Drupal::entityTypeManager()->getStorage("taxonomy_term")->loadByProperties(["vid" => ["news_type","employment_type","category", "aafc_type"]]) as $term) {
+foreach (Drupal::entityTypeManager()->getStorage("taxonomy_term")->loadByProperties(["vid" => ["dcterm_subject","news_type","employment_type","category", "aafc_type"]]) as $term) {
   $term->delete();
 }
 
