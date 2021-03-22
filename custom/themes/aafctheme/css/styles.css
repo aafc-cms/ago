@@ -122,8 +122,8 @@ div form#webform-submission-yourfeedback-programsandservices-add-form div .selec
   position: absolute;
 }
 /* line 7, ../sass/anonymous/_webforms.scss */
-div form#webform-submission-yourfeedback-programsandservices-add-form div .form-item.js-form-item.form-type-email.js-form-type-email.form-item-emailaddress.js-form-item-emailaddress.form-group {
-  padding-top: 25px;
+div form#webform-submission-yourfeedback-programsandservices-add-form label[for="edit-emailaddress"] {
+  padding-top: 15px;
 }
 
 /* line 2, ../sass/components/_status_message.scss */
