@@ -11,6 +11,7 @@
 @import 'components/front';
 @import 'components/container-fluid';
 @import 'anonymous/restrictions';
+@import 'anonymous/webforms';
 @import 'components/status_message';
 @import 'legacy-styles';
 
@@ -73,25 +74,5 @@ footer#wb-info .landscape div.contextual.open {
 
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
-}
-
-/*Report a problem webform layout */
-.webform-submission-report-a-problem-on-this-page-form {
-  legend {
-    font-size: 24px;
-    font-weight: normal;
-    padding-bottom: 20px;
-  }
-  legend span::after {
-    display: none;
-  }
-
-  div.form-item-wf-reportaproblem-gc-key-access,
-  div.form-item-wf-reportaproblem-securekey-concierge-banking-credential-access,
-  div.form-item-wf-reportaproblem-personal-access-code-pac-problems-or-ei-access-code-ac-problems,
-  div.form-item-wf-reportaproblem-social-insurance-number-sin-validation-problems,
-  div.form-item-wf-reportaproblem-other-login-error-not-in-this-list {
-    margin-left: 40px;
-  }
 }
 /* END BUG FIX FOR LAYOUT BUILDER */
