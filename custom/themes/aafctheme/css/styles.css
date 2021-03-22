@@ -117,6 +117,15 @@ body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
   display: none !important;
 }
 
+/* line 3, ../sass/anonymous/_webforms.scss */
+div form#webform-submission-yourfeedback-programsandservices-add-form div .select-wrapper strong#edit-programorservice-error {
+  position: absolute;
+}
+/* line 7, ../sass/anonymous/_webforms.scss */
+div form#webform-submission-yourfeedback-programsandservices-add-form label[for="edit-emailaddress"] {
+  padding-top: 15px;
+}
+
 /* line 2, ../sass/components/_status_message.scss */
 div.alert.alert-success.access_unpublished {
   margin-bottom: 5px;
@@ -362,32 +371,32 @@ ul.feeds-cont li a {
   background: #31708f;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 41, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 50, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 55, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
@@ -395,35 +404,15 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 69, ../sass/styles.scss */
+/* line 70, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 74, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
-}
-
-/*Report a problem webform layout */
-/* line 80, ../sass/styles.scss */
-.webform-submission-report-a-problem-on-this-page-form legend {
-  font-size: 24px;
-  font-weight: normal;
-  padding-bottom: 20px;
-}
-/* line 85, ../sass/styles.scss */
-.webform-submission-report-a-problem-on-this-page-form legend span::after {
-  display: none;
-}
-/* line 89, ../sass/styles.scss */
-.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-gc-key-access,
-.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-securekey-concierge-banking-credential-access,
-.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-personal-access-code-pac-problems-or-ei-access-code-ac-problems,
-.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-social-insurance-number-sin-validation-problems,
-.webform-submission-report-a-problem-on-this-page-form div.form-item-wf-reportaproblem-other-login-error-not-in-this-list {
-  margin-left: 40px;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
