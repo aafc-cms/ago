@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: agrisource_slideshow_style
-label: 'AAFC-AAC Slideshow Style'
+label: 'AAFC Slideshow Style'
 effects:
   96225f0c-8e5b-4222-a83c-007c519de55b:
     uuid: 96225f0c-8e5b-4222-a83c-007c519de55b
