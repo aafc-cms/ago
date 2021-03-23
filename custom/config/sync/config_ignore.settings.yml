@@ -7,7 +7,6 @@ ignored_config_entities:
   - mailsystem.settings
   - 'purge.*'
   - purge_queuer_coretags.settings
-  - swiftmailer.transport
   - smtp.settings
   - system.mail
   - system.menu.devel
