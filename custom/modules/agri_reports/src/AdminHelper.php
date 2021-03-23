@@ -24,10 +24,10 @@ class AdminHelper {
     $sqlstatement = "SELECT  CONVERT ( REPLACE(a.path, '/node/', ''), UNSIGNED INTEGER) as nodeid,
                     a.path , a.langcode, CONCAT('/', a.langcode,  a.alias) as uri,
                     length( a.alias)-length(replace( a.alias,'/','')) as depth
-                    FROM d8x.path_alias a
+                    FROM path_alias a
                     inner join
                     ( select distinct b.langcode, b.path, Max(b.revision_id) as revision_id
-                    FROM d8x.path_alias b where b.path like '/node/%'
+                    FROM path_alias b where b.path like '/node/%'
                     group by b.langcode, b.path
                     order by b.path asc
                     ) c
