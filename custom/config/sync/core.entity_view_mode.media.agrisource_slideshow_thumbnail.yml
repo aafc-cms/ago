@@ -9,6 +9,6 @@ third_party_settings:
   lightning_core:
     description: ''
 id: media.agrisource_slideshow_thumbnail
-label: 'AgriSource Slideshow Thumbnail'
+label: 'AAFC Slideshow Thumbnail'
 targetEntityType: media
 cache: true

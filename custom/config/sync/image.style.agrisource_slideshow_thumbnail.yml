@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: agrisource_slideshow_thumbnail
-label: 'Agrisource slideshow thumbnail'
+label: 'AAFC slideshow thumbnail'
 effects:
   c1cbbeb2-4f19-41e4-b546-734b9a0ef382:
     uuid: c1cbbeb2-4f19-41e4-b546-734b9a0ef382
