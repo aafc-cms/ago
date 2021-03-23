@@ -1052,7 +1052,7 @@ display:
           entity_type: node
           entity_field: revision_timestamp
           plugin_id: date
-      title: 'AAFC-AAC newly published report'
+      title: 'AAFC newly published report'
       header: {  }
       footer: {  }
       empty: {  }
