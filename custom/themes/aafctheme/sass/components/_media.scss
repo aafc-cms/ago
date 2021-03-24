@@ -1,0 +1,27 @@
+
+
+article.img-responsive-w520-special img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+article.thumbnail-w520-special img {
+  background: #eaebed;
+  border-color: #eee;
+  border-radius: 0;
+  padding: 5px;
+  display: block;
+  padding: 4px;
+  margin-bottom: 23px;
+  line-height: 1.4375;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top-color: rgb(221, 221, 221);
+  border-right-color: rgb(221, 221, 221);
+  border-bottom-color: rgb(221, 221, 221);
+  border-left-color: rgb(221, 221, 221);
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}

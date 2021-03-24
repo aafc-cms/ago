@@ -12,6 +12,9 @@ label: Editor
 weight: -6
 is_admin: null
 permissions:
+  - 'aafc admin styles'
+  - 'aafc menu helper'
+  - 'aafc pending drafts'
   - 'access 403 page'
   - 'access administration pages'
   - 'access ckeditor_media_browser entity browser pages'
@@ -51,9 +54,6 @@ permissions:
   - 'administer redirects'
   - 'administer responsive images'
   - 'administer sidebar menu items'
-  - 'aafc admin styles'
-  - 'aafc menu helper'
-  - 'aafc pending drafts'
   - 'create and edit custom blocks'
   - 'create audio_file media'
   - 'create document media'

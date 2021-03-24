@@ -4,11 +4,10 @@ status: true
 dependencies:
   config:
     - page_manager.page.user
-    - system.menu.account
   module:
     - ctools
+    - ctools_block
     - panels
-    - system
     - user
 _core:
   default_config_hash: wSDPwhenoTtR35xTBf-kn7gqp5wumHImD7BrmMPpFD0
@@ -28,38 +27,44 @@ variant_settings:
       uuid: 142d3558-5fee-442f-9300-a5cf52f2b6a2
       context_mapping:
         entity: '@user.current_user_context:current_user'
-    81f4cd78-b164-4f03-bbf0-f69de1d57b14:
-      id: page_title_block
-      label: 'Page title'
-      provider: core
+    67511668-7a64-497b-a7ac-cf964768d8a6:
+      id: 'entity_field:user:login'
+      label: 'Last login'
+      provider: ctools_block
       label_display: '0'
-      region: top_right
-      weight: -1
-      uuid: 81f4cd78-b164-4f03-bbf0-f69de1d57b14
-      context_mapping: {  }
-    c24d4207-94ed-4c91-abe4-5e2536a064de:
-      id: local_tasks_block
-      label: Tabs
-      provider: core
-      label_display: '0'
-      primary: true
-      secondary: true
-      region: top_right
-      weight: 0
-      uuid: c24d4207-94ed-4c91-abe4-5e2536a064de
-      context_mapping: {  }
-    ec02fb86-f8f5-4e85-8c4d-25a59169b086:
-      id: 'system_menu_block:account'
-      label: 'User account menu'
-      provider: system
-      label_display: visible
-      level: 1
-      depth: 0
-      expand_all_items: false
+      formatter:
+        label: above
+        type: timestamp
+        settings:
+          date_format: wxt_standard
+          custom_date_format: ''
+          timezone: ''
+        third_party_settings: {  }
+        weight: 0
+      context_mapping:
+        entity: '@user.current_user_context:current_user'
       region: top_left
-      weight: -1
-      uuid: ec02fb86-f8f5-4e85-8c4d-25a59169b086
-      context_mapping: {  }
+      uuid: 67511668-7a64-497b-a7ac-cf964768d8a6
+      weight: 2
+    7d9d36a2-67c9-4b8e-ae57-b40af91aef09:
+      id: 'entity_field:user:created'
+      label: Created
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: above
+        type: timestamp
+        settings:
+          date_format: medium
+          custom_date_format: ''
+          timezone: ''
+        third_party_settings: {  }
+        weight: 0
+      context_mapping:
+        entity: '@user.current_user_context:current_user'
+      region: top_left
+      uuid: 7d9d36a2-67c9-4b8e-ae57-b40af91aef09
+      weight: 1
   id: panels_variant
   uuid: 1c74464e-5b9d-41e7-8825-371a214b4620
   label: null

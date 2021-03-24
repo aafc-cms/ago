@@ -69,6 +69,18 @@ function agri_admin_page_attachments(array &$page) {
       $page['#attached']['library'][] = 'agri_admin/content-plugins-changes';
       $page['#attached']['drupalSettings']['aafc']['show_restricted_plugins_permissions'] = $user->hasPermission('aafc show restricted plugins');
     }
+    if ($current_route == 'entity.node.edit_form' || $current_route == 'node.add') {
+      $entity_id = NULL;
+      $uuid = NULL;
+      if (AgriAdminHelper::getSampleTopicImageUuidAndEntityId($uuid, $entity_id)) {
+        $page['#attached']['drupalSettings']['special']['found_demo_topic'] = TRUE;
+        $page['#attached']['drupalSettings']['special']['media_uuid'] = $uuid;
+        $page['#attached']['drupalSettings']['special']['media_entity_id'] = $entity_id;
+      }
+      else {
+        $page['#attached']['drupalSettings']['special']['found_demo_topic'] = FALSE;
+      }
+    }
   }
 }
 

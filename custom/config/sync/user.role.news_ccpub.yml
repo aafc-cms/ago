@@ -12,6 +12,8 @@ label: ccpub
 weight: -4
 is_admin: null
 permissions:
+  - 'aafc admin styles'
+  - 'aafc pending drafts'
   - 'access 403 page'
   - 'access administration pages'
   - 'access ckeditor_media_browser entity browser pages'
@@ -42,8 +44,6 @@ permissions:
   - 'administer panelizer taxonomy_term news_type defaults'
   - 'administer panelizer taxonomy_term news_type layout'
   - 'administer panelizer taxonomy_term news_type revert'
-  - 'aafc admin styles'
-  - 'aafc pending drafts'
   - 'break content lock'
   - 'create audio_file media'
   - 'create content translations'

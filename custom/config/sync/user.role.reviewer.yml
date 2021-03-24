@@ -9,6 +9,9 @@ label: Reviewer
 weight: -5
 is_admin: null
 permissions:
+  - 'aafc admin styles'
+  - 'aafc menu helper'
+  - 'aafc pending drafts'
   - 'access 403 page'
   - 'access administration pages'
   - 'access browse_content entity browser pages'
@@ -46,9 +49,6 @@ permissions:
   - 'administer footer-fr menu items'
   - 'administer main menu items'
   - 'administer sidebar menu items'
-  - 'aafc admin styles'
-  - 'aafc menu helper'
-  - 'aafc pending drafts'
   - 'create url aliases'
   - 'delete files'
   - 'delete token'
