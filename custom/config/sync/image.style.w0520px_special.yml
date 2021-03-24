@@ -1,0 +1,15 @@
+uuid: 8744bbb3-c9c9-491d-8dea-8abfe8ca3bd3
+langcode: en
+status: true
+dependencies: {  }
+name: w0520px_special
+label: 'w520px special topic'
+effects:
+  a4517c11-d9c0-4b15-893e-ba926b646805:
+    uuid: a4517c11-d9c0-4b15-893e-ba926b646805
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 520
+      height: 200
+      anchor: center-center

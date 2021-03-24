@@ -951,4 +951,43 @@ class AgriAdminHelper {
     }
     return FALSE;
   }
+
+
+  static public function getSampleTopicImageUuidAndEntityId(&$uuid, &$entity_id) {
+    //static::addToLog(__function__);
+    $database = \Drupal::database();
+    $sql = "select fid, uuid from file_managed where uri like :filename_pattern";
+    $result = $database->query($sql, [':filename_pattern' => 'public://legacy/resources/prod/img/topic_horiculture.jpg']);
+    $fid = 0;
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['fid']) || is_null($row['fid'])) {
+          return FALSE;
+        }
+        $uuid = $row['uuid'];
+        $fid = $row['fid'];
+      }
+    }
+    $sql = "select entity_id from media__image where image_target_id = :fid";
+    $result = $database->query($sql, [':fid' => $fid]);
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['entity_id']) || is_null($row['entity_id'])) {
+          return FALSE;
+        }
+        $entity_id = $row['entity_id'];
+      }
+    }
+    $sql = "select uuid from media where mid = :entity_id";
+    $result = $database->query($sql, [':entity_id' => $entity_id]);
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['uuid']) || is_null($row['uuid'])) {
+          return FALSE;
+        }
+        $uuid = $row['uuid'];
+      }
+    }
+    return TRUE;
+  }
 }

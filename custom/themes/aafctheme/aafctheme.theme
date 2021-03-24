@@ -270,9 +270,42 @@ function aafctheme_preprocess_form_element_label(&$variables) {
 
 
 /**
+ *  Prevents quickedit javascript crash for this image style.
+ */
+function aafctheme_preprocess_media(&$vars) {
+  // Fixing the media missed the quick edit attribute.
+  if (!empty($vars["elements"]["#media"])) {
+    $media = $vars["elements"]["#media"];
+    $type = $media->getEntityType()->id();
+    $id = $media->id();
+    
+    if (!isset($vars['attributes']['data-quickedit-entity-id'])) {
+      $vars['attributes']['data-quickedit-entity-id'] = $type . '/' . $id;
+    }
+  }
+}
+
+
+/**
+ *  Prevents quickedit javascript crash for this image style.
+ */
+function aafctheme_preprocess_media__image__w0520px(&$vars) {
+  // Fixing the media missed the quick edit attribute.
+  if (!empty($vars["elements"]["#media"])) {
+    $media = $vars["elements"]["#media"];
+    $type = $media->getEntityType()->id();
+    $id = $media->id();
+    
+    if (!isset($vars['attributes']['data-quickedit-entity-id'])) {
+      $vars['attributes']['data-quickedit-entity-id'] = $type . '/' . $id;
+    }
+  }
+}
+
+
+/**
  * Implements aafctheme_preprocess_page hook.
  */
-
 function aafctheme_preprocess_page(&$vars) {
   /* hide view and lastest version TABS in the page content */
   $current_uri = \Drupal::request()->getRequestUri();

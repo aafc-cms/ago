@@ -14,6 +14,9 @@ label: Creator
 weight: -7
 is_admin: null
 permissions:
+  - 'aafc admin styles'
+  - 'aafc menu helper'
+  - 'aafc pending drafts'
   - 'access 403 page'
   - 'access administration pages'
   - 'access browse_content entity browser pages'
@@ -59,9 +62,6 @@ permissions:
   - 'administer main menu items'
   - 'administer media'
   - 'administer sidebar menu items'
-  - 'aafc admin styles'
-  - 'aafc menu helper'
-  - 'aafc pending drafts'
   - 'create and edit custom blocks'
   - 'create audio_file media'
   - 'create content translations'

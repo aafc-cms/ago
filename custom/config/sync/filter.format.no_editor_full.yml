@@ -8,16 +8,29 @@ dependencies:
     - core.entity_view_mode.media.linked
     - core.entity_view_mode.media.thumbnail
     - core.entity_view_mode.media.token
+    - core.entity_view_mode.media.w0520px
+    - core.entity_view_mode.media.w100
+    - core.entity_view_mode.media.w1000
+    - core.entity_view_mode.media.w1200
     - core.entity_view_mode.media.w133
+    - core.entity_view_mode.media.w133r320
+    - core.entity_view_mode.media.w133r45
+    - core.entity_view_mode.media.w1400
+    - core.entity_view_mode.media.w1600
+    - core.entity_view_mode.media.w166
+    - core.entity_view_mode.media.w175
+    - core.entity_view_mode.media.w1900
     - core.entity_view_mode.media.w200
     - core.entity_view_mode.media.w250
     - core.entity_view_mode.media.w300
     - core.entity_view_mode.media.w333
     - core.entity_view_mode.media.w400
+    - core.entity_view_mode.media.w50
     - core.entity_view_mode.media.w500
     - core.entity_view_mode.media.w533
     - core.entity_view_mode.media.w600
     - core.entity_view_mode.media.w700
+    - core.entity_view_mode.media.w75
     - core.entity_view_mode.media.w800
     - core.entity_view_mode.media.w900
   module:
@@ -51,16 +64,29 @@ filters:
         linked: linked
         thumbnail: thumbnail
         token: token
+        w0520px: w0520px
+        w100: w100
+        w1000: w1000
+        w1200: w1200
         w133: w133
+        w133r320: w133r320
+        w133r45: w133r45
+        w1400: w1400
+        w1600: w1600
+        w166: w166
+        w175: w175
+        w1900: w1900
         w200: w200
         w250: w250
         w300: w300
         w333: w333
         w400: w400
+        w50: w50
         w500: w500
         w533: w533
         w600: w600
         w700: w700
+        w75: w75
         w800: w800
         w900: w900
   url_embed:

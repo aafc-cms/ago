@@ -111,6 +111,34 @@ div.container-fluid main div.region.region-header.container nav.tabs.mrgn-tp-md.
   margin-left: 0em;
 }
 
+/* line 3, ../sass/components/_media.scss */
+article.img-responsive-w520-special img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 9, ../sass/components/_media.scss */
+article.thumbnail-w520-special img {
+  background: #eaebed;
+  border-color: #eee;
+  border-radius: 0;
+  padding: 5px;
+  display: block;
+  padding: 4px;
+  margin-bottom: 23px;
+  line-height: 1.4375;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top-color: #dddddd;
+  border-right-color: #dddddd;
+  border-bottom-color: #dddddd;
+  border-left-color: #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+
 /* line 2, ../sass/anonymous/_restrictions.scss */
 body.role-is-anonymous.path-node.published-yes .region-header nav.tabs,
 body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
@@ -371,32 +399,32 @@ ul.feeds-cont li a {
   background: #31708f;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 56, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
@@ -404,13 +432,13 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 70, ../sass/styles.scss */
+/* line 71, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 76, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }

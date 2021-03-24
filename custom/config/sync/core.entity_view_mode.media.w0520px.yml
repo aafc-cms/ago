@@ -1,0 +1,14 @@
+uuid: 983ab861-2a46-4fea-a1fa-8c6a030476dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: ''
+id: media.w0520px
+label: 'width 520px special'
+targetEntityType: media
+cache: true

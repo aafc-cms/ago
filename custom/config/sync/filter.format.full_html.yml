@@ -8,6 +8,7 @@ dependencies:
     - core.entity_view_mode.media.linked
     - core.entity_view_mode.media.thumbnail
     - core.entity_view_mode.media.token
+    - core.entity_view_mode.media.w0520px
     - core.entity_view_mode.media.w100
     - core.entity_view_mode.media.w1000
     - core.entity_view_mode.media.w1200
@@ -149,6 +150,7 @@ filters:
         linked: linked
         thumbnail: thumbnail
         token: token
+        w0520px: w0520px
         w100: w100
         w1000: w1000
         w1200: w1200
