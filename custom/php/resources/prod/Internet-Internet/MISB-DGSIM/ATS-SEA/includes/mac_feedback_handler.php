@@ -59,10 +59,10 @@ if(isset($_POST["submit"]) && ($rating == "Yes" || $rating == "No")) {
 	$mail_sent = mail($to,$subject,$body,$headers);
 
 	if($mail_sent) {
-		header("Location: ".$pageurl."&success#rating");
+		header("Location: ".$pageurl."?s=s&success#rating");
 	}
 	else {
-		header("Location: ".$pageurl."&error#rating");
+		header("Location: ".$pageurl."?e=e&error#rating");
 	}
 }
 ?>
