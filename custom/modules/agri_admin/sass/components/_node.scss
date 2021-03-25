@@ -85,7 +85,9 @@ body.nodeaddlanding_page .form-item--menu-menu-parent,
 body.adminstructuremenumanagemaina select#edit-menu-parent,
 body[class*="menuitem"] select#edit-menu-parent {
   #edit-menu-menu-parent {
-    max-width: 212px !important;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
   }
 
   .menu_tree-leve-1 {
