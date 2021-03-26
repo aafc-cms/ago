@@ -1,0 +1,30 @@
+uuid: 4548f0a2-1121-4eaa-8c5c-976ca1b48cd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - agri_reports
+title: 'Default cron handler'
+id: agri_reports_cron
+weight: 0
+module: agri_reports
+callback: agri_reports_cron
+scheduler:
+  id: crontab
+  configuration:
+    rules:
+      - '* 5 * * *'
+    catch_up: 0
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000
