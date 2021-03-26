@@ -204,16 +204,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.12",
+            "version": "3.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "1192951e0ee1c0853372134a5f677c20cf748738"
+                "reference": "b1239644f1c828c1b6bdf7e63af50e32cd55bba1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/1192951e0ee1c0853372134a5f677c20cf748738",
-                "reference": "1192951e0ee1c0853372134a5f677c20cf748738",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/b1239644f1c828c1b6bdf7e63af50e32cd55bba1",
+                "reference": "b1239644f1c828c1b6bdf7e63af50e32cd55bba1",
                 "shasum": ""
             },
             "require": {
@@ -423,6 +423,9 @@
                     "drupal/wxt_library": {
                         "part 1 When installing and enabling the Canada.ca theme, the footer is missing the menu and other elements. Stats Can provides a CDN for footer markup, but as far as I know Canada.ca doesn't provide this. It would be nice to have the footer complete on install.": "https://www.drupal.org/files/issues/2021-01-27/wxt-library-add-canada-ca-footer-twig-extension-3195014-2.patch"
                     },
+                    "drupal/webform": {
+                        "Radio button validation text is shown in the wrong place of the Webform": "https://www.drupal.org/files/issues/2021-03-26/webform_clientside_validation-3205860-2.patch"
+                    },
                     "drupal/wxt_bootstrap": {
                         "part 2 When installing and enabling the Canada.ca theme, the footer is missing the menu and other elements. Stats Can provides a CDN for footer markup, but as far as I know Canada.ca doesn't provide this. It would be nice to have the footer complete on install.": "https://www.drupal.org/files/issues/2021-01-27/wxt-bootstrap-add-canada-ca-footer-settings-3195014-2.patch"
                     }
@@ -448,9 +451,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.12"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.13"
             },
-            "time": "2021-03-08T15:44:56+00:00"
+            "time": "2021-03-26T14:55:42+00:00"
         },
         {
             "name": "agrcmsx/wxt_overrides",
