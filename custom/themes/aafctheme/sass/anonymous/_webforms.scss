@@ -1,10 +1,8 @@
-
-div form#webform-submission-yourfeedback-programsandservices-add-form {
- div .select-wrapper strong#edit-programorservice-error {
-    position: absolute;
-  }
-
-  label[for="edit-emailaddress"] {
-    padding-top: 15px;
+form.webform-submission-form {
+  div.form-type-select div.select-wrapper {
+    margin-bottom: 20px;
+    strong.error {
+      position: absolute;
+    }
   }
 }
