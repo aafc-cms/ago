@@ -33,10 +33,10 @@ var Special = function() {
   var spSpecialSelectorOther = '#sp_special_fr';
   var spSpecialSelectorId = 'sp_special_en';
   var spSpecialSelectorOtherId = 'sp_special_fr';
-  var h1SpecialId = 'wb-cont_en';
-  var h1SpecialOtherId = 'wb-cont_fr';
-  var h1Special = '#wb-cont_en';
-  var h1SpecialOther = '#wb-cont_fr';
+  var h1SpecialId = 'wb-cont';
+  var h1SpecialOtherId = 'wb-cont';
+  var h1Special = '#wb-cont';
+  var h1SpecialOther = '#wb-cont';
   var specialsettings;
 
   /**
@@ -62,10 +62,10 @@ var Special = function() {
       Special.spSpecialSelectorOther = '#sp_special_en';
       Special.spSpecialSelectorId = 'sp_special_fr';
       Special.spSpecialSelectorOtherId = 'sp_special_en';
-      Special.h1Special = '#wb-cont_fr';
-      Special.h1SpecialOther = '#wb-cont_en';
-      Special.h1SpecialId = 'wb-cont_fr';
-      Special.h1SpecialOtherId = 'wb-cont_en';
+      Special.h1Special = '#wb-cont';
+      Special.h1SpecialOther = '#wb-cont';
+      Special.h1SpecialId = 'wb-cont';
+      Special.h1SpecialOtherId = 'wb-cont';
     }
 
     Special.specialsettings = drupalSettings.special; 
