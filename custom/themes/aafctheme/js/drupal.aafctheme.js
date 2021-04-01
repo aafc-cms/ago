@@ -197,7 +197,7 @@ var AAFCFrontend = function() {
         $('#q').attr("placeholder", Drupal.t("Search canada.ca"));
       }
       else{
-        $('#q').attr("placeholder", Drupal.t("Search agr.gc.ca"));
+        $('#q').attr("placeholder", Drupal.t("Search website"));
       }
     });
   }
