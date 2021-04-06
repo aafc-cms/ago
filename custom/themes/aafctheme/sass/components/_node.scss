@@ -46,3 +46,29 @@ body.user-logged-in[class*='archiv'] {
     border: 3px solid saddlebrown;
   }
 }
+
+html:lang(en) body.anonymous.published-no main .field--name-body::before {
+  content: "Draft Version";
+  margin-left: 20%;
+  position:absolute;
+  transform: rotate(-45deg);
+  color: #BDBDBD;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  font-size: 300%;
+} 
+html:lang(en) body.anonymous.pending-draft main .field--name-body::before {
+  content: "Pending Draft";
+  margin-left: 20%;
+  position:absolute;
+  transform: rotate(-45deg);
+  color: #BDBDBD;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  font-size: 300%;
+}
