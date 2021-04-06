@@ -1,0 +1,16 @@
+@media screen and (max-width: 844px) {
+  form.search-form div.js-form-type-select{
+    float: left;
+    position: absolute;
+    right: 75px;
+  }
+  form.search-form div.js-form-type-search{
+    width: 80%;
+    left: 75px;
+  }
+}
+@media screen and (min-width: 845px) {
+  body.isIE div#edit-actions{
+    left: 15px
+  }
+}
