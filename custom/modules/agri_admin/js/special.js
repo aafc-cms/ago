@@ -29,8 +29,8 @@ var Special = function() {
   var specialChecked = false;
   var otherLangBodySelector = 'edit-body-etuf-fr-0-value';
   var otherLangTitleSelector = '#edit-title-etuf-fr-0-value';
-  var spSpecialSelector = '#sp_special_en';
-  var spSpecialSelectorId = 'sp_special_en';
+  var spSpecialSelector = '#sp_special';
+  var spSpecialSelectorId = 'sp_special';
   var h1SpecialId = 'wb-cont';
   var h1Special = '#wb-cont';
   var specialsettings;
@@ -54,8 +54,6 @@ var Special = function() {
       Special.otherLang = 'en';
       Special.otherLangBodySelector = 'edit-body-etuf-en-0-value';
       Special.otherLangTitleSelector = '#edit-title-etuf-en-0-value';
-      Special.spSpecialSelector = '#sp_special_fr';
-      Special.spSpecialSelectorId = 'sp_special_fr';
       Special.h1Special = 'wb-cont';
       Special.h1SpecialId = '#wb-cont';
     }
@@ -85,7 +83,7 @@ var Special = function() {
       $("#edit-field-special-value").change(function() {      
         //touche pas
         oldcontent = CKEDITOR.instances["edit-body-0-value"].getData();
-        oldcontentother = CKEDITOR.instances["edit-body-etuf-fr-0-value"].getData();
+        oldcontentother = CKEDITOR.instances[Special.otherLangBodySelector].getData();
         var imgplaceholder = '<img src="https://wet-boew.github.io/themes-dist/GCWeb/img/520x200.png" alt="" class="pull-right img-responsive thumbnail">';
         if (Special.specialsettings.found_demo_topic) {
           var uuid = Special.specialsettings.media_uuid;
