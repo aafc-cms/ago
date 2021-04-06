@@ -181,6 +181,12 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
     left: 75px;
   }
 }
+@media screen and (min-width: 845px) {
+  /* line 13, ../sass/components/_header.scss */
+  body.isIE div#edit-actions {
+    left: 15px;
+  }
+}
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;
