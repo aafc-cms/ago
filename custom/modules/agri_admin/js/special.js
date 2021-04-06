@@ -54,8 +54,6 @@ var Special = function() {
       Special.otherLang = 'en';
       Special.otherLangBodySelector = 'edit-body-etuf-en-0-value';
       Special.otherLangTitleSelector = '#edit-title-etuf-en-0-value';
-      Special.h1Special = 'wb-cont';
-      Special.h1SpecialId = '#wb-cont';
     }
 
     Special.specialsettings = drupalSettings.special; 
@@ -63,6 +61,7 @@ var Special = function() {
     
       //$("#edit-title-0-value").keyup(function() {
       $("#edit-title-0-value").change(function() {
+	      console.log('Change ce titre');
         if (Special.specialChecked || (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null)) {
           if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null) {
             var titleVal = $("#edit-title-0-value").val();
@@ -72,6 +71,7 @@ var Special = function() {
       });
         //$("#edit-title-etuf-fr-0-value").keyup(function() {
       $(Special.otherLangTitleSelector).change(function() {
+	      console.log('Change other title');
         if (Special.specialChecked || (CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null)) {
           if(CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null){
             var titleValfr = $(Special.otherLangTitleSelector).val();
