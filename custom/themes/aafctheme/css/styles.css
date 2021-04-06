@@ -167,6 +167,26 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
   bottom: -4px;
 }
 
+@media screen and (max-width: 844px) {
+  /* line 2, ../sass/components/_header.scss */
+  form.search-form div.js-form-type-select {
+    float: left;
+    position: absolute;
+    right: 75px;
+  }
+
+  /* line 7, ../sass/components/_header.scss */
+  form.search-form div.js-form-type-search {
+    width: 80%;
+    left: 75px;
+  }
+}
+@media screen and (min-width: 845px) {
+  /* line 13, ../sass/components/_header.scss */
+  body.isIE div#edit-actions {
+    left: 15px;
+  }
+}
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;
@@ -399,32 +419,32 @@ ul.feeds-cont li a {
   background: #31708f;
 }
 
-/* line 34, ../sass/styles.scss */
+/* line 35, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 44, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 52, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 57, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 62, ../sass/styles.scss */
+/* line 63, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
@@ -432,13 +452,13 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 71, ../sass/styles.scss */
+/* line 72, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 77, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
