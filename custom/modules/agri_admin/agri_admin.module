@@ -513,7 +513,7 @@ function _helperLockingContent($action, $entity_id, $bundle, $entity_obj = NULL)
             $lock_service->release($entity_id, $latest->language()->getId(), 'edit', $current_author_id, $latest->getEntityTypeId());
           }
         }
-        if ($role == 'creator') {
+        if (0 && $role == 'creator'/*DISABLE FOR TESTING*/) {
           $is_creator = TRUE;
           $state = $latest->get('moderation_state')->getString();
           $peer_review_status = '';
