@@ -57,18 +57,20 @@ html:lang(fr) body.anonymous.published-no main .field--name-body::before {
 
 html:lang(en) body.anonymous.published-no main .field--name-body::before,
 html:lang(fr) body.anonymous.published-no main .field--name-body::before {
-  margin-left: 3.5em;
-  margin-top: 1.5em;
-  position: absolute;
+  margin-left: 3em;
+  margin-top: 2.5em;
+  position: fixed;
   transform: rotate(-45deg);
-  color: #BDBDBD;
+  color: #CCC;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  font-size: 300%;
-  z-index: 1;
+  font-size: 400%;
+  z-index: -1;
+  font-weight: bold;
+  text-shadow: 2px 2px #666;
 } 
 
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before {
@@ -81,17 +83,19 @@ html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
 
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
-  margin-left: 3.5em;
-  margin-top: 1.5em;
-  position: absolute;
+  margin-left: 3em;
+  margin-top: 2.5em;
+  position: fixed;
   transform: rotate(-45deg);
-  color: #BDBDBD;
+  color: #CCC;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  font-size: 300%;
-  z-index: 1;
+  font-size: 400%;
+  z-index: -1;
+  font-weight: bold;
+  text-shadow: 2px 2px #666;
 }
 
 
