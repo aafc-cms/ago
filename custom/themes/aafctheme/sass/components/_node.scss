@@ -68,6 +68,7 @@ html:lang(fr) body.anonymous.published-no main .field--name-body::before {
   -o-transform: rotate(-45deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   font-size: 300%;
+  z-index: 1;
 } 
 
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before {
@@ -90,6 +91,7 @@ html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   font-size: 300%;
+  z-index: 1;
 }
 
 
