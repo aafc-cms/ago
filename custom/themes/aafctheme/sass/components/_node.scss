@@ -49,8 +49,17 @@ body.user-logged-in[class*='archiv'] {
 
 html:lang(en) body.anonymous.published-no main .field--name-body::before {
   content: "Draft Version";
-  margin-left: 20%;
-  position:absolute;
+}
+
+html:lang(fr) body.anonymous.published-no main .field--name-body::before {
+  content: "En brouillon";
+}
+
+html:lang(en) body.anonymous.published-no main .field--name-body::before,
+html:lang(fr) body.anonymous.published-no main .field--name-body::before {
+  margin-left: 3.5em;
+  margin-top: 1.5em;
+  position: absolute;
   transform: rotate(-45deg);
   color: #BDBDBD;
   -webkit-transform: rotate(-45deg);
@@ -60,10 +69,20 @@ html:lang(en) body.anonymous.published-no main .field--name-body::before {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   font-size: 300%;
 } 
+
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before {
   content: "Pending Draft";
-  margin-left: 20%;
-  position:absolute;
+}
+
+html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
+  content: "Brouillon en attente";
+}
+
+html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
+html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
+  margin-left: 3.5em;
+  margin-top: 1.5em;
+  position: absolute;
   transform: rotate(-45deg);
   color: #BDBDBD;
   -webkit-transform: rotate(-45deg);
@@ -72,3 +91,5 @@ html:lang(en) body.anonymous.pending-draft main .field--name-body::before {
   -o-transform: rotate(-45deg);
   font-size: 300%;
 }
+
+
