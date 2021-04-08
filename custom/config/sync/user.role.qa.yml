@@ -16,7 +16,7 @@ permissions:
   - 'access site in maintenance mode'
   - 'access tokens overview'
   - 'access toolbar'
-  - 'agrisource admin styles'
+  - 'aafc admin styles'
   - 'use ipe with page manager'
   - 'use panels dashboard'
   - 'view any unpublished content'

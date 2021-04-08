@@ -18,7 +18,7 @@ permissions:
   - 'access toolbar'
   - 'access_unpublished taxonomy_term aafc_type'
   - 'access_unpublished taxonomy_term category'
-  - 'agrisource admin styles'
+  - 'aafc admin styles'
   - 'create terms in aafc_type'
   - 'create terms in category'
   - 'edit any empl content'
