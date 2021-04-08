@@ -204,16 +204,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.13",
+            "version": "3.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "b1239644f1c828c1b6bdf7e63af50e32cd55bba1"
+                "reference": "9ae03b7414784683c476551f187e2389d313f16b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/b1239644f1c828c1b6bdf7e63af50e32cd55bba1",
-                "reference": "b1239644f1c828c1b6bdf7e63af50e32cd55bba1",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/9ae03b7414784683c476551f187e2389d313f16b",
+                "reference": "9ae03b7414784683c476551f187e2389d313f16b",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "drupal/moderated_content_bulk_publish": "^2.0",
                 "drupal/purge": "^3.0@beta",
                 "drupal/recreate_block_content": "2.x-dev",
-                "drupal/safedelete": "^1.0.19",
+                "drupal/safedelete": "^1.0.20",
                 "drupal/sansdesordre": "^1.0@beta",
                 "drupal/scanner": "1.x-dev",
                 "drupal/sharedemail": "^2.1",
@@ -451,9 +451,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.13"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.14"
             },
-            "time": "2021-03-26T14:55:42+00:00"
+            "time": "2021-04-07T22:28:10+00:00"
         },
         {
             "name": "agrcmsx/wxt_overrides",
@@ -16042,10 +16042,10 @@
         },
         {
             "name": "npm-asset/dropzone",
-            "version": "5.8.1",
+            "version": "5.9.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/dropzone/-/dropzone-5.8.1.tgz"
+                "url": "https://registry.npmjs.org/dropzone/-/dropzone-5.9.2.tgz"
             },
             "type": "npm-asset",
             "license": [
