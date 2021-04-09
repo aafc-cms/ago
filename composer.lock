@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53c18dfe9548b682527e4c2e288e8800",
+    "content-hash": "db9c71f56c6e641d805a4b396cbb16d0",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -204,16 +204,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.14",
+            "version": "3.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "9ae03b7414784683c476551f187e2389d313f16b"
+                "reference": "f0dc3c8f4a044b8d13f114381b1d0738a90f60e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/9ae03b7414784683c476551f187e2389d313f16b",
-                "reference": "9ae03b7414784683c476551f187e2389d313f16b",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/f0dc3c8f4a044b8d13f114381b1d0738a90f60e2",
+                "reference": "f0dc3c8f4a044b8d13f114381b1d0738a90f60e2",
                 "shasum": ""
             },
             "require": {
@@ -255,7 +255,7 @@
                 "drupal/memcache": "^2.0",
                 "drupal/menu_admin_per_menu": "^1.3",
                 "drupal/moderated_content_bulk_publish": "^2.0",
-                "drupal/purge": "^3.0@beta",
+                "drupal/purge": "^3.0",
                 "drupal/recreate_block_content": "2.x-dev",
                 "drupal/safedelete": "^1.0.20",
                 "drupal/sansdesordre": "^1.0@beta",
@@ -266,7 +266,7 @@
                 "drupal/telephone_validation": "^2.3",
                 "drupal/token": "~1.0",
                 "drupal/ultimate_cron": "^2.0@alpha",
-                "drupal/varnish_purger": "^1.12",
+                "drupal/varnish_purger": "^2.1",
                 "drupal/views_data_export": "^1.0",
                 "drupal/views_published_or_roles": "^1.0",
                 "drupal/w3c_validator": "^1.4",
@@ -407,6 +407,9 @@
                     "drupal/moderation_sidebar": {
                         "Synchronize moderation states between all translations of the entity": "https://www.drupal.org/files/issues/2020-06-17/sync_all_translations_states-3143559-18.patch"
                     },
+                    "drupal/purge": {
+                        "Fix and prevent nasty 500 server errors when using varnish_purge_tags and varnish_purge.": "https://www.drupal.org/files/issues/2020-11-19/2976480-no-cache-and-dynamic-page-cache-9.patch"
+                    },
                     "drupal/pathauto": {
                         "Prevent duplicate aliases.": "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
                     },
@@ -451,9 +454,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.14"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.16"
             },
-            "time": "2021-04-07T22:28:10+00:00"
+            "time": "2021-04-09T01:11:10+00:00"
         },
         {
             "name": "agrcmsx/wxt_overrides",
@@ -597,16 +600,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.177.0",
+            "version": "3.178.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ce99fa71b917428ae790063c41e9cc4b85592299"
+                "reference": "214e3d98c54277cd8965f1cf307dce39631407bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ce99fa71b917428ae790063c41e9cc4b85592299",
-                "reference": "ce99fa71b917428ae790063c41e9cc4b85592299",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/214e3d98c54277cd8965f1cf307dce39631407bf",
+                "reference": "214e3d98c54277cd8965f1cf307dce39631407bf",
                 "shasum": ""
             },
             "require": {
@@ -681,9 +684,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.177.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.178.0"
             },
-            "time": "2021-04-07T18:13:10+00:00"
+            "time": "2021-04-08T18:13:16+00:00"
         },
         {
             "name": "bower-asset/cropper",
@@ -12792,20 +12795,20 @@
         },
         {
             "name": "drupal/varnish_purge",
-            "version": "1.12.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/varnish_purge.git",
-                "reference": "8.x-1.12"
+                "reference": "8.x-2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.12.zip",
-                "reference": "8.x-1.12",
-                "shasum": "74515b0e845f2dd35629f03c07a0fc36e09d49bc"
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "695eb7d81816e013e81d36207cfac162dd3cbe9f"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "require-dev": {
                 "drupal/purge": "*",
@@ -12815,8 +12818,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1582973947",
+                    "version": "8.x-2.1",
+                    "datestamp": "1615977068",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12852,18 +12855,28 @@
         },
         {
             "name": "drupal/varnish_purger",
-            "version": "1.12.0",
+            "version": "2.1.0",
             "require": {
-                "drupal/core": "~8.0",
+                "drupal/core": "^8 || ^9",
                 "drupal/purge": "~3.0",
                 "drupal/purge_tokens": "*",
-                "drupal/varnish_purge": "^1"
+                "drupal/varnish_purge": "^2"
+            },
+            "require-dev": {
+                "behat/mink-extension": "v2.2",
+                "behat/mink-selenium2-driver": "1.3.x-dev",
+                "bex/behat-screenshot": "dev-master",
+                "drupal/coder": "^8.3",
+                "drupal/drupal-extension": "master-dev",
+                "drupal/purge": "dev-3.x",
+                "phpmd/phpmd": "dev-master",
+                "phpmetrics/phpmetrics": "dev-master"
             },
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1582973947",
+                    "version": "8.x-2.1",
+                    "datestamp": "1615977068",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
