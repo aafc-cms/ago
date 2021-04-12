@@ -47,17 +47,63 @@ body.user-logged-in[class*='archiv'] {
   }
 }
 
-html:lang(en) body.anonymous.published-no main .field--name-body::before {
-  content: "Draft Version";
+body.user-anonymous {
+  #edit-body-etuf-fr-0-format,
+  #edit-body-0-format {
+    display: none;
+  }
 }
 
-html:lang(fr) body.anonymous.published-no main .field--name-body::before {
-  content: "En brouillon";
+body.user-logged-in.viewer.published-no {
+  article {
+    background-color: unset;
+    border: unset;
+  }
+  div.region-header h1 {
+    background-color: unset;
+    border: unset;
+  }
+}
+
+
+/* Unpublished revision pending to overwrite the published revision */
+body.user-logged-in.viewer.published-no.pending-draft {
+  article {
+    background-color: unset;
+    border: unset;
+  }
+  div.region-header h1 {
+    background-color: unset;
+    border: unset;
+  }
+}
+
+body.user-logged-in.viewer[class*='archiv'] {
+  article {
+    background-color: unset;
+    border: unset;
+  }
+  div.region-header h1 {
+    background-color: unset;
+    border: unset;
+  }
 }
 
 html:lang(en) body.anonymous.published-no main .field--name-body::before,
-html:lang(fr) body.anonymous.published-no main .field--name-body::before {
-  margin-left: 3em;
+html:lang(en) body.viewer.published-no main .field--name-body::before {
+  content: "Draft Version";
+}
+
+html:lang(fr) body.anonymous.published-no main .field--name-body::before,
+html:lang(fr) body.viewer.published-no main .field--name-body::before {
+    content: "En brouillon";
+}
+
+html:lang(en) body.anonymous.published-no main .field--name-body::before,
+html:lang(fr) body.anonymous.published-no main .field--name-body::before,
+html:lang(en) body.viewer.published-no main .field--name-body::before,
+html:lang(fr) body.viewer.published-no main .field--name-body::before {
+    margin-left: 3em;
   margin-top: 2.5em;
   position: fixed;
   transform: rotate(-45deg);
@@ -73,17 +119,21 @@ html:lang(fr) body.anonymous.published-no main .field--name-body::before {
   text-shadow: 2px 2px #666;
 } 
 
-html:lang(en) body.anonymous.pending-draft main .field--name-body::before {
-  content: "Pending Draft";
+html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
+html:lang(en) body.viewer.pending-draft main .field--name-body::before {
+    content: "Pending Draft";
 }
 
-html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
+html:lang(fr) body.anonymous.pending-draft main .field--name-body::before,
+html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   content: "Brouillon en attente";
 }
 
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
-html:lang(fr) body.anonymous.pending-draft main .field--name-body::before {
-  margin-left: 3em;
+html:lang(fr) body.anonymous.pending-draft main .field--name-body::before,
+html:lang(en) body.viewer.pending-draft main .field--name-body::before,
+html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
+    margin-left: 3em;
   margin-top: 2.5em;
   position: fixed;
   transform: rotate(-45deg);
