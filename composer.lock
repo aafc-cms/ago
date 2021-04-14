@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db9c71f56c6e641d805a4b396cbb16d0",
+    "content-hash": "5d4ea6989144e1924dcf9cf9a83ab7a0",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -459,6 +459,22 @@
             "time": "2021-04-09T01:11:10+00:00"
         },
         {
+            "name": "agrcmsx/prefer_latest_content",
+            "version": "3.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "custom/modules/prefer_latest_content",
+                "reference": "ea927183dd1545999f09190509ec2ab0e7bc26e1"
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "agrcmsx/wxt_overrides",
             "version": "3.0.x-dev",
             "dist": {
@@ -600,16 +616,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.178.0",
+            "version": "3.178.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "214e3d98c54277cd8965f1cf307dce39631407bf"
+                "reference": "cfeed02f14b0fb3cba8bb75f2ae28cb8c9807369"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/214e3d98c54277cd8965f1cf307dce39631407bf",
-                "reference": "214e3d98c54277cd8965f1cf307dce39631407bf",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cfeed02f14b0fb3cba8bb75f2ae28cb8c9807369",
+                "reference": "cfeed02f14b0fb3cba8bb75f2ae28cb8c9807369",
                 "shasum": ""
             },
             "require": {
@@ -684,9 +700,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.178.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.178.3"
             },
-            "time": "2021-04-08T18:13:16+00:00"
+            "time": "2021-04-13T18:16:44+00:00"
         },
         {
             "name": "bower-asset/cropper",
@@ -2092,26 +2108,25 @@
         },
         {
             "name": "defuse/php-encryption",
-            "version": "v2.2.1",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/defuse/php-encryption.git",
-                "reference": "0f407c43b953d571421e0020ba92082ed5fb7620"
+                "reference": "77880488b9954b7884c25555c2a0ea9e7053f9d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/0f407c43b953d571421e0020ba92082ed5fb7620",
-                "reference": "0f407c43b953d571421e0020ba92082ed5fb7620",
+                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/77880488b9954b7884c25555c2a0ea9e7053f9d2",
+                "reference": "77880488b9954b7884c25555c2a0ea9e7053f9d2",
                 "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
                 "paragonie/random_compat": ">= 2",
-                "php": ">=5.4.0"
+                "php": ">=5.6.0"
             },
             "require-dev": {
-                "nikic/php-parser": "^2.0|^3.0|^4.0",
-                "phpunit/phpunit": "^4|^5"
+                "phpunit/phpunit": "^4|^5|^6|^7|^8|^9"
             },
             "bin": [
                 "bin/generate-defuse-key"
@@ -2153,9 +2168,9 @@
             ],
             "support": {
                 "issues": "https://github.com/defuse/php-encryption/issues",
-                "source": "https://github.com/defuse/php-encryption/tree/master"
+                "source": "https://github.com/defuse/php-encryption/tree/v2.3.1"
             },
-            "time": "2018-07-24T23:27:56+00:00"
+            "time": "2021-04-09T23:57:26+00:00"
         },
         {
             "name": "dflydev/dot-access-configuration",
@@ -2339,43 +2354,6 @@
                 "source": "https://github.com/dflydev/dflydev-placeholder-resolver/tree/v1.0.2"
             },
             "time": "2012-10-28T21:08:28+00:00"
-        },
-        {
-            "name": "dnoegel/php-xdg-base-dir",
-            "version": "v0.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dnoegel/php-xdg-base-dir.git",
-                "reference": "8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dnoegel/php-xdg-base-dir/zipball/8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd",
-                "reference": "8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~7.0|~6.0|~5.0|~4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "XdgBaseDir\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "implementation of xdg base directory specification for php",
-            "support": {
-                "issues": "https://github.com/dnoegel/php-xdg-base-dir/issues",
-                "source": "https://github.com/dnoegel/php-xdg-base-dir/tree/v0.1.1"
-            },
-            "time": "2019-12-04T15:06:13+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3844,7 +3822,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.3",
-                    "datestamp": "1604426178",
+                    "datestamp": "1615217722",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6773,17 +6751,17 @@
         },
         {
             "name": "drupal/entity_translation_unified_form",
-            "version": "1.0.0-beta12",
+            "version": "1.0.0-beta13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_translation_unified_form.git",
-                "reference": "8.x-1.0-beta12"
+                "reference": "8.x-1.0-beta13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta12.zip",
-                "reference": "8.x-1.0-beta12",
-                "shasum": "495722f3039594409553d41fc54fa04912dcf424"
+                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta13.zip",
+                "reference": "8.x-1.0-beta13",
+                "shasum": "d5a6fd067631ea755326b5094e6859a3cbd31127"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6791,8 +6769,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta12",
-                    "datestamp": "1615433738",
+                    "version": "8.x-1.0-beta13",
+                    "datestamp": "1618280589",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7688,20 +7666,21 @@
         },
         {
             "name": "drupal/inline_entity_form",
-            "version": "1.0.0-rc8",
+            "version": "1.0.0-rc9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/inline_entity_form.git",
-                "reference": "8.x-1.0-rc8"
+                "reference": "8.x-1.0-rc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-rc8.zip",
-                "reference": "8.x-1.0-rc8",
-                "shasum": "103de382dd07b4acdd6bacd5ad76628fdf0eefda"
+                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-rc9.zip",
+                "reference": "8.x-1.0-rc9",
+                "shasum": "78953103a9c6e4e44bc877820a35f39913ea4559"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9",
+                "php": ">=7.1"
             },
             "require-dev": {
                 "drupal/entity_reference_revisions": "^1.0"
@@ -7709,8 +7688,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-rc8",
-                    "datestamp": "1602172716",
+                    "version": "8.x-1.0-rc9",
+                    "datestamp": "1618174486",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -8758,17 +8737,17 @@
         },
         {
             "name": "drupal/lightning_core",
-            "version": "5.5.0",
+            "version": "5.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/lightning_core.git",
-                "reference": "8.x-5.5"
+                "reference": "8.x-5.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lightning_core-8.x-5.5.zip",
-                "reference": "8.x-5.5",
-                "shasum": "f4f7e0e197ac0a3b037fc87a438cb8df541865d3"
+                "url": "https://ftp.drupal.org/files/projects/lightning_core-8.x-5.6.zip",
+                "reference": "8.x-5.6",
+                "shasum": "f3575ade4cdf820e769fe6e1ab8f7f1fb7dfe6f9"
             },
             "require": {
                 "drupal/acquia_telemetry-acquia_telemetry": "^1.0-alpha3",
@@ -8799,8 +8778,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.5",
-                    "datestamp": "1608044699",
+                    "version": "8.x-5.6",
+                    "datestamp": "1617982107",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8810,26 +8789,26 @@
                     "dev-8.x-5.x": "5.x-dev"
                 },
                 "drupal-scaffold": {
-                    "locations": {
-                        "web-root": "docroot/"
-                    },
                     "file-mapping": {
-                        "[project-root]/.gitattributes": false,
                         "[project-root]/.editorconfig": false,
-                        "[web-root]/example.gitignore": false,
+                        "[project-root]/.gitattributes": false,
                         "[web-root]/.csslintrc": false,
+                        "[web-root]/INSTALL.txt": false,
+                        "[web-root]/example.gitignore": false,
                         "[web-root]/modules/README.txt": false,
                         "[web-root]/profiles/README.txt": false,
+                        "[web-root]/robots.txt": false,
                         "[web-root]/sites/README.txt": false,
                         "[web-root]/themes/README.txt": false,
-                        "[web-root]/INSTALL.txt": false,
-                        "[web-root]/robots.txt": false,
                         "[web-root]/web.config": false
+                    },
+                    "locations": {
+                        "web-root": "docroot/"
                     }
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9"
+                        "drush.services.yml": "^9 || ^10"
                     }
                 },
                 "enable-patching": true,
@@ -8852,8 +8831,8 @@
                 },
                 "patches": {
                     "drupal/core": {
-                        "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
-                        "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2019-11-27/2815221-125.patch"
+                        "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2019-11-27/2815221-125.patch",
+                        "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch"
                     }
                 }
             },
@@ -12181,7 +12160,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.10",
-                    "datestamp": "1617833756",
+                    "datestamp": "1617840662",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13669,7 +13648,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_bootstrap.git",
-                "reference": "76bed66d7c1f059fb3ca68a8495f4cff0906a501"
+                "reference": "a586f2b89cd726660056be50da836ddc4270ece8"
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.0",
@@ -13683,8 +13662,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.5+5-dev",
-                    "datestamp": "1617806564",
+                    "version": "8.x-4.5+7-dev",
+                    "datestamp": "1618067260",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -13785,7 +13764,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_library.git",
-                "reference": "4d93584df96a8b73268c7423b9c32bbc68cbba52"
+                "reference": "65f00e3e3aeef63863d9148f534d9ffe318af76a"
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -16918,20 +16897,19 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.7",
+            "version": "v0.10.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "a395af46999a12006213c0c8346c9445eb31640c"
+                "reference": "e4573f47750dd6c92dca5aee543fa77513cbd8d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a395af46999a12006213c0c8346c9445eb31640c",
-                "reference": "a395af46999a12006213c0c8346c9445eb31640c",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e4573f47750dd6c92dca5aee543fa77513cbd8d3",
+                "reference": "e4573f47750dd6c92dca5aee543fa77513cbd8d3",
                 "shasum": ""
             },
             "require": {
-                "dnoegel/php-xdg-base-dir": "0.1.*",
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "nikic/php-parser": "~4.0|~3.0|~2.0|~1.3",
@@ -16988,9 +16966,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.10.7"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.10.8"
             },
-            "time": "2021-03-14T02:14:56+00:00"
+            "time": "2021-04-10T16:23:39+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
