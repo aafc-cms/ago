@@ -12,5 +12,6 @@ label: viewer
 weight: 1
 is_admin: null
 permissions:
+  - 'prefer latest content'
   - 'view any unpublished content'
   - 'view latest version'

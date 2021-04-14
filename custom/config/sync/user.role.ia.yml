@@ -12,13 +12,13 @@ label: IA
 weight: 0
 is_admin: null
 permissions:
+  - 'aafc admin styles'
   - 'access administration pages'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access_unpublished taxonomy_term aafc_type'
   - 'access_unpublished taxonomy_term category'
-  - 'aafc admin styles'
   - 'create terms in aafc_type'
   - 'create terms in category'
   - 'edit any empl content'

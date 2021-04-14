@@ -12,6 +12,10 @@ label: 'PAB Admin'
 weight: -2
 is_admin: null
 permissions:
+  - 'aafc admin styles'
+  - 'aafc menu helper'
+  - 'aafc pending drafts'
+  - 'aafc show restricted plugins'
   - 'access 403 page'
   - 'access administration pages'
   - 'access content overview'
@@ -50,10 +54,6 @@ permissions:
   - 'administer users'
   - 'administer views'
   - 'administer webform'
-  - 'aafc admin styles'
-  - 'aafc menu helper'
-  - 'aafc pending drafts'
-  - 'aafc show restricted plugins'
   - 'create and edit custom blocks'
   - 'create audio_file media'
   - 'create content translations'

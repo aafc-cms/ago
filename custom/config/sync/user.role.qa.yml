@@ -12,11 +12,11 @@ label: QA
 weight: -1
 is_admin: null
 permissions:
+  - 'aafc admin styles'
   - 'access panels in-place editing'
   - 'access site in maintenance mode'
   - 'access tokens overview'
   - 'access toolbar'
-  - 'aafc admin styles'
   - 'use ipe with page manager'
   - 'use panels dashboard'
   - 'view any unpublished content'
