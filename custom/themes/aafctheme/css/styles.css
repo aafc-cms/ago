@@ -138,24 +138,25 @@ html:lang(fr) body.viewer.published-no main .field--name-body::before {
   -o-transform: rotate(-45deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   font-size: 400%;
-  z-index: -1;
+  opacity: 0.6;
+  z-index: 1;
   font-weight: bold;
   text-shadow: 2px 2px #666;
 }
 
-/* line 122, ../sass/components/_node.scss */
+/* line 123, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(en) body.viewer.pending-draft main .field--name-body::before {
   content: "Pending Draft";
 }
 
-/* line 127, ../sass/components/_node.scss */
+/* line 128, ../sass/components/_node.scss */
 html:lang(fr) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   content: "Brouillon en attente";
 }
 
-/* line 132, ../sass/components/_node.scss */
+/* line 133, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(fr) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(en) body.viewer.pending-draft main .field--name-body::before,
