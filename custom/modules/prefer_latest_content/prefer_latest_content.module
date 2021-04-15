@@ -55,11 +55,11 @@ function prefer_latest_content_preprocess_html(&$variables) {
   }
   
   // Ensure the cache varies correctly.
-  $variables['#cache']['contexts'][] = 'session';
+  //$variables['#cache']['contexts'][] = 'session';
   // Improve cache behavior.
-  $variables['#cache']['user.permissions'] = 'prefer latest content';
+  //$variables['#cache']['user.permissions'] = 'prefer latest content';
   // magic bullet?
-  $variables['#cache']['max-age'] = 0;
+  //$variables['#cache']['max-age'] = 0;
 
   $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
   // Begin logic to grab moderation state.
@@ -105,7 +105,7 @@ function prefer_latest_content_preprocess_html(&$variables) {
     if ($vid) {
       if ($nodeLoaded->isPublished() && $latestRevision = Utils::getLatestRevisionOnlyIfDraft($nid, $vid)) {
         $language = \Drupal::languageManager()->getCurrentLanguage();
-        Utils::gotoLegacy('/node/' . $nid . '/latest', ['language' => $language], '301');
+        Utils::gotoLegacy('/node/' . $nid . '/latest', ['language' => $language], '302');
       }
     }
   }
