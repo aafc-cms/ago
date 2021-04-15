@@ -54,6 +54,8 @@ function prefer_latest_content_preprocess_html(&$variables) {
     return;
   }
 
+  $variables['#cache']['user.permissions']; // Improve cache behavior.
+
   $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
   // Begin logic to grab moderation state.
 
