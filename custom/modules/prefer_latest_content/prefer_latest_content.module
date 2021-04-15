@@ -105,7 +105,7 @@ function prefer_latest_content_preprocess_html(&$variables) {
     if ($vid) {
       if ($nodeLoaded->isPublished() && $latestRevision = Utils::getLatestRevisionOnlyIfDraft($nid, $vid)) {
         $language = \Drupal::languageManager()->getCurrentLanguage();
-        Utils::gotoLegacy('/node/' . $nid . '/latest', ['language' => $language], '302');
+        Utils::gotoLegacy('/node/' . $nid . '/latest', ['language' => $language], '200');
       }
     }
   }
