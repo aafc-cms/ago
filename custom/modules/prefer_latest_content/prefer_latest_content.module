@@ -38,22 +38,22 @@ function prefer_latest_content_preprocess_html(&$variables) {
   //entity.node.canonical
   $route_match = Utils::getRouteName();
   if (\Drupal::currentUser()->isAnonymous()) {
-    $variables['#cache']['user.roles:anonymous'];
+    $variables['#cache']['contexts'][] = 'user.roles:anonymous';
   }
   if (!$route_match == 'entity.node.latest_version') {
     if (!\Drupal::currentUser()->isAnonymous()) {
-      $variables['#cache']['user.roles:authenticated'];
+      $variables['#cache']['contexts'][] = 'user.roles:authenticated';
     }
     return;
   }
   if (!$route_match == 'entity.node.canonical') {
-    $variables['#cache']['user.roles:anonymous'];
+    $variables['#cache']['contexts'][] = 'user.roles:anonymous';
     // Bail out early.
     return;
   }
   if (!\Drupal::currentUser()->hasPermission('prefer latest content')) {
     if (\Drupal::currentUser()->isAnonymous()) {
-      $variables['#cache']['user.roles:anonymous'];
+      $variables['#cache']['contexts'][] = 'user.roles:anonymous';
     }
     // This functionality is only intended for roles with this permission.
     return;
@@ -69,7 +69,7 @@ function prefer_latest_content_preprocess_html(&$variables) {
   
   // Ensure the cache varies correctly.
   // Improve cache behavior.
-  $variables['#cache']['user.roles:authenticated'];
+  $variables['#cache']['contexts'][] = 'user.roles:authenticated';
   $variables['#cache']['max-age'] = 0;
 
   $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
@@ -116,7 +116,7 @@ function prefer_latest_content_preprocess_html(&$variables) {
     if ($vid) {
       if ($nodeLoaded->isPublished() && $latestRevision = Utils::getLatestRevisionOnlyIfDraft($nid, $vid)) {
         $language = \Drupal::languageManager()->getCurrentLanguage();
-        Utils::gotoLegacy('/node/' . $nid . '/latest', ['language' => $language], '200');
+        Utils::gotoLegacy('/node/' . $nid . '/latest', ['language' => $language], '302');
       }
     }
   }
