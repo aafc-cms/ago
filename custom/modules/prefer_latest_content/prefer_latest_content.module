@@ -53,9 +53,13 @@ function prefer_latest_content_preprocess_html(&$variables) {
     // This functionality is not intended for the administrator role.
     return;
   }
-
-  $variables['#cache']['user.permissions']= 'prefer latest content'; // Improve cache behavior.
-  $variables['#cache']['max-age'] = 0; // magic bullet?
+  
+  // Ensure the cache varies correctly.
+  $variables['#cache']['contexts'][] = 'session';
+  // Improve cache behavior.
+  $variables['#cache']['user.permissions'] = 'prefer latest content';
+  // magic bullet?
+  $variables['#cache']['max-age'] = 0;
 
   $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
   // Begin logic to grab moderation state.
