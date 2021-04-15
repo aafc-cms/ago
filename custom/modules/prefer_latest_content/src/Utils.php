@@ -105,7 +105,7 @@ class Utils {
   }
 
 
-  static public function gotoLegacy($path='', $options=array(), $responseCode=null) {
+  static public function gotoLegacy($path='', $options=array('code' => 302), $responseCode=null) {
     $query = isset($options['query']) ? $options['query'] : array();
     $language = isset($options['language']) ? $options['language'] : \Drupal::languageManager()->getCurrentLanguage();
     $nid = isset($options['nid']) ? $options['nid'] : NULL;
@@ -132,7 +132,7 @@ class Utils {
       }
     }
 
-    return static::goto($url->toString(), $responseCode, array(), false);
+    return static::goto($url->toString(), $responseCode, array('code'), false);
   }
 
 
