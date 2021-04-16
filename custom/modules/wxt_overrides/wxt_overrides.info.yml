@@ -2,16 +2,6 @@ name: WxT Overrides
 type: module
 description: This module is alphabetically after wxt_library so can override it without changing the weight.
 package: Agrisource
-core: 8.x
 core_version_requirement: ^8 || ^9
-dependencies:
-  - agri_admin
-
-name: Webform Program Service Email Event
-type: module
-description: Provides a custom Webform email handler for program service feedback
-package: Agrisource
-core: 8.x
-package: Custom
 dependencies:
   - agri_admin
