@@ -204,16 +204,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.16",
+            "version": "3.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "f0dc3c8f4a044b8d13f114381b1d0738a90f60e2"
+                "reference": "9b92ba153948bb055ce9dbeab9e2760ec57dc945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/f0dc3c8f4a044b8d13f114381b1d0738a90f60e2",
-                "reference": "f0dc3c8f4a044b8d13f114381b1d0738a90f60e2",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/9b92ba153948bb055ce9dbeab9e2760ec57dc945",
+                "reference": "9b92ba153948bb055ce9dbeab9e2760ec57dc945",
                 "shasum": ""
             },
             "require": {
@@ -356,6 +356,7 @@
                 "patches": {
                     "drupal/core": {
                         "BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-01-24/3194462.patch",
+                        "Performance and usability patch that replaces sansdesordre #3110371": "https://www.drupal.org/files/issues/2020-02-03/3110371-4.patch",
                         "Node previews are cached by dynamic page cache": "https://www.drupal.org/files/issues/2020-04-13/d8_node_preview.patch",
                         "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
                         "core views module fix for breadcrumb title and page title": "https://www.drupal.org/files/issues/2020-10-13/D8.9-views_titles_in_breadcrumb_and_metatag-2716019-120.patch",
@@ -454,9 +455,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.16"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.17"
             },
-            "time": "2021-04-09T01:11:10+00:00"
+            "time": "2021-04-21T14:07:32+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
