@@ -922,6 +922,8 @@ function agri_admin_token_info() {
   $info['tokens']['agri-admin']['unpublished-url'] = ['name' => t('Unpublished url'), 'description' => t('A token to extract the unpublished URL for anonymous users')];
   $info['tokens']['agri-admin']['translation-unpublished-url'] = ['name' => t('Translation unpublished url'), 'description' => t('A token to extract the unpublished French URL for anonymous users')];
   $info['tokens']['agri-admin']['user-agent'] = ['name' => t('User agent'), 'description' => t('A token to display the information of user agent')];
+  $info['tokens']['agri-admin']['public-facing-url'] = ['name' => t('Public facing URL'), 'description' => t('A token to extract the current public facing URL')];
+  $info['tokens']['agri-admin']['translation-public-facing-url'] = ['name' => t('Translation Public facing URL'), 'description' => t('A token to extract the current public facing URL in French')];
   return $info;
 }
 
@@ -942,7 +944,15 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
     $translated_url = $translated_entity->toLink()->toString();
     $current_title = $entity->getTitle();
     $current_url = $entity->toLink()->toString();
+    $transLangID = $translated_entity->language()->getId();
+    $currentLangID = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $nodeID = $entity->id();
 
+    $host = \Drupal::request()->getHost();
+    $anonymous_url = str_replace("-admin","", $host);
+    $publicFacing_str = '<a href="https://'.$anonymous_url.'/'.$currentLangID.'/node/'.$nodeID.'">'.$current_title.'</a>';
+    $publicFacing_url = \Drupal\Core\Render\Markup::create($publicFacing_str);
+    
     $currentLang = \Drupal::languageManager()->getCurrentLanguage();
     $hashTag = AgriAdminHelper::getHashTag($entity, $currentLang);
     $path = '<a href="'.$hashTag.'">'. $current_title.'</a>';
@@ -952,6 +962,9 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
     $hashTagTrans = AgriAdminHelper::getHashTag($translated_entity, $transLang);
     $transPath = '<a href="'.$hashTagTrans.'">'. $translated_title.'</a>';
     $translated_unpublished_url = \Drupal\Core\Render\Markup::create($transPath);
+
+    $transPublicFacing_str = '<a href="https://'.$anonymous_url.'/'.$transLangID.'/node/'.$nodeID.'">'.$translated_title.'</a>';
+    $translated_publicFacing_url = \Drupal\Core\Render\Markup::create($transPublicFacing_str);
 
     foreach ($tokens as $name => $original) {
       // Find the desired token by name.
@@ -973,7 +986,13 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
           break;
         case 'translation-unpublished-url':
           $replacements[$original] = $translated_unpublished_url;
-          break;
+	  break;
+	case 'public-facing-url':
+          $replacements[$original] = $publicFacing_url;
+	  break;
+	case 'translation-public-facing-url':
+	  $replacements[$original] = $translated_publicFacing_url;
+	  break;
       }
     }
   }
