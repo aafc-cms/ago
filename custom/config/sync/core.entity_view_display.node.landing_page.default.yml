@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.comment
     - field.field.node.landing_page.field_created_by
     - field.field.node.landing_page.field_dc_date_created
     - field.field.node.landing_page.field_dcterms_subject
@@ -113,7 +112,6 @@ content:
     type: boolean
     region: content
 hidden:
-  comment: true
   content_moderation_control: true
   field_created_by: true
   field_dc_date_created: true

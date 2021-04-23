@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
@@ -407,7 +406,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment: true
   content_moderation_control: true
   field_meta_tags: true
   langcode: true

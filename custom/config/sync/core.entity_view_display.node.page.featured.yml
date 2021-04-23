@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
@@ -44,7 +43,6 @@ content:
     weight: 101
     region: content
 hidden:
-  comment: true
   content_moderation_control: true
   field_created_by: true
   field_dc_date_created: true

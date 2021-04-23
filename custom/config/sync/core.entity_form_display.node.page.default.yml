@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
@@ -312,7 +311,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  comment: true
   layout_builder__translation: true
   layout_selection: true
   panelizer: true
