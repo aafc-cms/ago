@@ -16,5 +16,12 @@
                 "show_hidden": 1
             }
         },
+        {
+            "name": "Debug in Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost/en",
+            "webRoot": "${workspaceFolder}/html"
+        }
     ]
 }
