@@ -1122,6 +1122,28 @@ function agri_admin_form_menu_link_content_menu_link_content_form_alter (&$form,
 }
 
 
+
+/**
+ * Implements hook_mail().
+ */
+function agri_admin_mail($key, &$message, $params) {
+  switch($key) {
+    case 'mac_feedback':
+    case 'agri_admin_mac_feedback':
+      $subject = $params['subject'];
+      $message['format'] = 'text/html';
+      $message['content_type'] = 'text/html';
+      $message['charset'] = 'UTF-8';
+      $message['subject'] = $subject;
+      $message['body'][] = new \Drupal\Component\Render\FormattableMarkup($params['message'], []);
+    break;
+    default:
+    break;
+  }
+
+}
+
+
 /**
  * Implements hook_file_validate().
  */
