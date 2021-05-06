@@ -71,6 +71,7 @@ $query = $database->query("ALTER TABLE {node_field_revision} AUTO_INCREMENT=1")-
 $query = $database->query("ALTER TABLE {media_revision} AUTO_INCREMENT=1")->execute();
 $query = $database->query("ALTER TABLE {media_field_revision} AUTO_INCREMENT=1")->execute();
 //$query = $database->query("truncate {content_moderation_state_field_revision}")->execute();
+$query = $database->query("truncate {search_total}")->execute();
 $query = $database->query("ALTER TABLE {file_managed} AUTO_INCREMENT=1")->execute();
 $query = $database->query("DELETE from {content_moderation_state_field_revision} where content_entity_type_id='node' OR content_entity_type_id='media'")->execute();
 
