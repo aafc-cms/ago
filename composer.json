@@ -150,7 +150,7 @@
         "drupal/honeypot": "^2.0",
         "drupal/xhprof": "^1.0@beta",
         "perftools/php-profiler": "^0.18.0",
-        "drupal/linkchecker": "^1.0@alpha"
+        "drupal/linkchecker": "^1.x-dev@dev"
     },
     "authors": [
         {
