@@ -196,7 +196,7 @@ function wxt_overrides_page_attachments(array &$page) {
           // Transfer metatag from default dublincore to aafc/gc custom.
           $page['#attached']['html_head'][] = [$dctermstype, 'dcterms:type'];
         }
-        if ($name == 'dcterms.subject') {
+        if ($name == 'dcterms.relation') {
           $content = $value[0]['#attributes']['content'];
           $aafcsubject = [
             '#tag' => 'meta',
@@ -209,7 +209,7 @@ function wxt_overrides_page_attachments(array &$page) {
           unset($page['#attached']['html_head'][$key]);
           // Transfer metatag from default dublincore to aafc/gc custom.
         }
-        if ($name == 'dcterms.relation') {
+        if ($name == 'dcterms.subject') {
           $content = $value[0]['#attributes']['content'];
           $dctermssubject = [
             '#tag' => 'meta',
