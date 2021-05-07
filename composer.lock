@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63b1a4a325bccf6e8657a85a1907b593",
+    "content-hash": "37723e5c708a6663a9e465677f4b6aba",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -204,16 +204,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "3.0.21",
+            "version": "3.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "c4e5b21bc08520e6d51a94fc4388993aa634d646"
+                "reference": "43d2553a1db9bdff0ffaba760cce1e4dcce7f735"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/c4e5b21bc08520e6d51a94fc4388993aa634d646",
-                "reference": "c4e5b21bc08520e6d51a94fc4388993aa634d646",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/43d2553a1db9bdff0ffaba760cce1e4dcce7f735",
+                "reference": "43d2553a1db9bdff0ffaba760cce1e4dcce7f735",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +402,8 @@
                     "drupal/linkchecker": {
                         "Extraction status": "https://www.drupal.org/files/issues/2020-12-08/3184613-extraction-status.patch",
                         "Update empty value for last_check field on broken links report": "https://www.drupal.org/files/issues/2020-12-25/3112537-12.patch",
-                        "Undefined offset error fix": "https://www.drupal.org/files/issues/2020-08-24/undefined-offset-error-3065045-13.patch"
+                        "Undefined offset error fix": "https://www.drupal.org/files/issues/2020-08-24/undefined-offset-error-3065045-13.patch",
+                        "Linkchecker interval , 2 minute interval for debugging purposes": "https://www.drupal.org/files/issues/2021-05-07/linkchecker-interval_for_debugging-3212816-3.patch"
                     },
                     "drupal/moderation_sidebar": {
                         "Synchronize moderation states between all translations of the entity": "https://www.drupal.org/files/issues/2020-06-17/sync_all_translations_states-3143559-18.patch"
@@ -455,9 +456,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.21"
+                "source": "https://github.com/agrcmsx/dxbase/tree/3.0.23"
             },
-            "time": "2021-05-06T22:57:06+00:00"
+            "time": "2021-05-07T14:22:43+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -728,7 +729,7 @@
             "version": "3.6.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
             },
             "dist": {
@@ -14494,16 +14495,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.15",
+            "version": "v3.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "5028323230da075d6f515448fe62dfb179b9bde8"
+                "reference": "fe226113966ed8af98000a4514c775492e40a944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5028323230da075d6f515448fe62dfb179b9bde8",
-                "reference": "5028323230da075d6f515448fe62dfb179b9bde8",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/fe226113966ed8af98000a4514c775492e40a944",
+                "reference": "fe226113966ed8af98000a4514c775492e40a944",
                 "shasum": ""
             },
             "require": {
@@ -14547,9 +14548,9 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/oscarotero/Embed/issues",
-                "source": "https://github.com/oscarotero/Embed/tree/v3.4.15"
+                "source": "https://github.com/oscarotero/Embed/tree/v3.4.16"
             },
-            "time": "2021-04-02T10:59:24+00:00"
+            "time": "2021-05-07T12:38:54+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -20430,8 +20431,7 @@
         "agrcmsx/config": 20,
         "drupal/wxt_bootstrap": 20,
         "drupal/wxt_library": 20,
-        "drupal/xhprof": 10,
-        "drupal/linkchecker": 20
+        "drupal/xhprof": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
