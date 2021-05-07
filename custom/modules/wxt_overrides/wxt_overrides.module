@@ -142,6 +142,12 @@ function wxt_overrides_page_attachments(array &$page) {
         }
         if ($name == 'dcterms.description') {
           $content = $value[0]['#attributes']['content'];
+          if (empty($content)) {
+            $node = \Drupal::routeMatch()->getParameter('node');
+            if ($node && !is_string($node) ) {
+              $content = $node->body->summary;
+            }
+          }
           $dctermsdescription = [
             '#tag' => 'meta',
             '#attributes' => [
