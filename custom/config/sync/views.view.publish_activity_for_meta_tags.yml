@@ -1639,8 +1639,8 @@ display:
         exposed_form: false
       menu:
         type: normal
-        title: 'Publish Activity for IA'
-        description: 'Generate Publish Activity Report (for IA team)'
+        title: 'Publish Activity (New Internet Pages)'
+        description: 'Newly Publish Report (for IA team)'
         expanded: false
         parent: system.admin
         weight: 0
