@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.landing_page.field_issued
     - field.field.node.landing_page.field_keywords
     - field.field.node.landing_page.field_large
+    - field.field.node.landing_page.field_managing_branch
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_meta_type
     - field.field.node.landing_page.field_modified
@@ -18,6 +19,7 @@ dependencies:
     - field.field.node.landing_page.field_queue
     - field.field.node.landing_page.field_special
     - field.field.node.landing_page.field_subject
+    - field.field.node.landing_page.field_teamsite_location
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
     - field.field.node.landing_page.layout_builder__layout
@@ -201,6 +203,12 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_managing_branch:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_meta_type:
     weight: 15
     settings: {  }
@@ -231,6 +239,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_teamsite_location:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_tracking_number:
     weight: 30
