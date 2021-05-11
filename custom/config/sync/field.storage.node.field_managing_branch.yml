@@ -1,0 +1,30 @@
+uuid: 2bdcb0d3-b6e0-403f-8034-3208bef90176
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_managing_branch
+field_name: field_managing_branch
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: PAB
+      label: PAB
+    -
+      value: MISB
+      label: MISB
+    -
+      value: DAIRY
+      label: Dairy
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

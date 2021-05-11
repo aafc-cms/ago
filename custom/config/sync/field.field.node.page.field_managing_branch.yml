@@ -1,0 +1,21 @@
+uuid: 577f2a3c-8004-4a27-8b33-a0db99985c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_managing_branch
+    - node.type.page
+  module:
+    - options
+id: node.page.field_managing_branch
+field_name: field_managing_branch
+entity_type: node
+bundle: page
+label: 'Managing Branch'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
