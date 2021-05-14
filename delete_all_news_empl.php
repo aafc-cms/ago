@@ -70,6 +70,7 @@ $query = $database->query("ALTER TABLE {node_field_data} AUTO_INCREMENT=1")->exe
 $query = $database->query("ALTER TABLE {node_field_revision} AUTO_INCREMENT=1")->execute();
 $query = $database->query("ALTER TABLE {media_revision} AUTO_INCREMENT=1")->execute();
 $query = $database->query("ALTER TABLE {media_field_revision} AUTO_INCREMENT=1")->execute();
+$query = $database->query("truncate {file_usage}")->execute();
 //$query = $database->query("truncate {content_moderation_state_field_revision}")->execute();
 $query = $database->query("truncate {search_total}")->execute();
 $query = $database->query("ALTER TABLE {file_managed} AUTO_INCREMENT=1")->execute();
