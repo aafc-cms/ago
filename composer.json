@@ -134,7 +134,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "^3.0.25",
+        "agrcmsx/dxbase": "^3.0.26",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
