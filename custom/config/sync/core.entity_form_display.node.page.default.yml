@@ -330,7 +330,7 @@ content:
     type: string_textfield
     weight: 5
     settings:
-      size: 200
+      size: 300
       placeholder: ''
     third_party_settings: {  }
     region: content
