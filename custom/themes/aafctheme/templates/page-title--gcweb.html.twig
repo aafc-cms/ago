@@ -17,5 +17,5 @@
  */
 #}
 {% if title and special_title != true %}
-  <h1{{ title_attributes }} id="wb-cont">{{ title }}</h1>
+  <h1{{ title_attributes }} id="wb-cont">{{ title|raw }}</h1>
 {% endif %}
