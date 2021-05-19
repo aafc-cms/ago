@@ -163,6 +163,7 @@ module:
   telephone: 0
   telephone_validation: 0
   text: 0
+  title_length: 0
   token: 0
   token_filter: 0
   toolbar: 0
