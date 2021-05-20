@@ -234,18 +234,6 @@ var AAFCFrontend = function() {
     });
   }
 
-  function relocatewebformvalidatmsg() {
-    // WCAG fix see : 
-    // source element
-    var divErrorMSG = $('div.highlighted');
-    var divDescription = $('div#edit-descriptionoffeedbackform');
-    if ((typeof(divErrorMSG) !== "undefined")  && (typeof(divDescription) !== "undefined") ) {
-      if( (divErrorMSG !== null) && (divDescription !== null) ) {
-        $('div.highlighted').detach().insertAfter(divDescription);
-      }
-    }
-  }
-
   /**
    * Expose functions and variables
    */
