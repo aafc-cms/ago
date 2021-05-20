@@ -154,7 +154,7 @@ var AAFCFrontend = function() {
     var slection =  $("#searchoptions").val();
     switch (slection)
     {
-      case "agr.gc.ca":
+      case "agriculture.canada.ca":
         if (AAFCFrontend.lang == 'en') {
           $("#custom-search-block-form").attr('action','https://www.canada.ca/en/agriculture-agri-food/search.html?_charset_=UTF-8&q='+searchval+'&wb-srch-sub=#wb-land');
         }
@@ -194,10 +194,20 @@ var AAFCFrontend = function() {
     $("#searchoptions").change(function(){
       AAFCFrontend.updateformaction();
       if ($("#searchoptions").val() == 'canada.ca') {
-        $('#q').attr("placeholder", Drupal.t("Search canada.ca"));
+        if (AAFCFrontend.lang == 'en') {
+         $('#q').attr("placeholder", Drupal.t("Search canada.ca"));
+        }
+        else {
+          $('#q').attr("placeholder", Drupal.t("Recherche canada.ca"));
+        }
       }
       else{
+        if (AAFCFrontend.lang == 'en') {
         $('#q').attr("placeholder", Drupal.t("Search website"));
+        }
+        else{
+          $('#q').attr("placeholder", Drupal.t("Recherche site web"));
+        }
       }
     });
   }

@@ -294,6 +294,16 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
     left: 15px;
   }
 }
+/* line 17, ../sass/components/_header.scss */
+form.search-form div.js-form-type-select {
+  right: 90px;
+}
+
+/* line 20, ../sass/components/_header.scss */
+form.search-form div.js-form-type-search {
+  right: 90px;
+}
+
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;
