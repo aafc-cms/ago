@@ -18,7 +18,7 @@ provider: null
 plugin: 'menu_block:brand-fr'
 settings:
   id: 'menu_block:brand-fr'
-  label: 'Brand fr'
+  label: 'À propos de ce site'
   provider: menu_block
   label_display: '0'
   follow: false
