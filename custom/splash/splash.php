@@ -22,10 +22,10 @@
 <!-- Meta data-->
 <!--[if gte IE 9 | !IE ]><!-->
 <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="https://www.agr.gc.ca/res/gcweb/GCWeb/assets/favicon-mobile.png"><link href="https://www.agr.gc.ca/res/gcweb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
-<link rel="stylesheet" href="/sites/default/splash/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="/sites/default/splash/css/theme.min.css">
+<link rel="stylesheet" href="/core/assets/vendor/jquery.ui/themes/base/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/libraries/theme-gcweb-legacy/css/theme.min.css">
 <!--<![endif]-->
-<link rel="stylesheet" href="/sites/default/splash/css/messages.min.css">
+<link rel="stylesheet" href="/libraries/theme-gcweb-legacy/css/messages.min.css">
 <!--[if lt IE 9]>
 		<link href="/res/gcweb/GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		<link rel="stylesheet" href="/res/gcweb/GCWeb/css/messages-ie.min.css" />
@@ -41,7 +41,7 @@
 </head>
 <body class="splash" vocab="http://schema.org/" typeof="WebPage">
 <div id="bg">
-<img src="/sites/default/splash/img/sp-bg-2.jpg" alt="">
+<img src="/libraries/theme-gcweb-legacy/assets/sp-bg-2.jpg" alt="">
 </div>
 <main role="main">
 <div class="sp-hb">
@@ -49,17 +49,17 @@
 <h1 property="name" class="wb-inv">Canada.ca</h1>
 <div class="row">
 <div class="col-xs-11 col-md-8">
-<img src="/sites/default/splash/img/sig-spl.svg" width="283" alt="Government of Canada / Gouvernement du Canada">
+<img src="/libraries/theme-gcweb-legacy/assets/sig-spl.svg" width="283" alt="Government of Canada / Gouvernement du Canada">
 </div>
 </div>
 <div class="row">
 <section class="col-xs-6 text-right">
 <h2 class="wb-inv">Government of Canada</h2>
-<p><a href="/en/" class="btn btn-primary">English</a></p>
+<p><a href="/en" class="btn btn-primary">English</a></p>
 </section>
 <section class="col-xs-6" lang="fr">
 <h2 class="wb-inv">Gouvernement du Canada</h2>
-<p><a href="/fr/" class="btn btn-primary">Français</a></p>
+<p><a href="/fr" class="btn btn-primary">Français</a></p>
 </section>
 </div>
 </div>
@@ -69,20 +69,20 @@
 <a href="en/about-our-department/terms-and-conditions" class="sp-lk">Terms and conditions</a> <span class="glyphicon glyphicon-asterisk"></span> <a href="fr/propos-notre-ministere/avis" class="sp-lk" lang="fr">Avis</a>
 </div>
 <div class="col-xs-5 col-md-4 text-right mrgn-bttm-md">
-<img src="/sites/default/splash/img/wmms-spl.svg" width="127" alt="Symbol of the Government of Canada / Symbole du gouvernement du Canada">
+<img src="/libraries/theme-gcweb-legacy/assets/wmms-spl.svg" width="127" alt="Symbol of the Government of Canada / Symbole du gouvernement du Canada">
 </div>
 </div>
 </div>
 </div>
 </main>
 <!--[if gte IE 9 | !IE ]><!-->
-<script src="/sites/default/splash/js/en.min.js.download"></script><script src="/sites/default/splash/js/jquery.js.download"></script>
-<script src="/sites/default/splash/js/wet-boew.min.js.download"></script><span id="wb-rsz" class="wb-init">&nbsp;</span>
+<script src="/libraries/wet-boew/js/i18n/en.min.js"></script><script src="/libraries/wet-boew/js/jquery/2.2.4/jquery.js"></script>
+<script src="/libraries/wet-boew/js/wet-boew.min.js"></script><span id="wb-rsz" class="wb-init">&nbsp;</span>
 <!--<![endif]-->
 <!--[if lt IE 9]>
 		<script src="/res/gcweb/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-<script src="/sites/default/splash/js/theme.min.js.download"></script>
+<script src="/libraries/theme-gcweb-legacy/js/theme.min.js"></script>
 
 </body></html>
