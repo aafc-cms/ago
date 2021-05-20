@@ -36,8 +36,18 @@
    * @return {string}
    *   The version of WxT being used.
    */
-  Drupal.aafctheme.version = 'Agrisource v1.0';
+  Drupal.aafctheme.version = 'AAFC online v1.0';
 
+  var psWebForm = $('body.agriculturalprogramsandservic');
+  var divErrorMSG = $('div.highlighted');
+  var divDescription = $('div#edit-descriptionoffeedbackform');
+  if (typeof(psWebForm) && (psWebForm !== null)) {
+    if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
+      if( (divErrorMSG !== null) && (divDescription !== null) ) {
+        $('div.highlighted').detach().insertAfter(divDescription);
+      }
+    }
+  }
   console.log(Drupal.aafctheme.version);
 
 })(window.jQuery, window.Drupal, window.drupalSettings);
@@ -224,6 +234,18 @@ var AAFCFrontend = function() {
     });
   }
 
+  function relocatewebformvalidatmsg() {
+    // WCAG fix see : 
+    // source element
+    var divErrorMSG = $('div.highlighted');
+    var divDescription = $('div#edit-descriptionoffeedbackform');
+    if ((typeof(divErrorMSG) !== "undefined")  && (typeof(divDescription) !== "undefined") ) {
+      if( (divErrorMSG !== null) && (divDescription !== null) ) {
+        $('div.highlighted').detach().insertAfter(divDescription);
+      }
+    }
+  }
+
   /**
    * Expose functions and variables
    */
@@ -239,4 +261,5 @@ var AAFCFrontend = function() {
     removeRoleFromSummary: removeRoleFromSummary
   }
 }();
+
 

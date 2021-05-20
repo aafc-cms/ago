@@ -25,13 +25,17 @@
       position: relative;
       margin-left: 10px;
     }
+    label[for="edit-programorservice"] + div.select-wrapper {
+      margin-bottom: 0px;
+    }
   }
   div.form-item.form-item-programorservice.js-form-item-programorservice.form-group {
     margin-bottom: 0px;
   }
 }
 
-body.agricultural-programs-and-services-submit-your-feedback-programs-and-services  {
+body.agricultural-programs-and-services-submit-your-feedback-programs-and-services,
+body.programmes-et-services-agricoles-commentaires-sur-programmes-et-services {
   div.region.region-highlighted {
     ul li {
       display: block;
