@@ -536,32 +536,65 @@ ul.feeds-cont li a {
   background: #31708f;
 }
 
-/* line 35, ../sass/styles.scss */
+/* line 3, ../sass/components/_feedback-webform.scss */
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"]::after, #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"]::after,
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"]::after, #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"]::after {
+  content: none;
+}
+/* line 7, ../sass/components/_feedback-webform.scss */
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"]::before, #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"]::before,
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"]::before, #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"]::before {
+  content: "";
+  background-image: url(../images/required.svg);
+  display: inline-block;
+  line-height: 1;
+  color: #e00;
+  background-size: 7px 7px;
+  width: 7px;
+  vertical-align: super;
+  margin-left: 4px;
+  height: 7px;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+}
+/* line 23, ../sass/components/_feedback-webform.scss */
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"], #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"],
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"], #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"] {
+  position: relative;
+  margin-left: 10px;
+}
+/* line 30, ../sass/components/_feedback-webform.scss */
+#webform-submission-yourfeedback-programsandservices-add-form div.form-item.form-item-programorservice.js-form-item-programorservice.form-group {
+  margin-bottom: 0px;
+}
+
+/* line 36, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 63, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
@@ -569,13 +602,13 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 72, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 77, ../sass/styles.scss */
+/* line 78, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
