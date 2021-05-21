@@ -579,6 +579,18 @@ body.programmes-et-services-agricoles-commentaires-sur-programmes-et-services di
   display: block;
 }
 /* line 43, ../sass/components/_feedback-webform.scss */
+body.agricultural-programs-and-services-submit-your-feedback-programs-and-services div.region.region-highlighted ul li a,
+body.programmes-et-services-agricoles-commentaires-sur-programmes-et-services div.region.region-highlighted ul li a {
+  display: list-item;
+  list-style-position: inside;
+  margin-top: 15px;
+}
+/* line 48, ../sass/components/_feedback-webform.scss */
+body.agricultural-programs-and-services-submit-your-feedback-programs-and-services div.region.region-highlighted ul li::after,
+body.programmes-et-services-agricoles-commentaires-sur-programmes-et-services div.region.region-highlighted ul li::after {
+  content: none;
+}
+/* line 51, ../sass/components/_feedback-webform.scss */
 body.agricultural-programs-and-services-submit-your-feedback-programs-and-services div.region.region-highlighted h2 + p,
 body.programmes-et-services-agricoles-commentaires-sur-programmes-et-services div.region.region-highlighted h2 + p {
   font-size: 24px !important;

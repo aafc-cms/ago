@@ -40,6 +40,14 @@ body.programmes-et-services-agricoles-commentaires-sur-programmes-et-services {
     ul li {
       display: block;
     }
+    ul li a {
+      display: list-item;
+      list-style-position: inside;
+      margin-top: 15px;
+    }
+    ul li::after {
+      content: none;
+    }
     h2 + p {
       font-size: 24px !important;
     }
