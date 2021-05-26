@@ -572,21 +572,25 @@ body.webform_feedback_programsandservices #webform-submission-yourfeedback-progr
 body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-group.error.has-error label[for="edit-programorservice"] + div.select-wrapper {
   margin-bottom: 0px;
 }
-/* line 40, ../sass/components/_feedback-webform.scss */
+/* line 36, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-group.error.has-error label[for="edit-programorservice"] + div.select-wrapper select.form-select {
+  width: 100% !important;
+}
+/* line 43, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices div.region.region-highlighted ul li {
   display: block;
 }
-/* line 43, ../sass/components/_feedback-webform.scss */
+/* line 46, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices div.region.region-highlighted ul li a {
   display: list-item;
   list-style-position: inside;
   margin-top: 15px;
 }
-/* line 48, ../sass/components/_feedback-webform.scss */
+/* line 51, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices div.region.region-highlighted ul li::after {
   content: none;
 }
-/* line 51, ../sass/components/_feedback-webform.scss */
+/* line 54, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices div.region.region-highlighted h2 + p {
   font-size: 24px !important;
 }
@@ -633,6 +637,15 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 /* line 78, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
+}
+
+/* line 82, ../sass/styles.scss */
+#wb-auto-8 {
+  width: 100% !important;
+}
+/* line 84, ../sass/styles.scss */
+#wb-auto-8 #wb-auto-9 {
+  display: block;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
