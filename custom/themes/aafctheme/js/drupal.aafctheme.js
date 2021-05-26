@@ -226,10 +226,17 @@ var AAFCFrontend = function() {
 
   function relocateWebformValidationMSG() {
     // WCAG fix issue #463 : 
-    var psWebForm = $('body.agriculturalprogramsandservic');
+    var psWebForm = $('body.webform_feedback_programsandservices');
     var divDescription = $('div#edit-descriptionoffeedbackform');
     var divErrorMSG    = $('div.highlighted');
     if (typeof(psWebForm) && (psWebForm !== null)) {
+      // Fixes WCAG issue #463
+      if (AAFCFrontend.lang == 'en') {
+        $( ".form-required" ).append( "<span style='font-size: 16px;font-weight: bold; color: #e00;margin-bottom: 5px;display: inline-block'>&nbsp;(required)</span>" );
+      }
+      else {
+        $( ".form-required" ).append( "<span style='font-size: 16px;font-weight: bold; color: #e00;margin-bottom: 5px;display: inline-block'>&nbsp;(obligatoire)</span>" );
+      }
       if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
         if( (divErrorMSG !== null) && (divDescription !== null) ) {
           $('div.highlighted').detach().insertAfter(divDescription);
