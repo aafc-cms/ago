@@ -574,7 +574,7 @@ body.webform_feedback_programsandservices #webform-submission-yourfeedback-progr
 }
 /* line 36, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-group.error.has-error label[for="edit-programorservice"] + div.select-wrapper select.form-select {
-  width: 100% !important;
+  width: 100%;
 }
 /* line 43, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices div.region.region-highlighted ul li {
@@ -641,7 +641,7 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 
 /* line 82, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
-  width: 100% !important;
+  width: 100%;
 }
 /* line 84, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
