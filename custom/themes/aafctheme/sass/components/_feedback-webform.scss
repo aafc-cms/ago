@@ -31,6 +31,11 @@ body.webform_feedback_programsandservices {
     div.form-item.form-item-programorservice.js-form-item-programorservice.form-group {
       margin-bottom: 0px;
     }
+    div.form-item.form-item-programorservice.form-group label[for="edit-programorservice"] + div.select-wrapper {
+      select.form-select {
+        width: 100%;
+      }
+    }
     div.form-group.error.has-error label[for="edit-programorservice"] + div.select-wrapper {
       margin-bottom: 0px;
       select.form-select {
