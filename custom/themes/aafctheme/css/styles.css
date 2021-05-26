@@ -640,11 +640,11 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
 }
 
 /* line 82, ../sass/styles.scss */
-#wb-auto-8 {
+div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100% !important;
 }
 /* line 84, ../sass/styles.scss */
-#wb-auto-8 #wb-auto-9 {
+div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
   display: block;
 }
 
