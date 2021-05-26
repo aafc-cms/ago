@@ -232,10 +232,10 @@ var AAFCFrontend = function() {
     if (typeof(psWebForm) && (psWebForm !== null)) {
       // Fixes WCAG issue #463
       if (AAFCFrontend.lang == 'en') {
-        $(".form-required").append("<span style='color: #d3080c;'>&nbsp;(required)</span>");
+        $(".form-required").append("<span style='color: #e00;'>&nbsp;(required)</span>");
       }
       else {
-        $(".form-required").append("<span style='color: #d3080c;'>&nbsp;(obligatoire)</span>");
+        $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
       }
       if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
         if( (divErrorMSG !== null) && (divDescription !== null) ) {
