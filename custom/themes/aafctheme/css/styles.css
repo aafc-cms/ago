@@ -304,6 +304,11 @@ form.search-form div.js-form-type-search {
   right: 90px;
 }
 
+/* line 23, ../sass/components/_header.scss */
+div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
+  display: inline-block !important;
+}
+
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;
