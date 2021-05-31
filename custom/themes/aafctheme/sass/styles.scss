@@ -68,6 +68,10 @@ footer#wb-info .landscape div.contextual.open {
     height: auto;
   }
 
+#block-aafctheme-reportproblemblock {
+    margin-top: .5em;
+}
+
 /*BUG FIX FOR LAYOUT BUILDER*/
 
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
@@ -86,3 +90,18 @@ div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   }
 }
 /* END BUG FIX FOR LAYOUT BUILDER */
+@media (max-width: 844px) and (min-width: 768px) {
+  #wb-srch input, .srchbox input {
+    right: 100px;
+  }
+ .form-inline .select-wrapper {
+    right: 100px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  #wb-srch input, .srchbox input {
+    margin-right: 160px;
+    border-right: 1px solid #ddd;
+  }
+}
