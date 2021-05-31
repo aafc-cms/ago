@@ -1,4 +1,4 @@
-max_links: 2000
+max_links: 10000
 cron_generate: true
 cron_generate_interval: 168
 generate_duration: 10000
