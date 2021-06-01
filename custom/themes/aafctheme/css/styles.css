@@ -301,7 +301,7 @@ form.search-form div.js-form-type-select {
 
 /* line 20, ../sass/components/_header.scss */
 form.search-form div.js-form-type-search {
-  right: 90px;
+  right: 50px;
 }
 
 /* line 23, ../sass/components/_header.scss */
@@ -636,27 +636,51 @@ footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   height: auto;
 }
 
+/* line 71, ../sass/styles.scss */
+#block-aafctheme-reportproblemblock {
+  margin-top: .5em;
+}
+
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 73, ../sass/styles.scss */
+/* line 77, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 78, ../sass/styles.scss */
+/* line 82, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
 
-/* line 82, ../sass/styles.scss */
+/* line 86, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100%;
 }
-/* line 84, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
   display: block;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
+@media (max-width: 844px) and (min-width: 768px) {
+  /* line 94, ../sass/styles.scss */
+  #wb-srch input, .srchbox input {
+    right: 100px;
+  }
+
+  /* line 97, ../sass/styles.scss */
+  .form-inline .select-wrapper {
+    right: 100px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 103, ../sass/styles.scss */
+  #wb-srch input, .srchbox input {
+    margin-right: 160px;
+    border-right: 1px solid #ddd;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
