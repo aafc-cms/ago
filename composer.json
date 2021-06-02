@@ -150,7 +150,8 @@
         "drupal/honeypot": "^2.0",
         "drupal/xhprof": "^1.0@beta",
         "perftools/php-profiler": "^0.18.0",
-        "drupal/title_length": "^1.1"
+        "drupal/title_length": "^1.1",
+        "drupal/bootstrap_site_alert": "^1.9"
     },
     "authors": [
         {
