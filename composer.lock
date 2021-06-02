@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "826259202b6a0281eaa49a6d59300106",
+    "content-hash": "959bad90a5a6c2fd0f5cd7470566ae0f",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -4074,6 +4074,50 @@
             "homepage": "https://www.drupal.org/project/bootstrap_layouts",
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap_layouts"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_site_alert",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_site_alert.git",
+                "reference": "8.x-1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_site_alert-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "5559eb47fa817610217c81c46c86f18aead74bb1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.9",
+                    "datestamp": "1590198392",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "labboy0276",
+                    "homepage": "https://www.drupal.org/user/2397942"
+                }
+            ],
+            "description": "This module is for rendering alerts site wide using the power of Bootstrap",
+            "homepage": "https://www.drupal.org/project/bootstrap_site_alert",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_site_alert"
             }
         },
         {
