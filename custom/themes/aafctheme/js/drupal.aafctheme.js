@@ -86,6 +86,7 @@ var AAFCFrontend = function() {
     });
 
     //AAFCFrontend.initAnalytics();
+    AAFCFrontend.relocateSiteAlertMSG();
     AAFCFrontend.relocateWebformValidationMSG();
     AAFCFrontend.initSlideshow();
     searchInterface();
@@ -245,6 +246,16 @@ var AAFCFrontend = function() {
     }
   }
 
+  function relocateSiteAlertMSG() {
+    var divmsg = $('div.customized-site-alert');
+    var olbreadcrumb = $('nav#wb-bc');
+    if (typeof(divmsg) && (divmsg !== null)) {
+      if( (olbreadcrumb !== null) && (olbreadcrumb !== null) ) {
+        $('div.alert').detach().insertAfter(olbreadcrumb);
+      }
+    }
+  }
+
   /**
    * Expose functions and variables
    */
@@ -258,6 +269,7 @@ var AAFCFrontend = function() {
     updateformaction: updateformaction,
     page_type: page_type,
     removeRoleFromSummary: removeRoleFromSummary,
+    relocateSiteAlertMSG:relocateSiteAlertMSG,
     relocateWebformValidationMSG:relocateWebformValidationMSG
   }
 }();
