@@ -117,6 +117,10 @@ if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
 fi
 htaccess_file=html/.htaccess
+if ! grep -q "splash.php" $htaccess_file; then
+   echo "Adding a rewrite rule for splash page."
+   sed -i '90 i RewriteRule "^$" splash.php [L]' $htaccess_file;
+fi
 if ! grep -q "mac_feedback" $htaccess_file; then
    search_str="^( +)# Allow access to test-specific PHP files:";
    new_setting="\1# Allow access to custom aafc PHP files:\n\1RewriteCond \%\{REQUEST_URI\} \!\/resources\/prod\/Internet-Internet\/MISB-DGSIM\/ATS-SEA\/includes\/mac_feedback_handler.php\$\n\1# Allow access to test-specific PHP files:\n";
