@@ -42,5 +42,6 @@ permissions:
   - 'use publishing_news transition save_as_a_draft_newsstrans'
   - 'use search'
   - 'use text format rich_text'
+  - 'view bootstrap site alerts'
   - 'view media'
   - 'view own unpublished media'
