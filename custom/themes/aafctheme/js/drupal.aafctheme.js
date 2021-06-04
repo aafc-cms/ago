@@ -247,11 +247,11 @@ var AAFCFrontend = function() {
   }
 
   function relocateSiteAlertMSG() {
-    var divmsg = $('div.customized-site-alert');
+    var divmsg = $('div.alert.bs-site-alert.alert-info');
     var olbreadcrumb = $('nav#wb-bc');
     if (typeof(divmsg) && (divmsg !== null)) {
-      if( (olbreadcrumb !== null) && (olbreadcrumb !== null) ) {
-        $('div.alert').detach().insertAfter(olbreadcrumb);
+      if(typeof(olbreadcrumb) && (olbreadcrumb !== null)) {
+        $('div.alert.bs-site-alert.alert-info').detach().insertAfter(olbreadcrumb);
       }
     }
   }
