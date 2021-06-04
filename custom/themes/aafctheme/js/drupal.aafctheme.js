@@ -247,11 +247,12 @@ var AAFCFrontend = function() {
   }
 
   function relocateSiteAlertMSG() {
-    var divmsg = $('div.customized-site-alert');
+    var divmsg = $('div.alert.bs-site-alert.alert-info');
+    console.log(divmsg );
     var olbreadcrumb = $('nav#wb-bc');
     if (typeof(divmsg) && (divmsg !== null)) {
       if( (olbreadcrumb !== null) && (olbreadcrumb !== null) ) {
-        $('div.alert').detach().insertAfter(olbreadcrumb);
+        $('div.alert.bs-site-alert.alert-info').detach().insertAfter(olbreadcrumb);
       }
     }
   }
