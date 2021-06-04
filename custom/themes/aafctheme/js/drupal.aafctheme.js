@@ -250,7 +250,7 @@ var AAFCFrontend = function() {
     var divmsg = $('div.alert.bs-site-alert.alert-info');
     var olbreadcrumb = $('nav#wb-bc');
     if (typeof(divmsg) && (divmsg !== null)) {
-      if(typeof(olbreadcrumb) && (olbreadcrumb !== null) ) {
+      if(typeof(olbreadcrumb) && (olbreadcrumb !== null)) {
         $('div.alert.bs-site-alert.alert-info').detach().insertAfter(olbreadcrumb);
       }
     }
