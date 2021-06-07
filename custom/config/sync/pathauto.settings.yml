@@ -40,7 +40,7 @@ max_component_length: 100
 transliterate: true
 reduce_ascii: false
 case: true
-ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with, par, dedans, avant, comme, de, du, un, une, depuis, la, les'
+ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with, à, ainsi, alors, après, aussi, avant, avec, car, certes, chez, comme, d, dans, de, dehors, depuis, derrière, des, donc, en, ensuite, envers, et, etc, ici, jusqu, jusque, l, la, le, les, là, mais, même, ni, or, où, par, pendant, pour, près, sans, sauf, selon, sous, sur, tout, un, une, vers, vu'
 update_action: 1
 safe_tokens:
   - alias
