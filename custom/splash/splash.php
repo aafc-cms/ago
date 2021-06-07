@@ -84,5 +84,5 @@
 		
 		<![endif]-->
 <script src="/libraries/theme-gcweb-legacy/js/theme.min.js"></script>
-
+<script type="text/javascript">_satellite.pageBottom();</script>
 </body></html>
