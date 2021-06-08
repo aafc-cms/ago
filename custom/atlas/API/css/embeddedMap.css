@@ -1,0 +1,175 @@
+.esriTimeSlider table{
+    padding: 0px !important;
+    margin: 0px !important;
+    text-align: center !important;
+    /*vertical-align: top !important;*/
+}
+.esriTimeSlider td{
+    border-color: transparent;
+}
+.esriTimeSlider th{
+    border-color: transparent;
+}
+.esriTimeSlider .dijitRuleLabelContainerH{
+    font: 10px/10px Verdana, Geneva, sans-serif !important;
+}
+.esriTimeSlider .dijitButtonContents:focus{
+    background-color: lightblue !important;
+}
+.esriTimeSlider .dijitSliderImageHandleH{
+    background: url("./dijit/images/slider-handle.png") !important;
+    border: 0px solid transparent;
+    height: 13px !important;
+    width: 10px !important;
+}
+.esriTimeSlider .dijitSliderImageHandleH:focus{
+    background: url("./dijit/images/slider-handle-focused.png") !important;
+}
+.timeTextualDisplay{
+    border: 1px solid gray;
+    border-radius: 10px;
+    /*font: italic bold 10px/10px Georgia, serif;*/
+    font: italic bold 10px/10px Verdana, Geneva, sans-serif;
+    height: 16px !important;
+    padding-top: 1px !important;
+    padding-bottom: 2px !important;
+    text-align: center;
+    vertical-align: middle;
+    width: 40%;
+}
+.timeTextualDisplay:disabled {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+.timeToolbar{
+    background-color: #EEEEEE;
+    border-bottom: thin solid gray;
+    height: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    /*overflow: hidden;*/
+    width: 100%;
+}
+.timePanel{
+    border-bottom: thin solid gray;
+    height: 95px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+}
+.dijitTextBox .dijitTextArea .dijitExpandingTextArea {
+    padding: 0px !important;
+}
+.tsTicks {
+    height:0px !important;
+    margin-bottom: -1px !important;
+}
+.histogram-container text, .histogram-range, .scale-bar-left text, .scale-bar-right text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.histogram-timeslider-dijit #focusTip {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.map[data-maptype="timeseriesmap"]{
+    height: 495px;
+    width: 99%;
+    border: medium solid gray;
+    margin-left:0px;
+    margin-right:0px;
+    overflow: hidden;
+}
+.map {
+    height: 400px;
+    width: 99%;
+    border: medium solid gray;
+    margin-left:0px;
+    margin-right:0px;
+}
+.map img {
+    margin-left:0px;
+    margin-right:0px;
+}
+.mapLabel {
+    font-size:smaller;
+    text-align:center;
+}
+.comparisonMap {
+    /*height: 400;*/
+    height: 100%;
+    width: 33%;
+    float: left;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: thin solid gray;
+}
+.mapHeader {
+    font-size:larger;
+}
+.tip {
+    font-style:italic;
+}
+.HomeButton{
+    /*position: relative;*/
+    position: absolute;
+    /*top: 5%;*/
+    /*left: 90%;*/
+    top: 81px;
+    left: 21px;
+    opacity: 0.9;
+    z-index: 1;
+}
+.HomeButton .home{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(102,102,102,0.80);
+    border: thin solid #333333;
+}
+.HomeButtonForCompareMap{
+    /*position: relative;*/
+    position: absolute;
+    top: 81px;
+    left: 21px;
+    opacity: 0.9;
+    z-index: 1;
+}
+.HomeButtonForCompareMap span {
+    display:none;
+}
+.HomeButtonForCompareMap .home {
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(102,102,102,0.80);
+    border: thin solid #333333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    background-image: url("./dijit/images/home.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.HomeButtonForCompareMap .home:hover {
+    background-color: #333;
+    background-color: rgba(102,102,102,0.90);
+}
+.HomeButtonForCompareMap .home:active {
+    background-color: #ccc;
+    background-color: rgba(102,102,102,0.60);
+}
+.HomeButtonForCompareMap .loading {
+    background-image: url("./dijit/images/home-spinner.gif");
+}
+.esriIconHomeExtent:before {
+    content: "\e62f";
+}
+.esriIconHomeExtent {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62f;');
+}
+
