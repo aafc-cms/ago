@@ -127,6 +127,12 @@ if ! grep -q "mac_feedback" $htaccess_file; then
    sed -r "s/${search_str}/${new_setting}/gm" $htaccess_file > ${htaccess_file}_temp;
    cp ${htaccess_file}_temp ${htaccess_file}
 fi
+if ! grep -q "embeddedMap" $htaccess_file; then
+   search_str="^( +)# Allow access to test-specific PHP files:";
+   new_setting="\1# Allow access to custom aafc js files:\n\1RewriteCond \%\{REQUEST_URI\} \!\/atlas\/API\/js\/embeddedMap_1.3.js\$\n\1# Allow access to test-specific PHP files:\n";
+   sed -r "s/${search_str}/${new_setting}/gm" $htaccess_file > ${htaccess_file}_temp;
+   cp ${htaccess_file}_temp ${htaccess_file}
+fi
 if ! grep -q "upgrade-insecure-requests" $htaccess_file; then
   if [ -z $1 ]; then
     echo "dev environment setup.\n";

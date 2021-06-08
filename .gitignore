@@ -1,4 +1,8 @@
 .editorconfig
 .gitattributes
 vendor
+!html/atlas
+!html/atlas/**
+!html/resources
+!html/resources/**
 html
