@@ -309,24 +309,25 @@ div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
   display: inline-block !important;
 }
 
-/* line 1, ../sass/components/_site-alert.scss */
-div.alert.bs-site-alert.alert-info {
-  padding-bottom: 15px;
-  padding-top: 15px;
-  margin-bottom: 0px;
-  /*border-color: transparent;*/
+/* line 2, ../sass/components/_site-alert.scss */
+section.customized-site-alert .alert-info > :first-child::before {
+  content: none;
 }
 
-/* line 8, ../sass/components/_site-alert.scss */
-section.customized-site-alert {
-  text-align: center;
+/* line 7, ../sass/components/_site-alert.scss */
+div.alert.bs-site-alert.alert-info > :first-child::before {
+  content: none;
+}
+
+/* line 11, ../sass/components/_site-alert.scss */
+div.alert.bs-site-alert.alert-info {
+  border-color: #d7faff;
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
-  border-color: transparent;
 }
 
-/* line 16, ../sass/components/_site-alert.scss */
+/* line 18, ../sass/components/_site-alert.scss */
 div.container-fluid {
   margin-right: 0px;
 }
