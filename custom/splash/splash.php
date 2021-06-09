@@ -2,7 +2,7 @@
   $server_name = $_SERVER['SERVER_NAME'];
   $host = $_SERVER['HTTP_HOST'];
   $prod = FALSE;
-  if (stripos($host, 'www-tmp.agr.gc.ca') >= 0 || stripos($host, 'agriculture.canada.ca') >= 0) {
+  if (stripos($host, 'www-tmp.agr.gc.ca') !== false || stripos($host, 'agriculture.canada.ca') !== false) {
     $prod = TRUE;
   }
   // Adobe Analytics JS library.
