@@ -3,6 +3,7 @@
 printf "execute post_install.sh\n";
 
 trap "sudo configureSettingsFile" SIGINT SIGTERM
+#set -x
 
 live=0
 if [ -z $ENV_NAME ]; then
@@ -130,6 +131,18 @@ fi
 if ! grep -q "embeddedMap" $htaccess_file; then
    search_str="^( +)# Allow access to test-specific PHP files:";
    new_setting="\1# Allow access to custom aafc js files:\n\1RewriteCond \%\{REQUEST_URI\} \!\/atlas\/API\/js\/embeddedMap_1.3.js\$\n\1# Allow access to test-specific PHP files:\n";
+   sed -r "s/${search_str}/${new_setting}/gm" $htaccess_file > ${htaccess_file}_temp;
+   cp ${htaccess_file}_temp ${htaccess_file}
+fi
+if ! grep -q "apps/ewi/index" $htaccess_file; then
+   search_str="^( +)# Allow access to test-specific PHP files:";
+   new_setting="\1# Allow access to custom aafc iframe files:\n\1RewriteCond \%\{REQUEST_URI\} \!\/atlas\/API\/apps\/ewi\/index.html\$\n\1# Allow access to test-specific ewi index.html files:\n";
+   sed -r "s/${search_str}/${new_setting}/gm" $htaccess_file > ${htaccess_file}_temp;
+   cp ${htaccess_file}_temp ${htaccess_file}
+fi
+if ! grep -q "lang=fr" $htaccess_file; then
+   search_str="^( +)# Allow access to test-specific PHP files:";
+   new_setting="\1# Allow access to custom aafc iframe files:\n\1RewriteCond \%\{REQUEST_URI\} \!\/atlas\/API\/apps\/ewi\/index.html?lang=fr\$\n\1# Allow access to test-specific custom aafc iframe files lang=fr files:\n";
    sed -r "s/${search_str}/${new_setting}/gm" $htaccess_file > ${htaccess_file}_temp;
    cp ${htaccess_file}_temp ${htaccess_file}
 fi
