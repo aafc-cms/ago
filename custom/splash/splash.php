@@ -1,3 +1,16 @@
+<?php
+  $server_name = $_SERVER['SERVER_NAME'];
+  $host = $_SERVER['HTTP_HOST'];
+  $prod = FALSE;
+  if (stripos($host, 'www-ep.agr.gc.ca') >= 0 || stripos($host, 'agriculture.canada.ca') >= 0) {
+    $prod = TRUE;
+  }
+  // Adobe Analytics JS library.
+  $adobetm='//assets.adobedtm.com/launch-EN11c0261481f74c56b7656937bbd995e9-staging.min.js';
+  if ($prod) {
+    $adobetm='//assets.adobedtm.com/launch-EN0cf6c2810a2b48f8a4c36502a1b09541.min.js';
+  }
+?>
 <!DOCTYPE html>
 <!-- saved from url=(0022)https://www.agr.gc.ca/ -->
 <html lang="en" class="js backgroundsize borderimage csstransitions fontface svg details progressbar meter no-mathml cors xlargeview"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -38,6 +51,7 @@
 		
 		<![endif]-->
 <noscript><link rel="stylesheet" href="./wet-boew/css/noscript.min.css" /></noscript>
+<script src="<?php print $adobetm ?>"></script>
 </head>
 <body class="splash" vocab="http://schema.org/" typeof="WebPage">
 <div id="bg">
