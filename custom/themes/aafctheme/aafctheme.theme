@@ -153,7 +153,7 @@ function aafctheme_preprocess_html(&$variables) {
   
   $host = \Drupal::request()->getHost();
   $prod = FALSE;
-  if (stripos($host, 'www-ep.agr.gc.ca') >= 0 || stripos($host, 'agriculture.canada.ca') >= 0) {
+  if (stripos($host, 'www-ep.agr.gc.ca') !== false || stripos($host, 'agriculture.canada.ca') !== false) {
     $prod = TRUE;
   }
   // Adobe Analytics JS library.
