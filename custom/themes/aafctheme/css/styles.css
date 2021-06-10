@@ -325,9 +325,10 @@ div.alert.bs-site-alert.alert-info {
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-top: 0px;
+  font-size: 16px;
 }
 
-/* line 18, ../sass/components/_site-alert.scss */
+/* line 19, ../sass/components/_site-alert.scss */
 div.container-fluid {
   margin-right: 0px;
 }
