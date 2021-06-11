@@ -1,0 +1,55 @@
+body.webform_generic_contactform {
+  div.form-item {
+    label[for="edit-preferredresponselanguage"]::after, label[for="edit-emailaddress"]::after,
+    label[for="edit-fullname"]::after, label[for="edit-yourmessage"]::after {
+      content: none;
+    }
+    label[for="edit-preferredresponselanguage"]::before, label[for="edit-emailaddress"]::before,
+    label[for="edit-fullname"]::before, label[for="edit-yourmessage"]::before  {
+      content: "";
+      background-image: url(../images/required.svg);
+      display: inline-block;
+      line-height: 1;
+      color: #e00;
+      background-size: 7px 7px;
+      width: 7px;
+      vertical-align: super;
+      margin-left: 4px;
+      height: 7px;
+      position: absolute;
+      top: 7px;
+      left: -15px;
+    }
+    label[for="edit-preferredresponselanguage"], label[for="edit-emailaddress"],
+    label[for="edit-fullname"], label[for="edit-yourmessage"] {
+      position: relative;
+      margin-left: 10px;
+    }
+    
+  }
+
+  div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper {
+    margin-bottom: 0px;
+    select.form-select {
+      width: 100%;
+    }
+  }
+
+
+  div.region.region-highlighted {
+    ul li {
+      display: block;
+    }
+    ul li a {
+      display: list-item;
+      list-style-position: inside;
+      margin-top: 15px;
+    }
+    ul li::after {
+      content: none;
+    }
+    h2 + p {
+      font-size: 24px !important;
+    }
+  }
+}

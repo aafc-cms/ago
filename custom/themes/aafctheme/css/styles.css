@@ -628,79 +628,134 @@ body.webform_feedback_programsandservices div.region.region-highlighted h2 + p {
   font-size: 24px !important;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 3, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::after, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::after,
+body.webform_generic_contactform div.form-item label[for="edit-fullname"]::after, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::after {
+  content: none;
+}
+/* line 7, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::before, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::before,
+body.webform_generic_contactform div.form-item label[for="edit-fullname"]::before, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::before {
+  content: "";
+  background-image: url(../images/required.svg);
+  display: inline-block;
+  line-height: 1;
+  color: #e00;
+  background-size: 7px 7px;
+  width: 7px;
+  vertical-align: super;
+  margin-left: 4px;
+  height: 7px;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+}
+/* line 23, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"], body.webform_generic_contactform div.form-item label[for="edit-emailaddress"],
+body.webform_generic_contactform div.form-item label[for="edit-fullname"], body.webform_generic_contactform div.form-item label[for="edit-yourmessage"] {
+  position: relative;
+  margin-left: 10px;
+}
+/* line 31, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper {
+  margin-bottom: 0px;
+}
+/* line 33, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper select.form-select {
+  width: 100%;
+}
+/* line 40, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted ul li {
+  display: block;
+}
+/* line 43, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted ul li a {
+  display: list-item;
+  list-style-position: inside;
+  margin-top: 15px;
+}
+/* line 48, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted ul li::after {
+  content: none;
+}
+/* line 51, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted h2 + p {
+  font-size: 24px !important;
+}
+
+/* line 38, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 41, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 46, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 55, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 65, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
   height: auto;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 #block-aafctheme-reportproblemblock {
   margin-top: .5em;
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 78, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 83, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
 
-/* line 87, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100%;
 }
-/* line 89, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
   display: block;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
 @media (max-width: 844px) and (min-width: 768px) {
-  /* line 95, ../sass/styles.scss */
+  /* line 96, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     right: 100px;
   }
 
-  /* line 98, ../sass/styles.scss */
+  /* line 99, ../sass/styles.scss */
   .form-inline .select-wrapper {
     right: 100px;
     position: relative;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 104, ../sass/styles.scss */
+  /* line 105, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     margin-right: 160px;
     border-right: 1px solid #ddd;
