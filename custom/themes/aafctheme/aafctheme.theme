@@ -149,6 +149,15 @@ function aafctheme_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'webform_feedback_programsandservices';
     }
   }
+  //get original url (/webform/aafc_generic_contact_form) from url alias mapping info
+  if (isset($variables['page']['#attached']['http_header'][0][1])) {
+    $patten = '/\/webform\/aafc_generic_contact_form>/';
+    $urlaliasmapping = $variables['page']['#attached']['http_header'][0][1];
+    if (preg_match($patten, $urlaliasmapping)) {
+      //add custom - feedback_programsandservices_webform css class
+      $variables['attributes']['class'][] = 'webform_generic_contactform';
+    }
+  }
   // End of logic to grab moderation state and add it to the body class for styling.
   
   $host = \Drupal::request()->getHost();
