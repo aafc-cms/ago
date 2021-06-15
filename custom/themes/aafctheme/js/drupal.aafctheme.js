@@ -251,7 +251,7 @@ var AAFCFrontend = function() {
       if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
         if( (divErrorMSG !== null) && (divDescription !== null) ) {
           $('div.highlighted').detach().insertAfter(divDescription);
-          $( "div.alert.alert-danger.alert-dismissible  ul li a" ).each(function(index) {
+          $( "div.alert.alert-danger.alert-dismissible ul li a" ).each(function(index) {
             $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
             countErr = countErr +1;
           });
