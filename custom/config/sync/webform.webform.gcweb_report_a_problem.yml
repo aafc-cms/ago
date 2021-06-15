@@ -199,7 +199,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: james.yao2@canada.ca
+      to_mail: aafc.webcommunications-communicationsweb.aac@AGR.GC.CA
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
