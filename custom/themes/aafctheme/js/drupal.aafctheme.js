@@ -230,17 +230,31 @@ var AAFCFrontend = function() {
     var psWebForm = $('body.webform_feedback_programsandservices');
     var divDescription = $('div#edit-descriptionoffeedbackform');
     var divErrorMSG    = $('div.highlighted');
+    var countErr = 1;
+    var reqvalMSGPrefix = "";
+    var reqvalMSGMiddle = "";
+    var reqvalMSGSuffix = "";
     if (typeof(psWebForm) && (psWebForm !== null)) {
       // Fixes WCAG issue #463
       if (AAFCFrontend.lang == 'en') {
         $(".form-required").append("<span style='color: #e00;'>&nbsp;(required)</span>");
+        reqvalMSGPrefix = "Error ";
+        reqvalMSGMiddle = ": ";
+        reqvalMSGSuffix = " - This field is required.";
       }
       else {
         $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
+        reqvalMSGPrefix = "Erreur ";
+        reqvalMSGMiddle = " : ";
+        reqvalMSGSuffix = " - Ce champ est obligatoire.";
       }
       if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
         if( (divErrorMSG !== null) && (divDescription !== null) ) {
           $('div.highlighted').detach().insertAfter(divDescription);
+          $( "div.alert.alert-danger.alert-dismissible ul li a" ).each(function(index) {
+            $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
+            countErr = countErr +1;
+          });
         }
       }
     }
