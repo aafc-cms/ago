@@ -171,6 +171,13 @@ if ! grep -q "upgrade-insecure-requests" $htaccess_file; then
   fi
 fi
 
+if [ -d "html/libraries/wet-boew/js/deps/json-patch.js" ]; then
+  pushd html/libraries/wet-boew/js/deps;
+  echo "ln -s ../../../../../custom/js/json-patch.js json-patch.js;";
+        ln -s ../../../../../custom/js/json-patch.js json-patch.js
+  echo "workaround for dcrid 1615574131931;"
+  popd
+fi
 if [ -d "html/libraries/jquery.inputmask/dist/min" ]; then
   echo "fix jquery inputmask distribution"
   echo "cp html/libraries/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js html/libraries/jquery.inputmask/dist/jquery.inputmask.min.js;"
