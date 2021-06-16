@@ -171,6 +171,13 @@ if ! grep -q "upgrade-insecure-requests" $htaccess_file; then
   fi
 fi
 
+if [ ! -L "html/libraries/wet-boew/js/deps/jsonpointer.js" ]; then
+  pushd html/libraries/wet-boew/js/deps;
+  echo "ln -s ../../../../../custom/js/jsonpointer.js jsonpointer.js;";
+        ln -s ../../../../../custom/js/jsonpointer.js jsonpointer.js
+  echo "workaround for dcrid 1615574131931;"
+  popd
+fi
 if [ ! -L "html/libraries/wet-boew/js/deps/json-patch.js" ]; then
   pushd html/libraries/wet-boew/js/deps;
   echo "ln -s ../../../../../custom/js/json-patch.js json-patch.js;";
