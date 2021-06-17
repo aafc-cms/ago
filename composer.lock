@@ -6802,17 +6802,17 @@
         },
         {
             "name": "drupal/entity_translation_unified_form",
-            "version": "1.0.0-beta14",
+            "version": "1.0.0-beta16",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_translation_unified_form.git",
-                "reference": "8.x-1.0-beta14"
+                "reference": "8.x-1.0-beta16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta14.zip",
-                "reference": "8.x-1.0-beta14",
-                "shasum": "703f5668f732cb48e49239c536cebf1917eb577d"
+                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta16.zip",
+                "reference": "8.x-1.0-beta16",
+                "shasum": "b4b229265f2a9c7362e8342ade27a03df2096549"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6820,8 +6820,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta14",
-                    "datestamp": "1619753669",
+                    "version": "8.x-1.0-beta16",
+                    "datestamp": "1623434191",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
