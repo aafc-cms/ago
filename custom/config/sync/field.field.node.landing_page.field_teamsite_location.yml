@@ -9,10 +9,10 @@ id: node.landing_page.field_teamsite_location
 field_name: field_teamsite_location
 entity_type: node
 bundle: landing_page
-label: 'Teamsite Location'
+label: 'Teamsite Location and DCR Name'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
