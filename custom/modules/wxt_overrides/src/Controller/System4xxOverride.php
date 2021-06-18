@@ -153,12 +153,12 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
     $homelink = '/'.$langcode;
 
     if ($langcode=='en'){
-	     $response = '<h1 id="wb-cont" class="mrgn-tp-md">' . $this->t("404 — Oops, this page has been moved!") . '</h1>     
-      <p class="mrgn-tp-md">' . $this->t("Agriculture and Agri-Food Canada has moved to ").'<a href=' .$homelink .'>' . $this->t("https://agriculture.canada.ca").'</a></p><p class="mrgn-tp-md">' . $this->t("Please visit our relocated ") . '<a href=' .$homelink .'>' . $this->t("home page"). '</a>'. $this->t(" and navigate your way back to the content you're looking for. Be sure to update your bookmarks and links from your site. Thank you for your patience!"). '</p>';
+	     $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oops, this page has been moved!</h1>     
+      <p class="mrgn-tp-md">Agriculture and Agri-Food Canada has moved to <a href=' .$homelink .'>https://agriculture.canada.ca</a></p><p class="mrgn-tp-md">Please visit our relocated <a href=' .$homelink .'>home page</a> and navigate your way back to the content you\'re looking for. Be sure to update your bookmarks and links from your site. Thank you for your patience!</p>';
     }
     else {
-	    $response = '<h1 id="wb-cont" class="mrgn-tp-md">' . $this->t("404 — Oups, cette page a déménagé!") . '</h1>
-      <p class="mrgn-tp-md">' . $this->t("Agriculture et Agroalimentaire Canada a une nouvelle adresse web :").'<a href=' .$homelink .'>' . $this->t("https://agriculture.canada.ca").'</a ></p><p class="mrgn-tp-md">' . $this->t("Nous vous invitons à retourner à notre ") . '<a href=' .$homelink .'>' . $this->t("page d'accueil"). '</a>'. $this->t(" et à refaire le chemin vers le contenu que vous cherchez. Vous devriez ensuite mettre à jour vos favoris et les liens sur votre site web. Merci de votre patience!"). '</p>';
+	    $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oups, cette page a déménagé!</h1>
+      <p class="mrgn-tp-md">Agriculture et Agroalimentaire Canada a une nouvelle adresse web :<a href=' .$homelink .'>https://agriculture.canada.ca</a ></p><p class="mrgn-tp-md">Nous vous invitons à retourner à notre <a href=' .$homelink .'>page d\'accueil</a> et à refaire le chemin vers le contenu que vous cherchez. Vous devriez ensuite mettre à jour vos favoris et les liens sur votre site web. Merci de votre patience!</p>';
     }
     // Lookup our custom 404 content block.
     $block_id = $this->blockContentStorage->loadByProperties([
