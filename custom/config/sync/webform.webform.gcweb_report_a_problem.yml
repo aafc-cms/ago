@@ -208,7 +208,7 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: 'AAFC: Report a Problem Form [current-page:title]'
+      subject: 'AAFC: Report a Problem Form/AAC: Formulaire de signalement d''un problème'
       body: "The following issue(s) were reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
       excluded_elements: {  }
       ignore_access: false
