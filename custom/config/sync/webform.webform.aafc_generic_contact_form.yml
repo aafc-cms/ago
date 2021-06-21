@@ -212,7 +212,7 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: _default
+      subject: 'AAFC: Contact Us/AAC: Contactez Nous'
       body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
