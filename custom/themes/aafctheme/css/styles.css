@@ -275,40 +275,52 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
 }
 
 @media screen and (max-width: 844px) {
-  /* line 2, ../sass/components/_header.scss */
+  /* line 3, ../sass/components/_header.scss */
   form.search-form div.js-form-type-select {
     float: left;
     position: absolute;
     right: 75px;
   }
 
-  /* line 7, ../sass/components/_header.scss */
+  /* line 8, ../sass/components/_header.scss */
   form.search-form div.js-form-type-search {
     width: 80%;
     left: 75px;
   }
 }
 @media screen and (min-width: 845px) {
-  /* line 13, ../sass/components/_header.scss */
+  /* line 14, ../sass/components/_header.scss */
   body.isIE div#edit-actions {
     left: 15px;
   }
 }
-/* line 17, ../sass/components/_header.scss */
+/* line 18, ../sass/components/_header.scss */
 form.search-form div.js-form-type-select {
   right: 90px;
 }
 
-/* line 20, ../sass/components/_header.scss */
+/* line 21, ../sass/components/_header.scss */
 form.search-form div.js-form-type-search {
   right: 50px;
 }
 
-/* line 23, ../sass/components/_header.scss */
+/* line 24, ../sass/components/_header.scss */
 div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
   display: inline-block !important;
 }
 
+@media screen and (min-width: 768px) and (max-width: 844px) {
+  /* line 29, ../sass/components/_header.scss */
+  body.isIE #custom-search-block-form .select-wrapper::after {
+    right: 15px;
+  }
+}
+@media screen and (min-width: 845px) {
+  /* line 36, ../sass/components/_header.scss */
+  body.isIE #custom-search-block-form .select-wrapper::after {
+    right: 5px;
+  }
+}
 /* line 2, ../sass/components/_site-alert.scss */
 section.customized-site-alert .alert-info > :first-child::before {
   content: none;
