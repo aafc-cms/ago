@@ -1,8 +1,9 @@
 <?php
 
 // Recipients
-$to = "deepani.waidyaratne@canada.ca,j@7pro.ca";
+//$to = "deepani.waidyaratne@canada.ca,j@7pro.ca";
 //$to = "marc.gervais@canada.ca,laurie.bernardi@canada.ca,benoit.aupy@canada.ca";
+$to = "aafc.mas-sam.aac@agr.gc.ca,marc.gervais@AGR.GC.CA,laurie.bernardi@AGR.GC.CA,benoit.aupy@AGR.GC.CA,deepani.waidyaratne@canada.ca";
 
 // Catch $_POST, declare local variables and set defaults
 $formFields = array("rating","message","pagetitle","pageurl");
