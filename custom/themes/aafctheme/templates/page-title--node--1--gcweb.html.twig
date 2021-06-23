@@ -17,7 +17,9 @@
  */
 #}
 {% if title %}
-  {% if not is_front %}
-  <h1{{ title_attributes }} id="wb-cont">{{ title }}</h1>
+ {% if not is_front %}
+  {% if title and special_title != true %}
+<h1{{ title_attributes }} id="wb-cont">{{ title|raw }}</h1>
   {% endif %}
+ {% endif %}
 {% endif %}
