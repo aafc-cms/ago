@@ -59,23 +59,31 @@ var Special = function() {
     Special.specialsettings = drupalSettings.special; 
     $(document).ready(function() {
     
+      if ($("#edit-field-special-value").is(':checked')) {
+        Special.specialChecked = true;
+      }
+
       //$("#edit-title-0-value").keyup(function() {
       $("#edit-title-0-value").change(function() {
-	      console.log('Change ce titre');
-        if (Special.specialChecked || (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null)) {
+        if (Special.specialChecked) {
+          var titleVal = $("#edit-title-0-value").val();
           if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null) {
-            var titleVal = $("#edit-title-0-value").val();
+            CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId).setHtml(titleVal);
+          }
+          else if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId) != null) {
             CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId).setHtml(titleVal);
           }
         }
       });
         //$("#edit-title-etuf-fr-0-value").keyup(function() {
       $(Special.otherLangTitleSelector).change(function() {
-	      console.log('Change other title');
-        if (Special.specialChecked || (CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null)) {
+        if (Special.specialChecked) {
+          var titleValFr = $(Special.otherLangTitleSelector).val();
           if(CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null){
-            var titleValfr = $(Special.otherLangTitleSelector).val();
-            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValfr);
+            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValFr);
+          }
+          else if (Special.specialChecked) {
+            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValFr);
           }
         }
       });
