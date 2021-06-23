@@ -361,6 +361,11 @@ function aafctheme_preprocess_page(&$vars) {
   }
 }
 
+function aafctheme_preprocess_page_title__node__1__gcweb(&$vars) {
+  // Handle special_title logic.
+  aafctheme_preprocess_page_title__gcweb($vars);
+}
+
 function aafctheme_preprocess_page_title__gcweb(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
