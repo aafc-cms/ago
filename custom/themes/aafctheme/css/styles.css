@@ -177,6 +177,11 @@ html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   text-shadow: 2px 2px #666;
 }
 
+/* line 155, ../sass/components/_node.scss */
+body.node-1 div.followus.experimental h2.mrgn-tp-lg.h3 {
+  display: block;
+}
+
 /* line 1, ../sass/components/_front.scss */
 .ip-covers-img {
   background-image: url("/themes/custom/aafctheme/images/aafc_homepage_banner_nov18.jpg");
@@ -318,7 +323,7 @@ div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
 @media screen and (min-width: 845px) {
   /* line 36, ../sass/components/_header.scss */
   body.isIE #custom-search-block-form .select-wrapper::after {
-    right: 5px;
+    right: 7px;
   }
 }
 /* line 2, ../sass/components/_site-alert.scss */
