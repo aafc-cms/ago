@@ -34,7 +34,6 @@ function aafctheme_preprocess_html(&$variables) {
   if ($route_match == 'system.404') {
     $variables['four_oh_four'] = TRUE;
   }
-  \Drupal\agri_admin\AgriAdminHelper::addToLog('debug : <pre>' . print_r($route_match,TRUE) . '</pre>' , TRUE);
 
   $current_path = \Drupal::service('path.current')->getPath();
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
