@@ -345,11 +345,6 @@ div.alert.bs-site-alert.alert-info {
   font-size: 16px;
 }
 
-/* line 19, ../sass/components/_site-alert.scss */
-div.container-fluid {
-  margin-right: 0px;
-}
-
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;
