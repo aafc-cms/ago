@@ -50,6 +50,7 @@
     not root_path ? 'home path-frontpage' : 'path-' ~ root_path|clean_class,
     node_type ? 'page-node-type-' ~ node_type|clean_class,
     db_offline ? 'db-offline',
+    four_oh_four ? four_oh_four : 0,
     theme.settings.navbar_position ? 'navbar-is-' ~ theme.settings.navbar_position,
     theme.has_glyphicons ? 'has-glyphicons',
     theme.name ? theme.name|replace({'_':'-'}),
@@ -63,7 +64,11 @@
 <!--<![endif]-->
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
+    {% if four_oh_four %}
+    <title data-gc-analytics-error="404">{{ head_title|safe_join(' | ') }}</title>
+    {% else %}
     <title>{{ head_title|safe_join(' | ') }}</title>
+    {% endif %}
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>

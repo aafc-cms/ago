@@ -30,6 +30,11 @@ function aafctheme_theme_suggestions_block_alter(&$suggestions, $variables) {
 function aafctheme_preprocess_html(&$variables) {
   $route_match = Utils::getRouteName();
 
+  $variables['four_oh_four'] = FALSE;
+  if ($route_match == 'system.404') {
+    $variables['four_oh_four'] = TRUE;
+  }
+
   $current_path = \Drupal::service('path.current')->getPath();
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['langID'] = $langId;
