@@ -150,4 +150,9 @@ html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   text-shadow: 2px 2px #666;
 }
 
-
+//For the homepage replace display:inline with display:block for followus so that they don't display in one line.
+body.node-1 div.followus.experimental{
+   h2.mrgn-tp-lg.h3{
+       display: block
+   }
+}
