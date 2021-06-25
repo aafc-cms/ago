@@ -196,10 +196,10 @@ var AAFCFrontend = function() {
       AAFCFrontend.updateformaction();
       if ($("#searchoptions").val() == 'canada.ca') {
         if (AAFCFrontend.lang == 'en') {
-         $('#q').attr("placeholder", Drupal.t("Search canada.ca"));
+         $('#q').attr("placeholder", Drupal.t("Search website"));
         }
         else {
-          $('#q').attr("placeholder", Drupal.t("Recherche canada.ca"));
+          $('#q').attr("placeholder", Drupal.t("Recherche site web"));
         }
       }
       else{
