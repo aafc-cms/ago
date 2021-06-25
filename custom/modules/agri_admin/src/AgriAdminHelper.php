@@ -951,7 +951,7 @@ class AgriAdminHelper {
     //static::addToLog(__function__);
     $database = \Drupal::database();
     $sql = "select fid, uuid from file_managed where uri like :filename_pattern";
-    $result = $database->query($sql, [':filename_pattern' => '%topic_horiculture.jpg']);
+    $result = $database->query($sql, [':filename_pattern' => '%pecial_title520x200.png']);
     $fid = 0;
     if ($result) {
       while ($row = $result->fetchAssoc()) {
