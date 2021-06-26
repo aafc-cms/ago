@@ -254,6 +254,7 @@ var jsonpatch;
                             key = key.replace( /~1/g, "/" ).replace( /~0/g, "~" ); // escape chars
                         }
                         if ( t >= len ) {
+			    break; //HACK by Joseph Olstad, not sure why this file is here.
                             results[ p - 1 ] = objOps[ op ].call( patch, obj, key, tree ); // Apply patch
                             if ( isTest && !results[ p - 1] ) {
                                 return tree;
