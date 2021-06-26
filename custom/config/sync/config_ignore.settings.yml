@@ -4,7 +4,6 @@ ignored_config_entities:
   - devel.settings
   - devel.toolbar.settings
   - linkchecker.settings
-  - mailsystem.settings
   - smtp.settings
   - system.mail
   - system.menu.devel
