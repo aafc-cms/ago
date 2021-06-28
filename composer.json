@@ -111,7 +111,7 @@
         "patches": {
             "drupal/core": {
                 "1166282 - Titles truncated on parent menu":
-                "https://www.drupal.org/files/issues/2021-04-12/1166282-30.patch"
+                "https://www.drupal.org/files/issues/2021-04-12/1166282-29.patch"
             },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
