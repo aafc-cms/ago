@@ -301,12 +301,12 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
 }
 /* line 18, ../sass/components/_header.scss */
 form.search-form div.js-form-type-select {
-  right: 90px;
+  right: 67px;
 }
 
 /* line 21, ../sass/components/_header.scss */
 form.search-form div.js-form-type-search {
-  right: 50px;
+  right: 40px;
 }
 
 /* line 24, ../sass/components/_header.scss */
