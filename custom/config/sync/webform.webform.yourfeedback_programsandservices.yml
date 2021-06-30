@@ -211,7 +211,7 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: AAFC.CMS-DONOTREPLY-DEV-NEPASREPONDRE-SGC.AAC@AGR.GC.CA
+      from_mail: _default
       from_options: {  }
       from_name: 'Do Not Reply / Ne Pas Répondre (aafc/aac) '
       subject: 'AAFC Programs and Services contact form/AAC Formulaire de contact Programmes et Services - [webform_submission:values:programorservice]'
