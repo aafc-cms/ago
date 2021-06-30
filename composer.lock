@@ -6420,7 +6420,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_translation_unified_form.git",
-                "reference": "e704bfaed9e29f5f0fdc68506404b6db9ee3ce3b"
+                "reference": "e355471dfc11cfc458ab6aeb23266cc15a43d693"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6431,8 +6431,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta16+0-dev",
-                    "datestamp": "1623433811",
+                    "version": "8.x-1.0-beta16+4-dev",
+                    "datestamp": "1625038519",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
