@@ -45,7 +45,7 @@ _core:
   default_config_hash: LQ7Z_f1qIeAP7aiyHGBwlgjdsAHzwISN1_6-Dvv_fVY
 name: 'Rich Text'
 format: rich_text
-weight: -9
+weight: -10
 filters:
   filter_align:
     id: filter_align
