@@ -1,4 +1,9 @@
 .editorconfig
 .gitattributes
 vendor
+!html/atlas
+!html/atlas/**
+!html/resources
+!html/resources/**
 html
+custom/php/resources/prod/Internet-Internet/MISB-DGSIM/ATS-SEA/includes/.drush/

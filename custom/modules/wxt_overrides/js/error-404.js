@@ -30,10 +30,10 @@ var Error404 = function() {
     if (initialized) {
       return;
     }
-    AAFCOnline.init();
+    AAFCFrontend.init();
 
     // Get the current UI language
-    if (AAFCOnline.lang == 'en') {
+    if (AAFCFrontend.lang == 'en') {
       console.log('Error 404');
       document.title = "We couldn't find that Web page (Error 404)";
       $('head meta[property*="title"]').remove();

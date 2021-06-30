@@ -16,6 +16,7 @@ module:
   block_class: 0
   block_content: 0
   bootstrap_layouts: 0
+  bootstrap_site_alert: 0
   breakpoint: 0
   button_link: 0
   ckeditor: 0
@@ -29,6 +30,7 @@ module:
   config_rewrite: 0
   config_split: 0
   config_translation: 0
+  config_update: 0
   contact: 0
   content_lock: 0
   content_moderation: 0
@@ -106,6 +108,7 @@ module:
   lightning_workflow: 0
   link: 0
   link_attributes: 0
+  linkchecker: 0
   linkit: 0
   locale: 0
   media: 0
@@ -161,6 +164,7 @@ module:
   telephone: 0
   telephone_validation: 0
   text: 0
+  title_length: 0
   token: 0
   token_filter: 0
   toolbar: 0

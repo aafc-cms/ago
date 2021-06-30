@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 844px) {
   form.search-form div.js-form-type-select{
     float: left;
@@ -12,5 +13,27 @@
 @media screen and (min-width: 845px) {
   body.isIE div#edit-actions{
     left: 15px
+  }
+}
+form.search-form div.js-form-type-select{
+  right: 90px;
+}
+form.search-form div.js-form-type-search{
+  right: 50px;
+}
+div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
+  display: inline-block !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 844px) {
+  body.isIE #custom-search-block-form .select-wrapper::after {
+    right: 15px;
+  }
+}
+
+//@media screen and (min-width: 992px ) {
+@media screen and (min-width: 845px ) {
+  body.isIE #custom-search-block-form .select-wrapper::after {
+    right: 7px;
   }
 }

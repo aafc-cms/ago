@@ -753,6 +753,8 @@ display:
         pager: true
         relationships: false
         fields: false
+        header: false
+        footer: false
       relationships:
         fid:
           id: fid
@@ -1295,6 +1297,28 @@ display:
           absolute: false
           entity_type: file
           plugin_id: entity_link_delete
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total - page @current_page of @page_count'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total - page @current_page of @page_count'
+          plugin_id: result
     cache_metadata:
       contexts:
         - 'languages:language_content'

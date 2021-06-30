@@ -30,6 +30,11 @@ function aafctheme_theme_suggestions_block_alter(&$suggestions, $variables) {
 function aafctheme_preprocess_html(&$variables) {
   $route_match = Utils::getRouteName();
 
+  $variables['four_oh_four'] = FALSE;
+  if ($route_match == 'system.404') {
+    $variables['four_oh_four'] = TRUE;
+  }
+
   $current_path = \Drupal::service('path.current')->getPath();
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['langID'] = $langId;
@@ -140,11 +145,29 @@ function aafctheme_preprocess_html(&$variables) {
     }
 
   }
+  //get original url (/webform/yourfeedback_programsandservices) from url alias mapping info
+  if (isset($variables['page']['#attached']['http_header'][0][1])) {
+    $patten = '/\/webform\/yourfeedback_programsandservices>/';
+    $urlaliasmapping = $variables['page']['#attached']['http_header'][0][1];
+    if (preg_match($patten, $urlaliasmapping)) {
+      //add custom - feedback_programsandservices_webform css class
+      $variables['attributes']['class'][] = 'webform_feedback_programsandservices';
+    }
+  }
+  //get original url (/webform/aafc_generic_contact_form) from url alias mapping info
+  if (isset($variables['page']['#attached']['http_header'][0][1])) {
+    $patten = '/\/webform\/aafc_generic_contact_form>/';
+    $urlaliasmapping = $variables['page']['#attached']['http_header'][0][1];
+    if (preg_match($patten, $urlaliasmapping)) {
+      //add custom - feedback_programsandservices_webform css class
+      $variables['attributes']['class'][] = 'webform_generic_contactform';
+    }
+  }
   // End of logic to grab moderation state and add it to the body class for styling.
   
   $host = \Drupal::request()->getHost();
   $prod = FALSE;
-  if (stripos($host, 'wip') > 0 || stripos($host, 'agr.gc.ca') > 0) {
+  if (stripos($host, 'www-ep.agr.gc.ca') !== false || stripos($host, 'agriculture.canada.ca') !== false) {
     $prod = TRUE;
   }
   // Adobe Analytics JS library.
@@ -341,6 +364,11 @@ function aafctheme_preprocess_page(&$vars) {
     $large_mode = $node->get('field_large')->value;
     $vars['large_mode'] = $large_mode;
   }
+}
+
+function aafctheme_preprocess_page_title__node__1__gcweb(&$vars) {
+  // Handle special_title logic.
+  aafctheme_preprocess_page_title__gcweb($vars);
 }
 
 function aafctheme_preprocess_page_title__gcweb(&$vars) {

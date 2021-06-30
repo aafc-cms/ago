@@ -1,0 +1,21 @@
+uuid: c2c2a8d6-d8ae-426c-ad4f-cc990b945c9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_managing_branch
+    - node.type.landing_page
+  module:
+    - options
+id: node.landing_page.field_managing_branch
+field_name: field_managing_branch
+entity_type: node
+bundle: landing_page
+label: 'Managing Branch'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
@@ -12,12 +11,14 @@ dependencies:
     - field.field.node.page.field_issued
     - field.field.node.page.field_keywords
     - field.field.node.page.field_large
+    - field.field.node.page.field_managing_branch
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_meta_type
     - field.field.node.page.field_modified
     - field.field.node.page.field_peer_review
     - field.field.node.page.field_special
     - field.field.node.page.field_subject
+    - field.field.node.page.field_teamsite_location
     - field.field.node.page.field_tracking_number
     - field.field.node.page.field_update_date_modified
     - field.field.node.page.layout_builder__translation
@@ -41,7 +42,7 @@ third_party_settings:
         - field_issued
         - field_modified
       parent_name: ''
-      weight: 14
+      weight: 0
       format_type: details_sidebar
       region: content
       format_settings:
@@ -56,7 +57,7 @@ third_party_settings:
       children:
         - field_meta_type
       parent_name: ''
-      weight: 15
+      weight: 1
       format_type: details_sidebar
       region: content
       format_settings:
@@ -71,7 +72,7 @@ third_party_settings:
       children:
         - field_subject
       parent_name: ''
-      weight: 16
+      weight: 3
       format_type: details_sidebar
       region: content
       format_settings:
@@ -87,8 +88,9 @@ third_party_settings:
         - field_update_date_modified
         - field_tracking_number
         - field_peer_review
+        - field_managing_branch
       parent_name: ''
-      weight: 18
+      weight: 12
       format_type: details
       region: content
       format_settings:
@@ -102,23 +104,23 @@ third_party_settings:
       children:
         - field_dcterms_subject
       parent_name: ''
-      weight: 17
+      weight: 2
       format_type: details_sidebar
       region: content
       format_settings:
+        description: ''
+        weight: -42
         id: ''
         classes: ''
-        description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'dcterms:subject'
     group_title_options:
       children:
         - field_special
         - field_large
       parent_name: ''
-      weight: 1
+      weight: 6
       format_type: details
       region: content
       format_settings:
@@ -128,6 +130,25 @@ third_party_settings:
         open: true
         required_fields: false
       label: 'Display Options'
+    group_more:
+      children:
+        - uid
+        - created
+        - promote
+        - sticky
+        - field_teamsite_location
+      parent_name: ''
+      weight: 15
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
+        weight: 0
+      label: More
 _core:
   default_config_hash: 7fm6IQg6gNfLHHQlwMKSUqMSbPhM8O91P6nqQkjtH80
 id: node.page.default
@@ -137,7 +158,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -147,7 +168,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -200,10 +221,16 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_managing_branch:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_meta_tags:
     type: metatag_firehose
     region: content
-    weight: 13
+    weight: -99
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -238,6 +265,14 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_teamsite_location:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_tracking_number:
     weight: 17
     settings:
@@ -255,20 +290,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 12
+    weight: 11
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 11
+    weight: 10
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -276,12 +311,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 22
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
@@ -290,20 +325,20 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 23
     third_party_settings: {  }
     region: content
   title:
     type: string_textfield
-    weight: 0
+    weight: 5
     settings:
-      size: 60
+      size: 300
       placeholder: ''
     third_party_settings: {  }
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 20
     settings:
       match_operator: CONTAINS
       size: 60
@@ -312,7 +347,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  comment: true
   layout_builder__translation: true
   layout_selection: true
   panelizer: true

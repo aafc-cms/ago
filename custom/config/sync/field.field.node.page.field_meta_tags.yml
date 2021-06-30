@@ -14,7 +14,7 @@ field_name: field_meta_tags
 entity_type: node
 bundle: page
 label: 'meta tags'
-description: 'For meta tag dcterms:type'
+description: ''
 required: false
 translatable: true
 default_value: {  }

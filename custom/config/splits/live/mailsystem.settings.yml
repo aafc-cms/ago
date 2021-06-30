@@ -21,3 +21,10 @@ modules:
     none:
       formatter: swiftmailer
       sender: swiftmailer
+  agri_admin:
+    mac_feedback:
+      formatter: swiftmailer
+      sender: swiftmailer
+    agri_admin_mac_feedback:
+      formatter: swiftmailer
+      sender: swiftmailer

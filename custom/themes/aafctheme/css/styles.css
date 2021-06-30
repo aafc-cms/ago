@@ -177,6 +177,11 @@ html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   text-shadow: 2px 2px #666;
 }
 
+/* line 155, ../sass/components/_node.scss */
+body.node-1 div.followus.experimental h2.mrgn-tp-lg.h3 {
+  display: block;
+}
+
 /* line 1, ../sass/components/_front.scss */
 .ip-covers-img {
   background-image: url("/themes/custom/aafctheme/images/aafc_homepage_banner_nov18.jpg");
@@ -275,25 +280,71 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
 }
 
 @media screen and (max-width: 844px) {
-  /* line 2, ../sass/components/_header.scss */
+  /* line 3, ../sass/components/_header.scss */
   form.search-form div.js-form-type-select {
     float: left;
     position: absolute;
     right: 75px;
   }
 
-  /* line 7, ../sass/components/_header.scss */
+  /* line 8, ../sass/components/_header.scss */
   form.search-form div.js-form-type-search {
     width: 80%;
     left: 75px;
   }
 }
 @media screen and (min-width: 845px) {
-  /* line 13, ../sass/components/_header.scss */
+  /* line 14, ../sass/components/_header.scss */
   body.isIE div#edit-actions {
     left: 15px;
   }
 }
+/* line 18, ../sass/components/_header.scss */
+form.search-form div.js-form-type-select {
+  right: 90px;
+}
+
+/* line 21, ../sass/components/_header.scss */
+form.search-form div.js-form-type-search {
+  right: 50px;
+}
+
+/* line 24, ../sass/components/_header.scss */
+div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
+  display: inline-block !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 844px) {
+  /* line 29, ../sass/components/_header.scss */
+  body.isIE #custom-search-block-form .select-wrapper::after {
+    right: 15px;
+  }
+}
+@media screen and (min-width: 845px) {
+  /* line 36, ../sass/components/_header.scss */
+  body.isIE #custom-search-block-form .select-wrapper::after {
+    right: 7px;
+  }
+}
+/* line 2, ../sass/components/_site-alert.scss */
+section.customized-site-alert .alert-info > :first-child::before {
+  content: none;
+}
+
+/* line 7, ../sass/components/_site-alert.scss */
+div.alert.bs-site-alert.alert-info > :first-child::before {
+  content: none;
+}
+
+/* line 11, ../sass/components/_site-alert.scss */
+div.alert.bs-site-alert.alert-info {
+  border-color: #d7faff;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  font-size: 16px;
+}
+
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;
@@ -526,50 +577,201 @@ ul.feeds-cont li a {
   background: #31708f;
 }
 
-/* line 35, ../sass/styles.scss */
+/* line 4, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"]::after, body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"]::after,
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"]::after, body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"]::after {
+  content: none;
+}
+/* line 8, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"]::before, body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"]::before,
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"]::before, body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"]::before {
+  content: "";
+  background-image: url(../images/required.svg);
+  display: inline-block;
+  line-height: 1;
+  color: #e00;
+  background-size: 7px 7px;
+  width: 7px;
+  vertical-align: super;
+  margin-left: 4px;
+  height: 7px;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+}
+/* line 24, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"], body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"],
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"], body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"] {
+  position: relative;
+  margin-left: 10px;
+}
+/* line 31, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item.form-item-programorservice.js-form-item-programorservice.form-group {
+  margin-bottom: 0px;
+}
+/* line 35, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item.form-item-programorservice.form-group label[for="edit-programorservice"] + div.select-wrapper select.form-select {
+  width: 100%;
+}
+/* line 39, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-group.error.has-error label[for="edit-programorservice"] + div.select-wrapper {
+  margin-bottom: 0px;
+}
+/* line 41, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-group.error.has-error label[for="edit-programorservice"] + div.select-wrapper select.form-select {
+  width: 100%;
+}
+/* line 48, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices div.region.region-highlighted ul li {
+  display: block;
+}
+/* line 51, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices div.region.region-highlighted ul li a {
+  display: list-item;
+  list-style-position: inside;
+  margin-top: 15px;
+}
+/* line 56, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices div.region.region-highlighted ul li::after {
+  content: none;
+}
+/* line 59, ../sass/components/_feedback-webform.scss */
+body.webform_feedback_programsandservices div.region.region-highlighted h2 + p {
+  font-size: 24px !important;
+}
+
+/* line 3, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::after, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::after,
+body.webform_generic_contactform div.form-item label[for="edit-fullname"]::after, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::after {
+  content: none;
+}
+/* line 7, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::before, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::before,
+body.webform_generic_contactform div.form-item label[for="edit-fullname"]::before, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::before {
+  content: "";
+  background-image: url(../images/required.svg);
+  display: inline-block;
+  line-height: 1;
+  color: #e00;
+  background-size: 7px 7px;
+  width: 7px;
+  vertical-align: super;
+  margin-left: 4px;
+  height: 7px;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+}
+/* line 23, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"], body.webform_generic_contactform div.form-item label[for="edit-emailaddress"],
+body.webform_generic_contactform div.form-item label[for="edit-fullname"], body.webform_generic_contactform div.form-item label[for="edit-yourmessage"] {
+  position: relative;
+  margin-left: 10px;
+}
+/* line 31, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper {
+  margin-bottom: 0px;
+}
+/* line 33, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper select.form-select {
+  width: 100%;
+}
+/* line 40, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted ul li {
+  display: block;
+}
+/* line 43, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted ul li a {
+  display: list-item;
+  list-style-position: inside;
+  margin-top: 15px;
+}
+/* line 48, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted ul li::after {
+  content: none;
+}
+/* line 51, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.region.region-highlighted h2 + p {
+  font-size: 24px !important;
+}
+
+/* line 38, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 63, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
   height: auto;
 }
 
+/* line 73, ../sass/styles.scss */
+#block-aafctheme-reportproblemblock {
+  margin-top: .5em;
+}
+
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 72, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 77, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
 
+/* line 88, ../sass/styles.scss */
+div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
+  width: 100%;
+}
+/* line 90, ../sass/styles.scss */
+div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
+  display: block;
+}
+
 /* END BUG FIX FOR LAYOUT BUILDER */
+@media (max-width: 844px) and (min-width: 768px) {
+  /* line 96, ../sass/styles.scss */
+  #wb-srch input, .srchbox input {
+    right: 100px;
+  }
+
+  /* line 99, ../sass/styles.scss */
+  .form-inline .select-wrapper {
+    right: 100px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 105, ../sass/styles.scss */
+  #wb-srch input, .srchbox input {
+    margin-right: 160px;
+    border-right: 1px solid #ddd;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

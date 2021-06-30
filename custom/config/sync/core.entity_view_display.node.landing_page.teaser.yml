@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.comment
     - field.field.node.landing_page.field_created_by
     - field.field.node.landing_page.field_dc_date_created
     - field.field.node.landing_page.field_dcterms_subject
@@ -13,6 +12,7 @@ dependencies:
     - field.field.node.landing_page.field_issued
     - field.field.node.landing_page.field_keywords
     - field.field.node.landing_page.field_large
+    - field.field.node.landing_page.field_managing_branch
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_meta_type
     - field.field.node.landing_page.field_modified
@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.landing_page.field_queue
     - field.field.node.landing_page.field_special
     - field.field.node.landing_page.field_subject
+    - field.field.node.landing_page.field_teamsite_location
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
     - field.field.node.landing_page.layout_builder__layout
@@ -58,7 +59,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment: true
   content_moderation_control: true
   field_created_by: true
   field_dc_date_created: true
@@ -67,12 +67,14 @@ hidden:
   field_issued: true
   field_keywords: true
   field_large: true
+  field_managing_branch: true
   field_meta_type: true
   field_modified: true
   field_peer_review: true
   field_queue: true
   field_special: true
   field_subject: true
+  field_teamsite_location: true
   field_tracking_number: true
   field_update_date_modified: true
   langcode: true

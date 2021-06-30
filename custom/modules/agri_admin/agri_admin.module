@@ -3,6 +3,7 @@
 use Drupal\agri_admin\AgriAdminHelper;
 use Drupal\agri_admin\Utils;
 use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\file\Entity\File;
@@ -300,6 +301,84 @@ function agri_admin_node_update(Drupal\Core\Entity\EntityInterface $entity) {
     drupal_register_shutdown_function('_helperUpdateProcess', $action, $entity_id, $entity->bundle());
     drupal_register_shutdown_function('_helperLockingContent', $action, $entity_id, $entity->bundle(), $entity);
   }
+}
+
+
+/**
+ * Implements hook_entity_type_predelete().
+ */
+function agri_admin_media_predelete(\Drupal\Core\Entity\EntityInterface $entity) {
+  if (strpos($entity->getName(), 'pecial_title520x') > 0) {
+    // Set error message
+    // display error.
+    // Prevent delete.
+    $entity_type = $entity->getEntityTypeId();
+    $id = $entity->id();
+    $response = new \Symfony\Component\HttpFoundation\RedirectResponse(Url::fromUri('internal:/' . $entity_type . '/' . $id . '/delete')->toString());
+    \Drupal::messenger()->addMessage(t('Agri Admin prevented you from deleting "%title" entity_id %id because this file is reserved for the special title functionality.', [
+      '%id' => $entity->id(),
+      '%title' => $entity->getName(),
+    ]), 'warning', TRUE);
+    $response->send();
+    exit;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ((strpos($form_id, 'media') !== FALSE && strpos($form_id, 'edit_form') !== FALSE) ||
+      (strpos($form_id, 'media') !== FALSE && strpos($form_id, 'delete') !== FALSE)
+  ) {
+    $path = \Drupal::request()->getpathInfo();
+    $arg = explode('/', $path);
+    $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $index_arg = 0;
+    $idx = 0;
+    foreach ($arg as $segment) {
+      if (is_numeric($segment) && !is_bool($segment)) {
+        $index_arg = $idx;
+      }
+      $idx++;
+    }
+    if (isset($arg[$index_arg]) && is_numeric($arg[$index_arg])) {
+      $mid = $arg[$index_arg];
+      $fid = $arg[$index_arg];
+    }
+    else {
+      // This should never happen.
+      return;
+    }
+
+    if (strpos($form_id, 'media') !== FALSE || strpos($form_id, 'delete')) {
+      $media = \Drupal\media\Entity\Media::load($mid);
+      $show_button = TRUE;
+      if (strpos($media->getName(), 'pecial_title520x') >= 1) {
+        $show_button = FALSE;
+      }
+      if (!$show_button) {
+        $msg_type = t('Do not edit or delete this file.');
+        $message_ok = t('Special title verification check status, do not edit or delete this file, it is reserved for the special title functionality.');
+$markup = <<<EOT
+<div role="contentinfo" aria-labelledby="message-status-title" class="messages-list__item messages messages--warning">
+  <div class="messages__header">
+    <h2 id="message-status-title" class="messages__title">
+      $msg_type
+    </h2>
+  </div>
+  <div class="messages__content">
+    $message_ok
+  </div>
+</div>
+EOT;
+        $form['description']['#markup'] = $markup;
+        // $form['actions']['submit']['#access'] = $show_button ? TRUE : FALSE;
+        $form['actions']['submit']['#attributes'] = ['disabled' => $show_button ? 'enabled' : 'disabled'];
+      }
+    }
+  }
+
 }
 
 
@@ -922,6 +1001,8 @@ function agri_admin_token_info() {
   $info['tokens']['agri-admin']['unpublished-url'] = ['name' => t('Unpublished url'), 'description' => t('A token to extract the unpublished URL for anonymous users')];
   $info['tokens']['agri-admin']['translation-unpublished-url'] = ['name' => t('Translation unpublished url'), 'description' => t('A token to extract the unpublished French URL for anonymous users')];
   $info['tokens']['agri-admin']['user-agent'] = ['name' => t('User agent'), 'description' => t('A token to display the information of user agent')];
+  $info['tokens']['agri-admin']['public-facing-url'] = ['name' => t('Public facing URL'), 'description' => t('A token to extract the current public facing URL')];
+  $info['tokens']['agri-admin']['translation-public-facing-url'] = ['name' => t('Translation Public facing URL'), 'description' => t('A token to extract the current public facing URL in French')];
   return $info;
 }
 
@@ -942,7 +1023,15 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
     $translated_url = $translated_entity->toLink()->toString();
     $current_title = $entity->getTitle();
     $current_url = $entity->toLink()->toString();
+    $transLangID = $translated_entity->language()->getId();
+    $currentLangID = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $nodeID = $entity->id();
 
+    $host = \Drupal::request()->getHost();
+    $anonymous_url = str_replace("-admin","", $host);
+    $publicFacing_str = '<a href="https://'.$anonymous_url.'/'.$currentLangID.'/node/'.$nodeID.'">'.$current_title.'</a>';
+    $publicFacing_url = \Drupal\Core\Render\Markup::create($publicFacing_str);
+    
     $currentLang = \Drupal::languageManager()->getCurrentLanguage();
     $hashTag = AgriAdminHelper::getHashTag($entity, $currentLang);
     $path = '<a href="'.$hashTag.'">'. $current_title.'</a>';
@@ -952,6 +1041,9 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
     $hashTagTrans = AgriAdminHelper::getHashTag($translated_entity, $transLang);
     $transPath = '<a href="'.$hashTagTrans.'">'. $translated_title.'</a>';
     $translated_unpublished_url = \Drupal\Core\Render\Markup::create($transPath);
+
+    $transPublicFacing_str = '<a href="https://'.$anonymous_url.'/'.$transLangID.'/node/'.$nodeID.'">'.$translated_title.'</a>';
+    $translated_publicFacing_url = \Drupal\Core\Render\Markup::create($transPublicFacing_str);
 
     foreach ($tokens as $name => $original) {
       // Find the desired token by name.
@@ -973,7 +1065,13 @@ function  agri_admin_tokens($type, $tokens, array $data, array $options, \Drupal
           break;
         case 'translation-unpublished-url':
           $replacements[$original] = $translated_unpublished_url;
-          break;
+	  break;
+	case 'public-facing-url':
+          $replacements[$original] = $publicFacing_url;
+	  break;
+	case 'translation-public-facing-url':
+	  $replacements[$original] = $translated_publicFacing_url;
+	  break;
       }
     }
   }
@@ -1100,6 +1198,28 @@ function agri_admin_form_menu_link_content_menu_link_content_form_alter (&$form,
       }
     }
   }
+}
+
+
+
+/**
+ * Implements hook_mail().
+ */
+function agri_admin_mail($key, &$message, $params) {
+  switch($key) {
+    case 'mac_feedback':
+    case 'agri_admin_mac_feedback':
+      $subject = $params['subject'];
+      $message['format'] = 'text/html';
+      $message['content_type'] = 'text/html';
+      $message['charset'] = 'UTF-8';
+      $message['subject'] = $subject;
+      $message['body'][] = new \Drupal\Component\Render\FormattableMarkup($params['message'], []);
+    break;
+    default:
+    break;
+  }
+
 }
 
 

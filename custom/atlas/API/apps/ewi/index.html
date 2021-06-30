@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Extreme Weather Indicies</title>
+  <script src="./polyfill.js"></script>
+  <!--link rel="stylesheet" href="//www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_23/css/theme.min.css" /-->
+  <link rel="stylesheet" href="/atlas/res/wet-boew4/css/theme.min.css" />
+  <!--link rel="stylesheet" href="/themes-dist-4.0.27-gcweb/css/theme.min.css" /-->
+  <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+  <main>
+    <section id="formDetails">
+      <div>
+        <label id="forecastDateHeading" for="initialDate" data-i18n="dailyForecastLabel">Forecast Date:</label>
+        <span id="initialDate" aria-labelledby="forecastDateHeading"></span>
+      </div>
+      <div>
+        <label for="region" data-i18n="regionLabel">Region: </label>
+        <select name="region" id="region">
+          <option value="national" data-i18n="regionOptionNational">National</option>
+          <option value="atlantic" data-i18n="regionOptionAtlantic">Atlantic</option>
+          <option value="bc" data-i18n="regionOptionBc">British Columbia</option>
+          <option value="onqc" data-i18n="regionOptionOnqc">Ontario and Quebec</option>
+          <option value="prairies" data-i18n="regionOptionPrairies">Prairies</option>
+        </select>
+      </div>
+      <div>
+        <label for="variable" data-i18n="variableLabel">Weather Variable: </label>
+        <select name="variable" id="variable"></select>
+      </div>
+      <div>
+        <label for="index" data-i18n="indexLabel">Index: </label>
+        <select name="index" id="index"></select>
+      </div>
+      <div>
+        <label for="forecastperiod" data-i18n="forecastPeriodLabel">Forecast Period: </label>
+        <select name="forecastperiod" id="forecastperiod"></select>
+        <span id="dateRange"></span>
+      </div>
+      <div>
+        <label for="probability" data-i18n="probabilityLabel">Probability of: </label>
+        <select name="probability" id="probability"></select>
+      </div>
+    </section>
+    <section id="mapDetails">
+      <div id="embeddedMapsCompareMapDiv" class="map flexjust" data-maptype="comparemap">
+        <h4 id="map1Title" data-i18n="loading" tabindex="0">Loading...</h4>
+        <p><a href="#" id="downloadLinkIndex" target="_blank" data-i18n="loading"></a></p>
+        <div id="mapDivContainer1"
+          class="comparisonMap embeddedNoWidth mapDiv"
+          aria-labelledby="map1Title" role="img"
+          data-spatialreference="102100"
+          data-extent="-18660056, 4938274, -2262174, 12608882">
+          <div id="mapDivContainer1Mask" class="loadingMaskContainer" >
+            <div class="loadingMask"> </div>
+            <div class="spinner"> </div>
+          </div>
+        </div>
+        <div id="map1Legend" class="legendContainer"></div>
+        <details>
+          <summary data-i18n="legendTextAltTitle">Description - Legend</summary>
+          <div class="row" id="indexLegendDescription">
+            Loading...
+          </div>
+        </details>
+
+        <h4 id="map2Title" data-i18n="loading" tabindex="0">Loading...</h4>
+        <p><a href="#" id="downloadLinkProb" target="_blank" data-i18n="loading"></a></p>
+        <div id="mapDivContainer2"
+          class="comparisonMap embeddedNoWidth mapDiv"
+          data-spatialreference="102100"
+          data-extent="-18660056, 4938274, -2262174, 12608882"
+          aria-labelledby="map2Title" role="img">
+          <div id="mapDivContainer2Mask" class="loadingMaskContainer" >
+            <div class="loadingMask"> </div>
+            <div class="spinner"> </div>
+          </div>
+        </div>
+        <div id="map2Legend" class="legendContainer"></div>
+        <details>
+          <summary data-i18n="legendTextAltTitle">Description - Legend</summary>
+          <div class="row" id="probabilityLegendDescription">
+            Loading...
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+  <script>
+  var locale = document.documentElement.lang ? document.documentElement.lang : "en";
+  window.dojoConfig = {
+    locale: locale,
+    packages: [
+      { name: 'ewi', location: window.location.pathname.replace(/\/[^/]+$/,"") + '/.'}
+    ]
+  };
+  </script>
+  <!-- <script src="//js.arcgis.com/3.21/"></script> -->
+  <script>
+  window.afterEmbeddedMapsLoaded = function() {
+    require(['main.js'], function(EWI) {
+
+      var dropdowns = {
+        region: document.getElementById('region'),
+        variable: document.getElementById('variable'),
+        forecastperiod: document.getElementById('forecastperiod'),
+        index: document.getElementById('index'),
+        probability: document.getElementById('probability'),
+
+     };
+
+      window.emb.ewi = new EWI(emb.maps, dropdowns);
+
+    });
+  }
+  </script>
+  <script src="/atlas/API/embeddedmaps/v2.1/bootstrap.js" data-emb-bootstrap></script>
+
+</body>
+
+</html>

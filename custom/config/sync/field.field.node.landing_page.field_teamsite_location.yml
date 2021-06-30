@@ -1,0 +1,19 @@
+uuid: e925a2e3-fcdf-4871-8044-d8ae904d360c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teamsite_location
+    - node.type.landing_page
+id: node.landing_page.field_teamsite_location
+field_name: field_teamsite_location
+entity_type: node
+bundle: landing_page
+label: 'Teamsite Location and DCR Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -36,7 +36,7 @@
    * @return {string}
    *   The version of WxT being used.
    */
-  Drupal.aafctheme.version = 'Agrisource v1.0';
+  Drupal.aafctheme.version = 'AAFC Online v1.0';
 
   console.log(Drupal.aafctheme.version);
 
@@ -86,7 +86,8 @@ var AAFCFrontend = function() {
     });
 
     //AAFCFrontend.initAnalytics();
-
+    AAFCFrontend.relocateSiteAlertMSG();
+    AAFCFrontend.relocateWebformValidationMSG();
     AAFCFrontend.initSlideshow();
     searchInterface();
     initialized = true;
@@ -154,7 +155,7 @@ var AAFCFrontend = function() {
     var slection =  $("#searchoptions").val();
     switch (slection)
     {
-      case "agr.gc.ca":
+      case "agriculture.canada.ca":
         if (AAFCFrontend.lang == 'en') {
           $("#custom-search-block-form").attr('action','https://www.canada.ca/en/agriculture-agri-food/search.html?_charset_=UTF-8&q='+searchval+'&wb-srch-sub=#wb-land');
         }
@@ -194,10 +195,20 @@ var AAFCFrontend = function() {
     $("#searchoptions").change(function(){
       AAFCFrontend.updateformaction();
       if ($("#searchoptions").val() == 'canada.ca') {
-        $('#q').attr("placeholder", Drupal.t("Search canada.ca"));
+        if (AAFCFrontend.lang == 'en') {
+         $('#q').attr("placeholder", Drupal.t("Search website"));
+        }
+        else {
+          $('#q').attr("placeholder", Drupal.t("Recherche site web"));
+        }
       }
       else{
+        if (AAFCFrontend.lang == 'en') {
         $('#q').attr("placeholder", Drupal.t("Search website"));
+        }
+        else{
+          $('#q').attr("placeholder", Drupal.t("Recherche site web"));
+        }
       }
     });
   }
@@ -214,6 +225,51 @@ var AAFCFrontend = function() {
     });
   }
 
+  function relocateWebformValidationMSG() {
+    // WCAG fix issue #463 : 
+    var psWebForm = $('body.webform_feedback_programsandservices');
+    var divDescription = $('div#edit-descriptionoffeedbackform');
+    var divErrorMSG    = $('div.highlighted');
+    var countErr = 1;
+    var reqvalMSGPrefix = "";
+    var reqvalMSGMiddle = "";
+    var reqvalMSGSuffix = "";
+    if (typeof(psWebForm) && (psWebForm !== null)) {
+      // Fixes WCAG issue #463
+      if (AAFCFrontend.lang == 'en') {
+        $(".form-required").append("<span style='color: #e00;'>&nbsp;(required)</span>");
+        reqvalMSGPrefix = "Error ";
+        reqvalMSGMiddle = ": ";
+        reqvalMSGSuffix = " - This field is required.";
+      }
+      else {
+        $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
+        reqvalMSGPrefix = "Erreur ";
+        reqvalMSGMiddle = " : ";
+        reqvalMSGSuffix = " - Ce champ est obligatoire.";
+      }
+      if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
+        if( (divErrorMSG !== null) && (divDescription !== null) ) {
+          $('div.highlighted').detach().insertAfter(divDescription);
+          $( "div.alert.alert-danger.alert-dismissible ul li a" ).each(function(index) {
+            $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
+            countErr = countErr +1;
+          });
+        }
+      }
+    }
+  }
+
+  function relocateSiteAlertMSG() {
+    var divmsg = $('div.alert.bs-site-alert.alert-info');
+    var olbreadcrumb = $('nav#wb-bc');
+    if (!(typeof divmsg === "undefined")) {
+      if (!(typeof olbreadcrumb === "undefined")) {
+        $('div.alert.bs-site-alert.alert-info').detach().insertAfter(olbreadcrumb);
+      }
+    }
+  }
+
   /**
    * Expose functions and variables
    */
@@ -226,7 +282,9 @@ var AAFCFrontend = function() {
     initSlideshow: initSlideshow,
     updateformaction: updateformaction,
     page_type: page_type,
-    removeRoleFromSummary: removeRoleFromSummary
+    removeRoleFromSummary: removeRoleFromSummary,
+    relocateSiteAlertMSG:relocateSiteAlertMSG,
+    relocateWebformValidationMSG:relocateWebformValidationMSG
   }
 }();
 

@@ -152,21 +152,14 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
     $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $homelink = '/'.$langcode;
 
-    $response = '
-    <div class="box">
-      <div class="row">
-        <div class="col-xs-3 col-sm-2 col-md-2 text-center mrgn-tp-md customalertimagesize">
-          <span class="glyphicon glyphicon-warning-sign glyphicon-error customalertimagesize"></span>
-        </div>
-        <div class="col-xs-9 col-sm-10 col-md-10">
-          <h1 id="wb-cont" class="mrgn-tp-md customalertheaderfont">' . $this->t("We couldn't find that Web page") . '</h2>
-          <p class="pagetag"><strong>' . $this->t('Error 404') . '</strong></p>
-        </div>
-      </div>
-      <p class="mrgn-tp-md customalertmsgfont">' . $this->t("We're sorry you ended up here. Sometimes a page gets moved or deleted, but hopefully we can help you find what you're looking for. What next?") . '</p>
-      <p class="mrgn-tp-md customalertmsgfont">' . $this->t("Return to the ") . '<a href=' .$homelink .'>' . $this->t("home page"). '</a>.</p>
-    </div>';
-
+    if ($langcode=='en'){
+	     $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oops, this page has been moved!</h1>     
+      <p class="mrgn-tp-md">Agriculture and Agri-Food Canada has moved to <a href=' .$homelink .'>https://agriculture.canada.ca</a></p><p class="mrgn-tp-md">Please visit our relocated <a href=' .$homelink .'>home page</a> and navigate your way back to the content you\'re looking for. Be sure to update your bookmarks and links from your site. Thank you for your patience!</p>';
+    }
+    else {
+	    $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oups, cette page a déménagé!</h1>
+      <p class="mrgn-tp-md">Agriculture et Agroalimentaire Canada a une nouvelle adresse web :<a href=' .$homelink .'>https://agriculture.canada.ca</a ></p><p class="mrgn-tp-md">Nous vous invitons à retourner à notre <a href=' .$homelink .'>page d\'accueil</a> et à refaire le chemin vers le contenu que vous cherchez. Vous devriez ensuite mettre à jour vos favoris et les liens sur votre site web. Merci de votre patience!</p>';
+    }
     // Lookup our custom 404 content block.
     $block_id = $this->blockContentStorage->loadByProperties([
       'info' => '404',

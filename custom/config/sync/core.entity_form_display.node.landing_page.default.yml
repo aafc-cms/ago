@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.comment
     - field.field.node.landing_page.field_created_by
     - field.field.node.landing_page.field_dc_date_created
     - field.field.node.landing_page.field_dcterms_subject
@@ -12,6 +11,7 @@ dependencies:
     - field.field.node.landing_page.field_issued
     - field.field.node.landing_page.field_keywords
     - field.field.node.landing_page.field_large
+    - field.field.node.landing_page.field_managing_branch
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_meta_type
     - field.field.node.landing_page.field_modified
@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.landing_page.field_queue
     - field.field.node.landing_page.field_special
     - field.field.node.landing_page.field_subject
+    - field.field.node.landing_page.field_teamsite_location
     - field.field.node.landing_page.field_tracking_number
     - field.field.node.landing_page.field_update_date_modified
     - field.field.node.landing_page.layout_builder__layout
@@ -27,10 +28,10 @@ dependencies:
     - node.type.landing_page
     - workflows.workflow.editorial
   module:
-    - comment
     - content_moderation
     - datetime
     - field_group
+    - metatag
     - path
     - text
 third_party_settings:
@@ -44,7 +45,7 @@ third_party_settings:
         - field_issued
         - field_modified
       parent_name: ''
-      weight: 11
+      weight: 1
       format_type: details_sidebar
       region: content
       format_settings:
@@ -59,7 +60,7 @@ third_party_settings:
       children:
         - field_subject
       parent_name: ''
-      weight: 13
+      weight: 3
       format_type: details_sidebar
       region: content
       format_settings:
@@ -74,7 +75,7 @@ third_party_settings:
       children:
         - field_meta_type
       parent_name: ''
-      weight: 12
+      weight: 2
       format_type: details_sidebar
       region: content
       format_settings:
@@ -90,8 +91,9 @@ third_party_settings:
         - field_update_date_modified
         - field_tracking_number
         - field_peer_review
+        - field_managing_branch
       parent_name: ''
-      weight: 16
+      weight: 12
       format_type: details
       region: content
       format_settings:
@@ -105,23 +107,23 @@ third_party_settings:
       children:
         - field_dcterms_subject
       parent_name: ''
-      weight: 14
+      weight: 4
       format_type: details_sidebar
       region: content
       format_settings:
+        description: ''
+        weight: -40
         id: ''
         classes: ''
-        description: ''
         open: false
         required_fields: false
-        weight: 0
       label: 'dcterms:subject'
     group_title_options:
       children:
         - field_special
         - field_large
       parent_name: ''
-      weight: 1
+      weight: 6
       format_type: details
       region: content
       format_settings:
@@ -131,6 +133,25 @@ third_party_settings:
         open: true
         required_fields: false
       label: 'Display Options'
+    group_more:
+      children:
+        - uid
+        - created
+        - promote
+        - sticky
+        - field_teamsite_location
+      parent_name: ''
+      weight: 15
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
+        weight: 0
+      label: More
 _core:
   default_config_hash: 93TnkIzh65W5fSqt_74vYO-VnxfJ92GSYGlKHFraxlA
 id: node.landing_page.default
@@ -140,7 +161,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -148,15 +169,9 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  comment:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 34
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -209,6 +224,19 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_managing_branch:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 0
+    region: content
+    settings:
+      sidebar: true
+    third_party_settings: {  }
   field_meta_type:
     weight: 15
     settings: {  }
@@ -240,6 +268,14 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_teamsite_location:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_tracking_number:
     weight: 30
     settings:
@@ -258,12 +294,12 @@ content:
   layout_selection:
     type: options_select
     region: content
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 9
+    weight: 10
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -275,28 +311,42 @@ content:
     region: content
   path:
     type: path
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     region: content
+  promote:
+    type: boolean_checkbox
+    weight: 35
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
+  sticky:
+    type: boolean_checkbox
+    weight: 36
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 5
     settings:
-      size: 60
+      size: 200
       placeholder: ''
     third_party_settings: {  }
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 33
     settings:
       match_operator: CONTAINS
       size: 60
@@ -305,12 +355,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_meta_tags: true
   field_queue: true
   langcode: true
   layout_builder__layout: true
   layout_builder__translation: true
-  promote: true
-  sticky: true
   translation: true
   url_redirects: true

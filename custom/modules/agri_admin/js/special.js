@@ -59,23 +59,31 @@ var Special = function() {
     Special.specialsettings = drupalSettings.special; 
     $(document).ready(function() {
     
+      if ($("#edit-field-special-value").is(':checked')) {
+        Special.specialChecked = true;
+      }
+
       //$("#edit-title-0-value").keyup(function() {
       $("#edit-title-0-value").change(function() {
-	      console.log('Change ce titre');
-        if (Special.specialChecked || (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null)) {
+        if (Special.specialChecked) {
+          var titleVal = $("#edit-title-0-value").val();
           if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null) {
-            var titleVal = $("#edit-title-0-value").val();
+            CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId).setHtml(titleVal);
+          }
+          else if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId) != null) {
             CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId).setHtml(titleVal);
           }
         }
       });
         //$("#edit-title-etuf-fr-0-value").keyup(function() {
       $(Special.otherLangTitleSelector).change(function() {
-	      console.log('Change other title');
-        if (Special.specialChecked || (CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null)) {
+        if (Special.specialChecked) {
+          var titleValFr = $(Special.otherLangTitleSelector).val();
           if(CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null){
-            var titleValfr = $(Special.otherLangTitleSelector).val();
-            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValfr);
+            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValFr);
+          }
+          else if (Special.specialChecked) {
+            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValFr);
           }
         }
       });
@@ -92,8 +100,8 @@ var Special = function() {
         }
         oldtitle = $('#edit-title-0-value').val();
         oldtitleother = $(Special.otherLangTitleSelector).val();
-        newcontent = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="col-md-6"><h1 property="name" id="'+Special.h1SpecialId+'">'+oldtitle+'</h1><p>1-2 sentences that describe the topics and top tasks that can be accessed on this page.</p><section class="followus"><h2>Follow:</h2> <ul> <li><a href="https://www.facebook.com/CanadianAgriculture/" class="facebook gl-follow" rel="external"> <span class="wb-inv">Facebook</span></a></li> <li><a href="https://twitter.com/AAFC_Canada" class="twitter gl-follow" rel="external"> <span class="wb-inv">Twitter</span></a></li> <li><a href="https://www.linkedin.com/company/aafc-aac/?viewAsMember=true" class="linkedin gl-follow" rel="external"><span class="wb-inv">LinkedIn</span></a></li> <li><a href="https://www.youtube.com/user/AgricultureCanadaEng" class="youtube gl-follow" rel="external"><span class="wb-inv">YouTube</span></a></li> </ul></section></div><div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs">'+imgplaceholder+'</div></div>'
-        newcontentother = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="col-md-6"><h1 property="name" id="'+Special.h1SpecialId+'">'+oldtitleother+'</h1><p>1 ou 2 phrases d’introduction qui définissent les sous-sujets et les tâches principales qui peuvent être consultés sur cette page.</p><section class="followus"><h2>Suivez&nbsp;:</h2> <ul> <li><a href="https://www.facebook.com/AgricultureCanadienne" class="facebook gl-follow" rel="external"> <span class="wb-inv">Facebook</span></a></li> <li><a href="https://twitter.com/AAC_Canada" class="twitter gl-follow" rel="external"> <span class="wb-inv">Twitter</span></a></li> <li><a href="https://www.linkedin.com/company/aafc-aac/?viewAsMember=true" class="linkedin gl-follow" rel="external"><span class="wb-inv">LinkedIn</span></a></li> <li><a href="https://www.youtube.com/user/AgricultureCanadaFra" class="youtube gl-follow" rel="external"><span class="wb-inv">YouTube</span></a></li> </ul> </section></div><div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs">'+imgplaceholder+'</div></div>'
+        newcontent = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="col-md-6"><h1 class="mrgn-tp-sm" property="name" id="'+Special.h1SpecialId+'">'+oldtitle+'</h1><p>1-2 sentences that describe the topics and top tasks that can be accessed on this page.</p><section class="followus"><h2>Follow:</h2> <ul> <li><a href="https://www.facebook.com/CanadianAgriculture/" class="facebook gl-follow" rel="external"> <span class="wb-inv">Facebook</span></a></li> <li><a href="https://twitter.com/AAFC_Canada" class="twitter gl-follow" rel="external"> <span class="wb-inv">Twitter</span></a></li> <li><a href="https://www.linkedin.com/company/aafc-aac/?viewAsMember=true" class="linkedin gl-follow" rel="external"><span class="wb-inv">LinkedIn</span></a></li> <li><a href="https://www.youtube.com/user/AgricultureCanadaEng" class="youtube gl-follow" rel="external"><span class="wb-inv">YouTube</span></a></li> </ul></section></div><div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs">'+imgplaceholder+'</div></div>'
+        newcontentother = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="col-md-6"><h1 class="mrgn-tp-sm" property="name" id="'+Special.h1SpecialId+'">'+oldtitleother+'</h1><p>1 ou 2 phrases d’introduction qui définissent les sous-sujets et les tâches principales qui peuvent être consultés sur cette page.</p><section class="followus"><h2>Suivez&nbsp;:</h2> <ul> <li><a href="https://www.facebook.com/AgricultureCanadienne" class="facebook gl-follow" rel="external"> <span class="wb-inv">Facebook</span></a></li> <li><a href="https://twitter.com/AAC_Canada" class="twitter gl-follow" rel="external"> <span class="wb-inv">Twitter</span></a></li> <li><a href="https://www.linkedin.com/company/aafc-aac/?viewAsMember=true" class="linkedin gl-follow" rel="external"><span class="wb-inv">LinkedIn</span></a></li> <li><a href="https://www.youtube.com/user/AgricultureCanadaFra" class="youtube gl-follow" rel="external"><span class="wb-inv">YouTube</span></a></li> </ul> </section></div><div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs">'+imgplaceholder+'</div></div>'
 
         // when checking the special title checkbox
         if (this.checked) {
