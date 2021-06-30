@@ -162,6 +162,7 @@
         "agrcmsx/wxt_overrides": "*",
         "drupal/entity_translation_unified_form": "1.x-dev as 1.0-beta16",
         "agrcmsx/config": "9.1.x-dev",
+        "drupal/libraries": "^3.0",
         "drupal/linkit": "6.0-beta2 as 5.0-beta11",
         "drupal/file_replace": "^1.2",
         "drupal/reroute_email": "^2.0",

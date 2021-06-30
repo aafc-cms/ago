@@ -25,8 +25,7 @@ settings:
 visibility:
   panels_title:
     id: panels_title
-    enabled: 1
-    negate: false
+    negate: true
     context_mapping:
       node: '@node.node_route_context:node'
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'

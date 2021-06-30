@@ -23,10 +23,4 @@ settings:
   label: 'WxT Search form'
   provider: wxt_library
   label_display: '0'
-visibility:
-  panels_title:
-    id: panels_title
-    enabled: 0
-    negate: false
-    context_mapping: {  }
-    is_panelized: {  }
+visibility: {  }

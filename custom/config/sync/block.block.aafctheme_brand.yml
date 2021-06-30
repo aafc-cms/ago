@@ -7,7 +7,6 @@ dependencies:
   module:
     - language
     - system
-    - wxt_library
   theme:
     - aafctheme
 _core:
@@ -34,9 +33,3 @@ visibility:
     negate: false
     context_mapping:
       language: '@language.current_language_context:language_interface'
-  panels_title:
-    id: panels_title
-    enabled: 0
-    negate: false
-    context_mapping: {  }
-    is_panelized: {  }

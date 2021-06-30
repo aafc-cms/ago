@@ -8,7 +8,6 @@ dependencies:
     - block_class
     - block_content
     - system
-    - wxt_library
   theme:
     - aafctheme
 third_party_settings:
@@ -34,9 +33,3 @@ visibility:
     pages: '<front>'
     negate: false
     context_mapping: {  }
-  panels_title:
-    id: panels_title
-    enabled: 0
-    negate: false
-    context_mapping: {  }
-    is_panelized: {  }
