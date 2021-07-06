@@ -35,6 +35,25 @@ function aafctheme_preprocess_html(&$variables) {
     $variables['four_oh_four'] = TRUE;
   }
 
+  $head_title = $variables['head_title']['title'];
+  $some_slogan = ' | Agriculture and Agri-Food Canada (AAFC)';
+  if (stripos($head_title, $some_slogan) > 2) {
+    $head_title = str_replace($some_slogan, ' - agriculture.canada.ca', $head_title);
+  }
+  $some_slogan = ' | Agriculture et Agroalimentaire Canada (AAC)';
+  if (stripos($head_title, $some_slogan) > 2) {
+    $head_title = str_replace($some_slogan, ' - agriculture.canada.ca', $head_title);
+  }
+  $some_slogan = ' | Agriculture and Agri-Food Canada Dev';
+  if (stripos($head_title, $some_slogan) > 2) {
+    $head_title = str_replace($some_slogan, ' - agriculture.canada.ca DEV', $head_title);
+  }
+  $some_slogan = ' | Agriculture et Agroalimentaire Canada Dev';
+  if (stripos($head_title, $some_slogan) > 2) {
+    $head_title = str_replace($some_slogan, ' - agriculture.canada.ca DEV', $head_title);
+  }
+  $variables['head_title']['title'] = $head_title;
+
   $current_path = \Drupal::service('path.current')->getPath();
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['langID'] = $langId;
