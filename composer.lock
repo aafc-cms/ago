@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "959bad90a5a6c2fd0f5cd7470566ae0f",
+    "content-hash": "29b6f7513c6338573eb58b84b9e9512d",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -6802,17 +6802,17 @@
         },
         {
             "name": "drupal/entity_translation_unified_form",
-            "version": "1.0.0-beta16",
+            "version": "1.0.0-beta18",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_translation_unified_form.git",
-                "reference": "8.x-1.0-beta16"
+                "reference": "8.x-1.0-beta18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta16.zip",
-                "reference": "8.x-1.0-beta16",
-                "shasum": "b4b229265f2a9c7362e8342ade27a03df2096549"
+                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta18.zip",
+                "reference": "8.x-1.0-beta18",
+                "shasum": "0cf0b5e19fb2d3cbc17069bf95b70267636f6b65"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6820,8 +6820,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta16",
-                    "datestamp": "1623434191",
+                    "version": "8.x-1.0-beta18",
+                    "datestamp": "1625585375",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
