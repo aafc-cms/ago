@@ -1,6 +1,6 @@
 <?php
 
-  $query = \Drupal::entityQuery('user')->condition('uid', 1, '<>');
+  $query = \Drupal::entityQuery('user')->condition('uid', 1, '>');
   $uids = $query->execute();
   $count_success = 0;
   foreach ($uids as $vid => $uid) {
