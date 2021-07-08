@@ -34,7 +34,7 @@
 <meta property="dcterms:accessRights" content="2">
 <!-- Meta data-->
 <!--[if gte IE 9 | !IE ]><!-->
-<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="https://www.agr.gc.ca/res/gcweb/GCWeb/assets/favicon-mobile.png"><link href="https://www.agr.gc.ca/res/gcweb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
+<link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="/libraries/theme-gcweb-legacy/assets/favicon-mobile.png"><link href="/libraries/theme-gcweb-legacy/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
 <link rel="stylesheet" href="/core/assets/vendor/jquery.ui/themes/base/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="/libraries/theme-gcweb-legacy/css/theme.min.css">
 <!--<![endif]-->
