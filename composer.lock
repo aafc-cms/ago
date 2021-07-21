@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7afcfb4dd6572c68b5db5c77544622cb",
+    "content-hash": "f5fbd7e91e68d716c160d283fb559c71",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.1.10",
+            "version": "9.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "57703a185b4bf752ad2869ba8eb80189d08cf216"
+                "reference": "21374435076ec3f4285709baed186266e1030a80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/57703a185b4bf752ad2869ba8eb80189d08cf216",
-                "reference": "57703a185b4bf752ad2869ba8eb80189d08cf216",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/21374435076ec3f4285709baed186266e1030a80",
+                "reference": "21374435076ec3f4285709baed186266e1030a80",
                 "shasum": ""
             },
             "require": {
@@ -113,7 +113,7 @@
                 "drupal/devel_kint_extras": "^1.0",
                 "drupal/dynamic_entity_reference": "^2.0@alpha",
                 "drupal/entity_embed": "^1.0",
-                "drupal/entity_translation_unified_form": "^1.0-beta16",
+                "drupal/entity_translation_unified_form": "^1.0-beta19",
                 "drupal/entityqueue": "^1.0",
                 "drupal/file_delete": "^1.0",
                 "drupal/filehash": "^1.4",
@@ -224,6 +224,7 @@
                 "patches": {
                     "drupal/core": {
                         "BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-01-24/3194462.patch",
+                        "Switch from xhtml to html5 validation": "https://www.drupal.org/files/issues/2021-07-21/2441811-19.patch",
                         "Performance and usability patch that replaces sansdesordre #3110371": "https://www.drupal.org/files/issues/2021-04-21/D91x-3110371-4.patch",
                         "Performance and scalability, do not load disabled menu links on the add/node /edit/node page/route.": "https://www.drupal.org/files/issues/2021-04-21/D9_performance_and_scalability-3202930-6.patch",
                         "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
@@ -317,9 +318,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/9.1.10"
+                "source": "https://github.com/agrcmsx/dxbase/tree/9.1.11"
             },
-            "time": "2021-06-30T03:58:41+00:00"
+            "time": "2021-07-21T15:38:43+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -6420,7 +6421,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_translation_unified_form.git",
-                "reference": "e355471dfc11cfc458ab6aeb23266cc15a43d693"
+                "reference": "ab6cae6b74d77c126e79ed11a0b2dbc56533ff52"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6431,8 +6432,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta16+4-dev",
-                    "datestamp": "1625038519",
+                    "version": "8.x-1.0-beta18+1-dev",
+                    "datestamp": "1626823584",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."

@@ -153,7 +153,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.1.10",
+        "agrcmsx/dxbase": "9.1.11",
         "drupal/core": "9.1.10 as 9.1.9",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
