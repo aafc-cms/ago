@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - csv_serialization
     - rest
     - serialization
     - view_custom_table
@@ -52,6 +53,9 @@ display:
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -60,9 +64,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
         type: table
         options:
@@ -826,6 +827,20 @@ display:
       displays:
         page_1: page_1
         default: '0'
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
     cache_metadata:
       max-age: -1
       contexts:
