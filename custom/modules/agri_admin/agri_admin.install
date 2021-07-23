@@ -209,7 +209,6 @@ function agri_admin_update_8004() {
 
 /**
  * Force menu link disable.
- *
  */
 function agri_admin_update_8005() {
   // For Huan agrcms/d8#141
@@ -223,5 +222,27 @@ function agri_admin_update_8005() {
       $count_success++;
     }
   }
+}
+
+
+/**
+ * Search engine optimisation, canonical url for home page should be https://domain/en and https://domain/fr for google seo.
+ */
+function agri_admin_update_8006() {
+  $config = \Drupal::config('system.site');
+  $front_uri = $config->get('page.front');
+  $nid = str_replace('/node/', '', $front_uri);
+
+  $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+  $metatags = unserialize($node->get('field_meta_tags')->value);
+  $metatags['canonical_url'] = 'https://agriculture.canada.ca/en';
+  $node->set('field_meta_tags', serialize($metatags));
+  $node->save();
+
+  $node_fr = $node->getTranslation('fr');
+  $metatags_fr = unserialize($node_fr->get('field_meta_tags')->value);
+  $metatags_fr['canonical_url'] = 'https://agriculture.canada.ca/fr';
+  $node_fr->set('field_meta_tags', serialize($metatags_fr));
+  $node_fr->save();
 }
 
