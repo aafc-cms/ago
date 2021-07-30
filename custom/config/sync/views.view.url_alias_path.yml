@@ -2,6 +2,8 @@ uuid: e467ac70-41e9-4e71-96a9-a59c146dc93a
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.admin
   module:
     - csv_serialization
     - rest
@@ -857,6 +859,15 @@ display:
       display_extenders:
         metatag_display_extender: {  }
       path: admin/config/search/path-node-url-alias
+      menu:
+        type: normal
+        title: 'Search Node URL Alias'
+        description: ''
+        expanded: false
+        parent: system.admin_content
+        weight: 10
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: -1
       contexts:
