@@ -71,6 +71,7 @@
     {% endif %}
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
+    <link rel="stylesheet" href="/invitation-manager/Overlay.css">
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     <nav aria-label="{{ 'Skip links'|t }}">
@@ -91,6 +92,8 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    <script src="/invitation-manager/Overlay.js"></script>
+    <script src="/invitation-manager/InvitationManager.js"></script>
     <script type="text/javascript">_satellite.pageBottom();</script>
   </body>
 </html>
