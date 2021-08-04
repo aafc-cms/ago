@@ -29,3 +29,15 @@ aafctheme-externaladobetmprodjs:
   js:
     //assets.adobedtm.com/launch-EN0cf6c2810a2b48f8a4c36502a1b09541.min.js: { type: external}
 
+aafctheme-invitationmanager:
+  css:
+    theme:
+      invitation-manager/Overlay.css: {}
+     
+  js:
+    invitation-manager/Overlay.js : {}
+    invitation-manager/InvitationManager.js : {}
+  dependencies:
+    - core/jquery
+
+    

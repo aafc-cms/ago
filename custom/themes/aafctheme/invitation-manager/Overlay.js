@@ -17,6 +17,8 @@
 
 /*
 * wb object: Functions and events for wb object needed for the overlay popup
+*
+* GY: modified doc line as it required jQuery instead of $
 */
 
 
@@ -24,7 +26,7 @@ wb_im = {
 	
 	initQueue: 0,
 	selectors: [],
-	doc: $( document ),
+	doc: jQuery( document ),
 	isReady: false,
 	isStarted: false,
 	seed: 0,
