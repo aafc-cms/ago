@@ -5,7 +5,11 @@
     "page-probability": 0.7,
     "site-probability": 0.3,
     "blacklist": [{"url" : ""}],
-    "whitelist": [{ "url" : "^servicecanada.github.io\/"}]
+    "whitelist": [
+      { "url" : "^servicecanada.github.io\/"},
+      { "url" : "^agriculture.canada.ca\/"},
+      { "url" : "^www.agriculture.canada.ca\/"}
+    ]
   },
   "surveys" : [
   {
