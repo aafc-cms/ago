@@ -35,8 +35,8 @@ aafctheme-invitationmanager:
       invitation-manager/Overlay.css: {}
      
   js:
-    invitation-manager/Overlay.js : {}
-    invitation-manager/InvitationManager.js : {}
+    invitation-manager/Overlay.js : {preprocess: false}
+    invitation-manager/InvitationManager.js : {preprocess: false}
   dependencies:
     - core/jquery
 
