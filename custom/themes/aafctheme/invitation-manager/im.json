@@ -4,11 +4,15 @@
     "duration-delay": 15,
     "page-probability": 0.7,
     "site-probability": 0.3,
-    "blacklist": [{"url" : ""}],
+    "blacklist": [{"url" : "^www.microsoft.com\/"}],
     "whitelist": [
       { "url" : "^servicecanada.github.io\/"},
       { "url" : "^agriculture.canada.ca\/"},
-      { "url" : "^www.agriculture.canada.ca\/"}
+      { "url" : "^www.agriculture.canada.ca\/"},
+      {"site" : "^agr-qa.agr.gc.ca\/"},
+      {"site" : "^agriculture.canada.ca\/"},
+      {"site" : "^agr-dev.agr.gc.ca\/"},
+      {"site" : "^localhost\/"}
     ]
   },
   "surveys" : [
@@ -32,7 +36,11 @@
     "close-fr" : "Fermer : Sondage de fin de visite (touche d&apos;échappement)",
     "name" : "SC - Grants and Contributions Call for Proposals",
     "survey-urls" : [
-      {"site" : "^servicecanada.github.io"}
+      {"site" : "^servicecanada.github.io"},
+      {"site" : "^agr-qa.agr.gc.ca"},
+      {"site" : "^agriculture.canada.ca"},
+      {"site" : "^agr-dev.agr.gc.ca"},
+      {"site" : "^localhost"}
     ]
   },
   {
