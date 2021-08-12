@@ -19,8 +19,8 @@
   "surveys" : [
   {
     "id" : "1",
-    "title-en" : "Test AAFC Invitation Manager Popup - Entire Site (eng)",
-    "title-fr" : "Test AAFC Invitation Manager Popup - Entire Site (fra)",
+    "title-en" : "Test AAFC New Configuration - Entire Site (eng)",
+    "title-fr" : "Test AAFC New Configuration - Entire Site (fra)",
     "body-en" : "<p>Please take 5 minutes at the end of your visit today to participate in a research exercise to help improve our services.</p><p class='mrgn-bttm-0'>",
     "body-fr" : "<p>Veuillez prendre 5 minutes à la fin de votre visite aujourd’hui pour participer à un exercice de recherche pour aider à améliorer nos services.</p><p class='mrgn-bttm-0'>",
     "link-en" : "https://eccx.optimalworkshop.com/questions/2esdzqcu-0-2",
@@ -44,6 +44,7 @@
       {"site" : "^agr-wcag.agr.gc.ca"},
       {"site" : "^agriculture.agr.gc.ca"},
       {"site" : "^agriculture.canada.ca"},
+      {"site" : "^www.agriculture.canada.ca"},
       {"site" : "^localhost"}
     ]
   }
