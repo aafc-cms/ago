@@ -75,6 +75,10 @@ if ($force_split == 'live') {
   exit;
 }
 
+if ($force_split == 'neither') {
+  echo "WARNING: THIS COMMAND WAS RUN WITHOUT SETTING SPLIT, IS NOT SET TO DEV, NOR IS IT SET TO LIVE.\n";
+  exit;
+}
 replace_in_file($file_path, $old_text, $new_text);
 /**
  * Replaces a string in a file
