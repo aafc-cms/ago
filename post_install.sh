@@ -107,8 +107,8 @@ configureSettingsFile () {
     ./post_install_helper.php "force_split=dev";
   fi
 
-  # Fix previously configured environments.
-  ./post_install_helper.php file_path="$settings_file" old_text="'modules/custom/config'" new_text="'modules/custom/config/sync'"
+  # Fix previously configured environments., should not need this anymore.
+  #./post_install_helper.php file_path="$settings_file" old_text="'modules/custom/config'" new_text="'modules/custom/config/sync'"
 
 }
 
