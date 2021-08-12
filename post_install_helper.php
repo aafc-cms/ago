@@ -41,6 +41,11 @@ if (($force_split != 'dev' && $force_split != 'live') && empty($old_text)) {
   exit;
 }
 
+echo "Current working directory: " . getcwd();
+echo "\n";
+echo "Force_split == $force_split";
+echo "\n";
+  
 if ($force_split == 'dev') {
   chmod('html/sites/default', 0777); // Allow $file_path (settings) to be modified.
   chmod($file_path, 0666); // Allow $file_path (settings) to be modified.
