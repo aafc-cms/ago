@@ -42,8 +42,8 @@ if (($force_split != 'dev' && $force_split != 'live') && empty($old_text)) {
 }
 
 if ($force_split == 'dev') {
-  chmod('html/sites/default', 0775); // Allow $file_path (settings) to be modified.
-  chmod($file_path, 0664); // Allow $file_path (settings) to be modified.
+  chmod('html/sites/default', 0777); // Allow $file_path (settings) to be modified.
+  chmod($file_path, 0666); // Allow $file_path (settings) to be modified.
   $old_text = "config['config_split.config_split.dev']['status'] = FALSE";
   $new_text = "config['config_split.config_split.dev']['status'] = TRUE";
   replace_in_file($file_path, $old_text, $new_text);
@@ -56,8 +56,8 @@ if ($force_split == 'dev') {
   exit;
 }
 if ($force_split == 'live') {
-  chmod('html/sites/default', 0775); // Allow $file_path (settings) to be modified.
-  chmod($file_path, 0664); // Allow $file_path (settings) to be modified.
+  chmod('html/sites/default', 0777); // Allow $file_path (settings) to be modified.
+  chmod($file_path, 0666); // Allow $file_path (settings) to be modified.
   $old_text = "config['config_split.config_split.dev']['status'] = TRUE";
   $new_text = "config['config_split.config_split.dev']['status'] = FALSE";
   replace_in_file($file_path, $old_text, $new_text);
