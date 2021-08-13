@@ -6,14 +6,12 @@
     "site-probability": 0.3,
     "blacklist": [{"url" : ""}],
     "whitelist": [
-      { "url" : "^servicecanada.github.io\/"},
       { "url" : "^agriculture.canada.ca\/"},
       { "url" : "^www.agriculture.canada.ca\/"},
       { "url" : "^agr-qa.agr.gc.ca\/"},
       { "url" : "^agr-dev.agr.gc.ca\/"},
       { "url" : "^agr-uat.agr.gc.ca\/"},
-      { "url" : "^agr-wcag.agr.gc.ca\/"},
-      { "url" : "^localhost\/"}
+      { "url" : "^agr-wcag.agr.gc.ca\/"}
     ]
   },
   "surveys" : [
@@ -26,7 +24,7 @@
     "link-en" : "https://eccx.optimalworkshop.com/questions/2esdzqcu-0-2",
     "link-fr" : "https://eccx.optimalworkshop.com/questions/2esdzqcu-0-0-0",
     "start-on" : "2020-01-30T00:00:00",
-    "end-on" : "2050-07-10T23:59:00",
+    "end-on" : "2020-01-30T23:59:00",
     "type" : "Entire site",
     "probability" : 0.5,
     "yes-en" : "<strong>Yes, <span class='wb-inv'>I will take the exit survey </span>after my visit.</strong>",
@@ -37,15 +35,13 @@
     "close-fr" : "Fermer : Sondage de fin de visite (touche d&apos;échappement)",
     "name" : "SC - Grants and Contributions Call for Proposals",
     "survey-urls" : [
-      {"site" : "^servicecanada.github.io"},
       {"site" : "^agr-qa.agr.gc.ca"},
       {"site" : "^agr-dev.agr.gc.ca"},
       {"site" : "^agr-uat.agr.gc.ca"},
       {"site" : "^agr-wcag.agr.gc.ca"},
       {"site" : "^agriculture.agr.gc.ca"},
       {"site" : "^agriculture.canada.ca"},
-      {"site" : "^www.agriculture.canada.ca"},
-      {"site" : "^localhost"}
+      {"site" : "^www.agriculture.canada.ca"}
     ]
   }
   ]
