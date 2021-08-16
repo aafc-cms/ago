@@ -19,7 +19,7 @@ required: false
 translatable: true
 default_value:
   -
-    value: 'a:1:{s:5:"title";s:34:"[current-page:title] - agriculture.canada.ca";}'
+    value: 'a:1:{s:5:"title";s:44:"[current-page:title] - agriculture.canada.ca";}'
 default_value_callback: ''
 settings: {  }
 field_type: metatag
