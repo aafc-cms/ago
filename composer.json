@@ -111,7 +111,9 @@
         "patches": {
             "drupal/core": {
                 "1166282 - Titles truncated on parent menu":
-                "https://www.drupal.org/files/issues/2021-04-12/1166282-29.patch"
+                "https://www.drupal.org/files/issues/2021-04-12/1166282-29.patch",
+                "Taxonomy term weight is not translatable, meaning you can't order term translations differently":
+                "https://www.drupal.org/files/issues/2020-04-30/make-taxonomy-weight-translatable-2931680-8.patch"
             },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
