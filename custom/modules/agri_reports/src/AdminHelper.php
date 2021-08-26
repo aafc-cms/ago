@@ -35,6 +35,13 @@ class AdminHelper {
                     and a.langcode = c.langcode
                     and a.path = c.path
                     and a.path <> '/node/1'
+                    inner join
+                    ( select content_entity_id as nodeid, langcode
+                      from content_moderation_state_field_data
+                      where content_entity_type_id ='node' and moderation_state = 'published'
+                    ) s
+                    on CONVERT ( REPLACE(a.path, '/node/', ''), UNSIGNED INTEGER)  =  s.nodeid
+                    and a.langcode = s.langcode
                     Where a.path like '/node/%' and a.status = 1
                     order by depth asc, a.langcode asc, nodeid asc";
     $query = $database->query($sqlstatement);
