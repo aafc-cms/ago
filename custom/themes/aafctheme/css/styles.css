@@ -320,8 +320,14 @@ div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
     right: 15px;
   }
 }
+@media screen and (min-width: 992px) {
+  /* line 35, ../sass/components/_header.scss */
+  form.search-form div.js-form-type-search {
+    right: 124px;
+  }
+}
 @media screen and (min-width: 845px) {
-  /* line 36, ../sass/components/_header.scss */
+  /* line 42, ../sass/components/_header.scss */
   body.isIE #custom-search-block-form .select-wrapper::after {
     right: 7px;
   }
