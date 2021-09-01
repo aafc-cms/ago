@@ -158,7 +158,8 @@
         "perftools/php-profiler": "^0.18.0",
         "drupal/title_length": "^1.1",
         "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/view_custom_table": "^1.5"
+        "drupal/view_custom_table": "^1.5",
+        "drupal/varnishvanish": "^2.0@beta"
     },
     "authors": [
         {
