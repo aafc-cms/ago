@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32139f0fcd97a63a21518ad7e84f2311",
+    "content-hash": "6b8c4a3b47a9eeb4ab61b28074d8a7ab",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -11273,6 +11273,52 @@
             }
         },
         {
+            "name": "drupal/purge_processor_cron",
+            "version": "3.0.0",
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "drupal/purge": "^3.0.0-beta9",
+                "php": ">=7.2"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1590744318",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-3.x": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Niels van Mourik",
+                    "homepage": "http://www.nielsvm.org"
+                },
+                {
+                    "name": "djbobbydrake",
+                    "homepage": "https://www.drupal.org/user/336378"
+                },
+                {
+                    "name": "nielsvm",
+                    "homepage": "https://www.drupal.org/user/163285"
+                }
+            ],
+            "description": "Processes the queue every time cron runs, recommended for most configurations.",
+            "homepage": "https://www.drupal.org/project/purge",
+            "support": {
+                "source": "https://git.drupalcode.org/project/purge"
+            }
+        },
+        {
             "name": "drupal/purge_tokens",
             "version": "3.0.0",
             "require": {
@@ -13037,6 +13083,52 @@
             "homepage": "https://www.drupal.org/project/varnish_purge",
             "support": {
                 "source": "https://git.drupalcode.org/project/varnish_purge"
+            }
+        },
+        {
+            "name": "drupal/varnishvanish",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/varnishvanish.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/varnishvanish-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "1c3b17a0b9a03f6eee7807cadde854ed1af7ab97"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/purge": "*",
+                "drupal/purge_processor_cron": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1626235757",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                }
+            ],
+            "description": "Provides a button that ties into the purge module invalidate «everything» option, perhaps other options later.",
+            "homepage": "https://www.drupal.org/project/varnishvanish",
+            "support": {
+                "source": "https://git.drupalcode.org/project/varnishvanish"
             }
         },
         {
@@ -20635,7 +20727,8 @@
         "agrcmsx/config": 20,
         "drupal/wxt_bootstrap": 20,
         "drupal/wxt_library": 20,
-        "drupal/xhprof": 10
+        "drupal/xhprof": 10,
+        "drupal/varnishvanish": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
