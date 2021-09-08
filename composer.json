@@ -159,7 +159,8 @@
         "drupal/title_length": "^1.1",
         "drupal/bootstrap_site_alert": "^1.9",
         "drupal/view_custom_table": "^1.5",
-        "drupal/varnishvanish": "^2.0@beta"
+        "drupal/varnishvanish": "^2.0@beta",
+        "drupal/dynamic_entity_reference": "^1.12"
     },
     "authors": [
         {
