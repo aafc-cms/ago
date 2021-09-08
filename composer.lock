@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.1.17",
+            "version": "9.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "73b8266ef8c0c9c6c9ac557ff5c8b71b9ce641db"
+                "reference": "ac46a1d0f2b09daa339e7603607562f8422f63e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/73b8266ef8c0c9c6c9ac557ff5c8b71b9ce641db",
-                "reference": "73b8266ef8c0c9c6c9ac557ff5c8b71b9ce641db",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/ac46a1d0f2b09daa339e7603607562f8422f63e1",
+                "reference": "ac46a1d0f2b09daa339e7603607562f8422f63e1",
                 "shasum": ""
             },
             "require": {
@@ -255,7 +255,8 @@
                     },
                     "drupal/linkchecker": {
                         "Extraction status": "https://www.drupal.org/files/issues/2020-12-08/3184613-extraction-status.patch",
-                        "Update empty value for last_check field on broken links report": "https://www.drupal.org/files/issues/2020-12-25/3112537-12.patch"
+                        "Update empty value for last_check field on broken links report": "https://www.drupal.org/files/issues/2020-12-25/3112537-12.patch",
+                        "Allow linkchecker to work in a non-standard environment, provide host and port substitution.": "https://www.drupal.org/files/issues/2021-05-14/3213210_13.patch"
                     },
                     "drupal/moderation_sidebar": {
                         "3194841 - 'Discard Draft' for a translation edits the base language node patch 7.": "https://www.drupal.org/files/issues/2021-02-22/3194841-discard-draft-7.patch",
@@ -310,9 +311,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/9.1.17"
+                "source": "https://github.com/agrcmsx/dxbase/tree/9.1.18"
             },
-            "time": "2021-09-07T22:37:20+00:00"
+            "time": "2021-09-08T12:29:51+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
