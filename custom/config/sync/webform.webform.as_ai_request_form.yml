@@ -1,20 +1,18 @@
-uuid: d7746321-7703-4e73-a577-11a1cbe3dca0
+uuid: b20d4489-8e54-4996-85b3-5024c1c8f0bc
 langcode: en
 status: open
-dependencies:
-  module:
-    - wxt_overrides
+dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: 1
+uid: 92
 template: false
 archive: false
-id: yourfeedback_programsandservices
-title: 'Submit your feedback - Programs and Services'
-description: ''
-category: feedback
-elements: "descriptionoffeedbackform:\n  '#type': processed_text\n  '#text': |\n    <style type=\"text/css\">\n      p {\n        font-size: 20px;\n      }\n    </style>\n    <p>Your suggestions and ideas are important to us. Submit your feedback to help us improve the design and delivery of our programs and services. We really appreciate your taking the time to share your thoughts and suggestions with us.\n    </p>\n    <section>\n      <details class=\"mrgn-bttm-md open\">\n        <summary>\n          <h2 class=\"h5\">Privacy statement\n          </h2>\n        </summary>\n        <p>The information collected on this form, including your email address, is collected under the authority of <a href=\"http://laws-lois.justice.gc.ca/eng/acts/F-11/index.html\">Financial Administration Act</a>. The personal information will be kept confidential and will be used by those individuals require to provide additional information requested by you and assists us in improving our programs and services and will also be used anonymously in reports for service delivery improvements. Although participation is voluntary, your participation is encouraged. Your feedback is important in helping us identify your challenges, requirements, and needs to better support AAFC’s business. We take our responsibility to safeguard your personal information, as required by the <a href=\"http://lois-laws.justice.gc.ca/eng/acts/P-21/index.html\">Privacy Act</a>, very seriously, and therefore ask that you do not include sensitive personal information (such as your social insurance number, medical status, or details about your finances) in your message. The collection, use and disclosure of personal information by AAFC is administered in accordance with the federal Privacy Act and described in further detail in the <a href=\"https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu914\">Public Communications Bank PSU 914</a>., Individuals have the right to access their personal information and to request changes to incorrect personal information. Should you have any questions concerning your privacy, please contact AAFC’s Access to Information and Privacy office at <a href=\"mailto:aafc.atip-aiprp.aac@canada.ca\"><span class=\"nowrap\">aafc.atip-aiprp.aac@canada.ca</span></a>\n        </p>\n      </details>\n    </section>\n    \n  '#format': full_html\ndenotesmandatoryfield:\n  '#type': processed_text\n  '#text': |\n    <style type=\"text/css\">p {\n      font-size: 16px !important ;\n      }\n    </style>\n    <p class=\"text-danger\">* denotes mandatory field.\n    </p>\n    \n  '#format': full_html\nprogramorservice:\n  '#type': webform_term_select\n  '#title': 'Program or service'\n  '#required': true\n  '#vocabulary': programorservice\n  '#breadcrumb_delimiter': ''\nemailaddress:\n  '#type': email\n  '#title': 'Email address (yourname@domain.com)'\n  '#autocomplete': email\n  '#required': true\nfullname:\n  '#type': textfield\n  '#title': 'Full name'\n  '#autocomplete': name\n  '#required': true\ncityortown:\n  '#type': textfield\n  '#title': City/Town\n  '#autocomplete': address-level2\nprovinceorterritory:\n  '#type': textfield\n  '#title': Province/Territory\n  '#autocomplete': address-level1\ncountry:\n  '#type': textfield\n  '#title': Country\n  '#autocomplete': country-name\nyourmessage:\n  '#type': textarea\n  '#title': 'Your message'\n  '#required': true"
+id: as_ai_request_form
+title: 'Request AgriStability and AgriInvest Forms in Excel'
+description: 'Request AgriStability and AgriInvest Forms in Excel'
+category: 'Services Request Form'
+elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <p class=\"mrgn-tp-lg\">To receive the AgriStability and AgriInvest forms package in Excel, please complete the following online request form:</p>\n    \n    <h2 class=\"mrgn-bttm-md\">Request AgriStability and AgriInvest Forms in Excel</h2>\nrequestor_name_required_:\n  '#type': textfield\n  '#title': 'Requestor Name'\n  '#required': true\nemail_address_required_:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\nphone_number_as_ai:\n  '#type': webform_telephone\n  '#title': 'Phone Number'\n  '#type__access': false\n  '#ext__access': false\n  '#phone__international_initial_country': CA\nlanguage_of_preference:\n  '#type': select\n  '#title': 'Language of Preference'\n  '#options':\n    English: English\n    French: French\n  '#empty_option': English\n  '#empty_value': English\nmarkup_01:\n  '#type': webform_markup\n  '#markup': '<p>The following Excel forms packages include the Statement A, Statement B and Adjustment Request Form. Indicate below which forms package(s) you would like to receive.</p>'\nfor_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:\n  '#type': checkboxes\n  '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon:'\n  '#options':\n    '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.'\n    '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.'\n    '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*'\n  '#options__properties': ''\nmarkup_02:\n  '#type': webform_markup\n  '#markup': |\n    <p>\n      <b>* 2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.</b>\n    </p>\n    \nfor_producers_in_alberta_ontario_prince_edward_island_and_saskat:\n  '#type': checkboxes\n  '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan:'\n  '#options':\n    '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.'\n  '#options__properties': ''"
 css: ''
 javascript: ''
 settings:
@@ -27,7 +25,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -43,7 +41,7 @@ settings:
   form_prepopulate_source_entity_type: ''
   form_reset: false
   form_disable_autocomplete: false
-  form_novalidate: true
+  form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
   form_unsaved: false
@@ -96,7 +94,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: true
+  wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -194,32 +192,32 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  program_or_service_submit_feedback_email:
-    id: programservice_submit_feedback_email
-    label: 'Program Or Service Submit_Feedback email'
+  email:
+    id: email
+    label: Email
     notes: ''
-    handler_id: program_or_service_submit_feedback_email
+    handler_id: email
     status: true
     conditions: {  }
     weight: 0
     settings:
       states:
         - completed
-      to_mail: _default
+      to_mail: daniel.anello@agr.gc.ca
       to_options: {  }
-      cc_mail: aafc.voc-vdc.aac@canada.ca
+      cc_mail: '[webform_submission:values:email_address_required_:raw]'
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
       from_mail: _default
       from_options: {  }
-      from_name: 'Do Not Reply / Ne Pas Répondre (aafc/aac) '
-      subject: 'AAFC Programs and Services contact form/AAC Formulaire de contact Programmes et Services - [webform_submission:values:programorservice]'
-      body: '[webform_submission:values]'
+      from_name: _default
+      subject: _default
+      body: _default
       excluded_elements: {  }
-      ignore_access: 0
-      exclude_empty: 0
-      exclude_empty_checkbox: 0
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
       exclude_attachments: false
       html: true
       attachments: false

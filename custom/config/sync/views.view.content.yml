@@ -70,27 +70,23 @@ display:
               nid:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
                   collapsible: false
                   is_secondary: false
               type:
                 plugin_id: default
                 advanced:
-                  sort_options: false
                   rewrite:
-                    filter_rewrite_values: ''
+                    filter_rewrite_values: "Employment Opportunity|Employ\r\nInternal page|Internal\r\nLanding page|Landing\r\nOpportunité d'emploi|Emploi\r\nPage interne|Interne"
                   collapsible: false
                   is_secondary: false
               title:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
                   collapsible: false
                   is_secondary: false
               name:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
                   collapsible: false
                   is_secondary: false
               moderation_state:
@@ -100,10 +96,23 @@ display:
                     filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
+              field_newstype_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_type_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
               field_subject_target_id:
                 plugin_id: default
                 advanced:
-                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -111,7 +120,6 @@ display:
               field_meta_type_target_id:
                 plugin_id: default
                 advanced:
-                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -119,9 +127,8 @@ display:
               langcode:
                 plugin_id: default
                 advanced:
-                  sort_options: false
                   rewrite:
-                    filter_rewrite_values: ''
+                    filter_rewrite_values: "Interface text language selected for page|Interface\r\nLangue Texte d'interface sélectionnée pour la page|Interface\r\nLangue Texte d'interface sélectionnnée pour la page|Interface\r\nLangue par défaut du site (English)|Défaut (Ang)\r\nSite's default language (English)|Default (Eng)"
                   collapsible: false
                   is_secondary: false
               revision_timestamp:
@@ -129,17 +136,14 @@ display:
                 advanced:
                   collapsible: false
                   is_secondary: false
-              field_modified_value:
+              changed:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
                   is_secondary: false
-              field_managing_branch_value:
-                plugin_id: default
+              field_modified_value:
+                plugin_id: bef_datepicker
                 advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
       pager:

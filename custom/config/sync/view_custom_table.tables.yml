@@ -1,0 +1,6 @@
+path_alias:
+  table_name: path_alias
+  table_database: default
+  description: ''
+  column_relations: 'a:0:{}'
+  created_by: '1'
