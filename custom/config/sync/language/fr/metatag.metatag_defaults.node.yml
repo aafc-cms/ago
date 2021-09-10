@@ -1,4 +1,5 @@
 tags:
   dcterms_creator: 'Agriculture et Agroalimentaire Canada'
+  title: '[node:title] | [site:name]'
   canonical_url: '[node:url]'
 label: Contenu

@@ -8,6 +8,9 @@ display:
           reset_button_label: Remet
           exposed_sorts_label: 'Trier par'
           text_input_required: 'Sélectionnez un filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'options avancées'
       pager:
         options:
           tags:

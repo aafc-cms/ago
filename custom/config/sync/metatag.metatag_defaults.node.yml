@@ -7,6 +7,7 @@ _core:
 id: node
 label: Content
 tags:
+  title: '[node:title] - agriculture.canada.ca'
   canonical_url: '[node:url]'
   keywords: '[node:field_keywords]'
   dcterms_type: '[node:field_meta_type]'
