@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32830d6e292bfbce90f170508c5ccbfe",
+    "content-hash": "a1909dd8c45d8088ffec18a3b5aad2b5",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -12630,6 +12630,51 @@
             }
         },
         {
+            "name": "drupal/view_custom_table",
+            "version": "dev-9.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/view_custom_table.git",
+                "reference": "793a4a79a51c43028d6913ac1b79e63a8b2b364b"
+            },
+            "require": {
+                "drupal/core": "9.x"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-9.0.x": "9.0.x-dev"
+                },
+                "drupal": {
+                    "version": "9.0.x-dev",
+                    "datestamp": "1592223980",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "sagar_cis",
+                    "homepage": "https://www.drupal.org/user/3487653"
+                },
+                {
+                    "name": "sagarwani",
+                    "homepage": "https://www.drupal.org/user/3221452"
+                }
+            ],
+            "description": "Extends views to use custom table data.",
+            "homepage": "https://www.drupal.org/project/view_custom_table",
+            "support": {
+                "source": "https://git.drupalcode.org/project/view_custom_table"
+            }
+        },
+        {
             "name": "drupal/views_autocomplete_filters",
             "version": "1.3.0",
             "source": {
@@ -20699,7 +20744,8 @@
     "stability-flags": {
         "drupal/entity_translation_unified_form": 20,
         "agrcmsx/config": 20,
-        "drupal/xhprof": 10
+        "drupal/xhprof": 10,
+        "drupal/view_custom_table": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
