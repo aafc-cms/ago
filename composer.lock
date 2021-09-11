@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1909dd8c45d8088ffec18a3b5aad2b5",
+    "content-hash": "7747e3259459a244c7d931a5c4ed0057",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.1.18",
+            "version": "9.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "ac46a1d0f2b09daa339e7603607562f8422f63e1"
+                "reference": "ce98ecf4b5e9ab25c77935b743b2939145e71c13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/ac46a1d0f2b09daa339e7603607562f8422f63e1",
-                "reference": "ac46a1d0f2b09daa339e7603607562f8422f63e1",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/ce98ecf4b5e9ab25c77935b743b2939145e71c13",
+                "reference": "ce98ecf4b5e9ab25c77935b743b2939145e71c13",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "drupal/devel_kint_extras": "^1.0",
                 "drupal/dynamic_entity_reference": "^1.12",
                 "drupal/entity_embed": "^1.0",
-                "drupal/entity_translation_unified_form": "^1.0-beta19",
+                "drupal/entity_translation_unified_form": "^1.0-beta20",
                 "drupal/entityqueue": "^1.0",
                 "drupal/file_delete": "^1.0",
                 "drupal/filehash": "^1.4",
@@ -311,9 +311,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/9.1.18"
+                "source": "https://github.com/agrcmsx/dxbase/tree/9.1.20"
             },
-            "time": "2021-09-08T12:29:51+00:00"
+            "time": "2021-09-11T00:46:50+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -6410,26 +6410,29 @@
         },
         {
             "name": "drupal/entity_translation_unified_form",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta21",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_translation_unified_form.git",
-                "reference": "ab6cae6b74d77c126e79ed11a0b2dbc56533ff52"
+                "reference": "8.x-1.0-beta21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_translation_unified_form-8.x-1.0-beta21.zip",
+                "reference": "8.x-1.0-beta21",
+                "shasum": "fc6aa7ddf42614cdd89402fd28da542c34869184"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0-beta18+1-dev",
-                    "datestamp": "1626823584",
+                    "version": "8.x-1.0-beta21",
+                    "datestamp": "1631319582",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -20728,12 +20731,6 @@
     "packages-dev": [],
     "aliases": [
         {
-            "package": "drupal/entity_translation_unified_form",
-            "version": "1.9999999.9999999.9999999-dev",
-            "alias": "1.0-beta16",
-            "alias_normalized": "1.0.0.0-beta16"
-        },
-        {
             "package": "drupal/linkit",
             "version": "6.0.0.0-beta2",
             "alias": "5.0-beta11",
@@ -20742,7 +20739,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/entity_translation_unified_form": 20,
         "agrcmsx/config": 20,
         "drupal/xhprof": 10,
         "drupal/view_custom_table": 20

@@ -153,13 +153,12 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "^9.1.17",
+        "agrcmsx/dxbase": "^9.1.18",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
-        "drupal/entity_translation_unified_form": "1.x-dev as 1.0-beta16",
         "agrcmsx/config": "9.1.x-dev",
         "drupal/libraries": "^3.0",
         "drupal/linkit": "6.0-beta2 as 5.0-beta11",
