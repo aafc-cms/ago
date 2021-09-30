@@ -109,6 +109,10 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/better_exposed_filters": {
+                "3182069 - Better exposed filters date picker jquery ui compatibility fix":
+                "https://www.drupal.org/files/issues/2021-09-03/3182069-date_range_date_picker_autocomplete.patch"
+            },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
