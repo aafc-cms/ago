@@ -6,4 +6,5 @@ vendor
 !html/resources
 !html/resources/**
 html
+html/robots.txt
 custom/php/resources/prod/Internet-Internet/MISB-DGSIM/ATS-SEA/includes/.drush/
