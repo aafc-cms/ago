@@ -129,6 +129,11 @@
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
                 }
             },
+            "agrcmsx/dxbase": {
+              "drupal/purge": {
+                  "Fix and prevent nasty 500 server errors when using varnish_purge_tags and varnish_purge.": "https://www.drupal.org/files/issues/2020-11-19/2976480-no-cache-and-dynamic-page-cache-9.patch"
+              }
+            },
             "drupal/purge": {
                 "Fix and prevent nasty 500 server errors when using varnish_purge_tags and varnish_purge.": "https://www.drupal.org/files/issues/2020-11-19/2976480-no-cache-and-dynamic-page-cache-9.patch"
             },
