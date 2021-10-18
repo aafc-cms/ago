@@ -129,6 +129,9 @@
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
                 }
             },
+            "drupal/purge": {
+                "Fix and prevent nasty 500 server errors when using varnish_purge_tags and varnish_purge.": "https://www.drupal.org/files/issues/2020-11-19/2976480-no-cache-and-dynamic-page-cache-9.patch"
+            },
             "drupal/lightning_core": {
                 "drupal/core": {
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
@@ -148,6 +151,7 @@
         "agrcmsx/wxt_overrides": "*",
         "agrcmsx/config": "3.0.x-dev",
         "drupal/core": "8.9.19 as 8.9.14",
+        "drupal/purge": "3.0 as 3.2",
         "drupal/linkit": "6.0-beta2 as 5.0-beta11",
         "drupal/wxt_bootstrap": "dev-4.x as 1.26",
         "drupal/wxt_library": "dev-4.x as 1.22",
