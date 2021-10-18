@@ -118,6 +118,7 @@ if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
 fi
 htaccess_file=html/.htaccess
+robotstxt_file=html/robots.txt
 if ! grep -q "splash.php" $htaccess_file; then
    echo "Adding a rewrite rule for splash page."
    sed -i '90 i RewriteRule "^$" splash.php [L]' $htaccess_file;
@@ -310,4 +311,48 @@ if [ ! -L html/modules/contrib/wxt_ext_translation ]; then
   #echo `pwd`
 fi
 
+
+if ! grep -q "AAFC Directives" $robotstxt_file; then
+  if ! grep -q "atlas/data_donnees" $robotstxt_file; then
+     search_str="^(# Directories$)";
+     # *************** INSERT ROBOTS.TXT / robots.txt DIRECTIVES AS FOLLOWS *******************
+     declare aafc_directive_1="Disallow: \/atlas\/data_donnees\/"
+     declare aafc_directive_2="Disallow: \/atlas\/rest\/services\/"
+     declare aafc_directive_3="Disallow: \/atlas\/services\/"
+     declare aafc_directive_4="Disallow: \/eng\/"
+     declare aafc_directive_5="Disallow: \/fra\/"
+     declare aafc_directive_6="Crawl-Delay: 60"
+     #EXAMPLE:
+     #declare aafc_directive_7="Disallow: \/example\/directive7\/"
+     #declare aafc_directive_8="Disallow: \/example\/directive8\/"
+     #declare aafc_directive_9="Disallow: \/example\/directive9\/"
+     #declare aafc_directive_10="Disallow: \/example\/directive10\/"
+     #declare aafc_directive_11="Disallow: \/example\/directive11\/"
+     #declare aafc_directive_12="Disallow: \/example\/directive12\/"
+     #declare aafc_directive_13="Disallow: \/example\/directive13\/"
+     # *************** END OF AAFC ROBOTS.TXT / robots.txt DIRECTIVES  *******************
+     new_setting="# AAFC Directives.\n";
+     #Disallow: \/atlas\/data_donnees\/\n\1";
+     i=0
+     aafc_directives=$new_setting;
+     while [[ $i -lt 100 ]]
+     do
+       i=$((i+1));
+
+       another_directive="aafc_directive_$i";
+       #echo "${!another_directive}";#FOR DEBUGGING
+       if [ -z "${!another_directive}" ]; then
+         aafc_directives="$aafc_directives\\1"
+         break;
+       else
+         aafc_directives=$aafc_directives"${!another_directive}\n"
+         echo "Adding AAFC robots.txt directive number $i : ${!another_directive}"
+         #echo "$aafc_directives"#FOR DEBUGGING, if you want to debug, uncomment this line.
+       fi
+     done
+     sed -r "s/${search_str}/${aafc_directives}/gm" $robotstxt_file > ${robotstxt_file}_temp;
+     cp ${robotstxt_file}_temp ${robotstxt_file}
+     echo "$robotstxt_file file manipulation is complete";
+  fi
+fi
 
