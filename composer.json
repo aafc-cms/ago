@@ -138,7 +138,9 @@
             },
             "drupal/lightning_core": {
                 "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order ignore 8.8.x patch":
+                    "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order ignore 9.0.x patch":
                     "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent":
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
@@ -157,23 +159,24 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "^9.1.18",
+        "agrcmsx/dxbase": "^9.1.24",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
+        "agrcmsx/config": "9.1.x-dev",
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
-        "agrcmsx/config": "9.1.x-dev",
-        "drupal/libraries": "^3.0",
-        "drupal/linkit": "6.0-beta2 as 5.0-beta11",
-        "drupal/file_replace": "^1.2",
-        "drupal/reroute_email": "^2.0",
-        "drupal/xhprof": "^1.0@beta",
-        "perftools/php-profiler": "^0.18.0",
-        "drupal/title_length": "^1.1",
         "drupal/bootstrap_site_alert": "^1.9",
+        "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
-        "drupal/view_custom_table": "9.0.x-dev@dev"
+        "drupal/libraries": "^3.0",
+        "drupal/reroute_email": "^2.0",
+        "drupal/title_length": "^1.1",
+        "drupal/xhprof": "^1.0@beta",
+        "drupal/view_custom_table": "9.0.x-dev@dev",
+        "perftools/php-profiler": "^0.18.0",
+        "drupal/purge": "3.0",
+        "drupal/varnish_purge": "^2.1"
     },
     "authors": [
         {
