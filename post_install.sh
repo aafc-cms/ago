@@ -4,6 +4,8 @@ printf "execute post_install.sh\n";
 
 trap "sudo configureSettingsFile" SIGINT SIGTERM
 #set -x
+RED='\033[0;31m'
+NC='\033[0m' # No Color
 
 live=0
 if [ -z $ENV_NAME ]; then
@@ -312,6 +314,7 @@ if [ ! -L html/modules/contrib/wxt_ext_translation ]; then
 fi
 
 
+if grep -q "# Directories" $robotstxt_file; then
 if ! grep -q "AAFC Directives" $robotstxt_file; then
   if ! grep -q "atlas/data_donnees" $robotstxt_file; then
      search_str="^(# Directories$)";
@@ -354,5 +357,11 @@ if ! grep -q "AAFC Directives" $robotstxt_file; then
      cp ${robotstxt_file}_temp ${robotstxt_file}
      echo "$robotstxt_file file manipulation is complete";
   fi
+fi
+else
+  echo "";
+  echo -e "${RED}robots.txt${NC} processing ${RED}**FAILED**${NC}, please review why # Directives was not found, was the structure of robots.txt changed by core ?  If so, review changes and adjust, instead of looking for # Directories look for another spot to insert the AAFC robots.txt directives.";
+  echo -e "${RED}exit in error${NC}";
+  exit 1;
 fi
 
