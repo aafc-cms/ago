@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f9dd6d419557d672eba3deb57911faa",
+    "content-hash": "6cf16630ea0a6b3a8d121dfad333badf",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -20600,7 +20600,14 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "drupal/core",
+            "version": "9.1.13.0",
+            "alias": "9.2.7",
+            "alias_normalized": "9.2.7.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "agrcmsx/config": 20,

@@ -113,6 +113,10 @@
                 "3182069 - Better exposed filters date picker jquery ui compatibility fix":
                 "https://www.drupal.org/files/issues/2021-09-03/3182069-date_range_date_picker_autocomplete.patch"
             },
+            "drupal/": {
+                "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch",
+                "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-09-08/2922570-90.9.2.5.patch"
+            },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
@@ -121,6 +125,10 @@
         "patches-ignore": {
             "drupalwxt/wxt": {
                 "drupal/core": {
+                    "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2020-10-31/2559833-72.patch",
+                    "Enter drupal/core patch #2998826 description here": "https://www.drupal.org/files/issues/2021-03-17/core-Term_route_context-2998826-93.patch",
+                    "Enter drupal/core patch #2470896 description here": "https://www.drupal.org/files/issues/2021-06-10/2470896-244.patch",
+                    "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-06-29/D91x-2922570-88.patch",
                     "2922570 - See reroll in 2922570-88 (above).":
                     "https://www.drupal.org/files/issues/2021-02-02/2922570-61.patch",
                     "2893407 - POST /quickedit/metadata returning HTTP 503 - patch 39.":
@@ -167,6 +175,7 @@
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
+        "drupal/core": "9.1.13 as 9.2.7",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^3.0",
