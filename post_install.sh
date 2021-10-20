@@ -5,6 +5,8 @@ printf "execute post_install.sh\n";
 trap "sudo configureSettingsFile" SIGINT SIGTERM
 #set -x
 RED='\033[0;31m'
+VERT='\033[0;32m'
+BOLD='\033[1m' # BOLD
 NC='\033[0m' # No Color
 
 live=0
@@ -355,7 +357,7 @@ if ! grep -q "AAFC Directives" $robotstxt_file; then
      done
      sed -r "s/${search_str}/${aafc_directives}/gm" $robotstxt_file > ${robotstxt_file}_temp;
      cp ${robotstxt_file}_temp ${robotstxt_file}
-     echo "$robotstxt_file file manipulation is complete";
+     echo -e "${BOLD}$robotstxt_file${VERT} file manipulation is${NC} ${BOLD}complete${NC}";
   fi
 fi
 else
