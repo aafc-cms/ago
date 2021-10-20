@@ -12,7 +12,90 @@ id: gcweb_report_a_problem
 title: 'GCWeb - Report a Problem'
 description: ''
 category: ''
-elements: "markup:\n  '#type': webform_markup\n  '#markup': '<legend><span class=\"field-name\">Please select all that apply:</span></legend>'\nproblem1:\n  '#type': checkbox\n  '#title': 'A link, button or video is not working'\nproblem2:\n  '#type': checkbox\n  '#title': 'It has a spelling mistake'\nproblem3:\n  '#type': checkbox\n  '#title': 'Information is missing'\nproblem4:\n  '#type': checkbox\n  '#title': 'Information is outdated or wrong'\nproblem5:\n  '#type': checkbox\n  '#title': 'Login error when trying to access an account (e.g. My Service Canada Account)'\nsub_option_container:\n  '#type': container\n  '#attributes':\n    style: 'margin-left: 40px;'\n  problem6:\n    '#type': checkbox\n    '#title': 'GC Key access'\n  problem7:\n    '#type': checkbox\n    '#title': 'SecureKey Concierge (Banking Credential) access'\n  problem8:\n    '#type': checkbox\n    '#title': 'Personal Access Code (PAC) problems or EI Access Code (AC) problems'\n  problem9:\n    '#type': checkbox\n    '#title': 'Social Insurance Number (SIN) validation problems'\n  problem10:\n    '#type': checkbox\n    '#title': 'Other login error not in this list'\nproblem11:\n  '#type': checkbox\n  '#title': 'I can''t find what I''m looking for'\nproblem12:\n  '#type': checkbox\n  '#title': 'Other issue not in this list'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#states':\n    enabled:\n      - ':input[name=\"problem1\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem2\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem3\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem4\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem5\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem6\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem7\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem8\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem9\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem10\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem11\"]':\n          checked: true\n      - or\n      - ':input[name=\"problem12\"]':\n          checked: true"
+elements: |-
+  markup:
+    '#type': webform_markup
+    '#markup': '<legend><span class="field-name">Please select all that apply:</span></legend>'
+  problem1:
+    '#type': checkbox
+    '#title': 'A link, button or video is not working'
+  problem2:
+    '#type': checkbox
+    '#title': 'It has a spelling mistake'
+  problem3:
+    '#type': checkbox
+    '#title': 'Information is missing'
+  problem4:
+    '#type': checkbox
+    '#title': 'Information is outdated or wrong'
+  problem5:
+    '#type': checkbox
+    '#title': 'Login error when trying to access an account (e.g. My Service Canada Account)'
+  sub_option_container:
+    '#type': container
+    '#attributes':
+      style: 'margin-left: 40px;'
+    problem6:
+      '#type': checkbox
+      '#title': 'GC Key access'
+    problem7:
+      '#type': checkbox
+      '#title': 'SecureKey Concierge (Banking Credential) access'
+    problem8:
+      '#type': checkbox
+      '#title': 'Personal Access Code (PAC) problems or EI Access Code (AC) problems'
+    problem9:
+      '#type': checkbox
+      '#title': 'Social Insurance Number (SIN) validation problems'
+    problem10:
+      '#type': checkbox
+      '#title': 'Other login error not in this list'
+  problem11:
+    '#type': checkbox
+    '#title': 'I can''t find what I''m looking for'
+  problem12:
+    '#type': checkbox
+    '#title': 'Other issue not in this list'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#states':
+      enabled:
+        - ':input[name="problem1"]':
+            checked: true
+        - or
+        - ':input[name="problem2"]':
+            checked: true
+        - or
+        - ':input[name="problem3"]':
+            checked: true
+        - or
+        - ':input[name="problem4"]':
+            checked: true
+        - or
+        - ':input[name="problem5"]':
+            checked: true
+        - or
+        - ':input[name="problem6"]':
+            checked: true
+        - or
+        - ':input[name="problem7"]':
+            checked: true
+        - or
+        - ':input[name="problem8"]':
+            checked: true
+        - or
+        - ':input[name="problem9"]':
+            checked: true
+        - or
+        - ':input[name="problem10"]':
+            checked: true
+        - or
+        - ':input[name="problem11"]':
+            checked: true
+        - or
+        - ':input[name="problem12"]':
+            checked: true
 css: ''
 javascript: ''
 settings:

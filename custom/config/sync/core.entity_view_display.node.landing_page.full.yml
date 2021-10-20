@@ -92,6 +92,7 @@ third_party_settings:
               add_region_classes: 1
               attributes: ''
           label: ''
+          context_mapping: {  }
         components:
           2ba0359c-af3f-4bd7-a6d6-a6e93f680883:
             uuid: 2ba0359c-af3f-4bd7-a6d6-a6e93f680883

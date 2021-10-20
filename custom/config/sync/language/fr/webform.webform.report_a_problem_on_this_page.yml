@@ -1,4 +1,20 @@
-elements: "wf_reportaproblem:\n  '#title': 'Veuillez cocher toutes les réponses pertinentes&nbsp;:'\n  '#options':\n    'A link, button or video is not working': 'Un lien, un bouton ou une vidéo ne fonctionne pas'\n    'It has a spelling mistake': 'Il y a une erreur d''orthographe ou de grammaire'\n    'Information is missing': 'Les renseignements sont incomplets'\n    'Information is outdated or wrong': 'L''information n''est plus à jour ou est erronée'\n    'Login error when trying to access an account (e.g. My Service Canada Account)': 'Message d''erreur à l''ouverture de la session lorsque je tente d''accéder à un compte (ex. Mon dossier Service Canada)'\n    'GC Key access': 'Accès CléGC'\n    'SecureKey Concierge (Banking Credential) access': 'Accès SecureKey Service de Concierge (justificatifs d''identité bancaires)'\n    'Personal Access Code (PAC) problems or EI Access Code (AC) problems': 'Problème avec le Code d''accès personnel (CAP) ou avec le Code d''accès (CA) de l''assurance emploi'\n    'Social Insurance Number (SIN) validation problems': 'Problème lié à la validation du numéro d''assurance sociale (NAS)'\n    'Other login error not in this list': 'Autre erreur lors de l''ouverture de session qui ne figure pas sur cette liste'\n    'I can''t find what I''m looking for': 'Je n''arrive pas à trouver ce que je cherche'\n    'Other issue not in this list': 'Autre problème qui ne figure pas sur cette liste'\n  '#required_error': 'Le formulaire n''a pu être soumis : Veuillez selectionnez au moins une case.'\n"
+elements: |
+  wf_reportaproblem:
+    '#title': 'Veuillez cocher toutes les réponses pertinentes&nbsp;:'
+    '#options':
+      'A link, button or video is not working': 'Un lien, un bouton ou une vidéo ne fonctionne pas'
+      'It has a spelling mistake': 'Il y a une erreur d''orthographe ou de grammaire'
+      'Information is missing': 'Les renseignements sont incomplets'
+      'Information is outdated or wrong': 'L''information n''est plus à jour ou est erronée'
+      'Login error when trying to access an account (e.g. My Service Canada Account)': 'Message d''erreur à l''ouverture de la session lorsque je tente d''accéder à un compte (ex. Mon dossier Service Canada)'
+      'GC Key access': 'Accès CléGC'
+      'SecureKey Concierge (Banking Credential) access': 'Accès SecureKey Service de Concierge (justificatifs d''identité bancaires)'
+      'Personal Access Code (PAC) problems or EI Access Code (AC) problems': 'Problème avec le Code d''accès personnel (CAP) ou avec le Code d''accès (CA) de l''assurance emploi'
+      'Social Insurance Number (SIN) validation problems': 'Problème lié à la validation du numéro d''assurance sociale (NAS)'
+      'Other login error not in this list': 'Autre erreur lors de l''ouverture de session qui ne figure pas sur cette liste'
+      'I can''t find what I''m looking for': 'Je n''arrive pas à trouver ce que je cherche'
+      'Other issue not in this list': 'Autre problème qui ne figure pas sur cette liste'
+    '#required_error': 'Le formulaire n''a pu être soumis : Veuillez selectionnez au moins une case.'
 settings:
   confirmation_message: "<h3>Merci de votre aide!</h3>\r\n\r\n<p>Vous ne recevrez pas de réponse. Pour toute question,&nbsp;<a href=\"https://www.canada.ca/fr/contact/index.html\">contactez-nous</a>.</p>\r\n"
   confirmation_title: 'Merci de votre aide!'
