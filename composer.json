@@ -146,15 +146,15 @@
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
                     "overrides for profile and sub profile use 633 instead of 631":
                     "https://www.drupal.org/files/issues/2020-12-11/1356276-631-by-mpotter-balsama-phenaproxima.patch"
-                },
-                "acquia/lightning": {
-                    "drupal/core": {
-                        "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
-                        "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                        "2914389 - Allow profiles to exclude dependencies of their parent":
-                        "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                    }
                 }
+            },
+            "acquia/lightning": {
+                "drupal/core": {
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
+                    "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                    "2914389 - Allow profiles to exclude dependencies of their parent":
+                    "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                 }
             }
         }
     },
