@@ -317,49 +317,49 @@ fi
 
 
 if grep -q "# Directories" $robotstxt_file; then
-if ! grep -q "AAFC Directives" $robotstxt_file; then
-  if ! grep -q "atlas/data_donnees" $robotstxt_file; then
-     search_str="^(# Directories$)";
-     # *************** INSERT ROBOTS.TXT / robots.txt DIRECTIVES AS FOLLOWS *******************
-     declare aafc_directive_1="Disallow: \/atlas\/data_donnees\/"
-     declare aafc_directive_2="Disallow: \/atlas\/rest\/services\/"
-     declare aafc_directive_3="Disallow: \/atlas\/services\/"
-     declare aafc_directive_4="Disallow: \/eng\/"
-     declare aafc_directive_5="Disallow: \/fra\/"
-     declare aafc_directive_6="Crawl-Delay: 60"
-     #EXAMPLE:
-     #declare aafc_directive_7="Disallow: \/example\/directive7\/"
-     #declare aafc_directive_8="Disallow: \/example\/directive8\/"
-     #declare aafc_directive_9="Disallow: \/example\/directive9\/"
-     #declare aafc_directive_10="Disallow: \/example\/directive10\/"
-     #declare aafc_directive_11="Disallow: \/example\/directive11\/"
-     #declare aafc_directive_12="Disallow: \/example\/directive12\/"
-     #declare aafc_directive_13="Disallow: \/example\/directive13\/"
-     # *************** END OF AAFC ROBOTS.TXT / robots.txt DIRECTIVES  *******************
-     new_setting="# AAFC Directives.\n";
-     #Disallow: \/atlas\/data_donnees\/\n\1";
-     i=0
-     aafc_directives=$new_setting;
-     while [[ $i -lt 100 ]]
-     do
-       i=$((i+1));
+  if ! grep -q "AAFC Directives" $robotstxt_file; then
+    if ! grep -q "atlas/data_donnees" $robotstxt_file; then
+       search_str="^(# Directories$)";
+       # *************** INSERT ROBOTS.TXT / robots.txt DIRECTIVES AS FOLLOWS *******************
+       declare aafc_directive_1="Disallow: \/atlas\/data_donnees\/"
+       declare aafc_directive_2="Disallow: \/atlas\/rest\/services\/"
+       declare aafc_directive_3="Disallow: \/atlas\/services\/"
+       declare aafc_directive_4="Disallow: \/eng\/"
+       declare aafc_directive_5="Disallow: \/fra\/"
+       declare aafc_directive_6="Crawl-Delay: 60"
+       #EXAMPLE:
+       #declare aafc_directive_7="Disallow: \/example\/directive7\/"
+       #declare aafc_directive_8="Disallow: \/example\/directive8\/"
+       #declare aafc_directive_9="Disallow: \/example\/directive9\/"
+       #declare aafc_directive_10="Disallow: \/example\/directive10\/"
+       #declare aafc_directive_11="Disallow: \/example\/directive11\/"
+       #declare aafc_directive_12="Disallow: \/example\/directive12\/"
+       #declare aafc_directive_13="Disallow: \/example\/directive13\/"
+       # *************** END OF AAFC ROBOTS.TXT / robots.txt DIRECTIVES  *******************
+       new_setting="# AAFC Directives.\n";
+       #Disallow: \/atlas\/data_donnees\/\n\1";
+       i=0
+       aafc_directives=$new_setting;
+       while [[ $i -lt 100 ]]
+       do
+         i=$((i+1));
 
-       another_directive="aafc_directive_$i";
-       #echo "${!another_directive}";#FOR DEBUGGING
-       if [ -z "${!another_directive}" ]; then
-         aafc_directives="$aafc_directives\\1"
-         break;
-       else
-         aafc_directives=$aafc_directives"${!another_directive}\n"
-         echo "Adding AAFC robots.txt directive number $i : ${!another_directive}"
-         #echo "$aafc_directives"#FOR DEBUGGING, if you want to debug, uncomment this line.
-       fi
-     done
-     sed -r "s/${search_str}/${aafc_directives}/gm" $robotstxt_file > ${robotstxt_file}_temp;
-     cp ${robotstxt_file}_temp ${robotstxt_file}
-     echo -e "${BOLD}$robotstxt_file${VERT} file manipulation is${NC} ${BOLD}complete${NC}";
+         another_directive="aafc_directive_$i";
+         #echo "${!another_directive}";#FOR DEBUGGING
+         if [ -z "${!another_directive}" ]; then
+           aafc_directives="$aafc_directives\\1"
+           break;
+         else
+           aafc_directives=$aafc_directives"${!another_directive}\n"
+           echo "Adding AAFC robots.txt directive number $i : ${!another_directive}"
+           #echo "$aafc_directives"#FOR DEBUGGING, if you want to debug, uncomment this line.
+         fi
+       done
+       sed -r "s/${search_str}/${aafc_directives}/gm" $robotstxt_file > ${robotstxt_file}_temp;
+       cp ${robotstxt_file}_temp ${robotstxt_file}
+       echo -e "${BOLD}$robotstxt_file${VERT} file manipulation is${NC} ${BOLD}complete${NC}";
+    fi
   fi
-fi
 else
   echo "";
   echo -e "${RED}robots.txt${NC} processing ${RED}**FAILED**${NC}, please review why # Directives was not found, was the structure of robots.txt changed by core ?  If so, review changes and adjust, instead of looking for # Directories look for another spot to insert the AAFC robots.txt directives.";
