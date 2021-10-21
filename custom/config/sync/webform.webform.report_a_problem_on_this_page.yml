@@ -12,7 +12,25 @@ id: report_a_problem_on_this_page
 title: 'Report a problem on this page'
 description: ''
 category: 'Report a problem'
-elements: "wf_reportaproblem:\n  '#type': checkboxes\n  '#title': 'Please select all that apply:'\n  '#options':\n    'A link, button or video is not working': 'A link, button or video is not working'\n    'It has a spelling mistake': 'It has a spelling mistake'\n    'Information is missing': 'Information is missing'\n    'Information is outdated or wrong': 'Information is outdated or wrong'\n    'Login error when trying to access an account (e.g. My Service Canada Account)': 'Login error when trying to access an account (e.g. My Service Canada Account)'\n    'GC Key access': 'GC Key access'\n    'SecureKey Concierge (Banking Credential) access': 'SecureKey Concierge (Banking Credential) access'\n    'Personal Access Code (PAC) problems or EI Access Code (AC) problems': 'Personal Access Code (PAC) problems or EI Access Code (AC) problems'\n    'Social Insurance Number (SIN) validation problems': 'Social Insurance Number (SIN) validation problems'\n    'Other login error not in this list': 'Other login error not in this list'\n    'I can''t find what I''m looking for': 'I can''t find what I''m looking for'\n    'Other issue not in this list': 'Other issue not in this list'\n  '#required': true\n  '#required_error': 'The form could not be submitted: Please select at least one item.'"
+elements: |-
+  wf_reportaproblem:
+    '#type': checkboxes
+    '#title': 'Please select all that apply:'
+    '#options':
+      'A link, button or video is not working': 'A link, button or video is not working'
+      'It has a spelling mistake': 'It has a spelling mistake'
+      'Information is missing': 'Information is missing'
+      'Information is outdated or wrong': 'Information is outdated or wrong'
+      'Login error when trying to access an account (e.g. My Service Canada Account)': 'Login error when trying to access an account (e.g. My Service Canada Account)'
+      'GC Key access': 'GC Key access'
+      'SecureKey Concierge (Banking Credential) access': 'SecureKey Concierge (Banking Credential) access'
+      'Personal Access Code (PAC) problems or EI Access Code (AC) problems': 'Personal Access Code (PAC) problems or EI Access Code (AC) problems'
+      'Social Insurance Number (SIN) validation problems': 'Social Insurance Number (SIN) validation problems'
+      'Other login error not in this list': 'Other login error not in this list'
+      'I can''t find what I''m looking for': 'I can''t find what I''m looking for'
+      'Other issue not in this list': 'Other issue not in this list'
+    '#required': true
+    '#required_error': 'The form could not be submitted: Please select at least one item.'
 css: ''
 javascript: ''
 settings:

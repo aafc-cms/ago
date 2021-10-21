@@ -31,7 +31,28 @@ extract:
     url_embed: '0'
 check:
   connections_max: 8
-  disable_link_check_for_urls: "example.com\nexample.net\nexample.org\nlinkedin.com\ncollab.agr.gc.ca\ndirectinfo.agr.gc.ca\ngcdirectory-gcannuaire.ssc-spc.gc.ca\ngcconnex.gc.ca\ngcpedia.gc.ca\ngccollab.ca\npsoft.agr.gc.ca\nforms-formulaires.agr.gc.ca\nintranet.agr.gc.ca\nv02.densan.ca\nmailto:\nintranet.canada.ca\nportal-portail.tbs-sct.gc.ca\ngcintranet.tpsgc-pwgsc.gc.ca\neajl-orca.securise-secure.gc.ca\nmygcpay.pwgsc.gc.ca\nassystweb.agr.gc.ca"
+  disable_link_check_for_urls: |-
+    example.com
+    example.net
+    example.org
+    linkedin.com
+    collab.agr.gc.ca
+    directinfo.agr.gc.ca
+    gcdirectory-gcannuaire.ssc-spc.gc.ca
+    gcconnex.gc.ca
+    gcpedia.gc.ca
+    gccollab.ca
+    psoft.agr.gc.ca
+    forms-formulaires.agr.gc.ca
+    intranet.agr.gc.ca
+    v02.densan.ca
+    mailto:
+    intranet.canada.ca
+    portal-portail.tbs-sct.gc.ca
+    gcintranet.tpsgc-pwgsc.gc.ca
+    eajl-orca.securise-secure.gc.ca
+    mygcpay.pwgsc.gc.ca
+    assystweb.agr.gc.ca
   library: core
   interval: 604800
   useragent: 'Drupal (+https://drupal.org/)'

@@ -12,7 +12,76 @@ id: aafc_generic_contact_form
 title: 'Contact Form'
 description: ''
 category: ''
-elements: "descriptionoffeedbackform:\n  '#type': processed_text\n  '#text': |\n    <style type=\"text/css\">p {\n      font-size: 20px;\n      }\n    </style>\n    <p>Use this form to send us your questions or comments.\n    </p>\n    <section>\n      <details class=\"mrgn-bttm-md open\">\n        <summary>\n          <h2 class=\"h5\">Privacy statement\n          </h2>\n        </summary>\n        <p>Information collected on this form will be used to respond to your enquiry and is collected under the authority of the <a href=\"http://laws-lois.justice.gc.ca/eng/acts/A-9/index.html\">Department of Agriculture and Agri-Food Act</a>. The personal information will be protected in accordance with the <a href=\"http://lois-laws.justice.gc.ca/eng/acts/P-21/index.html\">Privacy Act</a> and described in Personal Information Bank <a href=\"https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu914\">AAFC PSU 914 (Public Communications)</a>. Individuals have the right to access their personal information held by Agriculture and Agri-Food Canada and to request changes to incorrect personal information by contacting our Access to Information and Privacy Coordinator at <a href=\"mailto:aafc.atip-aiprp.aac@canada.ca\">aafc.atip-aiprp.aac@canada.ca</a>.\n        </p>\n      </details>\n    </section>\n    \n  '#format': full_html\ndenotesmandatoryfield:\n  '#type': processed_text\n  '#text': |\n    <style type=\"text/css\">p {\n      font-size: 16px !important ;\n      }\n    </style>\n    <p class=\"text-danger\">* denotes mandatory field.\n    </p>\n    \n  '#format': full_html\nyourmessage:\n  '#type': textarea\n  '#title': 'Your message'\n  '#required': true\nemailaddress:\n  '#type': email\n  '#title': 'Email address (yourname@domain.com)'\n  '#autocomplete': email\n  '#required': true\npreferredresponselanguage:\n  '#type': select\n  '#title': 'Preferred response language:'\n  '#options':\n    English: English\n    French: French\n  '#required': true\nfullname:\n  '#type': textfield\n  '#title': 'Full name'\n  '#autocomplete': name\n  '#required': true\ncityortown:\n  '#type': textfield\n  '#title': City/Town\n  '#autocomplete': address-level2\nprovinceorterritory:\n  '#type': textfield\n  '#title': Province/Territory\n  '#autocomplete': address-level1\ncountry:\n  '#type': textfield\n  '#title': Country\n  '#autocomplete': country-name\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: |-
+  descriptionoffeedbackform:
+    '#type': processed_text
+    '#text': |
+      <style type="text/css">p {
+        font-size: 20px;
+        }
+      </style>
+      <p>Use this form to send us your questions or comments.
+      </p>
+      <section>
+        <details class="mrgn-bttm-md open">
+          <summary>
+            <h2 class="h5">Privacy statement
+            </h2>
+          </summary>
+          <p>Information collected on this form will be used to respond to your enquiry and is collected under the authority of the <a href="http://laws-lois.justice.gc.ca/eng/acts/A-9/index.html">Department of Agriculture and Agri-Food Act</a>. The personal information will be protected in accordance with the <a href="http://lois-laws.justice.gc.ca/eng/acts/P-21/index.html">Privacy Act</a> and described in Personal Information Bank <a href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu914">AAFC PSU 914 (Public Communications)</a>. Individuals have the right to access their personal information held by Agriculture and Agri-Food Canada and to request changes to incorrect personal information by contacting our Access to Information and Privacy Coordinator at <a href="mailto:aafc.atip-aiprp.aac@canada.ca">aafc.atip-aiprp.aac@canada.ca</a>.
+          </p>
+        </details>
+      </section>
+      
+    '#format': full_html
+  denotesmandatoryfield:
+    '#type': processed_text
+    '#text': |
+      <style type="text/css">p {
+        font-size: 16px !important ;
+        }
+      </style>
+      <p class="text-danger">* denotes mandatory field.
+      </p>
+      
+    '#format': full_html
+  yourmessage:
+    '#type': textarea
+    '#title': 'Your message'
+    '#required': true
+  emailaddress:
+    '#type': email
+    '#title': 'Email address (yourname@domain.com)'
+    '#autocomplete': email
+    '#required': true
+  preferredresponselanguage:
+    '#type': select
+    '#title': 'Preferred response language:'
+    '#options':
+      English: English
+      French: French
+    '#required': true
+  fullname:
+    '#type': textfield
+    '#title': 'Full name'
+    '#autocomplete': name
+    '#required': true
+  cityortown:
+    '#type': textfield
+    '#title': City/Town
+    '#autocomplete': address-level2
+  provinceorterritory:
+    '#type': textfield
+    '#title': Province/Territory
+    '#autocomplete': address-level1
+  country:
+    '#type': textfield
+    '#title': Country
+    '#autocomplete': country-name
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Send message'
 css: ''
 javascript: ''
 settings:
