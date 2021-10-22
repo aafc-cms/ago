@@ -21,7 +21,7 @@ global-styling:
 aafctheme-externaladobetmstagingjs:
   header: true
   js:
-    //assets.adobedtm.com/launch-EN11c0261481f74c56b7656937bbd995e9-staging.min.js: { type: external}
+    //assets.adobedtm.com/be5dfd287373/0127575cd23a/launch-913b1beddf7a-staging.min.js: { type: external}
 
 
 aafctheme-externaladobetmprodjs:
