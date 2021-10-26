@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37454762b8eb40d43a07a3bbe59b6e98",
+    "content-hash": "b991490e2ae8e0d403b98051fe187170",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -12501,26 +12501,29 @@
         },
         {
             "name": "drupal/view_custom_table",
-            "version": "dev-9.0.x",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/view_custom_table.git",
-                "reference": "793a4a79a51c43028d6913ac1b79e63a8b2b364b"
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/view_custom_table-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "530016dbf77629b1476534c7199f35a508f23ebf"
             },
             "require": {
-                "drupal/core": "9.x"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-9.0.x": "9.0.x-dev"
-                },
                 "drupal": {
-                    "version": "9.0.x-dev",
-                    "datestamp": "1592223980",
+                    "version": "2.0.0",
+                    "datestamp": "1635223953",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -12529,6 +12532,14 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Rajeshreeputra",
+                    "homepage": "https://www.drupal.org/user/3418561"
+                },
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                },
                 {
                     "name": "sagar_cis",
                     "homepage": "https://www.drupal.org/user/3487653"
@@ -20613,8 +20624,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "agrcmsx/config": 20,
-        "drupal/xhprof": 10,
-        "drupal/view_custom_table": 20
+        "drupal/xhprof": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
