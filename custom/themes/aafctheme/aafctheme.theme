@@ -197,6 +197,10 @@ function aafctheme_preprocess_html(&$variables) {
     $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmstagingjs';
   }
 
+  // Invitation Manager CSS and JS library.
+  if (\Drupal::currentUser()->isAnonymous()) {
+    $variables['#attached']['library'][] = 'aafctheme/aafctheme-invitationmanager';
+  }
 
 }
 
