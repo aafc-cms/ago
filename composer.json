@@ -117,6 +117,10 @@
                 "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch",
                 "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-09-08/2922570-90.9.2.5.patch"
             },
+            "drupal/filebrowser": {
+                "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
+                "https://www.drupal.org/files/issues/2021-10-22/filesize-statfailed-3245404-02.patch"
+            },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
@@ -185,7 +189,8 @@
         "drupal/view_custom_table": "^2.0",
         "perftools/php-profiler": "^0.18.0",
         "drupal/purge": "3.0",
-        "drupal/varnish_purge": "^2.1"
+        "drupal/varnish_purge": "^2.1",
+        "drupal/filebrowser": "^3.0"
     },
     "authors": [
         {
