@@ -170,7 +170,8 @@
         "drupal/wxt_bootstrap": "dev-4.x as 1.26",
         "drupal/wxt_library": "dev-4.x as 1.22",
         "drupal/xhprof": "^1.0@beta",
-        "perftools/php-profiler": "^0.18.0"
+        "perftools/php-profiler": "^0.18.0",
+        "drupal/filebrowser": "^2.3"
     },
     "authors": [
         {
