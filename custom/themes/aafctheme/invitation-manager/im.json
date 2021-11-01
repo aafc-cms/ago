@@ -11,29 +11,30 @@
       { "url" : "^agr-qa.agr.gc.ca\/"},
       { "url" : "^agr-dev.agr.gc.ca\/"},
       { "url" : "^agr-uat.agr.gc.ca\/"},
-      { "url" : "^agr-wcag.agr.gc.ca\/"}
+      { "url" : "^agr-wcag.agr.gc.ca\/"},
+      { "url" : "^aafctest.local\/"}
     ]
   },
   "surveys" : [
   {
     "id" : "1",
-    "title-en" : "Test AAFC New Configuration - Entire Site (eng)",
-    "title-fr" : "Test AAFC New Configuration - Entire Site (fra)",
-    "body-en" : "<p>Please take 5 minutes at the end of your visit today to participate in a research exercise to help improve our services.</p><p class='mrgn-bttm-0'>",
-    "body-fr" : "<p>Veuillez prendre 5 minutes à la fin de votre visite aujourd’hui pour participer à un exercice de recherche pour aider à améliorer nos services.</p><p class='mrgn-bttm-0'>",
-    "link-en" : "https://eccx.optimalworkshop.com/questions/2esdzqcu-0-2",
-    "link-fr" : "https://eccx.optimalworkshop.com/questions/2esdzqcu-0-0-0",
-    "start-on" : "2020-01-30T00:00:00",
-    "end-on" : "2020-01-30T23:59:00",
+    "title-en" : "Website Survey - Test Configuration",
+    "title-fr" : "Sondage du site Web - Configuration test",
+    "body-en" : "<p>You are one of the few visitors who have been selected to share your feedback.</p><p>Please take less than 5 minutes at the end of your visit to answer 6 questions about your experience online.</p><p class='mrgn-bttm-0'>",
+    "body-fr" : "<p>Vous êtes l'un des rares visiteurs qui ont été sélectionnés pour partager votre rétroaction.</p><p>Veuillez prendre moins de 5 minutes à la fin de votre visite pour répondre à 6 questions sur votre expérience en ligne.</p><p class='mrgn-bttm-0'>",
+    "link-en" : "https://www.canada.ca/en/surveys/gc-task-success-survey.html?srvsrc=testing:n:n:n:n:n:n&rvlist=aafc-aac",
+    "link-fr" : "https://www.canada.ca/fr/sondages/sondage-reussite-taches-gc.html?srvsrc=testing:n:n:n:n:n:n&rvlist=aafc-aac",
+    "start-on" : "2021-10-28T00:00:00",
+    "end-on" : "2031-12-31T23:59:00",
     "type" : "Entire site",
-    "probability" : 0.5,
+    "probability" : 0.9,
     "yes-en" : "<strong>Yes, <span class='wb-inv'>I will take the exit survey </span>after my visit.</strong>",
     "yes-fr" : "<strong>Oui, <span class='wb-inv'>je vais participer au sondage de départ </span>après ma visite.</strong>",
     "no-en" : "No, <span class='wb-inv'>I do not want to take the exit survey, </span>thank you.",
     "no-fr" : "Non, <span class='wb-inv'>je ne veux pas participer au sondage de départ, </span>merci.",
     "close-en" : "Close: Exit survey (escape key)",
     "close-fr" : "Fermer : Sondage de fin de visite (touche d&apos;échappement)",
-    "name" : "SC - Grants and Contributions Call for Proposals",
+    "name" : "AAFC - Non-Canada.ca - Site - 10 - GC Task Success Survey Test - 2021-10-28",
     "survey-urls" : [
       {"site" : "^agr-qa.agr.gc.ca"},
       {"site" : "^agr-dev.agr.gc.ca"},
@@ -41,7 +42,8 @@
       {"site" : "^agr-wcag.agr.gc.ca"},
       {"site" : "^agriculture.agr.gc.ca"},
       {"site" : "^agriculture.canada.ca"},
-      {"site" : "^www.agriculture.canada.ca"}
+      {"site" : "^www.agriculture.canada.ca"},
+      {"site" : "^aafctest.local"}
     ]
   }
   ]
