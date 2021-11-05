@@ -194,3 +194,11 @@ filters:
         iframe: iframe
       media_switch: ''
       use_data_uri: '0'
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

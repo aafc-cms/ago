@@ -17,9 +17,8 @@ elements: |-
     '#type': processed_text
     '#text': |
       <p>The information provided below will help initiate your publishing project. Once submitted, Publishing and Creative Services will contact you within two business days.</p>
-      
+
       <p>If you leave this page before submitting your form, the information will be lost.</p>
-      
     '#format': full_html
   psrf_section_networkusername:
     '#type': webform_section
@@ -243,7 +242,6 @@ elements: |-
       <p>Please note: Once this form is completed and received in the Publishing inbox, a project officer will contact you within two business days.
        </p>
         
-      
     '#format': full_html
 css: ''
 javascript: ''
