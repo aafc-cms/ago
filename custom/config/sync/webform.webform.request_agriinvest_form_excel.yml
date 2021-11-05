@@ -1,4 +1,4 @@
-uuid: b20d4489-8e54-4996-85b3-5024c1c8f0bc
+uuid: 49ceb1d6-0070-473d-bf79-5ad262a676b9
 langcode: en
 status: open
 dependencies: {  }
@@ -8,9 +8,9 @@ weight: 0
 uid: 72
 template: false
 archive: false
-id: as_ai_request_form
-title: 'Request AgriStability and AgriInvest forms in Excel (AgriStability)'
-description: 'Request AgriStability and AgriInvest Forms in Excel&nbsp;(AgriStability)'
+id: request_agriinvest_form_excel
+title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest)'
+description: 'Request AgriStability and AgriInvest forms in Excel&nbsp;(AgriInvest)'
 category: 'Services Request Form'
 elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <p class=\"mrgn-tp-lg\">To receive the AgriStability and AgriInvest forms package in Excel, please complete the following online request form:</p>\n    \n    <h2 class=\"mrgn-bttm-md\">Request AgriStability and AgriInvest forms in Excel</h2>\n    \nrequestor_name_required_:\n  '#type': textfield\n  '#title': 'Requestor name'\n  '#required': true\nemail_address_required_:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nphone_number_as_ai:\n  '#type': webform_telephone\n  '#title': 'Phone number'\n  '#type__access': false\n  '#ext__access': false\n  '#phone__international_initial_country': CA\nlanguage_of_preference:\n  '#type': select\n  '#title': 'Language of preference'\n  '#options':\n    English: English\n    French: French\n  '#empty_option': English\n  '#empty_value': English\nmarkup_01:\n  '#type': webform_markup\n  '#markup': '<p>The following Excel forms packages include the Statement A, Statement B and Adjustment Request Form. Indicate below which forms package(s) you would like to receive.</p>'\nfor_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:\n  '#type': checkboxes\n  '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon:'\n  '#options':\n    '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1273 forms package for individuals.'\n    '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2020 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'\n    '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.*'\n  '#options__properties': ''\nmarkup_02:\n  '#type': webform_markup\n  '#markup': |\n    <p>\n      <b>* 2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.</b>\n    </p>\n    \nfor_producers_in_alberta_ontario_prince_edward_island_and_saskat:\n  '#type': checkboxes\n  '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan:'\n  '#options':\n    '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1163 forms package for individuals.'\n  '#options__properties': ''"
 css: ''
@@ -22,7 +22,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /agricultural-programs-and-services/agristability/resources/request-agristability-agriInvest-forms
+  page_submit_path: /agricultural-programs-and-services/agriinvest/resources/request-agristability-agriInvest-forms
   page_confirm_path: ''
   page_theme_name: aafctheme
   form_title: source_entity_webform
@@ -113,7 +113,7 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
-  confirmation_title: 'Request confirmed - AgriStability and AgriInvest forms in Excel (AgriStability)'
+  confirmation_title: 'Request confirmed - AgriStability and AgriInvest forms in Excel (AgriInvest)'
   confirmation_message: 'Your request has been received.&nbsp;Please print this confirmation page for your records.'
   confirmation_url: ''
   confirmation_attributes: {  }
