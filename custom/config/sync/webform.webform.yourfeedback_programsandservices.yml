@@ -35,7 +35,6 @@ elements: |-
           </p>
         </details>
       </section>
-      
     '#format': full_html
   denotesmandatoryfield:
     '#type': processed_text
@@ -46,7 +45,6 @@ elements: |-
       </style>
       <p class="text-danger">* denotes mandatory field.
       </p>
-      
     '#format': full_html
   programorservice:
     '#type': webform_term_select
