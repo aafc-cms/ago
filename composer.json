@@ -109,13 +109,7 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/better_exposed_filters": {
-                "3182069 - Better exposed filters date picker jquery ui compatibility fix":
-                "https://www.drupal.org/files/issues/2021-09-03/3182069-date_range_date_picker_autocomplete.patch"
-            },
             "drupal/core": {
-                "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch",
-                "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-09-08/2922570-90.9.2.5.patch"
             },
             "drupal/filebrowser": {
                 "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
@@ -131,14 +125,16 @@
                 "drupal/core": {
                     "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2020-10-31/2559833-72.patch",
                     "Enter drupal/core patch #2998826 description here": "https://www.drupal.org/files/issues/2021-03-17/core-Term_route_context-2998826-93.patch",
+		    "Enter drupal/core patch #2630732 description here": "https://www.drupal.org/files/issues/2020-09-17/2630732-77.patch",
                     "Enter drupal/core patch #2470896 description here": "https://www.drupal.org/files/issues/2021-06-10/2470896-244.patch",
                     "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-06-29/D91x-2922570-88.patch",
                     "2922570 - See reroll in 2922570-88 (above).":
                     "https://www.drupal.org/files/issues/2021-02-02/2922570-61.patch",
                     "2893407 - POST /quickedit/metadata returning HTTP 503 - patch 39.":
                     "https://www.drupal.org/files/issues/2020-01-09/2893407-39.patch",
-                    "overrides for profile and sub profile use 633 instead of 631-by-mpotter-balsa":
-                    "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch"
+                    "1356276 - Overrides for profile and sub profile use 633 instead of 631-by-mpotter-balsa":
+                    "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch",
+                    "1356276 - Overrides for profile and sub profile use 686 instead of 656": "https://www.drupal.org/files/issues/2021-06-29/D91x-1356276-656.patch"
                 },
                 "drupal/moderation_sidebar": {
                     "Discard Draft for a translation edits the base language node, ignore this patch, use patch 7 instead": "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
@@ -171,7 +167,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "^9.1.24",
+        "agrcmsx/dxbase": "9.3.0-rc1",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -179,7 +175,7 @@
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/core": "9.2.7 as 9.1.13",
+        "drupal/core": "9.3.0-beta1 as 9.1.13",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^3.0",
