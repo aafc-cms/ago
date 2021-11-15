@@ -179,6 +179,7 @@
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^3.0",
+        "drupal/linkit": "6.0-beta3 as 6.0-beta2",
         "drupal/reroute_email": "^2.0",
         "drupal/title_length": "^1.1",
         "drupal/xhprof": "^1.0@beta",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "395428590228ea2638dec08511311bea",
+    "content-hash": "821bcfee6ce2b8a48b73f8d7f5ff5fd8",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -20685,6 +20685,12 @@
             "version": "9.3.0.0-beta1",
             "alias": "9.1.13",
             "alias_normalized": "9.1.13.0"
+        },
+        {
+            "package": "drupal/linkit",
+            "version": "6.0.0.0-beta3",
+            "alias": "6.0-beta2",
+            "alias_normalized": "6.0.0.0-beta2"
         }
     ],
     "minimum-stability": "dev",
