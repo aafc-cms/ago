@@ -167,7 +167,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.3.0-rc2",
+        "agrcmsx/dxbase": "9.3.0-rc3",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -187,7 +187,8 @@
         "perftools/php-profiler": "^0.18.0",
         "drupal/purge": "3.0",
         "drupal/varnish_purge": "^2.1",
-        "drupal/filebrowser": "^3.0"
+        "drupal/filebrowser": "^3.0",
+        "drupal/media_library_edit": "^2.1"
     },
     "authors": [
         {

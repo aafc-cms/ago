@@ -9,6 +9,7 @@ dependencies:
     - media.type.slideshow_thumbnav
   module:
     - media_library
+    - media_library_edit
     - path
 id: media.slideshow_thumbnav.default
 targetEntityType: media
@@ -27,14 +28,18 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_media_thumbs:
     type: media_library_widget
     weight: 27
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   name:
     type: string_textfield
     weight: 0
