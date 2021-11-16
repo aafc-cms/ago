@@ -146,6 +146,7 @@ settings:
   token_update: false
   token_delete: false
   serial_disabled: false
+  form_disable_remote_addr: false
 access:
   create:
     roles:
