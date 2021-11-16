@@ -2,8 +2,63 @@ uuid: e84dfb17-bda5-4a0d-a030-2ce0e3553fd9
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.no_editor_full
+    - filter.format.rich_text
+    - media.type.audio_file
+    - media.type.document
+    - media.type.image
+    - media.type.instagram
+    - media.type.slideshow
+    - media.type.tweet
+    - media.type.video
+    - media.type.video_file
+    - node.type.landing_page
+    - node.type.page
+    - node.type.webform
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.media_category
+    - workflows.workflow.block_publishing
   module:
+    - access_unpublished
+    - agri_admin
+    - block
+    - block_content
+    - comment
+    - content_moderation
+    - content_translation
+    - contextual
+    - dropzonejs
+    - entity_browser
+    - entity_reference_revisions
+    - file
+    - file_delete
+    - filter
+    - layout_builder
     - lightning_core
+    - locale
+    - media
+    - menu_admin_per_menu
+    - menu_link_content
+    - moderation_dashboard
+    - node
+    - panels
+    - panels_ipe
+    - paragraphs
+    - path
+    - pathauto
+    - quickedit
+    - redirect
+    - responsive_image
+    - scanner
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+    - webform
+    - webform_node
+    - wxt_core
 third_party_settings:
   lightning_core:
     description: ''
@@ -42,7 +97,6 @@ permissions:
   - 'access_unpublished node landing_page'
   - 'access_unpublished node page'
   - 'access_unpublished node webform'
-  - 'access_unpublished path_alias'
   - 'access_unpublished taxonomy_term category'
   - 'administer advanced pane settings'
   - 'administer blocks'
@@ -93,11 +147,9 @@ permissions:
   - 'dropzone upload files'
   - 'edit any audio_file media'
   - 'edit any document media'
-  - 'edit any empl content'
   - 'edit any image media'
   - 'edit any instagram media'
   - 'edit any landing_page content'
-  - 'edit any news content'
   - 'edit any page content'
   - 'edit any slideshow media'
   - 'edit any tweet media'
@@ -106,11 +158,9 @@ permissions:
   - 'edit any webform content'
   - 'edit own audio_file media'
   - 'edit own document media'
-  - 'edit own empl content'
   - 'edit own image media'
   - 'edit own instagram media'
   - 'edit own landing_page content'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit own slideshow media'
   - 'edit own tweet media'

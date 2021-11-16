@@ -56,7 +56,6 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
       allowed_view_modes:
         default: default
         embedded: embedded
@@ -89,6 +88,7 @@ filters:
         w75: w75
         w800: w800
         w900: w900
+      allowed_media_types: {  }
   url_embed:
     id: url_embed
     provider: url_embed

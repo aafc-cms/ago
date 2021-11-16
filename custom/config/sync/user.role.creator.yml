@@ -2,8 +2,68 @@ uuid: 547be197-3ab0-4862-b7ef-28806c2750d8
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.no_editor_full
+    - filter.format.rich_text
+    - media.type.audio_file
+    - media.type.document
+    - media.type.image
+    - media.type.instagram
+    - media.type.slideshow
+    - media.type.tweet
+    - media.type.video
+    - media.type.video_file
+    - node.type.landing_page
+    - node.type.page
+    - taxonomy.vocabulary.aafc_type
+    - taxonomy.vocabulary.branch
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.dcterms_subject
+    - taxonomy.vocabulary.intended_audience
+    - taxonomy.vocabulary.media_category
+    - taxonomy.vocabulary.programorservice
+    - workflows.workflow.editorial
+    - workflows.workflow.publishing
   module:
+    - access_unpublished
+    - agri_admin
+    - block
+    - block_content
+    - comment
+    - contact
+    - content_moderation
+    - content_translation
+    - contextual
+    - dropzonejs
+    - entity_browser
+    - file
+    - file_delete
+    - file_replace
+    - filter
+    - layout_builder
     - lightning_core
+    - media
+    - menu_admin_per_menu
+    - menu_link_content
+    - moderated_content_bulk_publish
+    - moderation_dashboard
+    - node
+    - panels
+    - panels_ipe
+    - paragraphs
+    - path
+    - pathauto
+    - quickedit
+    - safedelete
+    - scanner
+    - search
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+    - wxt_core
 third_party_settings:
   lightning_core:
     description: ''
@@ -19,8 +79,6 @@ permissions:
   - 'aafc pending drafts'
   - 'access 403 page'
   - 'access administration pages'
-  - 'access browse_content entity browser pages'
-  - 'access browse_content_modal entity browser pages'
   - 'access ckeditor_media_browser entity browser pages'
   - 'access comments'
   - 'access content overview'
@@ -49,13 +107,10 @@ permissions:
   - 'access_unpublished node landing_page'
   - 'access_unpublished node page'
   - 'access_unpublished node webform'
-  - 'access_unpublished path_alias'
   - 'access_unpublished taxonomy_term branch'
   - 'access_unpublished taxonomy_term category'
-  - 'access_unpublished taxonomy_term employment_type'
   - 'access_unpublished taxonomy_term intended_audience'
   - 'access_unpublished taxonomy_term media_category'
-  - 'access_unpublished taxonomy_term news_type'
   - 'access_unpublished taxonomy_term programorservice'
   - 'administer blocks'
   - 'administer footer menu items'
@@ -77,10 +132,8 @@ permissions:
   - 'create terms in branch'
   - 'create terms in category'
   - 'create terms in dcterms_subject'
-  - 'create terms in employment_type'
   - 'create terms in intended_audience'
   - 'create terms in media_category'
-  - 'create terms in news_type'
   - 'create terms in programorservice'
   - 'create tweet media'
   - 'create url aliases'
@@ -92,11 +145,9 @@ permissions:
   - 'dropzone upload files'
   - 'edit any audio_file media'
   - 'edit any document media'
-  - 'edit any empl content'
   - 'edit any image media'
   - 'edit any instagram media'
   - 'edit any landing_page content'
-  - 'edit any news content'
   - 'edit any page content'
   - 'edit any slideshow media'
   - 'edit any tweet media'
@@ -105,11 +156,9 @@ permissions:
   - 'edit own audio_file media'
   - 'edit own comments'
   - 'edit own document media'
-  - 'edit own empl content'
   - 'edit own image media'
   - 'edit own instagram media'
   - 'edit own landing_page content'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit own slideshow media'
   - 'edit own tweet media'
@@ -119,10 +168,8 @@ permissions:
   - 'edit terms in branch'
   - 'edit terms in category'
   - 'edit terms in dcterms_subject'
-  - 'edit terms in employment_type'
   - 'edit terms in intended_audience'
   - 'edit terms in media_category'
-  - 'edit terms in news_type'
   - 'edit terms in programorservice'
   - 'moderated content bulk archive'
   - 'moderated content bulk publish'
@@ -139,14 +186,10 @@ permissions:
   - 'translate branch taxonomy_term'
   - 'translate category taxonomy_term'
   - 'translate dcterms_subject taxonomy_term'
-  - 'translate empl node'
-  - 'translate employment_type taxonomy_term'
   - 'translate image media'
   - 'translate intended_audience taxonomy_term'
   - 'translate landing_page node'
   - 'translate menu_link_content'
-  - 'translate news node'
-  - 'translate news_type taxonomy_term'
   - 'translate page node'
   - 'translate programorservice taxonomy_term'
   - 'update any media'
@@ -159,12 +202,8 @@ permissions:
   - 'use ipe with page manager'
   - 'use moderation dashboard'
   - 'use panels dashboard'
-  - 'use publishing transition author_editing'
-  - 'use publishing transition delete_published'
-  - 'use publishing transition edit_published'
   - 'use publishing transition emergency_publish'
   - 'use publishing transition save_as_a_draft'
-  - 'use publishing transition save_published_as_a_draft'
   - 'use publishing transition send_for_deletion'
   - 'use publishing transition send_to_reviewer'
   - 'use text format full_html'

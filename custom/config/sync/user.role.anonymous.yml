@@ -1,7 +1,28 @@
 uuid: b752f71a-aa0f-4221-ae48-2cf1252188e9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.rich_text
+    - media.type.audio_file
+    - media.type.document
+    - media.type.image
+    - media.type.video
+    - media.type.video_file
+    - workflows.workflow.editorial
+    - workflows.workflow.publishing
+  module:
+    - access_unpublished
+    - bootstrap_site_alert
+    - comment
+    - contact
+    - content_moderation
+    - dropzonejs
+    - entity_browser
+    - filter
+    - media
+    - search
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -18,15 +39,11 @@ permissions:
   - 'access otherbrowser entity browser pages'
   - 'access site-wide contact form'
   - 'access user profiles'
-  - 'access_unpublished node empl'
   - 'access_unpublished node landing_page'
-  - 'access_unpublished node news'
   - 'access_unpublished node page'
   - 'create audio_file media'
   - 'create document media'
-  - 'create empl content'
   - 'create image media'
-  - 'create news content'
   - 'create video media'
   - 'create video_file media'
   - 'dropzone upload files'
@@ -34,13 +51,8 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
-  - 'translate empl node'
-  - 'translate news node'
   - 'use editorial transition create_new_draft'
   - 'use publishing transition save_as_a_draft'
-  - 'use publishing_employmentopportunity transition save_as_a_draft_empltrans'
-  - 'use publishing_news transition save_as_a_draft_newsstrans'
-  - 'use search'
   - 'use text format rich_text'
   - 'view bootstrap site alerts'
   - 'view media'
