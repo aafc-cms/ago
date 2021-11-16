@@ -187,8 +187,7 @@
         "perftools/php-profiler": "^0.18.0",
         "drupal/purge": "3.0",
         "drupal/varnish_purge": "^2.1",
-        "drupal/filebrowser": "^3.0",
-        "drupal/media_library_media_modify": "^1.0@beta"
+        "drupal/filebrowser": "^3.0"
     },
     "authors": [
         {
