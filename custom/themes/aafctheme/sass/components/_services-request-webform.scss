@@ -1,0 +1,47 @@
+body.agricultural-programs-and-services-agriinvest, body.agricultural-programs-and-services-agristability, body.programmes-services-agricoles-agri-stabilite, body.programmes-services-agricoles-agri-investissement {
+  #webform-submission-request-agriinvest-form-excel-add-form, #webform-submission-as-ai-request-form-add-form {
+    div.form-item {
+      label[for="edit-requestor-name-required-"]::after, label[for="edit-email-address-required-"]::after {
+        content: none;
+      }
+      label[for="edit-requestor-name-required-"]::before, label[for="edit-email-address-required-"]::before {
+        content: "";
+        background-image: url(../images/required.svg);
+        display: inline-block;
+        line-height: 1;
+        color: #e00;
+        background-size: 7px 7px;
+        width: 7px;
+        vertical-align: super;
+        margin-left: 4px;
+        height: 7px;
+        position: absolute;
+        top: 7px;
+        left: -15px;
+      }
+      label[for="edit-requestor-name-required-"], label[for="edit-email-address-required-"] {
+        position: relative;
+        margin-left: 10px;
+      }
+      
+    }
+    
+  }
+
+  div.region.region-highlighted {
+    ul li {
+      display: block;
+    }
+    ul li a {
+      display: list-item;
+      list-style-position: inside;
+      margin-top: 15px;
+    }
+    ul li::after {
+      content: none;
+    }
+    h2 + p {
+      font-size: 24px !important;
+    }
+  }
+}
