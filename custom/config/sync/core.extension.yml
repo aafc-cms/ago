@@ -89,7 +89,6 @@ module:
   layout_builder_styles: 0
   layout_discovery: 0
   layout_library: 0
-  libraries: 0
   lightning_banner_block: 0
   lightning_core: 0
   lightning_landing_page: 0
@@ -183,6 +182,7 @@ module:
   views_ui: 0
   webform: 0
   webform_node: 0
+  webform_translation_permissions: 0
   webform_ui: 0
   workflows: 0
   wxt_admin: 0

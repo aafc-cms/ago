@@ -176,6 +176,7 @@
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
         "drupal/core": "9.3.0-beta1 as 9.1.13",
+        "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^3.0",
@@ -187,8 +188,8 @@
         "perftools/php-profiler": "^0.18.0",
         "drupal/purge": "3.0",
         "drupal/varnish_purge": "^2.1",
-        "drupal/filebrowser": "^3.0",
-        "drupal/media_library_edit": "^2.1"
+        "drupal/media_library_edit": "^2.1",
+        "drupal/webform_translation_permissions": "^1.1"
     },
     "authors": [
         {
