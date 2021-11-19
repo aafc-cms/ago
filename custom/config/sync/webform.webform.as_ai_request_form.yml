@@ -13,12 +13,22 @@ title: 'Request AgriStability and AgriInvest forms in Excel (AgriStability)'
 description: 'Request AgriStability and AgriInvest Forms in Excel&nbsp;(AgriStability)'
 category: 'Services Request Form'
 elements: |-
-  markup:
-    '#type': webform_markup
-    '#markup': |
-      <p class="mrgn-tp-lg">To receive the AgriStability and AgriInvest forms package in Excel, please complete the following online request form:</p>
-
-      <h2 class="mrgn-bttm-md">Request AgriStability and AgriInvest forms in Excel</h2>
+  descriptionoffeedbackform:
+    '#type': processed_text
+    '#text': |
+      To receive the AgriStability and AgriInvest forms package in Excel, please complete the following online request form:
+      
+    '#format': full_html
+  mandatory:
+    '#type': processed_text
+    '#text': |
+      <style type="text/css">p {
+        font-size: 16px !important ;
+        }
+      </style>
+      <p class="text-danger">* denotes mandatory field.</p>
+      
+    '#format': full_html
   requestor_name_required_:
     '#type': textfield
     '#title': 'Requestor name'
@@ -58,6 +68,7 @@ elements: |-
       <p>
         <b>* 2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.</b>
       </p>
+      
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#type': checkboxes
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan:'

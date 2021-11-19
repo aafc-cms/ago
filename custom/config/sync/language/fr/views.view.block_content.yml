@@ -4,7 +4,22 @@ display:
   default:
     display_title: 'Par défaut'
     display_options:
-      title: 'Bibliothèque de blocs personnalisés'
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
       fields:
         info:
           label: 'Description du bloc'
@@ -16,25 +31,6 @@ display:
           label: 'Mis à jour'
         operations:
           label: Actions
-      pager:
-        options:
-          tags:
-            next: 'Suivant ›'
-            previous: '‹ Précédent'
-          expose:
-            items_per_page_label: 'Éléments par page'
-            items_per_page_options_all_label: '- Tout -'
-            offset_label: Décalage
-      exposed_form:
-        options:
-          submit_button: Appliquer
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      empty:
-        area_text_custom:
-          content: 'Il n''y a pas de bloc personnalisé disponible.'
       filters:
         info:
           expose:
@@ -42,6 +38,10 @@ display:
         type:
           expose:
             label: 'Type de bloc'
+      title: 'Bibliothèque de blocs personnalisés'
+      empty:
+        area_text_custom:
+          content: 'Il n''y a pas de bloc personnalisé disponible.'
   page_1:
     display_title: Page
     display_options:

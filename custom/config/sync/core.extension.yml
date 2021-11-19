@@ -89,6 +89,7 @@ module:
   layout_builder_styles: 0
   layout_discovery: 0
   layout_library: 0
+  libraries: 0
   lightning_banner_block: 0
   lightning_core: 0
   lightning_landing_page: 0

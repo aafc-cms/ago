@@ -1,6 +1,36 @@
 title: 'Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-stabilité)'
 description: 'Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-stabilité)'
-elements: "descriptionoffeedbackform:\n  '#text': \"Pour recevoir des trousses de formulaires des programmes Agri-stabilité et Agri-investissement en Excel, veuillez remplir la présente demande en ligne&nbsp;:\\n\"\nmandatory:\n  '#text': \"<style type=\\\"text/css\\\">p {\\n  font-size: 16px !important ;\\n  }\\n</style>\\n<p class=\\\"text-danger\\\">* indique un champ obligatoire.</p>\\n\"\nrequestor_name_required_:\n  '#title': 'Nom du demandeur'\nemail_address_required_:\n  '#title': 'Adresse de courriel'\nphone_number_as_ai:\n  '#title': 'Numéro de téléphone'\nlanguage_of_preference:\n  '#title': 'Langue de correspondance'\n  '#options':\n    English: Français\n    French: Anglais\n  '#empty_option': Français\nmarkup_01:\n  '#markup': '<p>Les trousses de formulaires Excel suivantes comprennent l’état A, l’état B et le formulaire de demande de redressement. Veuillez indiquer ci-après la ou les trousses que vous aimeriez recevoir.</p>'\nfor_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:\n  '#title': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon :'\n  '#options':\n    '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': 'Trousse de formulaires T1273 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'\n    '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2020.'\n    '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2021. *'\nmarkup_02:\n  '#markup': \"<p>\\n  <b>* Les formulaires de 2021 sont disponibles pour les participants d'Agri-stabilité et Agri-investissement dont la fin de l'année ne correspond pas à la fin de l'année civile.</b>\\n</p>\\n\"\nfor_producers_in_alberta_ontario_prince_edward_island_and_saskat:\n  '#title': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan :'\n  '#options':\n    '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': 'Trousse de formulaires T1163 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'\n"
+elements: |
+  descriptionoffeedbackform:
+    '#text': "Pour recevoir des trousses de formulaires des programmes Agri-stabilité et Agri-investissement en Excel, veuillez remplir la présente demande en ligne&nbsp;:\n"
+  mandatory:
+    '#text': "<style type=\"text/css\">p {\n  font-size: 16px !important ;\n  }\n</style>\n<p class=\"text-danger\">* indique un champ obligatoire.</p>\n"
+  requestor_name_required_:
+    '#title': 'Nom du demandeur'
+  email_address_required_:
+    '#title': 'Adresse de courriel'
+  phone_number_as_ai:
+    '#title': 'Numéro de téléphone'
+  language_of_preference:
+    '#title': 'Langue de correspondance'
+    '#options':
+      English: Français
+      French: Anglais
+    '#empty_option': Français
+  markup_01:
+    '#markup': '<p>Les trousses de formulaires Excel suivantes comprennent l’état A, l’état B et le formulaire de demande de redressement. Veuillez indiquer ci-après la ou les trousses que vous aimeriez recevoir.</p>'
+  for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
+    '#title': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon :'
+    '#options':
+      '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': 'Trousse de formulaires T1273 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'
+      '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2020.'
+      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2021. *'
+  markup_02:
+    '#markup': "<p>\n  <b>* Les formulaires de 2021 sont disponibles pour les participants d'Agri-stabilité et Agri-investissement dont la fin de l'année ne correspond pas à la fin de l'année civile.</b>\n</p>\n"
+  for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
+    '#title': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan :'
+    '#options':
+      '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': 'Trousse de formulaires T1163 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'
 settings:
   confirmation_title: 'Demande confirmée - De formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-stabilité)'
   confirmation_message: 'Votre demande a été reçue. Veuillez imprimer cette page de confirmation pour vos dossiers.'

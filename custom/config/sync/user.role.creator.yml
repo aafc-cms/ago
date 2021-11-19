@@ -63,6 +63,8 @@ dependencies:
     - taxonomy
     - toolbar
     - tour
+    - webform
+    - webform_translation_permissions
     - wxt_core
 third_party_settings:
   lightning_core:
