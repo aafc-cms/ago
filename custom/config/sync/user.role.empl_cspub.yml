@@ -1,0 +1,111 @@
+uuid: 73254895-4eed-46ac-bba3-a52d7aa6b0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.no_editor_full
+    - filter.format.rich_text
+    - media.type.audio_file
+    - media.type.document
+    - media.type.image
+    - media.type.instagram
+    - media.type.slideshow
+    - media.type.tweet
+    - media.type.video
+    - media.type.video_file
+    - workflows.workflow.block_publishing
+    - workflows.workflow.editorial
+    - workflows.workflow.publishing
+  module:
+    - access_unpublished
+    - agri_admin
+    - content_lock
+    - content_moderation
+    - contextual
+    - dropzonejs
+    - entity_browser
+    - filter
+    - lightning_core
+    - lightning_scheduler
+    - media
+    - moderation_dashboard
+    - node
+    - panels
+    - panels_ipe
+    - paragraphs
+    - pathauto
+    - quickedit
+    - redirect
+    - responsive_image
+    - system
+    - toolbar
+    - wxt_core
+third_party_settings:
+  lightning_core:
+    description: 'the cspuyb role is used for HR to review and approve the employment opportunity form.'
+id: empl_cspub
+label: cspub
+weight: -3
+is_admin: null
+permissions:
+  - 'aafc admin styles'
+  - 'aafc pending drafts'
+  - 'access 403 page'
+  - 'access ckeditor_media_browser entity browser pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access otherbrowser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'access_unpublished block_content text'
+  - 'administer content lock'
+  - 'administer pane access'
+  - 'administer redirects'
+  - 'administer responsive images'
+  - 'break content lock'
+  - 'create audio_file media'
+  - 'create document media'
+  - 'create image media'
+  - 'create instagram media'
+  - 'create slideshow media'
+  - 'create tweet media'
+  - 'create video media'
+  - 'create video_file media'
+  - 'dropzone upload files'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'schedule publishing transition delete'
+  - 'schedule publishing transition emergency_publish'
+  - 'schedule publishing transition publish'
+  - 'schedule publishing transition re_publish_archived'
+  - 'schedule publishing transition reject'
+  - 'schedule publishing transition reject_delete'
+  - 'schedule publishing transition save_as_a_draft'
+  - 'schedule publishing transition send_for_deletion'
+  - 'schedule publishing transition send_to_reviewer'
+  - 'schedule publishing transition take'
+  - 'schedule publishing transition take_for_deletion'
+  - 'use block_publishing transition approve_deletion'
+  - 'use block_publishing transition publish'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use ipe with page manager'
+  - 'use moderation dashboard'
+  - 'use panels dashboard'
+  - 'use panels locks'
+  - 'use text format full_html'
+  - 'use text format no_editor_full'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
