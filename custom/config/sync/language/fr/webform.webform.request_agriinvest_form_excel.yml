@@ -1,8 +1,10 @@
 title: 'Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-investissement)'
 description: 'Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-investissement)'
 elements: |
-  markup:
-    '#markup': "<p class=\"mrgn-tp-lg\">Pour recevoir des trousses de formulaires des programmes Agri-stabilité et Agri-investissement en Excel, veuillez remplir la présente demande en ligne&nbsp;:</p>\n\n<h2 class=\"mrgn-bttm-md\">Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement</h2>\n"
+  descriptionoffeedbackform:
+    '#text': 'Pour recevoir des trousses de formulaires des programmes Agri-stabilité et Agri-investissement en Excel, veuillez remplir la présente demande en ligne&nbsp;:'
+  mandatory:
+    '#text': "<style type=\"text/css\">p {\n  font-size: 16px !important ;\n  }\n</style>\n<p class=\"text-danger\">* indique un champ obligatoire.</p>\n"
   requestor_name_required_:
     '#title': 'Nom du demandeur'
   email_address_required_:
@@ -12,8 +14,8 @@ elements: |
   language_of_preference:
     '#title': 'Langue de correspondance'
     '#options':
-      English: Anglais
-      French: Français
+      English: Français
+      French: Anglais
     '#empty_option': Français
   markup_01:
     '#markup': '<p>Les trousses de formulaires Excel suivantes comprennent l’état A, l’état B et le formulaire de demande de redressement. Veuillez indiquer ci-après la ou les trousses que vous aimeriez recevoir.</p>'

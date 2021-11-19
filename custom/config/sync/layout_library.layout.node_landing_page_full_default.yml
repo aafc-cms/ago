@@ -12,6 +12,7 @@ layout:
   -
     layout_id: bs_1col
     layout_settings:
+      label: ''
       layout:
         wrapper: div
         classes:
@@ -25,7 +26,6 @@ layout:
             col-sm-12: col-sm-12
           add_region_classes: 1
           attributes: ''
-      label: ''
     components:
       53c78586-ebb9-4749-b0f4-7b0846043c9d:
         uuid: 53c78586-ebb9-4749-b0f4-7b0846043c9d
@@ -33,15 +33,15 @@ layout:
         configuration:
           id: 'field_block:node:landing_page:body'
           label: Body
-          provider: layout_builder
           label_display: '0'
-          formatter:
-            label: hidden
-            type: text_default
-            settings: {  }
-            third_party_settings: {  }
+          provider: layout_builder
           context_mapping:
             entity: layout_builder.entity
-        additional: {  }
+          formatter:
+            type: text_default
+            label: hidden
+            settings: {  }
+            third_party_settings: {  }
         weight: 1
+        additional: {  }
     third_party_settings: {  }

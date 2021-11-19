@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: m3e3lR0iNbau3eUO2RZya6iS06zv02m1JJe8X-PZuhk
 scanner_mode: false
 scanner_wholeword: false
 scanner_regex: false
@@ -18,5 +20,3 @@ fields_of_selected_content_type:
   'node:page:field_description': 'node:page:field_description'
   'node:page:field_keywords': 'node:page:field_keywords'
   'node:page:field_teamsite_location': 'node:page:field_teamsite_location'
-_core:
-  default_config_hash: m3e3lR0iNbau3eUO2RZya6iS06zv02m1JJe8X-PZuhk

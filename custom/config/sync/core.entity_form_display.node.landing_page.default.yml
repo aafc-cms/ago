@@ -44,95 +44,95 @@ third_party_settings:
         - field_dc_date_created
         - field_issued
         - field_modified
+      label: 'aafc metadata group'
+      region: content
       parent_name: ''
       weight: 1
       format_type: details_sidebar
-      region: content
       format_settings:
-        description: ''
-        weight: -42
-        required_fields: true
-        id: ''
         classes: aafc-metadata-group
+        id: ''
         open: false
-      label: 'aafc metadata group'
+        description: ''
+        required_fields: true
+        weight: -42
     group_aafc_dcterms_subject:
       children:
         - field_subject
+      label: aafc-dcterms-subject
+      region: content
       parent_name: ''
       weight: 3
       format_type: details_sidebar
-      region: content
       format_settings:
-        description: ''
-        weight: -40
-        required_fields: true
-        id: ''
         classes: aafc-subject-group
+        id: ''
         open: false
-      label: aafc-dcterms-subject
+        description: ''
+        required_fields: true
+        weight: -40
     group_aafc_dcterms_type:
       children:
         - field_meta_type
+      label: aafc-dcterms-gctype
+      region: content
       parent_name: ''
       weight: 2
       format_type: details_sidebar
-      region: content
       format_settings:
-        description: ''
-        weight: -41
-        required_fields: true
-        id: ''
         classes: aafc-dcterm-gctype-group
+        id: ''
         open: false
-      label: aafc-dcterms-gctype
+        description: ''
+        required_fields: true
+        weight: -41
     group_details:
       children:
         - field_update_date_modified
         - field_tracking_number
         - field_peer_review
         - field_managing_branch
+      label: Details
+      region: content
       parent_name: ''
       weight: 12
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: true
+        description: ''
         required_fields: false
-      label: Details
     group_dcterms_subject:
       children:
         - field_dcterms_subject
+      label: 'dcterms:subject'
+      region: content
       parent_name: ''
       weight: 4
       format_type: details_sidebar
-      region: content
       format_settings:
-        description: ''
-        weight: -40
-        id: ''
         classes: ''
+        id: ''
         open: false
+        description: ''
         required_fields: false
-      label: 'dcterms:subject'
+        weight: -40
     group_title_options:
       children:
         - field_special
         - field_large
+      label: 'Display Options'
+      region: content
       parent_name: ''
       weight: 6
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: true
+        description: ''
         required_fields: false
-      label: 'Display Options'
     group_more:
       children:
         - uid
@@ -140,18 +140,18 @@ third_party_settings:
         - promote
         - sticky
         - field_teamsite_location
+      label: More
+      region: content
       parent_name: ''
       weight: 15
       format_type: details_sidebar
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: false
         weight: 0
-      label: More
 _core:
   default_config_hash: 93TnkIzh65W5fSqt_74vYO-VnxfJ92GSYGlKHFraxlA
 id: node.landing_page.default
@@ -162,61 +162,61 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 7
+    region: content
     settings:
       rows: 5
-      placeholder: ''
       summary_rows: 2
+      placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 34
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_created_by:
+    type: string_textfield
     weight: 14
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_dc_date_created:
+    type: datetime_default
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_dcterms_subject:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
     type: options_buttons
+    weight: 14
     region: content
-  field_description:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_issued:
-    weight: 16
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
+  field_description:
+    type: string_textfield
+    weight: 12
     region: content
-  field_keywords:
-    weight: 13
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+  field_issued:
+    type: datetime_default
+    weight: 16
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_keywords:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_large:
     type: boolean_checkbox
     weight: 3
@@ -225,11 +225,11 @@ content:
       display_label: true
     third_party_settings: {  }
   field_managing_branch:
+    type: options_select
     weight: 32
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_meta_tags:
     type: metatag_firehose
     weight: 0
@@ -238,83 +238,83 @@ content:
       sidebar: true
     third_party_settings: {  }
   field_meta_type:
-    weight: 15
-    settings: {  }
-    third_party_settings: {  }
     type: options_buttons
+    weight: 15
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_modified:
-    weight: 17
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 17
     region: content
-  field_peer_review:
-    weight: 31
     settings: {  }
     third_party_settings: {  }
+  field_peer_review:
     type: options_select
+    weight: 31
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_special:
+    type: boolean_checkbox
     weight: 2
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_subject:
+    type: options_buttons
     weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_teamsite_location:
+    type: string_textfield
     weight: 37
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_tracking_number:
+    type: string_textfield
     weight: 30
+    region: content
     settings:
       size: 60
       placeholder: 'Workflow submissions grouped by this field value.'
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_update_date_modified:
+    type: boolean_checkbox
     weight: 29
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   layout_selection:
     type: options_select
-    region: content
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
     weight: 10
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   panelizer:
     type: panelizer
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   promote:
     type: boolean_checkbox
     weight: 35
@@ -325,10 +325,10 @@ content:
   status:
     type: boolean_checkbox
     weight: 9
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
     weight: 36
@@ -339,21 +339,21 @@ content:
   title:
     type: string_textfield
     weight: 5
+    region: content
     settings:
       size: 200
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 33
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
 hidden:
   field_queue: true
   langcode: true

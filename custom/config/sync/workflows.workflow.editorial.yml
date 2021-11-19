@@ -20,16 +20,21 @@ type_settings:
       weight: 5
       published: false
       default_revision: true
-    draft:
-      label: Draft
+    delete:
+      label: Delete
+      weight: 6
       published: false
       default_revision: false
+    draft:
+      label: Draft
       weight: -5
+      published: false
+      default_revision: false
     published:
       label: Published
+      weight: 0
       published: true
       default_revision: true
-      weight: 0
   transitions:
     archive:
       label: Archive
@@ -46,19 +51,25 @@ type_settings:
       weight: 4
     create_new_draft:
       label: 'Create New Draft'
-      to: draft
-      weight: 0
       from:
         - archived
         - draft
         - published
+      to: draft
+      weight: 0
+    delete:
+      label: Delete
+      from:
+        - archived
+      to: delete
+      weight: 5
     publish:
       label: Publish
-      to: published
-      weight: 1
       from:
         - draft
         - published
+      to: published
+      weight: 1
   entity_types:
     block_content:
       - basic

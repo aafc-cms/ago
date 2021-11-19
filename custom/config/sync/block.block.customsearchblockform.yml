@@ -21,8 +21,8 @@ plugin: 'block_content:ac4e5499-76c7-40e4-8421-44879378417c'
 settings:
   id: 'block_content:ac4e5499-76c7-40e4-8421-44879378417c'
   label: 'Custom Search Block Form'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: default

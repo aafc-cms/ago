@@ -36,8 +36,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -49,29 +49,29 @@ third_party_settings:
             uuid: 4f681acf-739c-422d-9f73-03562ad0b02b
             region: content
             configuration:
+              id: 'field_block:node:landing_page:body'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:landing_page:body'
               formatter:
                 type: text_default
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
   layout_library:
     enable: false
   layout_builder_restrictions:
     entity_view_mode_restriction:
       allowed_layouts: {  }
+      blacklisted_blocks: {  }
       whitelisted_blocks:
         'Content fields':
           - 'field_block:node:landing_page:body'
         'WxT Library': {  }
         core: {  }
-      blacklisted_blocks: {  }
     allowed_block_categories: {  }
 _core:
   default_config_hash: KNrs28OA6IqyPYfOOuVB_TtvU9cW6teRktxiPQAnjjg
@@ -82,53 +82,53 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 0
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_dcterms_subject:
-    weight: 3
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_large:
-    weight: 1
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 1
     region: content
   field_managing_branch:
-    weight: 5
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 5
     region: content
   field_special:
-    weight: 2
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 2
     region: content
   field_teamsite_location:
-    weight: 4
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
 hidden:
   content_moderation_control: true

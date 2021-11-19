@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   webform_clientside_validation: -1
   access_unpublished: 0
@@ -115,6 +117,7 @@ module:
   media_entity_slideshow: 0
   media_entity_twitter: 0
   media_library: 0
+  media_library_edit: 0
   menu_block: 0
   menu_breadcrumb: 0
   menu_ui: 0
@@ -180,6 +183,7 @@ module:
   views_ui: 0
   webform: 0
   webform_node: 0
+  webform_translation_permissions: 0
   webform_ui: 0
   workflows: 0
   wxt_admin: 0
@@ -222,5 +226,3 @@ theme:
   seven: 0
   aafctheme: 0
 profile: wxt
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
