@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a4f24fc5c541382088d73c2d7c3a43d",
+    "content-hash": "8883cd65ebd5910284c7cdc990283cd7",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.3.0-rc3",
+            "version": "9.3.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agrcmsx/dxbase.git",
-                "reference": "3874d3405f8205e061a8b1e7c03f7de550c0c483"
+                "reference": "fbae0b5f77d9ba21cdf0b89a83c61fae43395ffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/3874d3405f8205e061a8b1e7c03f7de550c0c483",
-                "reference": "3874d3405f8205e061a8b1e7c03f7de550c0c483",
+                "url": "https://api.github.com/repos/agrcmsx/dxbase/zipball/fbae0b5f77d9ba21cdf0b89a83c61fae43395ffe",
+                "reference": "fbae0b5f77d9ba21cdf0b89a83c61fae43395ffe",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "drupal/content_lock": "^2.0",
                 "drupal/content_moderation_notifications": "3.x-dev",
                 "drupal/convert_bundles": "^1.0",
-                "drupal/core": "9.3.0-beta1 as 9.1.13",
+                "drupal/core": "9.3.0-beta2 as 9.1.13",
                 "drupal/core-composer-scaffold": "*",
                 "drupal/cshs": "^2.3",
                 "drupal/css_editor": "^1.3@RC",
@@ -221,8 +221,9 @@
                 },
                 "patches": {
                     "drupal/core": {
-                        "BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-01-24/3194462.patch",
+                        "BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-11-19/D93x-3194462-20.patch",
                         "Performance and usability patch that replaces sansdesordre #3110371": "https://www.drupal.org/files/issues/2021-04-21/D91x-3110371-4.patch",
+                        "2907413 - Layout builder override wxt": "https://www.drupal.org/files/issues/2021-11-19/D93x-2907413-23.patch",
                         "Performance and scalability, do not load disabled menu links on the add/node /edit/node page/route.": "https://www.drupal.org/files/issues/2021-04-21/D9_performance_and_scalability-3202930-6.patch",
                         "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
                         "Improve wysiwyg entity embed media dialog add label to media hyperlinked to media": "https://www.drupal.org/files/issues/2020-11-11/D9-add_label_and_link_to_EditorMediaDialog-3182027-6.patch",
@@ -230,9 +231,10 @@
                         "w3c valid self closing source and track tags": "https://www.drupal.org/files/issues/2020-07-13/D89x-self_closing_correct-2857273-13.patch",
                         "remove hreflang attribute from language switcher li element": "https://www.drupal.org/files/issues/2020-12-14/D9-2454289-101.patch",
                         "Node preview current language": "https://www.drupal.org/files/issues/2020-06-20/node-preview_current_language-3150728-12.patch",
-                        "Language negotiation core fix, needed by access_unpublished and content moderation for forward draft revisions in non default language.": "https://www.drupal.org/files/issues/2021-06-29/drupal-fix_fallback-2951294-39.patch",
-                        "1356276 - Profile sub profiles phenaproxima": "https://www.drupal.org/files/issues/2021-10-21/1356276-673.patch",
-                        "2559833 - Comment form redirect": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch"
+                        "2951294 - Language negotiation core fix, needed by access_unpublished and content moderation for forward draft revisions in non default language.": "https://www.drupal.org/files/issues/2021-06-29/drupal-fix_fallback-2951294-39.patch",
+                        "1356276 - Profile sub profiles phenaproxima": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch",
+                        "2559833 - Comment form redirect": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch",
+                        "3247045 - Call to isTranslatable() on null in _menu_ui_node_save": "https://www.drupal.org/files/issues/2021-11-19/D93xBeta2-member-function-isTranslatable-on-null-3247045-12.patch"
                     },
                     "drupal/access_unpublished": {
                         "Adds a twig extension for access unpublished hash key link, patch 9.": "https://www.drupal.org/files/issues/2021-05-21/v1.1-access_unpublished-3054536-12.patch",
@@ -301,6 +303,7 @@
                             "2470896 - Fixed in 9.2.0 make book navigation translateable": "https://www.drupal.org/files/issues/2021-06-10/2470896-244.patch",
                             "2559833 - Comment form": "https://www.drupal.org/files/issues/2020-10-31/2559833-72.patch",
                             "2630732 - Migrate module we don't use currently": "https://www.drupal.org/files/issues/2020-09-17/2630732-77.patch",
+                            "2907413 - Reroll needed override above for 9.3.0": "https://www.drupal.org/files/issues/2019-06-21/2907413-11.patch",
                             "2922570 - Fixed in 9.3.0": "https://www.drupal.org/files/issues/2021-06-29/D91x-2922570-88.patch",
                             "2998826 - Fixed in 9.2.0": "https://www.drupal.org/files/issues/2021-03-17/core-Term_route_context-2998826-93.patch"
                         }
@@ -314,9 +317,9 @@
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
-                "source": "https://github.com/agrcmsx/dxbase/tree/9.3.0-rc3"
+                "source": "https://github.com/agrcmsx/dxbase/tree/9.3.0-rc5"
             },
-            "time": "2021-11-16T06:42:15+00:00"
+            "time": "2021-11-19T19:49:40+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -4749,16 +4752,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.0-beta1",
+            "version": "9.3.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "7046d0670784ef62a65116ef4dea62c8db8c39c8"
+                "reference": "b37d8aa88acc1fb4b44f28c51d95bcb517617268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/7046d0670784ef62a65116ef4dea62c8db8c39c8",
-                "reference": "7046d0670784ef62a65116ef4dea62c8db8c39c8",
+                "url": "https://api.github.com/repos/drupal/core/zipball/b37d8aa88acc1fb4b44f28c51d95bcb517617268",
+                "reference": "b37d8aa88acc1fb4b44f28c51d95bcb517617268",
                 "shasum": ""
             },
             "require": {
@@ -4794,7 +4797,7 @@
                 "symfony/event-dispatcher": "^4.4",
                 "symfony/http-foundation": "^4.4.7",
                 "symfony/http-kernel": "^4.4",
-                "symfony/mime": "^5.3.0",
+                "symfony/mime": "^5.4@beta",
                 "symfony/polyfill-iconv": "^1.0",
                 "symfony/polyfill-php80": "^1.16",
                 "symfony/process": "^4.4",
@@ -5000,13 +5003,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.0-beta1"
+                "source": "https://github.com/drupal/core/tree/9.3.0-beta2"
             },
-            "time": "2021-11-12T19:20:31+00:00"
+            "time": "2021-11-18T00:33:29+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.8",
+            "version": "9.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -5050,7 +5053,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.8"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.9"
             },
             "time": "2021-08-24T12:04:07+00:00"
         },
@@ -9842,6 +9845,10 @@
                     "name": "Lucas Hedding",
                     "homepage": "https://www.drupal.org/u/heddn",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
                 }
             ],
             "description": "Enhancements to core migration support.",
@@ -9858,10 +9865,10 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_tools.git",
-                "reference": "56d82b4fc111dd26f2c3a1e53c06015eb854df20"
+                "reference": "43b02122216a90ef74dd29b8c078e4ee3ceb1e6d"
             },
             "require": {
-                "drupal/core": "^8.8 | ^9",
+                "drupal/core": "^9.1",
                 "drupal/migrate_plus": "^5",
                 "php": ">=7.1"
             },
@@ -9878,8 +9885,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0+13-dev",
-                    "datestamp": "1618603463",
+                    "version": "8.x-5.0+19-dev",
+                    "datestamp": "1637161832",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -11294,7 +11301,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/scanner.git",
-                "reference": "3d886ff84cda4c95cf49e0331d493aaf574ef111"
+                "reference": "4f36de9bc6b527a32f54a1a65fb38eebd1cd6c8a"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -11308,8 +11315,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc5+4-dev",
-                    "datestamp": "1621063990",
+                    "version": "8.x-1.0-rc5+8-dev",
+                    "datestamp": "1637346126",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -18565,16 +18572,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v5.3.8",
+            "version": "v5.4.0-BETA3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "a756033d0a7e53db389618653ae991eba5a19a11"
+                "reference": "d2ca59b995bd714031c0bc8528415ee54be430e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/a756033d0a7e53db389618653ae991eba5a19a11",
-                "reference": "a756033d0a7e53db389618653ae991eba5a19a11",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/d2ca59b995bd714031c0bc8528415ee54be430e8",
+                "reference": "d2ca59b995bd714031c0bc8528415ee54be430e8",
                 "shasum": ""
             },
             "require": {
@@ -18593,10 +18600,10 @@
             "require-dev": {
                 "egulias/email-validator": "^2.1.10|^3.1",
                 "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0",
-                "symfony/dependency-injection": "^4.4|^5.0",
-                "symfony/property-access": "^4.4|^5.1",
-                "symfony/property-info": "^4.4|^5.1",
-                "symfony/serializer": "^5.2"
+                "symfony/dependency-injection": "^4.4|^5.0|^6.0",
+                "symfony/property-access": "^4.4|^5.1|^6.0",
+                "symfony/property-info": "^4.4|^5.1|^6.0",
+                "symfony/serializer": "^5.2|^6.0"
             },
             "type": "library",
             "autoload": {
@@ -18628,7 +18635,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/v5.3.8"
+                "source": "https://github.com/symfony/mime/tree/v5.4.0-BETA3"
             },
             "funding": [
                 {
@@ -18644,7 +18651,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-10T12:30:38+00:00"
+            "time": "2021-11-17T12:18:18+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -20786,7 +20793,7 @@
     "aliases": [
         {
             "package": "drupal/core",
-            "version": "9.3.0.0-beta1",
+            "version": "9.3.0.0-beta2",
             "alias": "9.1.13",
             "alias_normalized": "9.1.13.0"
         },

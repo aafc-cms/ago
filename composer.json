@@ -127,6 +127,7 @@
                     "Enter drupal/core patch #2998826 description here": "https://www.drupal.org/files/issues/2021-03-17/core-Term_route_context-2998826-93.patch",
 		    "Enter drupal/core patch #2630732 description here": "https://www.drupal.org/files/issues/2020-09-17/2630732-77.patch",
                     "Enter drupal/core patch #2470896 description here": "https://www.drupal.org/files/issues/2021-06-10/2470896-244.patch",
+                    "Enter drupal/core patch #2907413 description here": "https://www.drupal.org/files/issues/2019-06-21/2907413-11.patch",
                     "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-06-29/D91x-2922570-88.patch",
                     "2922570 - See reroll in 2922570-88 (above).":
                     "https://www.drupal.org/files/issues/2021-02-02/2922570-61.patch",
@@ -167,7 +168,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.3.0-rc3",
+        "agrcmsx/dxbase": "9.3.0-rc5",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -175,7 +176,7 @@
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/core": "9.3.0-beta1 as 9.1.13",
+        "drupal/core": "9.3.0-beta2 as 9.1.13",
         "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
