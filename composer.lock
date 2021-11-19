@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8883cd65ebd5910284c7cdc990283cd7",
+    "content-hash": "e46c7ad8aa7ce3966228a09110b1a660",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -12251,17 +12251,17 @@
         },
         {
             "name": "drupal/token_filter",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token_filter.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token_filter-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "4d22feb0c96aeb747152d947499258e49769c237"
+                "url": "https://ftp.drupal.org/files/projects/token_filter-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "6ac6ae8349731512696d2c3d1cd11846a95cd1a7"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -12270,8 +12270,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1588029999",
+                    "version": "8.x-1.3",
+                    "datestamp": "1632199659",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12280,7 +12280,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -20802,6 +20802,12 @@
             "version": "6.0.0.0-beta3",
             "alias": "6.0-beta2",
             "alias_normalized": "6.0.0.0-beta2"
+        },
+        {
+            "package": "drupal/token_filter",
+            "version": "1.3.0.0",
+            "alias": "1.2",
+            "alias_normalized": "1.2.0.0"
         }
     ],
     "minimum-stability": "dev",
