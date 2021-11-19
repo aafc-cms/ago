@@ -1,4 +1,4 @@
-uuid: b35632fd-0065-4362-9db4-88b83aec5511
+uuid: 4915a485-fd06-4597-bbc3-674d00d05e75
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ scheduler:
   id: simple
   configuration:
     rules:
-      - '* * * * *'
+      - '*/30+@ * * * *'
 launcher:
   id: serial
   configuration:
