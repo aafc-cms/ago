@@ -36,8 +36,6 @@ blacklist:
   - autologout.role.administrator
   - autologout.role.creator
   - autologout.role.editor
-  - autologout.role.empl_cspub
-  - autologout.role.news_ccpub
   - autologout.role.reviewer
   - autologout.settings
   - dblog.settings
