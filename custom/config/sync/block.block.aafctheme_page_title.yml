@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - system
-    - wxt_library
   theme:
     - aafctheme
 _core:
@@ -21,13 +20,6 @@ settings:
   label_display: '0'
   provider: core
 visibility:
-  panels_title:
-    id: panels_title
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
-      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
-    is_panelized: {  }
   request_path:
     id: request_path
     negate: true
