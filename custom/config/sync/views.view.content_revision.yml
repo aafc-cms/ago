@@ -1560,8 +1560,6 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
-              news_ccpub: '0'
-              empl_cspub: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1608,8 +1606,6 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
-              news_ccpub: '0'
-              empl_cspub: '0'
               pab_admin: '0'
             reduce: false
           is_grouped: false
@@ -1658,8 +1654,6 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
-              news_ccpub: '0'
-              empl_cspub: '0'
               pab_admin: '0'
             argument: ''
             reduce: false
@@ -1708,8 +1702,6 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
-              news_ccpub: '0'
-              empl_cspub: '0'
             reduce: false
           is_grouped: false
           group_info:
