@@ -613,6 +613,29 @@ function _helperUpdateProcess($action, $entity_id, $bundle) {
 }
 
 
+function agri_admin_form_page_submit (array $form, \Drupal\Core\Form\FormStateInterface $form_state){
+  //$current_user = \Drupal::currentUser();
+  $entity = $form_state->getFormObject()->getEntity();
+  $moderation_state = $entity->moderation_state->value;
+  if ($moderation_state == 'delete') {
+    $language = \Drupal::languageManager()->getCurrentLanguage();
+    $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $url = Url::fromRoute('<front>', [], ['language' => $language]);
+    $title = $entity->getTitle();
+    $msg = t('The archived content <em class="placeholder"> %title</em> has been deleted.',['%title' => $title]);
+    $nid = $entity->id();
+    $node = Node::load($nid);
+    if (isset($node)) {
+      $node->delete();
+      //clearing buff message and reset deletion message
+      \Drupal::messenger()->deleteAll();
+      \Drupal::messenger()->addStatus(['#markup' => $msg]);
+      $form_state->setRedirectUrl($url);
+    }
+  }
+}
+
+
 /**
  * Implements hook_form_node_form_alter().
  */
@@ -626,9 +649,14 @@ function agri_admin_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInte
     $form['field_dc_date_created']['widget'][0]['#disabled'] = TRUE;
     $form['#attached']['library'][] = 'agri_admin/page'; // For page and landing page edit/add css.
     //add validation functionality to prevent the broken links or misused linkit before the page is published.
-    if ($content_type == 'page' || $content_type == 'landing_page') {
-      $form['#validate'][] = 'agri_admin_publishpage_referredlinks_validation';
-      $form['#attached']['library'][] = 'agri_admin/special'; // For page and landing page edit/add js.
+    //if ($content_type == 'page' || $content_type == 'landing_page') {
+    $form['#validate'][] = 'agri_admin_publishpage_referredlinks_validation';
+    $form['#attached']['library'][] = 'agri_admin/special'; // For page and landing page edit/add js.
+    //}
+    //Attached agri_admin_form_page_submit event handler to page, landing page
+    $moderation_state = $entity->moderation_state->value;
+    if ($moderation_state == 'archived') {
+      $form['actions']['submit']['#submit'][] = 'agri_admin_form_page_submit';
     }
 
 //  AgriAdminHelper::addToLog($debug_message, TRUE);
