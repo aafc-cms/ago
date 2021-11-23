@@ -168,7 +168,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.3.0-rc7",
+        "agrcmsx/dxbase": "9.3.0-rc8",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -176,12 +176,11 @@
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/core": "9.3.0-beta2 as 9.1.13",
+        "drupal/core": "9.3.0-beta2 as 9.1.14",
         "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
         "drupal/libraries": "^3.0",
-        "drupal/linkit": "6.0-beta3 as 6.0-beta2",
         "drupal/xhprof": "^1.0@beta",
         "perftools/php-profiler": "^0.18.0",
         "drupal/purge": "3.0",
