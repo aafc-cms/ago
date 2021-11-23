@@ -53,6 +53,7 @@ settings:
           items:
             - HorizontalRule
             - DrupalImage
+            - EmbedBlock
             - DrupalMediaLibrary
         -
           name: Tools

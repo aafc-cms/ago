@@ -48,6 +48,7 @@ settings:
           name: Media
           items:
             - node
+            - EmbedBlock
             - DrupalMediaLibrary
         -
           name: Tools

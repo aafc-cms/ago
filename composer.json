@@ -109,7 +109,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/core": {
+            "drupal/embed_block": {
+                "3225938 - Added CKEDITOR plugin functionality":
+                "https://git.drupalcode.org/project/embed_block/-/merge_requests/2.diff"
             },
             "drupal/filebrowser": {
                 "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
@@ -177,6 +179,7 @@
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
         "drupal/core": "9.3.0-beta2 as 9.1.14",
+        "drupal/embed_block": "1.x-dev",
         "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
