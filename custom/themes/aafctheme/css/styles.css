@@ -722,30 +722,44 @@ body.webform_generic_contactform div.form-item label[for="edit-preferredresponse
 body.webform_generic_contactform div.form-item label[for="edit-fullname"], body.webform_generic_contactform div.form-item label[for="edit-yourmessage"] {
   position: relative;
   margin-left: 10px;
+  margin-bottom: 0px;
 }
-/* line 31, ../sass/components/_generic-contact-webform.scss */
+/* line 30, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item div.form-item--error-message.alert.alert-danger::before {
+  content: none;
+}
+/* line 34, ../sass/components/_generic-contact-webform.scss */
+body.webform_generic_contactform div.form-item div.form-item--error-message.alert.alert-danger {
+  border-image: none !important;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-weight: bold;
+  background: #f3e9e8;
+  border-color: #d3080c;
+}
+/* line 44, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper {
   margin-bottom: 0px;
 }
-/* line 33, ../sass/components/_generic-contact-webform.scss */
+/* line 46, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper select.form-select {
   width: 100%;
 }
-/* line 40, ../sass/components/_generic-contact-webform.scss */
+/* line 53, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.region.region-highlighted ul li {
   display: block;
 }
-/* line 43, ../sass/components/_generic-contact-webform.scss */
+/* line 56, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.region.region-highlighted ul li a {
   display: list-item;
   list-style-position: inside;
   margin-top: 15px;
 }
-/* line 48, ../sass/components/_generic-contact-webform.scss */
+/* line 61, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.region.region-highlighted ul li::after {
   content: none;
 }
-/* line 51, ../sass/components/_generic-contact-webform.scss */
+/* line 64, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.region.region-highlighted h2 + p {
   font-size: 24px !important;
 }
