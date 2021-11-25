@@ -231,30 +231,50 @@ var AAFCFrontend = function() {
     var divDescription = $('div#edit-descriptionoffeedbackform');
     var divErrorMSG    = $('div.highlighted');
     var countErr = 1;
+    var subcountErr = 1;
     var reqvalMSGPrefix = "";
     var reqvalMSGMiddle = "";
     var reqvalMSGSuffix = "";
+    var h2prefix = "";
     if (typeof(psWebForm) && (psWebForm !== null)) {
       // Fixes WCAG issue #463
       if (AAFCFrontend.lang == 'en') {
         $(".form-required").append("<span style='color: #e00;'>&nbsp;(required)</span>");
+        h2prefix = "The form could not be submitted because ";
         reqvalMSGPrefix = "Error ";
         reqvalMSGMiddle = ": ";
         reqvalMSGSuffix = " - This field is required.";
+        subreqvalMSGSuffix = ": This field is required.";
       }
       else {
         $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
+        h2prefix = "Le formulaire n'a pu être soumis car ";
         reqvalMSGPrefix = "Erreur ";
         reqvalMSGMiddle = " : ";
         reqvalMSGSuffix = " - Ce champ est obligatoire.";
+        subreqvalMSGSuffix = " : Ce champ est obligatoire.";
       }
       if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
         if( (divErrorMSG !== null) && (divDescription !== null) ) {
           $('div.highlighted').detach().insertAfter(divDescription);
-          $( "div.alert.alert-danger.alert-dismissible ul li a" ).each(function(index) {
+          $( "section.alert.alert-danger.alert-dismissible ul li a" ).each(function(index) {
             $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
             countErr = countErr +1;
           });
+
+          var originstring = $( "h2.sr-only").next().text();
+          $("h2.sr-only").next().text(h2prefix + originstring);
+          //new logic for WCAG in Drupal Core 9.3
+          if ((typeof($('div.form-item.has-error')) !== "undefined")) {
+            $( "div.alert.alert-danger").each(function(index) {
+              var divrequiredfield = $(this).prev().prev();
+              $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subreqvalMSGSuffix );
+              subcountErr = subcountErr +1;
+              if ((typeof(divrequiredfield) !== "undefined")) {
+                $(this).detach().insertAfter(divrequiredfield);
+              }
+            });
+          }
         }
       }
     }
