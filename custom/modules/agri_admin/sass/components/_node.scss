@@ -130,3 +130,11 @@ body[class*="menuitem"] select#edit-menu-parent {
  }
 }
 
+body.role-is-authenticated.path-node {
+  div.layout-region.layout-region--node-footer {
+    div.layout-region__content {
+      margin-left: 0px;
+    }
+  }
+}
+
