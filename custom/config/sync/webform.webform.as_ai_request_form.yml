@@ -17,7 +17,6 @@ elements: |-
     '#type': processed_text
     '#text': |
       To receive the AgriStability and AgriInvest forms package in Excel, please complete the following online request form:
-      
     '#format': full_html
   mandatory:
     '#type': processed_text
@@ -27,7 +26,6 @@ elements: |-
         }
       </style>
       <p class="text-danger">* denotes mandatory field.</p>
-      
     '#format': full_html
   requestor_name_required_:
     '#type': textfield
@@ -60,15 +58,8 @@ elements: |-
     '#options':
       '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1273 forms package for individuals.'
       '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2020 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
-      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.*'
+      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.* (* 2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
     '#options__properties': ''
-  markup_02:
-    '#type': webform_markup
-    '#markup': |
-      <p>
-        <b>* 2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.</b>
-      </p>
-      
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#type': checkboxes
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan:'
@@ -84,7 +75,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /agricultural-programs-and-services/agristability/resources/request-agristability-agriInvest-forms
+  page_submit_path: /agricultural-programs-and-services/agristability/resources/request-agristability-agriinvest-forms
   page_confirm_path: ''
   page_theme_name: aafctheme
   form_title: source_entity_webform
