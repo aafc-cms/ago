@@ -1,10 +1,10 @@
 title: 'Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-stabilité)'
-description: 'Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-stabilité)'
+description: 'Demande de formulaires Excel des programmes Agri-stabilit&eacute; et Agri-investissement (Agri-stabilit&eacute;)'
 elements: |
   descriptionoffeedbackform:
-    '#text': "Pour recevoir des trousses de formulaires des programmes Agri-stabilité et Agri-investissement en Excel, veuillez remplir la présente demande en ligne&nbsp;:\n"
+    '#text': "<p>Pour recevoir des trousses de formulaires des programmes Agri-stabilité et Agri-investissement en Excel, veuillez remplir la présente demande en ligne&nbsp;:</p>\r\n"
   mandatory:
-    '#text': "<style type=\"text/css\">p {\n  font-size: 16px !important ;\n  }\n</style>\n<p class=\"text-danger\">* indique un champ obligatoire.</p>\n"
+    '#text': "<style type=\"text/css\">p {\r\n  font-size: 16px !important ;\r\n  }\r\n</style>\r\n<p class=\"text-danger\">* indique un champ obligatoire.</p>\r\n"
   requestor_name_required_:
     '#title': 'Nom du demandeur'
   email_address_required_:
@@ -18,24 +18,22 @@ elements: |
       French: Anglais
     '#empty_option': Français
   markup_01:
-    '#markup': '<p>Les trousses de formulaires Excel suivantes comprennent l’état A, l’état B et le formulaire de demande de redressement. Veuillez indiquer ci-après la ou les trousses que vous aimeriez recevoir.</p>'
+    '#markup': '<p>Les trousses de formulaires Excel suivantes comprennent l&rsquo;&eacute;tat A, l&rsquo;&eacute;tat B et le formulaire de demande de redressement. Veuillez indiquer ci-apr&egrave;s la ou les trousses que vous aimeriez recevoir.</p>'
   for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
     '#title': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon :'
     '#options':
       '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': 'Trousse de formulaires T1273 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'
       '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2020.'
-      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2021. *'
-  markup_02:
-    '#markup': "<p>\n  <b>* Les formulaires de 2021 sont disponibles pour les participants d'Agri-stabilité et Agri-investissement dont la fin de l'année ne correspond pas à la fin de l'année civile.</b>\n</p>\n"
+      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2021. * (* Les trousses de formulaires Excel suivantes comprennent l&rsquo;&eacute;tat A, l&rsquo;&eacute;tat B et le formulaire de demande de redressement. Veuillez indiquer ci-apr&egrave;s la ou les trousses que vous aimeriez recevoir.)'
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#title': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan :'
     '#options':
       '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': 'Trousse de formulaires T1163 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'
 settings:
   confirmation_title: 'Demande confirmée - De formulaires Excel des programmes Agri-stabilité et Agri-investissement (Agri-stabilité)'
-  confirmation_message: 'Votre demande a été reçue. Veuillez imprimer cette page de confirmation pour vos dossiers.'
+  confirmation_message: 'Votre demande a &eacute;t&eacute; re&ccedil;ue. Veuillez imprimer cette page de confirmation pour vos dossiers.'
 handlers:
   email:
     settings:
       subject: '2020 Demande de formulaires Excel des programmes Agri-stabilité et Agri-investissement'
-      body: "[webform_submission:values]<br />\r\n<br />\r\nNous avons bien reçu votre demande."
+      body: "[webform_submission:values]<br />\r\n<br />\r\nNous avons bien re&ccedil;u votre demande."
