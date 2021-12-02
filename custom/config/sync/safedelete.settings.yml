@@ -1,8 +1,17 @@
-bundle: {  }
-limit: 30
+bundle:
+  landing_page: landing_page
+  page: page
+  dir_listing: 0
+  webform: 0
+limit: '30'
 delete_button: 0
 safearchive: 0
-orphanedpagedefinition: {  }
-orphanedpagewithoutmenulink: {  }
+orphanedpagedefinition:
+  landing_page: landing_page
+  page: page
+  dir_listing: 0
+  webform: 0
+orphanedpagewithoutmenulink: landing_page
 _core:
   default_config_hash: fw3EOzS6vL5yxwXT8vzWpkI-N5aKCinQC1_Zu9WHJyY
+exceptionofnodes: ''
