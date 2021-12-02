@@ -12,7 +12,6 @@
         if ($('body').hasClass('user-logged-in')) {
           if ($('body').hasClass('path-node')) {
             $('#edit-submit').bind('click.agriAdmin', function(e) {
-              // jQuery('*').unbind('click.moderated_content_bulk_publish'); // Disables confirm dialog.
               // Get the current state. Need to clone this object and remove the label so that we can get just the state.
               var cur_state = '';
               var mod_state = $('#edit-moderation-state-0-current').clone();
