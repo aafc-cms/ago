@@ -24,8 +24,21 @@ body.webform_generic_contactform {
     label[for="edit-fullname"], label[for="edit-yourmessage"] {
       position: relative;
       margin-left: 10px;
+      margin-bottom: 0px;
     }
-    
+
+    div.form-item--error-message.alert.alert-danger::before {
+      content: none;
+    }
+
+    div.form-item--error-message.alert.alert-danger {
+      border-image: none !important;
+      margin-bottom: 5px;
+      margin-left: 0px;
+      font-weight: bold;
+      background: #f3e9e8;
+      border-color: #d3080c;
+    }
   }
 
   div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper {
