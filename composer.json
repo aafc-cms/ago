@@ -193,7 +193,10 @@
         "drupal/varnish_purge": "^2.1",
         "drupal/view_custom_table": "^2.0",
         "drupal/media_library_edit": "^2.1",
-        "drupal/webform_translation_permissions": "^1.1"
+        "drupal/webform_translation_permissions": "^1.1",
+        "drupal/entity_embed": "^1.0",
+        "drupal/video_embed_field": "^2.0",
+        "drupal/views_infinite_scroll": "^1.6"
     },
     "authors": [
         {
