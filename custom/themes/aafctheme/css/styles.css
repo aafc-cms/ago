@@ -314,55 +314,62 @@ div.alert.alert-success.access_unpublished span.glyphicon-copy::before {
   bottom: -4px;
 }
 
+/* Make sure it's easy to click the language link. */
+/* line 3, ../sass/components/_header.scss */
+a.language-link {
+  z-index: 1;
+  position: relative;
+}
+
 @media screen and (max-width: 844px) {
-  /* line 3, ../sass/components/_header.scss */
+  /* line 9, ../sass/components/_header.scss */
   form.search-form div.js-form-type-select {
     float: left;
     position: absolute;
     right: 75px;
   }
 
-  /* line 8, ../sass/components/_header.scss */
+  /* line 14, ../sass/components/_header.scss */
   form.search-form div.js-form-type-search {
     width: 80%;
     left: 75px;
   }
 }
 @media screen and (min-width: 845px) {
-  /* line 14, ../sass/components/_header.scss */
+  /* line 20, ../sass/components/_header.scss */
   body.isIE div#edit-actions {
     left: 15px;
   }
 }
-/* line 18, ../sass/components/_header.scss */
+/* line 24, ../sass/components/_header.scss */
 form.search-form div.js-form-type-select {
   right: 67px;
 }
 
-/* line 21, ../sass/components/_header.scss */
+/* line 27, ../sass/components/_header.scss */
 form.search-form div.js-form-type-search {
   right: 40px;
 }
 
-/* line 24, ../sass/components/_header.scss */
+/* line 30, ../sass/components/_header.scss */
 div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
   display: inline-block !important;
 }
 
 @media screen and (min-width: 768px) and (max-width: 844px) {
-  /* line 29, ../sass/components/_header.scss */
+  /* line 35, ../sass/components/_header.scss */
   body.isIE #custom-search-block-form .select-wrapper::after {
     right: 15px;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 35, ../sass/components/_header.scss */
+  /* line 41, ../sass/components/_header.scss */
   form.search-form div.js-form-type-search {
     right: 124px;
   }
 }
 @media screen and (min-width: 845px) {
-  /* line 42, ../sass/components/_header.scss */
+  /* line 48, ../sass/components/_header.scss */
   body.isIE #custom-search-block-form .select-wrapper::after {
     right: 7px;
   }
