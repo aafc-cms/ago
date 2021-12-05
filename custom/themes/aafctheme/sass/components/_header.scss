@@ -1,4 +1,10 @@
 
+/* Make sure it's easy to click the language link. */
+a.language-link {
+  z-index: 1;
+  position: relative;
+}
+
 @media screen and (max-width: 844px) {
   form.search-form div.js-form-type-select{
     float: left;
