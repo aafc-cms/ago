@@ -518,6 +518,14 @@ function wxt_overrides_form_alter(&$form, &$form_state, $form_id) {
     //set the default Program or Service based on calling program page
     $form['elements']['programorservice']['#default_value'] = $ps_id;
   }
+  if ($form_id == 'webform_submission_aafc_generic_contact_form_add_form') {
+    $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    if ( $langId == 'en' ) {
+      $form['elements']['preferredresponselanguage']['#default_value'] = 'English';
+    } elseif ( $langId == 'fr' ) {
+      $form['elements']['preferredresponselanguage']['#default_value'] = 'French';
+    }
+  }
 }
 
 
