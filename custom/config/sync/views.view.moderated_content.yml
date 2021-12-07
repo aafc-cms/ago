@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_tracking_number
     - taxonomy.vocabulary.aafc_type
     - taxonomy.vocabulary.category
+    - workflows.workflow.editorial
   module:
     - content_lock
     - content_moderation
@@ -941,7 +942,10 @@ display:
           entity_type: node
           plugin_id: moderation_state_filter
           operator: in
-          value: {  }
+          value:
+            editorial-draft: editorial-draft
+            editorial-published: editorial-published
+            editorial-archived: editorial-archived
           group: 1
           exposed: true
           expose:
@@ -963,7 +967,11 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
-            reduce: false
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
