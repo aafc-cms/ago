@@ -40,4 +40,12 @@ body.path-admin {
       color: #222330;
     }
   }
+  .view-filters {
+    #edit-revision-timestamp-wrapper, #edit-field-modified-value-wrapper {
+      .form-item {
+        float: left;
+      }   
+    }
+  }
+
 }

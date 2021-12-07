@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_modified
+    - node.type.landing_page
+    - node.type.webform
     - taxonomy.vocabulary.aafc_type
     - taxonomy.vocabulary.category
     - workflows.workflow.editorial
@@ -2169,7 +2171,9 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value: {  }
+          value:
+            landing_page: landing_page
+            webform: webform
           group: 1
           exposed: true
           expose:
@@ -2194,8 +2198,9 @@ display:
               pab_admin: '0'
               qa: '0'
               ia: '0'
+              viewer: '0'
             argument: ''
-            reduce: false
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -2316,7 +2321,7 @@ display:
             operator_id: moderation_state_op
             label: 'Moderation state'
             description: ''
-            use_operator: true
+            use_operator: false
             operator: moderation_state_op
             operator_limit_selection: false
             operator_list: {  }
@@ -2332,6 +2337,9 @@ display:
               editor: '0'
               reviewer: '0'
               pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
             reduce: true
           is_grouped: false
           group_info:
