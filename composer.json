@@ -125,6 +125,10 @@
                 "3253160 - Etuf, allow updating menu link title translation.":
                 "https://www.drupal.org/files/issues/2021-12-08/etuf-allow_updating_menu_link_title_translation-3253160-4.patch"
             },
+            "drupal/moderated_content_bulk_publish": {
+                "3253887 - Change revision message on bulk Unpublish":
+                "https://www.drupal.org/files/issues/2021-12-10/3253887-2.patch"
+            },
             "drupal/lightning_core": {
                 "3223839 - Fix notices":
                 "https://www.drupal.org/files/issues/2021-07-15/3223839-1-PHP-warning-from-contextual-links.patch"
