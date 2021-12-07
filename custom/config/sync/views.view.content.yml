@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_modified
     - node.type.landing_page
+    - node.type.page
     - node.type.webform
     - taxonomy.vocabulary.aafc_type
     - taxonomy.vocabulary.category
@@ -2172,6 +2173,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
+            page: page
             landing_page: landing_page
             webform: webform
           group: 1
