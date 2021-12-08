@@ -120,6 +120,14 @@
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
+            },
+            "drupal/entity_translation_unified_form": {
+                "3253160 - Etuf, allow updating menu link title translation.":
+                "https://www.drupal.org/files/issues/2021-12-08/etuf-allow_updating_menu_link_title_translation-3253160.patch"
+            },
+            "drupal/lightning_core": {
+                "3223839 - Fix notices":
+                "https://www.drupal.org/files/issues/2021-07-15/3223839-1-PHP-warning-from-contextual-links.patch"
             }
         },
         "patches-ignore": {
