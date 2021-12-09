@@ -383,7 +383,7 @@ function aafctheme_preprocess_page(&$vars) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
-  if (is_object($node)) {
+  if (is_object($node) && $node->hasField('field_large')) {
     $large_mode = $node->get('field_large')->value;
     $vars['large_mode'] = $large_mode;
   }
@@ -402,7 +402,7 @@ function aafctheme_preprocess_page_title__gcweb(&$vars) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
-  if (is_object($node)) {
+  if (is_object($node) && $node->hasField('field_special')) {
     $special_title = $node->get('field_special')->value;
     $vars['special_title'] = $special_title;
   }
