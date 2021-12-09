@@ -698,8 +698,11 @@ body.webform_feedback_programsandservices div.region.region-highlighted ul li::a
   content: none;
 }
 /* line 73, ../sass/components/_feedback-webform.scss */
-body.webform_feedback_programsandservices div.region.region-highlighted h2 + p {
-  font-size: 24px !important;
+body.webform_feedback_programsandservices div.region.region-highlighted h2.sr-only {
+  position: relative;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
 }
 
 /* line 3, ../sass/components/_generic-contact-webform.scss */
@@ -767,8 +770,11 @@ body.webform_generic_contactform div.region.region-highlighted ul li::after {
   content: none;
 }
 /* line 64, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.region.region-highlighted h2 + p {
-  font-size: 24px !important;
+body.webform_generic_contactform div.region.region-highlighted h2.sr-only {
+  position: relative;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
 }
 
 /* line 4, ../sass/components/_services-request-webform.scss */
