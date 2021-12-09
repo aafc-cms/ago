@@ -262,8 +262,9 @@ var AAFCFrontend = function() {
             countErr = countErr +1;
           });
 
+          $("h2.sr-only").text(h2prefix + originstring); // set the error msg into h2
+          $("h2.sr-only").next().remove();               // remove extra html p element
           var originstring = $( "h2.sr-only").next().text();
-          $("h2.sr-only").next().text(h2prefix + originstring);
           //new logic for WCAG in Drupal Core 9.3
           if ((typeof($('div.form-item.has-error')) !== "undefined")) {
             $( "div.alert.alert-danger").each(function(index) {
