@@ -147,11 +147,26 @@ function agri_admin_preprocess_views_view_field(&$variables) {
   }
 
   $view = $variables['view'];
-  if ($hasPermission && $view->id() == 'content') {
+  if ($hasPermission && ($view->id() == 'content' || $view->id() == 'moderated_content')) {
     $field = $variables['field'];
     $row = $variables['row'];
     $nid = $row->_entity->id();
     $vid = $row->_entity->getLoadedRevisionId();
+
+    // This IF block only for Moderated Content view. Returning after this block ends since the rest of the code currently does not apply to this view.
+    if ($view->id() == 'moderated_content') {
+      if ($field->field == 'moderation_state') {
+        $moderationState = $row->_entity->get('moderation_state')->getString();
+        if ($moderationState == 'draft') {
+          $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+          if ($node->isPublished()) {
+            $variables['output'] = t('pending draft');
+          }
+        }
+      }
+      return;
+    }
+
     if ($row->_entity->isPublished() && $latestRevision = AgriAdminHelper::getLatestRevisionOnlyIfDraft($nid, $vid)) {
       if ($field->field == 'status') {
         // This is specifically for the row styling (view -> Format -> settings -> row {{ status }}.
