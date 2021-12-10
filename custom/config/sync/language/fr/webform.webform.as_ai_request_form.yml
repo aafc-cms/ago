@@ -9,8 +9,8 @@ elements: |
     '#title': 'Nom du demandeur'
   email_address_required_:
     '#title': 'Adresse de courriel'
-  phone_number_as_ai:
-    '#title': 'Numéro de téléphone'
+  phone_number_1613_666_6666_:
+    '#title': 'Numéro de téléphone (+1613 666 6666)'
   language_of_preference:
     '#title': 'Langue de correspondance'
     '#options':
@@ -24,7 +24,7 @@ elements: |
     '#options':
       '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': 'Trousse de formulaires T1273 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2020.'
       '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2020.'
-      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2021. * (* Les trousses de formulaires Excel suivantes comprennent l&rsquo;&eacute;tat A, l&rsquo;&eacute;tat B et le formulaire de demande de redressement. Veuillez indiquer ci-apr&egrave;s la ou les trousses que vous aimeriez recevoir.)'
+      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2021. (Les trousses de formulaires Excel suivantes comprennent l&rsquo;&eacute;tat A, l&rsquo;&eacute;tat B et le formulaire de demande de redressement. Veuillez indiquer ci-apr&egrave;s la ou les trousses que vous aimeriez recevoir.)'
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#title': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan :'
     '#options':
