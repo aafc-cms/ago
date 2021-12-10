@@ -34,12 +34,10 @@ elements: |-
     '#type': email
     '#title': 'Email address'
     '#required': true
-  phone_number_as_ai:
-    '#type': webform_telephone
-    '#title': 'Phone number'
-    '#type__access': false
-    '#ext__access': false
-    '#phone__international_initial_country': CA
+  phone_number_1613_666_6666_:
+    '#type': tel
+    '#title': 'Phone number (+1613 666 6666)'
+    '#telephone_validation_format': '0'
   language_of_preference:
     '#type': select
     '#title': 'Language of preference'
@@ -57,7 +55,7 @@ elements: |-
     '#options':
       '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1273 forms package for individuals.'
       '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2020 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
-      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.* (* 2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
+      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
     '#options__properties': ''
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#type': checkboxes
