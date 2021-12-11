@@ -3,7 +3,7 @@
 namespace Drupal\agri_admin;
 
 /**
- * Custom block example.
+ * Return a rendered block by id for custom code.
  */
 class UtilsBlock {
 

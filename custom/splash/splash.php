@@ -3,6 +3,8 @@
 /**
  * @file
  * This file is activated when no /en or /fr language prefix is provided.
+ *
+ * Requires an entry in the .htaccess to get triggered.
  */
 
 $server_name = $_SERVER['SERVER_NAME'];
