@@ -394,6 +394,7 @@ body.path-admin .view-content #edit-field-modified-value-wrapper {
   position: relative;
   margin-top: 2.35em;
   margin-right: 8px;
+  padding-bottom: inherit;
 }
 body.path-admin .view-content #edit-revision-timestamp-wrapper legend span.fieldset__label,
 body.path-admin .view-content #edit-field-modified-value-wrapper legend span.fieldset__label {
