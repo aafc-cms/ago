@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @file
+ * AAFC theme preprocess hooks and more.
+ */
+
+use Drupal\Core\Render\Markup;
+use Drupal\agri_admin\UtilsBlock;
+use Drupal\bootstrap\Bootstrap;
 use Drupal\agri_admin\Utils;
 
 /**
@@ -10,7 +18,7 @@ use Drupal\agri_admin\Utils;
  */
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ * Implements hook_theme_suggestions_block_alter().
  */
 function aafctheme_theme_suggestions_block_alter(&$suggestions, $variables) {
 
@@ -27,6 +35,9 @@ function aafctheme_theme_suggestions_block_alter(&$suggestions, $variables) {
  * Place your custom PHP code in this file.
  */
 
+/**
+ * Implements hook_preprocess_html().
+ */
 function aafctheme_preprocess_html(&$variables) {
   $route_match = Utils::getRouteName();
 
@@ -57,7 +68,7 @@ function aafctheme_preprocess_html(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['langID'] = $langId;
-  $theme = \Drupal\bootstrap\Bootstrap::getTheme();
+  $theme = Bootstrap::getTheme();
   $themedir = $theme->getPath();
   $variables['current_path'] = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
   // Add class attribute (current role names) to the body class (for styling).
@@ -70,7 +81,6 @@ function aafctheme_preprocess_html(&$variables) {
   // Begin logic to grab moderation state and add it to the body class for styling.
   // This section is required for view node identify draft revisions as 'pink'.
   // Corresponding draft pink css is in css/style.scss.
-
   $variables['current_path'] = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
   // Add node id to the body class.
   $node = \Drupal::routeMatch()->getParameter('node');
@@ -84,17 +94,17 @@ function aafctheme_preprocess_html(&$variables) {
   if ($node) {
     // Workaround for https://www.drupal.org/project/drupal/issues/2730631 .
     // Workaround for inconsistent router behaviour, see comments in issue 2730631.
-    // TODO, follow up on issue 2730631.
+    // @todo , follow up on issue 2730631.
     $published = 'published-yes';
     $is_unpublished = '';
     $is_pending_draft = '';
     $nodeType = '';
     $node_storage = \Drupal::entityTypeManager()->getStorage('node');
 
-    if(is_string($node) && is_numeric($node)) {
+    if (is_string($node) && is_numeric($node)) {
       $nid = $node;
     }
-    else if (gettype($node) == 'object') {
+    elseif (gettype($node) == 'object') {
       $nid = $node->id();
       $nodeType = $node->getType();
       $vid = $node->getRevisionId();
@@ -164,35 +174,34 @@ function aafctheme_preprocess_html(&$variables) {
     }
 
   }
-  //get original url (/webform/yourfeedback_programsandservices) from url alias mapping info
+  // Get original url (/webform/yourfeedback_programsandservices) from url alias mapping info.
   if (isset($variables['page']['#attached']['http_header'][0][1])) {
     $patten = '/\/webform\/yourfeedback_programsandservices>/';
     $urlaliasmapping = $variables['page']['#attached']['http_header'][0][1];
     if (preg_match($patten, $urlaliasmapping)) {
-      //add custom - feedback_programsandservices_webform css class
+      // Add custom - feedback_programsandservices_webform css class.
       $variables['attributes']['class'][] = 'webform_feedback_programsandservices';
     }
   }
-  //get original url (/webform/aafc_generic_contact_form) from url alias mapping info
+  // Get original url (/webform/aafc_generic_contact_form) from url alias mapping info.
   if (isset($variables['page']['#attached']['http_header'][0][1])) {
     $patten = '/\/webform\/aafc_generic_contact_form>/';
     $urlaliasmapping = $variables['page']['#attached']['http_header'][0][1];
     if (preg_match($patten, $urlaliasmapping)) {
-      //add custom - feedback_programsandservices_webform css class
+      // Add custom - feedback_programsandservices_webform css class.
       $variables['attributes']['class'][] = 'webform_generic_contactform';
     }
   }
   // End of logic to grab moderation state and add it to the body class for styling.
-  
   $host = \Drupal::request()->getHost();
   $prod = FALSE;
-  if (stripos($host, 'www-ep.agr.gc.ca') !== false || stripos($host, 'agriculture.canada.ca') !== false) {
+  if (stripos($host, 'www-ep.agr.gc.ca') !== FALSE || stripos($host, 'agriculture.canada.ca') !== FALSE) {
     $prod = TRUE;
   }
   // Adobe Analytics JS library.
   if (\Drupal::currentUser()->isAnonymous() && $prod) {
     $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmprodjs';
-  } 
+  }
   else {
     $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmstagingjs';
   }
@@ -204,17 +213,15 @@ function aafctheme_preprocess_html(&$variables) {
 
 }
 
-
 /**
- * Implments hook_preprocess_node.
+ * Implments hook_preprocess_field().
  */
 function aafctheme_preprocess_field(&$variables, $hook) {
   if ($variables['element']['#field_name'] == 'field_classification') {
-    $block = \Drupal\agri_admin\UtilsBlock::getRendered('employment_classification_groups');
+    $block = UtilsBlock::getRendered('employment_classification_groups');
     $variables['empl_classification_block'] = $block;
   }
 }
-
 
 /**
  * Implements hook_preprocess_textarea().
@@ -227,7 +234,7 @@ function aafctheme_preprocess_textarea(&$variables) {
       if ($attr_array['aria-describedby'] == 'edit-body-0-summary--description') {
         $attribute_obj->removeAttribute('aria-describedby');
         $variables['attributes'] = $attribute_obj;
-        //\Drupal\agri_admin\AgriAdminHelper::addToLog('debug : <pre>' . print_r($attr_array,TRUE) . '</pre>' , TRUE);
+        // \Drupal\agri_admin\AgriAdminHelper::addToLog('debug : <pre>' . print_r($attr_array,TRUE) . '</pre>' , TRUE);
       }
 
       if ($attr_array['aria-describedby'] == 'edit-body-etuf-fr-0-summary--description') {
@@ -238,7 +245,6 @@ function aafctheme_preprocess_textarea(&$variables) {
   }
 }
 
-
 /**
  * Implements hook_preprocess_input().
  */
@@ -247,13 +253,13 @@ function aafctheme_preprocess_input(&$variables) {
     if (is_object($variables['attributes'])) {
       $attribute_obj = $variables['attributes'];
       $attr_array = $attribute_obj->toArray();
-      if (isset($attr_array['id']) ) {
-        if ($attr_array['id'] == 'edit-field-date-closing-0-value-date' ) {
+      if (isset($attr_array['id'])) {
+        if ($attr_array['id'] == 'edit-field-date-closing-0-value-date') {
           $attribute_obj->removeAttribute('aria-required');
           $variables['attributes'] = $attribute_obj;
         }
 
-        if ($attr_array['id'] == 'edit-field-posted-0-value-date' ) {
+        if ($attr_array['id'] == 'edit-field-posted-0-value-date') {
           $attribute_obj->removeAttribute('aria-required');
           $variables['attributes'] = $attribute_obj;
         }
@@ -262,14 +268,14 @@ function aafctheme_preprocess_input(&$variables) {
   }
 }
 
-
 /**
  * Implements hook_preprocess_field_multiple_value_form().
  */
 function aafctheme_preprocess_field_multiple_value_form(&$vars) {
-  if (!\Drupal::currentUser()->isAnonymous()) { return; }
+  if (!\Drupal::currentUser()->isAnonymous()) {
+    return;
+  }
   // Anonymous only logic below.
-
   // Remove weight option for multivalue fields.
   if (isset($vars['table']['#tabledrag'])) {
     unset($vars['table']['#tabledrag']);
@@ -284,7 +290,6 @@ function aafctheme_preprocess_field_multiple_value_form(&$vars) {
   }
 }
 
-
 /**
  * Implements hook_preprocess_fieldset().
  */
@@ -294,15 +299,13 @@ function aafctheme_preprocess_fieldset(&$variables) {
   unset($variables['attributes']['aria-invalid']);
 }
 
-
-
 /**
  * Implements hook_preprocess_form_element_label().
  */
 function aafctheme_preprocess_form_element_label(&$variables) {
   if (\Drupal::currentUser()->isAnonymous()) {
     if (isset($variables['attributes']['for']) && $variables['attributes']['for']) {
-      if ($variables['attributes']['for'] == 'edit-advanced' ) {
+      if ($variables['attributes']['for'] == 'edit-advanced') {
         // This squelches w3c error for label that has no element.
         // Since we have removed edit-advanced section we also adjust its label.
         unset($variables['element']);
@@ -314,9 +317,8 @@ function aafctheme_preprocess_form_element_label(&$variables) {
   }
 }
 
-
 /**
- *  Prevents quickedit javascript crash for this image style.
+ * Prevents quickedit javascript crash for this image style.
  */
 function aafctheme_preprocess_media(&$vars) {
   // Fixing the media missed the quick edit attribute.
@@ -324,16 +326,15 @@ function aafctheme_preprocess_media(&$vars) {
     $media = $vars["elements"]["#media"];
     $type = $media->getEntityType()->id();
     $id = $media->id();
-    
+
     if (!isset($vars['attributes']['data-quickedit-entity-id'])) {
       $vars['attributes']['data-quickedit-entity-id'] = $type . '/' . $id;
     }
   }
 }
 
-
 /**
- *  Prevents quickedit javascript crash for this image style.
+ * Prevents quickedit javascript crash for this image style.
  */
 function aafctheme_preprocess_media__image__w0520px(&$vars) {
   // Fixing the media missed the quick edit attribute.
@@ -341,23 +342,22 @@ function aafctheme_preprocess_media__image__w0520px(&$vars) {
     $media = $vars["elements"]["#media"];
     $type = $media->getEntityType()->id();
     $id = $media->id();
-    
+
     if (!isset($vars['attributes']['data-quickedit-entity-id'])) {
       $vars['attributes']['data-quickedit-entity-id'] = $type . '/' . $id;
     }
   }
 }
 
-
 /**
- * Implements aafctheme_preprocess_page hook.
+ * Implements hook_preprocess_page().
  */
 function aafctheme_preprocess_page(&$vars) {
   /* hide view and lastest version TABS in the page content */
   $current_uri = \Drupal::request()->getRequestUri();
   $regex_token = '/\/latest\?auHash=([a-zA-Z]|[0-9]|[_]|[-]){43}/';
   if (preg_match($regex_token, $current_uri)) {
-    if (\Drupal::currentUser()->isAnonymous() && $vars['page']['#type'] == 'page' ) {
+    if (\Drupal::currentUser()->isAnonymous() && $vars['page']['#type'] == 'page') {
       $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
       if ($langId == 'en') {
         $patten = '/<nav class="tabs mrgn-tp-md mrgn-bttm-md" aria-label="Tabs">/';
@@ -371,15 +371,15 @@ function aafctheme_preprocess_page(&$vars) {
       if (isset($content)) {
         $content = preg_replace($patten, $replacement, $content);
         if (isset($content)) {
-          $vars['page']['content']['system_main']['#markup'] = \Drupal\Core\Render\Markup::create($content);
+          $vars['page']['content']['system_main']['#markup'] = Markup::create($content);
         }
       }
     }
   }
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
-  $vars['large_mode'] = false;
-  if(is_string($node) && is_numeric($node)) {
+  $vars['large_mode'] = FALSE;
+  if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
@@ -389,16 +389,22 @@ function aafctheme_preprocess_page(&$vars) {
   }
 }
 
+/**
+ * Implements hook_preprocess_page_title__node__1__gcweb().
+ */
 function aafctheme_preprocess_page_title__node__1__gcweb(&$vars) {
   // Handle special_title logic.
   aafctheme_preprocess_page_title__gcweb($vars);
 }
 
+/**
+ * Implements hook_preprocess_page_title__gcweb().
+ */
 function aafctheme_preprocess_page_title__gcweb(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
-  $vars['special_title'] = false;
-  if(is_string($node) && is_numeric($node)) {
+  $vars['special_title'] = FALSE;
+  if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
@@ -409,11 +415,14 @@ function aafctheme_preprocess_page_title__gcweb(&$vars) {
 
 }
 
+/**
+ * Implements hook_preprocess_region__header__gcweb().
+ */
 function aafctheme_preprocess_region__header__gcweb(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
-  $vars['large_mode'] = false;
-  if(is_string($node) && is_numeric($node)) {
+  $vars['large_mode'] = FALSE;
+  if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
@@ -424,11 +433,14 @@ function aafctheme_preprocess_region__header__gcweb(&$vars) {
 
 }
 
+/**
+ * Implements hook_preprocess_region__content_footer__gcweb().
+ */
 function aafctheme_preprocess_region__content_footer__gcweb(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
-  $vars['large_mode'] = false;
-  if(is_string($node) && is_numeric($node)) {
+  $vars['large_mode'] = FALSE;
+  if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
@@ -438,6 +450,3 @@ function aafctheme_preprocess_region__content_footer__gcweb(&$vars) {
   }
 
 }
-
-
-

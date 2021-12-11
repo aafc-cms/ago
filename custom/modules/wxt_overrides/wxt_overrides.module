@@ -1,21 +1,15 @@
 <?php
 
-
-use Drupal\agri_admin\AgriAdminHelper;
-use Drupal\agri_admin\Utils;
-use \Drupal\Core\File\FileSystemInterface;
-use Drupal\Core\Utility\Token;
-
 /**
  * @file
- * Primary module hooks for WxT Overrides module.
- *
- * @DCG
- * This file is no longer required in Drupal 8.
- * @see https://www.drupal.org/node/2217931
+ * Module file for wxt_overrides, handle head meta requirements for tbs plus more.
  */
 
-
+use Drupal\Core\Url;
+use Drupal\user\Entity\User;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\agri_admin\AgriAdminHelper;
+use Drupal\agri_admin\Utils;
 
 /**
  * Implements hook_page_attachments().
@@ -24,9 +18,8 @@ use Drupal\Core\Utility\Token;
  */
 function wxt_overrides_page_attachments(array &$page) {
 
-  $DEBUG = FALSE;
-  if ($DEBUG && $fp = fopen('modules/custom/wxt_overrides/debug.txt', 'a'))
-  {
+  $debug = FALSE;
+  if ($debug && $fp = fopen('modules/custom/wxt_overrides/debug.txt', 'a')) {
     fwrite($fp, print_r($page, TRUE) . "\n");
     fclose($fp);
   }
@@ -38,7 +31,7 @@ function wxt_overrides_page_attachments(array &$page) {
   }
   $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
   // Add page meta.
-  foreach($metatags_module_head as $key => $value) {
+  foreach ($metatags_module_head as $key => $value) {
     if (isset($value[0]['#attributes']['name'])) {
       $name = $value[0]['#attributes']['name'];
       if ($name == 'dcterms.language') {
@@ -81,7 +74,7 @@ function wxt_overrides_page_attachments(array &$page) {
     ],
   ];
 
-  if ( $langId == 'en' ) {
+  if ($langId == 'en') {
     $dctermslanguage = [
       '#tag' => 'meta',
       '#attributes' => [
@@ -101,7 +94,7 @@ function wxt_overrides_page_attachments(array &$page) {
     ];
   }
 
-  if ( $langId == 'fr' ) {
+  if ($langId == 'fr') {
     $dctermslanguage = [
       '#tag' => 'meta',
       '#attributes' => [
@@ -121,9 +114,18 @@ function wxt_overrides_page_attachments(array &$page) {
     ];
   }
 
-  $page['#attached']['html_head'][] = [$dctermsaccessRights, 'dcterms:accessRights'];
-  $page['#attached']['html_head'][] = [$dctermslanguage, 'dcterms:language'];
-  $page['#attached']['html_head'][] = [$dctermsservice, 'dcterms:service'];
+  $page['#attached']['html_head'][] = [
+    $dctermsaccessRights,
+    'dcterms:accessRights',
+  ];
+  $page['#attached']['html_head'][] = [
+    $dctermslanguage,
+    'dcterms:language',
+  ];
+  $page['#attached']['html_head'][] = [
+    $dctermsservice,
+    'dcterms:service',
+  ];
 
   $node = \Drupal::routeMatch()->getRawParameter('node');
   if (!isset($node)) {
@@ -134,7 +136,7 @@ function wxt_overrides_page_attachments(array &$page) {
   $route_match = Utils::getRouteName();
   if ($route_match == 'entity.node.canonical' && isset($page['#attached']['html_head'])) {
     $metatags_module_head = $page['#attached']['html_head'];
-    foreach($metatags_module_head as $key => $value) {
+    foreach ($metatags_module_head as $key => $value) {
       if (isset($value[0]['#attributes']['name'])) {
         $name = $value[0]['#attributes']['name'];
         if ($name == 'dcterms.language') {
@@ -144,7 +146,7 @@ function wxt_overrides_page_attachments(array &$page) {
           $content = $value[0]['#attributes']['content'];
           if (empty($content)) {
             $node = \Drupal::routeMatch()->getParameter('node');
-            if ($node && !is_string($node) ) {
+            if ($node && !is_string($node)) {
               $content = $node->body->summary;
             }
           }
@@ -157,7 +159,10 @@ function wxt_overrides_page_attachments(array &$page) {
           ];
           unset($page['#attached']['html_head'][$key]);
           // Transfer metatag from default dublincore to aafc/gc custom.
-          $page['#attached']['html_head'][] = [$dctermsdescription, 'dcterms:description'];
+          $page['#attached']['html_head'][] = [
+            $dctermsdescription,
+            'dcterms:description',
+          ];
         }
         if ($name == 'keywords') {
           $has_keywords = TRUE;
@@ -173,7 +178,10 @@ function wxt_overrides_page_attachments(array &$page) {
           ];
           unset($page['#attached']['html_head'][$key]);
           // Transfer metatag from default dublincore to aafc/gc custom.
-          $page['#attached']['html_head'][] = [$dctermscreator, 'dcterms:creator'];
+          $page['#attached']['html_head'][] = [
+            $dctermscreator,
+            'dcterms:creator',
+          ];
         }
         if ($name == 'dcterms.title') {
           $content = $value[0]['#attributes']['content'];
@@ -313,7 +321,6 @@ function wxt_overrides_page_attachments(array &$page) {
 
   }
 
-
   $dctermsspatial = [
     '#tag' => 'meta',
     '#attributes' => [
@@ -341,79 +348,75 @@ function wxt_overrides_page_attachments(array &$page) {
     ],
   ];
 
-
   $page['#attached']['html_head'][] = [$dctermsaudience, 'dcterms:audience'];
   $page['#attached']['html_head'][] = [$dctermsformat, 'dcterms:format'];
   $page['#attached']['html_head'][] = [$dctermsspatial, 'dcterms:spatial'];
-
-  return;
 }
-
-
 
 /**
  * Implements hook_form_node_form_alter().
  */
-function wxt_overrides_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function wxt_overrides_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   /* set the default value for communictaion as meta data subject type */
-  if ( $form_id == 'node_news_edit_form' ) {
-    $communicationid = 38; // communication id =38
-    $form['field_subject']['widget']['#options_attributes'][$communicationid] = ['checked' => 'checked'] ;
+  if ($form_id == 'node_news_edit_form') {
+    // Communication id =38.
+    $communicationid = 38;
+    $form['field_subject']['widget']['#options_attributes'][$communicationid] = ['checked' => 'checked'];
   }
 
   if ($form_id == 'node_landing_page_edit_form' || $form_id == 'node_page_edit_form'  ||
       $form_id == 'node_landing_page_form'      || $form_id == 'node_page_form'  ||
-      $form_id == 'page-node-type-empl'  || $form_id == 'page-node-type-news' ) {
+      $form_id == 'page-node-type-empl'  || $form_id == 'page-node-type-news') {
 
     foreach ($form['menu']['link']['menu_parent']['#options'] as $key => &$value) {
       $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
-      if ($langcode == 'en' && strpos($value, 'disabled') == false) {
-        $keyarray = explode (":", $key);
-        if ( sizeof($keyarray) > 2) {
-          if ( AgriAdminHelper::isLinkFrenchOnly($keyarray[2])) {
+      if ($langcode == 'en' && strpos($value, 'disabled') == FALSE) {
+        $keyarray = explode(":", $key);
+        if (count($keyarray) > 2) {
+          if (AgriAdminHelper::isLinkFrenchOnly($keyarray[2])) {
             unset($form['menu']['link']['menu_parent']['#options'][$key]);
           }
         }
       }
       else {
-        if ($langcode == 'fr' && strpos($value, 'désactivé') == false) {
-          $keyarray = explode (":", $key);
-          if ( sizeof($keyarray) > 2) {
-            if ( AgriAdminHelper::isLinkEnglishOnly($keyarray[2])) {
+        if ($langcode == 'fr' && strpos($value, 'désactivé') == FALSE) {
+          $keyarray = explode(":", $key);
+          if (count($keyarray) > 2) {
+            if (AgriAdminHelper::isLinkEnglishOnly($keyarray[2])) {
               unset($form['menu']['link']['menu_parent']['#options'][$key]);
             }
           }
         }
       }
 
-      if ( strpos($value, '-- ') == 0  ) {
-          //$value =  substr($value,0, 3) . 'level 1. ' . substr( $value,3, strlen($value)) ;
-        $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = ['class'=> 'menu_tree-leve-1'];
+      if (strpos($value, '-- ') == 0) {
+        // $value =  substr($value,0, 3) . 'level 1. ' . substr( $value,3, strlen($value)) ;
+        $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = ['class' => 'menu_tree-leve-1'];
       }
       else {
-        if ( strpos($value, '---- ') == 0  ) {
+        if (strpos($value, '---- ') == 0) {
           // $value =  substr($value,0, 5) . 'level 2. ' . substr( $value,5, strlen($value)) ;
           $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = 'menu_tree-leve-2 glyphicon';
         }
         else {
-          if ( strpos($value, '------ ') == 0  ) {
-            //$value =  substr($value,0, 7) . 'level 3. ' . substr( $value,7, strlen($value)) ;
+          if (strpos($value, '------ ') == 0) {
+            // $value =  substr($value,0, 7) . 'level 3. ' . substr( $value,7, strlen($value)) ;
             $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = 'menu_tree-leve-3';
           }
           else {
-            if ( strpos($value, '-------- ') == 0  ) {
-              //$value =  substr($value,0, 9) . 'level 4. ' . substr( $value,9, strlen($value)) ;
+            if (strpos($value, '-------- ') == 0) {
+              // $value =  substr($value,0, 9) . 'level 4. ' . substr( $value,9, strlen($value)) ;
               $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = 'menu_tree-leve-4';
             }
             else {
-              if ( strpos($value, '---------- ') == 0  ) {
-                //$value =  substr($value,0, 11) . 'level 5. ' . substr( $value,11, strlen($value)) ;
+              if (strpos($value, '---------- ') == 0) {
+                // $value =  substr($value,0, 11) . 'level 5. ' . substr( $value,11, strlen($value)) ;
                 $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = 'menu_tree-leve-5';
               }
               else {
-                if ( strpos($value, '------------ ') == 0  ) {
-                  //$value =  substr($value,0, 13) . 'level 6. ' . substr( $value,11, strlen($value)) ;
+                if (strpos($value, '------------ ') == 0) {
+                  // $value =  substr($value,0, 13) . 'level 6. ' . substr( $value,11, strlen($value)) ;
                   $form['menu']['link']['menu_parent']['#options_attributes'][$key]['class'] = 'menu_tree-leve-6';
                 }
               }
@@ -449,9 +452,9 @@ function wxt_overrides_link_alter(&$variables) {
   }
   else {
     $route_name = $url->getRouteName();
-    //$parent_route = $url->getParentRouteName();
+    // $parent_route = $url->getParentRouteName();
     $current_route = \Drupal::routeMatch()->getRouteName();
-    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $user = User::load(\Drupal::currentUser()->id());
     $moderated_default = $user->get('field_default_content_mode')->first();
     if (!empty($moderated_default)) {
       $moderated_default = $moderated_default->getValue()['value'];
@@ -462,81 +465,88 @@ function wxt_overrides_link_alter(&$variables) {
     if ($current_route == 'system.admin_content' && $variables['text'] == 'Overview') {
       return;
     }
-    else if ($current_route == 'content_moderation.admin_moderated_content' && $variables['text'] == 'Overview') {
+    elseif ($current_route == 'content_moderation.admin_moderated_content' && $variables['text'] == 'Overview') {
       return;
     }
-    else if ($variables['text'] == 'Overview') {
+    elseif ($variables['text'] == 'Overview') {
       return;
     }
-    else if ($moderated_default && $route_name == 'system.admin_content' && $variables['text'] != 'Overview') {
+    elseif ($moderated_default && $route_name == 'system.admin_content' && $variables['text'] != 'Overview') {
       $link_options = $url->getOptions();
       if (isset($link_options['attributes']['class'][1])) {
         foreach ($link_options['attributes']['class'] as $key => $classname) {
           if ($classname === 'tabs__link') {
-            return; // Do not manipulate this tabs__link as it is otherwise confusing to the end user.
+            // Do not manipulate this tabs__link as it is otherwise confusing to the end user.
+            return;
           }
         }
       }
-      $DEBUG = FALSE;
-      if ($DEBUG && $fp = fopen('modules/custom/wxt_overrides/debug2.txt', 'a'))
-      {
-        //fwrite($fp, print_r(get_class_methods($url), TRUE) . "\n");
+      $debug = FALSE;
+      if ($debug && $fp = fopen('modules/custom/wxt_overrides/debug2.txt', 'a')) {
+        // fwrite($fp, print_r(get_class_methods($url), TRUE) . "\n");.
         fwrite($fp, print_r($url->getOptions(), TRUE) . "\n");
         fclose($fp);
       }
       $variables['text'] = t('Moderated content');
-      $variables['url'] = \Drupal\Core\Url::fromUri('internal:/admin/content/moderated');
+      $variables['url'] = Url::fromUri('internal:/admin/content/moderated');
     }
-    else if ($variables['text'] == 'Table') {
+    elseif ($variables['text'] == 'Table') {
       return;
     }
-    else if ($route_name == 'entity.media.collection') {
+    elseif ($route_name == 'entity.media.collection') {
       $link_options = $url->getOptions();
       if ($current_route == 'entity.media.collection') {
         if (in_array('tabs__link', $link_options['attributes']['class'])) {
-          return; // Do not manipulate this tabs__link as it is otherwise confusing to the end user.
+          // Do not manipulate this tabs__link as it is otherwise confusing to the end user.
+          return;
         }
       }
       if (isset($link_options['attributes']['class']) && in_array('tabs__link', $link_options['attributes']['class']) && $variables['text'] == 'Table') {
-        return; // Do not manipulate this tabs__link as it is otherwise confusing to the end user.
+        // Do not manipulate this tabs__link as it is otherwise confusing to the end user.
+        return;
       }
       $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
       $variables['text'] = 'Media (grid)';
       if ($langcode == 'fr') {
         $variables['text'] = 'Médias (Grille)';
       }
-      $variables['url'] = \Drupal\Core\Url::fromUri('internal:/admin/content/media-grid');
+      $variables['url'] = Url::fromUri('internal:/admin/content/media-grid');
     }
   }
 }
 
-
+/**
+ * Implements hook_form_alter().
+ *
+ * Handle webform submission feedback form and the aafc generic contact form.
+ */
 function wxt_overrides_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'webform_submission_yourfeedback_programsandservices_add_form') {
-    //Discussed passing PS id through the request query string with Huan, She approved this approach
+    // Discussed passing PS id through the request query string, Huan approved this approach.
     $ps_id = \Drupal::request()->query->get('ps_id');
-    //set the default Program or Service based on calling program page
+    // Set the default Program or Service based on calling program page.
     $form['elements']['programorservice']['#default_value'] = $ps_id;
   }
   if ($form_id == 'webform_submission_aafc_generic_contact_form_add_form') {
     $langId = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    if ( $langId == 'en' ) {
+    if ($langId == 'en') {
       $form['elements']['preferredresponselanguage']['#default_value'] = 'English';
-    } elseif ( $langId == 'fr' ) {
+    }
+    elseif ($langId == 'fr') {
       $form['elements']['preferredresponselanguage']['#default_value'] = 'French';
     }
   }
 }
 
-
-/** 
+/**
+ * Implements hook_cron().
+ */
 function wxt_overrides_cron() {
-  $view = \Drupal\views\Views::getView('broken_links_report');
-  $views_preview = $view->preview('data_export_1');
-  $display = \Drupal::service('renderer')->renderRoot($views_preview);
-  $directory = 'public://linkcheck';
-  $file_system = \Drupal::service('file_system');
-  $file_system->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
-  $file_system->saveData($display, 'public://linkcheck/links.json', FileSystemInterface::EXISTS_REPLACE);
+  // $view = \Drupal\views\Views::getView('broken_links_report');
+  // $views_preview = $view->preview('data_export_1');
+  // $display = \Drupal::service('renderer')->renderRoot($views_preview);
+  // $directory = 'public://linkcheck';
+  // $file_system = \Drupal::service('file_system');
+  // $file_system->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+  // $file_system->saveData($display, 'public://linkcheck/links.json', FileSystemInterface::EXISTS_REPLACE);
 }
-*/

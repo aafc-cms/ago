@@ -38,4 +38,3 @@ class SearchBlockForm extends FormBase {
   }
 
 }
-

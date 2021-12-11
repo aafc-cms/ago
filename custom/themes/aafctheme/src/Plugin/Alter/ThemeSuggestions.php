@@ -3,7 +3,6 @@
 namespace Drupal\aafctheme\Plugin\Alter;
 
 use Drupal\wxt_bootstrap\Plugin\Alter\ThemeSuggestions as BootstrapThemeSuggestions;
-use Drupal\block\Entity\Block;
 use Drupal\bootstrap\Utility\Variables;
 
 /**

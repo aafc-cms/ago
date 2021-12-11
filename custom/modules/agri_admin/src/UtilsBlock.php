@@ -2,13 +2,18 @@
 
 namespace Drupal\agri_admin;
 
-
+/**
+ * Return a rendered block by id for custom code.
+ */
 class UtilsBlock {
 
-  static public function getRenderArray($id, $overrides=null) {
+  /**
+   * Implements getRenderArray().
+   */
+  public static function getRenderArray($id, $overrides = NULL) {
     static $defaults = [
       'provider'      => 'agri_admin',
-      'label'         => null,
+      'label'         => NULL,
       'label_display' => 'visible',
     ];
 
@@ -18,11 +23,11 @@ class UtilsBlock {
     $pluginBlock = $blockManager->createInstance($id);
     $pluginBlock->setConfiguration([]);
 
-    // Make sure we have defaults because sometimes we don't :/
+    // Make sure we have defaults because sometimes we don't :/.
     $options = $pluginBlock->getConfiguration() + $defaults;
 
     // Override defaults with any given overrides.
-    $options = (array)$overrides + $options;
+    $options = (array) $overrides + $options;
 
     // Generate a configured instance.
     $pluginBlock = $blockManager->createInstance($id, $options);
@@ -31,19 +36,19 @@ class UtilsBlock {
     $accessResult = $pluginBlock->access(\Drupal::currentUser());
 
     // Return empty render array if user doesn't have access.
-    // $accessResult can be boolean or an AccessResult class
+    // $accessResult can be boolean or an AccessResult class.
     if ((is_object($accessResult) && $accessResult->isForbidden())
         ||
         (is_bool($accessResult) && !$accessResult)) {
 
-      // @todo: Do we need cache tags/contexts?
+      // @todo Do we need cache tags/contexts?
       return [];
     }
 
     $renderArray = $pluginBlock->build();
 
     if (!isset($renderArray['content'])) {
-      // @todo: Do we need cache tags/contexts?
+      // @todo Do we need cache tags/contexts?
       return [];
     }
 
@@ -77,15 +82,19 @@ class UtilsBlock {
     return $renderArray;
   }
 
-
-  static public function getRendered($id, $options=null) {
-    $rendered = false;
+  /**
+   * Implements getRendered().
+   */
+  public static function getRendered($id, $options = NULL) {
+    $rendered = FALSE;
 
     if (($renderArray = static::getRenderArray($id, $options))) {
-      // Passing false into this function prevents a bubbling of attached assets break in line 138 of core/lib/Drupal/Core/Render/Renderer.php.
+      // Passing false into this function prevents a bubbling.
+      // Otherwise attached assets break in line 138 of core/lib/Drupal/Core/Render/Renderer.php.
       $rendered = Utils::render($renderArray, FALSE);
     }
 
     return $rendered;
   }
+
 }

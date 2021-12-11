@@ -1,7 +1,11 @@
 <?php
 
-use Drupal\agri_admin\AgriAdminHelper;
-use Drupal\agri_admin\Utils;
+/**
+ * @file
+ */
+
+use Drupal\views\ViewExecutable;
+use Drupal\views\ResultRow;
 use Drupal\agri_reports\AdminHelper;
 
 /**
@@ -13,6 +17,9 @@ use Drupal\agri_reports\AdminHelper;
  * @see https://www.drupal.org/node/2217931
  */
 
+/**
+ *
+ */
 function agri_reports_page_attachments(array &$page) {
   $current_route = \Drupal::routeMatch()->getRouteName();
   if ($current_route == 'view.publish_activity_reporting.page_1') {
@@ -25,7 +32,10 @@ function agri_reports_page_attachments(array &$page) {
   }
 }
 
-function agri_reports_views_data_export_row_alter(&$row, \Drupal\views\ResultRow $result, \Drupal\views\ViewExecutable $view) {
+/**
+ *
+ */
+function agri_reports_views_data_export_row_alter(&$row, ResultRow $result, ViewExecutable $view) {
   if ($view->id() == 'publish_activity_reporting') {
     $date_issued = $result->_entity->get('field_issued')->value;
 
@@ -33,21 +43,21 @@ function agri_reports_views_data_export_row_alter(&$row, \Drupal\views\ResultRow
     $values = $view->getExposedInput();
     if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
       $date_from = $values["revision_timestamp"]['min'];
-      $date_issued_date_only = date('Y-m-d',strtotime($date_issued));
-      $date_from_date_only = date('Y-m-d',strtotime($date_from));
+      $date_issued_date_only = date('Y-m-d', strtotime($date_issued));
+      $date_from_date_only = date('Y-m-d', strtotime($date_from));
       if ($date_issued_date_only < $date_from_date_only) {
         $row['field_issued'] = 'Modified';
-      } 
+      }
       else {
         $row['field_issued'] = 'New';
       }
     }
-  } 
+  }
 }
 
-/*
+/**
  * Implements hook_preprocess_views_view_field() for replacing current field values
- * with calculated values
+ * with calculated values.
  */
 function agri_reports_preprocess_views_view_field(&$variables) {
   $view = $variables['view'];
@@ -64,31 +74,30 @@ function agri_reports_preprocess_views_view_field(&$variables) {
       $values = $view->getExposedInput();
       if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
         $date_from = $values["revision_timestamp"]['min'];
-        $date_issued_date_only = date('Y-m-d',strtotime($date_issued));
-        $date_from_date_only = date('Y-m-d',strtotime($date_from));
+        $date_issued_date_only = date('Y-m-d', strtotime($date_issued));
+        $date_from_date_only = date('Y-m-d', strtotime($date_from));
         if ($date_issued_date_only < $date_from_date_only) {
           $variables['output'] = 'Modified';
-        } 
+        }
         else {
           $variables['output'] = 'New';
         }
       }
     }
-  } 
+  }
 }
 
 /**
  * Implements agri_reports_views_pre_view hook.
  */
-
 function agri_reports_views_pre_view($view, $display_id, &$args) {
   if ($view->id() == 'publish_activity_for_meta_tags' || $view->id() == 'publish_activity_reporting') {
     $values = $view->getExposedInput();
     if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
       $date_from = $values["revision_timestamp"]['min'];
       $date_from_trimmed = trim($date_from);
-      //workaround below because cannot use trim function in if(...) clause above when fields are empty.
-      if(empty($date_from_trimmed)) {
+      // Workaround below because cannot use trim function in if(...) clause above when fields are empty.
+      if (empty($date_from_trimmed)) {
         $values["revision_timestamp"]['min'] = ' ';
         $values["revision_timestamp"]['max'] = ' ';
         $values['field_issued_value'] = ' ';
@@ -101,13 +110,13 @@ function agri_reports_views_pre_view($view, $display_id, &$args) {
       $values["revision_timestamp"]['min'] = ' ';
       $values["revision_timestamp"]['max'] = ' ';
       $values['field_issued_value'] = ' ';
-      $view->setExposedInput($values);      
+      $view->setExposedInput($values);
     }
   }
 }
 
 /**
- * Implements agri_reports_cron().
+ * Implements hook_reports_cron().
  */
 function agri_reports_cron() {
   $filedirectory = 'public://cache_warming/';

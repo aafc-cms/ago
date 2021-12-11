@@ -1,15 +1,23 @@
 <?php
-  $server_name = $_SERVER['SERVER_NAME'];
-  $host = $_SERVER['HTTP_HOST'];
-  $prod = FALSE;
-  if (stripos($host, 'www-tmp.agr.gc.ca') !== false || stripos($host, 'www-ep.agr.gc.ca') !== false || stripos($host, 'agriculture.canada.ca') !== false) {
-    $prod = TRUE;
-  }
-  // Adobe Analytics JS library.
-  $adobetm='//assets.adobedtm.com/launch-EN11c0261481f74c56b7656937bbd995e9-staging.min.js';
-  if ($prod) {
-    $adobetm='//assets.adobedtm.com/launch-EN0cf6c2810a2b48f8a4c36502a1b09541.min.js';
-  }
+
+/**
+ * @file
+ * This file is activated when no /en or /fr language prefix is provided.
+ *
+ * Requires an entry in the .htaccess to get triggered.
+ */
+
+$server_name = $_SERVER['SERVER_NAME'];
+$host = $_SERVER['HTTP_HOST'];
+$prod = FALSE;
+if (stripos($host, 'www-tmp.agr.gc.ca') !== FALSE || stripos($host, 'www-ep.agr.gc.ca') !== FALSE || stripos($host, 'agriculture.canada.ca') !== FALSE) {
+  $prod = TRUE;
+}
+// Adobe Analytics JS library.
+$adobetm = '//assets.adobedtm.com/launch-EN11c0261481f74c56b7656937bbd995e9-staging.min.js';
+if ($prod) {
+  $adobetm = '//assets.adobedtm.com/launch-EN0cf6c2810a2b48f8a4c36502a1b09541.min.js';
+}
 ?>
 <!DOCTYPE html>
 <!-- saved from url=(0022)https://www.agr.gc.ca/ -->
@@ -40,16 +48,16 @@
 <!--<![endif]-->
 <link rel="stylesheet" href="/libraries/theme-gcweb-legacy/css/messages.min.css">
 <!--[if lt IE 9]>
-		<link href="/res/gcweb/GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		<link rel="stylesheet" href="/res/gcweb/GCWeb/css/messages-ie.min.css" />
-		<link rel="stylesheet" href="/res/gcweb/GCWeb/css/ie8-theme.min.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-		<script src="/res/gcweb/js/ie8-wet-boew.min.js"></script>
-		<![endif]-->
+        <link href="/res/gcweb/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+        <link rel="stylesheet" href="/res/gcweb/GCWeb/css/messages-ie.min.css" />
+        <link rel="stylesheet" href="/res/gcweb/GCWeb/css/ie8-theme.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+        <script src="/res/gcweb/js/ie8-wet-boew.min.js"></script>
+        <![endif]-->
 <!--[if lte IE 9]>
-		
-		
-		<![endif]-->
+        
+        
+        <![endif]-->
 <noscript><link rel="stylesheet" href="./wet-boew/css/noscript.min.css" /></noscript>
 <script src="<?php print $adobetm ?>"></script>
 </head>
@@ -94,9 +102,9 @@
 <script src="/libraries/wet-boew/js/wet-boew.min.js"></script><span id="wb-rsz" class="wb-init">&nbsp;</span>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-		<script src="/res/gcweb/js/ie8-wet-boew2.min.js"></script>
-		
-		<![endif]-->
+        <script src="/res/gcweb/js/ie8-wet-boew2.min.js"></script>
+        
+        <![endif]-->
 <script src="/libraries/theme-gcweb-legacy/js/theme.min.js"></script>
 <script type="text/javascript">_satellite.pageBottom();</script>
 </body></html>

@@ -12,7 +12,12 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class PathProcessorAgriAdmin implements InboundPathProcessorInterface, OutboundPathProcessorInterface {
 
-  public $unixtime=null;
+  /**
+   * The time in seconds starting from January 1 1970.
+   *
+   * @var int
+   */
+  public $unixtime = NULL;
 
   /**
    * {@inheritdoc}
