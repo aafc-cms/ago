@@ -2,9 +2,10 @@
 
 namespace Drupal\wxt_overrides\Controller;
 
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Database\Database;
 use Drupal\agri_admin\Utils;
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Database\Connection;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityViewBuilderInterface;
@@ -59,15 +60,18 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
     );
   }
 
+  /**
+   * Retrieve nid from dcrid, possibly a duplicated function.
+   */
   public function getNidFromDcrId($dcrid) {
-    $this->connection = \Drupal\Core\Database\Database::getConnection();
+    $this->connection = Database::getConnection();
     // Retrieves a PDOStatement object
     // http://php.net/manual/en/pdo.prepare.php
     $sth = $this->connection->select('node', 'n')
       ->fields('n', ['nid'])
       ->condition('n.dcr_id', $dcrid, '=');
 
-    // Execute the statement
+    // Execute the statement.
     $data = $sth->execute();
 
     // Get only one result.
@@ -81,42 +85,58 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
     }
   }
 
+  /**
+   * Handle edge cases where certain dcrids need a different redirect.
+   */
   public function specialNodeFromDcrid($dcrid, $language) {
-    $dcrid=$dcrid.'';
+    $dcrid = $dcrid . '';
     switch ($dcrid) {
       case '1287261736402':
-        // Legacy Home Page dcrid
-        Utils::gotoLegacy('<front>', ['language' => $language], '301'); // The new page.
+        // Legacy Home Page dcrid.
+        // The new page.
+        Utils::gotoLegacy('<front>', ['language' => $language], '301');
         break;
+
       case '1311865754938':
         // Legacy Newsatwork View dcrid (is a view in Drupal).
-        Utils::gotoLegacy('view.view_news_work.page_1', ['language' => $language], '301'); // The new page.
+        // The new page.
+        Utils::gotoLegacy('view.view_news_work.page_1', ['language' => $language], '301');
         break;
+
       case '1309887212500':
         // Legacy EO dcrid (is a view in Drupal).
-        Utils::gotoLegacy('view.view_employmentopportunities.page_1', ['language' => $language], '301'); // The new page.
+        // The new page.
+        Utils::gotoLegacy('view.view_employmentopportunities.page_1', ['language' => $language], '301');
         break;
+
       case '1305895655987':
-        // Legacy News submission form dcrid
-        Utils::gotoLegacy('/node/49', ['language' => $language], '301'); // The new page.
+        // Legacy News submission form dcrid.
+        // The new page.
+        Utils::gotoLegacy('/node/49', ['language' => $language], '301');
         break;
+
       case '1307986207645':
-        // Legacy EO submission form dcrid
-        Utils::gotoLegacy('/node/50', ['language' => $language], '301'); // The new page.
+        // Legacy EO submission form dcrid.
+        // The new page.
+        Utils::gotoLegacy('/node/50', ['language' => $language], '301');
         break;
+
       case '1311021442806':
-        // Legacy Public Service Request form dcrid
-        Utils::gotoLegacy('<front>', ['language' => $language], '301'); // @TODO , find the route for this.
+        // Legacy Public Service Request form dcrid.
+        // @todo , find the route for this.
+        Utils::gotoLegacy('<front>', ['language' => $language], '301');
         break;
+
       case '1288028994039':
         // Legacy Pay, Benefits and Phoenix dcrid (there were two dcrid for this for some reason).
-        Utils::gotoLegacy('/node/76', ['language' => $language], '301'); // The new page.
+        // The new page.
+        Utils::gotoLegacy('/node/76', ['language' => $language], '301');
         break;
+
       default:
         break;
     }
   }
-
 
   /**
    * The default 404 content.
@@ -125,8 +145,8 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
    *   A render array containing the message to display for 404 pages.
    */
   public function on404() {
-    $dcrid = \Drupal\Component\Utility\Xss::filter(\Drupal::request()->query->get('id'));
-    $lang_param = \Drupal\Component\Utility\Xss::filter(\Drupal::request()->query->get('lang'));
+    $dcrid = Xss::filter(\Drupal::request()->query->get('id'));
+    $lang_param = Xss::filter(\Drupal::request()->query->get('lang'));
     $request_uri = \Drupal::request()->getRequestUri();
     $language = \Drupal::languageManager()->getCurrentLanguage();
     if ((!empty($lang_param) && $lang_param == 'fra') || stripos($request_uri, '/fra') !== FALSE) {
@@ -141,7 +161,7 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
       }
     }
     else {
-      //\Drupal\agri_admin\AgriAdminHelper::addToLog($request_uri, TRUE);
+      // \Drupal\agri_admin\AgriAdminHelper::addToLog($request_uri, TRUE);
       $request_path = \Drupal::request()->getPathInfo();
       if ($request_path == '/agrisource/index.jsp') {
         Utils::gotoLegacy('<front>', ['language' => $language], '301');
@@ -150,15 +170,15 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
 
     // 404 Fallback message.
     $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $homelink = '/'.$langcode;
+    $homelink = '/' . $langcode;
 
-    if ($langcode=='en'){
-	     $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oops, this page has been moved!</h1>     
-      <p class="mrgn-tp-md">Agriculture and Agri-Food Canada has moved to <a href=' .$homelink .'>https://agriculture.canada.ca</a></p><p class="mrgn-tp-md">Please visit our relocated <a href=' .$homelink .'>home page</a> and navigate your way back to the content you\'re looking for. Be sure to update your bookmarks and links from your site. Thank you for your patience!</p>';
+    if ($langcode == 'en') {
+      $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oops, this page has been moved!</h1>     
+      <p class="mrgn-tp-md">Agriculture and Agri-Food Canada has moved to <a href=' . $homelink . '>https://agriculture.canada.ca</a></p><p class="mrgn-tp-md">Please visit our relocated <a href=' . $homelink . '>home page</a> and navigate your way back to the content you\'re looking for. Be sure to update your bookmarks and links from your site. Thank you for your patience!</p>';
     }
     else {
-	    $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oups, cette page a déménagé!</h1>
-      <p class="mrgn-tp-md">Agriculture et Agroalimentaire Canada a une nouvelle adresse web :<a href=' .$homelink .'>https://agriculture.canada.ca</a ></p><p class="mrgn-tp-md">Nous vous invitons à retourner à notre <a href=' .$homelink .'>page d\'accueil</a> et à refaire le chemin vers le contenu que vous cherchez. Vous devriez ensuite mettre à jour vos favoris et les liens sur votre site web. Merci de votre patience!</p>';
+      $response = '<h1 id="wb-cont" class="mrgn-tp-md">404 — Oups, cette page a déménagé!</h1>
+      <p class="mrgn-tp-md">Agriculture et Agroalimentaire Canada a une nouvelle adresse web :<a href=' . $homelink . '>https://agriculture.canada.ca</a ></p><p class="mrgn-tp-md">Nous vous invitons à retourner à notre <a href=' . $homelink . '>page d\'accueil</a> et à refaire le chemin vers le contenu que vous cherchez. Vous devriez ensuite mettre à jour vos favoris et les liens sur votre site web. Merci de votre patience!</p>';
     }
     // Lookup our custom 404 content block.
     $block_id = $this->blockContentStorage->loadByProperties([
