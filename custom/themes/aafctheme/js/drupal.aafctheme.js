@@ -289,6 +289,14 @@ var AAFCFrontend = function() {
         $('div.alert.bs-site-alert.alert-info').detach().insertAfter(olbreadcrumb);
       }
     }
+
+    var divmsg = $('div.alert.bs-site-alert.alert-warning');
+    var olbreadcrumb = $('nav#wb-bc');
+    if (!(typeof divmsg === "undefined")) {
+      if (!(typeof olbreadcrumb === "undefined")) {
+        $('div.alert.bs-site-alert.alert-warning').detach().insertAfter(olbreadcrumb);
+      }
+    }
   }
 
   /**

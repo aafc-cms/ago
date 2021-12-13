@@ -393,6 +393,33 @@ div.alert.bs-site-alert.alert-info {
   font-size: 16px;
 }
 
+/* line 20, ../sass/components/_site-alert.scss */
+section.customized-site-alert .alert-warning > :first-child::before {
+  content: none;
+}
+
+/* line 25, ../sass/components/_site-alert.scss */
+div[role="alert"].alert.bs-site-alert.alert-warning {
+  border-left: 0px;
+}
+/* line 27, ../sass/components/_site-alert.scss */
+div[role="alert"].alert.bs-site-alert.alert-warning :last-child {
+  padding-bottom: 0px;
+}
+
+/* line 32, ../sass/components/_site-alert.scss */
+div[role="alert"]::before {
+  content: none;
+}
+
+/* line 36, ../sass/components/_site-alert.scss */
+div.alert.bs-site-alert.alert-warning {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  font-size: 16px;
+}
+
 /* line 2, ../sass/_legacy-styles.scss */
 nav.gcweb-menu, nav.gcweb-v2, nav#wb-auto-2 {
   border-top: 3px solid #38414d;

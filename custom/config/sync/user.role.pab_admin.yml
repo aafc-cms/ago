@@ -30,6 +30,7 @@ dependencies:
     - agri_admin
     - block
     - block_content
+    - bootstrap_site_alert
     - comment
     - content_moderation
     - content_translation
@@ -102,6 +103,7 @@ permissions:
   - 'access_unpublished taxonomy_term media_category'
   - 'access_unpublished taxonomy_term programorservice'
   - 'administer blocks'
+  - 'administer bootstrap site alerts'
   - 'administer footer menu items'
   - 'administer footer-fr menu items'
   - 'administer main menu items'
