@@ -121,10 +121,6 @@
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
             },
-            "drupal/entity_translation_unified_form": {
-                "3253160 - Etuf, allow updating menu link title translation.":
-                "https://www.drupal.org/files/issues/2021-12-08/etuf-allow_updating_menu_link_title_translation-3253160-4.patch"
-            },
             "drupal/moderated_content_bulk_publish": {
                 "3253887 - Change revision message on bulk Unpublish":
                 "https://www.drupal.org/files/issues/2021-12-10/3253887-2.patch"
@@ -157,6 +153,10 @@
                 "drupal/webform": {
                     "Enter drupal/webform patch #3212867 description here":
                     "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch"
+                },
+                "drupal/token": {
+                    "2863200 - No longer need this patch, included in the latest release.":
+                    "https://www.drupal.org/files/issues/2019-03-15/2863200-23.patch"
                 }
             },
             "drupal/lightning_core": {
@@ -182,15 +182,15 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.3.0-rc9",
+        "agrcmsx/dxbase": "9.3.0-rc15",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
-        "agrcmsx/config": "9.1.x-dev",
+        "agrcmsx/config": "*",
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/core": "9.3.0-beta2 as 9.1.14",
+        "drupal/core": "9.3.0 as 9.1.14",
         "drupal/embed_block": "1.x-dev",
         "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
