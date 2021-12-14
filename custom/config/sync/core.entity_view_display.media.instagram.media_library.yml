@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_aafc_category
     - field.field.media.instagram.field_media_in_library
     - image.style.thumbnail
     - media.type.instagram
@@ -29,6 +30,7 @@ content:
 hidden:
   created: true
   embed_code: true
+  field_aafc_category: true
   field_media_in_library: true
   langcode: true
   name: true

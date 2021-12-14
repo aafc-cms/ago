@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - image.style.media_library
+    - taxonomy.vocabulary.media_category
   module:
     - image
     - media
     - media_library
+    - taxonomy
     - user
   enforced:
     module:
@@ -448,6 +450,62 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: taxonomy_term__field_aafc_category
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: 'AAFC Media Category'
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: media_category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: default
         options:
@@ -469,7 +527,16 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        taxonomy_term__field_aafc_category:
+          id: taxonomy_term__field_aafc_category
+          table: media__field_aafc_category
+          field: taxonomy_term__field_aafc_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_aafc_category: Taxonomy term'
+          plugin_id: standard
+          required: false
       css_class: ''
       use_ajax: true
       header: {  }
@@ -478,13 +545,79 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio_file.default'
+        - 'config:core.entity_view_display.media.audio_file.embedded'
+        - 'config:core.entity_view_display.media.audio_file.media_library'
+        - 'config:core.entity_view_display.media.audio_file.thumbnail'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.embedded'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.document.thumbnail'
+        - 'config:core.entity_view_display.media.image.agrisource_slideshow_thumbnail'
+        - 'config:core.entity_view_display.media.image.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.embedded'
+        - 'config:core.entity_view_display.media.image.linked'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.thumbnail'
+        - 'config:core.entity_view_display.media.image.w0520px'
+        - 'config:core.entity_view_display.media.image.w100'
+        - 'config:core.entity_view_display.media.image.w1000'
+        - 'config:core.entity_view_display.media.image.w1200'
+        - 'config:core.entity_view_display.media.image.w133'
+        - 'config:core.entity_view_display.media.image.w133r320'
+        - 'config:core.entity_view_display.media.image.w133r45'
+        - 'config:core.entity_view_display.media.image.w1400'
+        - 'config:core.entity_view_display.media.image.w1600'
+        - 'config:core.entity_view_display.media.image.w166'
+        - 'config:core.entity_view_display.media.image.w175'
+        - 'config:core.entity_view_display.media.image.w1900'
+        - 'config:core.entity_view_display.media.image.w200'
+        - 'config:core.entity_view_display.media.image.w250'
+        - 'config:core.entity_view_display.media.image.w300'
+        - 'config:core.entity_view_display.media.image.w333'
+        - 'config:core.entity_view_display.media.image.w400'
+        - 'config:core.entity_view_display.media.image.w50'
+        - 'config:core.entity_view_display.media.image.w500'
+        - 'config:core.entity_view_display.media.image.w533'
+        - 'config:core.entity_view_display.media.image.w600'
+        - 'config:core.entity_view_display.media.image.w700'
+        - 'config:core.entity_view_display.media.image.w75'
+        - 'config:core.entity_view_display.media.image.w800'
+        - 'config:core.entity_view_display.media.image.w900'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.embedded'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.instagram.thumbnail'
+        - 'config:core.entity_view_display.media.slideshow.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.slideshow.default'
+        - 'config:core.entity_view_display.media.slideshow.embedded'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.agrisource_slideshow_thumbnail'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.default'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.embedded'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.media_library'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.thumbnail'
+        - 'config:core.entity_view_display.media.tweet.default'
+        - 'config:core.entity_view_display.media.tweet.embedded'
+        - 'config:core.entity_view_display.media.tweet.media_library'
+        - 'config:core.entity_view_display.media.tweet.thumbnail'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.embedded'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.thumbnail'
+        - 'config:core.entity_view_display.media.video_file.default'
+        - 'config:core.entity_view_display.media.video_file.embedded'
+        - 'config:core.entity_view_display.media.video_file.media_library'
+        - 'config:core.entity_view_display.media.video_file.thumbnail'
   page:
     id: page
     display_title: Page
@@ -768,8 +901,12 @@ display:
           hide_alter_empty: true
           view_mode: media_library
       defaults:
+        relationships: true
         fields: false
-      display_extenders: {  }
+        filters: true
+        filter_groups: true
+      display_extenders:
+        metatag_display_extender: {  }
       path: admin/content/media-grid
     cache_metadata:
       max-age: 0
@@ -781,7 +918,72 @@ display:
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio_file.default'
+        - 'config:core.entity_view_display.media.audio_file.embedded'
+        - 'config:core.entity_view_display.media.audio_file.media_library'
+        - 'config:core.entity_view_display.media.audio_file.thumbnail'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.embedded'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.document.thumbnail'
+        - 'config:core.entity_view_display.media.image.agrisource_slideshow_thumbnail'
+        - 'config:core.entity_view_display.media.image.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.embedded'
+        - 'config:core.entity_view_display.media.image.linked'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.thumbnail'
+        - 'config:core.entity_view_display.media.image.w0520px'
+        - 'config:core.entity_view_display.media.image.w100'
+        - 'config:core.entity_view_display.media.image.w1000'
+        - 'config:core.entity_view_display.media.image.w1200'
+        - 'config:core.entity_view_display.media.image.w133'
+        - 'config:core.entity_view_display.media.image.w133r320'
+        - 'config:core.entity_view_display.media.image.w133r45'
+        - 'config:core.entity_view_display.media.image.w1400'
+        - 'config:core.entity_view_display.media.image.w1600'
+        - 'config:core.entity_view_display.media.image.w166'
+        - 'config:core.entity_view_display.media.image.w175'
+        - 'config:core.entity_view_display.media.image.w1900'
+        - 'config:core.entity_view_display.media.image.w200'
+        - 'config:core.entity_view_display.media.image.w250'
+        - 'config:core.entity_view_display.media.image.w300'
+        - 'config:core.entity_view_display.media.image.w333'
+        - 'config:core.entity_view_display.media.image.w400'
+        - 'config:core.entity_view_display.media.image.w50'
+        - 'config:core.entity_view_display.media.image.w500'
+        - 'config:core.entity_view_display.media.image.w533'
+        - 'config:core.entity_view_display.media.image.w600'
+        - 'config:core.entity_view_display.media.image.w700'
+        - 'config:core.entity_view_display.media.image.w75'
+        - 'config:core.entity_view_display.media.image.w800'
+        - 'config:core.entity_view_display.media.image.w900'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.embedded'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.instagram.thumbnail'
+        - 'config:core.entity_view_display.media.slideshow.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.slideshow.default'
+        - 'config:core.entity_view_display.media.slideshow.embedded'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.agrisource_slideshow_thumbnail'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.default'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.embedded'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.media_library'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.thumbnail'
+        - 'config:core.entity_view_display.media.tweet.default'
+        - 'config:core.entity_view_display.media.tweet.embedded'
+        - 'config:core.entity_view_display.media.tweet.media_library'
+        - 'config:core.entity_view_display.media.tweet.thumbnail'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.embedded'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.thumbnail'
+        - 'config:core.entity_view_display.media.video_file.default'
+        - 'config:core.entity_view_display.media.video_file.embedded'
+        - 'config:core.entity_view_display.media.video_file.media_library'
+        - 'config:core.entity_view_display.media.video_file.thumbnail'
   widget:
     id: widget
     display_title: Widget
@@ -1059,6 +1261,62 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: taxonomy_term__field_aafc_category
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: 'AAFC Media Category'
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: media_category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -1100,8 +1358,74 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
+        - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio_file.default'
+        - 'config:core.entity_view_display.media.audio_file.embedded'
+        - 'config:core.entity_view_display.media.audio_file.media_library'
+        - 'config:core.entity_view_display.media.audio_file.thumbnail'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.embedded'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.document.thumbnail'
+        - 'config:core.entity_view_display.media.image.agrisource_slideshow_thumbnail'
+        - 'config:core.entity_view_display.media.image.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.embedded'
+        - 'config:core.entity_view_display.media.image.linked'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.thumbnail'
+        - 'config:core.entity_view_display.media.image.w0520px'
+        - 'config:core.entity_view_display.media.image.w100'
+        - 'config:core.entity_view_display.media.image.w1000'
+        - 'config:core.entity_view_display.media.image.w1200'
+        - 'config:core.entity_view_display.media.image.w133'
+        - 'config:core.entity_view_display.media.image.w133r320'
+        - 'config:core.entity_view_display.media.image.w133r45'
+        - 'config:core.entity_view_display.media.image.w1400'
+        - 'config:core.entity_view_display.media.image.w1600'
+        - 'config:core.entity_view_display.media.image.w166'
+        - 'config:core.entity_view_display.media.image.w175'
+        - 'config:core.entity_view_display.media.image.w1900'
+        - 'config:core.entity_view_display.media.image.w200'
+        - 'config:core.entity_view_display.media.image.w250'
+        - 'config:core.entity_view_display.media.image.w300'
+        - 'config:core.entity_view_display.media.image.w333'
+        - 'config:core.entity_view_display.media.image.w400'
+        - 'config:core.entity_view_display.media.image.w50'
+        - 'config:core.entity_view_display.media.image.w500'
+        - 'config:core.entity_view_display.media.image.w533'
+        - 'config:core.entity_view_display.media.image.w600'
+        - 'config:core.entity_view_display.media.image.w700'
+        - 'config:core.entity_view_display.media.image.w75'
+        - 'config:core.entity_view_display.media.image.w800'
+        - 'config:core.entity_view_display.media.image.w900'
+        - 'config:core.entity_view_display.media.instagram.default'
+        - 'config:core.entity_view_display.media.instagram.embedded'
+        - 'config:core.entity_view_display.media.instagram.media_library'
+        - 'config:core.entity_view_display.media.instagram.thumbnail'
+        - 'config:core.entity_view_display.media.slideshow.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.slideshow.default'
+        - 'config:core.entity_view_display.media.slideshow.embedded'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.agrisource_slideshow_thumbnail'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.agrisource_slideshow_view_mode'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.default'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.embedded'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.media_library'
+        - 'config:core.entity_view_display.media.slideshow_thumbnav.thumbnail'
+        - 'config:core.entity_view_display.media.tweet.default'
+        - 'config:core.entity_view_display.media.tweet.embedded'
+        - 'config:core.entity_view_display.media.tweet.media_library'
+        - 'config:core.entity_view_display.media.tweet.thumbnail'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.embedded'
+        - 'config:core.entity_view_display.media.video.media_library'
+        - 'config:core.entity_view_display.media.video.thumbnail'
+        - 'config:core.entity_view_display.media.video_file.default'
+        - 'config:core.entity_view_display.media.video_file.embedded'
+        - 'config:core.entity_view_display.media.video_file.media_library'
+        - 'config:core.entity_view_display.media.video_file.thumbnail'
   widget_table:
     id: widget_table
     display_title: 'Widget (table)'
@@ -1339,6 +1663,62 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: taxonomy_term__field_aafc_category
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: 'AAFC Media Category'
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: media_category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -1388,5 +1768,6 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
+        - user
         - user.permissions
       tags: {  }

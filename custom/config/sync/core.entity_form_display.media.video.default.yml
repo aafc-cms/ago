@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.video.field_aafc_category
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_embed_field
     - media.type.video
-    - workflows.workflow.editorial
   module:
-    - content_moderation
+    - dynamic_entity_reference
     - path
     - video_embed_field
 _core:
@@ -18,22 +18,28 @@ targetEntityType: media
 bundle: video
 mode: default
 content:
+  field_aafc_category:
+    type: dynamic_entity_reference_options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_media_in_library:
     type: boolean_checkbox
-    weight: 1
+    weight: 2
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_media_video_embed_field:
     type: video_embed_field_textfield
-    weight: 1
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -46,7 +52,7 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -54,7 +60,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -63,9 +69,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 7
     region: content
     settings:
       display_label: true

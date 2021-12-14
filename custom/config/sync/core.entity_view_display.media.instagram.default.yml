@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_aafc_category
     - field.field.media.instagram.field_media_in_library
     - media.type.instagram
   module:
+    - dynamic_entity_reference
     - media_entity_instagram
 _core:
   default_config_hash: FGDcC__SDFv-9J0bOZYpGLVXKr2uIoXpNJOg8yLD7mU
@@ -23,6 +25,14 @@ content:
       hidecaption: null
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_aafc_category:
+    type: dynamic_entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   created: true

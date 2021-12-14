@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.thumbnail
+    - field.field.media.document.field_aafc_category
     - field.field.media.document.field_document
     - field.field.media.document.field_media_in_library
-    - image.style.medium
     - media.type.document
   module:
-    - image
+    - file
 _core:
   default_config_hash: OzEIvaHbr3Z7UL0H31yPwdpg0MB3DNtkukWqvUS_QQQ
 id: media.document.thumbnail
@@ -17,19 +17,19 @@ targetEntityType: media
 bundle: document
 mode: thumbnail
 content:
-  thumbnail:
-    type: image
-    label: hidden
+  field_document:
+    type: file_default
+    label: above
     settings:
-      image_link: ''
-      image_style: medium
+      use_description_as_link_text: true
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   created: true
-  field_document: true
+  field_aafc_category: true
   field_media_in_library: true
   langcode: true
   name: true
+  thumbnail: true
   uid: true
