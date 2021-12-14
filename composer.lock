@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cc28d50078ab93509f336a2c88df1d5",
+    "content-hash": "db02657116960492f22ffa5e4ff30187",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.3.0-rc15",
+            "version": "9.3.0-rc16",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "17c1d429b203442a6bba2996bca1903a9cbd30da"
+                "reference": "562e8b4730109a721f0078e6b9b46f5c142fa851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=17c1d429b203442a6bba2996bca1903a9cbd30da",
-                "reference": "17c1d429b203442a6bba2996bca1903a9cbd30da",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=562e8b4730109a721f0078e6b9b46f5c142fa851",
+                "reference": "562e8b4730109a721f0078e6b9b46f5c142fa851",
                 "shasum": ""
             },
             "require": {
@@ -234,7 +234,8 @@
                         "1356276 - Profile sub profiles phenaproxima": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch",
                         "2559833 - Comment form redirect": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch",
                         "3247045 - Call to isTranslatable() on null in _menu_ui_node_save": "https://www.drupal.org/files/issues/2021-12-02/D94x-dev-member-function-isTranslatable-on-null-3247045-15.patch",
-                        "2931680 - Term weight translatability, order term translations differently": "https://www.drupal.org/files/issues/2021-11-22/D93x-2931680-25-reroll.patch"
+                        "2931680 - Term weight translatability, order term translations differently": "https://www.drupal.org/files/issues/2021-11-22/D93x-2931680-25-reroll.patch",
+                        "1166282 - Titles truncated on parent menu": "https://www.drupal.org/files/issues/2021-04-12/1166282-30.patch"
                     },
                     "drupal/access_unpublished": {
                         "Adds a twig extension for access unpublished hash key link, patch 9.": "https://www.drupal.org/files/issues/2021-05-21/v1.1-access_unpublished-3054536-12.patch",
@@ -319,7 +320,7 @@
             "support": {
                 "issues": "https://gitlab.com/api/v4/projects/23680892/issues"
             },
-            "time": "2021-12-13T17:43:12+00:00"
+            "time": "2021-12-14T16:33:21+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
