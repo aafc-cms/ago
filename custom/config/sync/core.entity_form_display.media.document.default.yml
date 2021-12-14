@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.document.field_aafc_category
     - field.field.media.document.field_document
     - field.field.media.document.field_media_in_library
     - media.type.document
   module:
+    - dynamic_entity_reference
     - file
     - path
 _core:
@@ -16,6 +18,12 @@ targetEntityType: media
 bundle: document
 mode: default
 content:
+  field_aafc_category:
+    type: dynamic_entity_reference_options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_document:
     type: file_generic
     weight: 0
@@ -25,14 +33,14 @@ content:
     third_party_settings: {  }
   field_media_in_library:
     type: boolean_checkbox
-    weight: 3
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
@@ -47,13 +55,21 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 8
     region: content
     settings:
       display_label: true

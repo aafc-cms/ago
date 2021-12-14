@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.slideshow_thumbnav.field_aafc_category
     - field.field.media.slideshow_thumbnav.field_media_in_library
     - field.field.media.slideshow_thumbnav.field_media_slideshow
     - field.field.media.slideshow_thumbnav.field_media_thumbs
     - media.type.slideshow_thumbnav
   module:
+    - dynamic_entity_reference
     - media_library
     - media_library_edit
     - path
@@ -18,13 +20,19 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_aafc_category:
+    type: dynamic_entity_reference_options_buttons
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_media_slideshow:
     type: media_library_widget
-    weight: 26
+    weight: 6
     region: content
     settings:
       media_types: {  }
@@ -33,7 +41,7 @@ content:
         show_edit: '1'
   field_media_thumbs:
     type: media_library_widget
-    weight: 27
+    weight: 7
     region: content
     settings:
       media_types: {  }
@@ -50,13 +58,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   revision_log_message:
     type: string_textarea
-    weight: 25
+    weight: 5
     region: content
     settings:
       rows: 4
@@ -64,14 +72,14 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS

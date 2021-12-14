@@ -5,11 +5,10 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_browser
     - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_aafc_category
     - field.field.media.instagram.field_media_in_library
     - media.type.instagram
-    - workflows.workflow.editorial
   module:
-    - content_moderation
     - path
 _core:
   default_config_hash: u-N2MuYnrDGzZl-ApOrQUcObS4Otz1uk01fI6LYtJQg
@@ -57,6 +56,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 100
@@ -67,4 +74,5 @@ content:
 hidden:
   created: true
   embed_code: true
+  field_aafc_category: true
   uid: true

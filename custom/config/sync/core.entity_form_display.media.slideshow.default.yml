@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.slideshow.field_aafc_category
     - field.field.media.slideshow.field_media_in_library
     - field.field.media.slideshow.field_slideshow_style
     - field.field.media.slideshow.slideshow_items
@@ -40,13 +41,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   revision_log_message:
     type: string_textarea
-    weight: 25
+    weight: 4
     region: content
     settings:
       rows: 4
@@ -54,7 +55,7 @@ content:
     third_party_settings: {  }
   slideshow_items:
     type: media_library_widget
-    weight: 101
+    weight: 7
     region: content
     settings:
       media_types: {  }
@@ -63,14 +64,14 @@ content:
         show_edit: '1'
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -79,5 +80,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_aafc_category: true
   field_media_in_library: true
   langcode: true
