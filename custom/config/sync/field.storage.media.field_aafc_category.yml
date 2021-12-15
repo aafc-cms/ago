@@ -16,7 +16,7 @@ settings:
     taxonomy_term: taxonomy_term
 module: dynamic_entity_reference
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: false
 indexes: {  }
 persist_with_no_fields: false
