@@ -426,7 +426,7 @@ function aafctheme_preprocess_region__header__gcweb(&$vars) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
-  if (is_object($node)) {
+  if (is_object($node) && $node->hasField('field_large')) {
     $large_mode = $node->get('field_large')->value;
     $vars['large_mode'] = $large_mode;
   }
@@ -444,7 +444,7 @@ function aafctheme_preprocess_region__content_footer__gcweb(&$vars) {
     $nid = $node;
     $node = $node_storage->load($nid);
   }
-  if (is_object($node)) {
+  if (is_object($node) && $node->hasField('field_large')) {
     $large_mode = $node->get('field_large')->value;
     $vars['large_mode'] = $large_mode;
   }
