@@ -120,7 +120,7 @@
                 "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
                 "https://www.drupal.org/files/issues/2021-10-22/filesize-statfailed-3245404-02.patch",
                 "A custom feature needs to display the external URLs for uploaded files in the public folder":
-                "https://www.drupal.org/files/issues/2021-12-15/Display-external-URLs-3254557-02.patch"
+                "https://www.drupal.org/files/issues/2021-12-17/Display-external-URLs-3254557-04.patch"
             },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
