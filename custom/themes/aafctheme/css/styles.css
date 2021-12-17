@@ -732,6 +732,12 @@ body.webform_feedback_programsandservices div.region.region-highlighted h2.sr-on
   height: 100%;
 }
 
+/* WCAG requires the font weight of the error message as normal */
+/* line 85, ../sass/components/_feedback-webform.scss */
+form[id$="-add-form"] section.alert ul li a {
+  font-weight: normal;
+}
+
 /* line 3, ../sass/components/_generic-contact-webform.scss */
 body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::after, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::after,
 body.webform_generic_contactform div.form-item label[for="edit-fullname"]::after, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::after {
