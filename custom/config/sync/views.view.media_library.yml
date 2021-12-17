@@ -185,6 +185,22 @@ display:
           content: 'No media available.'
           tokenize: false
       sorts:
+        changed:
+          id: changed
+          table: media_field_revision
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: changed
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
         created:
           id: created
           table: media_field_data
