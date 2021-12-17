@@ -78,3 +78,12 @@ body.webform_feedback_programsandservices {
     }
   }
 }
+
+/* WCAG requires the font weight of the error message as normal */
+form[id$="-add-form"] {
+  section.alert {
+    ul li a {
+      font-weight: normal;
+    }
+  }
+}
