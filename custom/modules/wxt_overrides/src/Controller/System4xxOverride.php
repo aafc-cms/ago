@@ -61,7 +61,13 @@ class System4xxOverride extends ControllerBase implements ContainerInjectionInte
   }
 
   /**
-   * Retrieve nid from dcrid, possibly a duplicated function.
+   * Retrieve nid from dcrid, used by the ajax functionality in admin/content view.
+   *
+   * @param int $dcrid
+   *   The teamsite dcrid.
+   *
+   * @return mixed
+   *   Returns either NULL or an int drupal nid.
    */
   public function getNidFromDcrId($dcrid) {
     $this->connection = Database::getConnection();

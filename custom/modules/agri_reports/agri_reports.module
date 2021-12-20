@@ -7,7 +7,6 @@
 use Drupal\views\ViewExecutable;
 use Drupal\views\ResultRow;
 use Drupal\agri_reports\AdminHelper;
-use Drupal\agri_admin\AgriAdminHelper;
 
 /**
  * @file
@@ -65,19 +64,21 @@ function agri_reports_views_data_export_row_alter(&$row, ResultRow $result, View
     $row['alias'] = '/' . $lang_code . $path_alias;
 
     $node_path = $result->path_alias_path;
-    $has_node_in_path = strpos($node_path,'node');
+    $has_node_in_path = strpos($node_path, 'node');
 
-    if ($has_node_in_path !== false) {
+    if ($has_node_in_path !== FALSE) {
       $node_id = preg_replace('/[^0-9]/', '', $node_path);
       if (strlen($node_id) > 0) {
         $row['path'] = $node_id;
         $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
         $moderationState = $node->get('moderation_state')->getString();
         $row['id'] = $moderationState;
-      } else {
+      }
+      else {
         $row['id'] = '';
       }
-    } else {
+    }
+    else {
       $row['id'] = '';
     }
   }
@@ -120,8 +121,8 @@ function agri_reports_preprocess_views_view_field(&$variables) {
 
     if ($field->field == 'path') {
       $node_path = $row->path_alias_path;
-      $has_node_in_path = strpos($node_path,'node');
-      if ($has_node_in_path !== false) {
+      $has_node_in_path = strpos($node_path, 'node');
+      if ($has_node_in_path !== FALSE) {
         $node_id = preg_replace('/[^0-9]/', '', $node_path);
         if (strlen($node_id) > 0) {
           $variables['output'] = $node_id;
@@ -134,20 +135,22 @@ function agri_reports_preprocess_views_view_field(&$variables) {
       $numchars_in_alias = strlen($path_alias);
       $variables['output'] = $numchars_in_alias;
     }
-    
+
     if ($field->field == 'id') {
       $node_path = $row->path_alias_path;
-      $has_node_in_path = strpos($node_path,'node');
-      if ($has_node_in_path !== false) {
+      $has_node_in_path = strpos($node_path, 'node');
+      if ($has_node_in_path !== FALSE) {
         $node_id = preg_replace('/[^0-9]/', '', $node_path);
         if (strlen($node_id) > 0) {
           $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
           $moderationState = $node->get('moderation_state')->getString();
           $variables['output'] = $moderationState;
-        } else {
+        }
+        else {
           $variables['output'] = '';
         }
-      } else {
+      }
+      else {
         $variables['output'] = '';
       }
     }
