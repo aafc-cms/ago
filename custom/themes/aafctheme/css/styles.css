@@ -833,6 +833,16 @@ div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
     right: 7px;
   }
 }
+/* line 4, ../sass/regions/_highlighted-not-front.scss */
+div.region-highlighted-not-front {
+  margin-right: -15px;
+}
+/* line 6, ../sass/regions/_highlighted-not-front.scss */
+div.region-highlighted-not-front div.container-fluid {
+  margin-right: 0;
+  padding-right: 0;
+}
+
 /* line 2, ../sass/regions/_highlighted-front-only.scss */
 div.region-highlighted-front-only {
   margin-right: -15px;
