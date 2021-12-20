@@ -43,7 +43,7 @@
  * - page.header: Items for the header region.
  * - page.navigation: Items for the navigation region.
  * - page.navigation_collapsible: Items for the navigation (collapsible) region.
- * - page.highlighted_first: Items for the highlighted first content region.
+ * - page.highlighted_not_front: Items for the highlighted NOT front content region.
  * - page.highlighted: Items for the highlighted content region.
  * - page.help: Dynamic help text, mostly for admin pages.
  * - page.content: The main content of the current page.
@@ -94,10 +94,10 @@
 {% endif %}
 
 {# Highlighted First #}
-{% if page.highlighted_first and not is_front %}
-  {% if page.highlighted_first %}
-    {% block highlighted_first %}
-      {{ page.highlighted_first }}
+{% if page.highlighted_not_front and not is_front %}
+  {% if page.highlighted_not_front %}
+    {% block highlighted_not_front %}
+      {{ page.highlighted_not_front }}
     {% endblock %}
   {% endif %}
 {% endif %}
