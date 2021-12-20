@@ -13,7 +13,6 @@ dependencies:
     - workflows.workflow.publishing
   module:
     - access_unpublished
-    - bootstrap_site_alert
     - comment
     - contact
     - content_moderation
@@ -54,6 +53,5 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use publishing transition save_as_a_draft'
   - 'use text format rich_text'
-  - 'view bootstrap site alerts'
   - 'view media'
   - 'view own unpublished media'

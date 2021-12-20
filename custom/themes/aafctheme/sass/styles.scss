@@ -14,12 +14,12 @@
 @import 'anonymous/restrictions';
 @import 'anonymous/webforms';
 @import 'components/status_message';
-@import 'components/header';
-@import 'components/site-alert'; 
 @import 'legacy-styles';
 @import 'components/feedback-webform';
 @import 'components/generic-contact-webform';
 @import 'components/services-request-webform';
+@import 'regions/header';
+@import 'regions/highlighted-first'; 
 
 //@import 'layouts/header';
 //@import 'layouts/footer';

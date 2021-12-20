@@ -10,3 +10,4 @@ ignored_config_entities:
   - system.mail
   - system.menu.devel
   - warmer.settings
+  - 'block.block.*'

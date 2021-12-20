@@ -86,7 +86,6 @@ var AAFCFrontend = function() {
     });
 
     //AAFCFrontend.initAnalytics();
-    AAFCFrontend.relocateSiteAlertMSG();
     AAFCFrontend.relocateWebformValidationMSG();
     AAFCFrontend.initSlideshow();
     searchInterface();
@@ -281,23 +280,6 @@ var AAFCFrontend = function() {
     }
   }
 
-  function relocateSiteAlertMSG() {
-    var divmsg = $('div.alert.bs-site-alert.alert-info');
-    var olbreadcrumb = $('nav#wb-bc');
-    if (!(typeof divmsg === "undefined")) {
-      if (!(typeof olbreadcrumb === "undefined")) {
-        $('div.alert.bs-site-alert.alert-info').detach().insertAfter(olbreadcrumb);
-      }
-    }
-
-    var divmsg = $('div.alert.bs-site-alert.alert-warning');
-    var olbreadcrumb = $('nav#wb-bc');
-    if (!(typeof divmsg === "undefined")) {
-      if (!(typeof olbreadcrumb === "undefined")) {
-        $('div.alert.bs-site-alert.alert-warning').detach().insertAfter(olbreadcrumb);
-      }
-    }
-  }
 
   /**
    * Expose functions and variables
@@ -312,7 +294,6 @@ var AAFCFrontend = function() {
     updateformaction: updateformaction,
     page_type: page_type,
     removeRoleFromSummary: removeRoleFromSummary,
-    relocateSiteAlertMSG:relocateSiteAlertMSG,
     relocateWebformValidationMSG:relocateWebformValidationMSG
   }
 }();
