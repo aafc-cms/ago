@@ -16,6 +16,7 @@ regions:
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Header'
   highlighted_first: 'Highlighted First'
+  highlighted_front_only: 'Highlighted Front only'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'

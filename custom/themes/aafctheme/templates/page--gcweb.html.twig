@@ -94,7 +94,7 @@
 {% endif %}
 
 {# Highlighted First #}
-{% if page.highlighted_first %}
+{% if page.highlighted_first and not is_front %}
   {% if page.highlighted_first %}
     {% block highlighted_first %}
       {{ page.highlighted_first }}
@@ -163,6 +163,14 @@
           </ol>
           </div>
         </nav>
+        {# Highlighted Front Only #}
+        {% if page.highlighted_front_only and is_front %}
+          {% if page.highlighted_front_only %}
+            {% block highlighted_front_only %}
+              {{ page.highlighted_front_only }}
+            {% endblock %}
+          {% endif %}
+        {% endif %}
         {% endif %}
 
         {# Action Links #}
