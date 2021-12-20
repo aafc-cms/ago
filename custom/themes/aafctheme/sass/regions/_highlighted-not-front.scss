@@ -1,2 +1,10 @@
 
-// Add highlighted first scss here
+// Add highlighted not-front scss here
+
+div.region-highlighted-not-front {
+  margin-right: -15px;
+  div.container-fluid {
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
