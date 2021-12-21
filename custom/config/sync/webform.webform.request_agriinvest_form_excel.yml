@@ -48,7 +48,7 @@ elements: |-
     '#empty_value': English
   select_the_province:
     '#type': checkboxes
-    '#title': 'The following Excel forms packages include the Statement A, Statement B and Adjustment Request Form. Indicate below which forms package(s) you would like to receive.'
+    '#title': 'Select your province, and then select the forms package(s) you would like to receive.'
     '#options':
       'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon'
       'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan'

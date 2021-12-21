@@ -18,7 +18,7 @@ elements: |
       French: Anglais
     '#empty_option': Français
   select_the_province:
-    '#title': 'Les trousses de formulaires Excel suivantes comprennent l’état A, l’état B et le formulaire de demande de redressement. Veuillez indiquer ci-après la ou les trousses que vous aimeriez recevoir.'
+    '#title': 'Sélectionnez votre province, puis sélectionnez la ou les trousses de formulaires que vous aimeriez recevoir.'
     '#options':
       'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon'
       'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan'
