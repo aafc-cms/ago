@@ -1,0 +1,14 @@
+uuid: 8a23f0a8-f07f-408a-80fc-acd34f595c5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.gcds
+  module:
+    - user
+id: user_add_role_action.gcds
+label: 'Add the gcds role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: gcds
