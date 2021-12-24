@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
+    - node.type.dir_listing
     - node.type.landing_page
     - node.type.page
   module:
@@ -74,6 +75,7 @@ type_settings:
     block_content:
       - basic
     node:
+      - dir_listing
       - landing_page
       - page
   default_moderation_state: draft

@@ -1,0 +1,32 @@
+uuid: 80a825a0-ac68-484f-afbb-4e5a70f7f8b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - file_delete
+    - filebrowser
+    - lightning_core
+    - toolbar
+third_party_settings:
+  lightning_core:
+    description: 'the role allows GCDS team to upload the files into a special public folder for the external use.'
+id: gcds
+label: gcds
+weight: 2
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'add filebrowser metadata entity entities'
+  - 'create folders'
+  - 'delete filebrowser metadata entity entities'
+  - 'delete files'
+  - 'delete listings'
+  - 'download archive'
+  - 'download files'
+  - 'edit description'
+  - 'edit filebrowser metadata entity entities'
+  - 'edit own listings'
+  - 'rename files'
+  - 'upload files'
+  - 'view listings'
+  - 'view published filebrowser metadata entity entities'
