@@ -234,6 +234,8 @@ var AAFCFrontend = function() {
     var reqvalMSGPrefix = "";
     var reqvalMSGMiddle = "";
     var reqvalMSGSuffix = "";
+    var invalidPhoneNumSuffix = "";
+    var subinvalidPhoneNumSuffix = "";
     var h2prefix = "";
     if (typeof(psWebForm) && (psWebForm !== null)) {
       // Fixes WCAG issue #463
@@ -244,6 +246,8 @@ var AAFCFrontend = function() {
         reqvalMSGMiddle = ": ";
         reqvalMSGSuffix = " - This field is required.";
         subreqvalMSGSuffix = ": This field is required.";
+        invalidPhoneNumSuffix = " - Please specify a valid phone number.";
+        subinvalidPhoneNumSuffix = ": Please specify a valid phone number.";
       }
       else {
         $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
@@ -252,12 +256,19 @@ var AAFCFrontend = function() {
         reqvalMSGMiddle = " : ";
         reqvalMSGSuffix = " - Ce champ est obligatoire.";
         subreqvalMSGSuffix = " : Ce champ est obligatoire.";
+        invalidPhoneNumSuffix = " - Veuillez fournir un numéro de téléphone valide.";
+        subinvalidPhoneNumSuffix = ": Veuillez fournir un numéro de téléphone valide.";
       }
       if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
         if( (divErrorMSG !== null) && (divDescription !== null) ) {
           $('div.highlighted').detach().insertAfter(divDescription);
-          $( "section.alert.alert-danger.alert-dismissible ul li a" ).each(function(index) {
-            $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
+          $( "section.alert.alert-danger.alert-dismissible ul li a" ).each(function(index, element) {
+            if (($(element).attr('href')) == "#edit-phone-number-1613-666-6666-") {
+              $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + invalidPhoneNumSuffix );
+            }
+            else {
+              $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
+            }
             countErr = countErr +1;
           });
 
@@ -268,7 +279,12 @@ var AAFCFrontend = function() {
           if ((typeof($('div.form-item.has-error')) !== "undefined")) {
             $( "div.alert.alert-danger").each(function(index) {
               var divrequiredfield = $(this).prev().prev();
-              $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subreqvalMSGSuffix );
+              if ($(this).parent().find("input[data-drupal-selector='edit-phone-number-1613-666-6666-']").val()) {
+                $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subinvalidPhoneNumSuffix );
+              }
+              else {
+                $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subreqvalMSGSuffix );
+              }
               subcountErr = subcountErr +1;
               if ((typeof(divrequiredfield) !== "undefined")) {
                 $(this).detach().insertAfter(divrequiredfield);
