@@ -180,3 +180,9 @@ ul.feeds-cont li a {
     padding-bottom: 20px;
     background: #31708f;
 }
+/* 
+ * Breadcrumb line spacing override for D9
+ */
+ #wb-bc li {
+  padding: 0px 2px;
+}
