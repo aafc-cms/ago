@@ -546,6 +546,14 @@ ul.feeds-cont li a {
   background: #31708f;
 }
 
+/* 
+ * Breadcrumb line spacing override for D9
+ */
+/* line 186, ../sass/_legacy-styles.scss */
+#wb-bc li {
+  padding: 0px 2px;
+}
+
 /* line 4, ../sass/components/_feedback-webform.scss */
 body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-programorservice"]::after, body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-emailaddress"]::after,
 body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-fullname"]::after, body.webform_feedback_programsandservices #webform-submission-yourfeedback-programsandservices-add-form div.form-item label[for="edit-yourmessage"]::after {
