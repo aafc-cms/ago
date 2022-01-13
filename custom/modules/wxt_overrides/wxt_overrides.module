@@ -128,8 +128,8 @@ function wxt_overrides_page_attachments(array &$page) {
   ];
 
   $node = \Drupal::routeMatch()->getRawParameter('node');
-  $webform = \Drupal::routeMatch()->getRawParameter('webform');
   if (!isset($node)) {
+    $webform = \Drupal::routeMatch()->getRawParameter('webform');
     if (isset($webform)) {
       // Implment the logic by adding the hard codes for meta data (dcterms:issued and dcterms:modified).
       // The team decided to use the hard code approach in the short term.
