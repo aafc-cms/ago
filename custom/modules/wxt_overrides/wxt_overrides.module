@@ -134,45 +134,66 @@ function wxt_overrides_page_attachments(array &$page) {
       // Implment the logic by adding the hard codes for meta data (dcterms:issued and dcterms:modified).
       // The team decided to use the hard code approach in the short term.
       if (($webform == 'yourfeedback_programsandservices') || ($webform == 'aafc_generic_contact_form')) {
+        $datestr = '2021-06-23';
         $dctermsissued = [
           '#tag' => 'meta',
           '#attributes' => [
             'property'  => 'dcterms:issued',
             'title'     => 'W3CDTF',
-            'content'   => '2021-06-23',
+            'content'   => $datestr,
+          ],
+        ];
+
+        $dctermsmodified = [
+          '#tag' => 'meta',
+          '#attributes' => [
+            'property'  => 'dcterms:modified',
+            'title'     => 'W3CDTF',
+            'content'   => $datestr,
           ],
         ];
       }
       elseif (($webform == 'request_agriinvest_form_excel') || ($webform == 'as_ai_request_form')) {
+        $datestr = '2022-01-31';
         $dctermsissued = [
           '#tag' => 'meta',
           '#attributes' => [
             'property'  => 'dcterms:issued',
             'title'     => 'W3CDTF',
-            'content'   => '2022-01-31',
+            'content'   => $datestr,
+          ],
+        ];
+
+        $dctermsmodified = [
+          '#tag' => 'meta',
+          '#attributes' => [
+            'property'  => 'dcterms:modified',
+            'title'     => 'W3CDTF',
+            'content'   => $datestr,
           ],
         ];
       }
       else {
         // set a default value.
+        $datestr = '2022-01-31';
         $dctermsissued = [
           '#tag' => 'meta',
           '#attributes' => [
             'property'  => 'dcterms:issued',
             'title'     => 'W3CDTF',
-            'content'   => '0000-00-00',
+            'content'   => $datestr,
+          ],
+        ];
+
+        $dctermsmodified = [
+          '#tag' => 'meta',
+          '#attributes' => [
+            'property'  => 'dcterms:modified',
+            'title'     => 'W3CDTF',
+            'content'   => $datestr,
           ],
         ];
       }
-
-      $dctermsmodified = [
-        '#tag' => 'meta',
-        '#attributes' => [
-          'property'  => 'dcterms:modified',
-          'title'     => 'W3CDTF',
-          'content'   => '2022-01-31',
-        ],
-      ];
 
       $page['#attached']['html_head'][] = [$dctermsissued, 'dcterms:issued'];
       $page['#attached']['html_head'][] = [$dctermsmodified, 'dcterms:modified'];
