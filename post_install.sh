@@ -367,3 +367,6 @@ else
   exit 1;
 fi
 
+#Run Create or Replace View sql command
+drush sql-query --file=/d8x/aol/custom/dbviews/search_node_url.sql;
+echo  "drush sql-query --file=/d8x/aol/custom/dbviews/search_node_url.sql";
