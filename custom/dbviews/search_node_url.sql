@@ -1,4 +1,4 @@
-CREATE   View search_node_url AS
+ CREATE OR REPLACE  View search_node_url AS
 
 Select `np`.`node_id` AS `node_id`,
 `np`.`langcode` AS `langcode`,
@@ -49,4 +49,4 @@ join
   and (`m`.`content_entity_type_id` = 'node'))
 )
 `nms`
-on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`))))
+on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`))));
