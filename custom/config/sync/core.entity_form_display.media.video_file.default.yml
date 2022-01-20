@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.video_file.field_media_video_file
     - media.type.video_file
   module:
+    - dynamic_entity_reference
     - file
     - path
 _core:
@@ -17,23 +18,33 @@ targetEntityType: media
 bundle: video_file
 mode: default
 content:
+  field_aafc_category:
+    type: dynamic_entity_reference_default
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 40
+      placeholder: ''
+    third_party_settings: {  }
   field_media_in_library:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_media_video_file:
     type: file_generic
-    weight: 1
+    weight: 2
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
@@ -48,13 +59,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   revision_log_message:
     type: string_textarea
-    weight: 5
+    weight: 6
     region: content
     settings:
       rows: 4
@@ -62,12 +73,11 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
 hidden:
   created: true
-  field_aafc_category: true
   uid: true
