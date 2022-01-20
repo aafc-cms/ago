@@ -1514,18 +1514,39 @@ display:
               editor: '0'
               reviewer: '0'
             reduce: false
-          is_grouped: false
+          is_grouped: true
           group_info:
-            label: ''
+            label: 'Moderation state'
             description: ''
-            identifier: ''
+            identifier: moderation_state
             optional: true
             widget: select
             multiple: false
             remember: false
-            default_group: All
+            default_group: '4'
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1:
+                title: Draft
+                operator: in
+                value:
+                  editorial-draft: editorial-draft
+              2:
+                title: Published
+                operator: in
+                value:
+                  editorial-published: editorial-published
+              3:
+                title: Archived
+                operator: in
+                value:
+                  editorial-archived: editorial-archived
+              4:
+                title: 'Draft or Published'
+                operator: in
+                value:
+                  editorial-draft: editorial-draft
+                  editorial-published: editorial-published
         langcode_1:
           id: langcode_1
           table: node_field_revision
