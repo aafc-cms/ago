@@ -157,6 +157,9 @@
                 "drupal/moderation_sidebar": {
                     "Discard Draft for a translation edits the base language node, ignore this patch, use patch 7 instead": "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
                 },
+                "drupal/metatag": {
+                    "2955407 - Obsolete patch ignore it": "https://www.drupal.org/files/issues/2020-12-18/Issue-2955407-Static-caching-for-token-processing-ic.patch"
+                },
                 "drupal/webform": {
                     "Enter drupal/webform patch #3212867 description here":
                     "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch"
