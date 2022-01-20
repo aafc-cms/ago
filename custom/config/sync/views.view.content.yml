@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_dc_date_created
     - field.storage.node.field_modified
     - node.type.landing_page
     - node.type.page
@@ -1925,17 +1926,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        revision_timestamp:
-          id: revision_timestamp
-          table: node_revision
-          field: revision_timestamp
+        field_dc_date_created:
+          id: field_dc_date_created
+          table: node__field_dc_date_created
+          field: field_dc_date_created
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: revision_timestamp
           plugin_id: field
-          label: Created
+          label: 'Date created'
           exclude: false
           alter:
             alter_text: false
@@ -1977,11 +1976,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_default
           settings:
-            date_format: medium
-            custom_date_format: ''
-            timezone: ''
+            timezone_override: ''
+            format_type: medium
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -2000,7 +1998,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'dc:modified'
+          label: 'Date modified'
           exclude: false
           alter:
             alter_text: false
@@ -2692,6 +2690,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_dc_date_created'
         - 'config:field.storage.node.field_modified'
         - 'config:workflow_list'
   page_3:
