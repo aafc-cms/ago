@@ -9,7 +9,6 @@ dependencies:
     - field.field.media.image.image
     - media.type.image
   module:
-    - field_formatter
     - image
 _core:
   default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
@@ -18,15 +17,6 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_aafc_category:
-    type: field_link
-    label: above
-    settings:
-      type: ''
-      settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
   image:
     type: image
     label: hidden
@@ -38,6 +28,7 @@ content:
     region: content
 hidden:
   created: true
+  field_aafc_category: true
   field_image_link: true
   field_media_in_library: true
   langcode: true
