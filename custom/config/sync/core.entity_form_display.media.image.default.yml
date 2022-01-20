@@ -22,14 +22,10 @@ bundle: image
 mode: default
 content:
   field_aafc_category:
-    type: dynamic_entity_reference_default
-    weight: 4
+    type: dynamic_entity_reference_options_select
+    weight: 3
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 40
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_image_link:
     type: link_default
@@ -56,7 +52,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -69,7 +65,7 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 3
+    weight: 2
     region: content
     settings:
       size: 60
