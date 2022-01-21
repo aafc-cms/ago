@@ -131,21 +131,20 @@
             "drupal/moderated_content_bulk_publish": {
                 "3253887 - Change revision message on bulk Unpublish":
                 "https://www.drupal.org/files/issues/2021-12-10/3253887-2.patch"
-            },
-            "drupal/lightning_core": {
-                "3223839 - Fix notices":
-                "https://www.drupal.org/files/issues/2021-07-15/3223839-1-PHP-warning-from-contextual-links.patch"
             }
         },
         "patches-ignore": {
             "drupalwxt/wxt": {
                 "drupal/core": {
                     "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2020-10-31/2559833-72.patch",
-                    "Enter drupal/core patch #2998826 description here": "https://www.drupal.org/files/issues/2021-03-17/core-Term_route_context-2998826-93.patch",
 		    "Enter drupal/core patch #2630732 description here": "https://www.drupal.org/files/issues/2020-09-17/2630732-77.patch",
-                    "Enter drupal/core patch #2470896 description here": "https://www.drupal.org/files/issues/2021-06-10/2470896-244.patch",
                     "Enter drupal/core patch #2907413 description here": "https://www.drupal.org/files/issues/2019-06-21/2907413-11.patch",
                     "Enter drupal/core patch #2922570 description here": "https://www.drupal.org/files/issues/2021-06-29/D91x-2922570-88.patch",
+                    "2907413 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2019-06-21/2907413-11.patch",
+                    "3150294 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2021-11-02/3150294-74.patch",
+                    "2921627 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2021-09-07/2921627-68_3.patch",
+                    "2922570 - Fixed in 9.3.0": "https://www.drupal.org/files/issues/2021-06-29/D91x-2922570-88.patch",
+                    "2922570 - Fixed in 9.3.0 but not 9.2 roll": "https://www.drupal.org/files/issues/2021-09-08/2922570-90.9.2.5.patch",
                     "2922570 - See reroll in 2922570-88 (above).":
                     "https://www.drupal.org/files/issues/2021-02-02/2922570-61.patch",
                     "2893407 - POST /quickedit/metadata returning HTTP 503 - patch 39.":
@@ -192,7 +191,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.3.0-rc17",
+        "agrcmsx/dxbase": "9.3.3-rc20",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -200,7 +199,7 @@
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/core": "9.3.0 as 9.1.14",
+        "drupal/core": "9.3.3 as 9.2.10",
         "drupal/embed_block": "1.x-dev",
         "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
