@@ -451,9 +451,6 @@ class Utils {
         if (!$foundtokenhref) {
           $foundtokenhref = TRUE;
         }
-        $msg = '';
-        $msg = '<ul><li>' . $tokenhref . '</li></ul>';
-        array_push($tokenmsgarray, $msg);
       }
     }
     return $foundtokenhref;
