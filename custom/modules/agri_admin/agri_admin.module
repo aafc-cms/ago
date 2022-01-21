@@ -358,6 +358,31 @@ function agri_admin_media_predelete(EntityInterface $entity) {
  */
 function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ((strpos($form_id, 'media') !== FALSE && strpos($form_id, 'edit_form') !== FALSE) ||
+      (strpos($form_id, 'media') !== FALSE && strpos($form_id, 'add') !== FALSE)
+  ) {
+    // Get rid of ugly text to the right of the dropdown list on the media field.
+    if (isset($form['field_aafc_category'])) {
+      foreach ($form['field_aafc_category']['widget'] as $key => $value) {
+        if ($key == '#options') {
+          foreach ($form['field_aafc_category']['widget'][$key] as $i_key => $i_value) {
+            AgriAdminHelper::addToLog(print_r(serialize($form['field_aafc_category']['widget'][$key]), TRUE), TRUE);
+            $category_term = $i_value;
+            $strpos_bad_text_idx = stripos($i_value, '(Taxonomy term', 1);
+            $strpos_bad_text_fr_idx = stripos($i_value, '(Terme de tax', 1);
+            if ($strpos_bad_text_idx > 1) {
+              // Cleanup for English.
+              $form['field_aafc_category']['widget'][$key][$i_key] = substr($i_value, 0, $strpos_bad_text_idx);
+            }
+            if ($strpos_bad_text_fr_idx > 1) {
+              // Nettoyage pour le français.
+              $form['field_aafc_category']['widget'][$key][$i_key] = substr($i_value, 0, $strpos_bad_text_fr_idx);
+            }
+          }
+        }
+      }
+    }
+  }
+  if ((strpos($form_id, 'media') !== FALSE && strpos($form_id, 'edit_form') !== FALSE) ||
       (strpos($form_id, 'media') !== FALSE && strpos($form_id, 'delete') !== FALSE)
   ) {
     $path = \Drupal::request()->getpathInfo();

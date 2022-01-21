@@ -19,14 +19,10 @@ bundle: video_file
 mode: default
 content:
   field_aafc_category:
-    type: dynamic_entity_reference_default
+    type: dynamic_entity_reference_options_select
     weight: 1
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 40
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_media_in_library:
     type: boolean_checkbox
