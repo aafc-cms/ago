@@ -1,4 +1,4 @@
-uuid: 80a825a0-ac68-484f-afbb-4e5a70f7f8b6
+uuid: 495096ea-5c4b-4749-ae3d-e875bfb723fb
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - toolbar
 third_party_settings:
   lightning_core:
-    description: 'the role allows GCDS team to upload the files into a special public folder for the external use.'
-id: gcds
-label: gcds
-weight: 2
+    description: 'The role allows the gcdp role user to access the gcdp public system path.'
+id: gcdp
+label: gcdp
+weight: 3
 is_admin: null
 permissions:
   - 'access public system path'

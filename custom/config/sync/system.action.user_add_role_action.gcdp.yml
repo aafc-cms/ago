@@ -1,0 +1,14 @@
+uuid: f5b85b63-6e69-4ad9-80e7-5cb723ba8a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.gcdp
+  module:
+    - user
+id: user_add_role_action.gcdp
+label: 'Add the gcdp role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: gcdp

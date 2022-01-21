@@ -1,0 +1,14 @@
+uuid: e78d0622-b2ec-4a61-8362-4f65fea28da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.gcdp
+  module:
+    - user
+id: user_remove_role_action.gcdp
+label: 'Remove the gcdp role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: gcdp
