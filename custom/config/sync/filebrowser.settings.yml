@@ -26,4 +26,4 @@ filebrowser:
     default_sort: name
     default_sort_order: asc
   adhocsetting:
-    externalhost: 'https://agr-qa.agr.gc.ca'
+    externalhost: 'https://agriculture.canada.ca'
