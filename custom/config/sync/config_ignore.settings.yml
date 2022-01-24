@@ -11,3 +11,4 @@ ignored_config_entities:
   - system.menu.devel
   - warmer.settings
   - 'block.block.*'
+  - filebrowser.settings
