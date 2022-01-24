@@ -47,9 +47,13 @@ elements: |-
       French: French
     '#empty_option': English
     '#empty_value': English
-  markup_01:
-    '#type': webform_markup
-    '#markup': '<p>The following Excel forms packages include the Statement A, Statement B and Adjustment Request Form. Indicate below which forms package(s) you would like to receive.</p>'
+  select_your_province_and_then_select_the_forms_package_s_you_wou:
+    '#type': checkboxes
+    '#title': 'Select your province, and then select the forms package(s) you would like to receive.'
+    '#options':
+      'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon'
+      'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan'
+    '#required': true
   for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
     '#type': checkboxes
     '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon:'
@@ -57,12 +61,26 @@ elements: |-
       '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1273 forms package for individuals.'
       '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2020 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
       '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
+    '#states':
+      visible-slide:
+        ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
+          checked: true
+      required:
+        ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
+          checked: true
     '#options__properties': ''
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#type': checkboxes
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan:'
     '#options':
       '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1163 forms package for individuals.'
+    '#states':
+      visible-slide:
+        ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
+          checked: true
+      required:
+        ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
+          checked: true
     '#options__properties': ''
 css: ''
 javascript: ''
