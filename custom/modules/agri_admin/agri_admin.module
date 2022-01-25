@@ -1440,3 +1440,17 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
 function agri_admin_algos() {
   return array_diff(\Drupal::config('filehash.settings')->get('algos'), [0]);
 }
+
+/**
+ * Implements agri_admin_form_views_exposed_form_alter hook.
+ */
+function agri_admin_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+
+  if ($view['view']->id() == 'content') {
+    if (isset($form['type']['#options'])) {
+      // Ensure that "- Any -" is 'first', and the other type options are in alphanum order.
+      ksort($form['type']['#options']);
+    }
+  }
+}
