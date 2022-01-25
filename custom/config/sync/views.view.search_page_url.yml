@@ -775,13 +775,15 @@ display:
     position: 1
     display_options:
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/search-page-url
       menu:
         type: normal
-        title: 'Search By Page URL'
+        title: 'Search by Page URL'
         description: ''
-        weight: 15
+        weight: 8
         expanded: false
         menu_name: admin
         parent: system.admin_content
