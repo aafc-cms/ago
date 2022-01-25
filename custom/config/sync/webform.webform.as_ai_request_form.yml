@@ -290,7 +290,8 @@ handlers:
       sender_name: ''
       subject: '2020 Request AgriStability and AgriInvest Forms in Excel'
       body: "[webform_submission:values]<br />\r\n<br />\r\nWe received your request."
-      excluded_elements: {  }
+      excluded_elements:
+        select_your_province_and_then_select_the_forms_package_s_you_wou: select_your_province_and_then_select_the_forms_package_s_you_wou
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
