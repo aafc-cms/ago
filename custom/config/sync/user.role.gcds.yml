@@ -27,7 +27,6 @@ permissions:
   - 'edit description'
   - 'edit filebrowser metadata entity entities'
   - 'edit own listings'
-  - 'rename files'
   - 'upload files'
   - 'view listings'
   - 'view published filebrowser metadata entity entities'
