@@ -1172,6 +1172,11 @@ function agri_admin_tokens($type, $tokens, array $data, array $options, Bubbleab
 
     $host = \Drupal::request()->getHost();
     $anonymous_url = str_replace("-admin", "", $host);
+    
+    if (stripos($host, 'www-tmp.agr.gc.ca') !== false || stripos($host, 'www-ep.agr.gc.ca') !== false || stripos($host, 'agriculture.agr.gc.ca') !== false) {
+      $anonymous_url = 'agriculture.canada.ca';
+    }
+    
     $publicFacing_str = '<a href="https://' . $anonymous_url . '/' . $currentLangID . '/node/' . $nodeID . '">' . $current_title . '</a>';
     $publicFacing_url = Markup::create($publicFacing_str);
 
