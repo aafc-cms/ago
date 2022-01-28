@@ -21,8 +21,8 @@ module:
   breakpoint: 0
   button_link: 0
   ckeditor: 0
-  ckeditor_codemirror: 0
   ckeditor_abbreviation: 0
+  ckeditor_codemirror: 0
   clientside_validation: 0
   clientside_validation_jquery: 0
   comment: 0
@@ -166,6 +166,8 @@ module:
   telephone_validation: 0
   text: 0
   title_length: 0
+  toc_api: 0
+  toc_filter: 0
   token: 0
   token_filter: 0
   toolbar: 0
@@ -211,8 +213,6 @@ module:
   wxt_library: 0
   wxt_overrides: 0
   wxt_translation: 0
-  toc_api: 0
-  toc_filter: 0
   menu_admin_per_menu: 1
   menu_link_content: 1
   pathauto: 1
