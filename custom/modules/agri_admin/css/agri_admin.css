@@ -402,8 +402,22 @@ body.path-admin .view-content #edit-field-modified-value-wrapper legend span.fie
   top: -2.5em;
   color: #222330;
 }
-body.path-admin .view-filters #edit-revision-timestamp-wrapper .form-item, body.path-admin .view-filters #edit-field-modified-value-wrapper .form-item {
+body.path-admin .view-filters #edit-revision-timestamp-wrapper .form-item, body.path-admin .view-filters #edit-field-modified-value-wrapper .form-item, body.path-admin .view-filters #edit-field-issued-value-wrapper .form-item {
   float: left;
+}
+body.path-admin .view-filters .form-item--field-issued-value-min,
+body.path-admin .view-filters .form-item--changed-min {
+  margin: 0.75rem 0.5rem 0 0;
+}
+body.path-admin .view-filters .form-item--field-issued-value-max,
+body.path-admin .view-filters .form-item--changed-max {
+  margin: 0.75rem 0.5rem 0 0;
+}
+body.path-admin .view-filters #edit-field-issued-value-wrapper {
+  padding-bottom: inherit;
+}
+body.path-admin .view-filters .form-actions .button {
+  margin-left: 15px;
 }
 
 body.path-admin.admincontentmoderated .view-filters .form-item--field-tracking-number-value,

@@ -155,6 +155,27 @@ function agri_reports_preprocess_views_view_field(&$variables) {
       }
     }
   }
+
+  if ($view->id() == 'publish_activity_new_pages') {
+    $field = $variables['field'];
+    $row = $variables['row'];
+    $row_entity = $row->_entity;
+
+    if ($field->field == 'view_node') {
+      $link_to_content = $variables['output']->__toString();
+      $strpos_en = strpos($link_to_content, '/en/');
+      if($strpos_en !== FALSE) {
+        $url_alias = substr($link_to_content, $strpos_en);
+        $variables['output'] = $url_alias;
+      }
+      $strpos_fr = strpos($link_to_content, '/fr/');
+      if($strpos_fr !== FALSE) {
+        $url_alias = substr($link_to_content, $strpos_fr);
+        $variables['output'] = $url_alias;
+      }
+    }
+  }
+
 }
 
 /**
