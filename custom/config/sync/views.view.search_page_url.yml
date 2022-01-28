@@ -646,6 +646,57 @@ display:
                 title: Archived
                 operator: '='
                 value: archived
+        pagetype:
+          id: pagetype
+          table: search_node_url
+          field: pagetype
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: pagetype_op
+            label: Pagetype
+            description: null
+            use_operator: false
+            operator: pagetype_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pagetype
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Content Type'
+            description: ''
+            identifier: pagetype
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Landing Page'
+                operator: '='
+                value: landing_page
+              2:
+                title: 'Internal Page'
+                operator: '='
+                value: page
+              3:
+                title: 'Directory Listing'
+                operator: '='
+                value: dir_listing
         iscurrenturl:
           id: iscurrenturl
           table: search_node_url
