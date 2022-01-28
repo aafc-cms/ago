@@ -22,6 +22,7 @@ module:
   button_link: 0
   ckeditor: 0
   ckeditor_codemirror: 0
+  ckeditor_abbreviation: 0
   clientside_validation: 0
   clientside_validation_jquery: 0
   comment: 0
