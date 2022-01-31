@@ -346,7 +346,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Page Type'
+          label: 'Content Type'
           exclude: false
           alter:
             alter_text: false
@@ -688,15 +688,15 @@ display:
               1:
                 title: 'Landing Page'
                 operator: '='
-                value: landing_page
+                value: 'Landing page'
               2:
                 title: 'Internal Page'
                 operator: '='
-                value: page
+                value: 'Internal page'
               3:
                 title: 'Directory Listing'
                 operator: '='
-                value: dir_listing
+                value: 'Directory listing'
         iscurrenturl:
           id: iscurrenturl
           table: search_node_url
@@ -748,11 +748,11 @@ display:
               1:
                 title: 'Current URL'
                 operator: '='
-                value: currenturl
+                value: 'Current url'
               2:
                 title: 'Previous URL'
                 operator: '='
-                value: previousurl
+                value: 'Previous url'
       filter_groups:
         operator: AND
         groups:

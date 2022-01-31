@@ -4,12 +4,20 @@ Select `np`.`node_id` AS `node_id`,
 `np`.`langcode` AS `langcode`,
 concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`) AS `url`,
 char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `numofchars`,
-`nms`.`type` AS `pagetype`,
+( case when (`nms`.`type` = 'page')
+       then 'Internal page'
+       when (`nms`.`type` = 'landing_page')
+       then 'Landing page'
+       when (`nms`.`type` = 'dir_listing')
+       then 'Directory listing'
+  else  `nms`.`type`
+  end
+) AS `pagetype`,
 (case when (`np`.`revision_id` is not null)
 then `nms`.`moderation_state` else 'previousrevision' end
 ) AS `moderationstate`,
 (case when (`np`.`revision_id` is not null)
-then 'currenturl' else 'previousurl' end
+then 'Current URL' else 'Previous URL' end
 ) AS `iscurrenturl`
 from
 ((
