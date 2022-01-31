@@ -154,7 +154,7 @@ function wxt_overrides_page_attachments(array &$page) {
         ];
       }
       elseif (($webform == 'request_agriinvest_form_excel') || ($webform == 'as_ai_request_form')) {
-        $datestr = '2022-01-31';
+        $datestr = '2022-02-05';
         $dctermsissued = [
           '#tag' => 'meta',
           '#attributes' => [
@@ -175,7 +175,7 @@ function wxt_overrides_page_attachments(array &$page) {
       }
       else {
         // set a default value.
-        $datestr = '2022-01-31';
+        $datestr = '2022-02-05';
         $dctermsissued = [
           '#tag' => 'meta',
           '#attributes' => [
