@@ -1,8 +1,10 @@
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
 ignored_config_entities:
+  - aafctheme.settings
   - block.block.media
   - block.block.media_2
+  - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
   - linkchecker.settings
