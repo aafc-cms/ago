@@ -93,7 +93,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: H1(Title)
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -554,7 +554,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: H1(Title)
+            label: Title
             description: ''
             use_operator: false
             operator: title_op
