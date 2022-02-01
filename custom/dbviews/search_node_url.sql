@@ -1,6 +1,7 @@
  CREATE OR REPLACE  View search_node_url AS
 
 Select `np`.`node_id` AS `node_id`,
+`nd`.`title` as `title`,
 `np`.`langcode` AS `langcode`,
 concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`) AS `url`,
 char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `numofchars`,
@@ -57,4 +58,8 @@ join
   and (`m`.`content_entity_type_id` = 'node'))
 )
 `nms`
-on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`))));
+on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`)))
+join
+`node_field_data` `nd`
+on (((`np`.`node_id` = `nd`.`nid`) and (`np`.`langcode` = `nd`.`langcode`) ))
+);
