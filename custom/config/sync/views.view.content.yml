@@ -1300,8 +1300,9 @@ display:
             type: type
             name: name
             moderation_state: moderation_state
-            revision_timestamp: revision_timestamp
+            field_dc_date_created: field_dc_date_created
             field_modified: field_modified
+            edit_node: edit_node
           default: '-1'
           info:
             status:
@@ -1358,15 +1359,22 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            revision_timestamp:
+            field_dc_date_created:
               sortable: true
-              default_sort_order: desc
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             field_modified:
               sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_node:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -2709,7 +2717,9 @@ display:
         filter_groups: false
       rendering_language: '***LANGUAGE_entity_translation***'
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/content/node
       menu:
         type: 'default tab'
