@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05eec4f1b5ac83b39082b1eed1920c1d",
+    "content-hash": "0906c75c361e8aae56c7f96cfb886345",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
