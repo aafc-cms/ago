@@ -1,7 +1,7 @@
  CREATE OR REPLACE  View search_node_url AS
 
 Select `np`.`node_id` AS `node_id`,
-`nms`.`title` as `title`,
+`nd`.`title` as `title`,
 `np`.`langcode` AS `langcode`,
 concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`) AS `url`,
 char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `numofchars`,
@@ -49,17 +49,17 @@ from
 join
 (
   select distinct `m`.`moderation_state` AS `moderation_state`,`n`.`nid` AS `nid`,
-  `m`.`langcode` AS `langcode`,`n`.`type` AS `type`, `nfd`.`title`
+  `m`.`langcode` AS `langcode`,`n`.`type` AS `type`
   from (`content_moderation_state_field_revision` `m`
   join `node` `n`
   on(((`m`.`content_entity_id` = `n`.`nid`)
   and (`m`.`content_entity_revision_id` = `n`.`vid`))))
-  join `node_field_data` `nfd`
-  on (((`n`.`nid` = `nfd`.`nid`)
-  and (`n`.`langcode` = `nfd`.`langcode`)
-  and (`n`.`vid` = `nfd`.`vid`)))
   where ((`m`.`workflow` = 'editorial')
   and (`m`.`content_entity_type_id` = 'node'))
 )
 `nms`
-on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`))));
+on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`)))
+join
+`node_field_data` `nd`
+on (((`np`.`node_id` = `nd`.`nid`) and (`np`.`langcode` = `nd`.`langcode`)))
+);
