@@ -18,7 +18,7 @@ char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `n
 then `nms`.`moderation_state` else 'previousrevision' end
 ) AS `moderationstate`,
 (case when (`np`.`revision_id` is not null)
-then 'Current URL' else 'Previous URL' end
+then TRUE else FALSE end
 ) AS `iscurrenturl`
 from
 ((

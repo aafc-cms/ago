@@ -36,7 +36,7 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: numeric
-          label: 'Node id'
+          label: 'Node ID'
           exclude: false
           alter:
             alter_text: false
@@ -194,8 +194,8 @@ display:
           label: 'Is Current URL'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if iscurrenturl  == 1 %}\r\nCurrent URL\r\n{% else %}\r\nPrevious URL\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -232,6 +232,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
         langcode:
           id: langcode
           table: search_node_url
@@ -504,7 +512,7 @@ display:
           exposed: true
           expose:
             operator_id: node_id_op
-            label: 'Node id'
+            label: 'Node ID'
             description: ''
             use_operator: false
             operator: node_id_op
@@ -525,6 +533,8 @@ display:
               qa: '0'
               ia: '0'
               viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -803,15 +813,18 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: string
+          plugin_id: numeric
           operator: '='
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
           group: 1
           exposed: true
           expose:
             operator_id: iscurrenturl_op
             label: Iscurrenturl
-            description: ''
+            description: null
             use_operator: false
             operator: iscurrenturl_op
             operator_limit_selection: false
@@ -822,16 +835,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              creator: '0'
-              editor: '0'
-              reviewer: '0'
-              pab_admin: '0'
-              qa: '0'
-              ia: '0'
-              viewer: '0'
-            placeholder: ''
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
           is_grouped: true
           group_info:
             label: 'Is Current URL'
@@ -847,11 +853,17 @@ display:
               1:
                 title: 'Current URL'
                 operator: '='
-                value: 'Current url'
+                value:
+                  min: ''
+                  max: ''
+                  value: '1'
               2:
                 title: 'Previous URL'
                 operator: '='
-                value: 'Previous url'
+                value:
+                  min: ''
+                  max: ''
+                  value: '0'
       filter_groups:
         operator: AND
         groups:
