@@ -366,7 +366,3 @@ else
   echo -e "${RED}exit in error${NC}";
   exit 1;
 fi
-
-#Run Create or Replace View sql command
-echo  "drush sql-query --file=../custom/dbviews/search_node_url.sql";
-       drush sql-query --file=../custom/dbviews/search_node_url.sql;
