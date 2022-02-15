@@ -141,6 +141,7 @@ module:
   panels_ipe: 0
   path: 0
   path_alias: 0
+  password_policy: 0
   prefer_latest_content: 0
   quickedit: 0
   rdf: 0
