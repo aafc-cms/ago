@@ -1,11 +1,14 @@
 <?php
 
-  $nodeTypes = array('news', 'empl', 'landing_page', 'page', 'webform');
+  $nodeTypes = array(/*'news', 'empl',*/ 'landing_page', 'page', 'webform');
   foreach ($nodeTypes as $nodeType) {
   $query = \Drupal::entityQuery('node')->condition('type', $nodeType);
   $nids = $query->execute();
   $count_success = 0;
     foreach ($nids as $vid => $nid) {
+      if ($nid > 10) {
+        continue;
+      }
       $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
       $node->delete();
       \Drupal\agri_admin\AgriAdminHelper::addToLog('deleted:' . $nodeType . $nid, TRUE);
@@ -31,7 +34,7 @@
     }
   }
 
-  $mediaTypes = array('audio_file', 'document', 'image', 'instagram', 'slideshow_thumbnav', 'slideshow', 'tweet', 'video', 'video_file');
+  $mediaTypes = array('audio_file', 'document', /*'image',*/ 'instagram', 'slideshow_thumbnav', 'slideshow', 'tweet', 'video', 'video_file');
   foreach ($mediaTypes as $mediaType) {
   $query = \Drupal::entityQuery('media')->condition('bundle', $mediaType);
   $medias = $query->execute();
@@ -46,9 +49,9 @@
 
 
 // Should only run this step if needed:
-foreach (Drupal::entityTypeManager()->getStorage("taxonomy_term")->loadByProperties(["vid" => ["dcterm_subject","news_type","employment_type","category", "aafc_type"]]) as $term) {
-  $term->delete();
-}
+//foreach (Drupal::entityTypeManager()->getStorage("taxonomy_term")->loadByProperties(["vid" => ["dcterm_subject","news_type","employment_type","category", "aafc_type"]]) as $term) {
+//  $term->delete();
+//}
 
 
 
@@ -64,15 +67,15 @@ foreach (Drupal::entityTypeManager()->getStorage("taxonomy_term")->loadByPropert
 //ALTER TABLE migrate_message_wxt_file AUTO_INCREMENT=1;
 
 $database = \Drupal::database();
-$query = $database->query("ALTER TABLE {node} AUTO_INCREMENT=1")->execute();
-$query = $database->query("ALTER TABLE {node_revision} AUTO_INCREMENT=1")->execute();
-$query = $database->query("ALTER TABLE {node_field_data} AUTO_INCREMENT=1")->execute();
-$query = $database->query("ALTER TABLE {node_field_revision} AUTO_INCREMENT=1")->execute();
-$query = $database->query("ALTER TABLE {media_revision} AUTO_INCREMENT=1")->execute();
-$query = $database->query("ALTER TABLE {media_field_revision} AUTO_INCREMENT=1")->execute();
-//$query = $database->query("truncate {content_moderation_state_field_revision}")->execute();
-$query = $database->query("ALTER TABLE {file_managed} AUTO_INCREMENT=1")->execute();
-$query = $database->query("DELETE from {content_moderation_state_field_revision} where content_entity_type_id='node' OR content_entity_type_id='media'")->execute();
+//$query = $database->query("ALTER TABLE {node} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {node_revision} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {node_field_data} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {node_field_revision} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {media_revision} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("ALTER TABLE {media_field_revision} AUTO_INCREMENT=1")->execute();
+////$query = $database->query("truncate {content_moderation_state_field_revision}")->execute();
+//$query = $database->query("ALTER TABLE {file_managed} AUTO_INCREMENT=1")->execute();
+//$query = $database->query("DELETE from {content_moderation_state_field_revision} where content_entity_type_id='node' OR content_entity_type_id='media'")->execute();
 
 //$query = $database->query("TRUNCATE TABLE {node}")->execute();
 //$query = $database->query("TRUNCATE TABLE {node_revision}")->execute();
@@ -108,6 +111,7 @@ foreach ($menus as $menuName) {
   }
 }*/
 
+/*
 $menus = array('main', 'sidebar');
 foreach ($menus as $menuName) {
   $database = \Drupal::database();
@@ -125,4 +129,4 @@ foreach ($menus as $menuName) {
     }
   }
 }
-
+*/
