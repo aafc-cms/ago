@@ -123,7 +123,7 @@
                 "Access the private path and public path based on the user role":
                 "https://www.drupal.org/files/issues/2021-12-30/Access-private-public-path-based-on-user-role-3256368-03.patch"
             },
-            "drupal/core_contexts": {
+            "drupal/core_context": {
                 "3263703 - Layout builder and core contexts together": "https://www.drupal.org/files/issues/2022-03-10/3263703.patch"
             },
             "drupal/wxt": {
