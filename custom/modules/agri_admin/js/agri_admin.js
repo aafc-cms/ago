@@ -235,6 +235,23 @@ var AAFCOnline = function() {
         AAFCOnline.page_type == 'add-landing-page' ||
         AAFCOnline.page_type == 'edit-landing-page'
     ) {
+      var large_mode = $('#edit-field-large-value').bind('click', function(event) {
+        var layoutElement = $("#edit-layout-selection");
+        if (typeof layoutElement !== 'undefined') {
+          if (this.checked) {
+            layoutElement.val('_none'); // Default to the default layout value.
+          }
+          else {
+            if (AAFCOnline.page_type.includes('landing')) {
+              layoutElement.val('node_landing_page_full_default'); // Default to the default layout value.
+            }
+            else {
+              layoutElement.val('node_page_default_default'); // Default to the default layout value.
+            }
+          }
+        }
+      });
+      
       setLayoutDefaults();
     }
     $(document).on('mousemove', onMouseMove);
@@ -277,22 +294,35 @@ var AAFCOnline = function() {
    */
   function setLayoutDefaults() {
     // Set the layout defaults.
+    var large_mode = $('#edit-field-large-value').is(':checked');
     var layoutElement = $("#edit-layout-selection");
     if (AAFCOnline.page_type == 'add-page') {
       layoutElement.val('node_page_default_default'); // Default to the default layout value.
+      if (large_mode) {
+        layoutElement.val('_none'); // Default to the default layout value.
+      }
     }
     if (AAFCOnline.page_type == 'add-landing-page') {
       layoutElement.val('node_landing_page_full_default'); // Default to the default layout value.
+      if (large_mode) {
+        layoutElement.val('_none'); // Default to the default layout value.
+      }
     }
 
     if (AAFCOnline.page_type == 'edit-landing-page') {
       if (layoutElement.val() == '_none') {
         layoutElement.val('node_landing_page_full_default'); // Default to the default layout value.
       }
+      if (large_mode) {
+        layoutElement.val('_none'); // Default to the default layout value.
+      }
     }
     if (AAFCOnline.page_type == 'edit-page') {
       if (layoutElement.val() == '_none') {
         layoutElement.val('node_page_default_default'); // Default to the default layout value.
+      }
+      if (large_mode) {
+        layoutElement.val('_none'); // Default to the default layout value.
       }
     }
     //Layout - sync the layout type selection, with JS
