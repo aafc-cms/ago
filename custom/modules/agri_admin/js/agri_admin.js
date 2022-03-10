@@ -235,7 +235,7 @@ var AAFCOnline = function() {
         AAFCOnline.page_type == 'add-landing-page' ||
         AAFCOnline.page_type == 'edit-landing-page'
     ) {
-      var large_mode = $('#edit-field-large-value').bind('click', function(event) {
+      var large_mode = $('#edit-field-large-value').bind('click.largeMode', function(event) {
         var layoutElement = $("#edit-layout-selection");
         if (typeof layoutElement !== 'undefined') {
           if (this.checked) {
