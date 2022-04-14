@@ -130,7 +130,11 @@
             "drupal/moderated_content_bulk_publish": {
                 "3253887 - Change revision message on bulk Unpublish":
                 "https://www.drupal.org/files/issues/2021-12-10/3253887-2.patch"
-            }
+            },
+	    "drupal/honeypot": {
+		    "2820400 - use js on cached pages":
+		    "https://www.drupal.org/files/issues/2021-11-21/2820400-40-use-js-on-cached-pages_0.patch"
+	    }
         },
         "patches-ignore": {
             "drupalwxt/wxt": {
