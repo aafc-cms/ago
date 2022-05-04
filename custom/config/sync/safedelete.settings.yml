@@ -5,7 +5,7 @@ bundle:
   webform: 0
 limit: '30'
 delete_button: 0
-safearchive: 0
+safearchive: true
 orphanedpagedefinition:
   landing_page: landing_page
   page: page
