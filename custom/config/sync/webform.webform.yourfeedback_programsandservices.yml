@@ -18,11 +18,6 @@ elements: |-
   descriptionoffeedbackform:
     '#type': processed_text
     '#text': |
-      <style type="text/css">
-        p {
-          font-size: 20px;
-        }
-      </style>
       <p>Your suggestions and ideas are important to us. Submit your feedback to help us improve the design and delivery of our programs and services. We really appreciate your taking the time to share your thoughts and suggestions with us.
       </p>
       <section>
@@ -39,10 +34,6 @@ elements: |-
   denotesmandatoryfield:
     '#type': processed_text
     '#text': |
-      <style type="text/css">p {
-        font-size: 16px !important ;
-        }
-      </style>
       <p class="text-danger">* denotes mandatory field.
       </p>
     '#format': full_html
