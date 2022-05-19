@@ -7,6 +7,41 @@
     attach: function (context, settings) {
       AAFCOnline.sortMediaDisplayModes('[data-drupal-selector="edit-attributes-data-view-mode"]'); // Call this for all attach events.
       AAFCOnline.sortMediaDisplayModes('[data-drupal-selector="edit-images-thumbnail-image-style"]'); // Call this for all attach events.
+      // build a Drupal modal dialog window
+      var msg_part1 =  Drupal.t('If you click ok, the archived page can\'t be restored.');
+      var msg_part2 =  Drupal.t('Are you sure you want to delete it?');
+      var content  = '<div><p id="version-confirm-form-text">' + msg_part1 +'<br/>' + msg_part2 + '</p></div>';
+      confirmationDialog = Drupal.dialog(content, {
+        dialogClass: 'confirm-dialog',
+        resizable: false,
+        closeOnEscape: false,
+        width:500,
+        title: Drupal.t('Delete an archived page?'),
+        buttons: [{
+          text: Drupal.t('Yes'),
+          class: 'button button--primary',
+          click: function click(e) {
+            confirmationDialog.close();
+            $(".node-form #edit-submit").unbind('click.agriAdmin');
+            $(".node-form #edit-submit").trigger('click.agriAdmin');
+            $(e.target).remove();
+            return true;
+          },
+          primary: true
+        }, {
+          text: Drupal.t('Cancel'),
+          class: 'button',
+          click: function click() {
+            confirmationDialog.close();
+          }
+        }],
+        create: function () {
+        },
+        beforeClose: false,
+        close: function (event) {
+          $(event.target).remove();
+        }
+      });
       if (context == document) {
         AAFCOnline.init();
         if ($('body').hasClass('user-logged-in')) {
@@ -25,10 +60,9 @@
               // Remove the message 'Are you sure you want to revive this page?': moderation state is changed from archived to draft.
               if ((cur_state == Drupal.t('Archived')) && (new_state == Drupal.t('Delete'))) {
                 var confirm_message = Drupal.t('If you click ok, the archived page can\'t be restored.\nAre you sure you want to delete it?');
-                if (! confirm(confirm_message)) {
-                  e.preventDefault();
-                  return false;
-                }
+                e.preventDefault();
+                confirmationDialog.showModal();
+                return false;
               }
               return true;
             });
