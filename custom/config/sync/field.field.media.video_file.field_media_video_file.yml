@@ -22,8 +22,8 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'mp4 wmv'
+  file_directory: 'media/videos/[date:custom:Y]'
+  file_extensions: 'mp4 wmv avi mpeg mpeg2'
   max_filesize: ''
   description_field: false
 field_type: file
