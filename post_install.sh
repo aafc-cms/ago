@@ -366,3 +366,18 @@ else
   echo -e "${RED}exit in error${NC}";
   exit 1;
 fi
+
+
+drush status --field=Database > test-connection.txt || true; # Ignore errors.
+
+if grep -q "Connected" test-connection.txt; then
+  echo "";
+  echo "Connected to the database, setting up the db views now.";
+  #Run Create or Replace View sql command
+  echo  "Creating view: drush sql-query --file=../custom/dbviews/search_node_url.sql";
+                        drush sql-query --file=../custom/dbviews/search_node_url.sql;
+else
+  echo "The database is not yet configured, cannot install the db views at this time.";
+fi
+rm test-connection.txt;
+

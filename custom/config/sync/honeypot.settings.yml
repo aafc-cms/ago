@@ -9,13 +9,15 @@ unprotected_forms:
   - honeypot_settings_form
 log: false
 element_name: homepage_requiredemail
-time_limit: 0
+time_limit: 10
+use_js_for_cached_pages: true
 expire: 300
 form_settings:
   user_register_form: false
   user_pass: true
   contact_message_feedback_form: true
   contact_message_personal_form: true
+  node_dir_listing_form: false
   node_landing_page_form: false
   node_page_form: false
   node_webform_form: true

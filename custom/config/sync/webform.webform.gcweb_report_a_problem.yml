@@ -1,7 +1,9 @@
 uuid: 7a999ac0-6ff1-4adc-b06c-a182f139fe44
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - wxt_overrides
 weight: 0
 open: null
 close: null
@@ -283,7 +285,7 @@ handlers:
     handler_id: email
     label: Email
     notes: ''
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings:
@@ -315,4 +317,41 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
+  gcweb_report_a_problem_email_handler:
+    id: 'gcweb_report_a_problem_email handler'
+    handler_id: gcweb_report_a_problem_email_handler
+    label: 'GCWeb Report A Problem Email Handler'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: aafc.webcommunications-communicationsweb.aac@canada.ca
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: 'AAFC: Report a Problem Form/AAC: Formulaire de signalement d''un problème'
+      body: "The following issue(s) were reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
+      excluded_elements: {  }
+      ignore_access: 0
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
