@@ -36,7 +36,7 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: numeric
-          label: 'Node id'
+          label: 'Node ID'
           exclude: false
           alter:
             alter_text: false
@@ -134,15 +134,15 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-        iscurrenturl:
-          id: iscurrenturl
+        title:
+          id: title
           table: search_node_url
-          field: iscurrenturl
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Is Current URL'
+          label: 'Page Title'
           exclude: false
           alter:
             alter_text: false
@@ -183,6 +183,63 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+        iscurrenturl:
+          id: iscurrenturl
+          table: search_node_url
+          field: iscurrenturl
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: 'Is Current URL'
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if iscurrenturl  == 1 %}\r\nCurrent URL\r\n{% else %}\r\nPrevious URL\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
         langcode:
           id: langcode
           table: search_node_url
@@ -346,7 +403,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Page Type'
+          label: 'Content Type'
           exclude: false
           alter:
             alter_text: false
@@ -455,7 +512,7 @@ display:
           exposed: true
           expose:
             operator_id: node_id_op
-            label: 'Node id'
+            label: 'Node ID'
             description: ''
             use_operator: false
             operator: node_id_op
@@ -476,6 +533,8 @@ display:
               qa: '0'
               ia: '0'
               viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -526,6 +585,56 @@ display:
               qa: '0'
               ia: '0'
               viewer: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        title:
+          id: title
+          table: search_node_url
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: 'Page Title'
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -669,7 +778,7 @@ display:
             identifier: pagetype
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
             placeholder: null
@@ -688,15 +797,15 @@ display:
               1:
                 title: 'Landing Page'
                 operator: '='
-                value: landing_page
+                value: 'Landing page'
               2:
                 title: 'Internal Page'
                 operator: '='
-                value: page
+                value: 'Internal page'
               3:
                 title: 'Directory Listing'
                 operator: '='
-                value: dir_listing
+                value: 'Directory listing'
         iscurrenturl:
           id: iscurrenturl
           table: search_node_url
@@ -704,15 +813,18 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: string
+          plugin_id: numeric
           operator: '='
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
           group: 1
           exposed: true
           expose:
             operator_id: iscurrenturl_op
             label: Iscurrenturl
-            description: ''
+            description: null
             use_operator: false
             operator: iscurrenturl_op
             operator_limit_selection: false
@@ -723,16 +835,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              creator: '0'
-              editor: '0'
-              reviewer: '0'
-              pab_admin: '0'
-              qa: '0'
-              ia: '0'
-              viewer: '0'
-            placeholder: ''
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
           is_grouped: true
           group_info:
             label: 'Is Current URL'
@@ -748,11 +853,17 @@ display:
               1:
                 title: 'Current URL'
                 operator: '='
-                value: currenturl
+                value:
+                  min: ''
+                  max: ''
+                  value: '1'
               2:
                 title: 'Previous URL'
                 operator: '='
-                value: previousurl
+                value:
+                  min: ''
+                  max: ''
+                  value: '0'
       filter_groups:
         operator: AND
         groups:
@@ -798,10 +909,12 @@ display:
             strip_tags: true
             trim: true
             encoding: utf8
-            utf8_bom: '0'
+            utf8_bom: '1'
             use_serializer_encode_only: false
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/config/search_page_url
       displays:
         page_1: page_1

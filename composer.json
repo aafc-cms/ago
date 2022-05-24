@@ -111,10 +111,9 @@
         "patches": {
             "drupal/embed_block": {
                 "3225938 - Added CKEDITOR plugin functionality":
-                "https://git.drupalcode.org/project/embed_block/-/merge_requests/2.diff",
-		"3225938 - Custom":
-		"https://www.drupal.org/files/issues/2021-12-15/3225938-custom_only_diff-10.patch"
-
+                "https://www.drupal.org/files/issues/2022-02-05/3225938_include_binary_icon-18.patch",
+                "3225938 - Custom":
+                "https://www.drupal.org/files/issues/2021-12-15/3225938-custom_only_diff-10.patch"
             },
             "drupal/filebrowser": {
                 "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
@@ -128,10 +127,10 @@
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
             },
-            "drupal/moderated_content_bulk_publish": {
-                "3253887 - Change revision message on bulk Unpublish":
-                "https://www.drupal.org/files/issues/2021-12-10/3253887-2.patch"
-            }
+	    "drupal/honeypot": {
+		    "2820400 - use js on cached pages":
+		    "https://www.drupal.org/files/issues/2021-11-21/2820400-40-use-js-on-cached-pages_0.patch"
+	    }
         },
         "patches-ignore": {
             "drupalwxt/wxt": {

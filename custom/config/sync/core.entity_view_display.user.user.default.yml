@@ -6,6 +6,9 @@ dependencies:
     - field.field.user.user.field_default_content_mode
     - field.field.user.user.field_first_name
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_pending_expire_sent
     - field.field.user.user.user_picture
   module:
     - image
@@ -56,5 +59,8 @@ content:
     weight: 0
     region: content
 hidden:
+  field_last_password_reset: true
+  field_password_expiration: true
+  field_pending_expire_sent: true
   langcode: true
   name: true

@@ -841,6 +841,47 @@ div.form-actions.form-group.js-form-wrapper.form-wrapper.col-md-1.col-sm-1 {
     right: 7px;
   }
 }
+/*
+ * Search box and dropdown alignment fixes for responsive design 
+ */
+@media (min-width: 768px) {
+  /* line 56, ../sass/regions/_header.scss */
+  form.search-form div.js-form-type-select {
+    right: 68px;
+  }
+
+  /* line 60, ../sass/regions/_header.scss */
+  .theme-gcweb #wb-srch input {
+    right: 42px;
+  }
+}
+@media (min-width: 768px) and (max-width: 844px) {
+  /* line 67, ../sass/regions/_header.scss */
+  form.search-form div.js-form-type-select {
+    right: 20px;
+  }
+
+  /* line 71, ../sass/regions/_header.scss */
+  .theme-gcweb #wb-srch input {
+    right: 60px;
+  }
+
+  /* line 75, ../sass/regions/_header.scss */
+  #wb-srch-sub {
+    margin-left: 135px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 83, ../sass/regions/_header.scss */
+  form.search-form div.js-form-type-select {
+    right: 34px;
+  }
+
+  /* line 87, ../sass/regions/_header.scss */
+  .theme-gcweb #wb-srch input {
+    right: 7px;
+  }
+}
 /* line 4, ../sass/regions/_highlighted-not-front.scss */
 div.region-highlighted-not-front {
   margin-right: -15px;

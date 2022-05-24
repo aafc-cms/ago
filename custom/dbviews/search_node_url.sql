@@ -1,15 +1,24 @@
  CREATE OR REPLACE  View search_node_url AS
 
 Select `np`.`node_id` AS `node_id`,
+`nd`.`title` as `title`,
 `np`.`langcode` AS `langcode`,
 concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`) AS `url`,
 char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `numofchars`,
-`nms`.`type` AS `pagetype`,
+( case when (`nms`.`type` = 'page')
+       then 'Internal page'
+       when (`nms`.`type` = 'landing_page')
+       then 'Landing page'
+       when (`nms`.`type` = 'dir_listing')
+       then 'Directory listing'
+  else  `nms`.`type`
+  end
+) AS `pagetype`,
 (case when (`np`.`revision_id` is not null)
 then `nms`.`moderation_state` else 'previousrevision' end
 ) AS `moderationstate`,
 (case when (`np`.`revision_id` is not null)
-then 'currenturl' else 'previousurl' end
+then TRUE else FALSE end
 ) AS `iscurrenturl`
 from
 ((
@@ -49,4 +58,8 @@ join
   and (`m`.`content_entity_type_id` = 'node'))
 )
 `nms`
-on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`))));
+on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`)))
+join
+`node_field_data` `nd`
+on (((`np`.`node_id` = `nd`.`nid`) and (`np`.`langcode` = `nd`.`langcode`)))
+);

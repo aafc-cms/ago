@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - user.role.administrator
     - user.role.creator
     - user.role.pab_admin
@@ -786,10 +785,12 @@ display:
       defaults:
         fields: true
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/config/search/path-node-url-alias
       menu:
-        type: normal
+        type: none
         title: 'Search Node URL Alias'
         description: ''
         weight: 10

@@ -57,9 +57,9 @@ elements: |-
     '#type': checkboxes
     '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon.'
     '#options':
-      '2020 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1273 forms package for individuals.'
-      '2020 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2020 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
-      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2021 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
+      '2021 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2021 AgriStability and AgriInvest T1273 forms package for individuals.'
+      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
+      '2022 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2022 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2022 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
     '#states':
       visible-slide:
         ':input[name="select_the_province[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
@@ -72,7 +72,7 @@ elements: |-
     '#type': checkboxes
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan.'
     '#options':
-      '2020 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2020 AgriStability and AgriInvest T1163 forms package for individuals.'
+      '2021 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2021 AgriStability and AgriInvest T1163 forms package for individuals.'
     '#states':
       visible:
         ':input[name="select_the_province[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
@@ -274,7 +274,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: deepani.waidyaratne@agr.gc.ca
+      to_mail: aafc.fipdeforms-dpraformulaireselectroniques.aac@agr.gc.ca
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
@@ -287,7 +287,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '2020 Request AgriStability and AgriInvest Forms in Excel'
+      subject: 'AgriStability and AgriInvest Forms in Excel request'
       body: "[webform_submission:values]<br />\r\n<br />\r\nWe received your request."
       excluded_elements:
         select_the_province: select_the_province

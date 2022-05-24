@@ -41,6 +41,7 @@ dependencies:
     - linkit
     - media
     - slick
+    - toc_filter
     - token_filter
     - url_embed
     - wxt_ext_editor
@@ -78,7 +79,7 @@ filters:
     id: entity_embed
     provider: entity_embed
     status: true
-    weight: -43
+    weight: -45
     settings: {  }
   filter_html:
     id: filter_html
@@ -200,12 +201,6 @@ filters:
         img: img
         iframe: iframe
       use_data_uri: '0'
-  embed_block:
-    id: embed_block
-    provider: embed_block
-    status: true
-    weight: 0
-    settings: {  }
   slick_filter:
     id: slick_filter
     provider: slick
@@ -236,6 +231,19 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
+    status: true
+    weight: 0
+    settings:
+      type: wxt
+  embed_block:
+    id: embed_block
+    provider: embed_block
+    status: true
+    weight: 0
+    settings: {  }
   wxt_add_table_attribute_filter:
     id: wxt_add_table_attribute_filter
     provider: wxt_ext_editor
