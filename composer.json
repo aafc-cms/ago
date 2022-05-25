@@ -123,6 +123,9 @@
                 "Access the private path and public path based on the user role":
                 "https://www.drupal.org/files/issues/2021-12-30/Access-private-public-path-based-on-user-role-3256368-03.patch"
             },
+            "drupal/core_context": {
+                "3263703 - Layout builder and core contexts together": "https://www.drupal.org/files/issues/2022-03-13/3263703-05.patch"
+            },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
@@ -200,6 +203,7 @@
         "drupal/bootstrap_site_alert": "^1.9",
         "drupal/core": "9.3.3 as 9.2.10",
         "drupal/embed_block": "1.x-dev",
+        "drupal/entity_translation_unified_form": "^1.0-beta26",
         "drupal/filebrowser": "^3.0",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
@@ -216,7 +220,8 @@
         "drupal/webform_translation_permissions": "^1.1",
         "drupal/entity_embed": "^1.0",
         "drupal/video_embed_field": "^2.0",
-        "drupal/views_infinite_scroll": "^1.6"
+        "drupal/views_infinite_scroll": "^1.6",
+        "drupal/crop": "^2.2"
     },
     "authors": [
         {
