@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.3.3-rc20",
+            "version": "9.3.3-rc22",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "36724ebc2f340b3efbfb64602ba1c3dab55a31c8"
+                "reference": "4d8e673f5254166c984d0f0932ea6d4c6e0f628f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=36724ebc2f340b3efbfb64602ba1c3dab55a31c8",
-                "reference": "36724ebc2f340b3efbfb64602ba1c3dab55a31c8",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=4d8e673f5254166c984d0f0932ea6d4c6e0f628f",
+                "reference": "4d8e673f5254166c984d0f0932ea6d4c6e0f628f",
                 "shasum": ""
             },
             "require": {
@@ -247,6 +247,10 @@
                         "views submit button name attribute cannot be empty for w3c": "https://www.drupal.org/files/issues/2020-07-10/3061891-27.patch",
                         "fix array_unique warnings on node/49 page": "https://www.drupal.org/files/issues/2020-09-29/bootstrap-3173776-3.patch"
                     },
+                    "drupal/css_editor": {
+                        "3203706 - Fix bug with enable/disable css": "https://www.drupal.org/files/issues/2021-04-19/css_editor_fixed.patch",
+                        "3248990 - Optimize cache rebuilding using tags instead of flush all": "https://www.drupal.org/files/issues/2021-11-12/css-editor-replace-cache-flush-by-cache-tag-invalidation-3248990-5.diff"
+                    },
                     "drupalwxt/diff": {
                         "fix French revisions page always shows English revision state": "https://www.drupal.org/files/issues/2021-02-19/diff-show-correct-workflow-state-on-french-revisions-page-3199354-2.patch"
                     },
@@ -322,9 +326,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/9.3.3-rc20"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/9.3.3-rc22"
             },
-            "time": "2022-01-21T16:02:50+00:00"
+            "time": "2022-01-31T17:54:04+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",

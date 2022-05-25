@@ -190,7 +190,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.3.3-rc20",
+        "agrcmsx/dxbase": "9.3.3-rc22",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
