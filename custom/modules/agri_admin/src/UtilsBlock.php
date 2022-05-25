@@ -10,7 +10,7 @@ class UtilsBlock {
   /**
    * Implements getRenderArray().
    */
-  public static function getRenderArray($id, $overrides = NULL) {
+  public static function getRenderArray($id = NULL, $overrides = NULL) {
     static $defaults = [
       'provider'      => 'agri_admin',
       'label'         => NULL,
