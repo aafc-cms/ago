@@ -66,7 +66,7 @@ elements: |-
       '#update_hide': true
       '#wizard_prev_hide': true
       '#wizard_next_hide': true
-css: ''
+css: "section#block-didyoufindwhatyouwerelookingfor div.well.mrgn-bttm-0 {\r\n  margin-left: 0px;\r\n  margin-right: 0px;\r\n}\r\n"
 javascript: ''
 settings:
   ajax: true
@@ -270,7 +270,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'AAFC: Page Feedback/AAC: Commentaires sur la page'
-      body: "The following feedback were reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
+      body: "The following feedback was reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
