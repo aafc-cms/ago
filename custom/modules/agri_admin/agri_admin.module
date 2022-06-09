@@ -365,7 +365,6 @@ function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id)
       foreach ($form['field_aafc_category']['widget'] as $key => $value) {
         if ($key == '#options') {
           foreach ($form['field_aafc_category']['widget'][$key] as $i_key => $i_value) {
-            AgriAdminHelper::addToLog(print_r(serialize($form['field_aafc_category']['widget'][$key]), TRUE), TRUE);
             $category_term = $i_value;
             $strpos_bad_text_idx = stripos($i_value, '(Taxonomy term', 1);
             $strpos_bad_text_fr_idx = stripos($i_value, '(Terme de tax', 1);
