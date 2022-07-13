@@ -8,13 +8,13 @@
 
 @media screen and (max-width: 767px) {
 .ip-cover-hide-mobile {
-  background-image: url("none") !important;
+  background-image: none !important;
 }
 }
 @media screen and (max-width: 991px) {
 
 .ip-cover-hide-tablet {
-background-image: url("none") !important;
+background-image: none !important;
 }
 }
 html:lang(en) body.path-frontpage {

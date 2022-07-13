@@ -229,13 +229,13 @@ body.node-1 div.followus.experimental h2.mrgn-tp-lg.h3 {
 @media screen and (max-width: 767px) {
   /* line 10, ../sass/components/_front.scss */
   .ip-cover-hide-mobile {
-    background-image: url("none") !important;
+    background-image: none !important;
   }
 }
 @media screen and (max-width: 991px) {
   /* line 16, ../sass/components/_front.scss */
   .ip-cover-hide-tablet {
-    background-image: url("none") !important;
+    background-image: none !important;
   }
 }
 /* line 21, ../sass/components/_front.scss */
@@ -535,7 +535,7 @@ ul.feeds-cont li a {
 
   /* line 172, ../sass/_legacy-styles.scss */
   .ip-cover-hide-mobile {
-    background-image: url("none") !important;
+    background-image: none !important;
   }
 }
 /* line 177, ../sass/_legacy-styles.scss */
