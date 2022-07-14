@@ -30,6 +30,10 @@ function agri_reports_page_attachments(array &$page) {
     // Only load this css for the publish activity meta view page.
     $page['#attached']['library'][] = 'agri_reports/publish-activity-meta';
   }
+  if ($current_route == 'view.publish_activity_new_pages.page_1') {
+    // Only load this css for the publish activity new view page.
+    $page['#attached']['library'][] = 'agri_reports/publish-activity-new';
+  }
 }
 
 /**
@@ -42,8 +46,8 @@ function agri_reports_views_data_export_row_alter(&$row, ResultRow $result, View
 
     $row['field_issued'] = '';
     $values = $view->getExposedInput();
-    if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
-      $date_from = $values["revision_timestamp"]['min'];
+    if (!empty($values["created"]['min']) && !empty($values["created"]['max'])) {
+      $date_from = $values["created"]['min'];
       $date_issued_date_only = date('Y-m-d', strtotime($date_issued));
       $date_from_date_only = date('Y-m-d', strtotime($date_from));
       if ($date_issued_date_only < $date_from_date_only) {
@@ -54,7 +58,7 @@ function agri_reports_views_data_export_row_alter(&$row, ResultRow $result, View
       }
     }
   }
-
+/* This view is no longer in use, replaced by James' view using direct database query.
   if ($view->id() == 'url_alias_path') {
     $path_alias = $result->path_alias_alias;
     $numchars_in_alias = strlen($path_alias);
@@ -81,21 +85,7 @@ function agri_reports_views_data_export_row_alter(&$row, ResultRow $result, View
     else {
       $row['id'] = '';
     }
-  }
-
-  if ($view->id() == 'publish_activity_new_pages') {
-    $link_to_content = $row['view_node'];
-    $strpos_en = strpos($link_to_content, '/en/');
-    if($strpos_en !== FALSE) {
-      $url_alias = substr($link_to_content, $strpos_en);
-      $row['view_node'] = $url_alias;
-    }
-    $strpos_fr = strpos($link_to_content, '/fr/');
-    if($strpos_fr !== FALSE) {
-      $url_alias = substr($link_to_content, $strpos_fr);
-      $row['view_node'] = $url_alias;
-    }
-  }
+  } */
 }
 
 /**
@@ -115,8 +105,8 @@ function agri_reports_preprocess_views_view_field(&$variables) {
       $date_issued = $row_entity->get('field_issued')->value;
       $variables['output'] = '';
       $values = $view->getExposedInput();
-      if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
-        $date_from = $values["revision_timestamp"]['min'];
+      if (!empty($values["created"]['min']) && !empty($values["created"]['max'])) {
+        $date_from = $values["created"]['min'];
         $date_issued_date_only = date('Y-m-d', strtotime($date_issued));
         $date_from_date_only = date('Y-m-d', strtotime($date_from));
         if ($date_issued_date_only < $date_from_date_only) {
@@ -128,7 +118,7 @@ function agri_reports_preprocess_views_view_field(&$variables) {
       }
     }
   }
-
+/* This view is no longer in use, replaced by James' view using direct database query.
   if ($view->id() == 'url_alias_path') {
     $field = $variables['field'];
     $row = $variables['row'];
@@ -168,54 +158,32 @@ function agri_reports_preprocess_views_view_field(&$variables) {
         $variables['output'] = '';
       }
     }
-  }
-
-  if ($view->id() == 'publish_activity_new_pages') {
-    $field = $variables['field'];
-    $row = $variables['row'];
-    $row_entity = $row->_entity;
-
-    if ($field->field == 'view_node') {
-      $link_to_content = $variables['output']->__toString();
-      $strpos_en = strpos($link_to_content, '/en/');
-      if($strpos_en !== FALSE) {
-        $url_alias = substr($link_to_content, $strpos_en);
-        $variables['output'] = $url_alias;
-      }
-      $strpos_fr = strpos($link_to_content, '/fr/');
-      if($strpos_fr !== FALSE) {
-        $url_alias = substr($link_to_content, $strpos_fr);
-        $variables['output'] = $url_alias;
-      }
-    }
-  }
-
+  } */
 }
 
 /**
  * Implements agri_reports_views_pre_view hook.
  */
 function agri_reports_views_pre_view($view, $display_id, &$args) {
-  if ($view->id() == 'publish_activity_for_meta_tags' || $view->id() == 'publish_activity_reporting') {
+  if ($view->id() == 'publish_activity_for_meta_tags' || $view->id() == 'publish_activity_new_pages') {
     $values = $view->getExposedInput();
-    if (!empty($values["revision_timestamp"]['min']) && !empty($values["revision_timestamp"]['max'])) {
-      $date_from = $values["revision_timestamp"]['min'];
-      $date_from_trimmed = trim($date_from);
-      // Workaround below because cannot use trim function in if(...) clause above when fields are empty.
-      if (empty($date_from_trimmed)) {
-        $values["revision_timestamp"]['min'] = ' ';
-        $values["revision_timestamp"]['max'] = ' ';
-        $values['field_issued_value'] = ' ';
+    if (!empty($values)) {
+      if (empty(trim($values["field_issued_value"]['min'])) || empty(trim($values["field_issued_value"]['max']))) {
+        $values["field_issued_value"]['min'] = ' ';
+        $values["field_issued_value"]['max'] = ' ';
         $view->setExposedInput($values);
       }
-      $values['field_issued_value'] = $date_from;
-      $view->setExposedInput($values);
     }
-    else {
-      $values["revision_timestamp"]['min'] = ' ';
-      $values["revision_timestamp"]['max'] = ' ';
-      $values['field_issued_value'] = ' ';
-      $view->setExposedInput($values);
+  }
+
+  if ($view->id() == 'publish_activity_reporting') {
+    $values = $view->getExposedInput();
+    if (!empty($values)) {
+      if (empty(trim($values["created"]['min'])) || empty(trim($values["created"]['max']))) {
+        $values["created"]['min'] = ' ';
+        $values["created"]['max'] = ' ';
+        $view->setExposedInput($values);
+      }
     }
   }
 }

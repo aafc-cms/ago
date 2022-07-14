@@ -11,7 +11,7 @@
   Drupal.behaviors.agriReports = {
     attach: function (context, settings) {
       if (context == document) {
-        console.log('Hello world from agri_reports_meta!');
+//        console.log('Hello world from agri_reports_meta!');
       }
     }
   };
