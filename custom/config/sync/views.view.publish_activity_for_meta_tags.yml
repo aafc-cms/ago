@@ -9,11 +9,9 @@ dependencies:
     - system.menu.admin
     - user.role.administrator
     - user.role.ia
-    - workflows.workflow.editorial
   module:
     - better_exposed_filters
     - content_lock
-    - content_moderation
     - csv_serialization
     - datetime
     - node
@@ -105,9 +103,9 @@ display:
           field_api_classes: false
         langcode:
           id: langcode
-          table: node_field_revision
+          table: node_field_data
           field: langcode
-          relationship: none
+          relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
@@ -171,9 +169,9 @@ display:
           field_api_classes: false
         title:
           id: title
-          table: node_field_revision
+          table: node_field_data
           field: title
-          relationship: none
+          relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
@@ -199,8 +197,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -212,7 +210,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -416,15 +414,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        revision_timestamp:
-          id: revision_timestamp
-          table: node_revision
-          field: revision_timestamp
-          relationship: none
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: revision_timestamp
+          entity_field: created
           plugin_id: field
           label: 'Last Published'
           exclude: false
@@ -459,7 +457,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -592,120 +590,52 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        revision_timestamp:
-          id: revision_timestamp
-          table: node_revision
-          field: revision_timestamp
-          relationship: none
+        field_issued_value:
+          id: field_issued_value
+          table: node__field_issued
+          field: field_issued_value
+          relationship: nid
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: revision_timestamp
-          plugin_id: date
+          plugin_id: datetime
           order: DESC
           expose:
             label: ''
-            field_identifier: revision_timestamp
+            field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
-      filters:
-        moderation_state:
-          id: moderation_state
-          table: node_field_revision
-          field: moderation_state
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: moderation_state_filter
-          operator: in
-          value:
-            editorial-published: editorial-published
-          group: 1
-          exposed: false
-          expose:
-            operator_id: moderation_state_op
-            label: 'Moderation state'
-            description: ''
-            use_operator: false
-            operator: moderation_state_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: moderation_state
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              creator: '0'
-              editor: '0'
-              reviewer: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        type:
-          id: type
+        nid:
+          id: nid
           table: node_field_data
-          field: type
+          field: nid
           relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            page: page
-            landing_page: landing_page
-          group: 1
-          exposed: false
+          entity_field: nid
+          plugin_id: standard
+          order: DESC
           expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: ''
-            use_operator: false
-            operator: type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              creator: '0'
-              editor: '0'
-              reviewer: '0'
-              pab_admin: '0'
-            argument: ''
-            reduce: false
-          is_grouped: false
-          group_info:
             label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            field_identifier: ''
+          exposed: false
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: langcode
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
         latest_revision:
           id: latest_revision
           table: node_revision
@@ -745,16 +675,14 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        revision_timestamp:
-          id: revision_timestamp
-          table: node_revision
-          field: revision_timestamp
-          relationship: none
+        field_issued_value:
+          id: field_issued_value
+          table: node__field_issued
+          field: field_issued_value
+          relationship: nid
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: revision_timestamp
-          plugin_id: date
+          plugin_id: datetime
           operator: between
           value:
             min: ' '
@@ -764,14 +692,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: revision_timestamp_op
-            label: 'Published Date between'
+            operator_id: field_issued_value_op
+            label: 'Date First Published between'
             description: ''
             use_operator: false
-            operator: revision_timestamp_op
+            operator: field_issued_value_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: revision_timestamp
+            identifier: field_issued_value
             required: false
             remember: false
             multiple: false
@@ -785,6 +713,9 @@ display:
               pab_admin: '0'
               qa: '0'
               ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -800,8 +731,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        type_2:
-          id: type_2
+        type:
+          id: type
           table: node_field_data
           field: type
           relationship: nid
@@ -811,18 +742,20 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value: {  }
+          value:
+            page: page
+            landing_page: landing_page
           group: 1
           exposed: true
           expose:
-            operator_id: type_2_op
+            operator_id: type_op
             label: 'Content type'
             description: ''
             use_operator: false
-            operator: type_2_op
+            operator: type_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: type_2
+            identifier: type-2
             required: false
             remember: false
             multiple: false
@@ -836,30 +769,23 @@ display:
               pab_admin: '0'
               qa: '0'
               ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             argument: ''
-            reduce: false
-          is_grouped: true
+            reduce: true
+          is_grouped: false
           group_info:
-            label: 'Content type'
+            label: ''
             description: ''
-            identifier: type_2
+            identifier: ''
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items:
-              1:
-                title: 'Internal/Landing Page'
-                operator: in
-                value:
-                  page: page
-                  landing_page: landing_page
-                  all: '0'
-                  empl: '0'
-                  news: '0'
-                  webform: '0'
+            group_items: {  }
         langcode:
           id: langcode
           table: node_field_data
@@ -901,7 +827,7 @@ display:
             reduce: false
           is_grouped: true
           group_info:
-            label: 'Translation language'
+            label: Language
             description: ''
             identifier: langcode
             optional: true
@@ -944,47 +870,34 @@ display:
                   en: '0'
                   und: '0'
                   zxx: '0'
-        field_issued_value:
-          id: field_issued_value
-          table: node__field_issued
-          field: field_issued_value
+        status:
+          id: status
+          table: node_field_data
+          field: status
           relationship: nid
           group_type: group
           admin_label: ''
-          plugin_id: datetime
-          operator: '>'
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_issued_value_op
+            operator_id: ''
             label: ''
             description: ''
             use_operator: false
-            operator: field_issued_value_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_issued_value
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              creator: '0'
-              editor: '0'
-              reviewer: '0'
-              pab_admin: '0'
-              qa: '0'
-              ia: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1072,7 +985,17 @@ display:
           plugin_id: standard
           required: false
       header: {  }
-      footer: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: '<strong>Displaying @start - @end of @total total rows</strong><br><p></p>'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1085,7 +1008,6 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.node.field_issued'
-        - 'config:workflow_list'
   data_export_1:
     id: data_export_1
     display_title: 'Publish Activity Reporting'
@@ -1160,11 +1082,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        langcode:
-          id: langcode
-          table: node_field_revision
+        langcode_1:
+          id: langcode_1
+          table: node_field_data
           field: langcode
-          relationship: none
+          relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
@@ -1226,11 +1148,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        title:
-          id: title
-          table: node_field_revision
+        title_1:
+          id: title_1
+          table: node_field_data
           field: title
-          relationship: none
+          relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
@@ -1256,8 +1178,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -1269,7 +1191,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1473,15 +1395,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        revision_timestamp:
-          id: revision_timestamp
-          table: node_revision
-          field: revision_timestamp
-          relationship: none
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: nid
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: revision_timestamp
+          entity_field: created
           plugin_id: field
           label: 'Last Published'
           exclude: false
@@ -1516,7 +1438,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1587,7 +1509,6 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.node.field_issued'
-        - 'config:workflow_list'
   page_1:
     id: page_1
     display_title: Page
@@ -1617,16 +1538,34 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
             filter:
-              revision_timestamp:
+              field_issued_value:
                 plugin_id: bef_datepicker
                 advanced:
+                  collapsible: false
+                  is_secondary: false
+              type:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              langcode:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
       defaults:
         exposed_form: false
       rendering_language: '***LANGUAGE_entity_translation***'
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/publish_activity_meta
       menu:
         type: normal
@@ -1653,4 +1592,3 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.node.field_issued'
-        - 'config:workflow_list'
