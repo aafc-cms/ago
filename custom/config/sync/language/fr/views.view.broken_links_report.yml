@@ -30,6 +30,7 @@ display:
           label: URL
           separator: ', '
         last_check:
+          empty: Jamais
           separator: ', '
         method:
           label: Méthode

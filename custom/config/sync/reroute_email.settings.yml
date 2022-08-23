@@ -2,7 +2,7 @@ _core:
   default_config_hash: FWyW0pDoSvPRtqOVlIbk4PxTLiS9S_Ng7zS1JOflWVE
 enable: false
 address: j@7pro.ca
-whitelist: ''
+allowed: ''
 description: true
 message: true
 mailkeys: ''

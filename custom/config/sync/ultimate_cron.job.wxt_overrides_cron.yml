@@ -1,0 +1,17 @@
+uuid: 1c277101-e892-45c4-9e09-a9414b205c95
+langcode: en
+status: true
+dependencies:
+  module:
+    - wxt_overrides
+title: 'Default cron handler'
+id: wxt_overrides_cron
+weight: 0
+module: wxt_overrides
+callback: wxt_overrides_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database
