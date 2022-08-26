@@ -190,6 +190,18 @@ if [ ! -L "html/libraries/wet-boew/js/deps/json-patch.js" ]; then
   echo "workaround for dcrid 1615574131931;"
   popd
 fi
+if [ ! -d "html/libraries/chartjs" ]; then
+  # The Dashboard moderation module looks for libraries/chartjs/dist/chartjs.min.js.
+  echo "wget https://github.com/chartjs/Chart.js/releases/download/v3.9.1/chart.js-3.9.1.tgz";
+        wget https://github.com/chartjs/Chart.js/releases/download/v3.9.1/chart.js-3.9.1.tgz
+  set -x;
+  tar -pxzf chart.js-3.9.1.tgz
+  rm chart.js-3.9.1.tgz
+  mkdir html/libraries/chartjs;
+  mv package/dist html/libraries/chartjs
+  rm package -rf;
+  set +x;
+fi
 if [ -d "html/libraries/jquery.inputmask/dist/min" ]; then
   echo "fix jquery inputmask distribution"
   echo "cp html/libraries/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js html/libraries/jquery.inputmask/dist/jquery.inputmask.min.js;"
