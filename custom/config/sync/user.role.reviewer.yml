@@ -92,7 +92,6 @@ permissions:
   - 'administer blocks'
   - 'administer footer menu items'
   - 'administer footer-fr menu items'
-  - 'administer main menu items'
   - 'administer sidebar menu items'
   - 'create url aliases'
   - 'delete files'
