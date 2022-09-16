@@ -50,3 +50,10 @@ special:
   dependencies:
     - core/jquery
     - core/drupalSettings
+
+agri_moderated_content:
+  js:
+    js/agri-moderated-content.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
