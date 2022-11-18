@@ -1,7 +1,7 @@
  CREATE OR REPLACE  View search_node_url AS
 
 Select `np`.`node_id` AS `node_id`,
-`nd`.`title` as `title`,
+concat('<a href="', concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`) , '"', ' hreflang="', `np`.`langcode`, '">',`nd`.`title`, '</a>')   as `title`,
 `np`.`langcode` AS `langcode`,
 concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`) AS `url`,
 char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `numofchars`,
@@ -15,20 +15,25 @@ char_length(concat('/',convert(`np`.`langcode` using utf8mb4),`np`.`url`)) AS `n
   end
 ) AS `pagetype`,
 (case when (`np`.`revision_id` is not null)
-then `nms`.`moderation_state` else 'previousrevision' end
+then `nms`.`moderation_state` else 'previous_revision' end
 ) AS `moderationstate`,
 (case when (`np`.`revision_id` is not null)
 then TRUE else FALSE end
-) AS `iscurrenturl`
+) AS `iscurrenturl`,
+`np`.`url_revision_id` AS `url_revision_id`,
+`np`.`date_of_revision` AS `date_of_revision`
 from
 ((
   select distinct cast(replace(`a`.`path`,'/node/','') as UNSIGNED) AS `node_id`,
          `a`.`langcode` AS `langcode`,`a`.`alias` AS `url`,
-         char_length(`a`.`alias`) AS `numofchars`, `b`.`revision_id` AS `revision_id`
+         char_length(`a`.`alias`) AS `numofchars`, `b`.`revision_id` AS `revision_id`,
+         `a`.`revision_id` AS `url_revision_id`,  `a`. `date_of_revision` as `date_of_revision`
+
   from
   ((
     select `path_alias`.`path` AS `path`,`path_alias`.`langcode` AS `langcode`,
-          `path_alias`.`alias` AS `alias`,`path_alias`.`revision_id` AS `revision_id`
+          `path_alias`.`alias` AS `alias`,`path_alias`.`revision_id` AS `revision_id`,
+          from_unixtime(`changed`) AS `date_of_revision`
           from `path_alias`
     where ((`path_alias`.`langcode` <> 'und')
     and (`path_alias`.`path` like '/node/%'))
@@ -36,10 +41,10 @@ from
     `a`
     left join
     (
-      select `path_alias`.`path` AS `path`,`path_alias`.`langcode` AS `langcode`,
-       max(`path_alias`.`revision_id`) AS `revision_id` from `path_alias`
-      where ((`path_alias`.`langcode` <> 'und') and (`path_alias`.`path` like '/node/%'))
-      group by `path_alias`.`path`,`path_alias`.`langcode`
+      select `path_alias_revision`.`path` AS `path`,`path_alias_revision`.`langcode` AS `langcode`,
+       max(`path_alias_revision`.`revision_id`) AS `revision_id` from `path_alias_revision`
+      where ((`path_alias_revision`.`langcode` <> 'und') and (`path_alias_revision`.`path` like '/node/%'))
+      group by `path_alias_revision`.`path`,`path_alias_revision`.`langcode`
     )
     `b`
     on(((`a`.`path` = `b`.`path`)
@@ -55,7 +60,8 @@ join
   on(((`m`.`content_entity_id` = `n`.`nid`)
   and (`m`.`content_entity_revision_id` = `n`.`vid`))))
   where ((`m`.`workflow` = 'editorial')
-  and (`m`.`content_entity_type_id` = 'node'))
+  and (`m`.`content_entity_type_id` = 'node')
+  and (`n`.`type` = 'landing_page' or `n`.`type` = 'page' or `n`.`type` = 'dir_listing'))
 )
 `nms`
 on(((`np`.`node_id` = `nms`.`nid`) and (`np`.`langcode` = `nms`.`langcode`)))
