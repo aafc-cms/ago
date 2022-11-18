@@ -36,6 +36,9 @@ variant_settings:
   builder: ipe
   storage_type: page_manager
   storage_id: welcome
+  css_classes: {  }
+  html_id: ''
+  css_styles: ''
 page: welcome
 selection_criteria: {  }
 selection_logic: and

@@ -125,6 +125,9 @@ variant_settings:
   builder: ipe
   storage_type: page_manager
   storage_id: default_user
+  css_classes: {  }
+  html_id: ''
+  css_styles: ''
 page: user
 selection_criteria:
   -

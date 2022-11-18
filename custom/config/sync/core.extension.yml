@@ -141,6 +141,7 @@ module:
   page_manager_ui: 0
   panels: 0
   panels_ipe: 0
+  password_policy: 0
   path: 0
   path_alias: 0
   prefer_latest_content: 0
@@ -186,7 +187,6 @@ module:
   views_published_or_roles: 0
   views_ui: 0
   webform: 0
-  webform_jqueryui_datepicker: 0
   webform_node: 0
   webform_translation_permissions: 0
   webform_ui: 0

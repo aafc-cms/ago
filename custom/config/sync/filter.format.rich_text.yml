@@ -201,6 +201,12 @@ filters:
         img: img
         iframe: iframe
       use_data_uri: '0'
+  embed_block:
+    id: embed_block
+    provider: embed_block
+    status: true
+    weight: 0
+    settings: {  }
   slick_filter:
     id: slick_filter
     provider: slick
@@ -238,12 +244,6 @@ filters:
     weight: 0
     settings:
       type: wxt
-  embed_block:
-    id: embed_block
-    provider: embed_block
-    status: true
-    weight: 0
-    settings: {  }
   wxt_add_table_attribute_filter:
     id: wxt_add_table_attribute_filter
     provider: wxt_ext_editor
