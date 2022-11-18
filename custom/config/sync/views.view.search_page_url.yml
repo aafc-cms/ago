@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - system.menu.admin
+    - user.role.administrator
+    - user.role.creator
+    - user.role.pab_admin
   module:
     - csv_serialization
     - rest
     - serialization
+    - user
     - view_custom_table
     - views_data_export
 id: search_page_url
@@ -93,7 +97,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: Url
+          label: URL
           exclude: false
           alter:
             alter_text: false
@@ -145,8 +149,8 @@ display:
           label: 'Page Title'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ title | replace({''&gt;'':''>''}) | replace({''&lt;'':''<''}) | replace({''&quot;'':''"''}) | raw }}'
             make_link: false
             path: ''
             absolute: false
@@ -444,6 +448,115 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+        url_revision_id:
+          id: url_revision_id
+          table: search_node_url
+          field: url_revision_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          label: 'URL Revision ID'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ''
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+        date_of_revision:
+          id: date_of_revision
+          table: search_node_url
+          field: date_of_revision
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: mysql_date
+          label: 'URL Revision Date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          date_format: html_date
+          custom_date_format: ''
+          timezone: ''
       pager:
         type: mini
         options:
@@ -473,8 +586,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            administrator: administrator
+            creator: creator
+            pab_admin: pab_admin
       cache:
         type: tag
         options: {  }
@@ -484,6 +601,32 @@ display:
           id: node_id
           table: search_node_url
           field: node_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        langcode:
+          id: langcode
+          table: search_node_url
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        url_revision_id:
+          id: url_revision_id
+          table: search_node_url
+          field: url_revision_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -564,7 +707,7 @@ display:
           exposed: true
           expose:
             operator_id: url_op
-            label: Url
+            label: URL
             description: ''
             use_operator: false
             operator: url_op
@@ -648,6 +791,64 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        iscurrenturl:
+          id: iscurrenturl
+          table: search_node_url
+          field: iscurrenturl
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: iscurrenturl_op
+            label: Iscurrenturl
+            description: null
+            use_operator: false
+            operator: iscurrenturl_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: iscurrenturl
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Is Current URL'
+            description: ''
+            identifier: iscurrenturl
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: '1'
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Current URL'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '1'
+              2:
+                title: 'Previous URL'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '0'
         langcode:
           id: langcode
           table: search_node_url
@@ -755,8 +956,8 @@ display:
                 title: Archived
                 operator: '='
                 value: archived
-        pagetype:
-          id: pagetype
+        pagetype_1:
+          id: pagetype_1
           table: search_node_url
           field: pagetype
           relationship: none
@@ -768,17 +969,17 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: pagetype_op
+            operator_id: pagetype_1_op
             label: Pagetype
             description: null
             use_operator: false
-            operator: pagetype_op
+            operator: pagetype_1_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: pagetype
+            identifier: pagetype_1
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
             placeholder: null
@@ -786,63 +987,7 @@ display:
           group_info:
             label: 'Content Type'
             description: ''
-            identifier: pagetype
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: 'Landing Page'
-                operator: '='
-                value: 'Landing page'
-              2:
-                title: 'Internal Page'
-                operator: '='
-                value: 'Internal page'
-              3:
-                title: 'Directory Listing'
-                operator: '='
-                value: 'Directory listing'
-        iscurrenturl:
-          id: iscurrenturl
-          table: search_node_url
-          field: iscurrenturl
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: iscurrenturl_op
-            label: Iscurrenturl
-            description: null
-            use_operator: false
-            operator: iscurrenturl_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: iscurrenturl
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: null
-            max_placeholder: null
-            placeholder: null
-          is_grouped: true
-          group_info:
-            label: 'Is Current URL'
-            description: ''
-            identifier: iscurrenturl
+            identifier: pagetype_1
             optional: true
             widget: select
             multiple: false
@@ -851,25 +996,104 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: 'Current URL'
-                operator: '='
-                value:
-                  min: ''
-                  max: ''
-                  value: '1'
+                title: 'Landing/Internal Page'
+                operator: regular_expression
+                value: 'Landing page|Internal page'
               2:
-                title: 'Previous URL'
+                title: 'Landing Page'
                 operator: '='
-                value:
-                  min: ''
-                  max: ''
-                  value: '0'
+                value: 'Landing page'
+              3:
+                title: 'Internal page'
+                operator: '='
+                value: 'Internal page'
+              6:
+                title: 'Directory Listing'
+                operator: '='
+                value: 'Directory listing'
       filter_groups:
         operator: AND
         groups:
           1: AND
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            node_id: node_id
+            url: url
+            title: title
+            iscurrenturl: iscurrenturl
+            langcode: langcode
+            moderationstate: moderationstate
+            numofchars: numofchars
+            pagetype: pagetype
+          default: '-1'
+          info:
+            node_id:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            url:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            iscurrenturl:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            langcode:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            moderationstate:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            numofchars:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            pagetype:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
       row:
         type: fields
       query:
@@ -882,7 +1106,17 @@ display:
           query_tags: {  }
       relationships: {  }
       header: {  }
-      footer: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: '<strong>Displaying @start - @end of @total total rows</strong><br><p></p>'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -890,6 +1124,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.roles
       tags: {  }
   data_export_1:
     id: data_export_1
@@ -931,6 +1166,7 @@ display:
         - 'languages:language_interface'
         - request_format
         - url
+        - user.roles
       tags: {  }
   page_1:
     id: page_1
@@ -958,4 +1194,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.roles
       tags: {  }
