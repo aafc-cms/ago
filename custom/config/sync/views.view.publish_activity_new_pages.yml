@@ -1855,7 +1855,7 @@ display:
         type: bef
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -1873,15 +1873,27 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+              reset_button_always_show: false
             filter:
-              revision_timestamp:
+              field_issued_value:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
                   is_secondary: false
-              field_issued_value:
-                plugin_id: bef_datepicker
+              type:
+                plugin_id: default
                 advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              langcode:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
                   collapsible: false
                   is_secondary: false
       defaults:
@@ -1897,8 +1909,8 @@ display:
       path: admin/publish_activity_new
       menu:
         type: normal
-        title: 'Publish Activity (New Internet Pages for PAB)'
-        description: 'Publish Activity New Internet Pages (for PAB team)'
+        title: 'Publish Activity (New Internet Pages)'
+        description: 'Publish Activity of New Internet Pages'
         weight: 50
         expanded: false
         menu_name: admin
