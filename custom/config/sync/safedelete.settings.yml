@@ -15,3 +15,4 @@ orphanedpagewithoutmenulink: landing_page
 _core:
   default_config_hash: fw3EOzS6vL5yxwXT8vzWpkI-N5aKCinQC1_Zu9WHJyY
 exceptionofnodes: ''
+enforce_bulk_publish_verify_checkpagepublished: 1
