@@ -109,6 +109,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/core": {
+                "2857273 - Self closing hr and br source and track tags html5 rendering": "https://www.drupal.org/files/issues/2022-11-20/self_closing_br_hr_source_tag-2857273-30.patch"
+            },
             "drupal/embed_block": {
                 "3225938 - Added CKEDITOR plugin functionality":
                 "https://www.drupal.org/files/issues/2022-02-05/3225938_include_binary_icon-18.patch",
@@ -146,6 +149,7 @@
                     "1356276 - Profile sub profiles phenaproxima 675 9.3.x": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch",
                     "2559833 - Comment form": "https://www.drupal.org/files/issues/2020-10-31/2559833-72.patch",
                     "2630732 - Migrate module we don't use currently": "https://www.drupal.org/files/issues/2020-09-17/2630732-77.patch",
+                    "2857273 - Self closing source and track tag, use newer patch also does br and hr": "https://www.drupal.org/files/issues/2020-07-13/D91x-self_closing_correct-2857273-13.patch",
                     "2907413 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2019-06-21/2907413-11.patch",
                     "2907413 - Rerolled patch for 9.4.x is in the patches section.": "https://www.drupal.org/files/issues/2021-11-19/D93x-2907413-23.patch",
                     "2921627 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2021-10-13/2921627-71.patch",
