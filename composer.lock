@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6abe822888bf7472a30cabfe74a6dc9",
+    "content-hash": "8551c2667d27601c5a69180ca5bfd32b",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.4.8-rc3",
+            "version": "9.4.8-rc6",
             "source": {
                 "type": "git",
                 "url": "git@gitlab.com:agrcms/dxbase.git",
-                "reference": "7dc21b90b82b776ca1b4e4950dbe8dcd287f6d82"
+                "reference": "5f2b0abf5b91bbbaa792672f2fdade648b277f53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=7dc21b90b82b776ca1b4e4950dbe8dcd287f6d82",
-                "reference": "7dc21b90b82b776ca1b4e4950dbe8dcd287f6d82",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=5f2b0abf5b91bbbaa792672f2fdade648b277f53",
+                "reference": "5f2b0abf5b91bbbaa792672f2fdade648b277f53",
                 "shasum": ""
             },
             "require": {
@@ -294,6 +294,9 @@
                     "drupal/simple_sitemap": {
                         "Fix for php 8.1 compatibility for simple_sitemap module: ": "https://www.drupal.org/files/issues/2022-08-10/simple_sitemap-php81-3299827-7.patch"
                     },
+                    "drupal/safedelete": {
+                        "3320470 - Make the bulk publish verification configurable to allow the user to perform the bulk publish action on the pages in a particular user case.": "https://www.drupal.org/files/issues/2022-12-02/make-bulk-publish-verification-configurable-3320470-06.patch"
+                    },
                     "drupal/views_data_export": {
                         "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
                     },
@@ -355,7 +358,7 @@
                 "GPL-2.0+"
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
-            "time": "2022-11-30T14:25:58+00:00"
+            "time": "2022-12-02T15:28:24+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -10798,16 +10801,16 @@
         },
         {
             "name": "drupal/safedelete",
-            "version": "1.0.31",
+            "version": "1.0.32",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/safedelete.git",
-                "reference": "1.0.31"
+                "reference": "1.0.32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.31.zip",
-                "reference": "1.0.31",
+                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.32.zip",
+                "reference": "1.0.32",
                 "shasum": "568ea7d632b0fe89e6a97ee69bb9f739db3e7271"
             },
             "require": {
@@ -20409,5 +20412,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }
