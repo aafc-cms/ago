@@ -13,7 +13,7 @@ $nids = $query->condition($group)
 
 $entities = \Drupal\node\Entity\Node::loadMultiple($nids);
 
-$file = 'Non_Automatic_URL_Alias_Generated_Report.txt';
+$file = 'None_Automatic_URL_Alias_Generated_Report.txt';
 if (file_exists($file)) {
   unlink($file);
 }
@@ -28,10 +28,10 @@ foreach ($entities as $entity) {
   $title = $entity->getTitle();
   $url = $entity->toUrl()->toString();
   if ($etype == 'page') {
-    $etype = 'Internal_Page';
+    $etype = 'Internal Page';
   }
   if ($etype == 'landing_page') {
-    $etype = 'Landing_Page';
+    $etype = 'Landing Page';
   }
   if ($entity->path->pathauto == 0) {
     $record = $eid . ',' . $etype  . ',' . $state  . ',' . $title . ',' . $url . PHP_EOL;
