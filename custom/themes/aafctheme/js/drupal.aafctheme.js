@@ -86,7 +86,7 @@ var AAFCFrontend = function() {
     });
 
     //AAFCFrontend.initAnalytics();
-    AAFCFrontend.relocateWebformValidationMSG();
+    //AAFCFrontend.relocateWebformValidationMSG();
     AAFCFrontend.initSlideshow();
     searchInterface();
     initialized = true;
@@ -309,8 +309,7 @@ var AAFCFrontend = function() {
     initSlideshow: initSlideshow,
     updateformaction: updateformaction,
     page_type: page_type,
-    removeRoleFromSummary: removeRoleFromSummary,
-    relocateWebformValidationMSG:relocateWebformValidationMSG
+    removeRoleFromSummary: removeRoleFromSummary
   }
 }();
 

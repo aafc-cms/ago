@@ -640,78 +640,6 @@ form[id$="-add-form"] section.alert ul li a {
   font-weight: normal;
 }
 
-/* line 3, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::after, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::after,
-body.webform_generic_contactform div.form-item label[for="edit-fullname"]::after, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::after {
-  content: none;
-}
-/* line 7, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"]::before, body.webform_generic_contactform div.form-item label[for="edit-emailaddress"]::before,
-body.webform_generic_contactform div.form-item label[for="edit-fullname"]::before, body.webform_generic_contactform div.form-item label[for="edit-yourmessage"]::before {
-  content: "";
-  background-image: url(../images/required.svg);
-  display: inline-block;
-  line-height: 1;
-  color: #e00;
-  background-size: 7px 7px;
-  width: 7px;
-  vertical-align: super;
-  margin-left: 4px;
-  height: 7px;
-  position: absolute;
-  top: 7px;
-  left: -15px;
-}
-/* line 23, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-item label[for="edit-preferredresponselanguage"], body.webform_generic_contactform div.form-item label[for="edit-emailaddress"],
-body.webform_generic_contactform div.form-item label[for="edit-fullname"], body.webform_generic_contactform div.form-item label[for="edit-yourmessage"] {
-  position: relative;
-  margin-left: 10px;
-  margin-bottom: 0px;
-}
-/* line 30, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-item div.form-item--error-message.alert.alert-danger::before {
-  content: none;
-}
-/* line 34, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-item div.form-item--error-message.alert.alert-danger {
-  border-image: none !important;
-  margin-bottom: 5px;
-  margin-left: 0px;
-  font-weight: bold;
-  background: #f3e9e8;
-  border-color: #d3080c;
-}
-/* line 44, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper {
-  margin-bottom: 0px;
-}
-/* line 46, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.form-group.error.has-error label[for="edit-preferredresponselanguage"] + div.select-wrapper select.form-select {
-  width: 100%;
-}
-/* line 53, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.region.region-highlighted ul li {
-  display: block;
-}
-/* line 56, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.region.region-highlighted ul li a {
-  display: list-item;
-  list-style-position: inside;
-  margin-top: 15px;
-}
-/* line 61, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.region.region-highlighted ul li::after {
-  content: none;
-}
-/* line 64, ../sass/components/_generic-contact-webform.scss */
-body.webform_generic_contactform div.region.region-highlighted h2.sr-only {
-  position: relative;
-  font-size: 24px;
-  width: 100%;
-  height: 100%;
-}
-
 /* line 4, ../sass/components/_services-request-webform.scss */
 body.agricultural-programs-and-services-agriinvest #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.agricultural-programs-and-services-agriinvest #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-email-address-required-"]::after, body.agricultural-programs-and-services-agriinvest #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.agricultural-programs-and-services-agriinvest #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-email-address-required-"]::after, body.agricultural-programs-and-services-agristability #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.agricultural-programs-and-services-agristability #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-email-address-required-"]::after, body.agricultural-programs-and-services-agristability #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.agricultural-programs-and-services-agristability #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-email-address-required-"]::after, body.programmes-services-agricoles-agri-stabilite #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.programmes-services-agricoles-agri-stabilite #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-email-address-required-"]::after, body.programmes-services-agricoles-agri-stabilite #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.programmes-services-agricoles-agri-stabilite #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-email-address-required-"]::after, body.programmes-services-agricoles-agri-investissement #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.programmes-services-agricoles-agri-investissement #webform-submission-request-agriinvest-form-excel-add-form div.form-item label[for="edit-email-address-required-"]::after, body.programmes-services-agricoles-agri-investissement #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-requestor-name-required-"]::after, body.programmes-services-agricoles-agri-investissement #webform-submission-as-ai-request-form-add-form div.form-item label[for="edit-email-address-required-"]::after {
   content: none;
@@ -902,79 +830,79 @@ div.region-highlighted-front-only div.container-fluid {
   padding-right: 0;
 }
 
-/* line 40, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 49, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 63, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 68, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
   height: auto;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 #block-aafctheme-reportproblemblock {
   margin-top: .5em;
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 81, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 85, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
 
-/* line 90, ../sass/styles.scss */
+/* line 89, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100%;
 }
-/* line 92, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
   display: block;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
 @media (max-width: 844px) and (min-width: 768px) {
-  /* line 98, ../sass/styles.scss */
+  /* line 97, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     right: 100px;
   }
 
-  /* line 101, ../sass/styles.scss */
+  /* line 100, ../sass/styles.scss */
   .form-inline .select-wrapper {
     right: 100px;
     position: relative;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 107, ../sass/styles.scss */
+  /* line 106, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     margin-right: 160px;
     border-right: 1px solid #ddd;
