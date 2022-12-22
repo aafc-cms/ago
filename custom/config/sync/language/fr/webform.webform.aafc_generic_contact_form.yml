@@ -5,15 +5,19 @@ elements: |
     '#text': "<p class=\"text-danger\">* indique un champ obligatoire</p>\r\n"
   yourmessage:
     '#title': 'Votre message'
+    '#required_error': 'Ce champ est obligatoire.'
   emailaddress:
     '#title': 'Adresse électronique (votrenom@domaine.com)'
+    '#required_error': 'Ce champ est obligatoire.'
   preferredresponselanguage:
     '#title': 'Langue de choix pour la réponse : '
     '#options':
       English: Anglais
       French: Français
+    '#required_error': 'Ce champ est obligatoire.'
   fullname:
     '#title': 'Nom complet'
+    '#required_error': 'Ce champ est obligatoire.'
   cityortown:
     '#title': Ville/Village
   provinceorterritory:
