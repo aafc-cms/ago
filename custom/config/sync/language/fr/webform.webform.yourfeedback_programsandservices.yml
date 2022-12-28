@@ -5,10 +5,13 @@ elements: |
     '#text': "<p class=\"text-danger\">* indique un champ obligatoire</p>\r\n"
   programorservice:
     '#title': 'Programme ou service'
+    '#required_error': 'Ce champ est obligatoire.'
   emailaddress:
     '#title': 'Adresse électronique (votrenom@domaine.com)'
+    '#required_error': 'Ce champ est obligatoire.'
   fullname:
     '#title': 'Nom complet'
+    '#required_error': 'Ce champ est obligatoire.'
   cityortown:
     '#title': Ville/Village
   provinceorterritory:
@@ -17,4 +20,5 @@ elements: |
     '#title': Pays
   yourmessage:
     '#title': 'Votre message'
+    '#required_error': 'Ce champ est obligatoire.'
 title: 'Commentaires sur les programmes et les services'
