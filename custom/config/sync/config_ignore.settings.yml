@@ -2,15 +2,30 @@ _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
 ignored_config_entities:
   - aafctheme.settings
+  - autologout.settings
   - block.block.media
   - block.block.media_2
+  - 'block.block.*'
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
+  - filebrowser.settings
+  - field.storage.user.field_password_expiration
+  - field.field.user.user.field_last_password_reset
+  - field.field.user.user.field_password_expiration
+  - field.field.user.user.field_pending_expire_sent
+  - field.storage.user.field_last_password_reset
+  - field.storage.user.field_password_expiration
+  - field.storage.user.field_pending_expire_sent
   - linkchecker.settings
+  - password_policy.settings
+  - password_policy
+  - simple_sitemap.sitemap.default
+  - simple_sitemap.sitemap.index
+  - simple_sitemap.type.default_hreflang
+  - simple_sitemap.type.index
   - smtp.settings
   - system.mail
   - system.menu.devel
   - warmer.settings
-  - 'block.block.*'
-  - filebrowser.settings
+  - ultimate_cron.job.password_policy_cron
