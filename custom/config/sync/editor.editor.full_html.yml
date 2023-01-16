@@ -50,6 +50,7 @@ settings:
             - node
             - EmbedBlock
             - DrupalMediaLibrary
+            - tokenbrowser
         -
           name: Tools
           items:
@@ -87,6 +88,13 @@ settings:
         autoFormatOnStart: true
         autoFormatOnModeChange: true
         autoFormatOnUncomment: true
+    tokenbrowser:
+      token_types:
+        current-date: current-date
+        current-page: current-page
+        current-user: current-user
+        language: language
+        site: site
 image_upload:
   status: true
   scheme: public
