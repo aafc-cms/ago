@@ -44,6 +44,13 @@ content-plugins-changes:
     - core/jquery
     - core/drupalSettings
 
+campaign:
+  js:
+    js/campaign.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
 special:
   js:
     js/special.js: {}

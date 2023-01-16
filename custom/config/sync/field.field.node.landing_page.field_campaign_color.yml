@@ -1,0 +1,21 @@
+uuid: a4cd089c-1b95-407a-9b8d-4ee589254171
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_color
+    - node.type.landing_page
+id: node.landing_page.field_campaign_color
+field_name: field_campaign_color
+entity_type: node
+bundle: landing_page
+label: 'Campaign colour'
+description: 'Example: green OR blue OR red'
+required: false
+translatable: false
+default_value:
+  -
+    value: blue
+default_value_callback: ''
+settings: {  }
+field_type: string
