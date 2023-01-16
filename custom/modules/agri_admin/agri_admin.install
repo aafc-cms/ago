@@ -309,6 +309,18 @@ function agri_admin_update_8007() {
     'winterlude-olg-logo-450x450-FR.png',
     'winterlude-sites-EN.jpg',
     'winterlude-sites-FR.jpg',
+    'icon-facebook-white-EN.png',
+    'icon-facebook-white-FR.png',
+    'icon-instagram-white-EN.png',
+    'icon-instagram-white-FR.png',
+    'icon-twitter-white-EN.png',
+    'icon-twitter-white-FR.png',
+    'icon-youtube-white-EN.png',
+    'icon-youtube-white-FR.png',
+    'Timhortons450x450-EN.jpg',
+    'Timhortons450x450-FR.jpg',
+    'WL2022_WelcomePageDeco_TopDarkBlue-EN.jpg',
+    'WL2022_WelcomePageDeco_TopDarkBlue-FR.jpg'
   ];
   foreach ($image_names as $image_name) {
     $langcode = 'en';
