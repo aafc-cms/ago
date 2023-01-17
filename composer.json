@@ -127,7 +127,7 @@
                 "https://www.drupal.org/files/issues/2021-12-30/Access-private-public-path-based-on-user-role-3256368-03.patch"
             },
             "drupal/safedelete": {
-                "3329993 - Checking page reference logic of archive action should prevent the published moderation state only.": "https://www.drupal.org/files/issues/2022-12-28/checking-page-reference-archive-action-prevent-published-moderation-state-only-3329993-03.patch"
+                "3333946 - Orphaned nodes report should only check if the nodes' moderation state is published": "https://www.drupal.org/files/issues/2023-01-17/orphaned-nodes-report-checks-nodes-moderation-state-published-3333946-04.patch"
             },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
@@ -217,7 +217,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.4.8-rc6",
+        "agrcmsx/dxbase": "9.4.8-rc8",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
