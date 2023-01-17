@@ -65,11 +65,22 @@ var Campaign = function() {
 
       if ($("#edit-field-campaign-value").is(':checked')) {
         Campaign.campaignChecked = true;
+        $("#edit-field-special-value").attr('disabled', true);
+        $("#edit-field-large-value").attr('disabled', true);
+      }
+      if ($("#edit-field-special-value").is(':checked')) {
+        Campaign.specialChecked = true;
+        $("#edit-field-campaign-value").attr('disabled', true);
+      }
+      if ($("#edit-field-large-value").is(':checked')) {
+        Campaign.largeModeChecked = true;
       }
 
       //$("#edit-title-0-value").keyup(function() {
       $("#edit-title-0-value").change(function() {
         if (Campaign.campaignChecked) {
+          $("#edit-field-special-value").attr('disabled', true);
+          $("#edit-field-large-value").attr('disabled', true);
           var titleVal = $("#edit-title-0-value").val();
           if (CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId) != null) {
             CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.h1CampaignId).setHtml(titleVal);
@@ -94,6 +105,15 @@ var Campaign = function() {
 
       $("#edit-field-campaign-value").change(function() {
 
+        if (this.checked) {
+          Campaign.campaignChecked = true;
+          if ($("#edit-field-special-value").is(':checked')) {
+            $("#edit-field-special-value").trigger('click');
+            $("#edit-field-special-value").trigger('change');
+          }
+          $("#edit-field-special-value").attr('disabled', true);
+          $("#edit-field-large-value").attr('disabled', true);
+        }
         const image_names = new Array(
           'wl_web_top_banner_1920x300_EN',
           'wl_web_top_banner_1920x300_FR',
@@ -459,6 +479,10 @@ var Campaign = function() {
         // when unchecking the campaign title checkbox
         else {
           Campaign.campaignChecked = false;
+          if (!Campaign.campaignChecked) {
+            $("#edit-field-special-value").removeAttr('disabled');
+            $("#edit-field-large-value").removeAttr('disabled');
+          }
           if(CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId) != null) {
             CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId).remove();
             CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorTwoId).remove();
