@@ -56,9 +56,9 @@ var Campaign = function() {
       Campaign.otherLangTitleSelector = '#edit-title-etuf-en-0-value';
     }
 
-    Campaign.campaignsettings = drupalSettings.campaign; 
+    Campaign.campaignsettings = drupalSettings.campaign;
     $(document).ready(function() {
-    
+
       if ($("#edit-field-campaign-value").is(':checked')) {
         Campaign.campaignChecked = true;
       }
@@ -88,7 +88,7 @@ var Campaign = function() {
         }
       });
 
-      $("#edit-field-campaign-value").change(function() {      
+      $("#edit-field-campaign-value").change(function() {
 
         const image_names = new Array(
           'wl_web_top_banner_1920x300_EN',
@@ -134,13 +134,13 @@ var Campaign = function() {
   <div class="mwsgeneric_base_html_933058698 mwsgeneric-base-html parbase">
 
   <div class="row">
-  <div class="col-xs-12 p-0"> <span data-pic="data-pic" data-alt="This is Winterlude!" data-class="img-responsive full-width" class="wb-init wb-pic-inited" id="wb-auto-2"> 
+  <div class="col-xs-12 p-0"> <span data-pic="data-pic" data-alt="This is Winterlude!" data-class="img-responsive full-width" class="wb-init wb-pic-inited" id="wb-auto-2">
     <!-- Default image: <div [data-src]> with no data-media attribute is displayed when:
                         1. None of the other <div [data-src]> media queries match.
-                        2. The browser doesn't support media queries --> 
-    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-EN.jpg"></span> 
-    <!-- Images for browsers with CSS media query support --> 
-    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-EN.jpg" data-media="(min-width: 0px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-960x300-EN.jpg" data-media="(min-width: 500px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" data-media="(min-width: 960px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" data-media="(min-width: 1200px)"><img alt="This is Winterlude!" class="img-responsive full-width" src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg"></span> 
+                        2. The browser doesn't support media queries -->
+    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-EN.jpg"></span>
+    <!-- Images for browsers with CSS media query support -->
+    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-EN.jpg" data-media="(min-width: 0px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-960x300-EN.jpg" data-media="(min-width: 500px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" data-media="(min-width: 960px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" data-media="(min-width: 1200px)"><img alt="This is Winterlude!" class="img-responsive full-width" src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg"></span>
     <!-- Fallback content for non-JS browsers. -->
     <noscript>` + imgplaceholder +
 `    </noscript>
@@ -227,7 +227,7 @@ var Campaign = function() {
         </div>
       </div>
     </div>
-    
+
   </div>
 </div>
 </div>
@@ -295,13 +295,13 @@ var Campaign = function() {
   <div class="mwsgeneric_base_html_933058698 mwsgeneric-base-html parbase">
 
   <div class="row">
-  <div class="col-xs-12 p-0"> <span data-pic="data-pic" data-alt="C’est aussi ÇA le Bal de Neige!" data-class="img-responsive full-width" class="wb-init wb-pic-inited" id="wb-auto-2"> 
+  <div class="col-xs-12 p-0"> <span data-pic="data-pic" data-alt="C’est aussi ÇA le Bal de Neige!" data-class="img-responsive full-width" class="wb-init wb-pic-inited" id="wb-auto-2">
     <!-- Default image: <div [data-src]> with no data-media attribute is displayed when:
                         1. None of the other <div [data-src]> media queries match.
-                        2. The browser doesn't support media queries --> 
-    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-FR.jpg"></span> 
-    <!-- Images for browsers with CSS media query support --> 
-    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-FR.jpg" data-media="(min-width: 0px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-960x300-FR.jpg" data-media="(min-width: 500px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" data-media="(min-width: 960px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" data-media="(min-width: 1200px)"><img alt="C’est aussi ÇA le Bal de Neige!" class="img-responsive full-width" src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg"></span> 
+                        2. The browser doesn't support media queries -->
+    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-FR.jpg"></span>
+    <!-- Images for browsers with CSS media query support -->
+    <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-FR.jpg" data-media="(min-width: 0px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-960x300-FR.jpg" data-media="(min-width: 500px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" data-media="(min-width: 960px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" data-media="(min-width: 1200px)"><img alt="C’est aussi ÇA le Bal de Neige!" class="img-responsive full-width" src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg"></span>
     <!-- Fallback content for non-JS browsers. -->
     <noscript>` + imgplaceholder +
 `    </noscript>
@@ -388,7 +388,7 @@ var Campaign = function() {
         </div>
       </div>
     </div>
-    
+
   </div>
 </div>
 </div>
