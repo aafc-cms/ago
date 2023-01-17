@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_campaign
+    - field.field.node.page.field_campaign_color
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
@@ -44,7 +46,7 @@ third_party_settings:
       label: 'aafc metadata group'
       region: content
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: details_sidebar
       format_settings:
         classes: aafc-metadata-group
@@ -59,7 +61,7 @@ third_party_settings:
       label: aafc-dcterms-gctype
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details_sidebar
       format_settings:
         classes: aafc-dcterm-gctype-group
@@ -74,7 +76,7 @@ third_party_settings:
       label: aafc-dcterms-subject
       region: content
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: details_sidebar
       format_settings:
         classes: aafc-subject-group
@@ -92,7 +94,7 @@ third_party_settings:
       label: Details
       region: content
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: details
       format_settings:
         classes: ''
@@ -106,7 +108,7 @@ third_party_settings:
       label: 'dcterms:subject'
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -117,8 +119,8 @@ third_party_settings:
         weight: -42
     group_title_options:
       children:
-        - field_special
-        - field_large
+        - group_special
+        - group_campaign
       label: 'Display Options'
       region: content
       parent_name: ''
@@ -140,7 +142,7 @@ third_party_settings:
       label: More
       region: content
       parent_name: ''
-      weight: 15
+      weight: 14
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -149,6 +151,36 @@ third_party_settings:
         description: ''
         required_fields: false
         weight: 0
+    group_campaign:
+      children:
+        - field_campaign
+        - field_campaign_color
+      label: Campaign
+      region: content
+      parent_name: group_title_options
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: 'col-xs-12 col-sm-12 col-md-6 pull-right'
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: false
+    group_special:
+      children:
+        - field_special
+        - field_large
+      label: Special
+      region: content
+      parent_name: group_title_options
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: false
 _core:
   default_config_hash: 7fm6IQg6gNfLHHQlwMKSUqMSbPhM8O91P6nqQkjtH80
 id: node.page.default
@@ -171,6 +203,21 @@ content:
     weight: 21
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_campaign:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_campaign_color:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_created_by:
     type: string_textfield
@@ -229,10 +276,11 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: -99
+    weight: 0
     region: content
     settings:
       sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_meta_type:
     type: options_buttons
@@ -290,7 +338,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 11
+    weight: 12
     region: content
     settings:
       include_locked: true
@@ -313,6 +361,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 11
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

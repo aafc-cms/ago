@@ -118,18 +118,14 @@ var Campaign = function() {
           'WL2022_WelcomePageDeco_TopDarkBlue-EN.jpg',
           'WL2022_WelcomePageDeco_TopDarkBlue-FR.jpg'
         );
-        var topBanner1920En = '';
-        if (Campaign.campaignsettings.wl_web_top_banner_1920x300_EN.found) {
-          console.log('wl-web-top-banner-1920x300-EN.jpg is found!');
-	}
-        //touche pas
+        // Touche pas.
         oldcontent = CKEDITOR.instances["edit-body-0-value"].getData();
         oldcontentother = CKEDITOR.instances[Campaign.otherLangBodySelector].getData();
         var imgplaceholder = '<img src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" alt="" class="pull-right img-responsive thumbnail">';
-        if (Campaign.campaignsettings.found_demo_topic) {
-          var uuid = Campaign.campaignsettings.media_uuid;
-          var entity_id = Campaign.campaignsettings.media_entity_id;
-          imgplaceholder = '<drupal-media data-entity-type="media" data-entity-uuid="'+uuid+'" data-view-mode="w0520px"></drupal-media>';
+        if (Campaign.campaignsettings.wl_web_top_banner_1920x300_EN.found) {
+          console.log('wl-web-top-banner-1920x300-EN.jpg is found!');
+          var uuid = Campaign.campaignsettings.wl_web_top_banner_1920x300_EN.media_uuid;
+          imgplaceholder = '<drupal-media data-entity-type="media" data-entity-uuid="'+uuid+'"></drupal-media>';
         }
         oldtitle = $('#edit-title-0-value').val();
         oldtitleother = $(Campaign.otherLangTitleSelector).val();
@@ -146,9 +142,8 @@ var Campaign = function() {
     <!-- Images for browsers with CSS media query support --> 
     <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-EN.jpg" data-media="(min-width: 0px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-960x300-EN.jpg" data-media="(min-width: 500px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" data-media="(min-width: 960px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" data-media="(min-width: 1200px)"><img alt="This is Winterlude!" class="img-responsive full-width" src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg"></span> 
     <!-- Fallback content for non-JS browsers. -->
-    <noscript>
-    <img src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-EN.jpg" alt="">
-    </noscript>
+    <noscript>` + imgplaceholder +
+`    </noscript>
     </span> </div>
 </div>
 <div class="visible-xs visible-sm bg-dark bg-winterlude text-white brdr-rds-0 brdr-0 mrgn-bttm-0 row">
@@ -308,32 +303,31 @@ var Campaign = function() {
     <!-- Images for browsers with CSS media query support --> 
     <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-500x250-FR.jpg" data-media="(min-width: 0px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-960x300-FR.jpg" data-media="(min-width: 500px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" data-media="(min-width: 960px)"></span> <span data-src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" data-media="(min-width: 1200px)"><img alt="C’est aussi ÇA le Bal de Neige!" class="img-responsive full-width" src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg"></span> 
     <!-- Fallback content for non-JS browsers. -->
-    <noscript>
-    <img src="/modules/custom/agri_admin/campaign/images/wl-web-top-banner-1920x300-FR.jpg" alt="">
-    </noscript>
+    <noscript>` + imgplaceholder +
+`    </noscript>
     </span> </div>
 </div>
 <div class="visible-xs visible-sm bg-dark bg-winterlude text-white brdr-rds-0 brdr-0 mrgn-bttm-0 row">
   <div class="col-md-12">
     <ul class="row list-unstyled mrgn-tp-sm mrgn-bttm-sm text-center">
-      <li class="col-sm-4 col-xs-6 small"><a href="#example-campaigns-winterlude" class="text-white h5">Home<span class="wb-inv"> - Winterlude</span></a></li>
-      <li class="col-sm-4 col-xs-6 small"><a href="#example-calendar-events" class="text-white h5">Calendar</a></li>
-      <li class="col-sm-4 col-xs-6 small"><a href="#example-sites" class="text-white h5">Winterlude sites</a></li>
-      <li class="col-sm-4 col-xs-6 small"><a href="#example-sculptures" class="text-white h5">Sculptures</a></li>
-      <li class="col-sm-4 col-xs-6 small"><a href="#example-about" class="text-white h5">About</a></li>
-      <li class="col-sm-4 col-xs-6 small"><a href="#example-media" class="text-white h5">Media</a></li>
+      <li class="col-sm-4 col-xs-6 small"><a href="#exemple-baldeneige" class="text-white h5">Accueil<span class="wb-inv"> - Bal de Neige</span></a></li>
+      <li class="col-sm-4 col-xs-6 small"><a href="#exemple-calendrier" class="text-white h5">Calendrier</a></li>
+      <li class="col-sm-4 col-xs-6 small"><a href="#exemple-sites" class="text-white h5">Sites du Bal de Neige</a></li>
+      <li class="col-sm-4 col-xs-6 small"><a href="#exemple-sculptures" class="text-white h5">Sculptures</a></li>
+      <li class="col-sm-4 col-xs-6 small"><a href="#exemple-apropos" class="text-white h5">À propos</a></li>
+      <li class="col-sm-4 col-xs-6 small"><a href="#exemple-medias" class="text-white h5">Médias</a></li>
     </ul>
   </div>
 </div>
 <div class="visible-md visible-lg bg-dark bg-winterlude text-white brdr-rds-0 brdr-0 mrgn-bttm-0 row">
   <div class="col-md-10 col-md-offset-1 mrgn-tp-md mrgn-bttm-md">
     <ul class="row list-unstyled mrgn-tp-sm mrgn-bttm-sm text-center small">
-      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#winterlude" class="text-white h5">Home<span class="wb-inv"> - Winterlude</span></a></li>
-      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#calendar-events" class="text-white h5">Calendar</a></li>
-      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#sites" class="text-white h5">Winterlude sites</a></li>
-      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#sculptures" class="text-white h5">Sculptures</a></li>
-      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#about" class="text-white h5">About</a></li>
-      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#media" class="text-white h5">Media</a></li>
+      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#exemple-baldeneige" class="text-white h5">Accueil<span class="wb-inv"> - Bal de Neige</span></a></li>
+      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#exemple-calendrier" class="text-white h5">Calendrier</a></li>
+      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#exemple-sites" class="text-white h5">Sites de Bal de Neige</a></li>
+      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#exemple-sculptures" class="text-white h5">Sculptures</a></li>
+      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#exemple-apropos" class="text-white h5">À propos</a></li>
+      <li class="col-md-2 h4 mrgn-tp-sm"><a href="#exemple-medias" class="text-white h5">Médias</a></li>
     </ul>
   </div>
 </div>

@@ -78,9 +78,12 @@
             {{ page.language_toggle }}
           </section>
           {{ page.banner }}
+        {% if not campaign_mode %}
           {{ page.search }}
+        {% endif %}
         </div>
       </div>
+      {% if not campaign_mode %}
       <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
         <div class="{{ container }}">
           <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
@@ -89,6 +92,7 @@
         </div>
       </nav>
       {{ page.breadcrumb }}
+      {% endif %}
     </header>
   {% endblock %}
 {% endif %}
@@ -259,9 +263,11 @@
     {% block footer %}
       <footer id="wb-info">
         <div class="landscape">
+          {% if not campaign_mode %}
           <div class="{{ container }}">
             {{ page.footer }}
           </div>
+          {% endif %}
         </div>
         <div class="brand">
           <div class="{{ container }}">

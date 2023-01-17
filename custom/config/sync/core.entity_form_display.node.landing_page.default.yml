@@ -164,7 +164,7 @@ third_party_settings:
       weight: 23
       format_type: fieldset
       format_settings:
-        classes: 'col-xs-12 col-sm-12 col-md-6 pull-right'
+        classes: ''
         show_empty_fields: false
         id: ''
         description: ''

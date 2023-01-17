@@ -1,14 +1,14 @@
-uuid: a4cd089c-1b95-407a-9b8d-4ee589254171
+uuid: 1e5305d8-6946-42ab-853f-35bba4c00d4d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_campaign_color
-    - node.type.landing_page
-id: node.landing_page.field_campaign_color
+    - node.type.page
+id: node.page.field_campaign_color
 field_name: field_campaign_color
 entity_type: node
-bundle: landing_page
+bundle: page
 label: 'Campaign colour'
 description: 'Example: green OR blue OR red or grey'
 required: false

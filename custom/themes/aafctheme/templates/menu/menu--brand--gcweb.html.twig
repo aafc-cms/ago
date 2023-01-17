@@ -15,14 +15,20 @@
  * @ingroup templates
  */
 #}
+{% if campaign_mode %}
+  <div class="campaign-mode"><p>&nbsp;</p></div>
+{% endif %}
 {% import _self as menus %}
 
 {#
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
+{% if not campaign_mode %}
 {{ menus.menu_links(items, attributes, 0, menu_name|clean_class) }}
+{% endif %}
 
+{% if not campaign_mode %}
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
   {% if items %}
@@ -47,3 +53,4 @@
     </ul>
   {% endif %}
 {% endmacro %}
+{% endif %}

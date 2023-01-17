@@ -86,9 +86,6 @@ function agri_admin_page_attachments(array &$page) {
       $entity_id = NULL;
       $uuid = NULL;
       if (AgriAdminHelper::getSampleTopicImageUuidAndEntityId($uuid, $entity_id)) {
-        $page['#attached']['drupalSettings']['campaign']['found_demo_topic'] = TRUE;
-        $page['#attached']['drupalSettings']['campaign']['media_uuid'] = $uuid;
-        $page['#attached']['drupalSettings']['campaign']['media_entity_id'] = $entity_id;
         $page['#attached']['drupalSettings']['special']['found_demo_topic'] = TRUE;
         $page['#attached']['drupalSettings']['special']['media_uuid'] = $uuid;
         $page['#attached']['drupalSettings']['special']['media_entity_id'] = $entity_id;

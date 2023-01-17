@@ -1105,7 +1105,7 @@ class AgriAdminHelper {
 
 
   /**
-   * Used by the special title and large mode for inserting a topic summary on internal pages for AAFC.
+   * Used for example campaign images but this method is generic can be used elsewhere.
    */
   public static function getCampaignImageUuidAndEntityId(&$uuid, &$entity_id, $filename_pattern) {
     if (empty($filename_pattern)) {
