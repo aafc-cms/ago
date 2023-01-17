@@ -446,7 +446,6 @@ function aafctheme_preprocess_menu__brand_fr(&$vars) {
     $node = $node_storage->load($nid);
   }
   $vars['campaign_mode'] = FALSE;
-  $vars['campaign_mode'] = TRUE;
   if (is_object($node) && $node->hasField('field_campaign')) {
     if ($node->get('field_campaign')->value) {
       $campaign_mode = $node->get('field_campaign')->value;
@@ -466,7 +465,6 @@ function aafctheme_preprocess_menu__brand__gcweb(&$vars) {
     $node = $node_storage->load($nid);
   }
   $vars['campaign_mode'] = FALSE;
-  $vars['campaign_mode'] = TRUE;
   if (is_object($node) && $node->hasField('field_campaign')) {
     if ($node->get('field_campaign')->value) {
       $campaign_mode = $node->get('field_campaign')->value;
