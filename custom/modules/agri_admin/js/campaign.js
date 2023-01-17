@@ -29,8 +29,12 @@ var Campaign = function() {
   var campaignChecked = false;
   var otherLangBodySelector = 'edit-body-etuf-fr-0-value';
   var otherLangTitleSelector = '#edit-title-etuf-fr-0-value';
-  var spCampaignSelector = '#sp_campaign';
-  var spCampaignSelectorId = 'sp_campaign';
+  var campaignSelector = '#sp_campaign';
+  var campaignSelectorId = 'sp_campaign';
+  var campaignSelectorTwo = '#sp_campaign_two';
+  var campaignSelectorTwoId = 'sp_campaign_two';
+  var campaignSelectorThree = '#sp_campaign_three';
+  var campaignSelectorThreeId = 'sp_campaign_three';
   var h1CampaignId = 'wb-cont';
   var h1Campaign = '#wb-cont';
   var campaignsettings;
@@ -67,7 +71,7 @@ var Campaign = function() {
       $("#edit-title-0-value").change(function() {
         if (Campaign.campaignChecked) {
           var titleVal = $("#edit-title-0-value").val();
-          if (CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.spCampaignSelectorId) != null) {
+          if (CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId) != null) {
             CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.h1CampaignId).setHtml(titleVal);
           }
           else if (CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.h1CampaignId) != null) {
@@ -79,7 +83,7 @@ var Campaign = function() {
       $(Campaign.otherLangTitleSelector).change(function() {
         if (Campaign.campaignChecked) {
           var titleValFr = $(Campaign.otherLangTitleSelector).val();
-          if(CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.spCampaignSelectorId) != null){
+          if(CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.campaignSelectorId) != null){
             CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.h1CampaignId).setHtml(titleValFr);
           }
           else if (Campaign.campaignChecked) {
@@ -129,7 +133,7 @@ var Campaign = function() {
         }
         oldtitle = $('#edit-title-0-value').val();
         oldtitleother = $(Campaign.otherLangTitleSelector).val();
-        newcontent = '<div id="'+Campaign.spCampaignSelectorId+'" class="reference parbase section">' +
+        newcontent = '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
 `  <div class="cq-dd-paragraph">
   <div class="mwsgeneric_base_html_933058698 mwsgeneric-base-html parbase">
 
@@ -174,12 +178,9 @@ var Campaign = function() {
 
 </div>
 </div>
-</div>
-<div class="mwsgeneric-base-html parbase section">
-
-
-
-<div class="row">
+</div>` +
+'<div id="'+Campaign.campaignSelectorTwoId+'" class="mwsgeneric-base-html parbase section">' +
+`<div class="row">
   <div class="col-md-10 col-md-offset-1 mrgn-tp-xl mrgn-bttm-xl">` +
 '    <h1 property="name" id="'+Campaign.h1CampaignId+'" dir="ltr" class="winterlude mrgn-tp-md">'+oldtitle+'</h1>' +
 `    <p>Winterlude has finally arrived! From February 3 to 20, 2023, rediscover the joys of winter activities with family and friends. Check out the calendar of events to find out more.</p>
@@ -230,10 +231,9 @@ var Campaign = function() {
 
   </div>
 </div>
-</div>
-<div class="reference parbase section"><div class="cq-dd-paragraph"><div class="mwsgeneric_base_html_549236581 mwsgeneric-base-html parbase">
-
-<div class="row bg-darker">
+</div>` +
+'<div id="'+Campaign.campaignSelectorThreeId+'" class="reference parbase section"><div class="cq-dd-paragraph"><div class="mwsgeneric_base_html_549236581 mwsgeneric-base-html parbase">' +
+`<div class="row bg-darker">
   <div class="col-md-10 col-md-offset-1 mrgn-tp-md mrgn-bttm-md">
     <ul class="row list-unstyled mrgn-tp-sm mrgn-bttm-sm text-center small">
       <li class="col-md-4 h4 mrgn-tp-sm"><a href="#site-map" class="text-white h5">Site map</a></li>
@@ -290,10 +290,9 @@ var Campaign = function() {
 
 // Ok Maintenant pour le français.
 
-        newcontentother = '<div id="'+Campaign.spCampaignSelectorId+'" class="reference parbase section">' +
+       newcontentother = '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
 `  <div class="cq-dd-paragraph">
   <div class="mwsgeneric_base_html_933058698 mwsgeneric-base-html parbase">
-
   <div class="row">
   <div class="col-xs-12 p-0"> <span data-pic="data-pic" data-alt="C’est aussi ÇA le Bal de Neige!" data-class="img-responsive full-width" class="wb-init wb-pic-inited" id="wb-auto-2">
     <!-- Default image: <div [data-src]> with no data-media attribute is displayed when:
@@ -335,15 +334,12 @@ var Campaign = function() {
 
 </div>
 </div>
-</div>
-<div class="mwsgeneric-base-html parbase section">
-
-
-
-<div class="row">
+</div>` +
+'<div id="'+Campaign.campaignSelectorTwoId+'" class="mwsgeneric-base-html parbase section">' +
+`<div class="row">
   <div class="col-md-10 col-md-offset-1 mrgn-tp-xl mrgn-bttm-xl">` +
 '    <h1 property="name" id="'+Campaign.h1CampaignId+'" dir="ltr" class="winterlude mrgn-tp-md">'+oldtitleother+'</h1>' +
-`    <p><Le temps du Bal de Neige est enfin arrivé. Du 3 au 20 février 2023, retrouvez le plaisir des incontournables activités hivernales en famille et entre amis. Consultez le calendrier des activités pour en savoir davantage./p>
+`    <p><Le temps du Bal de Neige est enfin arrivé. Du 3 au 20 février 2023, retrouvez le plaisir des incontournables activités hivernales en famille et entre amis. Consultez le calendrier des activités pour en savoir davantage.</p>
     <p>Là où les véritables plaisirs d'hiver ne gèlent pas… C’est aussi ÇA le Bal de Neige!
     <section class="alert alert-info">
       <h2>Devenez bénévole</h2>
@@ -391,10 +387,9 @@ var Campaign = function() {
 
   </div>
 </div>
-</div>
-<div class="reference parbase section"><div class="cq-dd-paragraph"><div class="mwsgeneric_base_html_549236581 mwsgeneric-base-html parbase">
-
-<div class="row bg-darker">
+</div>` +
+'<div id="'+Campaign.campaignSelectorThreeId+'" class="reference parbase section"><div class="cq-dd-paragraph"><div class="mwsgeneric_base_html_549236581 mwsgeneric-base-html parbase">' +
+`<div class="row bg-darker">
   <div class="col-md-10 col-md-offset-1 mrgn-tp-md mrgn-bttm-md">
     <ul class="row list-unstyled mrgn-tp-sm mrgn-bttm-sm text-center small">
       <li class="col-md-4 h4 mrgn-tp-sm"><a href="#plan-du-site" class="text-white h5">Plan du site</a></li>
@@ -451,11 +446,11 @@ var Campaign = function() {
         // when checking the campaign title checkbox
         if (this.checked) {
           Campaign.campaignChecked = true;
-          if (CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.spCampaignSelectorId) == null) {
+          if (CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId) == null) {
             CKEDITOR.instances["edit-body-0-value"].setData(newcontent + oldcontent);
           }
           else{}
-          if (CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.spCampaignSelectorId) == null) {
+          if (CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.campaignSelectorId) == null) {
             CKEDITOR.instances[Campaign.otherLangBodySelector].setData(newcontentother + oldcontentother);
           }
           else{}
@@ -464,12 +459,16 @@ var Campaign = function() {
         // when unchecking the campaign title checkbox
         else {
           Campaign.campaignChecked = false;
-          if(CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.spCampaignSelectorId) != null) {
-            CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.spCampaignSelectorId).remove();
+          if(CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId) != null) {
+            CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorId).remove();
+            CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorTwoId).remove();
+            CKEDITOR.instances["edit-body-0-value"].document.getById(Campaign.campaignSelectorThreeId).remove();
           }
           else {}
-          if (CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.spCampaignSelectorId) != null) {
-            CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.spCampaignSelectorId).remove();
+          if (CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.campaignSelectorId) != null) {
+            CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.campaignSelectorId).remove();
+            CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.campaignSelectorTwoId).remove();
+            CKEDITOR.instances[Campaign.otherLangBodySelector].document.getById(Campaign.campaignSelectorThreeId).remove();
           }
           else {}
         }
@@ -537,8 +536,12 @@ var Campaign = function() {
     otherLangTitleSelector: otherLangTitleSelector,
     h1CampaignId: h1CampaignId,
     h1Campaign: h1Campaign,
-    spCampaignSelector: spCampaignSelector,
-    spCampaignSelectorId: spCampaignSelectorId,
+    campaignSelector: campaignSelector,
+    campaignSelectorId: campaignSelectorId,
+    campaignSelectorTwo: campaignSelectorTwo,
+    campaignSelectorTwoId: campaignSelectorTwoId,
+    campaignSelectorThree: campaignSelectorThree,
+    campaignSelectorThreeId: campaignSelectorThreeId,
     campaignChecked: campaignChecked
   }
 }();
