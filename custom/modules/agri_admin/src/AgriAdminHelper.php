@@ -1103,4 +1103,54 @@ class AgriAdminHelper {
     return TRUE;
   }
 
+
+  /**
+   * Used for example campaign images but this method is generic can be used elsewhere.
+   */
+  public static function getCampaignImageUuidAndEntityId(&$uuid, &$entity_id, $filename_pattern) {
+    if (empty($filename_pattern)) {
+      return FALSE;
+    }
+    $filename_pattern = '%' . $filename_pattern;
+    static::addToLog(__function__);
+    static::addToLog($filename_pattern . ' search');
+    $database = \Drupal::database();
+    $sql = "select fid, uuid from file_managed where uri like :filename_pattern";
+    $result = $database->query($sql, [':filename_pattern' => $filename_pattern]);
+    $fid = 0;
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['fid']) || is_null($row['fid'])) {
+          return FALSE;
+        }
+        $uuid = $row['uuid'];
+        $fid = $row['fid'];
+      }
+    }
+    $sql = "select entity_id from media__image where image_target_id = :fid";
+    $result = $database->query($sql, [':fid' => $fid]);
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['entity_id']) || is_null($row['entity_id'])) {
+          return FALSE;
+        }
+        $entity_id = $row['entity_id'];
+      }
+    }
+    $sql = "select uuid from media where mid = :entity_id";
+    $result = $database->query($sql, [':entity_id' => $entity_id]);
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['uuid']) || is_null($row['uuid'])) {
+          return FALSE;
+        }
+        $uuid = $row['uuid'];
+      }
+    }
+    if (empty($uuid) || empty($fid) || empty($entity_id)) {
+      return FALSE;
+    }
+    return TRUE;
+  }
+
 }

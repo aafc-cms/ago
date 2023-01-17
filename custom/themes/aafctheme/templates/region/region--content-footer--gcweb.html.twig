@@ -24,7 +24,11 @@
 {% if content %}
   <div id="pgft" {{ attributes.addClass(classes) }}>
     <div class="row">
-      {{ content }}
+      {% if campaign_mode %}
+        {{ date_modified }}
+      {% else %}
+        {{ content }}
+      {% endif %}
     </div>
   </div>
 {% endif %}

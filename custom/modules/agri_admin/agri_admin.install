@@ -1,7 +1,11 @@
 <?php
 
+use \Drupal\agri_admin\AgriAdminHelper;
+use \Drupal\Core\File\FileSystemInterface;
 use \Drupal\field\Entity\FieldStorageConfig;
 use \Drupal\field\Entity\FieldConfig;
+use \Drupal\media\Entity\Media;
+use \Drupal\taxonomy\Entity\Term;
 
 /**
  * @file
@@ -246,3 +250,119 @@ function agri_admin_update_8006() {
   $node_fr->save();
 }
 
+/**
+ * Import campaign example images into AAFC for usage with campaign placeholders.
+ */
+function agri_admin_update_8007() {
+
+  $vid = 'media_category';
+  $term_name = 'Campaign Example';
+  $term_id = NULL;
+  $term = NULL;
+
+  $terms = \Drupal::entityTypeManager()
+  ->getStorage('taxonomy_term')
+  ->loadByProperties([
+    'vid' => $vid,
+    'name' =>$term_name,
+  ]);
+  if (empty($terms)) {
+    $term = Term::create([
+      'vid' => $vid,
+      'name' => $term_name,
+      'langcode' => 'en',
+      'parent' => [],
+    ]);
+
+    $term->enforceIsNew();
+    $term->save();
+    $term_id = $term->id();
+  }
+  if (empty($term)) {
+    $terms = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadByProperties([
+      'vid' => $vid,
+      'name' =>$term_name,
+    ]);
+    foreach ($terms as $term_item) {
+      $term_id = $term_item->id();
+      $term = $term_item;
+      // Done, exit immediately.
+      break;
+    }
+  }
+  $uri_path = 'public://campaign/example';
+  \Drupal::service('file_system')->prepareDirectory($uri_path, FileSystemInterface::CREATE_DIRECTORY);
+  $image_names = [
+    'wl-web-top-banner-1920x300-EN.jpg',
+    'wl-web-top-banner-1920x300-FR.jpg',
+    'wl-web-top-banner-960x300-EN.jpg',
+    'wl-web-top-banner-960x300-FR.jpg',
+    'wl-web-top-banner-500x250-EN.jpg',
+    'wl-web-top-banner-500x250-FR.jpg',
+    'calendar-events-EN.jpg',
+    'calendar-events-FR.jpg',
+    'winterlude-national-ice-carving-championship-EN.jpg',
+    'winterlude-national-ice-carving-championship-FR.jpg',
+    'winterlude-olg-logo-450x450-EN.png',
+    'winterlude-olg-logo-450x450-FR.png',
+    'winterlude-sites-EN.jpg',
+    'winterlude-sites-FR.jpg',
+    'icon-facebook-white-EN.png',
+    'icon-facebook-white-FR.png',
+    'icon-instagram-white-EN.png',
+    'icon-instagram-white-FR.png',
+    'icon-twitter-white-EN.png',
+    'icon-twitter-white-FR.png',
+    'icon-youtube-white-EN.png',
+    'icon-youtube-white-FR.png',
+    'Timhortons450x450-EN.jpg',
+    'Timhortons450x450-FR.jpg',
+    'WL2022_WelcomePageDeco_TopDarkBlue-EN.jpg',
+    'WL2022_WelcomePageDeco_TopDarkBlue-FR.jpg'
+  ];
+  foreach ($image_names as $image_name) {
+    $langcode = 'en';
+    if (strpos($image_name,'-FR.jpg') > 0) {
+      $langcode = 'fr';
+    }
+    $image_selector = substr($image_name, 1);
+    if (AgriAdminHelper::getCampaignImageUuidAndEntityId($uuid, $entity_id, $image_selector)) {
+      // This image already exists, continue without importing it twice.
+      AgriAdminHelper::addToLog($image_name . ' was previously imported, skipping', TRUE);
+      continue;
+    }
+    $path_to_agri_admin = \Drupal::service('extension.list.module')->getPath('agri_admin');
+    $image_data = file_get_contents(DRUPAL_ROOT . '/' . $path_to_agri_admin . '/campaign/images/' . $image_name);
+    AgriAdminHelper::addToLog(DRUPAL_ROOT . '/' . $path_to_agri_admin . '/campaign/images/' . ' debug image path');
+    $file_repository = \Drupal::service('file.repository');
+
+    $image = $file_repository->writeData($image_data, "public://campaign/example/" . $image_name, FileSystemInterface::EXISTS_REPLACE);
+
+    $alt_text = 'Example campaign media alt attribute for ' . $image_name;
+    $title_text = 'Example media title attribute for ' . $image_name;
+    if ($langcode == 'fr') {
+      $alt_text = 'Campaigne exemple alt pour ' . $image_name;
+      $title_text = 'Campaigne media titre exemple pour ' . $image_name;
+    }
+    $image_media = Media::create([
+      'name' => $image_name,
+      'bundle' => 'image',
+      'uid' => \Drupal::currentUser()->id(),
+      'langcode' => $langcode,
+      'status' => 1,
+      'image' => [
+        'target_id' => $image->id(),
+         'alt' => $alt_text,
+         'title' => $title_text,
+      ],
+      'field_media_in_library' => TRUE,
+    ]);
+    $image_media->set('field_aafc_category', [$term]);
+
+    AgriAdminHelper::addToLog($image_name . ' created for image with pattern langcode ' . $langcode, TRUE);
+    $image_media->save();
+  }
+
+}

@@ -1,0 +1,23 @@
+uuid: d537f15d-8f24-45d9-a679-c393bab780ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign
+    - node.type.landing_page
+id: node.landing_page.field_campaign
+field_name: field_campaign
+entity_type: node
+bundle: landing_page
+label: Campaign
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

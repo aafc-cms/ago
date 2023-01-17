@@ -55,6 +55,7 @@ settings:
             - DrupalImage
             - EmbedBlock
             - DrupalMediaLibrary
+            - tokenbrowser
         -
           name: Tools
           items:
@@ -92,6 +93,12 @@ settings:
         autoFormatOnStart: true
         autoFormatOnModeChange: true
         autoFormatOnUncomment: true
+    tokenbrowser:
+      token_types:
+        current-date: current-date
+        current-page: current-page
+        language: language
+        site: site
 image_upload:
   status: true
   scheme: public

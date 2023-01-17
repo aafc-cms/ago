@@ -5,4 +5,20 @@ body.node-edit .hidden-input-box input, body.node-add .hidden-input-box input {
   display: none;
 }
 
+@media screen and (min-width: 992px) {
+  #edit-group-special {
+    width: 49%;
+    float: left;
+  }
+
+  #edit-group-campaign {
+    width: 49%;
+    float: right;
+  }
+}
+#edit-group-campaign .form-item--field-campaign-color-0-value {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
 /*# sourceMappingURL=page-edit.css.map */

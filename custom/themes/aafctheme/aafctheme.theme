@@ -379,6 +379,7 @@ function aafctheme_preprocess_page(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
   $vars['large_mode'] = FALSE;
+  $vars['campaign_mode'] = FALSE;
   if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
@@ -386,6 +387,15 @@ function aafctheme_preprocess_page(&$vars) {
   if (is_object($node) && $node->hasField('field_large')) {
     $large_mode = $node->get('field_large')->value;
     $vars['large_mode'] = $large_mode;
+  }
+  if (is_object($node) && $node->hasField('field_campaign')) {
+    if ($node->get('field_campaign')->value) {
+      // If campaign is true, force large mode also.
+      $large_mode = $node->get('field_campaign')->value;
+      $vars['large_mode'] = $large_mode;
+      $campaign_mode = $node->get('field_campaign')->value;
+      $vars['campaign_mode'] = $campaign_mode;
+    }
   }
 }
 
@@ -404,6 +414,7 @@ function aafctheme_preprocess_page_title__gcweb(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
   $vars['special_title'] = FALSE;
+  $vars['campaign_title'] = FALSE;
   if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
@@ -412,7 +423,36 @@ function aafctheme_preprocess_page_title__gcweb(&$vars) {
     $special_title = $node->get('field_special')->value;
     $vars['special_title'] = $special_title;
   }
+  if (is_object($node) && $node->hasField('field_campaign')) {
+    if ($node->get('field_campaign')->value) {
+      // If campaign is true, force special title mode also.
+      $special_title = $node->get('field_campaign')->value;
+      $vars['special_title'] = $special_title;
+      $campaign_title = $node->get('field_campaign')->value;
+      $vars['campaign_title'] = $campaign_title;
+    }
+  }
 
+}
+
+/**
+ * Implements hook_preprocess_menu__brand__gcweb().
+ */
+function aafctheme_preprocess_menu__brand__gcweb(&$vars) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  if (is_string($node) && is_numeric($node)) {
+    $nid = $node;
+    $node = $node_storage->load($nid);
+  }
+  $vars['campaign_mode'] = FALSE;
+  $vars['campaign_mode'] = TRUE;
+  if (is_object($node) && $node->hasField('field_campaign')) {
+    if ($node->get('field_campaign')->value) {
+      $campaign_mode = $node->get('field_campaign')->value;
+      $vars['campaign_mode'] = $campaign_mode;
+    }
+  }
 }
 
 /**
@@ -440,6 +480,7 @@ function aafctheme_preprocess_region__content_footer__gcweb(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
   $vars['large_mode'] = FALSE;
+  $vars['campaign_mode'] = FALSE;
   if (is_string($node) && is_numeric($node)) {
     $nid = $node;
     $node = $node_storage->load($nid);
@@ -447,6 +488,14 @@ function aafctheme_preprocess_region__content_footer__gcweb(&$vars) {
   if (is_object($node) && $node->hasField('field_large')) {
     $large_mode = $node->get('field_large')->value;
     $vars['large_mode'] = $large_mode;
+  }
+  if (is_object($node) && $node->hasField('field_campaign')) {
+    $campaign_mode = $node->get('field_campaign')->value;
+    $vars['campaign_mode'] = $campaign_mode;
+    $block = \Drupal\block\Entity\Block::load('aafctheme_datemodifiedblock');
+    $vars['date_modified'] = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block);
   }
 
 }

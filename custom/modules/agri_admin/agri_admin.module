@@ -91,7 +91,51 @@ function agri_admin_page_attachments(array &$page) {
         $page['#attached']['drupalSettings']['special']['media_entity_id'] = $entity_id;
       }
       else {
+        $page['#attached']['drupalSettings']['campaign']['found_demo_topic'] = FALSE;
         $page['#attached']['drupalSettings']['special']['found_demo_topic'] = FALSE;
+      }
+
+      $image_names = [
+        'wl-web-top-banner-1920x300-EN.jpg',
+        'wl-web-top-banner-1920x300-FR.jpg',
+        'wl-web-top-banner-960x300-EN.jpg',
+        'wl-web-top-banner-960x300-FR.jpg',
+        'wl-web-top-banner-500x250-EN.jpg',
+        'wl-web-top-banner-500x250-FR.jpg',
+        'calendar-events-EN.jpg',
+        'calendar-events-FR.jpg',
+        'winterlude-national-ice-carving-championship-EN.jpg',
+        'winterlude-national-ice-carving-championship-FR.jpg',
+        'winterlude-olg-logo-450x450-EN.png',
+        'winterlude-olg-logo-450x450-FR.png',
+        'winterlude-sites-EN.jpg',
+        'winterlude-sites-FR.jpg',
+        'icon-facebook-white-EN.png',
+        'icon-facebook-white-FR.png',
+        'icon-instagram-white-EN.png',
+        'icon-instagram-white-FR.png',
+        'icon-twitter-white-EN.png',
+        'icon-twitter-white-FR.png',
+        'icon-youtube-white-EN.png',
+        'icon-youtube-white-FR.png',
+        'Timhortons450x450-EN.jpg',
+        'Timhortons450x450-FR.jpg',
+        'WL2022_WelcomePageDeco_TopDarkBlue-EN.jpg',
+        'WL2022_WelcomePageDeco_TopDarkBlue-FR.jpg',
+      ];
+      foreach($image_names as $image_name) {
+        $image_selector = substr($image_name, 1);
+        $image_index = substr($image_name, 0, (strlen($image_name)-4));
+        if (AgriAdminHelper::getCampaignImageUuidAndEntityId($uuid, $entity_id, $image_selector)) {
+          $image_index = str_replace('-', '_', $image_index);
+          $page['#attached']['drupalSettings']['campaign'][$image_index]['found'] = TRUE;
+          $page['#attached']['drupalSettings']['campaign'][$image_index]['media_uuid'] = $uuid;
+          $page['#attached']['drupalSettings']['campaign'][$image_index]['media_entity_id'] = $entity_id;
+        }
+        else {
+          AgriAdminHelper::addToLog($image_name . ' was not found, please notify product stakeholders.', TRUE);
+          $page['#attached']['drupalSettings']['campaign'][$image_name]['found'] = FALSE;
+        }
       }
     }
   }
@@ -726,11 +770,10 @@ function agri_admin_form_node_form_alter(&$form, FormStateInterface $form_state,
     // For page and landing page edit/add css.
     $form['#attached']['library'][] = 'agri_admin/page';
     // Add validation functionality to prevent the broken links or misused linkit before the page is published.
-    // if ($content_type == 'page' || $content_type == 'landing_page') {.
     $form['#validate'][] = 'agri_admin_publishpage_referredlinks_validation';
     // For page and landing page edit/add js.
+    $form['#attached']['library'][] = 'agri_admin/campaign';
     $form['#attached']['library'][] = 'agri_admin/special';
-    // }
     // Attached agri_admin_form_page_submit event handler to page, landing page
     $moderation_state = $entity->moderation_state->value;
     if ($moderation_state == 'archived') {
