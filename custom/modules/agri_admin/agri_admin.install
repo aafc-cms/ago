@@ -366,3 +366,81 @@ function agri_admin_update_8007() {
   }
 
 }
+
+/**
+ * Make sure all nodes have special and campaign saved so we can filter by it.
+ */
+function agri_admin_update_8008() {
+
+  $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
+
+  $nids = $nodeStorage->getQuery()->execute();
+  if (count($nids) > 0) {
+    AgriAdminHelper::addToLog(count($nids) . ' nodes will be processed immediately.', TRUE);
+  }
+  $idx = 0;
+  //content_moderation_notifications.content_moderation_notification.published_notification status false -y
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('content_moderation_notifications.content_moderation_notification.published_notification');
+  // Disable notifications during cron run, 2500 emails to avoid.
+  $config->set('status', FALSE);
+  $config->save(TRUE);
+  drupal_flush_all_caches();
+  $error_once = FALSE;
+  foreach ($nids as $nid) {
+    $idx++;
+    if ($idx % 50 == 0) {
+      AgriAdminHelper::addToLog($idx . ' nodes have been processed.', TRUE);
+    }
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+    if ($node->bundle() == 'dir_listing') {
+      AgriAdminHelper::addToLog($nid . " is a dir_listing node, skipped", TRUE);
+      continue;
+    }
+    $node->set('moderation_state', 'published');
+    if (!$node->hasField('field_campaign') || !$node->hasField('field_large') || !$node->hasField('field_special')) {
+      // Re-enable notifications in case of failure/error.
+      $error_once = TRUE;
+      $config->set('status', TRUE);
+      $config->save(TRUE);
+      AgriAdminHelper::addWarning('WARNING, field_campaign does not yet exist, run this command:');
+      AgriAdminHelper::addWarning('drush ev "Drupal::keyValue(\'system.schema\')->set(\'agri_admin\', (int) 8007)";');
+      AgriAdminHelper::addError('ERROR in agri_admin_update_8008() see above messages.');
+      break;
+    }
+    if ($node->get('field_campaign')->value) {
+      $node->set('field_campaign', TRUE);
+    }
+    else {
+      $node->set('field_campaign', FALSE);
+    }
+    if ($node->get('field_special')->value) {
+      $node->set('field_special', TRUE);
+    }
+    else {
+      $node->set('field_special', FALSE);
+    }
+    if ($node->get('field_large')->value) {
+      $node->set('field_large', TRUE);
+    }
+    else {
+      $node->set('field_large', FALSE);
+    }
+    if ($error_once) {
+      $error_once = FALSE;
+      // Re-disable notifications.
+      $config->set('status', FALSE);
+      $config->save(TRUE);
+      drupal_flush_all_caches();
+    }
+    $node->save(); // Trigger save, this will store field_campaign .
+  }
+  // Re-enable notifications.
+  $config->set('status', TRUE);
+  $config->save(TRUE);
+  //content_moderation_notifications.content_moderation_notification.published_notification status true -y
+  if (count($nids) > 0) {
+    AgriAdminHelper::addToLog(count($nids) . ' total nodes were processed.', TRUE);
+  }
+
+}

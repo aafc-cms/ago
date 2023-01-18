@@ -1,0 +1,23 @@
+uuid: f96c2316-5bf9-4675-aea8-358069c4a2c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_large
+    - node.type.webform
+id: node.webform.field_large
+field_name: field_large
+entity_type: node
+bundle: webform
+label: 'Large mode'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

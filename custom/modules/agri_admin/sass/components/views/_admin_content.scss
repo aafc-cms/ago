@@ -1,6 +1,10 @@
 @charset "UTF-8";
 body.path-admin {
   .view-content {
+    fieldset[data-drupal-selector=edit-field-campaign-value],
+    fieldset[data-drupal-selector=edit-field-special-value] {
+      margin-top: 1em;
+    }
     .form-item--field-tracking-number-value,
     .form-item--type,
     .form-item--name {

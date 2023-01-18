@@ -29,6 +29,20 @@ class AgriAdminHelper {
   }
 
   /**
+   * Log something to the dblog (drush wd-show to see it).
+   */
+  public static function addError($message) {
+    \Drupal::logger('agri_admin')->error($message);
+  }
+
+  /**
+   * Log something to the dblog (drush wd-show to see it).
+   */
+  public static function addWarning($message) {
+    \Drupal::logger('agri_admin')->warning($message);
+  }
+
+  /**
    * Automatically translate menu links in french if not already translated.
    */
   public static function postCreateOrUpdateAutoTranslate($action, $entity_id, $bundle) {
