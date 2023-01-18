@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEE,uGAAqC;EACnC,OAAO,EAAE,IAAI;;AAEf,6EAAwB;EACtB,OAAO,EAAE,IAAI;;;ACFjB,oCAAqC;EACnC,mBAAoB;IAClB,KAAK,EAAE,GAAG;IACV,KAAK,EAAE,IAAI;;;EAEb,oBAAqB;IACnB,KAAK,EAAE,GAAG;IACV,KAAK,EAAE,KAAK;;;AAId,6DAAyC;EACvC,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,GAAG",
-"sources": ["../sass/components/input/_date.scss","../sass/page-edit.scss"],
+"mappings": "AAEE,uGAAqC;EACnC,OAAO,EAAE,IAAI;;AAEf,6EAAwB;EACtB,OAAO,EAAE,IAAI;;;ACLjB,2CAA4C;EAC1C,UAAU,EAAE,MAAM;;AAClB,sEAA2B;EACzB,OAAO,EAAE,IAAI;;;ACCjB,oCAAqC;EACnC,mBAAoB;IAClB,KAAK,EAAE,GAAG;IACV,KAAK,EAAE,IAAI;;;EAEb,oBAAqB;IACnB,KAAK,EAAE,GAAG;IACV,KAAK,EAAE,KAAK;;;AAId,6DAAyC;EACvC,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,GAAG",
+"sources": ["../sass/components/input/_date.scss","../sass/components/input/_campaign_color.scss","../sass/page-edit.scss"],
 "names": [],
 "file": "page-edit.css"
 }

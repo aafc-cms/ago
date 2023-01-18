@@ -63,6 +63,16 @@ var Campaign = function() {
     Campaign.campaignsettings = drupalSettings.campaign;
     $(document).ready(function() {
 
+      if ($("body").hasClass('node-edit')) {
+        if (!$("#edit-field-campaign-value").is(':checked') &&
+          !$("#edit-field-special-value").is(':checked') &&
+          !$("#edit-field-large-value").is(':checked')) {
+          var groupOptions = "#edit-group-title-options";
+          $(groupOptions).removeAttr('open');
+          $(groupOptions).find("summary.claro-details__summary").attr('aria-expanded', false);
+          $(groupOptions).find("summary.claro-details__summary").attr('aria-pressed', false);
+        }
+      }
       if ($("#edit-field-campaign-value").is(':checked')) {
         Campaign.campaignChecked = true;
         $("#edit-field-special-value").attr('disabled', true);
@@ -74,8 +84,29 @@ var Campaign = function() {
       }
       if ($("#edit-field-large-value").is(':checked')) {
         Campaign.largeModeChecked = true;
+        $("#edit-field-campaign-value").attr('disabled', true);
       }
 
+      $("#edit-field-large-value").change(function() {
+        if (!$("#edit-field-large-value").is(':checked') &&
+          !$("#edit-field-special-value").is(':checked')
+        ) {
+          $("#edit-field-campaign-value").removeAttr('disabled');
+        }
+        else {
+          $("#edit-field-campaign-value").attr('disabled', true);
+        }
+      });
+      $("#edit-field-special-value").change(function() {
+        if (!$("#edit-field-large-value").is(':checked') &&
+          !$("#edit-field-special-value").is(':checked')
+        ) {
+          $("#edit-field-campaign-value").removeAttr('disabled');
+        }
+        else {
+          $("#edit-field-campaign-value").attr('disabled', true);
+        }
+      });
       //$("#edit-title-0-value").keyup(function() {
       $("#edit-title-0-value").change(function() {
         if (Campaign.campaignChecked) {
@@ -103,6 +134,7 @@ var Campaign = function() {
         }
       });
 
+
       $("#edit-field-campaign-value").change(function() {
 
         if (this.checked) {
@@ -110,6 +142,10 @@ var Campaign = function() {
           if ($("#edit-field-special-value").is(':checked')) {
             $("#edit-field-special-value").trigger('click');
             $("#edit-field-special-value").trigger('change');
+          }
+          if ($("#edit-field-large-value").is(':checked')) {
+            $("#edit-field-large-value").trigger('click');
+            $("#edit-field-large-value").trigger('change');
           }
           $("#edit-field-special-value").attr('disabled', true);
           $("#edit-field-large-value").attr('disabled', true);

@@ -5,6 +5,13 @@ body.node-edit .hidden-input-box input, body.node-add .hidden-input-box input {
   display: none;
 }
 
+div.form-item--field-campaign-color-0-value {
+  visibility: hidden;
+}
+div.form-item--field-campaign-color-0-value div.form-item__description {
+  display: none;
+}
+
 @media screen and (min-width: 992px) {
   #edit-group-special {
     width: 49%;

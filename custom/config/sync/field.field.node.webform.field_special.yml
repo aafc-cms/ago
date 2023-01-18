@@ -1,0 +1,23 @@
+uuid: ba9585b2-47bc-49a3-b4a1-3138ceed9d96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special
+    - node.type.webform
+id: node.webform.field_special
+field_name: field_special
+entity_type: node
+bundle: webform
+label: 'Special Title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

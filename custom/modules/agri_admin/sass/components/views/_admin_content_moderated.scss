@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-body.path-admin.admincontentmoderated {
+div.view.view-moderated-content {
+  fieldset[data-drupal-selector=edit-field-campaign-value],
+  fieldset[data-drupal-selector=edit-field-special-value] {
+    margin-top: 1em;
+  }
   .view-filters {
     .form-item--field-tracking-number-value,
     .form-item--type,

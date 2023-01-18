@@ -364,6 +364,10 @@ body.role-is-editor table#taxonomy tr[data-drupal-selector*="blog-freetags"] {
   display: none;
 }
 
+body.path-admin .view-content fieldset[data-drupal-selector=edit-field-campaign-value],
+body.path-admin .view-content fieldset[data-drupal-selector=edit-field-special-value] {
+  margin-top: 1em;
+}
 body.path-admin .view-content .form-item--field-tracking-number-value,
 body.path-admin .view-content .form-item--type,
 body.path-admin .view-content .form-item--name {
@@ -420,20 +424,24 @@ body.path-admin .view-filters .form-actions .button {
   margin-left: 15px;
 }
 
-body.path-admin.admincontentmoderated .view-filters .form-item--field-tracking-number-value,
-body.path-admin.admincontentmoderated .view-filters .form-item--type,
-body.path-admin.admincontentmoderated .view-filters .form-item--name {
+div.view.view-moderated-content fieldset[data-drupal-selector=edit-field-campaign-value],
+div.view.view-moderated-content fieldset[data-drupal-selector=edit-field-special-value] {
+  margin-top: 1em;
+}
+div.view.view-moderated-content .view-filters .form-item--field-tracking-number-value,
+div.view.view-moderated-content .view-filters .form-item--type,
+div.view.view-moderated-content .view-filters .form-item--name {
   max-width: 200px;
 }
-body.path-admin.admincontentmoderated .view-filters .form-item--nid {
+div.view.view-moderated-content .view-filters .form-item--nid {
   max-width: 100px;
 }
-body.path-admin.admincontentmoderated .view-filters .form-item--langcode {
+div.view.view-moderated-content .view-filters .form-item--langcode {
   max-width: 160px;
 }
-body.path-admin.admincontentmoderated .view-filters .form-item--field-subject-target-id,
-body.path-admin.admincontentmoderated .view-filters .form-item--field-meta-type-target-id,
-body.path-admin.admincontentmoderated .view-filters .form-item--field-newstype-target-id {
+div.view.view-moderated-content .view-filters .form-item--field-subject-target-id,
+div.view.view-moderated-content .view-filters .form-item--field-meta-type-target-id,
+div.view.view-moderated-content .view-filters .form-item--field-newstype-target-id {
   max-width: 250px;
 }
 
