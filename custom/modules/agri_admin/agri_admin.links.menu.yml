@@ -1,0 +1,5 @@
+agri_admin.settings_aafc:
+  title: Settings AAFC
+  parent: system.admin_config_ui
+  route_name: agri_admin.settings_aafc
+  weight: 10

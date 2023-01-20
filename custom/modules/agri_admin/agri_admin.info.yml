@@ -3,6 +3,7 @@ description: 'Provides general administration features for AAFCOnline.'
 package: AAFC
 type: module
 core: 8.x
+configure: agri_admin.settings_aafc
 core_version_requirement: ^8 || ^9
 dependencies:
   - drupal:menu_link_content
