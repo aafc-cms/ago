@@ -5,3 +5,11 @@ agri_admin.legacydcr:
     _controller: '\Drupal\agri_admin\Controller\LegacySupportController::build'
   requirements:
     _permission: 'aafc admin styles'
+
+agri_admin.settings_aafc:
+  path: '/admin/config/system/aafc-campaign-settings'
+  defaults:
+    _title: 'AAFC Interface settings'
+    _form: 'Drupal\agri_admin\Form\AafcCampaignSettings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -451,6 +451,9 @@ function aafctheme_preprocess_menu__brand_fr(&$vars) {
       $campaign_mode = $node->get('field_campaign')->value;
       $vars['campaign_mode'] = $campaign_mode;
     }
+    if (\Drupal::config('agri_admin.settings')->get('campaign_footer_branding')) {
+      $vars['campaign_mode'] = FALSE;
+    }
   }
 }
 
@@ -469,6 +472,9 @@ function aafctheme_preprocess_menu__brand__gcweb(&$vars) {
     if ($node->get('field_campaign')->value) {
       $campaign_mode = $node->get('field_campaign')->value;
       $vars['campaign_mode'] = $campaign_mode;
+    }
+    if (\Drupal::config('agri_admin.settings')->get('campaign_footer_branding')) {
+      $vars['campaign_mode'] = FALSE;
     }
   }
 }
