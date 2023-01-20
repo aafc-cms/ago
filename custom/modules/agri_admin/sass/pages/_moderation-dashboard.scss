@@ -20,6 +20,11 @@ body.i18n-en[class*=moderationdashboard] {
   div.moderation-dashboard h2 {
     font-size: 16px;
     font-weight: bold;
+    font-family: inherit;
+  }
+  div.moderation-dashboard .form-group {
+    font-size: 16px;
+    line-height: 1.5em;
   }
 }
 
@@ -27,5 +32,10 @@ body.i18n-fr[class*=moderationdashboard] {
   div.moderation-dashboard h2 {
     font-size: 16px;
     font-weight: bold;
+    font-family: inherit;
+  }
+  div.moderation-dashboard .form-group {
+    font-size: 16px;
+    line-height: 1.5em;
   }
 }
