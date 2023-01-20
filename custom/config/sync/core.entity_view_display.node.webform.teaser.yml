@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.webform.body
+    - field.field.node.webform.field_campaign
+    - field.field.node.webform.field_large
+    - field.field.node.webform.field_special
     - field.field.node.webform.webform
     - node.type.webform
   module:
@@ -31,5 +34,8 @@ content:
     weight: 100
     region: content
 hidden:
+  field_campaign: true
+  field_large: true
+  field_special: true
   langcode: true
   webform: true

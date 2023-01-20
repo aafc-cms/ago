@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.webform.body
+    - field.field.node.webform.field_campaign
+    - field.field.node.webform.field_large
+    - field.field.node.webform.field_special
     - field.field.node.webform.webform
     - node.type.webform
   module:
@@ -22,12 +25,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
   webform:
     type: webform_entity_reference_entity_view
@@ -35,7 +38,10 @@ content:
     settings:
       source_entity: true
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
 hidden:
+  field_campaign: true
+  field_large: true
+  field_special: true
   langcode: true
