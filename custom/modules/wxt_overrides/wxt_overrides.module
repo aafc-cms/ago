@@ -83,15 +83,6 @@ function wxt_overrides_page_attachments(array &$page) {
         'content'   => 'eng',
       ],
     ];
-
-    $dctermsservice = [
-      '#tag' => 'meta',
-      '#attributes' => [
-        'property'  => 'dcterms:service',
-        'title'     => '',
-        'content'   => 'AAFC-AAC',
-      ],
-    ];
   }
 
   if ($langId == 'fr') {
@@ -103,15 +94,6 @@ function wxt_overrides_page_attachments(array &$page) {
         'content'   => 'fra',
       ],
     ];
-
-    $dctermsservice = [
-      '#tag' => 'meta',
-      '#attributes' => [
-        'property'  => 'dcterms:service',
-        'title'     => '',
-        'content'   => 'AAFC-AAC',
-      ],
-    ];
   }
 
   $page['#attached']['html_head'][] = [
@@ -121,10 +103,6 @@ function wxt_overrides_page_attachments(array &$page) {
   $page['#attached']['html_head'][] = [
     $dctermslanguage,
     'dcterms:language',
-  ];
-  $page['#attached']['html_head'][] = [
-    $dctermsservice,
-    'dcterms:service',
   ];
 
   $node = \Drupal::routeMatch()->getRawParameter('node');
