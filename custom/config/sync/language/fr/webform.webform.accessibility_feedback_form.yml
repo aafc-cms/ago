@@ -1,0 +1,47 @@
+title: 'Formulaire de rétroaction sur l''accessibilité'
+description: 'Ce formulaire est dupliqu&eacute; du formulaire de contact'
+category: rétroaction
+elements: |
+  descriptionoffeedbackform:
+    '#text': "<div class=\"row mrgn-tp-lg\">\r\n<div class=\"col-md-8\">\r\n<p>Fournissez une rétroaction sur le plan d’accessibilité d’Agriculture et Agroalimentaire Canada (AAC), les obstacles que vous avez rencontrés ou toute question liée à l'accessibilité.</p>\r\n\r\n<p>Vous pouvez consulter le <a data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"fbcff315-de86-42ad-aced-abaae341cd61\" href=\"/node/3061\">processus de rétroaction</a> sur l’accessibilité pour découvrir d’autres façons de fournir une rétroaction et comment nous utilisons votre rétroaction.</p>\r\n\r\n<details class=\"mrgn-tp-lg\"><summary>Avis de confidentialité </summary>\r\n\r\n<div class=\"row mrgn-tp-lg\">\r\n<div class=\"col-md-12\">\r\n<p>La collecte de renseignements personnels est autorisée par l'article 7(1)(a) et l'article 70 de la <em>Loi sur l'accessibilité du Canada</em>. Ces renseignements personnels sont recueillis par le Bureau de l'accessibilité pour se conformer à la <em>Loi sur l'accessibilité du Canada</em> en créant un mécanisme de collecte des commentaires et en étant en mesure de répondre à la personne concernée et de reconnaître que ses commentaires ont été recueillis et comment ils ont été traités.</p>\r\n\r\n<p>La collecte et l'utilisation de ces informations personnelles sont conformes à <em>la Loi sur la protection des renseignements personnels</em>. Ce mécanisme est utilisé pour recueillir des commentaires internes et externes sur notre plan d'accessibilité, les futurs rapports d'avancement, ainsi que l'accessibilité et les obstacles à l'accessibilité dans le cadre du travail effectué dans chaque service.</p>\r\n\r\n<p>Les renseignements personnels recueillis sont décrits dans le fichier de renseignements personnels POU 938 - Activités de sensibilisation et seront conservés pendant 7 ans. En vertu de la <em>Loi sur la protection des renseignements personnels</em>, vous avez le droit d'accéder à vos renseignements personnels et de les corriger. Pour exercer l'un ou l'autre de ces droits, communiquez avec le coordonnateur de l'AIPRP d'AAC. Si vous n'êtes pas satisfait de la réponse d'AAC à vos préoccupations en matière de protection des renseignements personnels, vous pouvez communiquer avec le Commissariat à la protection de la vie privée du Canada.</p>\r\n\r\n<h2 class=\"h3\">Coordonnées</h2>\r\n\r\n<ul class=\"mrgn-tp-lg\">\r\n\t<li><a href=\"\">Bureau de l'accès à l'information et de la protection des renseignements personnels d'AAC</a></li>\r\n\t<li><a href=\"https://www.priv.gc.ca/fr/\">Commissariat à la protection de la vie privée du Canada</a></li>\r\n</ul>\r\n\r\n<h2 class=\"h3\">References</h2>\r\n\r\n<ul class=\"mrgn-tp-lg\">\r\n\t<li><a href=\"https://www.laws-lois.justice.gc.ca/fra/lois/a-0.6/\">Loi canadienne sur l'accessibilité</a>\r\n\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.laws-lois.justice.gc.ca/fra/lois/a-0.6/page-1.html#h-1139882\">Article 7(1)(a)</a></li>\r\n\t\t<li><a href=\"https://www.laws-lois.justice.gc.ca/fra/lois/a-0.6/page-5.html#h-1140478\">Article 70</a></li>\r\n\t</ul>\r\n\t</li>\r\n\t<li><a href=\"https://laws-lois.justice.gc.ca/ENG/ACTS/P-21/index.html\">Loi sur la protection des renseignements personnels</a></li>\r\n\t<li><a href=\"https://www.canada.ca/fr/secretariat-conseil-tresor/services/acces-information-protection-reseignements-personnels/acces-information/renseignements-programmes-fonds-renseignements/fichiers-renseignements-personnels-ordinaires.html#pou938\">Fichier de renseignements personnels POU 938 - Activités de sensibilisation</a></li>\r\n</ul>\r\n</div>\r\n</div>\r\n</details>\r\n</div>\r\n</div>\r\n"
+  1_what_do_you_want_to_provide_feedback_on_:
+    '#title': '1. Sur quoi souhaitez-vous fournir une rétroaction? '
+    '#options':
+      'Accessibility barrier': 'Obstacle à l’accessibilité'
+      'AAFC''s Accessibility Plan': 'Plan sur l’accessibilité d’AAC'
+    '#other__option_label': 'Autre élément'
+    '#other__title': 'Décrivez l’élément sur lequel vous souhaitez fournir une rétroaction'
+    '#required_error': 'Ce champ est obligatoire.'
+  2_select_all_the_areas_that_are_relevant_to_your_comments:
+    '#title': '2. Sélectionnez tous les domaines pertinents pour vos commentaires.'
+    '#options':
+      'Physical environment (door knob, ramp, elevator, etc.)': 'Environnement physique (poignée de porte, rampe, ascenseur, etc.)'
+      'Employment (recruitment processes, etc.)': 'Emploi (p. ex. processus de recrutement)'
+      'Technology (websites, software applications, etc.)': 'Technologie (sites Web, applications logicielles, etc.)'
+      'Attitude (biases, micro aggressions, related to my mental health, etc.)': 'Attitude (préjugés, microagressions, aspect lié à ma santé mentale, etc.)'
+      'Information and communication (forms, plain language, bilingualism, etc.)': 'Information et communication (formulaires, langage simple, bilinguisme, etc.)'
+      'Systemic exclusion (events, policies, procedures, etc.)': 'Exclusion systémique (des événements, des politiques, des procédures, etc.)'
+      'Procurement (bidding for contracts, etc.)': 'Approvisionnement (appel d’offres pour des contrats, etc.)'
+    '#other__option_label': 'Autre domaine'
+    '#other__title': 'Décrivez le domaine sur lequel vous souhaitez fournir une rétroaction'
+  3_describe_the_issue_and_provide_comments_:
+    '#title': '3. Décrivez le problème et fournissez des commentaires. '
+    '#description': '<p>N&rsquo;incluez pas de renseignements qui pourraient identifier une personne.</p>'
+    '#required_error': 'Ce champ est obligatoire.'
+  4_do_you_want_us_to_contact_you_about_your_feedback_:
+    '#title': '4. Souhaitez-vous que nous communiquions avec vous au sujet de votre rétroaction? '
+    '#options':
+      'No': Non
+      'Yes': 'Oui, je suis d’accord pour fournir mon adresse de courriel à des fins de contact uniquement (Oui)'
+    '#required_error': 'Ce champ est obligatoire.'
+  email_address_yourname_domain_com_:
+    '#title': 'Adresse de courriel (votrenom@domaine.com)'
+    '#description': 'Votre adresse de courriel ne sera utilis&eacute;e que pour communiquer avec vous. Elle ne sera pas transmise.'
+    '#required_error': 'Ce champ est obligatoire.'
+  actions:
+    '#submit__label': 'Soumettre la rétroaction'
+    '#delete__label': Annuler
+  cancel_link:
+    '#text': "<p><a data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"80e5865f-ed37-4491-80de-3f16f5c04b14\" href=\"/node/1\">Annuler</a></p>\r\n"
+settings:
+  confirmation_message: "<h1>Votre r&eacute;troaction a &eacute;t&eacute; soumise</h1>\r\n\r\n<p>Nous vous remercions pour votre r&eacute;troaction. Si vous avez fourni une adresse de courriel, vous recevrez une r&eacute;ponse dans les cinq jours ouvrables. Sinon, vous ne recevrez pas de r&eacute;ponse.</p>\r\n\r\n<p>D&eacute;couvrez comment AAC utilise les r&eacute;troactions sur l&rsquo;accessibilit&eacute; en consultant la description de notre processus.</p>\r\n\r\n<p><a href=\"/fr/node/3061\">Processus de r&eacute;troaction sur l&rsquo;accessibilit&eacute;</a></p>"
