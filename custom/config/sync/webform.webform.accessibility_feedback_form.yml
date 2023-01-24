@@ -1,0 +1,489 @@
+uuid: 5b2fa98d-65b4-4582-ad80-6dc3b545784d
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 70
+template: false
+archive: false
+id: accessibility_feedback_form
+title: 'Accessibility feedback form'
+description: 'This form is duplicated from Contact Form'
+category: feedback
+elements: |-
+  '#prefix': '<div class="custom-wrapper wb-frmvld">'
+  '#suffix': '</div>'
+  descriptionoffeedbackform:
+    '#type': processed_text
+    '#text': |-
+      <div class="row mrgn-tp-lg">
+        <div class="col-md-8">
+          <p>Provide feedback on Agriculture and Agri-Food Canada’s (AAFC) accessibility plan, barriers you have experienced, or any matter related to accessibility.</p>
+          <p>You can consult the <a href="feedback-process.html">Accessibility feedback process</a> for other ways to provide feedback and how we use your feedback.</p>
+          <details class="mrgn-tp-lg">
+            <summary>Privacy disclaimer</summary>
+            <div class="row mrgn-tp-lg">
+              <div class="col-md-12">
+                <p>The collection of personal information is authorized by section 7(1)(a) and Section 70 of the <em>Accessible Canada Act</em>.  This personal information is collected by the Accessibility Office to comply with the <em>Accessible Canada Act</em> by creating a mechanism to collect feedback and be able to respond back to the individual and acknowledge that their feedback has been collected and how it was handled.</p>
+                <p>Collection and use of this personal information is in accordance with the <em>Privacy Act</em>. The mechanism is used to collect feedback internally and externally on our Accessibility Plan, future progress reports, as well as accessibility and barriers to accessibility within the work carried out in each department.</p>
+                <p>The personal information collected is described in Personal Information Bank PSU 938 – 
+                  Outreach Activities and will be retained for 7 years. Under the <em>Privacy Act</em> you have the right of access to, and correction of, your personal information. To exercise either of these rights, contact AAFC’s ATIP Coordinator. If you are not satisfied with AAFC’s response to your privacy concern, you may wish to Contact the Office of the Privacy Commissioner of Canada.</p>
+                <h2 class="h3">Contact information</h2>
+                <ul class="mrgn-tp-lg">
+                  <li><a href="https://agriculture.canada.ca/en/about-our-department/transparency-and-corporate-reporting/access-information-and-protection-privacy-agriculture-and-agri-food-canada">AAFC’s Access to Information and Privacy Office</a></li>
+                  <li><a href="https://www.priv.gc.ca/en/contact-the-opc/">Contact the Office of the Privacy Commissioner of Canada</a></li>
+                </ul>
+                <h2 class="h3">References</h2>
+                <ul class="mrgn-tp-lg">
+                  <li><a href="https://www.laws-lois.justice.gc.ca/eng/acts/A-0.6/page-1.html">Accessible Canada Act</a>
+                    <ul>
+                      <li><a href="https://www.laws-lois.justice.gc.ca/eng/acts/A-0.6/page-1.html#h-1153444">section 7(1)(a)</a></li>
+                      <li><a href="https://www.laws-lois.justice.gc.ca/eng/acts/A-0.6/page-5.html#h-1154040">Section 70</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://laws-lois.justice.gc.ca/ENG/ACTS/P-21/index.html">Privacy Act</a></li>
+                  <li><a href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu938">Personal Information Bank PSU 938 – Outreach Activities</a></li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    '#format': full_html
+  1_what_do_you_want_to_provide_feedback_on_:
+    '#type': webform_radios_other
+    '#title': '1. What do you want to provide feedback on?'
+    '#options':
+      'Accessibility barrier': 'Accessibility barrier'
+      'AAFC''s Accessibility Plan': 'AAFC''s Accessibility Plan'
+    '#other__option_label': 'Other item'
+    '#other__title': 'Describe the item you want to provide feedback on'
+    '#other__placeholder': ''
+    '#required': true
+    '#required_error': 'This field is required.'
+  2_select_all_the_areas_that_are_relevant_to_your_comments:
+    '#type': webform_checkboxes_other
+    '#title': '2. Select all the areas that are relevant to your comments'
+    '#options':
+      'Physical environment (door knob, ramp, elevator, etc.)': 'Physical environment (door knob, ramp, elevator, etc.)'
+      'Employment (recruitment processes, etc.)': 'Employment (recruitment processes, etc.)'
+      'Technology (websites, software applications, etc.)': 'Technology (websites, software applications, etc.)'
+      'Attitude (biases, micro aggressions, related to my mental health, etc.)': 'Attitude (biases, micro aggressions, related to my mental health, etc.)'
+      'Information and communication (forms, plain language, bilingualism, etc.)': 'Information and communication (forms, plain language, bilingualism, etc.)'
+      'Systemic exclusion (events, policies, procedures, etc.)': 'Systemic exclusion (events, policies, procedures, etc.)'
+      'Procurement (bidding for contracts, etc.)': 'Procurement (bidding for contracts, etc.)'
+    '#other__option_label': 'Other area'
+    '#other__title': 'Describe the area you want to provide feedback on'
+    '#other__placeholder': ''
+  3_describe_the_issue_and_provide_comments_:
+    '#type': textarea
+    '#title': '3. Describe the issue and provide comments.'
+    '#description': '<p>Do not include information that could identify a person.</p>'
+    '#description_display': before
+    '#required': true
+    '#required_error': 'This field is required.'
+  4_do_you_want_us_to_contact_you_about_your_feedback_:
+    '#type': radios
+    '#title': '4. Do you want us to contact you about your feedback?'
+    '#options':
+      'No': 'No'
+      'Yes': 'Yes, I’m comfortable providing my email address for contact purposes only.'
+    '#required': true
+    '#required_error': 'This field is required.'
+  email_address_yourname_domain_com_:
+    '#type': email
+    '#title': 'Email address (yourname@domain.com) '
+    '#description': 'Your email address will only be used to contact you. It will not be shared.'
+    '#description_display': before
+    '#required': true
+    '#required_error': 'This field is required.'
+    '#states':
+      visible:
+        ':input[name="4_do_you_want_us_to_contact_you_about_your_feedback_"]':
+          value: 'Yes'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Submit feedback'
+    '#delete__label': Cancel
+  cancel_link:
+    '#type': processed_text
+    '#text': |
+      <p><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="80e5865f-ed37-4491-80de-3f16f5c04b14" href="/node/1">Cancel</a></p>
+    '#format': rich_text
+css: |-
+  div.form-item label.control-label.js-form-required.form-required,
+  fieldset span.fieldset-legend.js-form-required.form-required {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  section.alert-danger ul.item-list__comma-list li {
+    display: block;
+  }
+
+  div.form-item label.control-label.js-form-required.form-required::after,
+  fieldset span.fieldset-legend.js-form-required.form-required::after {
+    content: none;
+  }
+
+  div#edit-actions {
+    display: inline-block;
+    padding-right: 30px;
+  }
+
+  div#edit-cancel-link  {
+    display: inline-block;
+    padding-right: 30px;
+  }
+
+  div.form-item label.control-label.js-form-required.form-required,
+  fieldset span.fieldset-legend.js-form-required.form-required {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  div.form-item label.control-label.js-form-required.form-required::after,
+  fieldset span.fieldset-legend.js-form-required.form-required::after {
+    content: none;
+  }
+
+  .form-type-textarea label.form-required::before,
+  .webform-type-radios span.form-required::before,
+  .webform-radios-other span.form-required::before {
+    content: "";
+    background-image: url(/themes/custom/aafctheme/images/required.svg);
+    display: inline-block;
+    line-height: 1;
+    color: #e00;
+    background-size: 7px 7px;
+    width: 7px;
+    vertical-align: super;
+    margin-left: 4px;
+    height: 7px;
+    position: absolute;
+    top: 7px;
+    left: -15px;
+  }
+
+  .webform-element-description {
+    font-size: 16px;
+    color: #333;
+  }
+
+  div.region-content form div.form-item label[for="*-required-"]::after {
+    content: none;
+  }
+
+  div.region-content form label[for="*-required-"] {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  div.form-item--error-message.alert.alert-danger::before {
+    content: none;
+  }
+
+  div.form-item--error-message.alert.alert-danger {
+    border-image: none !important;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    font-weight: bold;
+    background: #f3e9e8;
+    border-color: #d3080c;
+  }
+
+  }
+  div.form-group.error.has-error label + div.select-wrapper {
+    margin-bottom: 0px;
+  }
+  div.form-group.error.has-error label + div.select-wrapper select.form-select {
+    width: 100%;
+  }
+
+  div.region.region-highlighted ul li {
+    display: block;
+  }
+  div.region.region-highlighted  ul li a {
+    display: list-item;
+    list-style-position: inside;
+    margin-top: 15px;
+  }
+  div.region.region-highlighted  ul li::after {
+    content: none;
+  }
+  div.region.region-highlighted  h2.sr-only {
+    position: relative;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+  }
+
+  section.alert-danger button.close, section.alert-danger button.close { display: none; }
+javascript: |
+  var erroredMessages = [];
+  $=jQuery;
+  if (jQuery('section.alert-danger').length) { 
+    $('section.alert-danger').removeAttr('role');
+    $('section.alert-danger').attr('tabindex', '-1');
+    $('section.alert-danger li a').first().trigger('focus');
+  }
+  setTimeout(function() {
+    var erroredElements = [];
+    $('section.alert-danger').removeAttr('role');
+    $('section.alert-danger').attr('tabindex', '-1');
+    $('section.alert-danger li a').first().trigger('focus');
+    var allErrors = jQuery('section.alert-danger ul a').each(function(index) {
+      erroredElements.push($(this).attr('href'));
+      erroredMessages.push(cleanErrorMessage($(this).text()));
+    });
+    erroredElements.forEach(addErrorToFieldset);
+  }, 500);
+  function addErrorToFieldset(item, index, arr) {
+    if (jQuery('fieldset' + item).length || $('fieldset' + item + '--wrapper').length) {
+      var errorHtml = '<div class="clearfix"></div><div class="form-item--error-message alert alert-danger alert-sm">' + erroredMessages[index] + '</div>';
+      $('fieldset' + item + '--wrapper').find(item).prepend(errorHtml);
+      $('fieldset' + item).find(item+'radios').prepend(errorHtml);
+    }
+  }
+  function cleanErrorMessage(text) {
+    const regex = /:  ([0-99])([^]*) - ([^]*)/gm;
+
+    // Alternative syntax using RegExp constructor
+    // const regex = new RegExp(':  ([0-99])([^\\-])*- ([^]*)', 'gm')
+    const str = text;
+    const subst = `: $3`;
+    // The substituted value will be contained in the result variable
+    const result = str.replace(regex, subst);
+    console.log('Substitution result: ', result);
+    return result; 
+  }
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: true
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: |-
+    <h1>Your feedback has been submitted</h1>
+    Thank you for your feedback. If you provided an email address, you will receive a response within 5 business days. Otherwise, you will not receive a response.
+
+    <p>Find out how AAFC uses accessibility feedback by consulting the description of our process.</p>
+
+    <p><a href="http://feedback-process">Accessibility feedback process</a></p>
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: true
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  contact_form_email:
+    id: email
+    handler_id: contact_form_email
+    label: 'Accessibility feedback form'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: huan.qi@agr.gc.ca
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: huan_qi@hotmail.com
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'AAFC: Accessibility feedback form - Formulaire de rétroaction sur l''accessibilité'
+      body: '[webform_submission:values]'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: false
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }
