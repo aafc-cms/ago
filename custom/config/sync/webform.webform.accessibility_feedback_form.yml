@@ -13,6 +13,8 @@ title: 'Accessibility feedback form'
 description: 'This form is duplicated from Contact Form'
 category: feedback
 elements: |-
+  '#prefix': '<div class="custom-wrapper wb-frmvld">'
+  '#suffix': '</div>'
   descriptionoffeedbackform:
     '#type': processed_text
     '#text': |-
