@@ -7,8 +7,10 @@ elements: |
     '#text': "<style type=\"text/css\">p {\r\n  font-size: 16px !important ;\r\n  }\r\n</style>\r\n<p class=\"text-danger\">* indique un champ obligatoire.</p>\r\n"
   requestor_name_required_:
     '#title': 'Nom du demandeur'
+    '#required_error': 'Ce champ est obligatoire.'
   email_address_required_:
     '#title': 'Adresse de courriel'
+    '#required_error': 'Ce champ est obligatoire.'
   phone_number_1613_666_6666_:
     '#title': 'Numéro de téléphone (+1613 666 6666)'
   language_of_preference:
@@ -22,6 +24,7 @@ elements: |
     '#options':
       'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon'
       'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan'
+    '#required_error': 'Ce champ est obligatoire.'
   for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
     '#title': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon.'
     '#options':

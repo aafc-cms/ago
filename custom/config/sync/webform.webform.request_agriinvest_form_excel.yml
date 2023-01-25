@@ -13,6 +13,8 @@ title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest)'
 description: 'Request AgriStability and AgriInvest forms in Excel&nbsp;(AgriInvest)'
 category: 'Services Request Form'
 elements: |-
+  '#prefix': '<div class="custom-wrapper wb-frmvld">'
+  '#suffix': '</div>'
   descriptionoffeedbackform:
     '#type': processed_text
     '#text': 'To receive the AgriStability and AgriInvest forms package in Excel, please complete the following online request form:'
@@ -30,10 +32,12 @@ elements: |-
     '#type': textfield
     '#title': 'Requestor name'
     '#required': true
+    '#required_error': 'This field is required.'
   email_address_required_:
     '#type': email
     '#title': 'Email address'
     '#required': true
+    '#required_error': 'This field is required.'
   phone_number_1613_666_6666_:
     '#type': tel
     '#title': 'Phone number (+1613 666 6666)'
@@ -53,6 +57,7 @@ elements: |-
       'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon'
       'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan'
     '#required': true
+    '#required_error': 'This field is required.'
   for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
     '#type': checkboxes
     '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon.'

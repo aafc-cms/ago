@@ -13,6 +13,8 @@ title: 'Request AgriStability and AgriInvest forms in Excel (AgriStability)'
 description: 'Request AgriStability and AgriInvest Forms in Excel&nbsp;(AgriStability)'
 category: 'Services Request Form'
 elements: |-
+  '#prefix': '<div class="custom-wrapper wb-frmvld">'
+  '#suffix': '</div>'
   descriptionoffeedbackform:
     '#type': processed_text
     '#text': |
@@ -31,10 +33,12 @@ elements: |-
     '#type': textfield
     '#title': 'Requestor name'
     '#required': true
+    '#required_error': 'This field is required.'
   email_address_required_:
     '#type': email
     '#title': 'Email address'
     '#required': true
+    '#required_error': 'This field is required.'
   phone_number_1613_666_6666_:
     '#type': tel
     '#title': 'Phone number (+1613 666 6666)'
@@ -54,6 +58,7 @@ elements: |-
       'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon'
       'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan'
     '#required': true
+    '#required_error': 'This field is required.'
   for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
     '#type': checkboxes
     '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon:'
@@ -61,6 +66,7 @@ elements: |-
       '2021 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2021 AgriStability and AgriInvest T1273 forms package for individuals.'
       '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
       '2022 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2022 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2022 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
+    '#required_error': 'This field is required.'
     '#states':
       visible-slide:
         ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
@@ -74,6 +80,7 @@ elements: |-
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan:'
     '#options':
       '2021 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2021 AgriStability and AgriInvest T1163 forms package for individuals.'
+    '#required_error': 'This field is required.'
     '#states':
       visible-slide:
         ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
