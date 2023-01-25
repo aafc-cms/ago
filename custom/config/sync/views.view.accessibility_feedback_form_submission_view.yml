@@ -1,4 +1,4 @@
-uuid: 16f86f32-b42d-44d4-b9e2-cc3009beda7e
+uuid: 5e325c54-241c-4b1a-aabf-03d54383ae63
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - system.menu.admin
     - user.role.administrator
     - user.role.pab_admin
-    - webform.webform.request_agriinvest_form_excel
+    - webform.webform.accessibility_feedback_form
   module:
     - csv_serialization
     - rest
@@ -15,8 +15,8 @@ dependencies:
     - views_data_export
     - webform
     - webform_views
-id: request_agristability_and_agriinvest_forms_in_excel_agriinvest_submission_view
-label: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission View'
+id: accessibility_feedback_form_submission_view
+label: 'Accessibility Feedback Form Submission View'
 module: views
 description: ''
 tag: ''
@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission Data'
+      title: 'Accessibility Feedback Form Submission View'
       fields:
         sid:
           id: sid
@@ -41,7 +41,7 @@ display:
           entity_type: webform_submission
           entity_field: sid
           plugin_id: field
-          label: '#'
+          label: 'Submission ID (#)'
           exclude: false
           alter:
             alter_text: false
@@ -297,13 +297,13 @@ display:
           field_api_classes: false
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_request_agriinvest_form_excel_requestor_name_required_
+          table: webform_submission_field_accessibility_feedback_form_1_what_do_you_want_to_provide_feedback_on_
           field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: webform_submission_field
-          label: 'Requestor name'
+          label: '1. What do you want to provide feedback on?'
           exclude: false
           alter:
             alter_text: false
@@ -350,13 +350,13 @@ display:
           webform_check_access: 1
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_request_agriinvest_form_excel_email_address_required_
+          table: webform_submission_field_accessibility_feedback_form_2_select_all_the_areas_that_are_relevant_to_your_comments
           field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: webform_submission_field
-          label: 'Email address'
+          label: '2. Select all the areas that are relevant to your comments'
           exclude: false
           alter:
             alter_text: false
@@ -397,19 +397,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          webform_element_format: link
+          webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
           webform_check_access: 1
         webform_submission_value_2:
           id: webform_submission_value_2
-          table: webform_submission_field_request_agriinvest_form_excel_phone_number_1613_666_6666_
+          table: webform_submission_field_accessibility_feedback_form_3_describe_the_issue_and_provide_comments_
           field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: webform_submission_field
-          label: 'Phone number'
+          label: '3. Describe the issue and provide comments.'
           exclude: false
           alter:
             alter_text: false
@@ -450,125 +450,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          webform_element_format: link
+          webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
           webform_check_access: 1
         webform_submission_value_3:
           id: webform_submission_value_3
-          table: webform_submission_field_request_agriinvest_form_excel_language_of_preference
+          table: webform_submission_field_accessibility_feedback_form_4_do_you_want_us_to_contact_you_about_your_feedback_
           field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: webform_submission_field
-          label: 'Language of preference'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          webform_element_format: value
-          webform_multiple_value: true
-          webform_multiple_delta: 0
-          webform_check_access: 1
-        webform_submission_value_4:
-          id: webform_submission_value_4
-          table: webform_submission_field_request_agriinvest_form_excel_for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc
-          field: webform_submission_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: webform_submission_field
-          label: 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon.'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          webform_element_format: value
-          webform_multiple_value: true
-          webform_multiple_delta: 0
-          webform_check_access: 1
-        webform_submission_value_5:
-          id: webform_submission_value_5
-          table: webform_submission_field_request_agriinvest_form_excel_for_producers_in_alberta_ontario_prince_edward_island_and_saskat
-          field: webform_submission_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: webform_submission_field
-          label: 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan.'
+          label: '4. Do you want us to contact you about your feedback?'
           exclude: false
           alter:
             alter_text: false
@@ -662,31 +556,12 @@ display:
           entity_field: webform_id
           plugin_id: bundle
           value:
-            request_agriinvest_form_excel: request_agriinvest_form_excel
+            accessibility_feedback_form: accessibility_feedback_form
           expose:
             operator_limit_selection: false
             operator_list: {  }
       style:
         type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          columns:
-            webform_submission_bulk_form: webform_submission_bulk_form
-          default: '-1'
-          info:
-            webform_submission_bulk_form:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          override: true
-          sticky: false
-          summary: ''
-          empty_table: false
-          caption: ''
-          description: ''
       row:
         type: fields
       query:
@@ -754,11 +629,11 @@ display:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      path: admin/structure/views/view/request_agristability_and_agriinvest_forms_in_excel_agriinvest_submission_view/edit/data_export
+      path: admin/structure/views/view/accessibility_feedback_form_submission_view/edit/data_export
       displays:
         page_1: page_1
         default: '0'
-      filename: request_agristability_and_agriinvest_forms_in_excel_agriinvest.csv
+      filename: accessibility_feedback_form.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -783,12 +658,12 @@ display:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      path: admin/views/request_agristability_and_agriinvest_forms_in_excel_agriinvest_submission_view
+      path: admin/views/accessibility-feedback-form-submission-view
       menu:
         type: normal
-        title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission Data'
-        description: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission Data'
-        weight: -10
+        title: 'Accessibility Feedback Form Submission Data'
+        description: ''
+        weight: -100
         expanded: false
         menu_name: admin
         parent: entity.webform.collection
