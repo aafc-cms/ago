@@ -755,6 +755,9 @@ display:
           metatags: {  }
           tokenize: false
       path: admin/structure/views/view/request_agristability_and_agriinvest_forms_in_excel_agriinvest_submission_view/edit/data_export
+      displays:
+        page_1: page_1
+        default: '0'
       filename: request_agristability_and_agriinvest_forms_in_excel_agriinvest.csv
       automatic_download: false
       store_in_public_file_directory: false
