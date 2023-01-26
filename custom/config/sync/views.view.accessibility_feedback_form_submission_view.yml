@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Accessibility Feedback Form Submission View'
+      title: 'Accessibility Feedback Form report'
       fields:
         sid:
           id: sid
@@ -545,7 +545,23 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: webform_submission
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: webform_submission
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         webform_id:
@@ -633,7 +649,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: accessibility_feedback_form.csv
+      filename: accessibility_feedback_form_report.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -661,7 +677,7 @@ display:
       path: admin/views/accessibility-feedback-form-submission-view
       menu:
         type: normal
-        title: 'Accessibility Feedback Form Submission Data'
+        title: 'Accessibility Feedback Form report'
         description: ''
         weight: -100
         expanded: false

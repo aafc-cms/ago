@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Request AgriStability and AgriInvest forms in Excel (AgriStability) Submission Data'
+      title: 'Request for AgriStability forms report'
       fields:
         sid:
           id: sid
@@ -755,7 +755,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: request_agristability_and_agriinvest_forms_in_excel_agristability_submission.csv
+      filename: request_agristability_and_agriinvest_forms_in_excel_agristability_report.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -783,7 +783,7 @@ display:
       path: admin/structure/views/view/request_agristability_and_agriinvest_forms_in_excel_agristability_submission_view/edit/data_export
       menu:
         type: normal
-        title: 'Request AgriStability and AgriInvest forms in Excel (AgriStability) Submission Data'
+        title: 'Request for AgriStability forms report'
         description: 'Request AgriStability and AgriInvest forms in Excel (AgriStability) Submission Data'
         weight: -10
         expanded: false

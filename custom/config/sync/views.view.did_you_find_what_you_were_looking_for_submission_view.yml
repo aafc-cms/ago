@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Did you find what you were looking for submission data'
+      title: 'Did you find what you were looking for report'
       fields:
         sid:
           id: sid
@@ -738,7 +738,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: did_you_find_what_you_were_looking_for_submission.csv
+      filename: did_you_find_what_you_were_looking_for_report.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -766,7 +766,7 @@ display:
       path: admin/views/did_you_find_what_you_were_looking_for_submission_view
       menu:
         type: normal
-        title: 'Did you find what you were looking for webform submission data'
+        title: 'Did you find what you were looking for report'
         description: 'Did you find what you were looking for webform submission data'
         weight: 0
         expanded: false

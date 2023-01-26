@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Report a problem on this page form submission data'
+      title: 'Report a problem on this page form report'
       fields:
         sid:
           id: sid
@@ -1138,7 +1138,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: report_a_problem_on_this_page_submission.csv
+      filename: report_a_problem_on_this_page_report.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -1166,8 +1166,8 @@ display:
       path: admin/views/report_a_problem_on_this_page_view
       menu:
         type: normal
-        title: 'Report a problem on this page submission data'
-        description: 'Report a problem on this page submission data'
+        title: 'Report a problem on this page report'
+        description: 'Report a problem on this page report'
         weight: -10
         expanded: false
         menu_name: admin
