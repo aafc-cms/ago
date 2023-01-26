@@ -190,30 +190,45 @@ var Campaign = function() {
         oldtitle = $('#edit-title-0-value').val();
         oldtitleother = $(Campaign.otherLangTitleSelector).val();
         var newJavascript = `<script type="text/javascript">
-  setTimeout(function() {
-    $=jQuery;
-    var mediaB = $('.wb-bar-b');
-    if ($(mediaB).length) {
-      $(mediaB).fadeOut('fast');
-    }
-    $(function() {
-      $('button.overlay-close').click(function() {
-        $('#bottom-bar').remove();
-      })
-      $(window).scroll(function () {
-        var mediaB = $('.wb-bar-b');
-        var mediaHeightB = $('.wb-bar-b').height();
-        var pgFootHeight = $('#pgft').height();
-        var scrollBottom = $(document).height() - $(this).height() - $(this).scrollTop();
-        var bottomFooterHeight = $('footer#wb-info').height();
-        if (scrollBottom > pgFootHeight + mediaHeightB + bottomFooterHeight) {
-          $(mediaB).fadeIn('fast');
-        } else {
-          $(mediaB).fadeOut('fast');
+function ready(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+    return;
+  }
+  document.addEventListener('DOMContentLoaded', fn);
+}
+ready(function() {
+  (function ($, Drupal, drupalSettings) {
+    Drupal.behaviors.campaignNode = {
+      attach: function (context, settings) {
+        if (context == document) {
+          $=jQuery;
+          var mediaB = $('.wb-bar-b');
+          if ($(mediaB).length) {
+            $(mediaB).fadeOut('fast');
+          }
+          $(function() {
+            $('button.overlay-close').click(function() {
+              $('#bottom-bar').remove();
+            })
+            $(window).scroll(function () {
+              var mediaB = $('.wb-bar-b');
+              var mediaHeightB = $('.wb-bar-b').height();
+              var pgFootHeight = $('#pgft').height();
+              var scrollBottom = $(document).height() - $(this).height() - $(this).scrollTop();
+              var bottomFooterHeight = $('footer#wb-info').height();
+              if (scrollBottom > pgFootHeight + mediaHeightB + bottomFooterHeight) {
+                $(mediaB).fadeIn('fast');
+              } else {
+                $(mediaB).fadeOut('fast');
+              }
+            });
+          });
         }
-      });
-    });
-  }, 800);
+      }
+    }
+  })(jQuery, Drupal, drupalSettings);
+});
 </script>`;
         newcontent = newJavascript + '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
 `  <div class="cq-dd-paragraph">
