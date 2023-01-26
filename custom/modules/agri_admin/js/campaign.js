@@ -189,7 +189,48 @@ var Campaign = function() {
         }
         oldtitle = $('#edit-title-0-value').val();
         oldtitleother = $(Campaign.otherLangTitleSelector).val();
-        newcontent = '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
+        var newJavascript = `<script type="text/javascript">
+function ready(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+    return;
+  }
+  document.addEventListener('DOMContentLoaded', fn);
+}
+ready(function() {
+  (function ($, Drupal, drupalSettings) {
+    Drupal.behaviors.campaignNode = {
+      attach: function (context, settings) {
+        if (context == document) {
+          $=jQuery;
+          var mediaB = $('.wb-bar-b');
+          if ($(mediaB).length) {
+            $(mediaB).fadeOut('fast');
+          }
+          $(function() {
+            $('button.overlay-close').click(function() {
+              $('#bottom-bar').remove();
+            })
+            $(window).scroll(function () {
+              var mediaB = $('.wb-bar-b');
+              var mediaHeightB = $('.wb-bar-b').height();
+              var pgFootHeight = $('#pgft').height();
+              var scrollBottom = $(document).height() - $(this).height() - $(this).scrollTop();
+              var bottomFooterHeight = $('footer#wb-info').height();
+              if (scrollBottom > pgFootHeight + mediaHeightB + bottomFooterHeight) {
+                $(mediaB).fadeIn('fast');
+              } else {
+                $(mediaB).fadeOut('fast');
+              }
+            });
+          });
+        }
+      }
+    }
+  })(jQuery, Drupal, drupalSettings);
+});
+</script>`;
+        newcontent = newJavascript + '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
 `  <div class="cq-dd-paragraph">
   <div class="mwsgeneric_base_html_933058698 mwsgeneric-base-html parbase">
 
@@ -346,7 +387,7 @@ var Campaign = function() {
 
 // Ok Maintenant pour le français.
 
-       newcontentother = '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
+       newcontentother = newJavascript + '<div id="'+Campaign.campaignSelectorId+'" class="reference parbase section">' +
 `  <div class="cq-dd-paragraph">
   <div class="mwsgeneric_base_html_933058698 mwsgeneric-base-html parbase">
   <div class="row">
