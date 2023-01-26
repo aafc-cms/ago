@@ -6,3 +6,7 @@ form.webform-submission-form {
     }
   }
 }
+
+body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
+  display: none;
+}

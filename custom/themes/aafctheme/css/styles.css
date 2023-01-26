@@ -3,6 +3,26 @@
  * If using a CSS pre-processor, tell it to overwrite this file. If not, place
  * your custom CSS modifications here.
  */
+/* line 2, ../sass/anonymous/_restrictions.scss */
+body.role-is-anonymous.path-node.published-yes .region-header nav.tabs,
+body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
+  display: none !important;
+}
+
+/* line 2, ../sass/anonymous/_webforms.scss */
+form.webform-submission-form div.form-type-select div.select-wrapper {
+  margin-bottom: 20px;
+}
+/* line 4, ../sass/anonymous/_webforms.scss */
+form.webform-submission-form div.form-type-select div.select-wrapper strong.error {
+  position: absolute;
+}
+
+/* line 10, ../sass/anonymous/_webforms.scss */
+body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
+  display: none;
+}
+
 /* line 2, ../sass/components/_draft-pending-views.scss */
 body.user-logged-in .view-content tr.published-no {
   background-color: pink;
@@ -21,6 +41,75 @@ body.user-logged-in .view-content tr.published-no.pending-draft {
 body.user-logged-in .view-content table.dataTable {
   border-collapse: collapse;
   overflow: hidden;
+}
+
+/* line 2, ../sass/components/_container-fluid.scss */
+div.container-fluid main nav.tabs.mrgn-tp-md.mrgn-bttm-md {
+  margin-left: 13em;
+}
+
+/* line 6, ../sass/components/_container-fluid.scss */
+div.container-fluid nav#wb-bc a {
+  font-size: 16px;
+}
+
+/* line 9, ../sass/components/_container-fluid.scss */
+div.container-fluid main div.region.region-header.container nav.tabs.mrgn-tp-md.mrgn-bttm-md {
+  margin-left: 0em;
+}
+
+/* line 1, ../sass/components/_front.scss */
+.ip-covers-img {
+  background-image: url("/themes/custom/aafctheme/images/aafc_homepage_banner_nov18.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 10, ../sass/components/_front.scss */
+  .ip-cover-hide-mobile {
+    background-image: none !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* line 16, ../sass/components/_front.scss */
+  .ip-cover-hide-tablet {
+    background-image: none !important;
+  }
+}
+/* line 21, ../sass/components/_front.scss */
+html:lang(en) body.path-frontpage h1 {
+  padding-top: 0.8em;
+}
+
+/* line 3, ../sass/components/_media.scss */
+article.img-responsive-w520-special img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 9, ../sass/components/_media.scss */
+article.thumbnail-w520-special img {
+  background: #eaebed;
+  border-color: #eee;
+  border-radius: 0;
+  padding: 5px;
+  display: block;
+  padding: 4px;
+  margin-bottom: 23px;
+  line-height: 1.4375;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top-color: #dddddd;
+  border-right-color: #dddddd;
+  border-bottom-color: #dddddd;
+  border-left-color: #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 
 /**** Components Node for unpublished content *****/
@@ -215,90 +304,6 @@ html:lang(fr) body.viewer.published-no-is-archived main .field--name-body::befor
 /* line 186, ../sass/components/_node.scss */
 body.node-1 div.followus.experimental h2.mrgn-tp-lg.h3 {
   display: block;
-}
-
-/* line 1, ../sass/components/_front.scss */
-.ip-covers-img {
-  background-image: url("/themes/custom/aafctheme/images/aafc_homepage_banner_nov18.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  margin-top: 15px;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 10, ../sass/components/_front.scss */
-  .ip-cover-hide-mobile {
-    background-image: none !important;
-  }
-}
-@media screen and (max-width: 991px) {
-  /* line 16, ../sass/components/_front.scss */
-  .ip-cover-hide-tablet {
-    background-image: none !important;
-  }
-}
-/* line 21, ../sass/components/_front.scss */
-html:lang(en) body.path-frontpage h1 {
-  padding-top: 0.8em;
-}
-
-/* line 2, ../sass/components/_container-fluid.scss */
-div.container-fluid main nav.tabs.mrgn-tp-md.mrgn-bttm-md {
-  margin-left: 13em;
-}
-
-/* line 6, ../sass/components/_container-fluid.scss */
-div.container-fluid nav#wb-bc a {
-  font-size: 16px;
-}
-
-/* line 9, ../sass/components/_container-fluid.scss */
-div.container-fluid main div.region.region-header.container nav.tabs.mrgn-tp-md.mrgn-bttm-md {
-  margin-left: 0em;
-}
-
-/* line 3, ../sass/components/_media.scss */
-article.img-responsive-w520-special img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 9, ../sass/components/_media.scss */
-article.thumbnail-w520-special img {
-  background: #eaebed;
-  border-color: #eee;
-  border-radius: 0;
-  padding: 5px;
-  display: block;
-  padding: 4px;
-  margin-bottom: 23px;
-  line-height: 1.4375;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-top-color: #dddddd;
-  border-right-color: #dddddd;
-  border-bottom-color: #dddddd;
-  border-left-color: #dddddd;
-  border-radius: 4px;
-  -webkit-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
-}
-
-/* line 2, ../sass/anonymous/_restrictions.scss */
-body.role-is-anonymous.path-node.published-yes .region-header nav.tabs,
-body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
-  display: none !important;
-}
-
-/* line 2, ../sass/anonymous/_webforms.scss */
-form.webform-submission-form div.form-type-select div.select-wrapper {
-  margin-bottom: 20px;
-}
-/* line 4, ../sass/anonymous/_webforms.scss */
-form.webform-submission-form div.form-type-select div.select-wrapper strong.error {
-  position: absolute;
 }
 
 /* line 2, ../sass/components/_status_message.scss */
