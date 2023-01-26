@@ -126,9 +126,6 @@
                 "Access the private path and public path based on the user role":
                 "https://www.drupal.org/files/issues/2021-12-30/Access-private-public-path-based-on-user-role-3256368-03.patch"
             },
-            "drupal/safedelete": {
-                "3333946 - Orphaned nodes report should only check if the nodes' moderation state is published": "https://www.drupal.org/files/issues/2023-01-17/orphaned-nodes-report-checks-nodes-moderation-state-published-3333946-04.patch"
-            },
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
@@ -204,6 +201,11 @@
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
                     "overrides for profile and sub profile use 633 instead of 631":
                     "https://www.drupal.org/files/issues/2020-12-11/1356276-631-by-mpotter-balsama-phenaproxima.patch"
+                }
+            },
+            "agrcmsx/dxbase": {
+                "drupal/safedelete": {
+                  "3333946 - Orphaned nodes report should only check if the nodes' moderation state is published": "https://www.drupal.org/files/issues/2023-01-17/orphaned-nodes-report-checks-nodes-moderation-state-published-3333946-04.patch"
                 }
             },
             "acquia/lightning": {

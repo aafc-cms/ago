@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36d79f2178d7a825c66f74f3b348270a",
+    "content-hash": "f05df6a060b866a0bbf09a90911a0ad7",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -10801,17 +10801,17 @@
         },
         {
             "name": "drupal/safedelete",
-            "version": "1.0.33",
+            "version": "1.0.36",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/safedelete.git",
-                "reference": "1.0.33"
+                "reference": "1.0.36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.33.zip",
-                "reference": "1.0.33",
-                "shasum": "0e1644a4f6a63e18ba54dfcd3ffaa35668de586b"
+                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.36.zip",
+                "reference": "1.0.36",
+                "shasum": "ec014b198050a45dd2d600df8c6d96321989b856"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -10820,8 +10820,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.33",
-                    "datestamp": "1672254380",
+                    "version": "1.0.36",
+                    "datestamp": "1674770736",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
