@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Contact Form Submission Data'
+      title: 'Contact Form report'
       fields:
         sid:
           id: sid
@@ -808,7 +808,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: contact_form_submissions.csv
+      filename: contact_form_report.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -836,7 +836,7 @@ display:
       path: admin/views/contact_form_submission_data_view
       menu:
         type: normal
-        title: 'Contact Form Submission Data'
+        title: 'Contact Form report'
         description: 'Contact Form Submission Data'
         weight: -10
         expanded: false

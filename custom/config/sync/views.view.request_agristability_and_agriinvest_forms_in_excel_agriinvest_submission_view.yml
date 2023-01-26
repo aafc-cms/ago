@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission Data'
+      title: 'Request for AgriInvest forms report'
       fields:
         sid:
           id: sid
@@ -651,7 +651,23 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: webform_submission
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: webform_submission
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         webform_id:
@@ -758,7 +774,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: request_agristability_and_agriinvest_forms_in_excel_agriinvest.csv
+      filename: request_agristability_and_agriinvest_forms_in_excel_agriinvest_report.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -786,7 +802,7 @@ display:
       path: admin/views/request_agristability_and_agriinvest_forms_in_excel_agriinvest_submission_view
       menu:
         type: normal
-        title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission Data'
+        title: 'Request for AgriInvest forms report'
         description: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest) Submission Data'
         weight: -10
         expanded: false
