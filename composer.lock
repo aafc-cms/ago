@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f05df6a060b866a0bbf09a90911a0ad7",
+    "content-hash": "e4cf6812ac439d6ec6abd0ad55c4b36a",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.4.8-rc8",
+            "version": "9.4.8-rc9",
             "source": {
                 "type": "git",
                 "url": "git@gitlab.com:agrcms/dxbase.git",
-                "reference": "1ef17883210059e5ec12c568dc875405082ad98e"
+                "reference": "1a1b3a417a4f799e793b86182ad15093da34f741"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=1ef17883210059e5ec12c568dc875405082ad98e",
-                "reference": "1ef17883210059e5ec12c568dc875405082ad98e",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=1a1b3a417a4f799e793b86182ad15093da34f741",
+                "reference": "1a1b3a417a4f799e793b86182ad15093da34f741",
                 "shasum": ""
             },
             "require": {
@@ -294,9 +294,6 @@
                     "drupal/simple_sitemap": {
                         "Fix for php 8.1 compatibility for simple_sitemap module: ": "https://www.drupal.org/files/issues/2022-08-10/simple_sitemap-php81-3299827-7.patch"
                     },
-                    "drupal/safedelete": {
-                        "3333946 - Orphaned nodes report should only check if the nodes' moderation state is published": "https://www.drupal.org/files/issues/2023-01-17/orphaned-nodes-report-checks-nodes-moderation-state-published-3333946-04.patch"
-                    },
                     "drupal/views_data_export": {
                         "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
                     },
@@ -358,7 +355,7 @@
                 "GPL-2.0+"
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
-            "time": "2023-01-17T16:03:46+00:00"
+            "time": "2023-01-26T20:31:28+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
