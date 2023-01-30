@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - user.role.administrator
     - user.role.pab_admin
     - webform.webform.aafc_generic_contact_form
@@ -835,7 +834,7 @@ display:
           tokenize: false
       path: admin/views/contact_form_submission_data_view
       menu:
-        type: normal
+        type: none
         title: 'Contact Form report'
         description: 'Contact Form Submission Data'
         weight: -10
