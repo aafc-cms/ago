@@ -436,9 +436,6 @@ div.view.view-moderated-content .view-filters .form-item--name {
 div.view.view-moderated-content .view-filters .form-item--nid {
   max-width: 100px;
 }
-div.view.view-moderated-content .view-filters .form-item--langcode {
-  max-width: 160px;
-}
 div.view.view-moderated-content .view-filters .form-item--field-subject-target-id,
 div.view.view-moderated-content .view-filters .form-item--field-meta-type-target-id,
 div.view.view-moderated-content .view-filters .form-item--field-newstype-target-id {

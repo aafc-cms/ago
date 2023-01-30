@@ -791,7 +791,7 @@ display:
               type:
                 plugin_id: default
                 advanced:
-                  sort_options: false
+                  sort_options: true
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
@@ -871,17 +871,6 @@ display:
                   collapsible: false
                   is_secondary: false
               field_campaign_value:
-                plugin_id: bef
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-                select_all_none: false
-                select_all_none_nested: false
-                display_inline: false
-              field_special_value:
                 plugin_id: bef
                 advanced:
                   sort_options: false
@@ -1473,18 +1462,51 @@ display:
               editor: '0'
               reviewer: '0'
             reduce: false
-          is_grouped: false
+          is_grouped: true
           group_info:
-            label: ''
+            label: Language
             description: ''
-            identifier: ''
+            identifier: langcode
             optional: true
             widget: select
             multiple: false
             remember: false
-            default_group: All
+            default_group: '1'
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1:
+                title: 'Interface text language'
+                operator: in
+                value:
+                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+                  all: '0'
+                  '***LANGUAGE_site_default***': '0'
+                  en: '0'
+                  fr: '0'
+                  und: '0'
+                  zxx: '0'
+              2:
+                title: English
+                operator: in
+                value:
+                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+                  en: en
+                  all: '0'
+                  '***LANGUAGE_site_default***': '0'
+                  fr: '0'
+                  und: '0'
+                  zxx: '0'
+              3:
+                title: French
+                operator: in
+                value:
+                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+                  fr: fr
+                  all: '0'
+                  '***LANGUAGE_site_default***': '0'
+                  en: '0'
+                  und: '0'
+                  zxx: '0'
         latest_revision:
           id: latest_revision
           table: node_revision
