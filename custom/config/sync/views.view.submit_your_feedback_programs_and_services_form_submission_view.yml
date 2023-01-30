@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - user.role.administrator
     - user.role.pab_admin
     - webform.webform.yourfeedback_programsandservices
@@ -835,7 +834,7 @@ display:
           tokenize: false
       path: admin/views/submit-your-feedback---programs-and-services-form-submission-view
       menu:
-        type: normal
+        type: none
         title: 'Submit your feedback - P & S Form report'
         description: 'Submit your feedback - Programs and Services Form Submission Data'
         weight: -10

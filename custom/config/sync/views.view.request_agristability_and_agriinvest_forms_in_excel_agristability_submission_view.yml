@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - user.role.administrator
     - user.role.pab_admin
     - webform.webform.as_ai_request_form
@@ -782,7 +781,7 @@ display:
           tokenize: false
       path: admin/structure/views/view/request_agristability_and_agriinvest_forms_in_excel_agristability_submission_view/edit/data_export
       menu:
-        type: normal
+        type: none
         title: 'Request for AgriStability forms report'
         description: 'Request AgriStability and AgriInvest forms in Excel (AgriStability) Submission Data'
         weight: -10

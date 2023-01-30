@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - user.role.administrator
     - user.role.pab_admin
     - webform.webform.accessibility_feedback_form
@@ -676,7 +675,7 @@ display:
           tokenize: false
       path: admin/views/accessibility-feedback-form-submission-view
       menu:
-        type: normal
+        type: none
         title: 'Accessibility Feedback Form report'
         description: ''
         weight: -100

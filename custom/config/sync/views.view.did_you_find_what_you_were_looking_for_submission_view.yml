@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - user.role.administrator
     - user.role.pab_admin
     - webform.webform.gcweb_did_you_find
@@ -765,7 +764,7 @@ display:
           tokenize: false
       path: admin/views/did_you_find_what_you_were_looking_for_submission_view
       menu:
-        type: normal
+        type: none
         title: 'Did you find what you were looking for report'
         description: 'Did you find what you were looking for webform submission data'
         weight: 0
