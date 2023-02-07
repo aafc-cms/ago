@@ -49,6 +49,15 @@ var AAFCFrontend = function() {
   var delay = 100;           // Delay for initAnalytics, used because some browser clients use ad blockers, lets be friendly.
   var mouse = {x:0, y:0};    // Tracks the mouse position
   var page_type = 'content';
+  var state = {
+    isMobile: false,      // Indicates that we're in mobile mode
+    isMobileSmall: false, // Indicates that we're in mobile small mode
+    menuFixed: false,     // Indicates when the menu is fixed to the bottom position
+    stickyNavHeight: 0,   // Contains the height of the sticky nav
+    mainContent: 0,       // Contains the height of the main content area
+  };
+
+
 
   /**
    * Initialization
@@ -90,6 +99,17 @@ var AAFCFrontend = function() {
     AAFCFrontend.initSlideshow();
     searchInterface();
     initialized = true;
+  }
+
+
+
+  /**
+   * Keep track of mouse movements.
+   */
+  function onMouseMove(event) {
+    AAFCFrontend.mouse.x = event.clientX;
+    AAFCFrontend.mouse.y = event.clientY;
+    GovDebug.update();
   }
 
 
@@ -225,7 +245,7 @@ var AAFCFrontend = function() {
   }
 
   function relocateWebformValidationMSG() {
-    // WCAG fix issue #463 : 
+    // WCAG fix issue #463 :
     var psWebForm = $('body.webform_feedback_programsandservices');
     var divDescription = $('div#edit-descriptionoffeedbackform');
     var divErrorMSG    = $('div.highlighted');
@@ -307,9 +327,114 @@ var AAFCFrontend = function() {
     delay: delay,
     initAnalytics: initAnalytics,
     initSlideshow: initSlideshow,
+    debugInfo : function () {
+      AAFCFrontend.clear();
+      AAFCFrontend.log('isMobile='+state.isMobile);
+      AAFCFrontend.log('isMobileSmall='+state.isMobileSmall);
+      AAFCFrontend.log('menuFixed='+state.menuFixed);
+      AAFCFrontend.log('mainTop='+state.mainTop);
+      AAFCFrontend.log('mainContent='+state.mainContent);
+      AAFCFrontend.log('verticalOffset='+state.verticalOffset);
+    },
     updateformaction: updateformaction,
     page_type: page_type,
     removeRoleFromSummary: removeRoleFromSummary
+  }
+}();
+
+
+/**
+ * A small debug utility to display such things as mouse coordinates and scrolltop in a fixed window.
+ */
+var GovDebug = function() {
+  var debug = {
+    initialized: false, // Flag to indicate that this class has been initialized
+    logs: [],           // Log messages to display
+    stayOn: false       // When true, debug will not turn off when calling GovDebug.on(false)
+  };
+
+  function init() {
+    if (debug.initialized) {
+      return; // Already initialized
+    }
+
+    // Handle F2 key callbacks for debugging. See AAFCFrontend.onF2 function definition for an example.
+    $(document).keyup(function(event) {
+      if (event.keyCode == 115 ) { // F4
+        onF4();
+      }
+      if (event.keyCode == 120 ) { // F9
+        onF9();
+      }
+    });
+
+    $('<div/>').attr('id', 'gov-debug').appendTo('body');
+
+    debug.initialized = true;
+    update();
+  }
+
+  function clear() {
+    debug.logs = [];
+    return this;
+  }
+
+  function log(msg) {
+    debug.logs.push(msg);
+    return this;
+  }
+
+  function on(enable, stayOn) {
+    if (typeof(enable) == 'boolean') {
+      if (enable) {
+        init();
+        debug.stayOn = stayOn;
+      }
+      else {
+        if (! debug.stayOn) {
+          debug.initialized = false;
+        }
+      }
+    }
+    return debug.initialized;
+  }
+
+  /*
+   * For debugging, use this to bind a function to the F4 key.
+   * Do something (scroll down one pixel)
+   */
+  function onF4() {
+    $(window).scrollTop($(window).scrollTop()-1);
+  }
+
+  /*
+   * For debugging, use this to bind a function to the F9 key.
+   * Do something (scroll up one pixel)
+   */
+  function onF9() {
+    $(window).scrollTop($(window).scrollTop()+1);
+  }
+
+  function update() {
+    if (debug.initialized) {
+
+      try {
+        AAFCFrontend.debugInfo();
+      } catch (err) {
+        console.log('AAFCFrontend not yet initialized, unable to get debugInfo() from AAFCFrontend.debugInfo()');
+      }
+      $('#gov-debug').html('<p>mouse (x, y) = ('+AAFCFrontend.mouse.x+', '+AAFCFrontend.mouse.y+')<br/>scrollTop = '+$(window).scrollTop()+'</p>');
+      for (i = 0; i < debug.logs.length; i++) {
+        $('#gov-debug').append('<p>'+debug.logs[i]+'</p>');
+      }
+    }
+  }
+
+  return {
+    clear: clear,
+    log: log,
+    on: on,
+    update: update
   }
 }();
 
