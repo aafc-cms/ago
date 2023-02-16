@@ -111,16 +111,6 @@ function aafctheme_preprocess_html(&$variables) {
       $vid = $node->getRevisionId();
       // Load a single node.
       $nodeLoaded = $node_storage->load($nid);
-      // Check if the body field contains youtube
-      $bodyStringArray = $nodeLoaded->get('body')->getValue();
-      if (!empty($bodyStringArray)) {
-        $tmpArray = reset($bodyStringArray);
-        $bodyString = reset($tmpArray);
-        // Joseph please read Huan's comment in the teams. We need checking confition for video/youtube
-        if ((stripos($bodyString,'source') !== FALSE) && (stripos($bodyString,'video/youtube') !== FALSE)) {
-          $body_contains_youtube = TRUE;
-        }
-      }
     }
 
     $variables['attributes']['class'][] = 'node-' . $nid;
@@ -210,13 +200,11 @@ function aafctheme_preprocess_html(&$variables) {
     $prod = TRUE;
   }
   // Adobe Analytics JS library.
-  if (!$body_contains_youtube) {
-    if (\Drupal::currentUser()->isAnonymous() && $prod) {
-      $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmprodjs';
-    }
-    else {
-      $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmstagingjs';
-    }
+  if (\Drupal::currentUser()->isAnonymous() && $prod) {
+    $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmprodjs';
+  }
+  else {
+    $variables['#attached']['library'][] = 'aafctheme/aafctheme-externaladobetmstagingjs';
   }
 
   // Invitation Manager CSS and JS library.
