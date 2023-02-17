@@ -91,7 +91,6 @@ function aafctheme_preprocess_html(&$variables) {
   $revision_is_object = FALSE;
   $nodeLoaded = 0;
   $archived = '';
-  $body_contains_youtube = FALSE;
   if ($node) {
     // Workaround for https://www.drupal.org/project/drupal/issues/2730631 .
     // Workaround for inconsistent router behaviour, see comments in issue 2730631.
