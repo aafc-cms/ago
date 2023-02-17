@@ -367,10 +367,11 @@ function agri_admin_update_8007() {
 
 }
 
+
 /**
  * Make sure all nodes have special and campaign saved so we can filter by it.
  */
-function agri_admin_update_8008() {
+/*function agri_admin_update_8008() {
 
   $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
 
@@ -397,7 +398,6 @@ function agri_admin_update_8008() {
       AgriAdminHelper::addToLog($nid . " is a dir_listing node, skipped", TRUE);
       continue;
     }
-    $node->set('moderation_state', 'published');
     if (!$node->hasField('field_campaign') || !$node->hasField('field_large') || !$node->hasField('field_special')) {
       // Re-enable notifications in case of failure/error.
       $error_once = TRUE;
@@ -444,3 +444,4 @@ function agri_admin_update_8008() {
   }
 
 }
+*/

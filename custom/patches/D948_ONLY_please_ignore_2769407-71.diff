@@ -1,0 +1,765 @@
+diff --git a/core/modules/comment/config/optional/views.view.comment.yml b/core/modules/comment/config/optional/views.view.comment.yml
+index a7003253e30..424a71f6c48 100644
+--- a/core/modules/comment/config/optional/views.view.comment.yml
++++ b/core/modules/comment/config/optional/views.view.comment.yml
+@@ -626,6 +626,7 @@ display:
+             default_group: All
+             default_group_multiple: {  }
+             group_items: {  }
++          accept_null: false
+         subject:
+           id: subject
+           table: comment_field_data
+@@ -1436,6 +1437,7 @@ display:
+             default_group: All
+             default_group_multiple: {  }
+             group_items: {  }
++          accept_null: false
+         subject:
+           id: subject
+           table: comment_field_data
+diff --git a/core/modules/media_library/config/install/views.view.media_library.yml b/core/modules/media_library/config/install/views.view.media_library.yml
+index 6f4aae256da..5debeda2504 100644
+--- a/core/modules/media_library/config/install/views.view.media_library.yml
++++ b/core/modules/media_library/config/install/views.view.media_library.yml
+@@ -975,6 +975,7 @@ display:
+             default_group: All
+             default_group_multiple: {  }
+             group_items: {  }
++          accept_null: false
+         name:
+           id: name
+           table: media_field_data
+@@ -1057,6 +1058,7 @@ display:
+             default_group: All
+             default_group_multiple: {  }
+             group_items: {  }
++          accept_null: false
+       filter_groups:
+         operator: AND
+         groups:
+@@ -1257,6 +1259,7 @@ display:
+             default_group: All
+             default_group_multiple: {  }
+             group_items: {  }
++          accept_null: false
+         name:
+           id: name
+           table: media_field_data
+@@ -1339,6 +1342,7 @@ display:
+             default_group: All
+             default_group_multiple: {  }
+             group_items: {  }
++          accept_null: false
+       filter_groups:
+         operator: AND
+         groups:
+diff --git a/core/modules/views/config/schema/views.filter.schema.yml b/core/modules/views/config/schema/views.filter.schema.yml
+index 1eb09007aef..746adc07b38 100644
+--- a/core/modules/views/config/schema/views.filter.schema.yml
++++ b/core/modules/views/config/schema/views.filter.schema.yml
+@@ -7,6 +7,10 @@ views.filter.*:
+ views.filter.boolean:
+   type: views_filter
+   label: 'Boolean'
++  mapping:
++    accept_null:
++      type: boolean
++      label: 'Accept NULL'
+ 
+ views_filter_boolean_string:
+   type: views_filter
+diff --git a/core/modules/views/src/Plugin/views/filter/BooleanOperator.php b/core/modules/views/src/Plugin/views/filter/BooleanOperator.php
+index 4fae02498a0..b2ebbe2b8ff 100644
+--- a/core/modules/views/src/Plugin/views/filter/BooleanOperator.php
++++ b/core/modules/views/src/Plugin/views/filter/BooleanOperator.php
+@@ -72,7 +72,7 @@ public function operatorOptions($which = 'title') {
+    * @return array
+    */
+   protected function operators() {
+-    return [
++    $operators = [
+       '=' => [
+         'title' => $this->t('Is equal to'),
+         'method' => 'queryOpBoolean',
+@@ -88,6 +88,25 @@ protected function operators() {
+         'query_operator' => self::NOT_EQUAL,
+       ],
+     ];
++
++    // If the definition allows for the empty operator, add it.
++    if (!empty($this->definition['allow empty'])) {
++      $operators += [
++        'empty' => [
++          'title' => $this->t('Is empty (NULL)'),
++          'method' => 'opEmpty',
++          'short' => $this->t('empty'),
++          'values' => 0,
++        ],
++        'not empty' => [
++          'title' => $this->t('Is not empty (NOT NULL)'),
++          'method' => 'opEmpty',
++          'short' => $this->t('not empty'),
++          'values' => 0,
++        ],
++      ];
++    }
++    return $operators;
+   }
+ 
+   /**
+@@ -105,13 +124,17 @@ public function init(ViewExecutable $view, DisplayPluginBase $display, array &$o
+       $this->value_value = $this->definition['title'];
+     }
+ 
+-    if (isset($this->definition['accept null'])) {
+-      $this->accept_null = (bool) $this->definition['accept null'];
+-    }
+-    elseif (isset($this->definition['accept_null'])) {
+-      $this->accept_null = (bool) $this->definition['accept_null'];
++    foreach (['accept_null', 'accept null'] as $key) {
++      foreach ([$this->options, $this->definition] as $array) {
++        if (isset($array[$key])) {
++          $this->accept_null = (bool) $array[$key];
++          break;
++        }
++      }
+     }
+     $this->valueOptions = NULL;
++
++    $this->definition['allow empty'] = TRUE;
+   }
+ 
+   /**
+@@ -148,12 +171,14 @@ public function getValueOptions() {
+   protected function defineOptions() {
+     $options = parent::defineOptions();
+ 
+-    $options['value']['default'] = FALSE;
++    $options['accept_null']['default'] = FALSE;
+ 
+     return $options;
+   }
+ 
+   protected function valueForm(&$form, FormStateInterface $form_state) {
++    $form['value'] = [];
++
+     if (empty($this->valueOptions)) {
+       // Initialize the array of possible values for this filter.
+       $this->getValueOptions();
+@@ -166,14 +191,37 @@ protected function valueForm(&$form, FormStateInterface $form_state) {
+       // Configuring a filter: use radios for clarity.
+       $filter_form_type = 'radios';
+     }
+-    $form['value'] = [
+-      '#type' => $filter_form_type,
+-      '#title' => $this->value_value,
+-      '#options' => $this->valueOptions,
+-      '#default_value' => $this->value,
+-    ];
+-    if (!empty($this->options['exposed'])) {
++
++    $which = 'all';
++    if (!empty($form['operator'])) {
++      $source = ':input[name="options[operator]"]';
++      $value = ':input[name="options[value]"]';
++    }
++    if ($exposed) {
+       $identifier = $this->options['expose']['identifier'];
++
++      if (empty($this->options['expose']['use_operator']) || empty($this->options['expose']['operator_id'])) {
++        // exposed and locked.
++        $which = in_array($this->operator, $this->operatorValues(1)) ? 'value' : 'none';
++      }
++      else {
++        $source = ':input[name="' . $this->options['expose']['operator_id'] . '"]';
++      }
++    }
++
++    if ($which == 'all' || $which == 'value') {
++      $form['value'] = [
++        '#type' => $filter_form_type,
++        '#title' => $this->value_value,
++        '#options' => $this->valueOptions,
++        '#default_value' => $this->value,
++      ];
++      $form['accept_null'] = [
++        '#type' => 'checkbox',
++        '#title' => $this->t('Include empty (NULL) values as False'),
++        '#description' => $this->t('Include records without values in this filter as False.'),
++        '#default_value' => $this->accept_null,
++      ];
+       $user_input = $form_state->getUserInput();
+       if ($exposed && !isset($user_input[$identifier])) {
+         $user_input[$identifier] = $this->value;
+@@ -183,6 +231,21 @@ protected function valueForm(&$form, FormStateInterface $form_state) {
+       if (!$exposed || empty($this->options['expose']['required'])) {
+         $form['value']['#options'] = ['All' => $this->t('- Any -')] + $form['value']['#options'];
+       }
++
++      if ($which == 'all') {
++        // Setup #states for operators with a value.
++        foreach ($this->operatorValues(1) as $operator) {
++          $form['value']['#states']['visible'][] = [
++            $source => ['value' => $operator],
++          ];
++          if (isset($form['accept_null'])) {
++            $form['accept_null']['#states']['visible'][] = [
++              $source => ['value' => $operator],
++              $value => ['value' => 0],
++            ];
++          }
++        }
++      }
+     }
+   }
+ 
+@@ -200,13 +263,17 @@ public function adminSummary() {
+       return $this->t('exposed');
+     }
+     if (empty($this->valueOptions)) {
+-      $this->getValueOptions();
++      if (in_array($this->operator, $this->operatorValues(1))) {
++        $this->getValueOptions();
++        // Now that we have the valid options for this filter, just return the
++        // human-readable label based on the current value.  The valueOptions
++        // array is keyed with either 0 or 1, so if the current value is not
++        // empty, use the label for 1, and if it's empty, use the label for 0.
++        return $this->operator . ' ' . $this->valueOptions[!empty($this->value)];
++      }
++
++      return $this->operator;
+     }
+-    // Now that we have the valid options for this filter, just return the
+-    // human-readable label based on the current value.  The valueOptions
+-    // array is keyed with either 0 or 1, so if the current value is not
+-    // empty, use the label for 1, and if it's empty, use the label for 0.
+-    return $this->operator . ' ' . $this->valueOptions[!empty($this->value)];
+   }
+ 
+   public function defaultExposeOptions() {
+@@ -225,7 +292,7 @@ public function query() {
+ 
+     $info = $this->operators();
+     if (!empty($info[$this->operator]['method'])) {
+-      call_user_func([$this, $info[$this->operator]['method']], $field, $info[$this->operator]['query_operator']);
++      call_user_func([$this, $info[$this->operator]['method']], $field, isset($info[$this->operator]['query_operator']) ? $info[$this->operator]['query_operator'] : NULL);
+     }
+   }
+ 
+@@ -274,4 +341,26 @@ protected function queryOpBoolean($field, $query_operator = self::EQUAL) {
+     }
+   }
+ 
++  protected function opEmpty($field) {
++    if ($this->operator == 'empty') {
++      $operator = "IS NULL";
++    }
++    else {
++      $operator = "IS NOT NULL";
++    }
++
++    $this->query->addWhere($this->options['group'], $field, NULL, $operator);
++  }
++
++  protected function operatorValues($values = 1) {
++    $options = [];
++    foreach ($this->operators() as $id => $info) {
++      if (isset($info['values']) && $info['values'] == $values) {
++        $options[] = $id;
++      }
++    }
++
++    return $options;
++  }
++
+ }
+diff --git a/core/modules/views/src/ViewsConfigUpdater.php b/core/modules/views/src/ViewsConfigUpdater.php
+index 2ddb741c0a4..85e6bdf9735 100644
+--- a/core/modules/views/src/ViewsConfigUpdater.php
++++ b/core/modules/views/src/ViewsConfigUpdater.php
+@@ -10,6 +10,8 @@
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Entity\FieldableEntityInterface;
+ use Drupal\Core\Entity\Sql\DefaultTableMapping;
++use Drupal\views\Plugin\views\filter\BooleanOperator;
++use Drupal\views\Plugin\ViewsHandlerManager;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+ /**
+@@ -57,6 +59,13 @@ class ViewsConfigUpdater implements ContainerInjectionInterface {
+    */
+   protected $multivalueBaseFieldsUpdateTableInfo;
+ 
++  /**
++   * The Views filter plugin manager service.
++   *
++   * @var \Drupal\views\Plugin\ViewsHandlerManager
++   */
++  protected $filterPluginManager;
++
+   /**
+    * Flag determining whether deprecations should be triggered.
+    *
+@@ -82,17 +91,21 @@ class ViewsConfigUpdater implements ContainerInjectionInterface {
+    *   The typed config manager.
+    * @param \Drupal\views\ViewsData $views_data
+    *   The views data service.
++   * @param \Drupal\views\Plugin\ViewsHandlerManager $filter_plugin_manager
++   *   The Views filter plugin manager service.
+    */
+   public function __construct(
+     EntityTypeManagerInterface $entity_type_manager,
+     EntityFieldManagerInterface $entity_field_manager,
+     TypedConfigManagerInterface $typed_config_manager,
+-    ViewsData $views_data
++    ViewsData $views_data,
++    ViewsHandlerManager $filter_plugin_manager
+   ) {
+     $this->entityTypeManager = $entity_type_manager;
+     $this->entityFieldManager = $entity_field_manager;
+     $this->typedConfigManager = $typed_config_manager;
+     $this->viewsData = $views_data;
++    $this->filterPluginManager = $filter_plugin_manager;
+   }
+ 
+   /**
+@@ -103,7 +116,8 @@ public static function create(ContainerInterface $container) {
+       $container->get('entity_type.manager'),
+       $container->get('entity_field.manager'),
+       $container->get('config.typed'),
+-      $container->get('views.views_data')
++      $container->get('views.views_data'),
++      $container->get('plugin.manager.views.filter')
+     );
+   }
+ 
+@@ -144,6 +158,9 @@ public function updateAll(ViewEntityInterface $view) {
+       if ($this->processImageLazyLoadFieldHandler($handler, $handler_type, $view)) {
+         $changed = TRUE;
+       }
++      if ($this->processBooleanFilterAcceptNull($handler, $handler_type, $view)) {
++        $changed = TRUE;
++      }
+       return $changed;
+     });
+   }
+@@ -561,4 +578,57 @@ protected function processSortFieldIdentifierUpdateHandler(array &$handler, stri
+     return FALSE;
+   }
+ 
++  /**
++   * Update boolean filter settings.
++   *
++   * @param \Drupal\views\ViewEntityInterface $view
++   *   The View to update.
++   *
++   * @return bool
++   *   Whether the view was updated.
++   */
++  public function needsBooleanFilterAcceptNullUpdate(ViewEntityInterface $view): bool {
++    return $this->processDisplayHandlers($view, TRUE, function (array &$handler, string $handler_type) use ($view) {
++      return $this->processBooleanFilterAcceptNull($handler, $handler_type, $view);
++    });
++  }
++
++  /**
++   * Processes the boolean filter settings to accept null.
++   *
++   * @param array $handler
++   *   A display handler.
++   * @param string $handler_type
++   *   The handler type.
++   * @param \Drupal\views\ViewEntityInterface $view
++   *   The View to update.
++   *
++   * @return bool
++   *   Whether the handler was updated.
++   *
++   * @throws \Drupal\Component\Plugin\Exception\PluginException
++   *   If the filter plugin instance cannot be created.
++   */
++  protected function processBooleanFilterAcceptNull(array &$handler, string $handler_type, ViewEntityInterface $view): bool {
++    $changed = FALSE;
++    $displays = $view->get('display');
++    foreach ($displays as &$display) {
++      if (isset($display['display_options']['filters'])) {
++        foreach ($display['display_options']['filters'] as &$filter) {
++          // Any of the children of the modified classes will also be inheriting
++          // the new settings.
++          $filter_instance = $this->filterPluginManager->getHandler($filter);
++          if (($filter_instance instanceof BooleanOperator) && !isset($filter['accept_null'])) {
++            $filter['accept_null'] = FALSE;
++            $changed = TRUE;
++          }
++        }
++      }
++    }
++    if ($changed) {
++      $view->set('display', $displays);
++    }
++    return $changed;
++  }
++
+ }
+diff --git a/core/modules/views/tests/fixtures/update/boolean-filter-accept-null.php b/core/modules/views/tests/fixtures/update/boolean-filter-accept-null.php
+new file mode 100644
+index 00000000000..8d2aabeed42
+--- /dev/null
++++ b/core/modules/views/tests/fixtures/update/boolean-filter-accept-null.php
+@@ -0,0 +1,19 @@
++<?php
++
++/**
++ * @file
++ * Test fixture.
++ */
++
++use Drupal\Core\Database\Database;
++use Drupal\Core\Serialization\Yaml;
++
++$connection = Database::getConnection();
++
++$connection->insert('config')
++  ->fields([
++    'collection' => '',
++    'name' => 'views.view.node_link_update_test',
++    'data' => serialize(Yaml::decode(file_get_contents('core/modules/views/tests/fixtures/update/views.view.node_link_update_test.yml'))),
++  ])
++  ->execute();
+diff --git a/core/modules/views/tests/fixtures/update/views.view.node_link_update_test.yml b/core/modules/views/tests/fixtures/update/views.view.node_link_update_test.yml
+index 5f8d89ed415..bdc9a862a05 100644
+--- a/core/modules/views/tests/fixtures/update/views.view.node_link_update_test.yml
++++ b/core/modules/views/tests/fixtures/update/views.view.node_link_update_test.yml
+@@ -1,3 +1,4 @@
++uuid: 6b14b0c4-23a8-42c8-8484-bd99a26335a3
+ langcode: en
+ status: true
+ dependencies:
+diff --git a/core/modules/views/tests/src/Functional/Update/BooleanFilterAcceptNullTest.php b/core/modules/views/tests/src/Functional/Update/BooleanFilterAcceptNullTest.php
+new file mode 100644
+index 00000000000..d9876a8384e
+--- /dev/null
++++ b/core/modules/views/tests/src/Functional/Update/BooleanFilterAcceptNullTest.php
+@@ -0,0 +1,47 @@
++<?php
++
++namespace Drupal\Tests\views\Functional\Update;
++
++use Drupal\FunctionalTests\Update\UpdatePathTestBase;
++use Drupal\views\Entity\View;
++
++/**
++ * Tests the upgrade path for boolean filter.
++ *
++ * @see views_post_update_boolean_filter_accept_null()
++ *
++ * @group Update
++ * @group legacy
++ */
++class BooleanFilterAcceptNullTest extends UpdatePathTestBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function setDatabaseDumpFiles() {
++    $this->databaseDumpFiles = [
++      __DIR__ . '/../../../../../system/tests/fixtures/update/drupal-8.8.0.filled.standard.php.gz',
++      __DIR__ . '/../../../fixtures/update/boolean-filter-accept-null.php',
++    ];
++  }
++
++  /**
++   * Tests that boolean filter values are updated properly.
++   */
++  public function testViewsPostUpdateBooleanFilterAcceptNull() {
++    $view = View::load('node_link_update_test');
++    $data = $view->toArray();
++    // Check that the field is using the expected string value.
++    $this->assertArrayNotHasKey('accept_null', $data['display']['default']['display_options']['filters']['status']);
++
++    $this->runUpdates();
++
++    // Load and initialize our test view.
++    $view = View::load('node_link_update_test');
++    $data = $view->toArray();
++    // Check that the field is using the expected value.
++    $this->assertArrayHasKey('accept_null', $data['display']['default']['display_options']['filters']['status']);
++    $this->assertFalse($data['display']['default']['display_options']['filters']['status']['accept_null']);
++  }
++
++}
+diff --git a/core/modules/views/tests/src/Functional/Update/ViewsMultiValueFieldUpdateTest.php b/core/modules/views/tests/src/Functional/Update/ViewsMultiValueFieldUpdateTest.php
+new file mode 100644
+index 00000000000..33c7491806b
+--- /dev/null
++++ b/core/modules/views/tests/src/Functional/Update/ViewsMultiValueFieldUpdateTest.php
+@@ -0,0 +1,56 @@
++<?php
++
++namespace Drupal\Tests\views\Functional\Update;
++
++use Drupal\FunctionalTests\Update\UpdatePathTestBase;
++
++/**
++ * Tests the update path base class.
++ *
++ * @group Update
++ * @group legacy
++ */
++class ViewsMultiValueFieldUpdateTest extends UpdatePathTestBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  protected static $modules = ['update_test_schema'];
++
++  /**
++   * {@inheritdoc}
++   */
++  protected static $configSchemaCheckerExclusions = [
++    // This config is broken intentionally.
++    'views.view.test_broken_config_multi_value',
++    'views.view.test_another_broken_config_multi_value',
++  ];
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function setDatabaseDumpFiles() {
++    $this->databaseDumpFiles = [
++      __DIR__ . '/../../../../../system/tests/fixtures/update/drupal-9.3.0.bare.standard.php.gz',
++      __DIR__ . '/../../../fixtures/update/multi_value_fields.php',
++    ];
++  }
++
++  /**
++   * Tests views_post_update_field_names_for_multivalue_fields().
++   */
++  public function testViewsPostUpdateFieldNamesForMultiValueFields() {
++    $key_value_store = \Drupal::keyValue('post_update');
++    $existing_update_functions = $key_value_store->get('existing_updates', []);
++    $existing_update_functions = array_diff($existing_update_functions, ['views_post_update_field_names_for_multivalue_fields']);
++    $key_value_store->set('existing_updates', $existing_update_functions);
++
++    $this->runUpdates();
++
++    $this->assertSession()->pageTextContainsOnce('Updates failed for the entity type View, for test_another_broken_config_multi_value, test_broken_config_multi_value. Check the logs.');
++    $this->drupalLogin($this->rootUser);
++    $this->drupalGet('admin/reports/dblog', ['query' => ['type[]' => 'update']]);
++    $this->assertSession()->pageTextMatchesCount(3, '/Unable to update view test_broken_config_multi_value/');
++  }
++
++}
+diff --git a/core/modules/views/tests/src/Kernel/Handler/FilterBooleanOperatorTest.php b/core/modules/views/tests/src/Kernel/Handler/FilterBooleanOperatorTest.php
+index ec0282d5342..0fa6e8a1f12 100644
+--- a/core/modules/views/tests/src/Kernel/Handler/FilterBooleanOperatorTest.php
++++ b/core/modules/views/tests/src/Kernel/Handler/FilterBooleanOperatorTest.php
+@@ -36,6 +36,30 @@ class FilterBooleanOperatorTest extends ViewsKernelTestBase {
+     'views_test_data_id' => 'id',
+   ];
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected function dataSet() {
++    $dataset = parent::dataSet();
++    $dataset[] = [
++      'name' => 'Null',
++      'age' => 0,
++      'job' => 'Null',
++      'created' => 0,
++      'status' => NULL,
++    ];
++    return $dataset;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function schemaDefinition() {
++    $schema = parent::schemaDefinition();
++    $schema['views_test_data']['fields']['status']['not null'] = FALSE;
++    return $schema;
++  }
++
+   /**
+    * Tests the BooleanOperator filter.
+    */
+@@ -108,6 +132,86 @@ public function testFilterBooleanOperator() {
+ 
+     $this->assertCount(3, $view->result);
+     $this->assertIdenticalResultset($view, $expected_result, $this->columnMap);
++
++    $view->destroy();
++
++    $view->setDisplay();
++
++    // Add the status boolean filter and consider NULL values FALSE.
++    $view->displayHandlers->get('default')->overrideOption('filters', [
++      'status' => [
++        'id' => 'status',
++        'field' => 'status',
++        'table' => 'views_test_data',
++        'value' => 0,
++        'accept_null' => TRUE,
++      ],
++    ]);
++    $this->executeView($view);
++
++    $expected_result = [
++      ['id' => 2],
++      ['id' => 4],
++      ['id' => 6],
++    ];
++
++    $this->assertCount(3, $view->result);
++    $this->assertIdenticalResultset($view, $expected_result, $this->columnMap);
++
++    $view->destroy();
++  }
++
++  /**
++   * Tests the BooleanOperator empty/not empty filters.
++   */
++  public function testEmptyFilterBooleanOperator() {
++    $view = Views::getView('test_view');
++    $view->setDisplay();
++
++    // Add an "empty" boolean filter on status.
++    $view->displayHandlers->get('default')->overrideOption('filters', [
++      'status' => [
++        'id' => 'status',
++        'field' => 'status',
++        'table' => 'views_test_data',
++        'operator' => 'empty',
++      ],
++    ]);
++    $this->executeView($view);
++
++    $expected_result = [
++      ['id' => 6],
++    ];
++
++    $this->assertCount(1, $view->result);
++    $this->assertIdenticalResultset($view, $expected_result, $this->columnMap);
++
++    $view->destroy();
++    $view->setDisplay();
++
++    // Add a "not empty" boolean filter on status.
++    $view->displayHandlers->get('default')->overrideOption('filters', [
++      'status' => [
++        'id' => 'status',
++        'field' => 'status',
++        'table' => 'views_test_data',
++        'operator' => 'not empty',
++      ],
++    ]);
++    $this->executeView($view);
++
++    $expected_result = [
++      ['id' => 1],
++      ['id' => 2],
++      ['id' => 3],
++      ['id' => 4],
++      ['id' => 5],
++    ];
++
++    $this->assertCount(5, $view->result);
++    $this->assertIdenticalResultset($view, $expected_result, $this->columnMap);
++
++    $view->destroy();
+   }
+ 
+   /**
+diff --git a/core/modules/views/views.post_update.php b/core/modules/views/views.post_update.php
+index 4cca352d89e..15bb7a10efe 100644
+--- a/core/modules/views/views.post_update.php
++++ b/core/modules/views/views.post_update.php
+@@ -53,6 +53,17 @@ function views_post_update_configuration_entity_relationships() {
+   // Empty update to clear Views data.
+ }
+ 
++/**
++ * Update boolean filter settings.
++ */
++function views_post_update_boolean_filter_accept_null(?array &$sandbox = NULL) {
++  /** @var \Drupal\views\ViewsConfigUpdater $view_config_updater */
++  $view_config_updater = \Drupal::classResolver(ViewsConfigUpdater::class);
++  \Drupal::classResolver(ConfigEntityUpdater::class)->update($sandbox, 'view', function (ViewEntityInterface $view) use ($view_config_updater) {
++    return $view_config_updater->needsBooleanFilterAcceptNullUpdate($view);
++  }, TRUE);
++}
++
+ /**
+  * Rename the setting for showing the default display to 'default_display'.
+  */
+diff --git a/core/profiles/demo_umami/config/install/views.view.promoted_items.yml b/core/profiles/demo_umami/config/install/views.view.promoted_items.yml
+index 427c7d24afd..4515e6ea56c 100644
+--- a/core/profiles/demo_umami/config/install/views.view.promoted_items.yml
++++ b/core/profiles/demo_umami/config/install/views.view.promoted_items.yml
+@@ -121,6 +121,7 @@ display:
+           entity_type: node
+           entity_field: status
+           plugin_id: boolean
++          accept_null: false
+           value: '1'
+           group: 1
+           expose:
+@@ -137,6 +138,7 @@ display:
+           entity_type: node
+           entity_field: promote
+           plugin_id: boolean
++          accept_null: false
+           operator: '='
+           value: '1'
+           group: 1
+@@ -256,6 +258,7 @@ display:
+           entity_type: node
+           entity_field: status
+           plugin_id: boolean
++          accept_null: false
+           value: '1'
+           group: 1
+           expose:
+@@ -272,6 +275,7 @@ display:
+           entity_type: node
+           entity_field: promote
+           plugin_id: boolean
++          accept_null: false
+           operator: '='
+           value: '1'
+           group: 1
+@@ -354,6 +358,7 @@ display:
+           entity_type: node
+           entity_field: default_langcode
+           plugin_id: boolean
++          accept_null: false
+           operator: '='
+           value: '1'
+           group: 1
+@@ -430,6 +435,7 @@ display:
+           entity_type: node
+           entity_field: status
+           plugin_id: boolean
++          accept_null: false
+           value: '1'
+           group: 1
+           expose:
+@@ -446,6 +452,7 @@ display:
+           entity_type: node
+           entity_field: promote
+           plugin_id: boolean
++          accept_null: false
+           operator: '='
+           value: '1'
+           group: 1
+@@ -528,6 +535,7 @@ display:
+           entity_type: node
+           entity_field: default_langcode
+           plugin_id: boolean
++          accept_null: false
+           operator: '='
+           value: '1'
+           group: 1
