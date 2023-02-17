@@ -391,7 +391,6 @@ function agri_admin_update_8007() {
   foreach ($nids as $nid) {
     $idx++;
     if ($idx % 50 == 0) {
-    AgriAdminHelper::addToLog($nid . ' node processed.', TRUE);
       AgriAdminHelper::addToLog($idx . ' nodes have been processed.', TRUE);
     }
     $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
