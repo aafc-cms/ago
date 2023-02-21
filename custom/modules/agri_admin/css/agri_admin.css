@@ -364,6 +364,10 @@ body.role-is-editor table#taxonomy tr[data-drupal-selector*="blog-freetags"] {
   display: none;
 }
 
+body.path-admin.admin-content .view-content .form-item--accept-null {
+  display: none;
+}
+
 body.path-admin .view-content fieldset[data-drupal-selector=edit-field-campaign-value],
 body.path-admin .view-content fieldset[data-drupal-selector=edit-field-special-value] {
   margin-top: 1em;
@@ -422,6 +426,10 @@ body.path-admin .view-filters #edit-field-issued-value-wrapper {
 }
 body.path-admin .view-filters .form-actions .button {
   margin-left: 15px;
+}
+
+body.path-admin.admincontentmoderated div.view.view-moderated-content .form-item--accept-null {
+  display: none;
 }
 
 div.view.view-moderated-content fieldset[data-drupal-selector=edit-field-campaign-value],
