@@ -1,4 +1,11 @@
 @charset "UTF-8";
+body.path-admin.admin-content {
+  .view-content {
+    .form-item--accept-null {
+      display: none;
+    }
+  }
+}
 body.path-admin {
   .view-content {
     fieldset[data-drupal-selector=edit-field-campaign-value],

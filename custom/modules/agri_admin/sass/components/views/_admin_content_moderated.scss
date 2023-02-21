@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+body.path-admin.admincontentmoderated {
+  div.view.view-moderated-content {
+    .form-item--accept-null {
+      display: none;
+    }
+  }
+}
 div.view.view-moderated-content {
   fieldset[data-drupal-selector=edit-field-campaign-value],
   fieldset[data-drupal-selector=edit-field-special-value] {
