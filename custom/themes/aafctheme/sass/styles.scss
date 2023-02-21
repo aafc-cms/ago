@@ -7,7 +7,6 @@
 //@import 'global/forms';
 
 @import 'anonymous/restrictions';
-@import 'anonymous/webforms';
 @import 'components/draft-pending-views';
 @import 'components/container-fluid';
 @import 'components/front';
@@ -15,8 +14,7 @@
 @import 'components/node';
 @import 'components/status_message';
 @import 'legacy-styles';
-@import 'components/feedback-webform';
-@import 'components/services-request-webform';
+//@import 'components/services-request-webform';
 @import 'regions/header';
 @import 'regions/highlighted-not-front';
 @import 'regions/highlighted-front-only';
