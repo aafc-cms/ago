@@ -7,7 +7,6 @@ ignored_config_entities:
   - block.block.media
   - block.block.media_2
   - 'block.block.*'
-  - 'webform.*'
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
