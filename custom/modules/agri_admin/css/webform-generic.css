@@ -1,3 +1,6 @@
+body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
+  display none;
+}
 div.highlighted {
   position: relative;
   z-index: 1;
