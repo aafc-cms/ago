@@ -87,8 +87,721 @@ elements: |-
         ':input[name="select_your_province_and_then_select_the_forms_package_s_you_wou[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
           checked: true
     '#options__properties': ''
-css: "div.highlighted {\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\nsector.alert-danger,\r\nform.webform-submission-form div.form-item.form-group {\r\n  position: relative;\r\n}\r\nform.webform-submission-form div.form-type-checkbox strong.error {\r\n  margin-left: -20px;\r\n}\r\n.wb-frmvld fieldset legend strong.error,\r\nform.webform-submission-form .form-type-processed-text,\r\nform.webform-submission-form #edit-actions-submit {\r\n  margin-left: 10px;\r\n}\r\n.wb-frmvld label strong.error,\r\n.wb-frmvld legend strong.error {\r\n  margin-bottom: 5px;\r\n  margin-top: 3px;\r\n  line-height: 2em;\r\n}\r\nform.webform-submission-form fieldset .fieldset-wrapper {\r\n  position: relative;\r\n  margin-left: 10px;\r\n  margin-top: 30px;\r\n  display: block !important;\r\n}\r\n.wb-frmvld div.form-item.has-error:not(error) strong.error {\r\n  display: none !important;\r\n}\r\nform.webform-submission-form .form-item .help-block,\r\nform.webform-submission-form .form-item.form-group .help-block {\r\n  margin-left: 10px;\r\n  position: relative;\r\n}\r\n\r\n/*form.webform-submission-form div.form-item label.control-label,*/\r\nform.webform-submission-form fieldset span.fieldset-legend {\r\n  position: relative;\r\n  margin-bottom: 0px;\r\n  margin-left: 15px;\r\n}\r\nsection.alert-danger ul.item-list__comma-list li {\r\n  display: block;\r\n}\r\nform.webform-submission-form div.form-item div.form-item--error-message.alert.alert-danger::before,\r\ndiv.form-item--error-message.alert.alert-danger::before,\r\ndiv.region-content form div.form-item label[for=\"*-required-\"]::after,\r\ndiv.form-item label.control-label.js-form-required.form-required::after,\r\nfieldset span.fieldset-legend.js-form-required.form-required::after {\r\n  content: none;\r\n}\r\ndiv#edit-actions,\r\ndiv#edit-cancel-link  {\r\n  display: inline-block;\r\n  padding-right: 30px;\r\n}\r\ndiv[class^=\"form-type-\"] label.form-required::before,\r\nfieldset[class^=\"webform-type-\"] span.form-required::before,\r\nfieldset[class^=\".webform-radio\"] span.form-required::before,\r\nfieldset[class^=\".webform-check\"] span.form-required::before,\r\ndiv.form-item label.control-label.form-required span.field-name::before,\r\nfieldset span.fieldset-legend.js-form-required.form-required::before {\r\n  content: \"\";\r\n  background-image: url(https://agriculture.canada.ca/themes/custom/wxt_bootstrap/images/required.svg);\r\n  display: inline-block;\r\n  line-height: 1;\r\n  color: #e00;\r\n  background-size: 7px 7px;\r\n  width: 7px;\r\n  vertical-align: super;\r\n  margin-left: 4px;\r\n  height: 7px;\r\n  position: absolute;\r\n  top: 6px;\r\n  left: -15px;\r\n}\r\nform.webform-submission-form div.form-item label.control-label.form-required span.field-name::before {\r\n  left: -5px;\r\n}\r\nform.webform-submission-form section.form-wrapper div.webform-section-wrapper div.form-item-srf-product label.form-required span.field-name::before,\r\nform.webform-submission-form > div.form-item.form-type-email label.control-label.form-required span.field-name::before,\r\nform.webform-submission-form > div.form-item.form-type-textfield label.control-label.form-required span.field-name::before {\r\n  left: -15px;\r\n}\r\ndiv[class^=\"form-type-\"].form-type-textarea.error label.form-required,\r\nfieldset[class^=\"webform-type-\"].error span.form-required,\r\nfieldset[class^=\".webform-radio\"].error span.form-required,\r\nfieldset[class^=\".webform-check\"].error span.form-required,\r\ndiv.form-item.error label.control-label.js-form-required.form-required,\r\nfieldset.error span.fieldset-legend.js-form-required.form-required {\r\n  color: unset;\r\n}\r\n\r\nhtml:lang(en) div[class^=\"form-type-\"].form-type-textarea label.form-required:after,\r\nhtml:lang(en) fieldset[class^=\"webform-type-\"] span.form-required:after,\r\nhtml:lang(en) fieldset[class^=\".webform-radio\"] span.form-required:after,\r\nhtml:lang(en) fieldset[class^=\".webform-check\"] span.form-required:after,\r\nhtml:lang(en) div.form-item label.control-label strong.required:after,\r\nhtml:lang(en) fieldset span.fieldset-legend.js-form-required.form-required:after {\r\n  content: \"(required)\";\r\n  display: inline-block;\r\n  color: #e00;\r\n  margin-left: 4px;\r\n  position: unset;\r\n  background-image: unset;\r\n  background-size: unset;\r\n  width: unset;\r\n  vertical-align: unset;\r\n  height: unset;\r\n}\r\n\r\nhtml:lang(fr) div[class^=\"form-type-\"].form-type-textarea label.form-required:after,\r\nhtml:lang(fr) fieldset[class^=\"webform-type-\"] span.form-required:after,\r\nhtml:lang(fr) fieldset[class^=\".webform-radio\"] span.form-required:after,\r\nhtml:lang(fr) fieldset[class^=\".webform-check\"] span.form-required:after,\r\nhtml:lang(fr) div.form-item label.control-label strong.required:after,\r\nhtml:lang(fr) fieldset span.fieldset-legend.js-form-required.form-required:after {\r\n  content: \"(obligatoire)\";\r\n  display: inline-block;\r\n  color: #e00;\r\n  margin-left: 4px;\r\n  position: unset;\r\n  background-image: unset;\r\n  background-size: unset;\r\n  width: unset;\r\n  vertical-align: unset;\r\n  height: unset;\r\n}\r\n\r\nform.webform-submission-form .webform-element-description {\r\n  color: #333;\r\n}\r\nform.webform-submission-form div.form-item .description.help-block,\r\nform.webform-submission-form div.form-item .description.help-block strong .label {\r\n  font-size: 16px\r\n}\r\nbody.path-webform div.region-content form label[for=\"*-required-\"] {\r\n  position: relative;\r\n  margin-bottom: 0px;\r\n}\r\nform.webform-submission-form div.form-item--error-message.alert.alert-danger {\r\n  border-image: none !important;\r\n  margin-bottom: 5px;\r\n  margin-left: 0px;\r\n  font-weight: bold;\r\n  background: #f3e9e8;\r\n  border-color: #d3080c;\r\n}\r\nform.webform-submission-form div.form-item.form-item-programorservice.form-group,\r\ndiv.form-group.error.has-error label + div.select-wrapper {\r\n  margin-bottom: 0px;\r\n}\r\ndiv.form-group.error.has-error label + div.select-wrapper select.form-select {\r\n  width: 100%;\r\n}\r\n\r\ndiv.region section.alert-danger ul li {\r\n  display: block;\r\n}\r\n\r\ndiv.region section.alert-danger ul li a {\r\n  display: list-item;\r\n  list-style-position: inside;\r\n  margin-top: 15px;\r\n}\r\n\r\ndiv.region section.alert-danger ul li::after {\r\n  content: none;\r\n}\r\ndiv.region section.alert-danger h2.sr-only {\r\n  position: relative;\r\n  font-size: 24px;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\nform.webform-submission-form > .btn { \r\n  width: auto; }\r\n}\r\nform.webform-submission-form label.control-label.js-form-required.form-required {\r\n  padding-bottom: 5px;\r\n}\r\nform.webform-submissoin-form div.fieldset-wrapper .alert-sm,\r\nform.webform-submissoin-form div.help-block strong.error {\r\n  display: flow-root;\r\n  font-size: 16px;\r\n  font-weight: bold;\r\n  margin-bottom: 5px;\r\n}\r\nbody.path-webform fieldset.required.error legend span {\r\n  color: #a94442;\r\n}\r\nform[id$=\"-add-form\"] section.alert ul li a,\r\nform[id$=\"-edit-form\"] section.alert ul li a {\r\n  font-weight: normal;\r\n}\r\n\r\nform.webform-submission-form .iti__selected-flag {\r\n  left: 10px;\r\n}\r\nform.webform-submission-form .iti,\r\ndiv.form-type-date .control-label {\r\n  display: block;\r\n}\r\n\r\n/*form.webform-submission-form div.form-item label.control-label,*/\r\nform.webform-submission-form fieldset.fieldgroup legend span.fieldset-legend,\r\nform.webform-submission-form div.form-item .description,\r\nform.webform-submission-form div.form-type-email input.form-email,\r\nform.webform-submission-form div.form-item .form-control,\r\nform.webform-submission-form div.form-type-phone input.form-phone,\r\nform.webform-submission-form div.form-item.form-group label.control-label.form-required,\r\nform.webform-submission-form div.form-item > input.form-email {\r\n  margin-left: 10px;\r\n}\r\n\r\nform.webform-submission-form section#edit-psrf-section-productsrequired .webform-section-wrapper,\r\nform.webform-submission-form section .webform-section-wrapper .js-webform-states-hidden.js-form-wrapper,\r\nform.webform-submission-form section.form-wrapper.webform-section div.webform-section-wrapper div.form-item label.control-label {\r\n  margin-left: 10px;\r\n}\r\nform.webform-submission-form section#edit-psrf-section-productsrequired .webform-section-wrapper .form-item.form-type-select > * {\r\n  margin-left: 0;\r\n}\r\nform.webform-submission-form label.control-label.form-required {\r\n  color: #000;\r\n}\r\nform.webform-submission-form div.form-item > label:not(.form-required) span.field-name,\r\nform.webform-submission-form section > h2,\r\nform.webform-submission-form section.form-item .webform-section-wrapper div.panel,\r\nform.webform-submission-form .form-item.error > .alert-danger,\r\nform.webform-submission-form div.form-item > div.form-item--error-message.alert.alert-danger,\r\nform.webform-submission-form > div.form-item.form-type-textfield > div.form-item--error-message.alert.alert-danger,\r\nform.webform-submission-form > div.form-type-checkbox > label.control-label {\r\n  margin-left: 10px;\r\n}\r\nform.webform-submission-form > section.form-wrapper.webform-section,\r\nform.webform-submission-form > fieldset.webform-type-checkboxes div.fieldset-wrapper div.form-checkboxes div.form-item > label.control-label span.field-name,\r\nform.webform-submission-form > fieldset.webform-checkboxes-other div.fieldset-wrapper div.form-checkboxes div.form-type-checkbox > label.option span.field-name,\r\nform.webform-submission-form > fieldset.webform-type-radios div.fieldset-wrapper div.webform-options-display-one-column div.form-type-radio > label.option span.field-name ,\r\nform.webform-submission-form > fieldset.webform-radios-other div.fieldset-wrapper div.webform-options-display-one-column div.form-type-radio > label.option span.field-name {\r\n  margin-left: unset;\r\n}\r\nform.webform-submission-form div.form-item div.form-item--error-message.alert.alert-danger {\r\n  margin-bottom: 5px !important;\r\n}\r\nform.webform-submission-form div.form-item > div.form-item--error-message.alert.alert-danger {\r\n  margin-left: 10px;\r\n}\r\n\r\nsection.alert-danger button.close {\r\n  opacity: unset;\r\n  border: 1px solid white;\r\n  padding: 0px 9px 3px 9px;\r\n  font-size: 30px;\r\n}\r\n\r\nsection.alert-danger button.close:hover {\r\n  border-radius: 3px;\r\n  border-color: #999;\r\n  box-shadow: 0px 0px 5px #999;\r\n}"
-javascript: "(function ($, Drupal) {\r\n  Drupal.behaviors.wxtOrWetBoew = {\r\n    attach: function (context, settings) {\r\n      if (context == document) {\r\n        if (!$('body').hasClass('path-webform')) {\r\n          // Not a webform, do nothing.\r\n          console.log('Not a webform, validated by wxtOrWetBoew');\r\n          return;\r\n        }\r\n        if (WxtHelper.timeout > 0) {\r\n          console.log('WxtHelper.init()');\r\n          WxtHelper.init();\r\n        }\r\n      }\r\n    }\r\n  };\r\n})(jQuery, Drupal);\r\nvar WxtHelper = function() {\r\n  var errorHtml = '';\r\n  var erroredElements = [];\r\n  var erroredMessages = [];\r\n  var initialized = false;\r\n  var lang = 'en';\r\n  var validationType = 'drupal';\r\n  var wetboewFail = false;\r\n  var timeout = 950000;\r\n  function isReady() {\r\n    var isReady = false;\r\n    if (typeof $ == 'undefined') {\r\n      $ = jQuery;\r\n    }\r\n    if ($('.wb-frmvld').length > 0 && WxtHelper.validationType == 'drupal') {\r\n      console.log('WxtHelper.validationType = wet-boew');\r\n      WxtHelper.validationType = 'wet-boew';\r\n    }\r\n    if (WxtHelper.validationType == 'wet-boew' &&\r\n    $('.wb-frmvld').hasClass('wb-frmvld-inited') &&\r\n    $('.wb-frmvld').hasClass('wb-init') &&\r\n    ($('form section[id*=errors]').length == 1 || $('div.highlighted section.alert-danger').length == 1)) {\r\n      if ($('div.highlighted section.alert-danger').length) {\r\n        WxtHelper.wetboewFail = true;\r\n        console.log('Form type is : ' + WxtHelper.validationType + ' : ? wet-boew not initialized correctly for some reason.');        \r\n      }\r\n      else {\r\n        console.log('Form type is : ' + WxtHelper.validationType);\r\n      }\r\n      isReady = true;\r\n    }\r\n    else if(WxtHelper.validationType == 'drupal' && $('section.alert-danger').length > 0 && $('.form-item--error-message').length > 0) {\r\n      WxtHelper.validationType = 'drupal';\r\n      console.log('Form type is : ' + WxtHelper.validationType)\r\n      isReady = true;\r\n    }\r\n    if (isReady) {\r\n      console.log('isReady - Form type is : ' + WxtHelper.validationType);\r\n      if (WxtHelper.timeout > 0) {\r\n        console.log('isReady took ' + (950000 - WxtHelper.timeout) + ' milliseconds to complete');\r\n      }\r\n    }\r\n    return isReady;\r\n  };\r\n  // Code you want to run when isReady conditions exist in the DOM.\r\n  function onReady() {\r\n    console.log('onReady()');\r\n\r\n    if (WxtHelper.validationType == 'drupal') {\r\n      WxtHelper.validationHelper();\r\n      WxtHelper.makeErrorTitleLikeWetboew();\r\n      WxtHelper.moveAlertInsideLabel();\r\n      WxtHelper.setErrorElementsText();\r\n      WxtHelper.moveErrors();\r\n      // WCAG next three lines.\r\n      $('section.alert-danger').removeAttr('role');\r\n      $('section.alert-danger').attr('tabindex', '-1');\r\n      $('section.alert-danger li a').first().trigger('focus');\r\n    }\r\n    else {\r\n      // Make sure the event bindings do not accumulate, turn off first.\r\n      WxtHelper.validationWetboew();\r\n      WxtHelper.moveAlertInsideLabel();\r\n      $('form.webform-submission-form').off('submit.wxthelper');\r\n      $('form.webform-submission-form').once('submit.wxthelper', function() {\r\n        // Re-initialize on submit.\r\n        WxtHelper.timeout = 900000;\r\n        WxtHelper.initialized = false;\r\n        WxtHelper.init();\r\n        setTimeout(function() {\r\n          WxtHelper.moveAlertInsideLabel();\r\n        }, 100);\r\n      });\r\n    }\r\n  };\r\n  // Contingency plan code you want to run if isReady conditions DO NOT exist in the DOM by timeout.\r\n  function opt_onTimeout() {\r\n    // Do nothing.\r\n  };\r\n  function addErrorToFieldset(item, index, arr) {\r\n    console.log('addErrorToFieldset()');\r\n    if (1) {\r\n      // Disabled, still reviewing this.\r\n      return;\r\n    }\r\n    if (WxtHelper.validationType == 'drupal' && (jQuery('fieldset' + item).length || $('fieldset' + item + '--wrapper').length)) {\r\n      WxtHelper.errorHtml = '<div class=\"clearfix\"></div><div class=\"form-item--error-message alert alert-danger alert-sm\">' + WxtHelper.erroredMessages[index] + '</div>';\r\n      if (jQuery('fieldset' + item).length || $('fieldset' + item + '--wrapper').length) {\r\n        $('fieldset' + item + '--wrapper').find(item).prepend(WxtHelper.errorHtml);\r\n        $('fieldset' + item).find(item+'radios').prepend(WxtHelper.errorHtml);\r\n      }\r\n      if (!$('fieldset' + item + '--wrapper').find('.alert-danger').length) {\r\n        // Prepend the error message on the fieldset wrapper.\r\n        $('fieldset' + item + '--wrapper').find(item).prepend(WxtHelper.errorHtml);\r\n      }\r\n      if (!$('fieldset' + item).find('.alert-danger').length) {\r\n        // For Radios.\r\n        // If the error html is not already added to the fieldset item, add it.\r\n        $('fieldset' + item).find(item+'radios').prepend(WxtHelper.errorHtml);\r\n      }\r\n    }\r\n  }\r\n  function cleanErrorMessage(text, index) {\r\n    if ($('section.alert-danger').hasClass('wxt-processed')) {\r\n      // Prevent extra processing.\r\n      return;\r\n    }\r\n    if ($('div.region-highlighed section.alert-danger').hasClass('wxt-processed')) {\r\n      // Prevent over-processing.\r\n      return;\r\n    }\r\n    if (text.indexOf('field is required') > 1 || text.indexOf('champ est requ') > 1) {\r\n      return text;\r\n    }\r\n    var result = text;\r\n    if (WxtHelper.validationType == 'wet-boew') {\r\n      result = text + WxtHelper.requiredSuffix();\r\n      if (WxtHelper.lang == 'fr') {\r\n        result = result.replace('Ce field est requis', 'Ce champ est requis');\r\n      }\r\n    }\r\n    else if (WxtHelper.validationType == 'drupal') {\r\n      if (WxtHelper.lang == 'en') {\r\n        text = \"Error \" + index + \": \" + text + WxtHelper.requiredSuffix((index - 1));\r\n      }\r\n      else {\r\n        text = \"Erreur \" + index + \": \" + text + WxtHelper.requiredSuffix((index - 1));\r\n      }\r\n      result = text;\r\n    }\r\n    return result;\r\n  }\r\n  function requiredSuffix(index) {\r\n    var found = false;\r\n    if ($(erroredElements[index]).length == 1 &&\r\n    ($(erroredElements[index]).get(0).tagName.toLowerCase() == 'input' ||\r\n    $(erroredElements[index]).get(0).tagName.toLowerCase() == 'fieldset' ||\r\n    $(erroredElements[index]).get(0).tagName.toLowerCase() == 'textarea')) {\r\n      var searching = erroredElements[index];\r\n      if ($(searching).is('[class*=radios]') ||\r\n      $(searching).hasClass('form-email') ||\r\n      $(searching).hasClass('form-text') ||\r\n      $(searching).hasClass('form-textarea') ||\r\n      $(searching).hasClass('form-tel')) {\r\n        if (!found && $(searching).find('.alert-danger').length == 1) {\r\n          msg = $(searching).find('.alert-danger').first().text();\r\n          found = true;\r\n        }\r\n        else if (!found && $(searching).parent().find('.alert-danger').length == 1) {\r\n          msg = $(searching).parent().find('.alert-danger').first().text();\r\n          found = true;\r\n        }\r\n        else if (!found && $(searching).parent().parent().find('.alert-danger').length == 1) {\r\n          msg = $(searching).parent().parent().find('.alert-danger').first().text();\r\n          found = true;\r\n        }\r\n      }\r\n    }\r\n    if (!found) {\r\n      msg = \"This field is required.\";\r\n      if (WxtHelper.lang == 'fr') {\r\n        msg = \"Ce champ est requis.\";\r\n      }\r\n    }\r\n    return ' - ' + msg;\r\n  }\r\n  function requiredSuffixFormElement(index) {\r\n    var msg = '';\r\n    var prefix = 'Error ' + (index+1) + ' - ';\r\n    if (WxtHelper.lang == 'fr') {\r\n      prefix = 'Erreur ' + (index+1) + ' - ';\r\n    }\r\n    if ($(erroredElements[index]).length == 1 && $(erroredElements[index]).get(0).tagName.toLowerCase() == 'fieldset') {\r\n      msg = $(erroredElements[index]).find('.alert.alert-danger').text();\r\n    }\r\n    else {\r\n      if ($(erroredElements[index]).closest('.error.form-wrapper').length == 1) {\r\n        msg = $(erroredElements[index]).closest('.error.form-wrapper').find('.alert.alert-danger').text();\r\n      }\r\n      else if ($(erroredElements[index]).closest('.error.has-error').length == 1) {\r\n        msg = $(erroredElements[index]).closest('.error.has-error').find('.alert.alert-danger').text();\r\n      }\r\n      else if ($(erroredElements[index]).closest('.error.form-item').length == 1) {\r\n        msg = $(erroredElements[index]).closest('.error.form-item').find('.alert.alert-danger').text();\r\n      }\r\n      else {\r\n        msg = \"This field is required.\";\r\n        if (WxtHelper.lang == 'fr') {\r\n          msg = \"Ce champ est requis.\";\r\n        }\r\n      }\r\n    }\r\n    return prefix + msg;\r\n  }\r\n  function makeErrorTitleLikeWetboew(force) {\r\n    if (typeof force == 'undefined') {\r\n      force = false;\r\n    }\r\n    if (WxtHelper.validationType == 'drupal' || force) {\r\n      var h2prefix = \"The form could not be submitted because \";\r\n      if (WxtHelper.lang == 'fr') {\r\n        h2prefix = \"Le formulaire n'a pu être soumis car \";\r\n      }\r\n      if ($(\"h2.sr-only\").length == 1) {\r\n        var original = $(\"h2.sr-only\").next().text();\r\n        $(\"h2.sr-only\").text(h2prefix + original); // Set the error msg into h2\r\n        $(\"h2.sr-only\").next().remove(); // Remove extra html p element\r\n      }\r\n    }\r\n  }\r\n  function moveAlertInsideLabel() {\r\n    console.log('moveAlertInsideLabel()');\r\n    var textItem = 'div[class*=form-type-text], div.js-webform-states-hidden, div.form-item.has-error, .form-type-select.form-group';\r\n    $(textItem).each(function(index, element) {\r\n      var divAlert = $(this).find('.alert-danger').first();\r\n      if ($(this).find(divAlert).length == 1) {\r\n        var labelItem = $(this).find('label');\r\n        var attachToThis = labelItem;\r\n        var descriptionHelp = $(this).find('.description.help-block').first();\r\n        var textarea = $(this).find('textarea').first();\r\n        var textareaWrapper = $(this).find('.form-textarea-wrapper').first();\r\n        if ($(descriptionHelp).length == 1) {\r\n          attachToThis = descriptionHelp;\r\n          $(divAlert).clone().insertBefore($(attachToThis));\r\n          $(divAlert).remove();\r\n        }\r\n        else if ($(textarea).hasClass('required') && $(textareaWrapper).length == 1) {\r\n          attachToThis = $(this).find('.form-textarea-wrapper');\r\n          $(divAlert).clone().insertBefore($(attachToThis));\r\n          $(divAlert).remove();\r\n        }\r\n        else if ($(this).hasClass('error') && $(this).find('.select-wrapper').length == 1) {\r\n          attachToThis = $(this).find('.select-wrapper');\r\n          $(divAlert).clone().insertBefore($(attachToThis));\r\n          $(divAlert).remove();\r\n        }\r\n        else if (!$(this).hasClass('form-type-textarea') && $(this).find('.form-control').length == 1) {\r\n          attachToThis = $(this).find('label.control-label');\r\n          $(divAlert).clone().insertAfter($(attachToThis));\r\n          $(divAlert).remove();\r\n        }\r\n      }\r\n    });\r\n    if (WxtHelper.validationType == 'wet-boew') {\r\n      $(textItem).each(function(index, element) {\r\n        var divAlert = $(this).find('strong.error').first();\r\n        // DISABLED, LIKELY DO NOT NEED THIS HERE SECTION FOR WET-BOEW.\r\n        if (0 && $(this).find(divAlert).length == 1) {\r\n          var labelItem = $(this).find('label');\r\n          var attachToThis = labelItem;\r\n          var descriptionHelp = $(this).find('.description.help-block').first();\r\n          var textarea = $(this).find('textarea').first();\r\n          var textareaWrapper = $(this).find('.form-textarea-wrapper').first();\r\n          if ($(descriptionHelp).length == 1) {\r\n            attachToThis = descriptionHelp;\r\n            $(divAlert).clone().appendTo($(attachToThis));\r\n            $(divAlert).remove();\r\n          }\r\n          else if (!$(this).hasClass('form-type-textarea') && $(this).find('.form-control').length == 1) {\r\n            attachToThis = $(this).find('label.control-label');\r\n            $(divAlert).clone().appendTo($(attachToThis));\r\n            $(divAlert).remove();\r\n          }\r\n          else if ($(textarea).hasClass('required') && $(textareaWrapper).length == 1) {\r\n            attachToThis = $(this).find('.form-textarea-wrapper');\r\n            $(divAlert).clone().prepend($(attachToThis));\r\n            $(divAlert).remove();\r\n          }\r\n          else if ($(this).hasClass('error') && $(this).find('.select-wrapper').length == 1) {\r\n            attachToThis = $(this).find('.select-wrapper');\r\n            $(divAlert).clone().appendTo($(attachToThis));\r\n            $(divAlert).remove();\r\n          }\r\n        }\r\n      });\r\n    }\r\n  }\r\n  function moveErrors() {\r\n    var submit = '#edit-actions-submit';\r\n    var force = false;\r\n    if ($(submit).length == 1 && $(submit).is('[disabled]')) {\r\n      force = true;\r\n    }\r\n    // Only needs to be done for validationType = drupal.\r\n    if (WxtHelper.validationType == 'drupal' || force) {\r\n      var highlightedSelector = 'div.highlighted';\r\n      var firstErrorAnchorSelector = 'div.highlighted section.alert-danger ul li:first-child a:first-child'\r\n      var firstErrorElement = $(firstErrorAnchorSelector).attr('href');\r\n      var formElement = $(firstErrorElement).parent().closest('form');\r\n      var attachToThis = formElement;\r\n      var firstFormItem = $(formElement).find('.form-item').first();\r\n      if ($(firstFormItem).length == 1 && !$(firstFormItem).hasClass('error')) {\r\n        $(highlightedSelector).insertAfter($(firstFormItem));\r\n      }\r\n      else if ($(attachToThis).length == 1) {\r\n        $(highlightedSelector).insertBefore($(attachToThis));\r\n      }\r\n    }\r\n  }\r\n  function setErrorElementsText() {\r\n    if (WxtHelper.wetboewFail == true && WxtHelper.validationType == 'wetboew') {\r\n      return;\r\n    }\r\n    var all = 'form.webform-submission-form .alert-danger';\r\n    if ($('form.webform-submission-form').hasClass('wxt-processed')) {\r\n      // Prevent over-processing.\r\n      return;\r\n    }\r\n    console.log('setErrorElementText');\r\n    $(all).each(function(index, element) {\r\n      if ($(this).length == 1) {\r\n        console.log('index of form alert-danger:' + index);\r\n        var desired = WxtHelper.requiredSuffixFormElement(index);\r\n        if (desired.indexOf($(this).text)) {\r\n          $(this).text(desired);\r\n        }\r\n      }\r\n    });\r\n    // Add wxt-processed class to prevent over-processing.\r\n    $('form.webform-submission-form').addClass('wxt-processed');\r\n    // Now for the section element anchor text.\r\n    var all = 'div.region-highlighted section.alert-danger ul a';\r\n    if ($('div.region-highlighed section.alert-danger').hasClass('wxt-processed')) {\r\n      // Prevent over-processing.\r\n      return;\r\n    }\r\n    $(all).each(function(index, element) {\r\n      if ($(this).length == 1) {\r\n        console.log('index of section alert-danger:' + index);\r\n        var desired = WxtHelper.getErroredMessage(index);\r\n        if (desired.indexOf($(this).text)) {\r\n          $(this).text(desired);\r\n        }\r\n      }\r\n    });\r\n    $('div.region-highlighed section.alert-danger').addClass('wxt-processed');\r\n  }\r\n  function init() {\r\n    // How frequent to check for your object.\r\n    var interval = 35;\r\n    if (WxtHelper.validationType == 'wet-boew') {\r\n      interval = 250;\r\n    }\r\n    WxtHelper.lang = jQuery('html').attr('lang');\r\n    if (WxtHelper.isReady()) {\r\n      if (WxtHelper.validationType == 'drupal') {\r\n        WxtHelper.onReady();\r\n      }\r\n      else {\r\n        // Wetboew is a bit slow to initialize, improve this later.\r\n        var submit = '#edit-actions-submit';\r\n        $(submit).removeAttr('disabled');\r\n        if ($('div.highlighted section.alert-danger').length == 1) {\r\n          WxtHelper.wetboewFail = true;\r\n          setTimeout(function () {\r\n            WxtHelper.beforeReadyOverride();\r\n            WxtHelper.onReady();\r\n          }, 200);\r\n        }\r\n        else {\r\n          setTimeout(function () {\r\n            WxtHelper.onReady();\r\n          }, 200);\r\n        }\r\n      }\r\n    }\r\n    else {\r\n      if (WxtHelper.timeout > 0) {\r\n        WxtHelper.timeout -= interval;\r\n        window.setTimeout(arguments.callee, interval);\r\n      } else {\r\n        console.log(\"WxtHelper.isReady() timed-out always returning false.\");\r\n      }\r\n    }\r\n  }\r\n  function beforeReadyOverride() {\r\n    WxtHelper.validationHelper();\r\n    WxtHelper.setErrorElementsText();\r\n    WxtHelper.moveAlertInsideLabel();\r\n    WxtHelper.makeErrorTitleLikeWetboew(true);\r\n    WxtHelper.moveErrors();\r\n    $('section.alert-danger').removeAttr('role');\r\n    $('section.alert-danger').attr('tabindex', '-1');\r\n    $('section.alert-danger li a').first().trigger('focus');\r\n  }\r\n  function getErroredMessage(index) {\r\n    console.log('getErroredMessage()');\r\n    var erroredText = '';\r\n    if (WxtHelper.erroredElements[index].length) {\r\n      erroredText = WxtHelper.erroredMessages[index];\r\n    }\r\n    return erroredText\r\n  }\r\n  function validationHelper() {\r\n    console.log('validationHelper()');\r\n    var allErrors = jQuery('section.alert-danger ul a').each(function(index) {\r\n      WxtHelper.erroredElements.push($(this).attr('href'));\r\n      var fieldtype = 'unknown';\r\n      if ($($(this).attr('href')).hasClass('field-type-email')) {\r\n        fieldtype = 'form-type-email';\r\n      }\r\n      WxtHelper.erroredMessages.push(WxtHelper.cleanErrorMessage($(this).text(), (index+1)));\r\n    });\r\n    //WxtHelper.erroredElements.forEach(WxtHelper.addErrorToFieldset);\r\n  }\r\n  function validationWetboew() {\r\n    console.log('validationWetboew()');\r\n    if (WxtHelper.validationType == 'wet-boew') {\r\n      $('div.wb-frmvld form fieldset span.label-danger, div.wb-frmvld form > div.has-error span.label-danger').each(function(index) {\r\n        if (!$(this).hasClass('wxt-cleaned')) {\r\n          var prefixSpan = $(this).find('.prefix').prop('outerHTML');\r\n          var prefixText = $(this).find('.prefix').text();\r\n          $(this).find('span.prefix').remove();\r\n          var cleanedText = WxtHelper.cleanErrorMessage(prefixText + $(this).html());\r\n          cleanedText = cleanedText.replace(prefixText, '');\r\n          $(this).html(cleanedText);\r\n          $(this).prepend(prefixSpan);\r\n          $(this).addClass('wxt-cleaned');\r\n        }\r\n      });\r\n    }\r\n  }\r\n  return {\r\n    addErrorToFieldset: addErrorToFieldset,\r\n    beforeReadyOverride: beforeReadyOverride,\r\n    cleanErrorMessage: cleanErrorMessage,\r\n    erroredElements: erroredElements,\r\n    erroredMessages: erroredMessages,\r\n    errorHtml: errorHtml,\r\n    getErroredMessage: getErroredMessage,\r\n    isReady: isReady,\r\n    init: init,\r\n    initialized: initialized,\r\n    lang: lang,\r\n    makeErrorTitleLikeWetboew: makeErrorTitleLikeWetboew,\r\n    moveAlertInsideLabel: moveAlertInsideLabel,\r\n    moveErrors: moveErrors,\r\n    onReady: onReady,\r\n    requiredSuffix: requiredSuffix,\r\n    requiredSuffixFormElement: requiredSuffixFormElement,\r\n    setErrorElementsText: setErrorElementsText,\r\n    timeout: timeout,\r\n    validationHelper: validationHelper,\r\n    validationWetboew: validationWetboew,\r\n    validationType: validationType,\r\n    wetboewFail: wetboewFail,\r\n  }\r\n}();"
+css: |-
+  body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
+    display none;
+  }
+  div.highlighted {
+    position: relative;
+    z-index: 1;
+  }
+  sector.alert-danger,
+  form.webform-submission-form div.form-item.form-group {
+    position: relative;
+  }
+  form.webform-submission-form div.form-type-checkbox strong.error {
+    margin-left: -20px;
+  }
+  .wb-frmvld fieldset legend strong.error,
+  form.webform-submission-form .form-type-processed-text,
+  form.webform-submission-form #edit-actions-submit,
+  form.webform-submission-form #edit-actions {
+    margin-left: 10px;
+  }
+  .wb-frmvld label strong.error,
+  .wb-frmvld legend strong.error {
+    margin-bottom: 5px;
+    margin-top: 3px;
+    line-height: 2em;
+  }
+  form.webform-submission-form fieldset .fieldset-wrapper {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 30px;
+    display: block !important;
+  }
+  .wb-frmvld div.form-item.has-error:not(error) strong.error {
+    display: none !important;
+  }
+
+  /*form.webform-submission-form div.form-item label.control-label,*/
+  form.webform-submission-form fieldset span.fieldset-legend {
+    position: relative;
+    margin-bottom: 0px;
+    margin-left: 15px;
+  }
+  section.alert-danger ul.item-list__comma-list li {
+    display: block;
+  }
+  form.webform-submission-form div.form-item div.form-item--error-message.alert.alert-danger::before,
+  div.form-item--error-message.alert.alert-danger::before,
+  div.region-content form div.form-item label[for="*-required-"]::after,
+  div.form-item label.control-label.js-form-required.form-required::after,
+  fieldset span.fieldset-legend.js-form-required.form-required::after {
+    content: none;
+  }
+  div#edit-actions,
+  div#edit-cancel-link  {
+    display: inline-block;
+    padding-right: 30px;
+  }
+  div[class^="form-type-"] label.form-required::before,
+  fieldset[class^="webform-type-"] span.form-required::before,
+  fieldset[class^=".webform-radio"] span.form-required::before,
+  fieldset[class^=".webform-check"] span.form-required::before,
+  div.form-item label.control-label.form-required span.field-name::before,
+  fieldset span.fieldset-legend.js-form-required.form-required::before {
+    content: "";
+    background-image: url(https://agriculture.canada.ca/themes/custom/wxt_bootstrap/images/required.svg);
+    display: inline-block;
+    line-height: 1;
+    color: #e00;
+    background-size: 7px 7px;
+    width: 7px;
+    vertical-align: super;
+    margin-left: 4px;
+    height: 7px;
+    position: absolute;
+    top: 6px;
+    left: -15px;
+  }
+
+  div[class^="form-type-"].form-type-textarea.error label.form-required,
+  fieldset[class^="webform-type-"].error span.form-required,
+  fieldset[class^=".webform-radio"].error span.form-required,
+  fieldset[class^=".webform-check"].error span.form-required,
+  div.form-item.error label.control-label.js-form-required.form-required,
+  fieldset.error span.fieldset-legend.js-form-required.form-required {
+    color: unset;
+  }
+
+  html:lang(en) div[class^="form-type-"].form-type-textarea label.form-required:after,
+  html:lang(en) fieldset[class^="webform-type-"] span.form-required:after,
+  html:lang(en) fieldset[class^=".webform-radio"] span.form-required:after,
+  html:lang(en) fieldset[class^=".webform-check"] span.form-required:after,
+  html:lang(en) div.form-item label.control-label strong.required:after,
+  html:lang(en) fieldset span.fieldset-legend.js-form-required.form-required:after {
+    content: "(required)";
+    display: inline-block;
+    color: #e00;
+    margin-left: 4px;
+    position: unset;
+    background-image: unset;
+    background-size: unset;
+    width: unset;
+    vertical-align: unset;
+    height: unset;
+  }
+
+  html:lang(fr) div[class^="form-type-"].form-type-textarea label.form-required:after,
+  html:lang(fr) fieldset[class^="webform-type-"] span.form-required:after,
+  html:lang(fr) fieldset[class^=".webform-radio"] span.form-required:after,
+  html:lang(fr) fieldset[class^=".webform-check"] span.form-required:after,
+  html:lang(fr) div.form-item label.control-label strong.required:after,
+  html:lang(fr) fieldset span.fieldset-legend.js-form-required.form-required:after {
+    content: "(obligatoire)";
+    display: inline-block;
+    color: #e00;
+    margin-left: 4px;
+    position: unset;
+    background-image: unset;
+    background-size: unset;
+    width: unset;
+    vertical-align: unset;
+    height: unset;
+  }
+
+  form.webform-submission-form .webform-element-description {
+    color: #333;
+  }
+  form.webform-submission-form div.form-item .description.help-block,
+  form.webform-submission-form div.form-item .description.help-block strong .label {
+    font-size: 16px
+  }
+  body.path-webform div.region-content form label[for="*-required-"] {
+    position: relative;
+    margin-bottom: 0px;
+  }
+  form.webform-submission-form div.form-item--error-message.alert.alert-danger {
+    border-image: none !important;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    font-weight: bold;
+    background: #f3e9e8;
+    border-color: #d3080c;
+  }
+  form.webform-submission-form div.form-item.form-item-programorservice.form-group,
+  div.form-group.error.has-error label + div.select-wrapper {
+    margin-bottom: 0px;
+  }
+  div.form-group.error.has-error label + div.select-wrapper select.form-select {
+    width: 100%;
+  }
+
+  div.region section.alert-danger ul li {
+    display: block;
+  }
+
+  div.region section.alert-danger ul li a {
+    display: list-item;
+    list-style-position: inside;
+    margin-top: 15px;
+  }
+
+  div.region section.alert-danger ul li::after {
+    content: none;
+  }
+  div.region section.alert-danger h2.sr-only {
+    position: relative;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+  }
+  form.webform-submission-form > .btn { width: auto; }
+  form.webform-submission-form label.control-label.js-form-required.form-required {
+    padding-bottom: 5px;
+  }
+  form.webform-submissoin-form div.fieldset-wrapper .alert-sm,
+  form.webform-submissoin-form div.help-block strong.error {
+    display: flow-root;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  body.path-webform fieldset.required.error legend span {
+    color: #a94442;
+  }
+  form[id$="-add-form"] section.alert ul li a,
+  form[id$="-edit-form"] section.alert ul li a {
+    font-weight: normal;
+  }
+
+  form.webform-submission-form .iti__selected-flag {
+    left: 10px;
+  }
+  form.webform-submission-form .iti,
+  div.form-type-date .control-label {
+    display: block;
+  }
+
+  form.webform-submission-form fieldset.fieldgroup legend span.fieldset-legend,
+  form.webform-submission-form > div.form-item.form-group {
+    margin-left: 10px;
+  }
+
+  form.webform-submission-form > section.webform-section-wrapper,
+  form.webform-submission-form section .webform-section-wrapper .js-webform-states-hidden.js-form-wrapper {
+    margin-left: 10px;
+  }
+  form.webform-submission-form > div.js-webform-states-hidden {
+    margin-left: 20px;
+  }
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > label.control-label.form-required.js-form-required,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > label.control-label,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > div.description.help-block,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > div.form-item--error-message.alert.alert-danger.alert-sm,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group.form-type-phone > input.form-email,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > input.form-email,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > input,
+  form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group.form-type-email > input.form-phone {
+    margin-left: unset;
+  }
+  form.webform-submission-form section#edit-psrf-section-productsrequired .webform-section-wrapper .form-item.form-type-select > * {
+    margin-left: 0;
+  }
+  form.webform-submission-form label.control-label.form-required {
+    color: #000;
+  }
+
+  form.webform-submission-form > section.form-wrapper.webform-section,
+  form.webform-submission-form > fieldset.webform-type-checkboxes div.fieldset-wrapper div.form-checkboxes div.form-item > label.control-label span.field-name,
+  form.webform-submission-form > fieldset.webform-checkboxes-other div.fieldset-wrapper div.form-checkboxes div.form-type-checkbox > label.option span.field-name,
+  form.webform-submission-form > fieldset.webform-type-radios div.fieldset-wrapper div.webform-options-display-one-column div.form-type-radio > label.option span.field-name ,
+  form.webform-submission-form > fieldset.webform-radios-other div.fieldset-wrapper div.webform-options-display-one-column div.form-type-radio > label.option span.field-name {
+    margin-left: unset;
+  }
+  form.webform-submission-form div.form-item div.form-item--error-message.alert.alert-danger {
+    margin-bottom: 5px !important;
+  }
+
+  section.alert-danger button.close {
+    opacity: unset;
+    border: 1px solid white;
+    padding: 0px 9px 3px 9px;
+    font-size: 30px;
+  }
+
+  section.alert-danger button.close:hover {
+    border-radius: 3px;
+    border-color: #999;
+    box-shadow: 0px 0px 5px #999;
+  }
+javascript: |-
+  (function ($, Drupal) {
+    Drupal.behaviors.wxtOrWetBoew = {
+      attach: function (context, settings) {
+        if (context == document) {
+          if (!$('body').hasClass('path-webform')) {
+            // Not a webform, do nothing.
+            console.log('Not a webform, validated by wxtOrWetBoew');
+            return;
+          }
+          if (WxtHelper.timeout > 0) {
+            console.log('WxtHelper.init()');
+            WxtHelper.init();
+          }
+        }
+      }
+    };
+  })(jQuery, Drupal);
+  var WxtHelper = function() {
+    var errorHtml = '';
+    var erroredElements = [];
+    var erroredMessages = [];
+    var initialized = false;
+    var lang = 'en';
+    var validationType = 'drupal';
+    var wetboewFail = false;
+    var timeout = 950000;
+    function isReady() {
+      var isReady = false;
+      if (typeof $ == 'undefined') {
+        $ = jQuery;
+      }
+      if ($('.wb-frmvld').length > 0 && WxtHelper.validationType == 'drupal') {
+        console.log('WxtHelper.validationType = wet-boew');
+        WxtHelper.validationType = 'wet-boew';
+      }
+      if (WxtHelper.validationType == 'wet-boew' &&
+      $('.wb-frmvld').hasClass('wb-frmvld-inited') &&
+      $('.wb-frmvld').hasClass('wb-init') &&
+      ($('form section[id*=errors]').length == 1 || $('div.highlighted section.alert-danger').length == 1)) {
+        if ($('div.highlighted section.alert-danger').length) {
+          WxtHelper.wetboewFail = true;
+          console.log('Form type is : ' + WxtHelper.validationType + ' : ? wet-boew not initialized correctly for some reason.');        
+        }
+        else {
+          console.log('Form type is : ' + WxtHelper.validationType);
+        }
+        isReady = true;
+      }
+      else if(WxtHelper.validationType == 'drupal' && $('section.alert-danger').length > 0 && $('.form-item--error-message').length > 0) {
+        WxtHelper.validationType = 'drupal';
+        console.log('Form type is : ' + WxtHelper.validationType)
+        isReady = true;
+      }
+      if (isReady) {
+        console.log('isReady - Form type is : ' + WxtHelper.validationType);
+        if (WxtHelper.timeout > 0) {
+          console.log('isReady took ' + (950000 - WxtHelper.timeout) + ' milliseconds to complete');
+        }
+      }
+      return isReady;
+    };
+    // Code you want to run when isReady conditions exist in the DOM.
+    function onReady() {
+      console.log('onReady()');
+
+      if (WxtHelper.validationType == 'drupal') {
+        WxtHelper.validationHelper();
+        WxtHelper.makeErrorTitleLikeWetboew();
+        WxtHelper.moveAlertInsideLabel();
+        WxtHelper.setErrorElementsText();
+        WxtHelper.moveErrors();
+        // WCAG next three lines.
+        $('section.alert-danger').removeAttr('role');
+        $('section.alert-danger').attr('tabindex', '-1');
+        $('section.alert-danger li a').first().trigger('focus');
+      }
+      else {
+        // Make sure the event bindings do not accumulate, turn off first.
+        WxtHelper.validationWetboew();
+        WxtHelper.moveAlertInsideLabel();
+        $('form.webform-submission-form').off('submit.wxthelper');
+        $('form.webform-submission-form').once('submit.wxthelper', function() {
+          // Re-initialize on submit.
+          WxtHelper.timeout = 900000;
+          WxtHelper.initialized = false;
+          WxtHelper.init();
+          setTimeout(function() {
+            WxtHelper.moveAlertInsideLabel();
+          }, 100);
+        });
+      }
+    };
+    // Contingency plan code you want to run if isReady conditions DO NOT exist in the DOM by timeout.
+    function opt_onTimeout() {
+      // Do nothing.
+    };
+    function addErrorToFieldset(item, index, arr) {
+      console.log('addErrorToFieldset()');
+      if (1) {
+        // Disabled, still reviewing this.
+        return;
+      }
+      if (WxtHelper.validationType == 'drupal' && (jQuery('fieldset' + item).length || $('fieldset' + item + '--wrapper').length)) {
+        WxtHelper.errorHtml = '<div class="clearfix"></div><div class="form-item--error-message alert alert-danger alert-sm">' + WxtHelper.erroredMessages[index] + '</div>';
+        if (jQuery('fieldset' + item).length || $('fieldset' + item + '--wrapper').length) {
+          $('fieldset' + item + '--wrapper').find(item).prepend(WxtHelper.errorHtml);
+          $('fieldset' + item).find(item+'radios').prepend(WxtHelper.errorHtml);
+        }
+        if (!$('fieldset' + item + '--wrapper').find('.alert-danger').length) {
+          // Prepend the error message on the fieldset wrapper.
+          $('fieldset' + item + '--wrapper').find(item).prepend(WxtHelper.errorHtml);
+        }
+        if (!$('fieldset' + item).find('.alert-danger').length) {
+          // For Radios.
+          // If the error html is not already added to the fieldset item, add it.
+          $('fieldset' + item).find(item+'radios').prepend(WxtHelper.errorHtml);
+        }
+      }
+    }
+    function cleanErrorMessage(text, index) {
+      if ($('section.alert-danger').hasClass('wxt-processed')) {
+        // Prevent extra processing.
+        return;
+      }
+      if ($('div.region-highlighed section.alert-danger').hasClass('wxt-processed')) {
+        // Prevent over-processing.
+        return;
+      }
+      if (text.indexOf('field is required') > 1 || text.indexOf('champ est requ') > 1) {
+        return text;
+      }
+      var result = text;
+      if (WxtHelper.validationType == 'wet-boew') {
+        result = text + WxtHelper.requiredSuffix();
+        if (WxtHelper.lang == 'fr') {
+          result = result.replace('Ce field est requis', 'Ce champ est requis');
+        }
+      }
+      else if (WxtHelper.validationType == 'drupal') {
+        if (WxtHelper.lang == 'en') {
+          text = "Error " + index + ": " + text + WxtHelper.requiredSuffix((index - 1));
+        }
+        else {
+          text = "Erreur " + index + ": " + text + WxtHelper.requiredSuffix((index - 1));
+        }
+        result = text;
+      }
+      return result;
+    }
+    function requiredSuffix(index) {
+      var found = false;
+      if ($(erroredElements[index]).length == 1 &&
+      ($(erroredElements[index]).get(0).tagName.toLowerCase() == 'input' ||
+      $(erroredElements[index]).get(0).tagName.toLowerCase() == 'fieldset' ||
+      $(erroredElements[index]).get(0).tagName.toLowerCase() == 'textarea')) {
+        var searching = erroredElements[index];
+        if ($(searching).is('[class*=radios]') ||
+        $(searching).hasClass('form-email') ||
+        $(searching).hasClass('form-text') ||
+        $(searching).hasClass('form-textarea') ||
+        $(searching).hasClass('form-tel')) {
+          if (!found && $(searching).find('.alert-danger').length == 1) {
+            msg = $(searching).find('.alert-danger').first().text();
+            found = true;
+          }
+          else if (!found && $(searching).parent().find('.alert-danger').length == 1) {
+            msg = $(searching).parent().find('.alert-danger').first().text();
+            found = true;
+          }
+          else if (!found && $(searching).parent().parent().find('.alert-danger').length == 1) {
+            msg = $(searching).parent().parent().find('.alert-danger').first().text();
+            found = true;
+          }
+        }
+      }
+      if (!found) {
+        msg = "This field is required.";
+        if (WxtHelper.lang == 'fr') {
+          msg = "Ce champ est requis.";
+        }
+      }
+      return ' - ' + msg;
+    }
+    function requiredSuffixFormElement(index) {
+      var msg = '';
+      var prefix = 'Error ' + (index+1) + ' - ';
+      if (WxtHelper.lang == 'fr') {
+        prefix = 'Erreur ' + (index+1) + ' - ';
+      }
+      if ($(erroredElements[index]).length == 1 && $(erroredElements[index]).get(0).tagName.toLowerCase() == 'fieldset') {
+        msg = $(erroredElements[index]).find('.alert.alert-danger').text();
+      }
+      else {
+        if ($(erroredElements[index]).closest('.error.form-wrapper').length == 1) {
+          msg = $(erroredElements[index]).closest('.error.form-wrapper').find('.alert.alert-danger').text();
+        }
+        else if ($(erroredElements[index]).closest('.error.has-error').length == 1) {
+          msg = $(erroredElements[index]).closest('.error.has-error').find('.alert.alert-danger').text();
+        }
+        else if ($(erroredElements[index]).closest('.error.form-item').length == 1) {
+          msg = $(erroredElements[index]).closest('.error.form-item').find('.alert.alert-danger').text();
+        }
+        else {
+          msg = "This field is required.";
+          if (WxtHelper.lang == 'fr') {
+            msg = "Ce champ est requis.";
+          }
+        }
+      }
+      return prefix + msg;
+    }
+    function makeErrorTitleLikeWetboew(force) {
+      if (typeof force == 'undefined') {
+        force = false;
+      }
+      if (WxtHelper.validationType == 'drupal' || force) {
+        var h2prefix = "The form could not be submitted because ";
+        if (WxtHelper.lang == 'fr') {
+          h2prefix = "Le formulaire n'a pu être soumis car ";
+        }
+        if ($("h2.sr-only").length == 1) {
+          var original = $("h2.sr-only").next().text();
+          $("h2.sr-only").text(h2prefix + original); // Set the error msg into h2
+          $("h2.sr-only").next().remove(); // Remove extra html p element
+        }
+      }
+    }
+    function moveAlertInsideLabel() {
+      console.log('moveAlertInsideLabel()');
+      var textItem = 'div[class*=form-type-text], div.js-webform-states-hidden, div.form-item.has-error, .form-type-select.form-group';
+      $(textItem).each(function(index, element) {
+        var divAlert = $(this).find('.alert-danger').first();
+        if ($(this).find(divAlert).length == 1) {
+          var labelItem = $(this).find('label');
+          var attachToThis = labelItem;
+          var descriptionHelp = $(this).find('.description.help-block').first();
+          var textarea = $(this).find('textarea').first();
+          var textareaWrapper = $(this).find('.form-textarea-wrapper').first();
+          if ($(descriptionHelp).length == 1) {
+            attachToThis = descriptionHelp;
+            $(divAlert).clone().insertBefore($(attachToThis));
+            $(divAlert).remove();
+          }
+          else if ($(textarea).hasClass('required') && $(textareaWrapper).length == 1) {
+            attachToThis = $(this).find('.form-textarea-wrapper');
+            $(divAlert).clone().insertBefore($(attachToThis));
+            $(divAlert).remove();
+          }
+          else if ($(this).hasClass('error') && $(this).find('.select-wrapper').length == 1) {
+            attachToThis = $(this).find('.select-wrapper');
+            $(divAlert).clone().insertBefore($(attachToThis));
+            $(divAlert).remove();
+          }
+          else if (!$(this).hasClass('form-type-textarea') && $(this).find('.form-control').length == 1) {
+            attachToThis = $(this).find('label.control-label');
+            $(divAlert).clone().insertAfter($(attachToThis));
+            $(divAlert).remove();
+          }
+        }
+      });
+      if (WxtHelper.validationType == 'wet-boew') {
+        $(textItem).each(function(index, element) {
+          var divAlert = $(this).find('strong.error').first();
+          // DISABLED, LIKELY DO NOT NEED THIS HERE SECTION FOR WET-BOEW.
+          if (0 && $(this).find(divAlert).length == 1) {
+            var labelItem = $(this).find('label');
+            var attachToThis = labelItem;
+            var descriptionHelp = $(this).find('.description.help-block').first();
+            var textarea = $(this).find('textarea').first();
+            var textareaWrapper = $(this).find('.form-textarea-wrapper').first();
+            if ($(descriptionHelp).length == 1) {
+              attachToThis = descriptionHelp;
+              $(divAlert).clone().appendTo($(attachToThis));
+              $(divAlert).remove();
+            }
+            else if (!$(this).hasClass('form-type-textarea') && $(this).find('.form-control').length == 1) {
+              attachToThis = $(this).find('label.control-label');
+              $(divAlert).clone().appendTo($(attachToThis));
+              $(divAlert).remove();
+            }
+            else if ($(textarea).hasClass('required') && $(textareaWrapper).length == 1) {
+              attachToThis = $(this).find('.form-textarea-wrapper');
+              $(divAlert).clone().prepend($(attachToThis));
+              $(divAlert).remove();
+            }
+            else if ($(this).hasClass('error') && $(this).find('.select-wrapper').length == 1) {
+              attachToThis = $(this).find('.select-wrapper');
+              $(divAlert).clone().appendTo($(attachToThis));
+              $(divAlert).remove();
+            }
+          }
+        });
+      }
+    }
+    function moveErrors() {
+      var submit = '#edit-actions-submit';
+      var force = false;
+      if ($(submit).length == 1 && $(submit).is('[disabled]')) {
+        force = true;
+      }
+      // Only needs to be done for validationType = drupal.
+      if (WxtHelper.validationType == 'drupal' || force) {
+        var highlightedSelector = 'div.highlighted';
+        var firstErrorAnchorSelector = 'div.highlighted section.alert-danger ul li:first-child a:first-child'
+        var firstErrorElement = $(firstErrorAnchorSelector).attr('href');
+        var formElement = $(firstErrorElement).parent().closest('form');
+        var attachToThis = formElement;
+        var firstFormItem = $(formElement).find('.form-item').first();
+        if ($(firstFormItem).length == 1 && !$(firstFormItem).hasClass('error')) {
+          $(highlightedSelector).insertAfter($(firstFormItem));
+        }
+        else if ($(attachToThis).length == 1) {
+          $(highlightedSelector).insertBefore($(attachToThis));
+        }
+      }
+    }
+    function setErrorElementsText() {
+      if (WxtHelper.wetboewFail == true && WxtHelper.validationType == 'wetboew') {
+        return;
+      }
+      var all = 'form.webform-submission-form .alert-danger';
+      if ($('form.webform-submission-form').hasClass('wxt-processed')) {
+        // Prevent over-processing.
+        return;
+      }
+      console.log('setErrorElementText');
+      $(all).each(function(index, element) {
+        if ($(this).length == 1) {
+          console.log('index of form alert-danger:' + index);
+          var desired = WxtHelper.requiredSuffixFormElement(index);
+          if (desired.indexOf($(this).text)) {
+            $(this).text(desired);
+          }
+        }
+      });
+      // Add wxt-processed class to prevent over-processing.
+      $('form.webform-submission-form').addClass('wxt-processed');
+      // Now for the section element anchor text.
+      var all = 'div.region-highlighted section.alert-danger ul a';
+      if ($('div.region-highlighed section.alert-danger').hasClass('wxt-processed')) {
+        // Prevent over-processing.
+        return;
+      }
+      $(all).each(function(index, element) {
+        if ($(this).length == 1) {
+          console.log('index of section alert-danger:' + index);
+          var desired = WxtHelper.getErroredMessage(index);
+          if (desired.indexOf($(this).text)) {
+            $(this).text(desired);
+          }
+        }
+      });
+      $('div.region-highlighed section.alert-danger').addClass('wxt-processed');
+    }
+    function init() {
+      // How frequent to check for your object.
+      var interval = 35;
+      if (WxtHelper.validationType == 'wet-boew') {
+        interval = 250;
+      }
+      WxtHelper.lang = jQuery('html').attr('lang');
+      if (WxtHelper.isReady()) {
+        if (WxtHelper.validationType == 'drupal') {
+          WxtHelper.onReady();
+        }
+        else {
+          // Wetboew is a bit slow to initialize, improve this later.
+          var submit = '#edit-actions-submit';
+          $(submit).removeAttr('disabled');
+          if ($('div.highlighted section.alert-danger').length == 1) {
+            WxtHelper.wetboewFail = true;
+            setTimeout(function () {
+              WxtHelper.beforeReadyOverride();
+              WxtHelper.onReady();
+            }, 200);
+          }
+          else {
+            setTimeout(function () {
+              WxtHelper.onReady();
+            }, 200);
+          }
+        }
+      }
+      else {
+        if (WxtHelper.timeout > 0) {
+          WxtHelper.timeout -= interval;
+          window.setTimeout(arguments.callee, interval);
+        } else {
+          console.log("WxtHelper.isReady() timed-out always returning false.");
+        }
+      }
+    }
+    function beforeReadyOverride() {
+      WxtHelper.validationHelper();
+      WxtHelper.setErrorElementsText();
+      WxtHelper.moveAlertInsideLabel();
+      WxtHelper.makeErrorTitleLikeWetboew(true);
+      WxtHelper.moveErrors();
+      $('section.alert-danger').removeAttr('role');
+      $('section.alert-danger').attr('tabindex', '-1');
+      $('section.alert-danger li a').first().trigger('focus');
+    }
+    function getErroredMessage(index) {
+      console.log('getErroredMessage()');
+      var erroredText = '';
+      if (WxtHelper.erroredElements[index].length) {
+        erroredText = WxtHelper.erroredMessages[index];
+      }
+      return erroredText
+    }
+    function validationHelper() {
+      console.log('validationHelper()');
+      var allErrors = jQuery('section.alert-danger ul a').each(function(index) {
+        WxtHelper.erroredElements.push($(this).attr('href'));
+        var fieldtype = 'unknown';
+        if ($($(this).attr('href')).hasClass('field-type-email')) {
+          fieldtype = 'form-type-email';
+        }
+        WxtHelper.erroredMessages.push(WxtHelper.cleanErrorMessage($(this).text(), (index+1)));
+      });
+      //WxtHelper.erroredElements.forEach(WxtHelper.addErrorToFieldset);
+    }
+    function validationWetboew() {
+      console.log('validationWetboew()');
+      if (WxtHelper.validationType == 'wet-boew') {
+        $('div.wb-frmvld form fieldset span.label-danger, div.wb-frmvld form > div.has-error span.label-danger').each(function(index) {
+          if (!$(this).hasClass('wxt-cleaned')) {
+            var prefixSpan = $(this).find('.prefix').prop('outerHTML');
+            var prefixText = $(this).find('.prefix').text();
+            $(this).find('span.prefix').remove();
+            var cleanedText = WxtHelper.cleanErrorMessage(prefixText + $(this).html());
+            cleanedText = cleanedText.replace(prefixText, '');
+            $(this).html(cleanedText);
+            $(this).prepend(prefixSpan);
+            $(this).addClass('wxt-cleaned');
+          }
+        });
+      }
+    }
+    return {
+      addErrorToFieldset: addErrorToFieldset,
+      beforeReadyOverride: beforeReadyOverride,
+      cleanErrorMessage: cleanErrorMessage,
+      erroredElements: erroredElements,
+      erroredMessages: erroredMessages,
+      errorHtml: errorHtml,
+      getErroredMessage: getErroredMessage,
+      isReady: isReady,
+      init: init,
+      initialized: initialized,
+      lang: lang,
+      makeErrorTitleLikeWetboew: makeErrorTitleLikeWetboew,
+      moveAlertInsideLabel: moveAlertInsideLabel,
+      moveErrors: moveErrors,
+      onReady: onReady,
+      requiredSuffix: requiredSuffix,
+      requiredSuffixFormElement: requiredSuffixFormElement,
+      setErrorElementsText: setErrorElementsText,
+      timeout: timeout,
+      validationHelper: validationHelper,
+      validationWetboew: validationWetboew,
+      validationType: validationType,
+      wetboewFail: wetboewFail,
+    }
+  }();
 settings:
   ajax: false
   ajax_scroll_top: form
@@ -294,7 +1007,10 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'AgriStability and AgriInvest Forms in Excel request'
-      body: "[webform_submission:values]<br />\r\n<br />\r\nWe received your request."
+      body: |-
+        [webform_submission:values]<br />
+        <br />
+        We received your request.
       excluded_elements:
         select_your_province_and_then_select_the_forms_package_s_you_wou: select_your_province_and_then_select_the_forms_package_s_you_wou
       ignore_access: false
