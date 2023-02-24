@@ -260,7 +260,6 @@ var AAFCFrontend = function() {
     if (typeof(psWebForm) && (psWebForm !== null)) {
       // Fixes WCAG issue #463
       if (AAFCFrontend.lang == 'en') {
-        $(".form-required").append("<span style='color: #e00;'>&nbsp;(required)</span>");
         h2prefix = "The form could not be submitted because ";
         reqvalMSGPrefix = "Error ";
         reqvalMSGMiddle = ": ";
@@ -270,7 +269,6 @@ var AAFCFrontend = function() {
         subinvalidPhoneNumSuffix = ": Please specify a valid phone number.";
       }
       else {
-        $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
         h2prefix = "Le formulaire n'a pu être soumis car ";
         reqvalMSGPrefix = "Erreur ";
         reqvalMSGMiddle = " : ";
