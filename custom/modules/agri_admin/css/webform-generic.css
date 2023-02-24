@@ -221,6 +221,19 @@ form.webform-submission-form section .webform-section-wrapper .js-webform-states
 form.webform-submission-form section.form-wrapper.webform-section div.webform-section-wrapper div.form-item label.control-label {
   margin-left: 10px;
 }
+form.webform-submission-form > div.js-webform-states-hidden {
+  margin-left: 20px;
+}
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > label.control-label.form-required.js-form-required,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > label.control-label,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > div.description.help-block,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > div.form-item--error-message.alert.alert-danger.alert-sm,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group.form-type-phone > input.form-email,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > input.form-email,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > input,
+form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group.form-type-email > input.form-phone {
+  margin-left: unset;
+}
 form.webform-submission-form section#edit-psrf-section-productsrequired .webform-section-wrapper .form-item.form-type-select > * {
   margin-left: 0;
 }
