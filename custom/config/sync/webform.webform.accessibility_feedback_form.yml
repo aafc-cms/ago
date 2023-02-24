@@ -114,7 +114,7 @@ elements: |-
     '#format': rich_text
 css: |-
   body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
-    display none;
+    display: none;
   }
   div.highlighted {
     position: relative;
