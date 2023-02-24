@@ -129,7 +129,8 @@ css: |-
   }
   .wb-frmvld fieldset legend strong.error,
   form.webform-submission-form .form-type-processed-text,
-  form.webform-submission-form #edit-actions-submit {
+  form.webform-submission-form #edit-actions-submit,
+  form.webform-submission-form #edit-actions {
     margin-left: 10px;
   }
   .wb-frmvld label strong.error,
@@ -146,11 +147,6 @@ css: |-
   }
   .wb-frmvld div.form-item.has-error:not(error) strong.error {
     display: none !important;
-  }
-  form.webform-submission-form .form-item .help-block,
-  form.webform-submission-form .form-item.form-group .help-block {
-    margin-left: 10px;
-    position: relative;
   }
 
   /*form.webform-submission-form div.form-item label.control-label,*/
@@ -194,14 +190,7 @@ css: |-
     top: 6px;
     left: -15px;
   }
-  form.webform-submission-form div.form-item label.control-label.form-required span.field-name::before {
-    left: -5px;
-  }
-  form.webform-submission-form section.form-wrapper div.webform-section-wrapper div.form-item-srf-product label.form-required span.field-name::before,
-  form.webform-submission-form > div.form-item.form-type-email label.control-label.form-required span.field-name::before,
-  form.webform-submission-form > div.form-item.form-type-textfield label.control-label.form-required span.field-name::before {
-    left: -15px;
-  }
+
   div[class^="form-type-"].form-type-textarea.error label.form-required,
   fieldset[class^="webform-type-"].error span.form-required,
   fieldset[class^=".webform-radio"].error span.form-required,
@@ -320,27 +309,18 @@ css: |-
     display: block;
   }
 
-  /*form.webform-submission-form div.form-item label.control-label,*/
   form.webform-submission-form fieldset.fieldgroup legend span.fieldset-legend,
-  form.webform-submission-form div.form-item .description,
-  form.webform-submission-form div.form-type-email input.form-email,
-  form.webform-submission-form div.form-item .form-control,
-  form.webform-submission-form div.form-type-phone input.form-phone,
-  form.webform-submission-form div.form-item.form-group label.control-label.form-required,
-  form.webform-submission-form div.form-item > input.form-email {
+  form.webform-submission-form > div.form-item.form-group {
     margin-left: 10px;
   }
 
-  form.webform-submission-form section#edit-psrf-section-productsrequired .webform-section-wrapper,
-  form.webform-submission-form section .webform-section-wrapper .js-webform-states-hidden.js-form-wrapper,
-  form.webform-submission-form section.form-wrapper.webform-section div.webform-section-wrapper div.form-item label.control-label {
+  form.webform-submission-form > section.webform-section-wrapper,
+  form.webform-submission-form section .webform-section-wrapper .js-webform-states-hidden.js-form-wrapper {
     margin-left: 10px;
   }
-
   form.webform-submission-form > div.js-webform-states-hidden {
     margin-left: 20px;
   }
-
   form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > label.control-label.form-required.js-form-required,
   form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > label.control-label,
   form.webform-submission-form > div.js-webform-states-hidden.form-item.form-group > div.description.help-block,
@@ -357,15 +337,7 @@ css: |-
   form.webform-submission-form label.control-label.form-required {
     color: #000;
   }
-  form.webform-submission-form div.form-item > label:not(.form-required) span.field-name,
-  form.webform-submission-form section > h2,
-  form.webform-submission-form section.form-item .webform-section-wrapper div.panel,
-  form.webform-submission-form .form-item.error > .alert-danger,
-  form.webform-submission-form div.form-item > div.form-item--error-message.alert.alert-danger,
-  form.webform-submission-form > div.form-item.form-type-textfield > div.form-item--error-message.alert.alert-danger,
-  form.webform-submission-form > div.form-type-checkbox > label.control-label {
-    margin-left: 10px;
-  }
+
   form.webform-submission-form > section.form-wrapper.webform-section,
   form.webform-submission-form > fieldset.webform-type-checkboxes div.fieldset-wrapper div.form-checkboxes div.form-item > label.control-label span.field-name,
   form.webform-submission-form > fieldset.webform-checkboxes-other div.fieldset-wrapper div.form-checkboxes div.form-type-checkbox > label.option span.field-name,
@@ -375,9 +347,6 @@ css: |-
   }
   form.webform-submission-form div.form-item div.form-item--error-message.alert.alert-danger {
     margin-bottom: 5px !important;
-  }
-  form.webform-submission-form div.form-item > div.form-item--error-message.alert.alert-danger {
-    margin-left: 10px;
   }
 
   section.alert-danger button.close {
@@ -391,6 +360,9 @@ css: |-
     border-radius: 3px;
     border-color: #999;
     box-shadow: 0px 0px 5px #999;
+  }
+  form.webform-submission-form > .btn {
+    width: auto;
   }
 javascript: |-
   (function ($, Drupal) {
