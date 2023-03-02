@@ -39,6 +39,81 @@
             "url": "custom/themes/aafctheme"
         },
         {
+          "type": "path",
+          "url": "custom/modules/lightning"
+        },
+        {
+          "type": "path",
+          "url": "custom/modules/lightning_install",
+          "options": {
+            "symlink": true
+          }
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_banner_block"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_core"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_audio"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_bulk_upload"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_document"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_image"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_instagram"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_slideshow"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_twitter"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_video"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_page"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_layout"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_landing_page"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_map_block"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_workflow"
+        },
+        {
             "type": "path",
             "url": "custom/config"
         }
@@ -111,8 +186,7 @@
         "patches": {
             "drupal/core": {
                 "2857273 - Self closing hr and br source and track tags html5 rendering": "https://www.drupal.org/files/issues/2022-11-20/self_closing_br_hr_source_tag-2857273-30.patch",
-                "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager": "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch",
-                "2769407 - Add null supported null=false exposed filter option needed by campaign.": "custom/patches/D948_ONLY_please_ignore_2769407-71.diff"
+                "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager": "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch"
             },
             "drupal/embed_block": {
                 "3225938 - Added CKEDITOR plugin functionality":
@@ -223,16 +297,32 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.4.8-rc9",
+        "agrcmsx/dxbase": "9.4.11-beta1",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/config": "*",
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
+        "agrcms/lightning": "*",
+        "agrcms/lightning_banner_block": "*",
+        "agrcms/lightning_core": "*",
+        "agrcms/lightning_install": "*",
+        "agrcms/lightning_landing_page": "*",
+        "agrcms/lightning_layout": "*",
+        "agrcms/lightning_map_block": "*",
+        "agrcms/lightning_media": "*",
+        "agrcms/lightning_media_audio": "*",
+        "agrcms/lightning_media_bulk_upload": "*",
+        "agrcms/lightning_media_document": "*",
+        "agrcms/lightning_media_image": "*",
+        "agrcms/lightning_media_instagram": "*",
+        "agrcms/lightning_media_slideshow": "*",
+        "agrcms/lightning_media_twitter": "*",
+        "agrcms/lightning_media_video": "*",
+        "agrcms/lightning_page": "*",
+        "agrcms/lightning_workflow": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-	"drupal/bootstrap": "3.25 as 3.23",
-        "drupal/core": "9.4.8 as 9.3.16",
         "drupal/embed_block": "1.x-dev",
         "drupal/entity_translation_unified_form": "^2.0-rc2",
         "drupal/filebrowser": "^3.0",
@@ -245,7 +335,6 @@
         "drupal/reroute_email": "^2.0",
 	"drupal/simple_sitemap": "4.1.2 as 3.11.0",
         "drupal/title_length": "^1.1",
-        "drupal/token_filter": "1.3 as 1.2",
         "drupal/varnish_purge": "^2.1",
         "drupal/view_custom_table": "^2.0",
         "drupal/media_library_edit": "^2.1",
@@ -255,7 +344,7 @@
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/crop": "^2.2",
         "drupal/autologout": "1.3",
-        "drupal/webform": "6.1.4 as 6.1.3"
+        "drupal/webform": "^6.1.4"
     },
     "authors": [
         {
