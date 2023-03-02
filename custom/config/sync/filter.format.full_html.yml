@@ -234,6 +234,15 @@ filters:
     status: true
     weight: 0
     settings: {  }
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
+    status: false
+    weight: 0
+    settings:
+      type: default
+      auto: ''
+      block: '0'
   wxt_add_table_attribute_filter:
     id: wxt_add_table_attribute_filter
     provider: wxt_ext_editor
@@ -247,12 +256,3 @@ filters:
       whitelist_classes: ''
       add_datatable_attribute: '0'
       datatable_options: ''
-  toc_filter:
-    id: toc_filter
-    provider: toc_filter
-    status: false
-    weight: 0
-    settings:
-      type: default
-      auto: ''
-      block: '0'

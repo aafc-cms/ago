@@ -18,8 +18,8 @@ widgets:
     label: media_image_upload
     weight: 1
     settings:
-      extensions: 'jpg jpeg png gif'
-      media_type: image
+      submit_text: 'Select files'
       upload_location: 'public://otheruploads/[date:custom:Y]-[date:custom:m]'
       multiple: '1'
-      submit_text: 'Select files'
+      extensions: 'jpg jpeg png gif'
+      media_type: image

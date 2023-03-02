@@ -2,6 +2,8 @@ scan_blocks: null
 check_links_types: 0
 default_url_scheme: 'https://'
 base_path: ''
+localhost_url: 'http://localhost'
+localhost_portnumber: '8000'
 extract:
   from_a: true
   from_audio: false
@@ -61,5 +63,3 @@ error:
   impersonate_account: admin
 logging:
   level: 7
-localhost_url: 'http://localhost'
-localhost_portnumber: '8000'

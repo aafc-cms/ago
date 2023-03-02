@@ -5,11 +5,7 @@ dependencies:
   module:
     - file_delete
     - filebrowser
-    - lightning_core
     - toolbar
-third_party_settings:
-  lightning_core:
-    description: 'the role allows GCDS team to upload the files into a special public folder for the external use.'
 id: gcds
 label: gcds
 weight: 2

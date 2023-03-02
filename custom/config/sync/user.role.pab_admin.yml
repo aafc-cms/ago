@@ -40,12 +40,10 @@ dependencies:
     - file_delete
     - filter
     - layout_builder
-    - lightning_core
     - media
     - menu_admin_per_menu
     - menu_link_content
     - moderated_content_bulk_publish
-    - moderation_dashboard
     - node
     - panels
     - panels_ipe
@@ -61,9 +59,6 @@ dependencies:
     - views_ui
     - webform
     - wxt_core
-third_party_settings:
-  lightning_core:
-    description: 'Administrator role for PAB'
 id: pab_admin
 label: 'PAB Admin'
 weight: -2

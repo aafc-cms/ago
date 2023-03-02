@@ -36,12 +36,10 @@ dependencies:
     - file_delete
     - filter
     - layout_builder
-    - lightning_core
     - locale
     - media
     - menu_admin_per_menu
     - menu_link_content
-    - moderation_dashboard
     - node
     - panels
     - panels_ipe
@@ -58,9 +56,6 @@ dependencies:
     - webform
     - webform_node
     - wxt_core
-third_party_settings:
-  lightning_core:
-    description: ''
 id: editor
 label: Editor
 weight: -6

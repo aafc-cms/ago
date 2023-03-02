@@ -1,0 +1,8 @@
+uuid: 19234f5f-aeb7-440f-8dbe-295bb7669282
+langcode: en
+status: true
+dependencies: {  }
+id: footer-contextual
+label: 'GC contextual footer'
+description: 'Contextual footer menu to display above the global footer menus.'
+locked: false

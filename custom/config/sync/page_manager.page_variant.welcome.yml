@@ -26,10 +26,10 @@ variant_settings:
       provider: entity_block
       view_mode: default
       context_mapping: {  }
+      entity: '29'
       region: content
       weight: 1
       uuid: 7a3ac506-4d37-4b91-99ac-7acbf2b3f471
-      entity: '29'
   page_title: Welcome
   layout: layout_onecol
   layout_settings: {  }

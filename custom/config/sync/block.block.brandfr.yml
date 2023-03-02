@@ -24,9 +24,11 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: false
+  expand_all_items: false
   parent: 'brand-fr:'
   suggestion: brand_fr
+  label_type: block
+  label_link: false
 visibility:
   language:
     id: language
