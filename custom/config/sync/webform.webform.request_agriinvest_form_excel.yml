@@ -71,7 +71,6 @@ elements: |-
         ':input[name="select_the_province[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
           checked: true
     '#options__properties': ''
-    '#required_error': 'This field is required.'
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#type': checkboxes
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan.'
@@ -85,7 +84,6 @@ elements: |-
         ':input[name="select_the_province[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
           checked: true
     '#options__properties': ''
-    '#required_error': 'This field is required.'
 css: |-
   body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
     display: none;
@@ -103,6 +101,7 @@ css: |-
   }
   .wb-frmvld fieldset legend strong.error,
   form.webform-submission-form .form-type-processed-text,
+  form.webform-submission-form #edit-actions-submit,
   form.webform-submission-form #edit-actions {
     margin-left: 10px;
   }

@@ -44,6 +44,7 @@ dependencies:
     - menu_admin_per_menu
     - menu_link_content
     - moderated_content_bulk_publish
+    - moderation_dashboard
     - node
     - panels
     - panels_ipe

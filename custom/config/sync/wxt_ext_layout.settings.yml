@@ -1,1 +1,5 @@
-entity_blocks: null
+entity_blocks:
+  - media
+  - node
+  - taxonomy_term
+  - user

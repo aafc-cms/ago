@@ -39,6 +39,7 @@ dependencies:
     - linkit
     - media
     - slick
+    - toc_filter
     - token_filter
     - url_embed
     - wxt_ext_editor
@@ -145,6 +146,8 @@ filters:
       layout: ''
       skin: ''
       background: false
+      loading: ''
+      preload: false
       responsive_image_style: ''
       image_style: ''
       media_switch: ''
@@ -178,3 +181,12 @@ filters:
       whitelist_classes: ''
       add_datatable_attribute: '0'
       datatable_options: ''
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
+    status: false
+    weight: 0
+    settings:
+      type: default
+      auto: ''
+      block: '0'

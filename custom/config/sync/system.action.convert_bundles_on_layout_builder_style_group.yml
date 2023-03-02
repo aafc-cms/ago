@@ -1,0 +1,11 @@
+uuid: 1351d9e2-026e-4d86-ae6b-f96f3a8975b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_layout_builder_style_group
+label: 'Convert Layout builder style group Entity Bundles'
+type: layout_builder_style_group
+plugin: convert_bundles_action_base
+configuration: {  }

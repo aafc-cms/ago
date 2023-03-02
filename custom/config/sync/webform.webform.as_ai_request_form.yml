@@ -104,6 +104,7 @@ css: |-
   }
   .wb-frmvld fieldset legend strong.error,
   form.webform-submission-form .form-type-processed-text,
+  form.webform-submission-form #edit-actions-submit,
   form.webform-submission-form #edit-actions {
     margin-left: 10px;
   }

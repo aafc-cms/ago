@@ -136,7 +136,10 @@ settings:
   confirmation_type: inline
   confirmation_url: ''
   confirmation_title: 'Thank you for your help!'
-  confirmation_message: "<h3>Thank you for your help!</h3>\r\n\r\n<p>You will not receive a reply. For enquiries,&nbsp;<a href=\"https://www.canada.ca/en/contact/index.html\">contact us</a>.</p>"
+  confirmation_message: |-
+    <h3>Thank you for your help!</h3>
+
+    <p>You will not receive a reply. For enquiries,&nbsp;<a href="https://www.canada.ca/en/contact/index.html">contact us</a>.</p>
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''

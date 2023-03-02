@@ -66,7 +66,11 @@ elements: |-
       '#update_hide': true
       '#wizard_prev_hide': true
       '#wizard_next_hide': true
-css: "section#block-didyoufindwhatyouwerelookingfor div.well.mrgn-bttm-0 {\r\n  margin-left: 0px;\r\n  margin-right: 0px;\r\n}\r\n"
+css: |
+  section#block-didyoufindwhatyouwerelookingfor div.well.mrgn-bttm-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 javascript: ''
 settings:
   ajax: true
@@ -168,7 +172,10 @@ settings:
   confirmation_type: inline
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: "<div class=\"gc-pg-hlpfl-thnk\">\r\n<p class=\"h3 mrgn-tp-sm mrgn-bttm-sm\"><span class=\"far fa-check-circle text-success mrgn-rght-sm\" aria-hidden=\"true\"> </span>Thank you for your feedback</p>\r\n</div>"
+  confirmation_message: |-
+    <div class="gc-pg-hlpfl-thnk">
+    <p class="h3 mrgn-tp-sm mrgn-bttm-sm"><span class="far fa-check-circle text-success mrgn-rght-sm" aria-hidden="true"> </span>Thank you for your feedback</p>
+    </div>
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -270,7 +277,12 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'AAFC: Page Feedback/AAC: Commentaires sur la page'
-      body: "The following feedback was reported by the user from this page.&nbsp;<a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[current-page:url:absolute]</a><br />\r\n<br />\r\n[webform_submission:values]<br />\r\n<br />\r\nUser agent:&nbsp;[agri-admin:user-agent]"
+      body: |-
+        The following feedback was reported by the user from this page.&nbsp;<a href="javascript:void(0);" title="Insert this token into your form">[current-page:url:absolute]</a><br />
+        <br />
+        [webform_submission:values]<br />
+        <br />
+        User agent:&nbsp;[agri-admin:user-agent]
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

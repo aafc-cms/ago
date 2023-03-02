@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.media.document.field_aafc_category
     - field.field.media.document.field_document
+    - field.field.media.document.field_media_document
     - field.field.media.document.field_media_in_library
     - media.type.document
   module:
@@ -76,4 +77,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_media_document: true
   uid: true

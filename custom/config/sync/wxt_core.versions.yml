@@ -57,7 +57,7 @@ entity_browser: 2.8.0
 entity_browser_block: 1.3.0
 entity_embed: 1.3.0
 entity_reference_revisions: 1.10.0
-entity_translation_unified_form: 0.0.0
+entity_translation_unified_form: 2.0.0-rc4
 entityqueue: 1.3.0
 field: 9.4.11
 field_formatter: 3.0.0-rc1
@@ -94,7 +94,7 @@ layout_library: 1.0.0-beta3
 libraries: 3.0.0-beta2
 link: 9.4.11
 link_attributes: 1.11.0
-linkchecker: 0.0.0
+linkchecker: 1.0.0-beta5
 linkit: 6.0.0-beta3
 locale: 9.4.11
 mailsystem: 4.4.0
@@ -115,8 +115,9 @@ metatag_page_manager: 1.21.0
 metatag_views: 1.21.0
 migrate: 9.4.11
 migrate_plus: 5.3.0
-migrate_tools: 0.0.0
+migrate_tools: 5.1.0
 moderated_content_bulk_publish: 2.0.18
+moderation_dashboard: 1.3.0
 moderation_sidebar: 1.7.0
 mysql: 9.4.11
 node: 9.4.11
@@ -144,6 +145,7 @@ search: 9.4.11
 serialization: 9.4.11
 sharedemail: 2.2.0
 shortcut: 9.4.11
+simple_gmap: 3.0.1
 simple_sitemap: 4.1.2
 slick: 2.6.0
 slick_entityreference: 2.0.0
@@ -193,8 +195,14 @@ wxt_ext_editor: 4.4.2
 wxt_ext_landing_page: 4.4.2
 wxt_ext_layout: 4.4.2
 wxt_ext_media: 4.4.2
+wxt_ext_media_audio: 4.4.2
+wxt_ext_media_bulk_upload: 4.4.2
+wxt_ext_media_document: 4.4.2
 wxt_ext_media_image: 4.4.2
+wxt_ext_media_instagram: 4.4.2
 wxt_ext_media_slideshow: 4.4.2
+wxt_ext_media_twitter: 4.4.2
+wxt_ext_media_video: 4.4.2
 wxt_ext_metatag: 4.4.2
 wxt_ext_migration: 4.4.2
 wxt_ext_page: 4.4.2
@@ -206,6 +214,6 @@ wxt_ext_theme: 4.4.2
 wxt_ext_user: 4.4.2
 wxt_ext_webform: 4.4.2
 wxt_ext_workflow: 4.4.2
-wxt_library: 0.0.0
+wxt_library: 6.7.0
 wxt_overrides: 0.0.0
 wxt_translation: 4.4.2

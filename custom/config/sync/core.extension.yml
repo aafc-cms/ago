@@ -186,8 +186,14 @@ module:
   wxt_ext_landing_page: 0
   wxt_ext_layout: 0
   wxt_ext_media: 0
+  wxt_ext_media_audio: 0
+  wxt_ext_media_bulk_upload: 0
+  wxt_ext_media_document: 0
   wxt_ext_media_image: 0
+  wxt_ext_media_instagram: 0
   wxt_ext_media_slideshow: 0
+  wxt_ext_media_twitter: 0
+  wxt_ext_media_video: 0
   wxt_ext_metatag: 0
   wxt_ext_migration: 0
   wxt_ext_page: 0

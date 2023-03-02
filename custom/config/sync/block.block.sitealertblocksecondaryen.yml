@@ -1,0 +1,25 @@
+uuid: 0f38df2d-ec8a-4257-892e-04743d8d432c
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:569f2e44-3e39-4684-acaf-f466190adcc2'
+  module:
+    - block_content
+  theme:
+    - aafctheme
+id: sitealertblocksecondaryen
+theme: aafctheme
+region: highlighted_not_front
+weight: 0
+provider: null
+plugin: 'block_content:569f2e44-3e39-4684-acaf-f466190adcc2'
+settings:
+  id: 'block_content:569f2e44-3e39-4684-acaf-f466190adcc2'
+  label: 'Site alert block secondary'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.comment
     - field.field.node.page.field_campaign
     - field.field.node.page.field_campaign_color
     - field.field.node.page.field_created_by
@@ -23,6 +24,7 @@ dependencies:
     - field.field.node.page.field_teamsite_location
     - field.field.node.page.field_tracking_number
     - field.field.node.page.field_update_date_modified
+    - field.field.node.page.layout_builder__layout
     - field.field.node.page.layout_builder__translation
     - node.type.page
     - workflows.workflow.editorial
@@ -400,6 +402,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  comment: true
+  layout_builder__layout: true
   layout_builder__translation: true
   layout_selection: true
   panelizer: true

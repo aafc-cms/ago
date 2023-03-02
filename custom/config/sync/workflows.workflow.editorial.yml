@@ -7,6 +7,7 @@ dependencies:
     - node.type.dir_listing
     - node.type.landing_page
     - node.type.page
+    - node.type.webform
   module:
     - content_moderation
 _core:
@@ -78,4 +79,5 @@ type_settings:
       - dir_listing
       - landing_page
       - page
+      - webform
   default_moderation_state: draft
