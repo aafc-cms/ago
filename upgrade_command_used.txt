@@ -1,0 +1,4 @@
+
+ Upgrade from wxt 4.3.0 to wxt 4.4.2
+
+/usr/bin/php8.0 /usr/bin/composer up drupalwxt/wxt drupal/core consolidation/* npm-asset/dropzone oomphinc/composer-installers-extender phpoption/phpoption symfony/var-dumper symfony/yaml dealerdirect/phpcodesniffer-composer-installer wet-boew/theme-gc-intranet fabpot/goutte squizlabs/php_codesniffe symfony/browser-kit symfony/http-client ckeditor/fakeobjects drupal/admin_toolbar drupal/blog drupal/ckeditor_codemirror drupal/core_context drupal/diff drupal/group drupal/layout_builder_styles drupal/menu_block drupal/paragraphs drupal/redis drupal/token_filter drupal/video_embed_field drupal/views_bootstrap drupal/views_infinite_scroll drupal/wxt_bootstrap drupal/wxt_library agrcmsx/dxbase drupal/convert_bundles laminas/* drupal/moderation_sidebar drupal/embed_block doctrine/* psr/cache symfony/* drupal/bg_image_formatter drupal/fontawesome drupal/search_api drupal/token_filter drupal/simple_sitemap consolidation/* drupalwxt/wxt
