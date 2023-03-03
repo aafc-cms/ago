@@ -1,9 +1,12 @@
-uuid: 6952d1f6-ff28-45c9-873f-3b3b41fac2d8
+uuid: 27864d6c-5197-4204-a60c-5f7e8d68764f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: 3GiMU500Fsun7nUTY9IkvBljsJ-GcRhKpRKIoWBzK8A
+  default_config_hash: hMuXj2ZafHs0AHzf4U04OuVV1yFHKBkpyhSjhg_kLUg
 id: wxt_node_page_translation
 class: null
 field_plugin_method: null
@@ -13,19 +16,21 @@ migration_tags:
 migration_group: wxt_translation
 label: 'Embedded data feed of content'
 source:
-  plugin: embedded_data
+  plugin: custom_embedded_data
   translations: true
   data_rows:
     -
       name: wxt_content_1
-      title: 'Drupal WxT pour Drupal 8'
+      title: 'Drupal WxT pour Drupal 9'
       language: fr
+      status: 1
       body: |
         <p>Pas de traduction en ce moment.</p>
     -
       name: wxt_content_2
-      title: 'Drupal 8'
+      title: 'Drupal 9'
       language: fr
+      status: 1
       body: |
         <p>Pas de traduction en ce moment.</p>
   ids:
@@ -52,9 +57,12 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
-  moderation_state/target_id:
-    plugin: default_value
-    default_value: published
+  moderation_state:
+    plugin: static_map
+    source: status
+    map:
+      - draft
+      - published
   content_translation_source: en
 destination:
   plugin: 'entity:node'

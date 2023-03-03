@@ -1,9 +1,12 @@
-uuid: 493caf9f-4bd8-41b4-9839-2bceed9d9afe
+uuid: 0b2b2f72-f68c-4e51-a1fc-79e2091f7e74
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: _1RP6xbZLnmCn0pscJIFVEmlqoJ-fNtTChw4QbKwXl8
+  default_config_hash: _YJidh3eGNMJ2JYrJVWaOerPbolg7D2vTlbSPrBpp4Q
 id: wxt_node_page
 class: null
 field_plugin_method: null
@@ -13,12 +16,13 @@ migration_tags:
 migration_group: wxt
 label: 'Embedded data feed of content'
 source:
-  plugin: embedded_data
+  plugin: custom_embedded_data
   data_rows:
     -
       name: wxt_content_1
-      title: 'Drupal WxT for Drupal 8'
+      title: 'Drupal WxT for Drupal 9'
       language: en
+      status: 1
       body: |-
         <p>The Drupal WxT distribution is a web content management
         framework which assists in building and maintaining innovative Web sites
@@ -278,49 +282,50 @@ source:
         <h3>Important Links</h3>
 
         <ul class="list-unstyled">
-          <li><a href="http://drupal.org/project/wxt">Drupal WxT8 (Drupal)</a></li>
-          <li><a href="http://github.com/wet-boew/wet-boew-drupal8">Drupal WxT8 (GitHub)</a></li>
+          <li><a href="http://drupal.org/project/wxt">Drupal WxT (Drupal)</a></li>
+          <li><a href="http://github.com/drupalwxt/wxt">Drupal WxT (GitHub)</a></li>
         </ul>
     -
       name: wxt_content_2
-      title: 'Drupal 8'
+      title: 'Drupal 9'
       language: en
+      status: 1
       body: |
-        <p>Drupal 8 is the latest, greatest release of the world''s
-        most widely used enterprise web CMS. It''s fast. Flexible. Drupal 8 taps
+        <p>Drupal 9 is the latest, greatest release of the world's
+        most widely used enterprise web CMS. It's fast. Flexible. Drupal 9 taps
         into the concentrated innovation from its open source community. You can
         drive value and streamline your work with new capabilities for
         successful digital experiences.</p>
 
         <div class="row mrgn-bttm-md">
         <div class="col-md-6">
-        <p>Drupal 8 has something for everyone who supports online content and
+        <p>Drupal 9 has something for everyone who supports online content and
         digital experience at your organization; business decision makers, site
         administrators, digital marketers, content managers, web developers,
         technical architects, and  IT pros.</p>
         </div>
 
         <div class="col-md-6">
-        <p>Drupal 8''s core platform has more than 200 new features built in.
-        But it''s more than a collection of features; Drupal 8 is a platform you
+        <p>Drupal 9's core platform has more than 200 new features built in.
+        But it's more than a collection of features; Drupal 9 is a platform you
         can use to achieve digital success.</p>
         </div>
         </div>
 
-        <p>Thanks to Drupal 8''s powerful new suite of tools, it will
+        <p>Thanks to Drupal 9's powerful new suite of tools, it will
         quickly become the strongest link in your new content supply chain.
         Interact with countless applications, thanks to REST-first native web
         services. Use progressive decoupling to break free from back-end
         restrictions without sacrificing security and accessibility. Deliver
         faster, with enhanced entity caching and better integration with CDNs
-        and reverse proxies. With Drupal 8, you can build almost any integrated
+        and reverse proxies. With Drupal 9, you can build almost any integrated
         experience you can imagine.</p>
 
         <h3>Important Links</h3>
 
         <ul class="list-unstyled">
-          <li><a href="https://www.drupal.org/8">Drupal 8</a></li>
-          <li><a href="https://www.acquia.com/sites/default/files/library/attachment/ultimate-guide-drupal-8.pdf">Ultimate Guide to Drupal 8</a></li>
+          <li><a href="https://www.drupal.org/8">Drupal 9</a></li>
+          <li><a href="https://www.acquia.com/sites/default/files/library/attachment/ultimate-guide-drupal-8.pdf">Ultimate Guide to Drupal 9</a></li>
           <li><a href="https://symfony.com">Symfony 3</a></li>
         </ul>
   ids:
@@ -343,9 +348,12 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
-  moderation_state/target_id:
-    plugin: default_value
-    default_value: published
+  moderation_state:
+    plugin: static_map
+    source: status
+    map:
+      - draft
+      - published
 destination:
   plugin: 'entity:node'
 migration_dependencies: {  }

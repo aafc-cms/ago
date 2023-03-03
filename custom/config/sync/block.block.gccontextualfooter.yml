@@ -1,28 +1,28 @@
-uuid: d9e1e8c7-2f98-4f9d-9a8d-c74321f71f87
+uuid: d12a0d6d-02ca-41d2-b0b9-37ada6d0e427
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer-fr
+    - system.menu.footer-contextual
   module:
-    - block_class
     - language
     - menu_block
+    - wxt_ext_blocks
   theme:
     - aafctheme
 third_party_settings:
-  block_class:
-    classes: footer-francais
-id: aafctheme_footer_fr
+  wxt_ext_blocks:
+    display_title_invisible: 1
+id: gccontextualfooter
 theme: aafctheme
 region: footer
-weight: -11
+weight: -13
 provider: null
-plugin: 'menu_block:footer-fr'
+plugin: 'menu_block:footer-contextual'
 settings:
-  id: 'menu_block:footer-fr'
-  label: 'Footer fr'
-  label_display: '0'
+  id: 'menu_block:footer-contextual'
+  label: 'Agriculture and Agri-Food Canada popular links'
+  label_display: visible
   provider: menu_block
   follow: false
   follow_parent: child
@@ -30,13 +30,9 @@ settings:
   label_type: block
   level: 1
   depth: 0
-  expand_all_items: true
-  parent: 'footer-fr:'
-  suggestion: footer_fr
-  custom_level: '1'
-  hide_children: 0
-  expand_only_active_trails: 0
-  render_parent: false
+  expand_all_items: false
+  parent: 'footer-contextual:'
+  suggestion: footer_contextual
 visibility:
   language:
     id: language
@@ -44,4 +40,4 @@ visibility:
     context_mapping:
       language: '@language.current_language_context:language_interface'
     langcodes:
-      fr: fr
+      en: en

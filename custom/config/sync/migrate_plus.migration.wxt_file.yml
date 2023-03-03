@@ -1,9 +1,12 @@
-uuid: f556b1f1-971d-480a-a7b9-65c04808e27c
+uuid: 227f771c-f5dc-4410-a90f-1b92ba95cf12
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: VvcTizHBwxfFHTpwBWiTPWLccnYLKuBJKfVqMnSnuAc
+  default_config_hash: sSprxRC-P0UCIwjcjg2Db3Tj-mKOuedqwp7A_lgVEtc
 id: wxt_file
 class: null
 field_plugin_method: null
