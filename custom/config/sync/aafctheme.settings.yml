@@ -30,6 +30,8 @@ region_wells:
   navigation: ''
   navigation_collapsible: ''
   header: ''
+  highlighted_not_front: ''
+  highlighted_front_only: ''
   highlighted: ''
   help: ''
   content: ''
@@ -47,3 +49,6 @@ table: ''
 wxt_gcweb_footer_twig_extension: 0
 breadcrumb_title: 0
 breadcrumb_home: 0
+wxt_facets_collapsible: 0
+reset: 'Reset Broken Cache'
+apply: Apply

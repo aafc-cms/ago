@@ -1,9 +1,9 @@
-uuid: d12a0d6d-02ca-41d2-b0b9-37ada6d0e427
-langcode: en
+uuid: 1b020cbf-5068-4fff-9baf-888aa8472313
+langcode: fr
 status: true
 dependencies:
   config:
-    - system.menu.footer-contextual
+    - system.menu.footer-contextual-fr
   module:
     - language
     - menu_block
@@ -12,17 +12,17 @@ dependencies:
     - aafctheme
 third_party_settings:
   wxt_ext_blocks:
-    display_title_invisible: 1
-id: gccontextualfooter
+    display_title_invisible: 0
+id: pieddepagecontextuelgc
 theme: aafctheme
 region: footer
-weight: -14
+weight: -13
 provider: null
-plugin: 'menu_block:footer-contextual'
+plugin: 'menu_block:footer-contextual-fr'
 settings:
-  id: 'menu_block:footer-contextual'
-  label: 'GC Contextual footer'
-  label_display: '0'
+  id: 'menu_block:footer-contextual-fr'
+  label: 'Pied de page contextuel GC'
+  label_display: visible
   provider: menu_block
   follow: false
   follow_parent: child
@@ -31,8 +31,8 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-  parent: 'footer-contextual:'
-  suggestion: footer_contextual
+  parent: 'footer-contextual-fr:'
+  suggestion: footer_contextual_fr
 visibility:
   language:
     id: language
@@ -40,4 +40,4 @@ visibility:
     context_mapping:
       language: '@language.current_language_context:language_interface'
     langcodes:
-      en: en
+      fr: fr

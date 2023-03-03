@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ff1ac2ba3fc73384c2c39e182063a2a",
+    "content-hash": "170f4ec53f849bbe73c1d1dc3a1dac54",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -383,16 +383,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "9.4.11-beta1",
+            "version": "9.4.11-beta2",
             "source": {
                 "type": "git",
                 "url": "git@gitlab.com:agrcms/dxbase.git",
-                "reference": "2367c6e99926b638d6cce557d56ecabe01e5f273"
+                "reference": "e8d47fb74c75c7ab155ec19b30a89722e98b1bb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=2367c6e99926b638d6cce557d56ecabe01e5f273",
-                "reference": "2367c6e99926b638d6cce557d56ecabe01e5f273",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=e8d47fb74c75c7ab155ec19b30a89722e98b1bb9",
+                "reference": "e8d47fb74c75c7ab155ec19b30a89722e98b1bb9",
                 "shasum": ""
             },
             "require": {
@@ -406,10 +406,11 @@
                 "drupal/bootstrap": "3.25 as 3.23",
                 "drupal/clientside_validation": "^3.0",
                 "drupal/conditional_fields": "^1.0",
-                "drupal/config_ignore": "2.x-dev@dev",
+                "drupal/config_ignore": "^2.4",
                 "drupal/config_revision": "^1.0@alpha",
                 "drupal/config_split": "^1.6",
                 "drupal/config_update": "^1.7",
+                "drupal/conflict": "^2",
                 "drupal/console": "^1.9",
                 "drupal/content_lock": "^2.3",
                 "drupal/content_moderation_notifications": "3.x-dev",
@@ -646,7 +647,7 @@
                 "GPL-2.0+"
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
-            "time": "2023-03-01T16:23:50+00:00"
+            "time": "2023-03-03T18:38:23+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -4370,27 +4371,30 @@
         },
         {
             "name": "drupal/config_ignore",
-            "version": "dev-2.x",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_ignore.git",
-                "reference": "351164d9f1f6751006ef9bb691fb4b5fbd0812af"
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "e0e45dde2d6927c5d26de59f352792fb6cf26554"
             },
             "require": {
                 "drupal/config_filter": "^1 || ^2",
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.2+10-dev",
-                    "datestamp": "1607033538",
+                    "version": "8.x-2.4",
+                    "datestamp": "1676045435",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -4419,7 +4423,7 @@
             "homepage": "http://drupal.org/project/config_ignore",
             "support": {
                 "source": "https://git.drupalcode.org/project/config_ignore",
-                "issues": "http://drupal.org/project/config_ignore",
+                "issues": "https://drupal.org/project/config_ignore",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
@@ -4647,6 +4651,77 @@
             "homepage": "https://www.drupal.org/project/config_update",
             "support": {
                 "source": "https://git.drupalcode.org/project/config_update"
+            }
+        },
+        {
+            "name": "drupal/conflict",
+            "version": "2.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/conflict.git",
+                "reference": "8.x-2.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/conflict-8.x-2.0-alpha3.zip",
+                "reference": "8.x-2.0-alpha3",
+                "shasum": "66d1c4594aa7040649f44011e9fba90431661da8"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "require-dev": {
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-alpha3",
+                    "datestamp": "1669170678",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bdragon",
+                    "homepage": "https://www.drupal.org/user/53081"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "drumm",
+                    "homepage": "https://www.drupal.org/user/3064"
+                },
+                {
+                    "name": "dww",
+                    "homepage": "https://www.drupal.org/user/46549"
+                },
+                {
+                    "name": "hchonov",
+                    "homepage": "https://www.drupal.org/user/2901211"
+                },
+                {
+                    "name": "jeqq",
+                    "homepage": "https://www.drupal.org/user/1427908"
+                }
+            ],
+            "description": "Find merge conflicts in entities, perform auto merge where possible or offer a way for resolving them.",
+            "homepage": "https://www.drupal.org/project/conflict",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupal.org/project/conflict.git",
+                "issues": "https://www.drupal.org/project/issues/conflict"
             }
         },
         {

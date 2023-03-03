@@ -1,0 +1,5 @@
+path: 'public://css_editor/aafctheme.css'
+enabled: true
+css: "body > div.bs-site-alert {  \r\n  margin-top: -15px !important;\r\n  margin-left: -36px !important;\r\n  margin-bottom: 5px !important;\r\n}\r\n\r\nhtml:lang(fr) body > div.bs-site-alert {  \r\n  margin-top: 0px !important;\r\n}\r\n\r\nbody.role-is-anonymous > div.bs-site-alert figcaption {  \r\n  margin-top: 15px !important;\r\n}\r\n\r\ndiv.bs-site-alert figcaption a.figcaption {\r\n  color: white;\r\n  text-decoration: underline;\r\n}"
+plaintext_enabled: false
+autopreview_enabled: false
