@@ -86,9 +86,11 @@
       {% if not campaign_mode %}
       <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
         <div class="{{ container }}">
+        {% if gcweb_cdn %}
           <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
           <button type="button" aria-haspopup="true" aria-expanded="false">{{ main_menu_label|raw }}</button>
           {{ page.navigation }}
+        {% endif %}
         </div>
       </nav>
       {{ page.breadcrumb }}
