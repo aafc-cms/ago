@@ -92,6 +92,11 @@
           {{ page.navigation }}
         </div>
       </nav>
+      {% else %}
+      <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
+        <div class="{{ container }}">
+        </div>
+      </nav>
       {% endif %}
       {{ page.breadcrumb }}
       {% endif %}
