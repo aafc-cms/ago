@@ -18,27 +18,27 @@ logo:
   use_default: 0
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
-wxt_gcweb_cdn: 1
+wxt_gcweb_cdn: 0
 wxt_gcweb_search: 1
 table_responsive: '-1'
 region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
   branding: ''
   breadcrumb: ''
   language_toggle: ''
   banner: ''
   search: ''
-  navigation: ''
-  navigation_collapsible: ''
-  header: ''
   highlighted_not_front: ''
   highlighted_front_only: ''
-  highlighted: ''
-  help: ''
-  content: ''
   content_footer: ''
-  sidebar_first: ''
-  sidebar_second: ''
-  footer: ''
 cdn_theme: ''
 cdn_cache_ttl_versions: 0
 cdn_cache_ttl_themes: 0

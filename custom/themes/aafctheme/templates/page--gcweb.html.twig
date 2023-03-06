@@ -84,6 +84,7 @@
         </div>
       </div>
       {% if not campaign_mode %}
+      {% if gcweb_cdn %}
       <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
         <div class="{{ container }}">
           <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
@@ -91,6 +92,7 @@
           {{ page.navigation }}
         </div>
       </nav>
+      {% endif %}
       {{ page.breadcrumb }}
       {% endif %}
     </header>
