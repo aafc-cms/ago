@@ -384,7 +384,16 @@ function agri_admin_node_update(EntityInterface $entity) {
  * Implements hook_entity_type_predelete().
  */
 function agri_admin_media_predelete(EntityInterface $entity) {
-  if (strpos($entity->getName(), 'pecial_title520x') > 0) {
+  if (strpos($entity->getName(), 'pecial_title520x') > 0 ||
+    strpos($entity->getName(), 'top-banner-') > 0 ||
+    strpos($entity->getName(), 'interlude-') > 0 ||
+    strpos($entity->getName(), 'con-twitter-') > 0 ||
+    strpos($entity->getName(), 'con-instagram-') > 0 ||
+    strpos($entity->getName(), 'con-facebook-') > 0 ||
+    strpos($entity->getName(), 'WelcomePageDeco_-') > 0 ||
+    strpos($entity->getName(), 'imhortons') > 0 ||
+    strpos($entity->getName(), 'alendar-events-') > 0
+    ) {
     // Set error message
     // display error.
     // Prevent delete.
@@ -454,7 +463,16 @@ function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id)
     if (strpos($form_id, 'media') !== FALSE || strpos($form_id, 'delete')) {
       $media = Media::load($mid);
       $show_button = TRUE;
-      if (strpos($media->getName(), 'pecial_title520x') >= 1) {
+      if (strpos($media->getName(), 'pecial_title520x') >= 1 ||
+        strpos($media->getName(), 'top-banner-') > 0 ||
+        strpos($media->getName(), 'interlude-') > 0 ||
+        strpos($media->getName(), 'con-twitter-') > 0 ||
+        strpos($media->getName(), 'con-instagram-') > 0 ||
+        strpos($media->getName(), 'con-facebook-') > 0 ||
+        strpos($media->getName(), 'WelcomePageDeco_-') > 0 ||
+        strpos($media->getName(), 'imhortons') > 0 ||
+        strpos($media->getName(), 'alendar-events-') > 0
+      ) {
         $show_button = FALSE;
       }
       if (!$show_button) {
