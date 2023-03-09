@@ -19,7 +19,7 @@ function aafctheme_theme_suggestions_block_alter(&$suggestions, $variables) {
   // Load theme suggestions for blocks from parent theme.
   // https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
   for ($i = 0; $i < count($suggestions); $i++) {
-    if (str_contains($suggestions[$i], 'aafctheme_')) {
+    if (isset($suggestions[$i]) && str_contains($suggestions[$i], 'aafctheme_')) {
       $new_suggestions = [
         str_replace('aafctheme_', '', $suggestions[$i]),
         str_replace('aafctheme_', 'wxt_bootstrap_', $suggestions[$i]),
