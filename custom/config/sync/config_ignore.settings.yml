@@ -12,7 +12,7 @@ ignored_config_entities:
   - ~block.block.aafctheme_footerfr
   - ~block.block.footertop
   - ~block.block.gccontextualfooter
-  - ~block.block.haudepieddepage
+  - ~block.block.hautdepieddepage
   - ~block.block.pieddepagecontextuelgc
   - css_editor.theme.aafctheme
   - devel.settings
