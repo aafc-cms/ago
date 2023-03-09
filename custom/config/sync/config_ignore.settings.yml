@@ -12,8 +12,8 @@ ignored_config_entities:
   - ~block.block.aafctheme_footerfr
   - ~block.block.footertop
   - ~block.block.gccontextualfooter
-  - ~block.block.haudepieddepage.yml
-  - ~block.block.pieddepagecontextuelgc.yml
+  - ~block.block.haudepieddepage
+  - ~block.block.pieddepagecontextuelgc
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
