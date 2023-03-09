@@ -22,7 +22,7 @@ plugin: 'menu_block:footer-contextual-fr'
 settings:
   id: 'menu_block:footer-contextual-fr'
   label: 'Pied de page contextuel GC'
-  label_display: '0'
+  label_display: visible
   provider: menu_block
   follow: false
   follow_parent: child

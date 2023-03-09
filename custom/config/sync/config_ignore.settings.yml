@@ -13,7 +13,7 @@ ignored_config_entities:
   - ~block.block.footertop
   - ~block.block.gccontextualfooter
   - ~block.block.haudepieddepage.yml
-  - ~block.block.pieddepagecontextuel.yml
+  - ~block.block.pieddepagecontextuelgc.yml
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
