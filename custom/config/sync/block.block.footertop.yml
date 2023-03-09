@@ -1,9 +1,9 @@
-uuid: 84efd3ac-af40-4e87-93fd-67104113f236
+uuid: 97861237-7140-49b8-ab99-a656a0468a5f
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer-contextual
+    - system.menu.footer-top
   module:
     - language
     - menu_block
@@ -13,16 +13,16 @@ dependencies:
 third_party_settings:
   wxt_ext_blocks:
     display_title_invisible: 0
-id: gccontextualfooter
+id: footertop
 theme: aafctheme
 region: footer
-weight: -15
+weight: -14
 provider: null
-plugin: 'menu_block:footer-contextual'
+plugin: 'menu_block:footer-top'
 settings:
-  id: 'menu_block:footer-contextual'
-  label: 'GC contextual footer'
-  label_display: visible
+  id: 'menu_block:footer-top'
+  label: 'Footer top'
+  label_display: '0'
   provider: menu_block
   follow: false
   follow_parent: child
@@ -31,8 +31,8 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-  parent: 'footer-contextual:'
-  suggestion: footer_contextual
+  parent: 'footer-top:'
+  suggestion: footer_top
 visibility:
   language:
     id: language
