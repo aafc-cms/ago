@@ -16,7 +16,7 @@ third_party_settings:
 id: aafctheme_footer_fr
 theme: aafctheme
 region: footer
-weight: -11
+weight: -10
 provider: null
 plugin: 'menu_block:footer-fr'
 settings:
