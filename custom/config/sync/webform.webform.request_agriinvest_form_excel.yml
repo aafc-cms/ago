@@ -60,9 +60,10 @@ elements: |-
     '#type': checkboxes
     '#title': 'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon.'
     '#options':
-      '2021 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2021 AgriStability and AgriInvest T1273 forms package for individuals.'
-      '2021 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2021 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
-      '2022 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2022 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2022 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
+      '2022 AgriStability and AgriInvest T1273 Forms Package for Individuals.': '2022 AgriStability and AgriInvest T1273 forms package for individuals.'
+      '2022 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': '2022 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals.'
+      '2023 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.*': '2023 AgriStability and AgriInvest forms for corporations, co-operatives and special individuals. (2023 forms are available for AgriStability and AgriInvest participants with a non-calendar year end.)'
+    '#required_error': 'This field is required.'
     '#states':
       visible-slide:
         ':input[name="select_the_province[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
@@ -71,12 +72,12 @@ elements: |-
         ':input[name="select_the_province[For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon]"]':
           checked: true
     '#options__properties': ''
-    '#required_error': 'This field is required.'
   for_producers_in_alberta_ontario_prince_edward_island_and_saskat:
     '#type': checkboxes
     '#title': 'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan.'
     '#options':
-      '2021 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2021 AgriStability and AgriInvest T1163 forms package for individuals.'
+      '2022 AgriStability and AgriInvest T1163 Forms Package for Individuals.': '2022 AgriStability and AgriInvest T1163 forms package for individuals.'
+    '#required_error': 'This field is required.'
     '#states':
       visible:
         ':input[name="select_the_province[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
@@ -85,7 +86,6 @@ elements: |-
         ':input[name="select_the_province[For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan]"]':
           checked: true
     '#options__properties': ''
-    '#required_error': 'This field is required.'
 css: |-
   body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
     display: none;
