@@ -21,7 +21,7 @@ provider: null
 plugin: 'menu_block:footer-contextual'
 settings:
   id: 'menu_block:footer-contextual'
-  label: 'GC contextual footer'
+  label: 'Agriculture and Agri-Food Canada'
   label_display: visible
   provider: menu_block
   follow: false
