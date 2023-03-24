@@ -75,7 +75,7 @@ elements: |-
     '#other__option_label': 'Other area'
     '#other__title': 'Describe the area you want to provide feedback on'
     '#other__placeholder': ''
-    '#required_error': 'A custom required message.'
+    '#required_error': 'This field is required.'
   3_describe_the_issue_and_provide_comments_:
     '#type': textarea
     '#title': '3. Describe the issue and provide comments.'
