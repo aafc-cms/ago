@@ -48,6 +48,7 @@ module:
   ctools_block: 0
   datetime: 0
   diff: 0
+  draggableviews: 0
   dropzonejs: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
@@ -58,6 +59,8 @@ module:
   entity_browser: 0
   entity_browser_block: 0
   entity_embed: 0
+  entity_print: 0
+  entity_print_views: 0
   entity_reference_revisions: 0
   entity_translation_unified_form: 0
   entityqueue: 0
