@@ -7,7 +7,7 @@ settings:
   default_paper_size: letter
   default_paper_orientation: portrait
   username: ''
-  password: welcome1
+  password: ''
   enable_html5_parser: true
   enable_remote: true
   font_subsetting: true
@@ -15,5 +15,5 @@ settings:
   cafile: ''
   verify_peer: true
   verify_peer_name: true
-  base_url: 'http://localhost'
+  base_url: 'http://localhost:8000'
   disable_log: 0
