@@ -1,0 +1,13 @@
+body.role-is-anonymous.anonymous.user-anonymous {
+  form[data-drupal-selector^="views-form-print-all-steps-of-program-"] {
+    th.views-field-draggableviews {
+      display: none;
+    }
+    tr.print-all-steps-program-pages td.views-field-draggableviews {
+      display: none;
+    }
+    div.form-item.js-form-item.form-type-select.js-form-type-select.form-item-action.js-form-item-action.form-group {
+      display: none;
+    }
+  }
+}
