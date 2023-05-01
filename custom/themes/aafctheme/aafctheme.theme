@@ -278,7 +278,7 @@ function aafctheme_preprocess_textarea(&$variables) {
 
 function aafctheme_preprocess_input__button__submit(&$vars) {
   $route_name = Utils::getRouteName();
-  $pass_validation = (strpos($route_name, 'view.print_all_steps_of_program_pages_agri') === 0) ? TRUE : FALSE;
+  $pass_validation = (strpos($route_name, 'view.print_all_steps_of_program_pages') === 0) ? TRUE : FALSE;
   if ($pass_validation && $vars['theme_hook_original'] == 'input__submit') {
     $label = (string) $vars['label'];
     // \Drupal\agri_admin\AgriAdminHelper::addToLog('debug? : <pre>' . print_r(array_keys($vars),TRUE) . '</pre>' , TRUE);
