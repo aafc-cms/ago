@@ -277,7 +277,12 @@ function aafctheme_preprocess_textarea(&$variables) {
 }
 
 function aafctheme_preprocess_input__button__submit(&$vars) {
-  if ($vars['theme_hook_original'] == 'input__submit') {
+  $route_name = Utils::getRouteName();
+  $pass_validation = ($route_name == 'view.print_all_steps_of_program_pages_agristability_view.page_1') ? TRUE : FALSE;
+  if (!$pass_validation) {
+    $pass_validation = ($route_name == 'view.print_all_steps_of_program_pages_agriinvest_view.page_1') ? TRUE : FALSE;
+  }
+  if ($pass_validation && $vars['theme_hook_original'] == 'input__submit') {
     $label = (string) $vars['label'];
     // \Drupal\agri_admin\AgriAdminHelper::addToLog('debug? : <pre>' . print_r(array_keys($vars),TRUE) . '</pre>' , TRUE);
     if ($label == 'Appliquer aux éléments sélectionnés' || $label == 'Apply to selected items') {
