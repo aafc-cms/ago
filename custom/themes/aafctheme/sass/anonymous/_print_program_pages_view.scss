@@ -3,10 +3,10 @@ body.role-is-anonymous.anonymous.user-anonymous {
     th.views-field-draggableviews {
       display: none;
     }
-    th.views-field-node-bulk-form input.form-checkbox {
+    th.select-all.views-field.views-field-node-bulk-form {
       display: none;
     }
-    div.checkbox label[for^="edit-node-bulk-form-"] {
+    td.views-field.views-field-node-bulk-form {
       display: none;
     }
     tr.print-all-steps-program-pages td.views-field-draggableviews {

@@ -14,11 +14,11 @@ body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="view
   display: none;
 }
 /* line 6, ../sass/anonymous/_print_program_pages_view.scss */
-body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] th.views-field-node-bulk-form input.form-checkbox {
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] th.select-all.views-field.views-field-node-bulk-form {
   display: none;
 }
 /* line 9, ../sass/anonymous/_print_program_pages_view.scss */
-body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] div.checkbox label[for^="edit-node-bulk-form-"] {
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] td.views-field.views-field-node-bulk-form {
   display: none;
 }
 /* line 12, ../sass/anonymous/_print_program_pages_view.scss */
