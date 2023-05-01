@@ -3,6 +3,12 @@ body.role-is-anonymous.anonymous.user-anonymous {
     th.views-field-draggableviews {
       display: none;
     }
+    th.select-all.views-field.views-field-node-bulk-form {
+      display: none;
+    }
+    td.views-field.views-field-node-bulk-form {
+      display: none;
+    }
     tr.print-all-steps-program-pages td.views-field-draggableviews {
       display: none;
     }
