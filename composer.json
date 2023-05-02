@@ -357,7 +357,8 @@
         "drupal/simple_gmap": "^3.0",
         "drupal/entity_print": "^2.11",
         "mikehaertl/phpwkhtmltopdf": "~2.1",
-        "tecnickcom/tcpdf": "~6"
+        "tecnickcom/tcpdf": "~6",
+        "drupal/draggableviews": "^2.1"
     },
     "authors": [
         {
