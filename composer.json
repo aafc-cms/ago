@@ -270,6 +270,7 @@
                     "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch"
                 },
                 "drupal/token": {
+                    "2924873":"https://www.drupal.org/files/issues/2023-06-14/tokens_body_with_summary-2924873-11.patch",
                     "2863200 - No longer need this patch, included in the latest release.":
                     "https://www.drupal.org/files/issues/2019-03-15/2863200-23.patch"
                 }
