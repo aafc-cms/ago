@@ -15,5 +15,5 @@ tags:
   dcterms_title: '[node:title]'
   dcterms_language: '[language:langcode]-ca'
   dcterms_creator: 'Agriculture and Agri-Food Canada'
-  dcterms_description: '[node:field_description]'
+  dcterms_description: '[node:field_description] [node:summary]'
   dcterms_subject: '[node:field_dcterms_subject]'
