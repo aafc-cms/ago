@@ -74,11 +74,11 @@ foreach ($fids as $fid) {
       unset($fids_with_matches[$inner_idx]);
       continue;
     }
-    echo "        fid = /admin/content/files/replace/$fid_matched";
-    echo "\n";
     $inner_idx++;
   }
+  $inner_idx = 0;
   foreach ($fids_with_matches as $fid_matched) {
+    $file = \Drupal\file\Entity\File::load($fid_matched);
     if (!$file) {
       continue;
     }
@@ -87,8 +87,11 @@ foreach ($fids as $fid) {
       continue;
     }
     $file_uri = str_replace('public://', '/sites/default/files/', $file->getFileUri());
-    echo "Is duplicate= " . $file_uri;
+    echo "         fid = /admin/content/files/replace/$fid_matched";
     echo "\n";
+    echo "Is duplicate = " . $file_uri;
+    echo "\n";
+    $inner_idx++;
   }
   $idx++;
 }
