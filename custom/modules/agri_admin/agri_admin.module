@@ -895,6 +895,7 @@ function agri_admin_form_node_form_alter(&$form, FormStateInterface $form_state,
       $form['field_description']['#disabled'] = FALSE;
       $form['field_keywords']['#disabled'] = FALSE;
       $form['field_subject']['#disabled'] = FALSE;
+      $form['field_dcterms_subject']['#disabled'] = FALSE;
     }
   }
 }
