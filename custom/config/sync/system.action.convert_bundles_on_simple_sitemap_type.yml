@@ -1,0 +1,11 @@
+uuid: 6159f9cc-8860-45bd-809c-97171f20891d
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_bundles
+id: convert_bundles_on_simple_sitemap_type
+label: 'Convert Simple XML sitemap type Entity Bundles'
+type: simple_sitemap_type
+plugin: convert_bundles_action_base
+configuration: {  }

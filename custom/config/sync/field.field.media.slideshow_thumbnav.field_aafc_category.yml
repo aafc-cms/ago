@@ -89,4 +89,7 @@ settings:
   webform_submission:
     handler: 'default:webform_submission'
     handler_settings: {  }
+  config_revision:
+    handler: 'default:config_revision'
+    handler_settings: {  }
 field_type: dynamic_entity_reference

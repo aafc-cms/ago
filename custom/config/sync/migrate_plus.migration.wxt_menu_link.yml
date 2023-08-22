@@ -1,9 +1,12 @@
-uuid: 52e181d8-fece-4132-b751-aaca53bf11e6
+uuid: 5041da6b-f8de-4ff8-8b0f-922f5c01197a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: E62qY0s6fIi5ZvHTwpFudUQkCLDNOsSd6DYGIPqvXuA
+  default_config_hash: NldbhQFUVVITGwvrG1p1fh_o2lqJ1sLSe1NqnM0KkmA
 id: wxt_menu_link
 class: null
 field_plugin_method: null
@@ -68,7 +71,7 @@ source:
       parent: 0
     -
       mlid: ml_main_3_sub_1
-      link_title: 'Drupal 8'
+      link_title: 'Drupal 9'
       description: ''
       menu_name: main
       link_path: 'internal:/node/2'
@@ -78,7 +81,7 @@ source:
       parent: ml_main_3
     -
       mlid: ml_main_3_sub_2
-      link_title: 'Drupal WxT for Drupal 8'
+      link_title: 'Drupal WxT for Drupal 9'
       description: ''
       menu_name: main
       link_path: 'internal:/node/1'
@@ -89,7 +92,7 @@ source:
     -
       mlid: ml_main_4
       link_title: Resources
-      description: 'Drupal 8 API.'
+      description: 'Drupal 9 API.'
       menu_name: main
       link_path: 'https://api.drupal.org/api/drupal/8.2.x'
       options: {  }
@@ -98,7 +101,7 @@ source:
       parent: 0
     -
       mlid: ml_main_4_sub_1
-      link_title: 'Theming in Drupal 8'
+      link_title: 'Theming in Drupal 9'
       description: ''
       menu_name: main
       link_path: 'https://loganfarr.com/index.php/d8-theming'
@@ -128,8 +131,8 @@ source:
       parent: 0
     -
       mlid: ml_sidebar_1_sub_1
-      link_title: 'Drupal 8'
-      description: 'Drupal 8 introduction'
+      link_title: 'Drupal 9'
+      description: 'Drupal 9 introduction'
       menu_name: sidebar
       link_path: 'internal:/node/2'
       options: {  }
@@ -138,7 +141,7 @@ source:
       parent: ml_sidebar_1
     -
       mlid: ml_sidebar_1_sub_1_sub_1
-      link_title: 'Why Drupal 8'
+      link_title: 'Why Drupal 9'
       description: 'Meet the world’s leading digital experience platform.'
       menu_name: sidebar
       link_path: 'https://www.drupal.com/why-drupal-8'
@@ -149,16 +152,16 @@ source:
     -
       mlid: ml_sidebar_1_sub_1_sub_2
       link_title: 'Multilingual Improvements'
-      description: 'Drupal 8 multilingual improvements.'
+      description: 'Drupal 9 multilingual improvements.'
       menu_name: sidebar
-      link_path: 'http://www.drupal8multilingual.org/features'
+      link_path: 'https://www.drupal.org/features/multilingual'
       options: {  }
       external: 0
       weight: 0
       parent: ml_sidebar_1_sub_1
     -
       mlid: ml_sidebar_1_sub_2
-      link_title: 'Drupal WxT for Drupal 8'
+      link_title: 'Drupal WxT for Drupal 9'
       description: 'Drupal WxT8 introduction'
       menu_name: sidebar
       link_path: 'internal:/node/1'
@@ -171,7 +174,7 @@ source:
       link_title: 'Drupal WxT8 (GitHub)'
       description: 'The Drupal WxT8 GitHub repository.'
       menu_name: sidebar
-      link_path: 'http://github.com/wet-boew/wet-boew-drupal8'
+      link_path: 'http://github.com/drupalwxt/wxt'
       options: {  }
       external: 0
       weight: 0
@@ -251,7 +254,7 @@ source:
       link_title: 'Recent project activity'
       description: 'Recent project activity for Drupal WxT'
       menu_name: footer
-      link_path: 'https://github.com/wet-boew/wet-boew-drupal8/pulse'
+      link_path: 'http://github.com/drupalwxt/wxt/pulse'
       options: {  }
       external: 1
       weight: 0
@@ -261,7 +264,7 @@ source:
       link_title: 'Project statistics'
       description: 'Recent project statistics for Drupal WxT.'
       menu_name: footer
-      link_path: 'https://github.com/wet-boew/wet-boew-drupal8/graphs'
+      link_path: 'http://github.com/drupalwxt/wxt/graphs'
       options: {  }
       external: 1
       weight: 0
@@ -281,7 +284,7 @@ source:
       link_title: Twitter
       description: 'Twitter Feed for Drupal WxT.'
       menu_name: footer
-      link_path: 'https://github.com/wet-boew/wet-boew-drupal8/pulse'
+      link_path: 'http://github.com/drupalwxt/wxt/pulse'
       options: {  }
       external: 1
       weight: 0

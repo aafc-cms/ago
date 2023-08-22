@@ -32,7 +32,6 @@ dependencies:
     - file
     - file_delete
     - filter
-    - lightning_scheduler
     - media
     - menu_admin_per_menu
     - moderation_dashboard
@@ -121,8 +120,6 @@ permissions:
   - 'edit own video_file media'
   - 'notify of path changes'
   - 'renew token'
-  - 'schedule block_publishing transition publish'
-  - 'schedule publishing transition publish'
   - 'skip comment approval'
   - 'translate image media'
   - 'translate landing_page node'

@@ -11,7 +11,7 @@ filebrowser:
   uploads:
     enabled: 1
     allow_overwrite: 1
-    accepted: 'txt doc docx pdf csv'
+    accepted: 'txt doc docx pdf csv xlsx'
   presentation:
     default_view: list-view
     encoding: UTF-8

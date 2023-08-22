@@ -9,6 +9,27 @@ body.role-is-anonymous.path-node.published-no .region-header nav.tabs {
   display: none !important;
 }
 
+/* line 3, ../sass/anonymous/_print_program_pages_view.scss */
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] th.views-field-draggableviews {
+  display: none;
+}
+/* line 6, ../sass/anonymous/_print_program_pages_view.scss */
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] th.select-all.views-field.views-field-node-bulk-form {
+  display: none;
+}
+/* line 9, ../sass/anonymous/_print_program_pages_view.scss */
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] td.views-field.views-field-node-bulk-form {
+  display: none;
+}
+/* line 12, ../sass/anonymous/_print_program_pages_view.scss */
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] tr.print-all-steps-program-pages td.views-field-draggableviews {
+  display: none;
+}
+/* line 15, ../sass/anonymous/_print_program_pages_view.scss */
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] div.form-item.js-form-item.form-type-select.js-form-type-select.form-item-action.js-form-item-action.form-group {
+  display: none;
+}
+
 /* line 2, ../sass/components/_draft-pending-views.scss */
 body.user-logged-in .view-content tr.published-no {
   background-color: pink;
@@ -30,16 +51,22 @@ body.user-logged-in .view-content table.dataTable {
 }
 
 /* line 2, ../sass/components/_container-fluid.scss */
+div.container-fluid main.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 7, ../sass/components/_container-fluid.scss */
 div.container-fluid main nav.tabs.mrgn-tp-md.mrgn-bttm-md {
   margin-left: 13em;
 }
 
-/* line 6, ../sass/components/_container-fluid.scss */
+/* line 11, ../sass/components/_container-fluid.scss */
 div.container-fluid nav#wb-bc a {
   font-size: 16px;
 }
 
-/* line 9, ../sass/components/_container-fluid.scss */
+/* line 15, ../sass/components/_container-fluid.scss */
 div.container-fluid main div.region.region-header.container nav.tabs.mrgn-tp-md.mrgn-bttm-md {
   margin-left: 0em;
 }
@@ -666,79 +693,79 @@ div.region-highlighted-front-only div.container-fluid {
   padding-right: 0;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 41, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 46, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 55, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 65, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
   height: auto;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 #block-aafctheme-reportproblemblock {
   margin-top: .5em;
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 78, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 83, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
 
-/* line 87, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100%;
 }
-/* line 89, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
   display: block;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
 @media (max-width: 844px) and (min-width: 768px) {
-  /* line 95, ../sass/styles.scss */
+  /* line 96, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     right: 100px;
   }
 
-  /* line 98, ../sass/styles.scss */
+  /* line 99, ../sass/styles.scss */
   .form-inline .select-wrapper {
     right: 100px;
     position: relative;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 104, ../sass/styles.scss */
+  /* line 105, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     margin-right: 160px;
     border-right: 1px solid #ddd;

@@ -1,9 +1,12 @@
-uuid: 9d7a0588-e7e9-4795-90ba-37eba0bba3e5
+uuid: e65a90af-c144-449d-96e0-9389558e1063
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: 5Hl_c3_M3M0MSPcrZmUUw-RdLGQ6hyGbA8WZ50jfCfw
+  default_config_hash: iD9GseRJmNs6-ADrfF8fmEFmzEkEfr_TYOAvamyvPys
 id: wxt_media_slideshow
 class: null
 field_plugin_method: null
@@ -60,7 +63,7 @@ process:
     plugin: default_value
     default_value: 1
   slideshow_items:
-    plugin: iterator
+    plugin: sub_process
     source: fid
     process:
       target_id:

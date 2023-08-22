@@ -1,9 +1,12 @@
-uuid: c437d932-f749-40f2-b765-2a504a2c0f5f
+uuid: f8933a3b-0ac0-4076-8fc4-1eb366e39935
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: hdD-WDMvAxGYRGX536Md6cwGccpdVVVgN7qpd9rRn2U
+  default_config_hash: Z3pJAbzwC3KI5NL6uzDjhCw__2ku32_bMICl5DcPZbk
 id: gcweb_translation
 label: 'GCWEB Migrate'
 description: 'Provides default content and related configuration for Drupal WxT.'

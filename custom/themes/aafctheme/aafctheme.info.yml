@@ -37,3 +37,10 @@ libraries-extend:
   bootstrap/framework:
     - 'aafctheme/drupal.aafctheme'
 
+entity_print:
+  node:
+    # Adds the all-nodes library to all node PDF’s.
+    all: 'aafctheme/print-styling'
+  view:
+    # Adds the all-nodes library to all node PDF’s.
+    all: 'aafctheme/print-styling'

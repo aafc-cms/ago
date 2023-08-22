@@ -1,0 +1,43 @@
+uuid: 84efd3ac-af40-4e87-93fd-67104113f236
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-contextual
+  module:
+    - language
+    - menu_block
+    - wxt_ext_blocks
+  theme:
+    - aafctheme
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: gccontextualfooter
+theme: aafctheme
+region: footer
+weight: -15
+provider: null
+plugin: 'menu_block:footer-contextual'
+settings:
+  id: 'menu_block:footer-contextual'
+  label: 'Agriculture and Agri-Food Canada'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer-contextual:'
+  suggestion: footer_contextual
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

@@ -39,9 +39,9 @@ dependencies:
     - entity_browser
     - file
     - file_delete
+    - filehash_report
     - filter
     - layout_builder
-    - lightning_core
     - media
     - menu_admin_per_menu
     - menu_link_content
@@ -62,9 +62,6 @@ dependencies:
     - views_ui
     - webform
     - wxt_core
-third_party_settings:
-  lightning_core:
-    description: 'Administrator role for PAB'
 id: pab_admin
 label: 'PAB Admin'
 weight: -2
@@ -163,6 +160,7 @@ permissions:
   - 'edit terms in intended_audience'
   - 'edit terms in media_category'
   - 'edit terms in programorservice'
+  - 'filehash_report view file duplicates'
   - 'moderated content bulk publish'
   - 'moderated content bulk unpublish'
   - 'notify of path changes'

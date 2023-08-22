@@ -40,9 +40,9 @@ dependencies:
     - file
     - file_delete
     - file_replace
+    - filehash_report
     - filter
     - layout_builder
-    - lightning_core
     - media
     - menu_admin_per_menu
     - menu_link_content
@@ -65,9 +65,6 @@ dependencies:
     - webform
     - webform_translation_permissions
     - wxt_core
-third_party_settings:
-  lightning_core:
-    description: ''
 _core:
   default_config_hash: 4DqEcyg9k0Z5j0c2Z_cSQjAUNDevUo4Wx2tgU48RRoM
 id: creator
@@ -176,6 +173,7 @@ permissions:
   - 'edit terms in intended_audience'
   - 'edit terms in media_category'
   - 'edit terms in programorservice'
+  - 'filehash_report view file duplicates'
   - 'moderated content bulk archive'
   - 'moderated content bulk publish'
   - 'moderated content bulk unpublish'

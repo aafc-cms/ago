@@ -1,9 +1,12 @@
-uuid: 347125a8-0f8a-447f-b120-549f10d58753
+uuid: bb5c4b69-9567-41c7-a5fa-04b487c201e9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: Yn-9CLxx_ChLdK2OBKZdsTlkBReHAruFuTGCzqWj7G4
+  default_config_hash: OTRWJfxhngmJKS_ql83zE0Bz5Nw8Z6RD-5XfQDkfUvk
 id: wxt_translation
 label: 'WxT Migrate'
 description: 'Provides default content and related configuration for Drupal WxT.'

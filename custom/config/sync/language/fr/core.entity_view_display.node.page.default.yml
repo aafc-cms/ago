@@ -1,0 +1,8 @@
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        components:
+          a9f455ac-7a75-4241-bb9e-52f56897df0a:
+            configuration:
+              label: Corps

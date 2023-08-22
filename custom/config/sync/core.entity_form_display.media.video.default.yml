@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.video.field_aafc_category
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_media_video_file
     - media.type.video
   module:
     - dynamic_entity_reference
@@ -86,4 +87,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_media_video_file: true
   uid: true

@@ -413,6 +413,16 @@ function agri_admin_media_predelete(EntityInterface $entity) {
  * Implements hook_form_alter().
  */
 function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (str_contains ($form_id, 'views_form_print_all_steps_of_program_')) {
+    $index = 0;
+    foreach ($form['node_bulk_form'] as $row) {
+      if (isset($row)) {
+        $form['node_bulk_form'][$index]['#default_value'] = true;
+      }
+      $index++;
+    }
+    return;
+  }
   if ((strpos($form_id, 'media') !== FALSE && strpos($form_id, 'edit_form') !== FALSE) ||
       (strpos($form_id, 'media') !== FALSE && strpos($form_id, 'add') !== FALSE)
   ) {

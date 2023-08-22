@@ -1,0 +1,25 @@
+uuid: ffde1062-b073-4d50-a6c2-f62194910508
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:3ea74a01-b328-430c-b528-f0392b7d039f'
+  module:
+    - block_content
+  theme:
+    - aafctheme
+id: sitealertblocken
+theme: aafctheme
+region: highlighted_front_only
+weight: 0
+provider: null
+plugin: 'block_content:3ea74a01-b328-430c-b528-f0392b7d039f'
+settings:
+  id: 'block_content:3ea74a01-b328-430c-b528-f0392b7d039f'
+  label: 'Site alert block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

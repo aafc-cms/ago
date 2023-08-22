@@ -39,6 +39,81 @@
             "url": "custom/themes/aafctheme"
         },
         {
+          "type": "path",
+          "url": "custom/modules/lightning"
+        },
+        {
+          "type": "path",
+          "url": "custom/modules/lightning_install",
+          "options": {
+            "symlink": true
+          }
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_banner_block"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_core"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_audio"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_bulk_upload"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_document"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_image"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_instagram"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_slideshow"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_twitter"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_media_video"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_page"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_layout"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_landing_page"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_map_block"
+        },
+        {
+            "type": "path",
+            "url": "custom/modules/lightning_workflow"
+        },
+        {
             "type": "path",
             "url": "custom/config"
         }
@@ -112,13 +187,19 @@
             "drupal/core": {
                 "2857273 - Self closing hr and br source and track tags html5 rendering": "https://www.drupal.org/files/issues/2022-11-20/self_closing_br_hr_source_tag-2857273-30.patch",
                 "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager": "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch",
-                "2769407 - Add null supported null=false exposed filter option needed by campaign.": "custom/patches/D948_ONLY_please_ignore_2769407-71.diff"
+		"2769407 - Treat NULL values as FALSE in views on boolean field filtering": "https://www.drupal.org/files/issues/2022-11-08/2769407-70.patch"
             },
             "drupal/embed_block": {
                 "3225938 - Added CKEDITOR plugin functionality":
                 "https://www.drupal.org/files/issues/2022-02-05/3225938_include_binary_icon-18.patch",
                 "3225938 - Custom":
                 "https://www.drupal.org/files/issues/2021-12-15/3225938-custom_only_diff-10.patch"
+            },
+            "drupal/entity_print": {
+                "Error generating document: Failed to generate PDF with DOMPDF":
+                "https://www.drupal.org/files/issues/2023-01-18/entity_print-dompdf_base_url-2865185-116.patch",
+                "Render multiple entities separately and on separate pages":
+                "https://www.drupal.org/files/issues/2020-09-03/3168977-2--entity_print--separate-templates-and-pages.patch"
             },
             "drupal/filebrowser": {
                 "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
@@ -131,6 +212,9 @@
             "drupal/wxt": {
                 "wcag - fix the report a problem webform markup":
                 "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
+            },
+            "drupal/token": {
+                "2924873":"https://www.drupal.org/files/issues/2023-06-14/tokens_body_with_summary-2924873-11.patch"
             },
 	    "drupal/honeypot": {
                 "2820400 - use js on cached pages":
@@ -223,16 +307,32 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.4.8-rc9",
+        "agrcmsx/dxbase": "9.4.11-beta3",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/config": "*",
         "agrcmsx/prefer_latest_content": "*",
         "agrcmsx/wxt_overrides": "*",
+        "agrcms/lightning": "*",
+        "agrcms/lightning_banner_block": "*",
+        "agrcms/lightning_core": "*",
+        "agrcms/lightning_install": "*",
+        "agrcms/lightning_landing_page": "*",
+        "agrcms/lightning_layout": "*",
+        "agrcms/lightning_map_block": "*",
+        "agrcms/lightning_media": "*",
+        "agrcms/lightning_media_audio": "*",
+        "agrcms/lightning_media_bulk_upload": "*",
+        "agrcms/lightning_media_document": "*",
+        "agrcms/lightning_media_image": "*",
+        "agrcms/lightning_media_instagram": "*",
+        "agrcms/lightning_media_slideshow": "*",
+        "agrcms/lightning_media_twitter": "*",
+        "agrcms/lightning_media_video": "*",
+        "agrcms/lightning_page": "*",
+        "agrcms/lightning_workflow": "*",
         "drupal/bootstrap_site_alert": "^1.9",
-	"drupal/bootstrap": "3.25 as 3.23",
-        "drupal/core": "9.4.8 as 9.3.16",
         "drupal/embed_block": "1.x-dev",
         "drupal/entity_translation_unified_form": "^2.0-rc2",
         "drupal/filebrowser": "^3.0",
@@ -245,7 +345,6 @@
         "drupal/reroute_email": "^2.0",
 	"drupal/simple_sitemap": "4.1.2 as 3.11.0",
         "drupal/title_length": "^1.1",
-        "drupal/token_filter": "1.3 as 1.2",
         "drupal/varnish_purge": "^2.1",
         "drupal/view_custom_table": "^2.0",
         "drupal/media_library_edit": "^2.1",
@@ -255,7 +354,15 @@
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/crop": "^2.2",
         "drupal/autologout": "1.3",
-        "drupal/webform": "6.1.4 as 6.1.3"
+        "drupal/webform": "^6.1.4",
+        "drupalwxt/wxt": "4.4.2",
+        "drupal/moderation_dashboard": "^1",
+        "drupal/simple_gmap": "^3.0",
+        "drupal/entity_print": "^2.11",
+        "mikehaertl/phpwkhtmltopdf": "~2.1",
+        "tecnickcom/tcpdf": "~6",
+        "drupal/draggableviews": "^2.1",
+        "drupal/filehash_report": "^1.0@beta"
     },
     "authors": [
         {

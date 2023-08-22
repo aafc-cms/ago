@@ -1,9 +1,12 @@
-uuid: 0487dac1-8153-4d19-8d9a-31ca81964ebc
+uuid: 08711ed2-1d60-44d3-ab1f-06975d2c831e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: pTQdntddb-ChRerlzQzeJC6IUBDqp17nC8uBlnoFuFE
+  default_config_hash: YC9kDxKX3xSe6PIbwpblg_ycaTe8GJhyV8X6oUUC3t4
 id: wxt_media
 class: null
 field_plugin_method: null
@@ -118,12 +121,12 @@ process:
   status:
     plugin: default_value
     default_value: 1
-  image/target_id:
+  field_media_image/target_id:
     plugin: migration_lookup
     migration: wxt_file
     source: fid
-  image/title: title
-  image/alt: alt
+  field_media_image/title: title
+  field_media_image/alt: alt
   field_image_link/uri: link_uri
   field_image_link/title: link_title
 destination:

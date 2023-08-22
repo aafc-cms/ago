@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - field.field.node.page.body
+    - field.field.node.page.comment
     - field.field.node.page.field_campaign
     - field.field.node.page.field_campaign_color
     - field.field.node.page.field_created_by
@@ -24,6 +25,7 @@ dependencies:
     - field.field.node.page.field_teamsite_location
     - field.field.node.page.field_tracking_number
     - field.field.node.page.field_update_date_modified
+    - field.field.node.page.layout_builder__layout
     - field.field.node.page.layout_builder__translation
     - node.type.page
   module:
@@ -47,6 +49,7 @@ content:
     weight: 101
     region: content
 hidden:
+  comment: true
   content_moderation_control: true
   field_campaign: true
   field_campaign_color: true
@@ -68,4 +71,6 @@ hidden:
   field_tracking_number: true
   field_update_date_modified: true
   langcode: true
+  layout_builder__layout: true
   layout_builder__translation: true
+  layout_selection: true

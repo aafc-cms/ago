@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.media.image.field_aafc_category
     - field.field.media.image.field_image_link
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
     - image.style.thumbnail
@@ -99,4 +100,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_media_image: true
   uid: true

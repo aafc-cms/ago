@@ -16,7 +16,7 @@ third_party_settings:
 id: aafctheme_footer_fr
 theme: aafctheme
 region: footer
-weight: -9
+weight: -10
 provider: null
 plugin: 'menu_block:footer-fr'
 settings:
@@ -26,9 +26,11 @@ settings:
   provider: menu_block
   follow: false
   follow_parent: child
+  label_link: false
+  label_type: block
   level: 1
   depth: 0
-  expand: true
+  expand_all_items: true
   parent: 'footer-fr:'
   suggestion: footer_fr
   custom_level: '1'

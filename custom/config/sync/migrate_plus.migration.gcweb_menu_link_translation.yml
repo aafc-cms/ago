@@ -1,9 +1,12 @@
-uuid: 4c52957d-632a-4510-853b-5dd2c9033f92
+uuid: 266f35c2-797c-4572-a2e7-403b4444f164
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
 _core:
-  default_config_hash: qIG083geSy3GEPoc-SfEIXwWHL2yQwMwEh44GkdRLuY
+  default_config_hash: NmNamsjG6Ddfv4cR183tmLxwWJCNjiIcnqwJRwNpfGU
 id: gcweb_menu_link_translation
 class: null
 field_plugin_method: null
@@ -17,96 +20,6 @@ source:
   translations: true
   default_lang: true
   data_rows:
-    -
-      mlid: ml_footer_1
-      link_title: Contactez-nous
-      description: 'Contactez-nous section.'
-      menu_name: footer-fr
-      link_path: 'https://www.canada.ca/fr/contact.html'
-      options: {  }
-      external: 1
-      weight: 0
-      parent: 0
-    -
-      mlid: ml_footer_2
-      link_title: 'Ministères et organismes'
-      description: 'Ministères et organismes section.'
-      menu_name: footer-fr
-      link_path: 'https://www.canada.ca/fr/gouvernement/min.html'
-      options: {  }
-      external: 1
-      weight: 1
-      parent: 0
-    -
-      mlid: ml_footer_3
-      link_title: 'Fonction publique et force militaire'
-      description: 'Fonction publique et force militaire section.'
-      menu_name: footer-fr
-      link_path: 'https://www.canada.ca/fr/gouvernement/fonctionpublique.html'
-      options: {  }
-      external: 1
-      weight: 2
-      parent: 0
-    -
-      mlid: ml_footer_4
-      link_title: Nouvelles
-      description: 'Nouvelles section.'
-      menu_name: footer-fr
-      link_path: 'http://nouvelles.gc.ca'
-      options: {  }
-      external: 1
-      weight: 3
-      parent: 0
-    -
-      mlid: ml_footer_5
-      link_title: 'Traités, lois et règlements'
-      description: 'Traités, lois et règlements section.'
-      menu_name: footer-fr
-      link_path: 'https://www.canada.ca/fr/gouvernement/systeme/lois.html'
-      options: {  }
-      external: 1
-      weight: 4
-      parent: 0
-    -
-      mlid: ml_footer_6
-      link_title: 'Rapports à l''échelle du gouvernement'
-      description: 'Rapports à l''échelle du gouvernement section.'
-      menu_name: footer-fr
-      link_path: 'https://www.canada.ca/fr/transparence/rapports.html'
-      options: {  }
-      external: 1
-      weight: 5
-      parent: 0
-    -
-      mlid: ml_footer_7
-      link_title: 'Premier ministre'
-      description: 'Premier ministre section.'
-      menu_name: footer-fr
-      link_path: 'https://pm.gc.ca/fra'
-      options: {  }
-      external: 1
-      weight: 6
-      parent: 0
-    -
-      mlid: ml_footer_8
-      link_title: 'Comment le gouvernement fonctionne'
-      description: 'Comment le gouvernement fonctionne section.'
-      menu_name: footer-fr
-      link_path: 'https://www.canada.ca/fr/gouvernement/systeme.html'
-      options: {  }
-      external: 1
-      weight: 7
-      parent: 0
-    -
-      mlid: ml_footer_9
-      link_title: 'Gouvernement ouvert'
-      description: 'Gouvernement ouvert section.'
-      menu_name: footer-fr
-      link_path: 'https://ouvert.canada.ca'
-      options: {  }
-      external: 1
-      weight: 8
-      parent: 0
     -
       mlid: ml_brand_1
       link_title: 'Médias sociaux'
@@ -132,7 +45,7 @@ source:
       link_title: 'À propos de Canada.ca'
       description: 'À propos de Canada.ca section.'
       menu_name: brand-fr
-      link_path: 'https://www1.canada.ca/fr/nouveausite.html'
+      link_path: 'https://www.canada.ca/fr/gouvernement/a-propos.html'
       options: {  }
       external: 1
       weight: 2
@@ -157,6 +70,76 @@ source:
       external: 1
       weight: 4
       parent: 0
+    -
+      mlid: ml_sidebar_1
+      link_title: Drupal
+      description: Drupal.org
+      menu_name: sidebar_fr
+      link_path: 'http://drupal.org'
+      options: {  }
+      external: 1
+      weight: 0
+      parent: 0
+    -
+      mlid: ml_sidebar_1_sub_1
+      link_title: 'Drupal 9'
+      description: 'Drupal 9 introduction'
+      menu_name: sidebar_fr
+      link_path: 'internal:/node/2'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: ml_sidebar_1
+    -
+      mlid: ml_sidebar_1_sub_1_sub_1
+      link_title: 'Pourquoi Drupal 9'
+      description: 'Découvrez la principale plate-forme d''expérience numérique au monde.'
+      menu_name: sidebar_fr
+      link_path: 'https://www.drupal.org/about/9'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: ml_sidebar_1_sub_1
+    -
+      mlid: ml_sidebar_1_sub_1_sub_2
+      link_title: 'Améliorations multilingues'
+      description: 'Améliorations multilingues de Drupal 9.'
+      menu_name: sidebar_fr
+      link_path: 'https://www.drupal.org/features/multilingual'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: ml_sidebar_1_sub_1
+    -
+      mlid: ml_sidebar_1_sub_2
+      link_title: 'Drupal WxT pour Drupal 9'
+      description: 'Drupal WxT pour Drupal 9'
+      menu_name: sidebar_fr
+      link_path: 'internal:/node/1'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: ml_sidebar_1
+    -
+      mlid: ml_sidebar_1_sub_2_sub_1
+      link_title: 'Drupal WxT (GitHub)'
+      description: 'Drupal WxT sur GitHub'
+      menu_name: sidebar_fr
+      link_path: 'http://github.com/drupalwxt/wxt'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: ml_sidebar_1_sub_2
+    -
+      mlid: ml_sidebar_1_sub_2_sub_2
+      link_title: 'Drupal WxT (Drupal.org)'
+      description: 'Drupal WxT sur Drupal.org.'
+      menu_name: sidebar_fr
+      link_path: 'http://drupal.org/project/wxt'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: ml_sidebar_1_sub_2
     -
       mlid: main_jobs_workplace
       link_title: 'Emplois et milieu de travail'
@@ -306,6 +289,246 @@ source:
       options: {  }
       external: 1
       weight: 16
+      parent: 0
+    -
+      mlid: contextual_1
+      link_title: 'Lien contextuel 1'
+      description: 'Lien contextuel 1'
+      menu_name: footer-contextual-fr
+      link_path: 'internal:/'
+      options: {  }
+      external: 0
+      weight: 0
+      parent: 0
+    -
+      mlid: contextual_2
+      link_title: 'Lien contextuel 2'
+      description: 'Lien contextuel 2'
+      menu_name: footer-contextual-fr
+      link_path: 'internal:/'
+      options: {  }
+      external: 0
+      weight: 1
+      parent: 0
+    -
+      mlid: contextual_3
+      link_title: 'Lien contextuel 3'
+      description: 'Lien contextuel 3'
+      menu_name: footer-contextual-fr
+      link_path: 'internal:/'
+      options: {  }
+      external: 0
+      weight: 2
+      parent: 0
+    -
+      mlid: ml_footer_top_1
+      link_title: 'Toutes les coordonnées'
+      description: 'Toutes les coordonnées section.'
+      menu_name: footer-top-fr
+      link_path: 'https://www.canada.ca/fr/contact.html'
+      options: {  }
+      external: 1
+      weight: 0
+      parent: 0
+    -
+      mlid: ml_footer_top_2
+      link_title: 'Ministères et organismes'
+      description: 'Ministères et organismes section.'
+      menu_name: footer-top-fr
+      link_path: 'https://www.canada.ca/fr/gouvernement/min.html'
+      options: {  }
+      external: 1
+      weight: 1
+      parent: 0
+    -
+      mlid: ml_footer_top_3
+      link_title: 'À propos du gouvernement'
+      description: 'À propos du gouvernement section.'
+      menu_name: footer-top-fr
+      link_path: 'https://www.canada.ca/fr/gouvernement/systeme.html'
+      options: {  }
+      external: 1
+      weight: 2
+      parent: 0
+    -
+      mlid: ml_footer_1
+      link_title: Emplois
+      description: 'Emplois section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/emplois.html'
+      options: {  }
+      external: 1
+      weight: 0
+      parent: 0
+    -
+      mlid: ml_footer_2
+      link_title: 'Immigration et citoyenneté'
+      description: 'Immigration et citoyenneté section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/immigration-citoyennete.html'
+      options: {  }
+      external: 1
+      weight: 1
+      parent: 0
+    -
+      mlid: ml_footer_3
+      link_title: 'Voyage et tourisme'
+      description: 'Voyage et tourisme section.'
+      menu_name: footer-fr
+      link_path: 'https://voyage.gc.ca/'
+      options: {  }
+      external: 1
+      weight: 2
+      parent: 0
+    -
+      mlid: ml_footer_4
+      link_title: Entreprises
+      description: 'Entreprises section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/entreprises.html'
+      options: {  }
+      external: 1
+      weight: 3
+      parent: 0
+    -
+      mlid: ml_footer_5
+      link_title: Prestations
+      description: 'Prestations section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/prestations.html'
+      options: {  }
+      external: 1
+      weight: 4
+      parent: 0
+    -
+      mlid: ml_footer_6
+      link_title: Santé
+      description: 'Santé section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/sante.html'
+      options: {  }
+      external: 1
+      weight: 5
+      parent: 0
+    -
+      mlid: ml_footer_7
+      link_title: Impôts
+      description: 'Impôts section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/impots.html'
+      options: {  }
+      external: 1
+      weight: 6
+      parent: 0
+    -
+      mlid: ml_footer_8
+      link_title: 'Environnement et ressources naturelles'
+      description: 'Environnement et ressources naturelles section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/environnement.html'
+      options: {  }
+      external: 1
+      weight: 7
+      parent: 0
+    -
+      mlid: ml_footer_9
+      link_title: 'Sécurité nationale et défense'
+      description: 'Sécurité nationale et défense section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/defense.html'
+      options: {  }
+      external: 1
+      weight: 8
+      parent: 0
+    -
+      mlid: ml_footer_10
+      link_title: 'Culture, histoire et sport'
+      description: 'Culture, histoire et sport section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/culture.html'
+      options: {  }
+      external: 1
+      weight: 9
+      parent: 0
+    -
+      mlid: ml_footer_11
+      link_title: 'Services de police, justice et urgences'
+      description: 'Services de police, justice et urgences section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/police.html'
+      options: {  }
+      external: 1
+      weight: 10
+      parent: 0
+    -
+      mlid: ml_footer_12
+      link_title: 'Transport et infrastructure'
+      description: 'Transport et infrastructure section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/transport.html'
+      options: {  }
+      external: 1
+      weight: 11
+      parent: 0
+    -
+      mlid: ml_footer_13
+      link_title: 'Le Canada et le monde'
+      description: 'Le Canada et le monde section.'
+      menu_name: footer-fr
+      link_path: 'https://www.international.gc.ca/world-monde/index.aspx?lang=fra'
+      options: {  }
+      external: 1
+      weight: 12
+      parent: 0
+    -
+      mlid: ml_footer_14
+      link_title: 'Argent et finance'
+      description: 'Argent et finance section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/finance.html'
+      options: {  }
+      external: 1
+      weight: 13
+      parent: 0
+    -
+      mlid: ml_footer_15
+      link_title: 'Science et innovation'
+      description: 'Science et innovation section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/science.html'
+      options: {  }
+      external: 1
+      weight: 14
+      parent: 0
+    -
+      mlid: ml_footer_16
+      link_title: Autochtones
+      description: 'Autochtones section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/autochtones.html'
+      options: {  }
+      external: 1
+      weight: 15
+      parent: 0
+    -
+      mlid: ml_footer_17
+      link_title: 'Vétérans et militaires'
+      description: 'Vétérans et militaires section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/veterans.html'
+      options: {  }
+      external: 1
+      weight: 16
+      parent: 0
+    -
+      mlid: ml_footer_18
+      link_title: Jeunesse
+      description: 'Jeunesse section.'
+      menu_name: footer-fr
+      link_path: 'https://www.canada.ca/fr/services/jeunesse.html'
+      options: {  }
+      external: 1
+      weight: 17
       parent: 0
   ids:
     mlid:

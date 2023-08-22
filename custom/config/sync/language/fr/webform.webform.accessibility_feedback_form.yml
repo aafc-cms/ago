@@ -24,6 +24,7 @@ elements: |
       'Procurement (bidding for contracts, etc.)': 'Approvisionnement (appel d’offres pour des contrats, etc.)'
     '#other__option_label': 'Autre domaine'
     '#other__title': 'Décrivez le domaine sur lequel vous souhaitez fournir une rétroaction'
+    '#required_error': 'Ce champ est obligatoire.'
   3_describe_the_issue_and_provide_comments_:
     '#title': '3. Décrivez le problème et fournissez des commentaires. '
     '#description': '<p>N&rsquo;incluez pas de renseignements qui pourraient identifier une personne.</p>'

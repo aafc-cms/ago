@@ -129,6 +129,7 @@ css: |-
   }
   .wb-frmvld fieldset legend strong.error,
   form.webform-submission-form .form-type-processed-text,
+  form.webform-submission-form #edit-actions-submit,
   form.webform-submission-form #edit-actions {
     margin-left: 10px;
   }
@@ -911,6 +912,8 @@ settings:
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -929,13 +932,7 @@ settings:
   confirmation_type: page
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: |-
-    <h1>Your feedback has been submitted</h1>
-    Thank you for your feedback. If you provided an email address, you will receive a response within 5 business days. Otherwise, you will not receive a response.
-
-    <p>Find out how AAFC uses accessibility feedback by consulting the description of our process.</p>
-
-    <p><a href="http://feedback-process">Accessibility feedback process</a></p>
+  confirmation_message: "<h1>Your feedback has been submitted</h1>\r\nThank you for your feedback. If you provided an email address, you will receive a response within 5 business days. Otherwise, you will not receive a response.\r\n\r\n<p>Find out how AAFC uses accessibility feedback by consulting the description of our process.</p>\r\n\r\n<p><a href=\"/en/node/3061\">Accessibility feedback process</a></p>"
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''

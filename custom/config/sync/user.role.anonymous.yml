@@ -8,6 +8,7 @@ dependencies:
     - access_unpublished
     - comment
     - contact
+    - entity_print
     - filter
     - media
     - search
@@ -25,6 +26,7 @@ permissions:
   - 'access user profiles'
   - 'access_unpublished node landing_page'
   - 'access_unpublished node page'
+  - 'bypass entity print access'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

@@ -7,6 +7,11 @@ ignored_config_entities:
   - block.block.media
   - block.block.media_2
   - 'block.block.*'
+  - ~block.block.aafctheme_footertop
+  - ~block.block.aafctheme_footer
+  - ~block.block.aafctheme_footerfr
+  - ~block.block.footertop
+  - ~block.block.hautdepieddepage
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
