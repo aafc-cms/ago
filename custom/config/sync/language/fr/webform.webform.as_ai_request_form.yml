@@ -22,11 +22,11 @@ elements: |
   select_your_province_and_then_select_the_forms_package_s_you_wou:
     '#title': 'Sélectionnez votre province, puis sélectionnez la ou les trousses de formulaires que vous aimeriez recevoir.'
     '#options':
-      'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon'
+      'For producers in British Columbia, Manitoba, New Brunswick, Nova Scotia, Newfoundland and Labrador or the Yukon': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador, des Territoires du Nord-Ouest ou du Yukon'
       'For producers in Alberta, Ontario, Prince Edward Island and Saskatchewan': 'Pour les producteurs de l’Alberta, de l’Ontario, de l’Île-du-Prince-édouard et de la Saskatchewan'
     '#required_error': 'Ce champ est obligatoire.'
   for_producers_in_british_columbia_manitoba_new_brunswick_nova_sc:
-    '#title': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador ou du Yukon :'
+    '#title': 'Pour les producteurs de la Colombie-Britannique, du Manitoba, du Nouveau Brunswick, de la Nouvelle-écosse, de Terre-Neuve-et-Labrador, des Territoires du Nord-Ouest ou du Yukon'
     '#options':
       '2022 AgriStability and AgriInvest T1273 Forms Package for Individuals.': 'Trousse de formulaires T1273 pour particuliers des programmes Agri-stabilité et Agri-investissement en 2022.'
       '2022 AgriStability and AgriInvest Forms for Corporations, Co-operatives and Special Individuals.': 'Formulaires pour les sociétés, les coopératives et les particuliers (catégorie spéciale) des programmes Agri-stabilité et Agri-investissement en 2022.'
