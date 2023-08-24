@@ -19,7 +19,7 @@ elements: |-
       <div class="row mrgn-tp-lg">
         <div class="col-md-8">
           <p>Provide feedback on Agriculture and Agri-Food Canada’s (AAFC) accessibility plan, barriers you have experienced, or any matter related to accessibility.</p>
-          <p>You can consult the <a href="feedback-process.html">Accessibility feedback process</a> for other ways to provide feedback and how we use your feedback.</p>
+          <p>You can consult the <a href="/feedback-process">Accessibility feedback process</a> for other ways to provide feedback and how we use your feedback.</p>
           <details class="mrgn-tp-lg">
             <summary>Privacy disclaimer</summary>
             <div class="row mrgn-tp-lg">
@@ -1020,11 +1020,11 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: huan.qi@agr.gc.ca
+      to_mail: aafc.accessibility-accessibilite.aac@agr.gc.ca
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: huan_qi@hotmail.com
+      cc_mail: ''
       cc_options: {  }
       from_mail: _default
       from_options: {  }
