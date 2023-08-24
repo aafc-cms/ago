@@ -16,7 +16,7 @@ elements: |
     '#title': '2. Sélectionnez tous les domaines pertinents pour vos commentaires.'
     '#options':
       'Physical environment (door knob, ramp, elevator, etc.)': 'Environnement physique (poignée de porte, rampe, ascenseur, etc.)'
-      'Employment (recruitment processes, etc.)': 'Emploi (p. ex. processus de recrutement)'
+      'Employment (recruitment processes, etc.)': 'Emploi (processus de recrutement)'
       'Technology (websites, software applications, etc.)': 'Technologie (sites Web, applications logicielles, etc.)'
       'Attitude (biases, micro aggressions, related to my mental health, etc.)': 'Attitude (préjugés, microagressions, aspect lié à ma santé mentale, etc.)'
       'Information and communication (forms, plain language, bilingualism, etc.)': 'Information et communication (formulaires, langage simple, bilinguisme, etc.)'
