@@ -565,7 +565,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Date created'
+          label: 'Date Created'
           exclude: false
           alter:
             alter_text: false
@@ -614,7 +614,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Last revision date'
+          label: 'Last Revision Date'
           exclude: false
           alter:
             alter_text: false
