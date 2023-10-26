@@ -405,7 +405,8 @@
         "mikehaertl/phpwkhtmltopdf": "~2.1",
         "tecnickcom/tcpdf": "~6",
         "drupal/draggableviews": "^2.1",
-        "drupal/filehash_report": "^1.0@beta"
+        "drupal/filehash_report": "^1.0@beta",
+        "drupal/node_revision_delete": "^1.0@RC"
     },
     "authors": [
         {
