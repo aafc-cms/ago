@@ -380,7 +380,7 @@ else
 fi
 
 
-drush status --field=Database > test-connection.txt || true; # Ignore errors.
+drush status --field=Database 2>/dev/null > test-connection.txt || true; # Ignore errors.
 
 if grep -q "Connected" test-connection.txt; then
   echo "";
