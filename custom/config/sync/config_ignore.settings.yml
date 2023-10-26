@@ -3,7 +3,6 @@ _core:
 ignored_config_entities:
   - aafctheme.settings
   - agri_admin.settings
-  - autologout.settings
   - block.block.media
   - block.block.media_2
   - 'block.block.*'
