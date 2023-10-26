@@ -14,8 +14,6 @@ module:
   smtp: 0
 theme: {  }
 blacklist:
-  - smtp.settings
-  - swiftmailer.transport
   - system.logging
   - system.performance
   - system.site

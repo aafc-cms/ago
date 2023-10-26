@@ -30,8 +30,7 @@ ignored_config_entities:
   - simple_sitemap.sitemap.index
   - simple_sitemap.type.default_hreflang
   - simple_sitemap.type.index
+  - mailsystem.settings
   - smtp.settings
-  - system.mail
-  - system.menu.devel
-  - warmer.settings
+  - swiftmailer.transport
   - ultimate_cron.job.password_policy_cron

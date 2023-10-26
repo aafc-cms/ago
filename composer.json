@@ -184,10 +184,23 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/core": {
-                "2857273 - Self closing hr and br source and track tags html5 rendering": "https://www.drupal.org/files/issues/2022-11-20/self_closing_br_hr_source_tag-2857273-30.patch",
-                "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager": "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch",
-		"2769407 - Treat NULL values as FALSE in views on boolean field filtering": "https://www.drupal.org/files/issues/2022-11-08/2769407-70.patch"
+           "drupal/core": {
+                "Options module uses '_none' as a special value.":
+                "https://www.drupal.org/files/issues/2023-01-03/1585930_84.patch",
+                "2321071 - Removing lightning_scheduler garbage left-over configurations requires a core patch.":
+                "https://www.drupal.org/files/issues/2019-12-24/2321071-39.patch",
+                "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager":
+                "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch"
+            },
+            "drupal/field_group": {
+                "3111107 - Use patch 10 instead of patch 2.":
+                "https://www.drupal.org/files/issues/2021-08-10/field_group_fix-translations_label_description_2021-08-10.patch"
+            },
+            "drupal/page_manager": {
+                "Enter drupal/page_manager patch #2752227 description here":
+                "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch",
+                "Enter drupal/page_manager patch #3096408 description here":
+                "https://www.drupal.org/files/issues/2019-11-23/Issue-3096408-Page-Manager-issue-with-conflict-modul.patch"
             },
             "drupal/embed_block": {
                 "3225938 - Added CKEDITOR plugin functionality":
@@ -195,33 +208,27 @@
                 "3225938 - Custom":
                 "https://www.drupal.org/files/issues/2021-12-15/3225938-custom_only_diff-10.patch"
             },
-            "drupal/entity_print": {
-                "Error generating document: Failed to generate PDF with DOMPDF":
-                "https://www.drupal.org/files/issues/2023-01-18/entity_print-dompdf_base_url-2865185-116.patch",
-                "Render multiple entities separately and on separate pages":
-                "https://www.drupal.org/files/issues/2020-09-03/3168977-2--entity_print--separate-templates-and-pages.patch"
+            "drupalwxt/wxt": {
+                "Allow split of password policy":
+                "build/wxt_split_password_policy.patch"
             },
             "drupal/filebrowser": {
                 "Warning filesize:stat failed/filetype:Lstat failed/filectime:stat failed for a symlink":
-                "https://www.drupal.org/files/issues/2021-10-22/filesize-statfailed-3245404-02.patch",
-                "A custom feature needs to display the external URLs for uploaded files in the public folder":
-                "https://www.drupal.org/files/issues/2022-01-18/Display-external-URLs-3254557-15.patch",
-                "Access the private path and public path based on the user role":
-                "https://www.drupal.org/files/issues/2021-12-30/Access-private-public-path-based-on-user-role-3256368-03.patch"
-            },
-            "drupal/wxt": {
-                "wcag - fix the report a problem webform markup":
-                "https://www.drupal.org/files/issues/2021-01-22/wxt-ext-webform-config-change-3194287-3.patch"
+                "https://www.drupal.org/files/issues/2021-10-22/filesize-statfailed-3245404-02.patch"
             },
             "drupal/token": {
                 "2924873":"https://www.drupal.org/files/issues/2023-06-14/tokens_body_with_summary-2924873-11.patch"
-            },
-	    "drupal/honeypot": {
-                "2820400 - use js on cached pages":
-                "https://www.drupal.org/files/issues/2022-08-01/honeypot-js_timelimit_for_cached_pages-2820400-53-1.patch"
-	    }
+            }
         },
         "patches-ignore": {
+            "acquia/lightning": {
+                "drupal/core": {
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
+                    "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                    "2914389 - Allow profiles to exclude dependencies of their parent":
+                    "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                }
+            },
             "drupalwxt/wxt": {
                 "drupal/core": {
                     "850600 - Postgresql patch we're not using postgresql": "https://www.drupal.org/files/issues/postgresql_ssl_dsn-850600-3.patch",
@@ -232,7 +239,6 @@
                     "1356276 - Profile sub profiles phenaproxima 675 9.3.x": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch",
                     "2559833 - Comment form": "https://www.drupal.org/files/issues/2020-10-31/2559833-72.patch",
                     "2630732 - Migrate module we don't use currently": "https://www.drupal.org/files/issues/2020-09-17/2630732-77.patch",
-                    "2857273 - Self closing source and track tag, use newer patch also does br and hr": "https://www.drupal.org/files/issues/2020-07-13/D91x-self_closing_correct-2857273-13.patch",
                     "2907413 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2019-06-21/2907413-11.patch",
                     "2907413 - Rerolled patch for 9.4.x is in the patches section.": "https://www.drupal.org/files/issues/2021-11-19/D93x-2907413-23.patch",
                     "2921627 - Rerolled patch for 9.3.x is in the patches section.": "https://www.drupal.org/files/issues/2021-10-13/2921627-71.patch",
@@ -262,19 +268,34 @@
                 "drupal/bootstrap": {
                     "3209773 - patch included with bootstrap 3.2.5/3.2.4, only needed if using 3.2.3": "https://www.drupal.org/files/issues/2021-08-24/bootstrap-toggle_undefined-3209773-8.patch"
                 },
+                "drupal/ctools": {
+                    "is in dev patch":
+                    "https://www.drupal.org/files/issues/entityview-cache-metadata-2874176-2.patch"
+                },
+                "drupal/linkit": {
+                    "Detect and strip base URL from pasted URLs to increase matching hits":
+                    "https://www.drupal.org/files/issues/2021-02-02/3078075-26.patch"
+                },
+                "drupal/field_group": {
+                    "3111107 - Remove patch , no longer works, override it with patch 10.":
+                    "https://www.drupal.org/files/issues/2020-02-04/3111107-2--fix-translations.patch"
+                },
+                "drupal/footnotes": {
+                    "3248765 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2021-11-12/footnotes-provide-instance-visibility-to-links-3248765-5.patch",
+                    "3119883 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2022-02-04/footnotes-value-as-placeholder-3119883-8.patch",
+                    "3204959 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2021-11-16/footnotes-basic-styles-for-footnote-text-field-3204959-4.patch"
+                },
                 "drupal/moderation_sidebar": {
-                    "Discard Draft for a translation edits the base language node, ignore this patch, use patch 7 instead": "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
+                    "3194841 - Override patch 3 with patch 7 instead.":
+                    "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
                 },
-                "drupal/metatag": {
-                    "2955407 - Obsolete patch ignore it": "https://www.drupal.org/files/issues/2020-12-18/Issue-2955407-Static-caching-for-token-processing-ic.patch"
+                "drupal/page_manager": {
+                    "3151905 ignore smulvih changes":
+                    "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch"
                 },
-                "drupal/webform": {
-                    "Enter drupal/webform patch #3212867 description here":
-                    "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch"
-                },
-                "drupal/token": {
-                    "2863200 - No longer need this patch, included in the latest release.":
-                    "https://www.drupal.org/files/issues/2019-03-15/2863200-23.patch"
+                "drupal/panels": {
+                    "patch desc 2900531":
+                    "https://www.drupal.org/files/issues/classes_should_be_array-2900531-2.patch"
                 }
             },
             "agrcmsx/dxbase": {
@@ -282,7 +303,25 @@
                     "Enter drupal/webform patch #3212867 description here":
                     "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch",
                     "Enter drupal/webform patch 3279930": "https://www.drupal.org/files/issues/2022-05-11/webform-strpos-php81-webform-requirements-3279930-2.patch"
+                },
+                "drupal/bootstrap": {
+                  "3173776 - patch included with bootstrap 3.2.5/3.2.4, only needed if using 3.2.3": "https://www.drupal.org/files/issues/2020-09-29/bootstrap-3173776-3.patch"
+                },
+                "drupal/linkit": {
+                    "Detect and strip base URL from pasted URLs to increase matching hits":
+                    "https://www.drupal.org/files/issues/2021-02-02/3078075-26.patch"
+                },
+                "drupal/pathauto": {
+                    "3107144 - Is only in latest releases.":
+                    "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
+                },
+                "drupal/linkit": {
+                  "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2021-02-02/3078075-26.patch"
                 }
+            },
+            "drupal/pathauto": {
+                "3107144 - Is only in latest releases.":
+                "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
             },
             "drupal/lightning_core": {
                 "drupal/core": {
@@ -307,7 +346,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "9.4.11-beta3",
+        "agrcmsx/dxbase": "9.5.0-rc2",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -332,15 +371,19 @@
         "agrcms/lightning_media_video": "*",
         "agrcms/lightning_page": "*",
         "agrcms/lightning_workflow": "*",
+        "drupal/menu_block": "1.10.0 as 1.6.0",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.7.2",
+        "cypresslab/gitelephant": "^4.4.3",
+        "drupal/autologout": "1.3",
+        "drupal/core": "9.5.9 as 9.5.8",
         "drupal/bootstrap_site_alert": "^1.9",
+        "drupal/dropzonejs": "2.7.0",
         "drupal/embed_block": "1.x-dev",
         "drupal/entity_translation_unified_form": "^2.0-rc2",
-        "drupal/filebrowser": "^3.0",
+        "drupal/filebrowser": "3.0.0",
         "drupal/file_replace": "^1.2",
         "drupal/honeypot": "^2.0",
-        "drupal/libraries": "^3.0",
-        "drupal/xhprof": "^1.0@beta",
-        "perftools/php-profiler": "^0.18.0",
         "drupal/purge": "^3.2",
         "drupal/reroute_email": "^2.0",
 	"drupal/simple_sitemap": "4.1.2 as 3.11.0",
@@ -354,10 +397,10 @@
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/crop": "^2.2",
         "drupal/autologout": "1.3",
+        "drupal/views_bootstrap": "^5.3",
         "drupal/webform": "^6.1.4",
-        "drupalwxt/wxt": "4.4.2",
         "drupal/moderation_dashboard": "^1",
-        "drupal/simple_gmap": "^3.0",
+        "drupal/simple_gmap": "4.0.x-dev",
         "drupal/entity_print": "^2.11",
         "mikehaertl/phpwkhtmltopdf": "~2.1",
         "tecnickcom/tcpdf": "~6",

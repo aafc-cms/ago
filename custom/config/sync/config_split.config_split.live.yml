@@ -24,7 +24,6 @@ module:
   purge_queuer_coretags: 0
   purge_tokens: 0
   purge_ui: 0
-  smtp: 0
   varnish_purge_tags: 0
   varnish_purger: 0
   warmer: 0
@@ -46,8 +45,6 @@ blacklist:
   - purge.logger_channels
   - purge.plugins
   - purge_queuer_coretags.settings
-  - smtp.settings
-  - swiftmailer.transport
   - system.logging
   - system.mail
   - system.performance
