@@ -330,7 +330,7 @@ handlers:
     handler_id: gcweb_report_a_problem_email_handler
     label: 'GCWeb Report A Problem Email Handler'
     notes: ''
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings:

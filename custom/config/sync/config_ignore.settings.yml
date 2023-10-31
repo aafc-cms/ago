@@ -3,6 +3,7 @@ _core:
 ignored_config_entities:
   - aafctheme.settings
   - agri_admin.settings
+  - autologout.settings
   - block.block.media
   - block.block.media_2
   - 'block.block.*'
@@ -30,6 +31,10 @@ ignored_config_entities:
   - simple_sitemap.type.default_hreflang
   - simple_sitemap.type.index
   - mailsystem.settings
+  - smtp
   - smtp.settings
   - swiftmailer.transport
+  - system.mail
+  - system.menu.devel
+  - warmer.settings
   - ultimate_cron.job.password_policy_cron

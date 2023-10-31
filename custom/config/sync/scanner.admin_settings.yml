@@ -20,3 +20,4 @@ fields_of_selected_content_type:
   'node:page:field_description': 'node:page:field_description'
   'node:page:field_keywords': 'node:page:field_keywords'
   'node:page:field_teamsite_location': 'node:page:field_teamsite_location'
+word_boundaries: auto

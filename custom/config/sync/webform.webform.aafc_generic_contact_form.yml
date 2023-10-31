@@ -499,7 +499,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: aafc-info.aac@canada.ca
+      to_mail: aafc.info.aac@agr.gc.ca
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }

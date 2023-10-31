@@ -129,7 +129,6 @@ module:
   page_manager_ui: 0
   panels: 0
   panels_ipe: 0
-  password_policy: 0
   path: 0
   path_alias: 0
   prefer_latest_content: 0
@@ -224,8 +223,6 @@ theme:
   bootstrap: 0
   wxt_bootstrap: 0
   stable: 0
-  bartik: 0
   claro: 0
-  seven: 0
   aafctheme: 0
 profile: wxt

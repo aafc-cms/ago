@@ -1,0 +1,47 @@
+uuid: 42d00f60-47d1-42e9-8292-92c3b93c4652
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+    - wxt_ext_blocks
+    - wxt_library
+  theme:
+    - aafctheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-3 col-sm-offset-1 col-lg-offset-3'
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: sharewidgetblock_2
+theme: aafctheme
+region: content_footer
+weight: -11
+provider: null
+plugin: share_widget_block
+settings:
+  id: share_widget_block
+  label: 'Share widget block for Did You Find'
+  label_display: '0'
+  provider: wxt_library
+  share_settings:
+    share_widget: ''
+  share_widget:
+    blogger: blogger
+    diigo: diigo
+    email: email
+    facebook: facebook
+    gmail: gmail
+    linkedin: linkedin
+    myspace: myspace
+    pinterest: pinterest
+    reddit: reddit
+    tumblr: tumblr
+    twitter: twitter
+    yahoomail: yahoomail
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/department/partners-agencies/canadian-pari-mutuel/contact/test-page-huan-eng-changed-march-4-2023\r\n/ministere/partenaires-agences/canadienne-pari-mutuel/communiquer/test-page-huan-fra-changed-march-7-2023\r\n/department/library-agriculture/test-page-lakshman-huan-duplicate-attribute-xmllangen\r\n/ministere/bibliotheque-lagriculture/test-page-lakshman-fr-huan-duplicate-attribute-xmllangen"

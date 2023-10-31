@@ -21,7 +21,7 @@ provider: null
 plugin: 'menu_block:footer-contextual-fr'
 settings:
   id: 'menu_block:footer-contextual-fr'
-  label: 'Agriculture et Agroalimentaire Canada'
+  label: 'Agriculture et Agroalimentaire Canada (AAC)'
   label_display: visible
   provider: menu_block
   follow: false
