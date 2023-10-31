@@ -330,6 +330,7 @@ function agri_admin_preprocess_views_view_field(&$variables) {
       // Retrieves a PDOStatement object
       // http://php.net/manual/en/pdo.prepare.php
       $sth = $connection->select('node', 'n')
+        ->accessCheck(FALSE)
         ->fields('n', ['dcr_id'])
         ->condition('n.nid', $variables['output'], '=');
 
@@ -612,8 +613,8 @@ function agri_admin_node_presave(EntityInterface $entity) {
         $entity->getTranslation('en')->setOwnerId($current_user_id);
       }
       $entity->setOwnerId($current_user_id);
-      $entity->set('created', time());
     }
+    $entity->set('created', time());
   }
 }
 
@@ -923,10 +924,10 @@ function agri_admin_publishpage_referredlinks_validation(&$form, &$form_state) {
   // Since it is in validation stage, i have to get the body value from $form variable instead of node entity.
   $formbodydefault = $form['body']['widget'][0]['value']['#value'];
   $formbody2 = "";
-  if ($langcode == 'en') {
+  if ($langcode == 'en' && isset($form['body']['fr'])) {
     $formbody2 = $form['body']['fr']['widget'][0]['value']['#value'];
   }
-  else {
+  else if (isset($form['body']['fr'])) {
     $formbody2 = $form['body']['en']['widget'][0]['value']['#value'];
   }
   $entity = $form_state->getFormObject()->getEntity();
@@ -1474,6 +1475,7 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
     foreach (agri_admin_algos() as $algo) {
       $query = \Drupal::database()->select('filehash');
       $query->addField('filehash', 'fid');
+      $query->accessCheck(FALSE);
       $query->condition($algo, $file->filehash[$algo]);
       $query->range(0, 1);
       if ($fid = $query->execute()->fetchField()) {
