@@ -6,16 +6,15 @@ id: dev
 label: dev
 description: 'dev environment settings.'
 weight: 0
+storage: folder
 folder: modules/custom/config/splits/dev
 module:
   dblog: 0
   git_status: 0
   mailsystem: 0
 theme: {  }
-blacklist:
+complete_list:
   - system.logging
   - system.performance
   - system.site
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: {  }

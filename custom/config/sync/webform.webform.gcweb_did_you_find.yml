@@ -14,7 +14,7 @@ archive: false
 id: gcweb_did_you_find
 title: 'GCWeb - Did you find what you were looking for'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   did_you_find_answer:
     '#type': hidden
@@ -111,6 +111,9 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
@@ -154,6 +157,8 @@ settings:
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

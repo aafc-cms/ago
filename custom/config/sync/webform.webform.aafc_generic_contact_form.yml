@@ -11,7 +11,7 @@ archive: false
 id: aafc_generic_contact_form
 title: 'Contact Form'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   descriptionoffeedbackform:
     '#type': processed_text

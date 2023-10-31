@@ -11,7 +11,8 @@ archive: false
 id: accessibility_feedback_form
 title: 'Accessibility feedback form'
 description: 'This form is duplicated from Contact Form'
-category: feedback
+categories:
+  - feedback
 elements: |-
   descriptionoffeedbackform:
     '#type': processed_text
@@ -1033,7 +1034,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'AAFC: Accessibility feedback form - Formulaire de rétroaction sur l''accessibilité'
+      subject: "AAFC: Accessibility feedback form - Formulaire de rétroaction sur l'accessibilité"
       body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false

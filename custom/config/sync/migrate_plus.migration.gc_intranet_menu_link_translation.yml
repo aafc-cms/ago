@@ -93,7 +93,7 @@ source:
     -
       mlid: ml_sidebar_1_sub_1_sub_1
       link_title: 'Pourquoi Drupal 9'
-      description: 'Découvrez la principale plate-forme d''expérience numérique au monde.'
+      description: "Découvrez la principale plate-forme d'expérience numérique au monde."
       menu_name: sidebar_fr
       link_path: 'https://www.drupal.org/about/9'
       options: {  }

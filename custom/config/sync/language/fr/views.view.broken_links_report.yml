@@ -24,7 +24,7 @@ display:
         entity_field:
           separator: ', '
         entity_langcode:
-          label: 'Langue de l''entité'
+          label: "Langue de l'entité"
           separator: ', '
         url:
           label: URL
@@ -64,7 +64,7 @@ display:
             label: 'Code du statut'
         entity_langcode:
           expose:
-            label: 'Langue de l''entité'
+            label: "Langue de l'entité"
       footer:
         result:
           content: 'Affichage de @start à @end sur @total'
