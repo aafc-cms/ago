@@ -24,6 +24,8 @@ ignored_config_entities:
   - field.storage.user.field_password_expiration
   - field.storage.user.field_pending_expire_sent
   - linkchecker.settings
+  - node.type.page
+  - node.type.landing_page
   - password_policy.settings
   - password_policy
   - simple_sitemap.sitemap.default
