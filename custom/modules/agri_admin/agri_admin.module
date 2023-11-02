@@ -330,7 +330,6 @@ function agri_admin_preprocess_views_view_field(&$variables) {
       // Retrieves a PDOStatement object
       // http://php.net/manual/en/pdo.prepare.php
       $sth = $connection->select('node', 'n')
-        ->accessCheck(FALSE)
         ->fields('n', ['dcr_id'])
         ->condition('n.nid', $variables['output'], '=');
 
