@@ -21,7 +21,7 @@ provider: null
 plugin: 'menu_block:footer-contextual'
 settings:
   id: 'menu_block:footer-contextual'
-  label: 'Agriculture and Agri-Food Canada'
+  label: 'Agriculture and Agri-Food Canada (AAFC)'
   label_display: visible
   provider: menu_block
   follow: false

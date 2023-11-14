@@ -11,9 +11,7 @@ ignored_config_entities:
   - ~block.block.aafctheme_footer
   - ~block.block.aafctheme_footerfr
   - ~block.block.footertop
-  - ~block.block.gccontextualfooter
   - ~block.block.hautdepieddepage
-  - ~block.block.pieddepagecontextuelgc
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
@@ -26,13 +24,18 @@ ignored_config_entities:
   - field.storage.user.field_password_expiration
   - field.storage.user.field_pending_expire_sent
   - linkchecker.settings
+  - node.type.page
+  - node.type.landing_page
   - password_policy.settings
   - password_policy
   - simple_sitemap.sitemap.default
   - simple_sitemap.sitemap.index
   - simple_sitemap.type.default_hreflang
   - simple_sitemap.type.index
+  - mailsystem.settings
+  - smtp
   - smtp.settings
+  - swiftmailer.transport
   - system.mail
   - system.menu.devel
   - warmer.settings

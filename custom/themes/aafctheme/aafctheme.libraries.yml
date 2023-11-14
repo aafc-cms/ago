@@ -40,4 +40,8 @@ aafctheme-invitationmanager:
   dependencies:
     - core/jquery
 
-    
+print-styling:
+  version: VERSION
+  css:
+    theme:
+      css/print-style.css: {}

@@ -1,8 +1,7 @@
 name: 'AAFC Theme'
 description: 'WxT sub-theme(s) support leveraging WxT Bootstrap.'
 type: theme
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: 'WxT'
 base theme: wxt_bootstrap
 
@@ -37,3 +36,10 @@ libraries-extend:
   bootstrap/framework:
     - 'aafctheme/drupal.aafctheme'
 
+entity_print:
+  node:
+    # Adds the all-nodes library to all node PDF’s.
+    all: 'aafctheme/print-styling'
+  view:
+    # Adds the all-nodes library to all node PDF’s.
+    all: 'aafctheme/print-styling'

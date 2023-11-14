@@ -84,10 +84,10 @@
         </div>
       </div>
       {% if not campaign_mode %}
-      <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
+      <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement" aria-labelledby="gcweb-menu-aafc">
         <div class="{{ container }}">
         {% if gcweb_cdn %}
-          <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
+          <h2 id="gcweb-menu-aafc" class="wb-inv">{{ 'Menu'|t }}</h2>
           <button type="button" aria-haspopup="true" aria-expanded="false">{{ main_menu_label|raw }}</button>
           {{ page.navigation }}
         {% endif %}

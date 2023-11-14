@@ -92,7 +92,7 @@ source:
     -
       mlid: ml_sidebar_1_sub_1_sub_1
       link_title: 'Why Drupal 9'
-      description: 'Meet the world''s leading digital experience platform.'
+      description: "Meet the world's leading digital experience platform."
       menu_name: sidebar
       link_path: 'https://www.drupal.org/about/9'
       options: {  }

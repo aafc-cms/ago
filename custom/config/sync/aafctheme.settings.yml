@@ -18,7 +18,6 @@ logo:
   use_default: 0
 wxt_skip_link_primary_text: 'Skip to main content'
 wxt_skip_link_secondary_text: 'Skip to "About this site"'
-wxt_gcweb_cdn: 0
 wxt_gcweb_search: 1
 table_responsive: '-1'
 region_wells:
@@ -49,6 +48,7 @@ table: ''
 wxt_gcweb_footer_twig_extension: 0
 breadcrumb_title: 0
 breadcrumb_home: 0
-wxt_facets_collapsible: 0
 reset: 'Reset Broken Cache'
 apply: Apply
+wxt_facets_collapsible: 0
+wxt_gcweb_cdn: 1

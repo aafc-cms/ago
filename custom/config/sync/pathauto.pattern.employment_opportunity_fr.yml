@@ -6,12 +6,12 @@ dependencies:
     - language
     - node
 id: employment_opportunity_fr
-label: 'opportunité d''emploi'
+label: "opportunité d'emploi"
 type: 'canonical_entities:node'
 pattern: 'ressources-humaines/possibilites-demploi-a-linterne/[node:title]'
 selection_criteria:
   be2ee5a6-547f-4e22-884d-21824d1f8e53:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: be2ee5a6-547f-4e22-884d-21824d1f8e53
     context_mapping:

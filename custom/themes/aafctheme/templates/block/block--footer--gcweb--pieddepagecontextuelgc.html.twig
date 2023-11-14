@@ -40,10 +40,10 @@
   ]
 %}
 <div class="gc-contextual">
-  <div clas="container">
-    <nav{{ attributes.addClass(classes) }}>
+  <div class="container">
+    <nav{{ attributes.addClass(classes) }} aria-labelledby="AAC-id">
       {{ title_prefix }}
-      <h3>{{ label }}</h3>
+      <h3 id="AAC-id">{{ label }}</h3>
       {{ title_suffix }}
       {% block content %}
         <ul class="list-unstyled colcount-sm-2 colcount-md-3">

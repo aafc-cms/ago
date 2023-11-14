@@ -13,7 +13,8 @@ archive: false
 id: yourfeedback_programsandservices
 title: 'Submit your feedback - Programs and Services'
 description: ''
-category: feedback
+categories:
+  - feedback
 elements: |-
   descriptionoffeedbackform:
     '#type': processed_text

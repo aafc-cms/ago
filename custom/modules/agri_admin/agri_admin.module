@@ -413,6 +413,16 @@ function agri_admin_media_predelete(EntityInterface $entity) {
  * Implements hook_form_alter().
  */
 function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (str_contains ($form_id, 'views_form_print_all_steps_of_program_')) {
+    $index = 0;
+    foreach ($form['node_bulk_form'] as $row) {
+      if (isset($row)) {
+        $form['node_bulk_form'][$index]['#default_value'] = true;
+      }
+      $index++;
+    }
+    return;
+  }
   if ((strpos($form_id, 'media') !== FALSE && strpos($form_id, 'edit_form') !== FALSE) ||
       (strpos($form_id, 'media') !== FALSE && strpos($form_id, 'add') !== FALSE)
   ) {
@@ -602,8 +612,8 @@ function agri_admin_node_presave(EntityInterface $entity) {
         $entity->getTranslation('en')->setOwnerId($current_user_id);
       }
       $entity->setOwnerId($current_user_id);
-      $entity->set('created', time());
     }
+    $entity->set('created', time());
   }
 }
 
@@ -895,6 +905,7 @@ function agri_admin_form_node_form_alter(&$form, FormStateInterface $form_state,
       $form['field_description']['#disabled'] = FALSE;
       $form['field_keywords']['#disabled'] = FALSE;
       $form['field_subject']['#disabled'] = FALSE;
+      $form['field_dcterms_subject']['#disabled'] = FALSE;
     }
   }
 }
@@ -912,10 +923,10 @@ function agri_admin_publishpage_referredlinks_validation(&$form, &$form_state) {
   // Since it is in validation stage, i have to get the body value from $form variable instead of node entity.
   $formbodydefault = $form['body']['widget'][0]['value']['#value'];
   $formbody2 = "";
-  if ($langcode == 'en') {
+  if ($langcode == 'en' && isset($form['body']['fr'])) {
     $formbody2 = $form['body']['fr']['widget'][0]['value']['#value'];
   }
-  else {
+  else if (isset($form['body']['fr'])) {
     $formbody2 = $form['body']['en']['widget'][0]['value']['#value'];
   }
   $entity = $form_state->getFormObject()->getEntity();
@@ -1463,6 +1474,7 @@ function agri_admin_validate_dedupe_warning(FileInterface $file) {
     foreach (agri_admin_algos() as $algo) {
       $query = \Drupal::database()->select('filehash');
       $query->addField('filehash', 'fid');
+      $query->accessCheck(FALSE);
       $query->condition($algo, $file->filehash[$algo]);
       $query->range(0, 1);
       if ($fid = $query->execute()->fetchField()) {

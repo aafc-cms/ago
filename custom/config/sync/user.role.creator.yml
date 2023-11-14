@@ -40,6 +40,7 @@ dependencies:
     - file
     - file_delete
     - file_replace
+    - filehash_report
     - filter
     - layout_builder
     - media
@@ -76,14 +77,12 @@ permissions:
   - 'aafc pending drafts'
   - 'access 403 page'
   - 'access administration pages'
-  - 'access ckeditor_media_browser entity browser pages'
   - 'access comments'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
   - 'access image_browser entity browser pages'
   - 'access media overview'
-  - 'access media_browser entity browser pages'
   - 'access otherbrowser entity browser pages'
   - 'access panels in-place editing'
   - 'access shortcuts'
@@ -172,6 +171,7 @@ permissions:
   - 'edit terms in intended_audience'
   - 'edit terms in media_category'
   - 'edit terms in programorservice'
+  - 'filehash_report view file duplicates'
   - 'moderated content bulk archive'
   - 'moderated content bulk publish'
   - 'moderated content bulk unpublish'

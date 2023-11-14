@@ -11,7 +11,8 @@ archive: false
 id: request_agriinvest_form_excel
 title: 'Request AgriStability and AgriInvest forms in Excel (AgriInvest)'
 description: 'Request AgriStability and AgriInvest forms in Excel&nbsp;(AgriInvest)'
-category: 'Services Request Form'
+categories:
+  - 'Services Request Form'
 elements: |-
   descriptionoffeedbackform:
     '#type': processed_text

@@ -1,0 +1,5 @@
+path: 'public://css_editor/wxt_bootstrap.css'
+enabled: true
+css: 'div.container-fluid main.container { padding-left: 0; padding-right: 0; }'
+plaintext_enabled: false
+autopreview_enabled: false
