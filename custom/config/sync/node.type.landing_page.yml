@@ -11,8 +11,24 @@ third_party_settings:
       - sidebar
     parent: 'sidebar:'
   node_revision_delete:
-    minimum_revisions_to_keep: 4
+    amount:
+      status: false
+      settings:
+        amount: 1
+    created:
+      status: false
+      settings:
+        age: 1
+    drafts:
+      status: false
+      settings:
+        age: 1
     minimum_age_to_delete: 12
+    minimum_revisions_to_keep: 4
+    only_drafts:
+      status: true
+      settings:
+        age: 6
     when_to_delete: 6
 _core:
   default_config_hash: xlTWG4pV3t2m1ZaLCAYtWU2567ndN8QNggg1iLbSL8I
