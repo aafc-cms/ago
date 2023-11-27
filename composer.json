@@ -208,6 +208,10 @@
                 "3225938 - Custom":
                 "https://www.drupal.org/files/issues/2021-12-15/3225938-custom_only_diff-10.patch"
             },
+            "drupal/node_revision_delete": {
+                "Support only drafts deletion":
+                "https://www.drupal.org/files/issues/2023-11-27/3217675-28.patch"
+            },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
                 "build/wxt_split_password_policy.patch"

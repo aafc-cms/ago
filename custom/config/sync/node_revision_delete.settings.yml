@@ -1,5 +1,22 @@
 _core:
   default_config_hash: Cq0qEqvsPlEVfrCpF0VRzK4MFQhRHzqncneoTEKHXUc
+defaults:
+  amount:
+    status: false
+    settings:
+      amount: 0
+  created:
+    status: false
+    settings:
+      age: 1
+  drafts:
+    status: false
+    settings:
+      age: 1
+  only_drafts:
+    status: true
+    settings:
+      age: 6
 delete_newer: false
 node_revision_delete_cron: 50
 node_revision_delete_time: -1
