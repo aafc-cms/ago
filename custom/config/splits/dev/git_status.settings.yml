@@ -1,4 +1,4 @@
-repository_root: /var/www/clients/client1/web8/web/docroot
+repository_root: /d8x/aol
 status_info_display:
   repository_root: 0
   git_version: 0
