@@ -23,7 +23,6 @@ function wxt_overrides_page_attachments(array &$page) {
     fwrite($fp, print_r($page, TRUE) . "\n");
     fclose($fp);
   }
-  $dctermssubject = [];
 
   $metatags_module_head = $page['#attached']['html_head'];
   if (!isset($metatags_module_head)) {
@@ -62,7 +61,6 @@ function wxt_overrides_page_attachments(array &$page) {
       '#tag' => 'meta',
       '#attributes' => [
         'name'  => 'dcterms.service',
-        'title'     => '',
         'content'   => 'AAFC-AAC',
       ],
     ];
@@ -72,7 +70,7 @@ function wxt_overrides_page_attachments(array &$page) {
     $dctermslanguage = [
       '#tag' => 'meta',
       '#attributes' => [
-        'property'  => 'dcterms:language',
+        'name'  => 'dcterms.language',
         'title'     => 'ISO639-2',
         'content'   => 'fra',
       ],
@@ -81,31 +79,21 @@ function wxt_overrides_page_attachments(array &$page) {
     $dctermsservice = [
       '#tag' => 'meta',
       '#attributes' => [
-        'property'  => 'dcterms:service',
-        'title'     => '',
+        'name'  => 'dcterms.service',
         'content'   => 'AAFC-AAC',
       ],
     ];
   }
 
-  $page['#attached']['html_head'][] = [
-    $dctermsaccessRights,
-    'dcterms:accessRights',
-  ];
-  $page['#attached']['html_head'][] = [
-    $dctermslanguage,
-    'dcterms:language',
-  ];
-  $page['#attached']['html_head'][] = [
-    $dctermsservice,
-    'dcterms:service',
-  ];
+  $page['#attached']['html_head'][] = [$dctermsaccessRights,'dcterms.accessRights'];
+  $page['#attached']['html_head'][] = [$dctermslanguage,'dcterms.language'];
+  $page['#attached']['html_head'][] = [$dctermsservice,'dcterms.service'];
 
   $node = \Drupal::routeMatch()->getRawParameter('node');
   if (!isset($node)) {
     $webform = \Drupal::routeMatch()->getRawParameter('webform');
     if (isset($webform)) {
-      // Implement the logic by adding the hard codes for meta data (dcterms:issued and dcterms:modified).
+      // Implement the logic by adding the hard codes for meta data (dcterms.issued and dcterms.modified).
       // The team decided to use the hard code approach in the short term.
       if (($webform == 'yourfeedback_programsandservices') || ($webform == 'aafc_generic_contact_form')) {
         $datestr = '2021-06-23';
@@ -176,42 +164,33 @@ function wxt_overrides_page_attachments(array &$page) {
       return;
     }
   }
-  $has_keywords = FALSE;
+
   // Add page meta.
+  $summary = '';
   $route_match = Utils::getRouteName();
   if ($route_match == 'entity.node.canonical' && isset($page['#attached']['html_head'])) {
     $metatags_module_head = $page['#attached']['html_head'];
     foreach ($metatags_module_head as $key => $value) {
       if (isset($value[0]['#attributes']['name'])) {
         $name = $value[0]['#attributes']['name'];
-        if ($name == 'dcterms.language') {
+
+        if ($name == 'dcterms.description') {
+          $summary = $value[0]['#attributes']['content'];
           unset($page['#attached']['html_head'][$key]);
         }
-        if ($name == 'dcterms.description') {
+
+        if ($name == 'keywords') {
           $content = $value[0]['#attributes']['content'];
-          if (empty($content)) {
-            $node = \Drupal::routeMatch()->getParameter('node');
-            if ($node && !is_string($node)) {
-              $content = $node->body->summary;
-            }
-          }
-          $dctermsdescription = [
+          $keywords = [
             '#tag' => 'meta',
             '#attributes' => [
-              'name'  => 'dcterms.description',
+              'name'  => 'keywords',
               'content'   => $content,
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          // Transfer metatag from default dublincore to aafc/gc custom.
-          $page['#attached']['html_head'][] = [
-            $dctermsdescription,
-            'dcterms.description',
-          ];
         }
-        if ($name == 'keywords') {
-          $has_keywords = TRUE;
-        }
+
         if ($name == 'dcterms.creator') {
           $content = $value[0]['#attributes']['content'];
           $dctermscreator = [
@@ -222,12 +201,9 @@ function wxt_overrides_page_attachments(array &$page) {
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          // Transfer metatag from default dublincore to aafc/gc custom.
-          $page['#attached']['html_head'][] = [
-            $dctermscreator,
-            'dcterms.creator',
-          ];
+          $page['#attached']['html_head'][] = [$dctermscreator,'dcterms.creator'];
         }
+
         if ($name == 'dcterms.title') {
           $content = $value[0]['#attributes']['content'];
           $dctermstitle = [
@@ -238,23 +214,22 @@ function wxt_overrides_page_attachments(array &$page) {
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          // Transfer metatag from default dublincore to aafc/gc custom.
-          $page['#attached']['html_head'][] = [$dctermstitle, 'dcterms:title'];
+          $page['#attached']['html_head'][] = [$dctermstitle, 'dcterms.title'];
         }
+
         if ($name == 'dcterms.type') {
           $content = $value[0]['#attributes']['content'];
           $dctermstype = [
             '#tag' => 'meta',
             '#attributes' => [
-              'name'  => 'dcterms:type',
+              'name'  => 'dcterms.type',
               'title'     => 'gctype',
               'content'   => $content,
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          // Transfer metatag from default dublincore to aafc/gc custom.
-          $page['#attached']['html_head'][] = [$dctermstype, 'dcterms:type'];
         }
+
         if ($name == 'dcterms.relation') {
           $content = $value[0]['#attributes']['content'];
           $aafcsubject = [
@@ -266,8 +241,8 @@ function wxt_overrides_page_attachments(array &$page) {
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          // Transfer metatag from default dublincore to aafc/gc custom.
         }
+
         if ($name == 'dcterms.subject') {
           $content = $value[0]['#attributes']['content'];
           $dctermssubject = [
@@ -279,7 +254,6 @@ function wxt_overrides_page_attachments(array &$page) {
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          // Transfer metatag from default dublincore to aafc/gc custom.
         }
       }
     }
@@ -294,7 +268,7 @@ function wxt_overrides_page_attachments(array &$page) {
       // Occurs when reverting to a previous version.
       return;
     }
-    $type = '';
+
     $issued_date = '';
     $modified_date = '';
     if (!$node->hasField('field_issued')) {
@@ -306,7 +280,45 @@ function wxt_overrides_page_attachments(array &$page) {
     if ($node->get('field_modified')->first()) {
       $modified_date = $node->get('field_modified')->first()->date->format('Y-m-d');
     }
-    $type = $node->bundle();
+
+    if ($node->get('field_description')->first()) {
+      $field_description_value = $node->get('field_description')->first()->getString();
+    }
+    if (isset($field_description_value)) {
+      if (strlen($field_description_value) == strlen($summary)) {
+        $summary_description = $field_description_value;
+      }
+      else {
+        if (strpos($field_description_value, $summary) !== false) {
+          $summary_description = $field_description_value;
+        }
+        else {
+          $summary_description = $field_description_value . '; '. $summary;
+        }
+      }
+    }
+    else {
+      $summary_description = $summary;
+    }
+
+    $dctermsdescription = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name'  => 'dcterms.description',
+        'content'   => $summary_description,
+      ],
+    ];
+
+    if (!isset($keywords)) {
+      $keywords = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name'    => 'keywords',
+          'content' => '',
+        ],
+      ];
+    }
+
     if (!isset($dctermstype)) {
       $dctermstype = [
         '#tag' => 'meta',
@@ -329,6 +341,17 @@ function wxt_overrides_page_attachments(array &$page) {
       ];
     }
 
+    if (!isset($dctermssubject)) {
+      $dctermssubject = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name'  => 'dcterms.subject',
+          'title'     => 'gccore',
+          'content'   => '',
+        ],
+      ];
+    }
+
     $dctermsissued = [
       '#tag' => 'meta',
       '#attributes' => [
@@ -346,24 +369,14 @@ function wxt_overrides_page_attachments(array &$page) {
         'content'   => $modified_date,
       ],
     ];
-    if (!$has_keywords) {
-      $keywords = [
-        '#tag' => 'meta',
-        '#attributes' => [
-          'property'  => 'keywords',
-          'content'   => '',
-        ],
-      ];
-      $page['#attached']['html_head'][] = [$keywords, 'keywords'];
-    }
+
     $page['#attached']['html_head'][] = [$dctermsissued, 'dcterms.issued'];
     $page['#attached']['html_head'][] = [$dctermsmodified, 'dcterms.modified'];
     $page['#attached']['html_head'][] = [$dctermstype, 'dcterms.type'];
     $page['#attached']['html_head'][] = [$aafcsubject, 'aafc.subject'];
-    if (!empty($dctermssubject)) {
-      $page['#attached']['html_head'][] = [$dctermssubject, 'dcterms.subject'];
-    }
-
+    $page['#attached']['html_head'][] = [$dctermssubject, 'dcterms.subject'];
+    $page['#attached']['html_head'][] = [$keywords, 'keywords'];
+    $page['#attached']['html_head'][] = [$dctermsdescription, 'dcterms.description'];
   }
 
   $dctermsspatial = [
