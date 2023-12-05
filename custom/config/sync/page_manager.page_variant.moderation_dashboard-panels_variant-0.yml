@@ -46,7 +46,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: middle
-      weight: -8
+      weight: -3
       uuid: 0f29eadf-5708-4a3c-804e-70550bf7ecbf
     6f1e3c0a-3baf-4fa7-a976-93cfa256f987:
       id: 'views_block:moderation_dashboard_in_draft-block_2'
@@ -57,7 +57,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: middle
-      weight: -9
+      weight: -5
       uuid: 6f1e3c0a-3baf-4fa7-a976-93cfa256f987
     8546c763-701f-4335-a636-b39661bce800:
       id: 'views_block:moderation_dashboard_my_content_in_review-block_4'
@@ -101,7 +101,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: middle
-      weight: -7
+      weight: -2
       uuid: 1ea1d410-4b8c-4828-b149-41e1f2852e5d
     9b04076b-fc5f-47d2-830b-317143f7087d:
       id: 'views_block:moderation_dashboard_my_content_in_review-block_1'
@@ -145,7 +145,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: middle
-      weight: -10
+      weight: -4
       uuid: f56c038d-859c-4fbf-909d-e4215a78afd8
       css_classes:
         - ''
