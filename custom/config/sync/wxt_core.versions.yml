@@ -190,6 +190,7 @@ webform_ui: 6.1.4
 workflows: 9.4.11
 wxt: 4.4.2
 wxt_admin: 4.4.2
+wxt_chart_stability: 1.0.0-alpha2
 wxt_core: 4.4.2
 wxt_ext: 4.4.2
 wxt_ext_blocks: 4.4.2

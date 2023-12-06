@@ -414,7 +414,8 @@
         "drupal/draggableviews": "^2.1",
         "drupal/filehash_report": "^1.0@beta",
         "drupal/node_revision_delete": "^2",
-        "drupal/webform_revision_ui": "^1.0@alpha"
+        "drupal/webform_revision_ui": "^1.0@alpha",
+        "drupal/wxt_chart_stability": "^1.0@alpha"
     },
     "authors": [
         {
