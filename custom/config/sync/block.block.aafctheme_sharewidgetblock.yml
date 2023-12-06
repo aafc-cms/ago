@@ -11,7 +11,7 @@ dependencies:
     - aafctheme
 third_party_settings:
   block_class:
-    classes: 'col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5'
+    classes: 'col-sm-3 col-sm-offset-1 col-lg-offset-3 pull-right'
   wxt_ext_blocks:
     display_title_invisible: 0
 _core:
