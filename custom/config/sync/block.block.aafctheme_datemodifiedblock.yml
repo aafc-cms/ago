@@ -10,7 +10,7 @@ dependencies:
     - aafctheme
 third_party_settings:
   block_class:
-    classes: 'col-md-12 col-sm-12'
+    classes: 'col-xs-12 col-sm-6'
   wxt_ext_blocks:
     display_title_invisible: 0
 _core:
