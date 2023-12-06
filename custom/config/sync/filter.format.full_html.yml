@@ -44,6 +44,8 @@ dependencies:
     - toc_filter
     - token_filter
     - url_embed
+    - wxt_chart_stability
+    - wxt_ext_blocks
     - wxt_ext_editor
 _core:
   default_config_hash: 7W86T86ZzsAmogcteSWPOQjG5FKmCksltV6_QgfGz1s
@@ -55,48 +57,49 @@ filters:
     id: url_embed
     provider: url_embed
     status: true
-    weight: -45
+    weight: -46
     settings: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
     status: true
-    weight: -44
+    weight: -45
     settings: {  }
   filter_align:
     id: filter_align
     provider: filter
     status: true
-    weight: -48
+    weight: -49
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
-    weight: -47
+    weight: -48
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: -46
+    weight: -47
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: false
-    weight: -41
+    weight: -40
     settings:
       filter_url_length: 128
   blazy_filter:
     id: blazy_filter
     provider: blazy
     status: false
-    weight: -36
+    weight: -35
     settings:
       media_switch: ''
       hybrid_style: ''
       box_style: ''
+      box_media_style: ''
       box_caption: ''
       filter_tags:
         img: img
@@ -106,25 +109,25 @@ filters:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -39
+    weight: -38
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -35
+    weight: -34
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: false
-    weight: -50
+    weight: -41
     settings: {  }
   filter_html:
     id: filter_html
     provider: filter
     status: false
-    weight: -40
+    weight: -39
     settings:
       allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <u> <p> <h1> <pre> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode alt title> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <sub> <s>'
       filter_html_help: true
@@ -133,20 +136,20 @@ filters:
     id: filter_autop
     provider: filter
     status: false
-    weight: -38
+    weight: -37
     settings: {  }
   linkit:
     id: linkit
     provider: linkit
     status: true
-    weight: -49
+    weight: -50
     settings:
       title: false
   media_embed:
     id: media_embed
     provider: media
     status: true
-    weight: -43
+    weight: -44
     settings:
       default_view_mode: default
       allowed_view_modes:
@@ -186,39 +189,49 @@ filters:
     id: token_filter
     provider: token_filter
     status: true
-    weight: -42
+    weight: -43
     settings:
       replace_empty: '0'
   url_embed_convert_links:
     id: url_embed_convert_links
     provider: url_embed
     status: false
-    weight: -37
+    weight: -36
     settings:
       url_prefix: ''
   embed_block:
     id: embed_block
     provider: embed_block
     status: true
-    weight: 0
+    weight: -42
     settings: {  }
   slick_filter:
     id: slick_filter
     provider: slick
     status: false
-    weight: 4
+    weight: -30
     settings:
+      caption:
+        alt: '0'
+        title: '0'
       optionset: default
       layout: ''
-      skin: ''
       background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
       loading: ''
-      preload: false
       responsive_image_style: ''
+      box_style: ''
       image_style: ''
       media_switch: ''
       ratio: ''
       thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      skin: ''
       overridables:
         arrows: '0'
         autoplay: '0'
@@ -234,11 +247,13 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
+      preserve_keys: false
+      visible_items: null
   wxt_add_table_attribute_filter:
     id: wxt_add_table_attribute_filter
     provider: wxt_ext_editor
     status: false
-    weight: 0
+    weight: -31
     settings:
       responsive: '1'
       replace_classes: '1'
@@ -251,8 +266,23 @@ filters:
     id: toc_filter
     provider: toc_filter
     status: false
-    weight: 0
+    weight: -33
     settings:
       type: default
       auto: ''
       block: '0'
+      exclude_above: '0'
+  wxt_chart_stability_compatibilityfilter:
+    id: wxt_chart_stability_compatibilityfilter
+    provider: wxt_chart_stability
+    status: true
+    weight: -99
+    settings:
+      clean: '<td>&nbsp;</td>'
+      desired: '<td></td>'
+  custom_modal_filter:
+    id: custom_modal_filter
+    provider: wxt_ext_blocks
+    status: false
+    weight: -32
+    settings: {  }
