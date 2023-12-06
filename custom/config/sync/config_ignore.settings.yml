@@ -10,6 +10,8 @@ ignored_config_entities:
   - ~block.block.aafctheme_footertop
   - ~block.block.aafctheme_footer
   - ~block.block.aafctheme_footerfr
+  - ~block.block.aafctheme_datemodifiedblock
+  - ~block.block.aafctheme_sharewidgetblock
   - ~block.block.footertop
   - ~block.block.hautdepieddepage
   - css_editor.theme.aafctheme
