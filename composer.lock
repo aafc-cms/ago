@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bc7174194a6bdadf610127a242be79e",
+    "content-hash": "3fe0431db8fbbe4218ae77b79c32ca9f",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -19186,7 +19186,8 @@
         "drupal/simple_gmap": 20,
         "drupal/ckeditor4_codemirror": 20,
         "drupal/filehash_report": 10,
-        "drupal/webform_revision_ui": 15
+        "drupal/webform_revision_ui": 15,
+        "drupal/wxt_chart_stability": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
