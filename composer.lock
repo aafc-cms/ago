@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fe0431db8fbbe4218ae77b79c32ca9f",
+    "content-hash": "373e531bbb673c3ce04765a102a1cc9b",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -383,16 +383,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "10.0.11-rc2",
+            "version": "10.0.11",
             "source": {
                 "type": "git",
                 "url": "git@gitlab.com:agrcms/dxbase.git",
-                "reference": "988cbb95e78ebb84a05c9fd0d1c58480a720f0d0"
+                "reference": "b3939014258993234cd111b76072720d563617d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=988cbb95e78ebb84a05c9fd0d1c58480a720f0d0",
-                "reference": "988cbb95e78ebb84a05c9fd0d1c58480a720f0d0",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=b3939014258993234cd111b76072720d563617d6",
+                "reference": "b3939014258993234cd111b76072720d563617d6",
                 "shasum": ""
             },
             "require": {
@@ -456,7 +456,7 @@
                 "drupal/webform": "^6.1.4",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal/workflow": "^1.4",
-                "drupalwxt/wxt": "5.0.x-dev",
+                "drupalwxt/wxt": "5.0.2",
                 "drush/drush": "^11 || ^12"
             },
             "require-dev": {
@@ -619,7 +619,7 @@
                 "GPL-2.0+"
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
-            "time": "2023-10-26T07:24:50+00:00"
+            "time": "2023-12-19T13:30:57+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -2394,16 +2394,16 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "e8d2d5e37e8b0b30f0732a011295ab80680d7e85"
+                "reference": "093f2d9739cec57428e39ddadedfd4f3ae862c0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/e8d2d5e37e8b0b30f0732a011295ab80680d7e85",
-                "reference": "e8d2d5e37e8b0b30f0732a011295ab80680d7e85",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/093f2d9739cec57428e39ddadedfd4f3ae862c0f",
+                "reference": "093f2d9739cec57428e39ddadedfd4f3ae862c0f",
                 "shasum": ""
             },
             "require": {
@@ -2450,9 +2450,9 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/v2.0.3"
+                "source": "https://github.com/dompdf/dompdf/tree/v2.0.4"
             },
-            "time": "2023-02-07T12:51:48+00:00"
+            "time": "2023-12-12T20:19:39+00:00"
         },
         {
             "name": "drupal-ckeditor-libraries-group/fakeobjects",
@@ -5871,21 +5871,21 @@
         },
         {
             "name": "drupal/entity_embed",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_embed.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "800cb12020d8751d11292018231d93157fc34d4e"
+                "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "e74f5fcd5d42e39cda3bd36d7aedcc9fa53585ce"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
-                "drupal/embed": "^1.5"
+                "drupal/core": "^9.5 || ^10",
+                "drupal/embed": "^1.7"
             },
             "require-dev": {
                 "drupal/ckeditor": "^1",
@@ -5894,8 +5894,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1686251084",
+                    "version": "8.x-1.5",
+                    "datestamp": "1699351444",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12194,11 +12194,17 @@
         },
         {
             "name": "drupal/wxt_bootstrap",
-            "version": "dev-7.x",
+            "version": "7.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_bootstrap.git",
-                "reference": "215588b839703c100269e809ca3f4354ccc0a573"
+                "reference": "8.x-7.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/wxt_bootstrap-8.x-7.4.zip",
+                "reference": "8.x-7.4",
+                "shasum": "5a7b78bff0e4e7d9689d13e61339e9da3fff63a8"
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -12209,15 +12215,12 @@
             },
             "type": "drupal-theme",
             "extra": {
-                "branch-alias": {
-                    "dev-7.x": "7.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-7.2+9-dev",
-                    "datestamp": "1698887217",
+                    "version": "8.x-7.4",
+                    "datestamp": "1702916301",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "installer-paths": {
@@ -12351,11 +12354,17 @@
         },
         {
             "name": "drupal/wxt_library",
-            "version": "dev-7.x",
+            "version": "7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_library.git",
-                "reference": "3d6d39a375abca693ff16a3b6863ae4897ec61fd"
+                "reference": "8.x-7.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/wxt_library-8.x-7.3.zip",
+                "reference": "8.x-7.3",
+                "shasum": "cdf1992f540d2e31e11a78e1cbbbbe072dbec708"
             },
             "require": {
                 "composer/installers": "^1.2 || ^2",
@@ -12374,15 +12383,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-7.x": "7.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-7.2+2-dev",
-                    "datestamp": "1697989947",
+                    "version": "8.x-7.3",
+                    "datestamp": "1698974097",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "installer-paths": {
@@ -12462,16 +12468,16 @@
         },
         {
             "name": "drupalwxt/wxt",
-            "version": "5.0.x-dev",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
-                "reference": "884bfd5445283a109ff1612693595ac43b95ec47"
+                "reference": "d309a301556a2bae265d3730e1238a603a5b60ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/884bfd5445283a109ff1612693595ac43b95ec47",
-                "reference": "884bfd5445283a109ff1612693595ac43b95ec47",
+                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/d309a301556a2bae265d3730e1238a603a5b60ee",
+                "reference": "d309a301556a2bae265d3730e1238a603a5b60ee",
                 "shasum": ""
             },
             "require": {
@@ -12504,13 +12510,13 @@
                 "drupal/entity_block": "^1.0",
                 "drupal/entity_browser": "^2.3",
                 "drupal/entity_browser_block": "^1.0",
-                "drupal/entity_embed": "^1.4",
+                "drupal/entity_embed": "^1.5",
                 "drupal/entity_reference_revisions": "^1.8",
                 "drupal/entityqueue": "^1.3",
                 "drupal/fakeobjects": "^1.2",
                 "drupal/field_formatter": "^3.0",
                 "drupal/field_group": "^3.0",
-                "drupal/file_entity": "2.0-beta10",
+                "drupal/file_entity": "^2.0@RC",
                 "drupal/fontawesome": "^2.24",
                 "drupal/footnotes": "^3.1",
                 "drupal/group": "1.6",
@@ -12550,8 +12556,8 @@
                 "drupal/views_infinite_scroll": "^2.0",
                 "drupal/webform": "^6.2.0-beta5",
                 "drupal/webform_migrate": "2.0.x-dev",
-                "drupal/wxt_bootstrap": "7.x-dev",
-                "drupal/wxt_library": "7.x-dev",
+                "drupal/wxt_bootstrap": "7.4",
+                "drupal/wxt_library": "7.3",
                 "ext-dom": "*",
                 "npm-asset/dropzone": "^5.7.4",
                 "phpdocumentor/reflection-docblock": "^5",
@@ -12566,7 +12572,6 @@
                 "phpspec/prophecy-phpunit": "^2",
                 "squizlabs/php_codesniffer": "3.*"
             },
-            "default-branch": true,
             "type": "drupal-profile",
             "extra": {
                 "drupal-scaffold": {
@@ -12611,6 +12616,9 @@
                     "drupal/core": "-p2"
                 },
                 "patches": {
+                    "drupal/admin_toolbar": {
+                        "Resolve access check errors for D10 compatibility": "https://www.drupal.org/files/issues/2023-05-30/3338408-fix-access-check-error.patch"
+                    },
                     "drupal/block_content_permissions": {
                         "2920739 - Allow accessing the 'Custom block library' page without 'Administer blocks' permission": "https://www.drupal.org/files/issues/2022-07-26/2920739-55.access_listing_page.patch"
                     },
@@ -12656,9 +12664,6 @@
                     "drupal/entity_browser": {
                         "2914385 - Fix PHP error": "https://www.drupal.org/files/issues/2022-04-21/entity_browser-key-2914385-12.patch"
                     },
-                    "drupal/entity_embed": {
-                        "3272732 - CKE5 compatibility": "https://www.drupal.org/files/issues/2023-06-19/entity_embed-3272732-93.patch"
-                    },
                     "drupal/fontawesome": {
                         "3071758 - Fix multiple icons issue": "https://git.drupalcode.org/project/fontawesome/-/merge_requests/4.diff"
                     },
@@ -12668,13 +12673,17 @@
                         "Enter drupal/group patch #2895988 description here": "https://www.drupal.org/files/issues/2022-07-31/2895988-29.patch"
                     },
                     "drupal/linkit": {
-                        "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2023-10-15/linkit6x-3078075-76.patch"
+                        "Detect and strip base URL from pasted URLs to increase matching hits": "https://www.drupal.org/files/issues/2023-11-02/linkit6x-3078075-77.patch"
+                    },
+                    "drupal/migrate_plus": {
+                        "3404491 - [PHP 8.2] Call to deprecated function utf8_encode() at ./src/Plugin/migrate_plus/data_parser/Json.php Line 42": "https://www.drupal.org/files/issues/2023-11-27/migrate-plus-php82-warning.patch"
                     },
                     "drupal/page_manager": {
                         "Enter drupal/page_manager patch #2626090 description here": "https://www.drupal.org/files/issues/page-manager-2626090-page-title-empty-5.patch",
                         "Enter drupal/page_manager patch #2710169 description here": "https://www.drupal.org/files/issues/page_manager-block-css-attributes-9.patch",
                         "Enter drupal/page_manager patch #3096408 description here": "https://www.drupal.org/files/issues/2019-11-23/Issue-3096408-Page-Manager-issue-with-conflict-modul.patch",
-                        "Enter drupal/page_manager patch #2752227 description here": "https://www.drupal.org/files/issues/2021-04-14/2752227-47.patch"
+                        "Enter drupal/page_manager patch #2752227 description here": "https://www.drupal.org/files/issues/2021-04-14/2752227-47.patch",
+                        "3397945 - Relying on entity queries to check access by default": "https://www.drupal.org/files/issues/2023-10-31/3397945_enity_query_access_check_2.patch"
                     },
                     "drupal/paragraphs": {
                         "Enter drupal/paragraphs patch #2878615 description here": "https://www.drupal.org/files/issues/comments_entity_uri-2878615-6.patch"
@@ -12712,9 +12721,9 @@
             "description": "Project template for Drupal 10 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://github.com/drupalwxt/wxt/issues",
-                "source": "https://github.com/drupalwxt/wxt/tree/5.0.x"
+                "source": "https://github.com/drupalwxt/wxt/tree/5.0.2"
             },
-            "time": "2023-11-02T03:36:37+00:00"
+            "time": "2023-12-18T16:19:09+00:00"
         },
         {
             "name": "drush/drush",
@@ -14778,16 +14787,16 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/php-svg-lib.git",
-                "reference": "76876c6cf3080bcb6f249d7d59705108166a6685"
+                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/76876c6cf3080bcb6f249d7d59705108166a6685",
-                "reference": "76876c6cf3080bcb6f249d7d59705108166a6685",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
+                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
                 "shasum": ""
             },
             "require": {
@@ -14818,9 +14827,9 @@
             "homepage": "https://github.com/PhenX/php-svg-lib",
             "support": {
                 "issues": "https://github.com/dompdf/php-svg-lib/issues",
-                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.0"
+                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.1"
             },
-            "time": "2022-09-06T12:16:56+00:00"
+            "time": "2023-12-11T20:56:08+00:00"
         },
         {
             "name": "phootwork/collection",

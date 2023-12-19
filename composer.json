@@ -198,10 +198,6 @@
                 "3111107 - Use patch 10 instead of patch 2.":
                 "https://www.drupal.org/files/issues/2021-08-10/field_group_fix-translations_label_description_2021-08-10.patch"
             },
-            "drupal/linkit": {
-               "Use patch 77 instead of patch 76, this patch is included in the latest drupalwxt/wxt however postponing drupalwxt upgrade until a tagged release is pushed. - Detect and strip base URL from pasted URLs to increase matching hits":
-               "https://www.drupal.org/files/issues/2023-11-02/linkit6x-3078075-77.patch"
-            },
             "drupal/page_manager": {
                 "Enter drupal/page_manager patch #2752227 description here":
                 "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch",
@@ -281,10 +277,6 @@
                     "is in dev patch":
                     "https://www.drupal.org/files/issues/entityview-cache-metadata-2874176-2.patch"
                 },
-                "drupal/linkit": {
-                  "Temporary patch ignore until wxt-5.1.0-rc1 is tagged , use patch 77 instead - Detect and strip base URL from pasted URLs to increase matching hits":
-                    "https://www.drupal.org/files/issues/2023-10-15/linkit6x-3078075-76.patch"
-                },
                 "drupal/field_group": {
                     "3111107 - Remove patch , no longer works, override it with patch 10.":
                     "https://www.drupal.org/files/issues/2020-02-04/3111107-2--fix-translations.patch"
@@ -319,10 +311,6 @@
                 "drupal/pathauto": {
                     "3107144 - Is only in latest releases.":
                     "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
-                },
-                "drupal/linkit": {
-                  "Temporary patch ignore until wxt-5.1.0-rc1 is tagged , use patch 77 instead - Detect and strip base URL from pasted URLs to increase matching hits":
-                    "https://www.drupal.org/files/issues/2023-10-15/linkit6x-3078075-76.patch"
                 }
             },
             "drupal/pathauto": {
@@ -352,7 +340,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "10.0.11-rc2",
+        "agrcmsx/dxbase": "10.0.11",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
