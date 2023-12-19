@@ -13,6 +13,7 @@ dependencies:
     - agri_admin
     - content_moderation
     - content_translation
+    - file
     - moderated_content_bulk_publish
     - node
     - system
@@ -32,6 +33,7 @@ permissions:
   - 'access_unpublished taxonomy_term category'
   - 'create terms in aafc_type'
   - 'create terms in category'
+  - 'delete own files'
   - 'edit any landing_page content'
   - 'edit any page content'
   - 'moderated content bulk publish'

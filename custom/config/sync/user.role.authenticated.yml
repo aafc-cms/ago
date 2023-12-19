@@ -8,6 +8,7 @@ dependencies:
     - access_unpublished
     - comment
     - contact
+    - file
     - filter
     - media
     - search
@@ -27,6 +28,7 @@ permissions:
   - 'access user contact forms'
   - 'access user profiles'
   - 'access_unpublished node landing_page'
+  - 'delete own files'
   - 'edit own comments'
   - 'post comments'
   - 'search content'

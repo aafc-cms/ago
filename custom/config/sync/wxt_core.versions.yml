@@ -136,6 +136,7 @@ password_policy: 3.1.0
 path: 9.4.11
 path_alias: 9.4.11
 pathauto: 1.8.0
+phpass: 10.1.6
 prefer_latest_content: 0.0.0
 rdf: 9.4.11
 recreate_block_content: 0.0.0

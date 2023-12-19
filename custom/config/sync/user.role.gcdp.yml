@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - file
     - file_delete
     - filebrowser
     - toolbar
@@ -17,6 +18,7 @@ permissions:
   - 'delete filebrowser metadata entity entities'
   - 'delete files'
   - 'delete listings'
+  - 'delete own files'
   - 'download archive'
   - 'download files'
   - 'edit description'
