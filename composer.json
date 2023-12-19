@@ -214,7 +214,9 @@
             },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
-                "build/wxt_split_password_policy.patch"
+                "build/wxt_split_password_policy.patch",
+                "Add missing code , wxt oops, missing fix for countries https://drupal.org/i/3409755":
+                "build/wxt_oops_fix.patch"
             },
             "drupal/warmer": {
                 "3368778":"https://git.drupalcode.org/project/warmer/-/merge_requests/13.patch"
