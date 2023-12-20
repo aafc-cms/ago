@@ -18,8 +18,21 @@ elements: |-
     '#text': |-
       <div class="row mrgn-tp-lg">
         <div class="col-md-8">
-          <p>Provide feedback on Agriculture and Agri-Food Canada’s (AAFC) accessibility plan, barriers you have experienced, or any matter related to accessibility.</p>
-          <p>You can consult the <a href="/feedback-process">Accessibility feedback process</a> for other ways to provide feedback and how we use your feedback.</p>
+          <p>
+      You can use our feedback form to share your comments and ideas to help us create an accessible and barrier-free Canada. We invite your feedback on:
+      </p>
+      <ul>
+      <li>our accessibility plan</li>
+      <li>how we are putting the plan in place</li>
+      <li>any barriers that you may encounter when working for us or in communicating with us or accessing our programs and services</li>
+      <li>our feedback process</li>
+      </ul>
+      <p>You can send feedback anonymously or you can include your name and contact information if you would like us to follow up with you.
+      </p>
+      <p>
+      We will use this feedback to produce our progress reports and to create our next accessibility plan.
+      </p>
+          <p>You can consult the <a href="/feedback-process">Accessibility feedback process</a> for other ways to provide feedback or to request an alternative format.</p>
           <details class="mrgn-tp-lg">
             <summary>Privacy disclaimer</summary>
             <div class="row mrgn-tp-lg">
@@ -56,6 +69,7 @@ elements: |-
     '#options':
       'Accessibility barrier': 'Accessibility barrier'
       'AAFC''s Accessibility Plan': 'AAFC''s Accessibility Plan'
+      'AAFC''s progress report': 'AAFC''s progress report'
     '#other__option_label': 'Other item'
     '#other__title': 'Describe the item you want to provide feedback on'
     '#other__placeholder': ''
