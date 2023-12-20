@@ -196,6 +196,10 @@
                 "3111107 - Use patch 10 instead of patch 2.":
                 "https://www.drupal.org/files/issues/2021-08-10/field_group_fix-translations_label_description_2021-08-10.patch"
             },
+            "drupal/fontawesome": {
+                "3409881 - Font awesome patch , for D10.1.6 compatibility.":
+                "https://www.drupal.org/files/issues/2023-12-19/wxt5-3409880-03.patch"
+            },
             "drupal/page_manager": {
                 "Enter drupal/page_manager patch #2752227 description here":
                 "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch",
@@ -392,6 +396,7 @@
         "drupal/context_stack": "^1.0",
         "drupal/views_bootstrap": "^5.3",
         "drupal/webform": "^6.2.0",
+        "drupal/warmer": "2.0.11",
         "drupal/moderation_dashboard": "^1",
         "drupal/simple_gmap": "4.0.x-dev",
         "drupal/entity_print": "^2.11",
