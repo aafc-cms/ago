@@ -190,7 +190,9 @@
                 "Options module uses '_none' as a special value.":
                 "https://www.drupal.org/files/issues/2023-07-14/1585930-93.patch",
                 "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager":
-                "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch"
+                "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch",
+                "3359497 - Prevent warnings when library definitions have a license with no URL defined, contrib is not perfect here.":
+                "https://www.drupal.org/files/issues/2023-10-07/fix-license-missing-url.patch"
             },
             "drupal/field_group": {
                 "3111107 - Use patch 10 instead of patch 2.":
