@@ -9,7 +9,7 @@ uid: 1
 template: false
 archive: false
 id: aafc_generic_contact_form
-title: 'Contact Form'
+title: 'Contact form'
 description: ''
 categories: {  }
 elements: |-
@@ -35,6 +35,21 @@ elements: |-
       <p class="text-danger">* denotes mandatory field.
       </p>
     '#format': full_html
+  subject:
+    '#type': select
+    '#title': Subject
+    '#options':
+      'Working or studying in Canada (including the Temporary Foreign Workers Program)': 'Working or studying in Canada (including the Temporary Foreign Workers Program)'
+      'International assistance for agriculture': 'International assistance for agriculture'
+      'Grants, funding, and programs (excluding the Temporary Foreign Workers Program)': 'Grants, funding, and programs (excluding the Temporary Foreign Workers Program)'
+      'Importing and exporting': 'Importing and exporting'
+      'Food safety and food labelling': 'Food safety and food labelling'
+      'Travelling with pets': 'Travelling with pets'
+      'Accounts payable (National Capital Region)': 'Accounts payable (National Capital Region)'
+      'Accounts receivable (National Capital Region)': 'Accounts receivable (National Capital Region)'
+      'Central Experimental Farm (buildings, attractions and maintenance)': 'Central Experimental Farm (buildings, attractions and maintenance)'
+      Other: Other
+    '#required': true
   yourmessage:
     '#type': textarea
     '#title': 'Your message'
@@ -512,7 +527,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'AAFC: Contact Us/AAC: Contactez Nous'
+      subject: 'AAFC: Contact Us/AAC: Contactez NousAAFC: Contact Us/AAC: Contactez Nous: [webform_submission:values:subject]'
       body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
