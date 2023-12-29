@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7564ce85718852477368b32292686c53",
+    "content-hash": "9e0997513307f05bd75208e0418ee5d3",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -9896,17 +9896,17 @@
         },
         {
             "name": "drupal/safedelete",
-            "version": "1.0.53",
+            "version": "1.0.54",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/safedelete.git",
-                "reference": "1.0.53"
+                "reference": "1.0.54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.53.zip",
-                "reference": "1.0.53",
-                "shasum": "c2119f9a2810eecf93183ff86f5a595130a2c673"
+                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.54.zip",
+                "reference": "1.0.54",
+                "shasum": "b38b2d6e24891e2af28cdd87defa7e33885eed87"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
@@ -9915,8 +9915,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.53",
-                    "datestamp": "1699985737",
+                    "version": "1.0.54",
+                    "datestamp": "1703780428",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
