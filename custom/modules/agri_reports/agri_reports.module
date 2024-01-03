@@ -198,5 +198,5 @@ function agri_reports_views_pre_view($view, $display_id, &$args) {
 function agri_reports_cron() {
   $filedirectory = 'public://cache_warming/';
   $database = \Drupal::database();
-  AdminHelper::CreateWarmingCacheJsonfile($filedirectory, $database);
+  AdminHelper::CreateWarmingCacheJsonfile($database, $filedirectory);
 }

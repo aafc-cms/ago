@@ -7,7 +7,7 @@ use Drupal\Core\Database\Connection;
 
 class AdminHelper {
 
-  static public function CreateWarmingCacheJsonfile($filedirectory ='', $database) {
+  static public function CreateWarmingCacheJsonfile($database = NULL, $filedirectory = 'public://cache_warming/') {
     $directoryexists = \Drupal::service('file_system')->prepareDirectory($filedirectory);
     if(!$directoryexists) {
       \Drupal::service('file_system')->mkdir($filedirectory);
