@@ -388,13 +388,13 @@ body.path-admin .view-content .form-item--field-newstype-target-id {
 body.path-admin .view-content .form-item--revision-timestamp-min,
 body.path-admin .view-content .form-item--field-modified-value-min,
 body.path-admin .view-content .form-item--changed-min {
-  margin: 0.75rem 0.5rem 0 0;
+  margin: 0.25rem 0.5rem 0.5rem 0;
   max-width: 135px;
 }
 body.path-admin .view-content .form-item--revision-timestamp-max,
 body.path-admin .view-content .form-item--field-modified-value-max,
 body.path-admin .view-content .form-item--changed-max {
-  margin: 0.75rem 0.5rem 0 0;
+  margin: 0.25rem 0.5rem 0.5rem 0;
   max-width: 120px;
 }
 body.path-admin .view-content #edit-revision-timestamp-wrapper,
@@ -410,16 +410,19 @@ body.path-admin .view-content #edit-field-modified-value-wrapper legend span.fie
   top: -2.5em;
   color: #222330;
 }
+body.path-admin .view-filters #edit-revision-timestamp-wrapper .fieldset.form-wrapper, body.path-admin .view-filters #edit-field-modified-value-wrapper .fieldset.form-wrapper, body.path-admin .view-filters #edit-field-issued-value-wrapper .fieldset.form-wrapper, body.path-admin .view-filters #edit-created-wrapper .fieldset.form-wrapper {
+  margin-top: 0;
+}
 body.path-admin .view-filters #edit-revision-timestamp-wrapper .form-item, body.path-admin .view-filters #edit-field-modified-value-wrapper .form-item, body.path-admin .view-filters #edit-field-issued-value-wrapper .form-item, body.path-admin .view-filters #edit-created-wrapper .form-item {
   float: left;
 }
 body.path-admin .view-filters .form-item--field-issued-value-min,
 body.path-admin .view-filters .form-item--changed-min {
-  margin: 0.75rem 0.5rem 0 0;
+  margin: 0.25rem 0.5rem 0.5rem 0;
 }
 body.path-admin .view-filters .form-item--field-issued-value-max,
 body.path-admin .view-filters .form-item--changed-max {
-  margin: 0.75rem 0.5rem 0 0;
+  margin: 0.25rem 0.5rem 0.5rem 0;
 }
 body.path-admin .view-filters #edit-field-issued-value-wrapper {
   padding-bottom: inherit;
