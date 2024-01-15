@@ -78,7 +78,10 @@ function aafctheme_preprocess_html(&$variables) {
     $variables['four_oh_four'] = TRUE;
   }
 
-  $head_title = $variables['head_title']['title'];
+  $head_title = '';
+  if (isset($variables['head_title']['title'])) {
+    $head_title = $variables['head_title']['title'];
+  }
   $some_slogan = ' | Agriculture and Agri-Food Canada (AAFC)';
   if (stripos($head_title, $some_slogan) > 2) {
     $head_title = str_replace($some_slogan, ' - agriculture.canada.ca', $head_title);
