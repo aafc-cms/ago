@@ -212,7 +212,7 @@
                 "3225938 - Added CKEDITOR plugin functionality":
                 "https://www.drupal.org/files/issues/2022-02-05/3225938_include_binary_icon-18.patch",
                 "3225938 - Limit selection to Content block (custom block content blocks) only.":
-                "https://www.drupal.org/files/issues/2024-01-14/3225938-reqs_patch_18_limit_options-diff-58.patch"
+                "https://www.drupal.org/files/issues/2024-01-14/3225938-reqs_patch_18_limit_options-diff-59.patch"
             },
             "drupal/node_revision_delete": {
                 "Support only drafts deletion":
