@@ -2,6 +2,6 @@
   "name": "agrcmsx/agri_reports",
   "type": "drupal-custom-module",
   "require": {
-    "composer/installers": "^1.2"
+    "composer/installers": "^1.2 || ^2"
   }
 }
