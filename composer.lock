@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e0997513307f05bd75208e0418ee5d3",
+    "content-hash": "7fa728d5ee38198d4596e291bedaf343",
     "packages": [
         {
             "name": "agrcms/lightning",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning",
@@ -25,7 +25,7 @@
         },
         {
             "name": "agrcms/lightning_banner_block",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_banner_block",
@@ -42,7 +42,7 @@
         },
         {
             "name": "agrcms/lightning_core",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_core",
@@ -59,7 +59,7 @@
         },
         {
             "name": "agrcms/lightning_install",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_install",
@@ -77,7 +77,7 @@
         },
         {
             "name": "agrcms/lightning_landing_page",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_landing_page",
@@ -94,7 +94,7 @@
         },
         {
             "name": "agrcms/lightning_layout",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_layout",
@@ -111,7 +111,7 @@
         },
         {
             "name": "agrcms/lightning_map_block",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_map_block",
@@ -128,7 +128,7 @@
         },
         {
             "name": "agrcms/lightning_media",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media",
@@ -145,7 +145,7 @@
         },
         {
             "name": "agrcms/lightning_media_audio",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_audio",
@@ -162,7 +162,7 @@
         },
         {
             "name": "agrcms/lightning_media_bulk_upload",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_bulk_upload",
@@ -179,7 +179,7 @@
         },
         {
             "name": "agrcms/lightning_media_document",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_document",
@@ -196,7 +196,7 @@
         },
         {
             "name": "agrcms/lightning_media_image",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_image",
@@ -213,7 +213,7 @@
         },
         {
             "name": "agrcms/lightning_media_instagram",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_instagram",
@@ -230,7 +230,7 @@
         },
         {
             "name": "agrcms/lightning_media_slideshow",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_slideshow",
@@ -247,7 +247,7 @@
         },
         {
             "name": "agrcms/lightning_media_twitter",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_twitter",
@@ -264,7 +264,7 @@
         },
         {
             "name": "agrcms/lightning_media_video",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_video",
@@ -281,7 +281,7 @@
         },
         {
             "name": "agrcms/lightning_page",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_page",
@@ -298,7 +298,7 @@
         },
         {
             "name": "agrcms/lightning_workflow",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_workflow",
@@ -315,7 +315,7 @@
         },
         {
             "name": "agrcmsx/aafctheme",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/themes/aafctheme",
@@ -335,14 +335,14 @@
         },
         {
             "name": "agrcmsx/agri_admin",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_admin",
-                "reference": "b210de0ce9f5f7ade446174eb851c93ed1027999"
+                "reference": "4388d17e2ac4970f5d317edc8981d3fd65bd1351"
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2 || ^2"
             },
             "type": "drupal-custom-module",
             "transport-options": {
@@ -351,14 +351,14 @@
         },
         {
             "name": "agrcmsx/agri_reports",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_reports",
-                "reference": "e1fdc5d7ea5a12e5937adbd96aace998f8bc94b9"
+                "reference": "d8d8968fc9a577fcb868c4c33f6844c05bc3d367"
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2 || ^2"
             },
             "type": "drupal-custom-module",
             "transport-options": {
@@ -367,7 +367,7 @@
         },
         {
             "name": "agrcmsx/config",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/config",
@@ -383,20 +383,20 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "10.1.6",
+            "version": "10.1.8",
             "source": {
                 "type": "git",
-                "url": "git@gitlab.com:agrcms/dxbase.git",
-                "reference": "ef67a7f959cab5dad1146bc7e776a504c3b353b8"
+                "url": "https://gitlab.com/agrcms/dxbase.git",
+                "reference": "c58fcbd5a17bdf212771fedbee12cbb812a093aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=ef67a7f959cab5dad1146bc7e776a504c3b353b8",
-                "reference": "ef67a7f959cab5dad1146bc7e776a504c3b353b8",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=c58fcbd5a17bdf212771fedbee12cbb812a093aa",
+                "reference": "c58fcbd5a17bdf212771fedbee12cbb812a093aa",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2",
+                "composer/installers": "^1.2 || ^2.0",
                 "cweagans/composer-patches": "^1.6.7",
                 "drupal/access_unpublished": "1.5.0",
                 "drupal/autologout": "^1.3",
@@ -455,7 +455,7 @@
                 "drupal/webform": "^6.1.4",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal/workflow": "^1.4",
-                "drupalwxt/wxt": "5.1.0",
+                "drupalwxt/wxt": "5.1.1",
                 "drush/drush": "^11 || ^12",
                 "egulias/email-validator": "4.0.2 as 3.2.6"
             },
@@ -617,18 +617,22 @@
                 "GPL-2.0+"
             ],
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
-            "time": "2023-12-19T14:01:28+00:00"
+            "support": {
+                "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8"
+            },
+            "time": "2024-01-21T22:00:51+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/prefer_latest_content",
-                "reference": "ea927183dd1545999f09190509ec2ab0e7bc26e1"
+                "reference": "0cdeffca0ab91d6bc152a7e57c02505a53c072a6"
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2 || ^2"
             },
             "type": "drupal-custom-module",
             "transport-options": {
@@ -637,14 +641,14 @@
         },
         {
             "name": "agrcmsx/wxt_overrides",
-            "version": "dev-10.0.x-wxt-5.0.x",
+            "version": "dev-10.0.x-wxt-5.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/wxt_overrides",
-                "reference": "6b8e73884634653af6e02e4a0f089ab694896f57"
+                "reference": "c199ad25a7d8b018f332bee525595de9a35f62a3"
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2 || ^2"
             },
             "type": "drupal-custom-module",
             "transport-options": {
@@ -1213,16 +1217,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.9.1",
+            "version": "4.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "e01152f698eff4cb5df3ebfe5e097ef335dbd3c9"
+                "reference": "b5255dcbee1de95036185062a103dabc622224de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/e01152f698eff4cb5df3ebfe5e097ef335dbd3c9",
-                "reference": "e01152f698eff4cb5df3ebfe5e097ef335dbd3c9",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/b5255dcbee1de95036185062a103dabc622224de",
+                "reference": "b5255dcbee1de95036185062a103dabc622224de",
                 "shasum": ""
             },
             "require": {
@@ -1263,9 +1267,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.9.1"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.9.2"
             },
-            "time": "2023-05-20T04:19:01+00:00"
+            "time": "2023-12-26T14:30:50+00:00"
         },
         {
             "name": "consolidation/config",
@@ -4362,16 +4366,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.1.6",
+            "version": "10.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "33695caf467e3e1e8c75d42215df57bee31be9ec"
+                "reference": "fe4fd82ecd1f70db397c58d4360e15de0b4785c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/33695caf467e3e1e8c75d42215df57bee31be9ec",
-                "reference": "33695caf467e3e1e8c75d42215df57bee31be9ec",
+                "url": "https://api.github.com/repos/drupal/core/zipball/fe4fd82ecd1f70db397c58d4360e15de0b4785c7",
+                "reference": "fe4fd82ecd1f70db397c58d4360e15de0b4785c7",
                 "shasum": ""
             },
             "require": {
@@ -4516,9 +4520,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.1.6"
+                "source": "https://github.com/drupal/core/tree/10.1.8"
             },
-            "time": "2023-11-01T11:59:20+00:00"
+            "time": "2024-01-16T21:11:11+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -4572,16 +4576,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "10.1.6",
+            "version": "10.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "13f5968854fe8bc02e659d8a4facc04a1a576ce5"
+                "reference": "0e4a17b65e5dd2aedf66461e7c3658a35adc4924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/13f5968854fe8bc02e659d8a4facc04a1a576ce5",
-                "reference": "13f5968854fe8bc02e659d8a4facc04a1a576ce5",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/0e4a17b65e5dd2aedf66461e7c3658a35adc4924",
+                "reference": "0e4a17b65e5dd2aedf66461e7c3658a35adc4924",
                 "shasum": ""
             },
             "require": {
@@ -4590,7 +4594,7 @@
                 "doctrine/annotations": "~1.14.3",
                 "doctrine/deprecations": "~v1.1.1",
                 "doctrine/lexer": "~2.1.0",
-                "drupal/core": "10.1.6",
+                "drupal/core": "10.1.8",
                 "egulias/email-validator": "~4.0.1",
                 "guzzlehttp/guzzle": "~7.7.0",
                 "guzzlehttp/psr7": "~2.5.0",
@@ -4647,9 +4651,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/10.1.6"
+                "source": "https://github.com/drupal/core-recommended/tree/10.1.8"
             },
-            "time": "2023-11-01T11:59:20+00:00"
+            "time": "2024-01-16T21:11:11+00:00"
         },
         {
             "name": "drupal/core_context",
@@ -9373,17 +9377,17 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "1.16.0",
+            "version": "1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.16"
+                "reference": "8.x-1.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.16.zip",
-                "reference": "8.x-1.16",
-                "shasum": "48f60810fd8086a52d56e84af8b212cce7a270e8"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "81c05f6a1eb59ab957c9ac97b2e79d6c9837bd72"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -9398,7 +9402,7 @@
                 "drupal/inline_entity_form": "1.x-dev",
                 "drupal/paragraphs-paragraphs_library": "*",
                 "drupal/replicate": "1.x-dev",
-                "drupal/search_api": "1.x-dev",
+                "drupal/search_api": "^1",
                 "drupal/search_api_db": "*"
             },
             "suggest": {
@@ -9407,8 +9411,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.16",
-                    "datestamp": "1694007797",
+                    "version": "8.x-1.17",
+                    "datestamp": "1705234146",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12475,16 +12479,16 @@
         },
         {
             "name": "drupalwxt/wxt",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
-                "reference": "279ff2cb83250ef4d60ca23563d6c833cc36c85c"
+                "reference": "4c09c23c1defe34d7ef30de6bda28373b16116c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/279ff2cb83250ef4d60ca23563d6c833cc36c85c",
-                "reference": "279ff2cb83250ef4d60ca23563d6c833cc36c85c",
+                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/4c09c23c1defe34d7ef30de6bda28373b16116c4",
+                "reference": "4c09c23c1defe34d7ef30de6bda28373b16116c4",
                 "shasum": ""
             },
             "require": {
@@ -12507,7 +12511,7 @@
                 "drupal/ckeditor_details": "^2.1.0-alpha1",
                 "drupal/config_rewrite": "^1.5",
                 "drupal/core-composer-scaffold": "^10.1",
-                "drupal/core-recommended": "10.1.6",
+                "drupal/core-recommended": "10.1.8",
                 "drupal/core_context": "1.1",
                 "drupal/crop": "^2.0.0-rc1",
                 "drupal/ctools": "^3.9",
@@ -12649,7 +12653,8 @@
                         "Enter drupal/core patch #2546212 description here": "https://www.drupal.org/files/issues/2020-11-07/2546212-158.patch",
                         "Enter drupal/core patch #3207813 description here": "https://www.drupal.org/files/issues/2021-04-08/3207813-2.patch",
                         "Enter drupal/core patch #3236799 description here": "https://www.drupal.org/files/issues/2021-12-22/drupal-core-9.2.x-li-role-separator-tag-linkGenerator-3236799-11.patch",
-                        "3107212 - allow translation of views field empty text": "https://www.drupal.org/files/issues/2022-03-09/d9-4-x--3107212-13.patch"
+                        "3107212 - allow translation of views field empty text": "https://www.drupal.org/files/issues/2022-03-09/d9-4-x--3107212-13.patch",
+                        "3359497 - Prevent warnings when library definitions have a license with no URL defined, contrib is not perfect here.": "https://www.drupal.org/files/issues/2023-10-07/fix-license-missing-url.patch"
                     },
                     "drupal/ctools": {
                         "Enter drupal/ctools patch #2667652 description here": "https://www.drupal.org/files/issues/ctools-option_to_expose-2667652-3.patch",
@@ -12720,9 +12725,9 @@
             "description": "Project template for Drupal 10 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://github.com/drupalwxt/wxt/issues",
-                "source": "https://github.com/drupalwxt/wxt/tree/5.1.0"
+                "source": "https://github.com/drupalwxt/wxt/tree/5.1.1"
             },
-            "time": "2023-12-18T17:23:47+00:00"
+            "time": "2024-01-18T01:17:50+00:00"
         },
         {
             "name": "drush/drush",
@@ -18604,16 +18609,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v6.3.8",
+            "version": "v6.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "81acabba9046550e89634876ca64bfcd3c06aa0a"
+                "reference": "376d3c652c17c33d88db7a7e2e5288ecf3e327dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/81acabba9046550e89634876ca64bfcd3c06aa0a",
-                "reference": "81acabba9046550e89634876ca64bfcd3c06aa0a",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/376d3c652c17c33d88db7a7e2e5288ecf3e327dc",
+                "reference": "376d3c652c17c33d88db7a7e2e5288ecf3e327dc",
                 "shasum": ""
             },
             "require": {
@@ -18668,7 +18673,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v6.3.8"
+                "source": "https://github.com/symfony/var-dumper/tree/v6.3.11"
             },
             "funding": [
                 {
@@ -18684,7 +18689,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-08T10:42:36+00:00"
+            "time": "2023-12-28T15:37:35+00:00"
         },
         {
             "name": "symfony/var-exporter",
