@@ -156,6 +156,7 @@ slick: 2.6.0
 slick_entityreference: 2.0.0
 smtp: 0.0.0
 swiftmailer: 2.2.0
+symfony_mailer_lite: 1.0.2
 system: 9.4.11
 taxonomy: 9.4.11
 telephone: 9.4.11

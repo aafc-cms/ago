@@ -1,0 +1,18 @@
+uuid: 7c0430dd-78ce-4101-a2e5-003e54bb6099
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: AKIA4DJHEGSUII5CMQI2
+  pass: _CHANGE_PASSWD_
+  host: email-smtp.ca-central-1.amazonaws.com
+  port: 587
+  query:
+    verify_peer: true
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null

@@ -344,7 +344,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "10.1.8",
+        "agrcmsx/dxbase": "10.1.8.1",
         "agrcmsx/aafctheme": "*",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
@@ -410,7 +410,8 @@
         "drupal/node_revision_delete": "^2",
         "drupal/webform_revision_ui": "^1.0@alpha",
         "drupal/wxt_chart_stability": "^1.0@alpha",
-        "egulias/email-validator": "4.0.2 as 3.2.6"
+        "egulias/email-validator": "4.0.2 as 3.2.6",
+        "drupal/swiftmailer": "^2.4.0"
     },
     "authors": [
         {
