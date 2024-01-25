@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fa728d5ee38198d4596e291bedaf343",
+    "content-hash": "6548268632aca7ba1fe67d11fc945133",
     "packages": [
         {
             "name": "agrcms/lightning",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning",
@@ -25,7 +25,7 @@
         },
         {
             "name": "agrcms/lightning_banner_block",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_banner_block",
@@ -42,7 +42,7 @@
         },
         {
             "name": "agrcms/lightning_core",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_core",
@@ -59,7 +59,7 @@
         },
         {
             "name": "agrcms/lightning_install",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_install",
@@ -77,7 +77,7 @@
         },
         {
             "name": "agrcms/lightning_landing_page",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_landing_page",
@@ -94,7 +94,7 @@
         },
         {
             "name": "agrcms/lightning_layout",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_layout",
@@ -111,7 +111,7 @@
         },
         {
             "name": "agrcms/lightning_map_block",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_map_block",
@@ -128,7 +128,7 @@
         },
         {
             "name": "agrcms/lightning_media",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media",
@@ -145,7 +145,7 @@
         },
         {
             "name": "agrcms/lightning_media_audio",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_audio",
@@ -162,7 +162,7 @@
         },
         {
             "name": "agrcms/lightning_media_bulk_upload",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_bulk_upload",
@@ -179,7 +179,7 @@
         },
         {
             "name": "agrcms/lightning_media_document",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_document",
@@ -196,7 +196,7 @@
         },
         {
             "name": "agrcms/lightning_media_image",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_image",
@@ -213,7 +213,7 @@
         },
         {
             "name": "agrcms/lightning_media_instagram",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_instagram",
@@ -230,7 +230,7 @@
         },
         {
             "name": "agrcms/lightning_media_slideshow",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_slideshow",
@@ -247,7 +247,7 @@
         },
         {
             "name": "agrcms/lightning_media_twitter",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_twitter",
@@ -264,7 +264,7 @@
         },
         {
             "name": "agrcms/lightning_media_video",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_media_video",
@@ -281,7 +281,7 @@
         },
         {
             "name": "agrcms/lightning_page",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_page",
@@ -298,7 +298,7 @@
         },
         {
             "name": "agrcms/lightning_workflow",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/lightning_workflow",
@@ -315,7 +315,7 @@
         },
         {
             "name": "agrcmsx/aafctheme",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/themes/aafctheme",
@@ -335,7 +335,7 @@
         },
         {
             "name": "agrcmsx/agri_admin",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_admin",
@@ -351,7 +351,7 @@
         },
         {
             "name": "agrcmsx/agri_reports",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_reports",
@@ -367,7 +367,7 @@
         },
         {
             "name": "agrcmsx/config",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/config",
@@ -383,16 +383,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "10.1.8",
+            "version": "10.1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "c58fcbd5a17bdf212771fedbee12cbb812a093aa"
+                "reference": "b93d31387ed0f7b9681e257afbc941a632eb609b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=c58fcbd5a17bdf212771fedbee12cbb812a093aa",
-                "reference": "c58fcbd5a17bdf212771fedbee12cbb812a093aa",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=b93d31387ed0f7b9681e257afbc941a632eb609b",
+                "reference": "b93d31387ed0f7b9681e257afbc941a632eb609b",
                 "shasum": ""
             },
             "require": {
@@ -444,7 +444,7 @@
                 "drupal/sharedemail": "^3.0",
                 "drupal/simple_sitemap": "^4.1.4",
                 "drupal/smtp": "1.x-dev",
-                "drupal/swiftmailer": "^2.0",
+                "drupal/symfony_mailer_lite": "^1.0",
                 "drupal/telephone_validation": "^2.3",
                 "drupal/token": "~1.0",
                 "drupal/ultimate_cron": "2.x-dev@dev",
@@ -619,13 +619,13 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.1"
             },
-            "time": "2024-01-21T22:00:51+00:00"
+            "time": "2024-01-25T13:01:37+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/prefer_latest_content",
@@ -641,7 +641,7 @@
         },
         {
             "name": "agrcmsx/wxt_overrides",
-            "version": "dev-10.0.x-wxt-5.1.x",
+            "version": "dev-10.0.x-wxt-5.0.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/wxt_overrides",
@@ -10564,6 +10564,54 @@
             }
         },
         {
+            "name": "drupal/symfony_mailer_lite",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/symfony_mailer_lite.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/symfony_mailer_lite-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "2082098fd83e504aa70f84a2977cfe0af1148909"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/mailsystem": "^4.4",
+                "html2text/html2text": "^4.0.1",
+                "symfony/mailer": "^5.3 || ^6.0",
+                "tijsverkoyen/css-to-inline-styles": "^2.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2",
+                    "datestamp": "1705613851",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "zengenuity",
+                    "homepage": "https://www.drupal.org/user/326925"
+                }
+            ],
+            "description": "Drupal Symfony Mailer Lite",
+            "homepage": "https://www.drupal.org/project/symfony_mailer_lite",
+            "support": {
+                "source": "https://git.drupalcode.org/project/symfony_mailer_lite"
+            }
+        },
+        {
             "name": "drupal/telephone_validation",
             "version": "2.4.0",
             "source": {
@@ -17039,6 +17087,86 @@
                 }
             ],
             "time": "2023-12-01T16:57:27+00:00"
+        },
+        {
+            "name": "symfony/mailer",
+            "version": "v6.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/mailer.git",
+                "reference": "6da89e5c9202f129717a770a03183fb140720168"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/6da89e5c9202f129717a770a03183fb140720168",
+                "reference": "6da89e5c9202f129717a770a03183fb140720168",
+                "shasum": ""
+            },
+            "require": {
+                "egulias/email-validator": "^2.1.10|^3|^4",
+                "php": ">=8.1",
+                "psr/event-dispatcher": "^1",
+                "psr/log": "^1|^2|^3",
+                "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
+                "symfony/mime": "^6.2|^7.0",
+                "symfony/service-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "symfony/http-client-contracts": "<2.5",
+                "symfony/http-kernel": "<5.4",
+                "symfony/messenger": "<6.2",
+                "symfony/mime": "<6.2",
+                "symfony/twig-bridge": "<6.2.1"
+            },
+            "require-dev": {
+                "symfony/console": "^5.4|^6.0|^7.0",
+                "symfony/http-client": "^5.4|^6.0|^7.0",
+                "symfony/messenger": "^6.2|^7.0",
+                "symfony/twig-bridge": "^6.2|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Mailer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Helps sending emails",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/mailer/tree/v6.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-12-19T09:12:31+00:00"
         },
         {
             "name": "symfony/mime",
