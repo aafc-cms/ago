@@ -69,14 +69,11 @@ configureSettingsFile () {
     echo "\$settings['hash_salt'] = '$hashsalt';" >> $settings_file;
   fi
   if ! grep -q 'sites/default/files/private' $settings_local_file; then
-	  echo "BOOOGABOOGA";
     if ! grep -q 'file_private_path' $settings_local_file; then
-	  echo "BOOOGABOOGA2";
       echo "\$settings['file_private_path'] = 'sites/default/files/private';" >> $settings_local_file;
     fi
   fi
   if ! grep -q '^if (file_exists($app_ro' $settings_file; then
-	  echo "BOOOGABOOGA3";
     echo "";
     echo "if (file_exists(\$app_root . '/' . \$site_path . '/settings.local.php')) {" >> $settings_file;
     echo "  include \$app_root . '/' . \$site_path . '/settings.local.php';" >> $settings_file;
