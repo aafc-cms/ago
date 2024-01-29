@@ -202,10 +202,6 @@
                 "3409881 - Font awesome patch , for D10.1.6 compatibility.":
                 "https://www.drupal.org/files/issues/2023-12-19/wxt5-3409880-03.patch"
             },
-            "drupal/symfony_mailer_lite": {
-                "3417343 - Symfony mailer lite allow empty To address, test patch.":
-                "https://www.drupal.org/files/issues/2024-01-26/3417343-02.patch"
-            },
             "drupal/page_manager": {
                 "Enter drupal/page_manager patch #2752227 description here":
                 "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch",

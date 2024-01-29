@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e72dbb6baadb2862905348e3d128103f",
+    "content-hash": "6548268632aca7ba1fe67d11fc945133",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -10565,17 +10565,17 @@
         },
         {
             "name": "drupal/symfony_mailer_lite",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/symfony_mailer_lite.git",
-                "reference": "1.0.3"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/symfony_mailer_lite-1.0.3.zip",
-                "reference": "1.0.3",
-                "shasum": "afed3c8d48037acb5af6ec35006fbfe47d7fe2ca"
+                "url": "https://ftp.drupal.org/files/projects/symfony_mailer_lite-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "51fc6549ffa3213be64337ed93cfbad3b241fe4e"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -10587,8 +10587,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.3",
-                    "datestamp": "1706298861",
+                    "version": "1.0.4",
+                    "datestamp": "1706390689",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
