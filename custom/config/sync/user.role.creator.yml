@@ -188,6 +188,7 @@ permissions:
   - 'safedelete view orphans report'
   - 'skip comment approval'
   - 'translate aafc_type taxonomy_term'
+  - 'translate any webform'
   - 'translate block_content'
   - 'translate branch taxonomy_term'
   - 'translate category taxonomy_term'
