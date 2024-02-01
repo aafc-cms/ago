@@ -152,7 +152,6 @@ module:
   slick: 0
   slick_entityreference: 0
   smtp: 0
-  swiftmailer: 0
   symfony_mailer_lite: 0
   system: 0
   taxonomy: 0
