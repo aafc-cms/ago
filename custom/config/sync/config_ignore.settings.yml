@@ -37,7 +37,6 @@ ignored_config_entities:
   - mailsystem.settings
   - smtp
   - smtp.settings
-  - swiftmailer.transport
   - symfony_mailer_lite.symfony_mailer_lite_transport.smtp
   - system.mail
   - system.menu.devel
