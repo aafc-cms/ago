@@ -111,7 +111,8 @@
             '<input type="checkbox" id="menu-disabled-links-switch" name="menu-disabled-links-switch" value="enabled" checked>' +
             '<label for="menu-disabled-links-switch" class="show-disabled"> ' + Drupal.t('Hide disabled items') + '</label>' +
             '</form>';
-            $('div.region-content .tabledrag-toggle-weight-wrapper').prepend(disabledMenuLinkHtml);
+            if ($('#menu-disabled-links-form').length < 1) {
+              $('div.region-content .tabledrag-toggle-weight-wrapper').prepend(disabledMenuLinkHtml);
             $('table#menu-overview tr.menu-disabled').each(function(index, element) {
               $(this).hide();
             });
@@ -126,6 +127,7 @@
                 }
               });
             });
+            }
           }
         }//end if user is loggedIn
       }
