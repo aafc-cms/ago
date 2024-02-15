@@ -55,18 +55,18 @@ var MenuNavigation = function() {
       '</form>';
       if ($('#menu-disabled-links-form').length < 1) {
         $('#edit-menu-parent--description').first().append(disabledMenuLinkHtml);
+        $('#edit-menu-parent option').each(function(index, element) {
+          var aiguille = MenuNavigation.lang == 'en' ? 'disabled)' : 'désactivé)';
+          if (~$(element).text().indexOf(aiguille)) {
+            $(element).hide();
+          }
+        });
+        $("#menu-disabled-links-form").show();
+        $("#menu-disabled-links-switch").click(function(e) {
+          MenuNavigation.handleClickEvent(e);
+        });
+        $("#menu-disabled-links-form").show();
       }
-      $('#edit-menu-parent option').each(function(index, element) {
-        var aiguille = MenuNavigation.lang == 'en' ? 'disabled)' : 'désactivé)';
-        if (~$(element).text().indexOf(aiguille)) {
-          $(element).hide();
-        }
-      });
-      $("#menu-disabled-links-form").show();
-      $("#menu-disabled-links-switch").click(function(e) {
-        MenuNavigation.handleClickEvent(e);
-      });
-      $("#menu-disabled-links-form").show();
     }
     else {
       console.log('agri_admin/js/menu-navigation.js element with class menu-link-content-form  not found');

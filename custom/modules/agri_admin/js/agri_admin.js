@@ -113,20 +113,20 @@
             '</form>';
             if ($('#menu-disabled-links-form').length < 1) {
               $('div.region-content .tabledrag-toggle-weight-wrapper').prepend(disabledMenuLinkHtml);
-            $('table#menu-overview tr.menu-disabled').each(function(index, element) {
-              $(this).hide();
-            });
-            $('#menu-disabled-links-switch label.hide-disabled').hide();
-            $("#menu-disabled-links-switch").click(function(e) {
               $('table#menu-overview tr.menu-disabled').each(function(index, element) {
-                if ($(element).is(":hidden")) {
-                  $(element).show();
-                }
-                else {
-                  $(element).hide();
-                }
+                $(this).hide();
               });
-            });
+              $('#menu-disabled-links-switch label.hide-disabled').hide();
+              $("#menu-disabled-links-switch").click(function(e) {
+                $('table#menu-overview tr.menu-disabled').each(function(index, element) {
+                  if ($(element).is(":hidden")) {
+                    $(element).show();
+                  }
+                  else {
+                    $(element).hide();
+                  }
+                });
+              });
             }
           }
         }//end if user is loggedIn
