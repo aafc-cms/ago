@@ -33,6 +33,7 @@ if [ -z $1 ]; then
   echo "dev environment setup.";
   if [ -f html/sites/default/default.settings.php ]; then
     sed -i "s+^repository_root: .*$+repository_root: `pwd`+g" custom/config/splits/dev/git_status.settings.yml
+    sed -i "s+^repository_root: .*$+repository_root: `pwd`+g" custom/config/splits/live/git_status.settings.yml
   fi
 else
   if [ $1 == "live" ]; then
@@ -118,6 +119,24 @@ configureSettingsFile () {
 
 configureSettingsFile
 
+
+echo "Begin upgrade of gcweb library from 10.something to 14.5.0 and wet-boew from 4.0.50 to 4.0.74."
+pushd html/libraries;
+rm tmp -rf;
+mkdir tmp;
+pushd tmp;
+wget https://github.com/wet-boew/wet-boew/releases/download/v4.0.74/wet-boew-dist-4.0.74.zip
+wget https://github.com/wet-boew/GCWeb/releases/download/v14.5.0/themes-dist-14.5.0-gcweb.zip
+unzip wet-boew-dist-4.0.74.zip
+mv ../wet-boew wet-boew_orig
+mv wet-boew-dist-4.0.74/wet-boew ../
+unzip themes-dist-14.5.0-gcweb.zip
+mv ../theme-gcweb theme-gcweb_orig
+mv themes-dist-14.5.0-gcweb/GCWeb ../theme-gcweb
+popd
+rm ../libraries/tmp -r;
+popd;
+echo "End of upgrade for the gcweb library, now upgraded to gcweb 14.5.0 and wet-boew 4.0.74."
 if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
 fi
