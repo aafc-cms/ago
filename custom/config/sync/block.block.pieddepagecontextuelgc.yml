@@ -16,7 +16,7 @@ third_party_settings:
 id: pieddepagecontextuelgc
 theme: aafctheme
 region: footer
-weight: -13
+weight: -12
 provider: null
 plugin: 'menu_block:footer-contextual-fr'
 settings:

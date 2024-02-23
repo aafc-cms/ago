@@ -19,7 +19,7 @@ _core:
 id: aafctheme_sharewidgetblock
 theme: aafctheme
 region: content_footer
-weight: -13
+weight: -14
 provider: null
 plugin: share_widget_block
 settings:

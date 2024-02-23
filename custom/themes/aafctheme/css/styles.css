@@ -572,6 +572,11 @@ ul.feeds-cont li a {
   padding: 0px 2px;
 }
 
+/* line 2, ../sass/components/_didyoufind-webform.scss */
+#block-customdidyoufindwhatyouwerelookingfor #edit-initial-page-text {
+  display: none;
+}
+
 /* Make sure it's easy to click the language link. */
 /* line 3, ../sass/regions/_header.scss */
 a.language-link {
@@ -693,79 +698,79 @@ div.region-highlighted-front-only div.container-fluid {
   padding-right: 0;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 html[lang="fr"] .english-only {
   display: none !important;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 html[lang="en"] .french-only {
   display: none !important;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 footer#wb-info .landscape div.contextual.open ul.contextual-links li a {
   color: #333 !important;
 }
 
-/* line 56, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .icon.glyphicon.glyphicon-log-in {
   min-height: 20px;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 .region.region-content-footer {
   padding-top: 20px;
 }
 
-/* line 66, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 .navbar img {
   width: fit-content;
   max-width: 100%;
   height: auto;
 }
 
-/* line 73, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 #block-aafctheme-reportproblemblock {
   margin-top: .5em;
 }
 
 /*BUG FIX FOR LAYOUT BUILDER*/
-/* line 79, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 #drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *),
 #drupal-off-canvas *:after, #drupal-off-canvas *:before {
   all: revert;
 }
 
-/* line 84, ../sass/styles.scss */
+/* line 85, ../sass/styles.scss */
 .ui-dialog.ui-dialog-off-canvas {
   background: #efefef;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 89, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100%;
 }
-/* line 90, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited a.shr-opn.wb-lbx.btn.btn-default {
   display: block;
 }
 
 /* END BUG FIX FOR LAYOUT BUILDER */
 @media (max-width: 844px) and (min-width: 768px) {
-  /* line 96, ../sass/styles.scss */
+  /* line 97, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     right: 100px;
   }
 
-  /* line 99, ../sass/styles.scss */
+  /* line 100, ../sass/styles.scss */
   .form-inline .select-wrapper {
     right: 100px;
     position: relative;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 105, ../sass/styles.scss */
+  /* line 106, ../sass/styles.scss */
   #wb-srch input, .srchbox input {
     margin-right: 160px;
     border-right: 1px solid #ddd;

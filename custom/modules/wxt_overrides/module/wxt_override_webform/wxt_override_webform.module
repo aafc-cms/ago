@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * @file
+ * Contains wxt_override_webform.module.
+ */
+
+use Drupal\webform\Entity\Webform;
+use Drupal\webform\Entity\WebformSubmission;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_theme().
+ */
+function wxt_override_webform_theme($existing, $type, $theme, $path) {
+  return [
+    'custom-gcweb-inline-webform' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+    ],
+    'custom-gcweb-find-what-you-looking-for' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function wxt_override_webform_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['element']['#webform_id']) && $variables['element']['#webform_id'] == 'custom_gcweb_did_you_find--actions_02') {
+    $suggestion_exists = FALSE;
+    foreach ($suggestions as $suggestion) {
+      if ($suggestion == 'container__gcweb_did_you_find_actions') {
+        $suggestion_exists = TRUE;
+      }
+    }
+    if (!$suggestion_exists) {
+      $suggestions[] = 'container__gcweb_did_you_find_actions';
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function wxt_override_webform_webform_submission_presave(WebformSubmission $submission) {
+  $did_you_find_answer = $submission->getElementData('did_you_find_answer');
+
+  if (empty($did_you_find_answer)) {
+    // Since "No" button is really the next button for the wizard
+    // setting field value to "No" on presave.
+    $submission->setElementData('did_you_find_answer', 'No');
+  }
+}
+
+/**
+ * Implements hook_webform_submission_form_alter().
+ */
+function wxt_override_webform_webform_submission_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'webform_submission_custom_gcweb_did_you_find') !== FALSE) {
+    if ($form_state->get('current_page') == 'initial_page') {
+      // Add class to No button for spacing.
+      $form['actions']['wizard_next']['#attributes']['class'][] = 'mrgn-lft-sm';
+
+      // Add submit button on first page of wizard.
+      $form['actions']['submit_first_page'] = [
+        '#type' => 'submit',
+        '#value' => t('Yes'),
+        '#ajax' => [
+          'callback' => '_custom_gcweb_did_you_find_form_ajax_submit',
+          'wrapper' => $form['#form_wrapper_id'],
+          'method' => 'replace',
+          'effect' => 'fade',
+        ],
+        '#attributes' => [
+          'class' => ['btn btn-primary'],
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * AJAX callback function for Yes button on custom_gcweb_did_you_find webform.
+ */
+function _custom_gcweb_did_you_find_form_ajax_submit($form, $form_state) {
+  // Programmatically submit webform and mark answer as "Yes".
+  $webform_id = 'custom_gcweb_did_you_find';
+  $webform = Webform::load($webform_id);
+
+  $values = [
+    'webform_id' => $webform->id(),
+    'data' => [
+      'did_you_find_answer' => 'Yes',
+    ],
+  ];
+
+  $webform_submission = WebformSubmission::create($values);
+  $webform_submission->save();
+
+  // Build confirmation message.
+  $confirmation = [
+    '#type' => 'markup',
+    '#markup' => '<div class="webform-confirmation">
+                    <div class="webform-confirmation__message">
+                      <div class="gc-pg-hlpfl-thnk">
+                        <p class="h3 mrgn-tp-sm mrgn-bttm-sm"><span class="far fa-check-circle text-success mrgn-rght-sm" aria-hidden="true"></span> ' . t("Thank you for your feedback") . '</p>
+                      </div>
+                    </div>
+                  </div>',
+  ];
+
+  return $confirmation;
+}
+
+

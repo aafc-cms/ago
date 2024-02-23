@@ -18,8 +18,8 @@ third_party_settings:
     display_title_invisible: 0
 id: didyoufindwhatyouwerelookingfor
 theme: aafctheme
-region: content_footer
-weight: -12
+region: sidebar_first
+weight: -11
 provider: null
 plugin: find_what_you_looking_for
 settings:
