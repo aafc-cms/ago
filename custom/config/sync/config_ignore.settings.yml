@@ -1,44 +1,46 @@
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+mode: simple
 ignored_config_entities:
   - aafctheme.settings
   - agri_admin.settings
+  - 'autologout.*'
   - autologout.settings
+  - 'block.block.*'
   - block.block.media
   - block.block.media_2
-  - 'block.block.*'
-  - ~block.block.aafctheme_footertop
-  - ~block.block.aafctheme_footer
-  - ~block.block.aafctheme_footerfr
-  - ~block.block.aafctheme_datemodifiedblock
-  - ~block.block.aafctheme_sharewidgetblock
-  - ~block.block.footertop
-  - ~block.block.hautdepieddepage
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
-  - filebrowser.settings
-  - field.storage.user.field_password_expiration
   - field.field.user.user.field_last_password_reset
   - field.field.user.user.field_password_expiration
   - field.field.user.user.field_pending_expire_sent
   - field.storage.user.field_last_password_reset
   - field.storage.user.field_password_expiration
+  - field.storage.user.field_password_expiration
   - field.storage.user.field_pending_expire_sent
+  - filebrowser.settings
   - linkchecker.settings
-  - node.type.page
+  - mailsystem.settings
   - node.type.landing_page
-  - password_policy.settings
+  - node.type.page
   - password_policy
+  - 'password_policy.*'
   - simple_sitemap.sitemap.default
   - simple_sitemap.sitemap.index
   - simple_sitemap.type.default_hreflang
   - simple_sitemap.type.index
-  - mailsystem.settings
   - smtp
   - smtp.settings
   - symfony_mailer_lite.symfony_mailer_lite_transport.smtp
   - system.mail
   - system.menu.devel
-  - warmer.settings
   - ultimate_cron.job.password_policy_cron
+  - warmer.settings
+  - ~block.block.aafctheme_datemodifiedblock
+  - ~block.block.aafctheme_footer
+  - ~block.block.aafctheme_footerfr
+  - ~block.block.aafctheme_footertop
+  - ~block.block.aafctheme_sharewidgetblock
+  - ~block.block.footertop
+  - ~block.block.hautdepieddepage

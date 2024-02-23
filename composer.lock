@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "368f8c60807ba95ae1f88a2bc94cdaca",
+    "content-hash": "ce89fd9014d9d10d6203757e71f32aed",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -383,16 +383,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "10.1.8.2",
+            "version": "10.1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "6f327a84b178bb97c4991bc9ea96f010a1f2df21"
+                "reference": "7c201fbc1f9bc910fad0d348bfca8577ee898be7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=6f327a84b178bb97c4991bc9ea96f010a1f2df21",
-                "reference": "6f327a84b178bb97c4991bc9ea96f010a1f2df21",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=7c201fbc1f9bc910fad0d348bfca8577ee898be7",
+                "reference": "7c201fbc1f9bc910fad0d348bfca8577ee898be7",
                 "shasum": ""
             },
             "require": {
@@ -404,9 +404,10 @@
                 "drupal/bg_image_formatter": "^1.16",
                 "drupal/bigmenu": "^2.0",
                 "drupal/clientside_validation": "^4.0",
-                "drupal/config_ignore": "^2.4",
+                "drupal/config_filter": "^2.6",
+                "drupal/config_ignore": "^3.2",
                 "drupal/config_revision": "^1.0@alpha",
-                "drupal/config_split": "^2.0@RC",
+                "drupal/config_split": "^2.0",
                 "drupal/config_update": "^2.0@alpha",
                 "drupal/content_lock": "^2.3",
                 "drupal/content_moderation_notifications": "3.x-dev",
@@ -418,6 +419,7 @@
                 "drupal/devel_entity_updates": "^4.1.1",
                 "drupal/devel_kint_extras": "^1.1",
                 "drupal/dynamic_entity_reference": "^3.0",
+                "drupal/embed_block": "1.x-dev",
                 "drupal/entity_embed": "^1.3",
                 "drupal/entity_translation_unified_form": "^2.0.0-rc4",
                 "drupal/entityqueue": "^1.3",
@@ -435,6 +437,7 @@
                 "drupal/menu_admin_per_menu": "^1.3",
                 "drupal/moderated_content_bulk_publish": "^2.0",
                 "drupal/moderation_sidebar": "^1.7",
+                "drupal/node_revision_delete": "^2",
                 "drupal/panels": "4.7",
                 "drupal/purge": "^3.2",
                 "drupal/recreate_block_content": "^3.0",
@@ -451,7 +454,7 @@
                 "drupal/video_embed_field": "^2.0",
                 "drupal/views_data_export": "^1.3.0",
                 "drupal/views_published_or_roles": "^1.0",
-                "drupal/warmer": "^2.0.9",
+                "drupal/warmer": "2.0.11",
                 "drupal/webform": "^6.1.4",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal/workflow": "^1.4",
@@ -463,7 +466,6 @@
                 "behat/behat": "^3.0",
                 "drupal/coder": "^8.3.7",
                 "mikey179/vfsstream": "~1.2",
-                "sebastian/phpcpd": "*",
                 "squizlabs/php_codesniffer": "3.*"
             },
             "type": "project",
@@ -522,8 +524,11 @@
                 },
                 "patches": {
                     "drupal/core": {
-                        "BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-11-19/D93x-3194462-20.patch",
-                        "Performance and usability patch that replaces sansdesordre #3110371": "https://www.drupal.org/files/issues/2021-04-21/D91x-3110371-4.patch",
+                        "1585930 - Options module uses '_none' as a special value.": "https://www.drupal.org/files/issues/2023-07-14/1585930-93.patch",
+                        "2769407 - Treat NULL values as FALSE in views on boolean field filtering": "https://www.drupal.org/files/issues/2023-07-27/2769407_views_ui_null_option-10.1.x-84.patch",
+                        "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager": "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch",
+                        "3194462 - BigPipe when server under heavy load results in PHP notices": "https://www.drupal.org/files/issues/2021-11-19/D93x-3194462-20.patch",
+                        "3110371 - Performance and usability patch that replaces sansdesordre #3110371": "https://www.drupal.org/files/issues/2021-04-21/D91x-3110371-4.patch",
                         "Performance and scalability, do not load disabled menu links on the add/node /edit/node page/route.": "https://www.drupal.org/files/issues/2021-04-21/D9_performance_and_scalability-3202930-6.patch",
                         "file usage bug fixes": "https://www.drupal.org/files/issues/2020-04-03/2810355-64.patch",
                         "Improve wysiwyg entity embed media dialog add label to media hyperlinked to media": "https://www.drupal.org/files/issues/2020-11-11/D9-add_label_and_link_to_EditorMediaDialog-3182027-6.patch",
@@ -537,8 +542,7 @@
                         "3150294 - New translations for moderated nodes are not created in the initial workflow state": "https://www.drupal.org/files/issues/2022-05-13/3150294-115.patch",
                         "3241056 - Add changed time tracking to path_alias": "https://www.drupal.org/files/issues/2021-10-06/3241056_5.patch",
                         "3308707 - Create content can cause passing null parameter of type string is deprecated error for path_alias": "https://www.drupal.org/files/issues/2023-07-28/suppress_error_when_empty_path-3308707-20.patch.txt",
-                        "3302838 - With PHP 8.1+ configurations without uuid can result in mb_strtolower(): Passing null to parameter ": "https://www.drupal.org/files/issues/2023-05-15/3302838-25.patch",
-                        "2868294 - Call to a member function getThirdPartySetting() on null in ContentTranslationManager": "https://www.drupal.org/files/issues/2022-11-30/2868294-87.patch"
+                        "3302838 - With PHP 8.1+ configurations without uuid can result in mb_strtolower(): Passing null to parameter ": "https://www.drupal.org/files/issues/2023-05-15/3302838-25.patch"
                     },
                     "drupal/access_unpublished": {
                         "Adds a twig extension for access unpublished hash key link, patch 9.": "https://www.drupal.org/files/issues/2023-05-16/v1.1-access_unpublished-3054536-17.patch",
@@ -552,6 +556,9 @@
                     "drupal/css_editor": {
                         "3248990 - Optimize cache rebuilding using tags instead of flush all": "https://www.drupal.org/files/issues/2021-11-12/css-editor-replace-cache-flush-by-cache-tag-invalidation-3248990-5.diff"
                     },
+                    "drupal/config_ignore": {
+                        "3421466 - Facilitate config_ignore of split configs.": "https://git.drupalcode.org/project/config_ignore/-/merge_requests/22.patch"
+                    },
                     "drupalwxt/diff": {
                         "fix French revisions page always shows English revision state": "https://www.drupal.org/files/issues/2021-02-19/diff-show-correct-workflow-state-on-french-revisions-page-3199354-2.patch"
                     },
@@ -560,6 +567,16 @@
                     },
                     "drupal/entity_embed": {
                         "entity_embed-remove_image_attributes_from_div-3086162": "https://www.drupal.org/files/issues/2020-06-15/entity_embed-remove_image_attributes_from_div-3086162-13_0.patch"
+                    },
+                    "drupal/embed_block": {
+                        "3225938 - Added CKEDITOR plugin functionality": "https://www.drupal.org/files/issues/2022-02-05/3225938_include_binary_icon-18.patch",
+                        "3225938 - Limit selection to Content block (custom block content blocks) only.": "https://www.drupal.org/files/issues/2024-01-14/3225938-reqs_patch_18_limit_options-diff-59.patch"
+                    },
+                    "drupal/fontawesome": {
+                        "3409881 - Font awesome patch , for D10.1.6 compatibility.": "https://www.drupal.org/files/issues/2023-12-19/wxt5-3409880-03.patch"
+                    },
+                    "drupal/field_group": {
+                        "3111107 - Use patch 10 instead of patch 2.": "https://www.drupal.org/files/issues/2021-08-10/field_group_fix-translations_label_description_2021-08-10.patch"
                     },
                     "drupal/file_delete": {
                         "Add functionality to immediately delete files and override usage check": "https://www.drupal.org/files/issues/2022-10-10/3115158-instant-delete-25.patch"
@@ -574,8 +591,21 @@
                     "drupal/moderation_sidebar": {
                         "Synchronize moderation states between all translations of the entity": "https://www.drupal.org/files/issues/2020-06-17/sync_all_translations_states-3143559-18.patch"
                     },
+                    "drupal/node_revision_delete": {
+                        "Support only drafts deletion": "https://www.drupal.org/files/issues/2023-11-27/3217675-28.patch"
+                    },
+                    "drupal/page_manager": {
+                        "Enter drupal/page_manager patch #2752227 description here": "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch",
+                        "Enter drupal/page_manager patch #3096408 description here": "https://www.drupal.org/files/issues/2019-11-23/Issue-3096408-Page-Manager-issue-with-conflict-modul.patch"
+                    },
+                    "drupal/token": {
+                        "2924873": "https://www.drupal.org/files/issues/2023-06-14/tokens_body_with_summary-2924873-11.patch"
+                    },
                     "drupal/views_data_export": {
                         "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
+                    },
+                    "drupal/warmer": {
+                        "3368778 - Drush 12 compatibility": "https://git.drupalcode.org/project/warmer/-/merge_requests/13.patch"
                     },
                     "drupal/wxt_library": {
                         "part 1 When installing and enabling the Canada.ca theme, the footer is missing the menu and other elements. Stats Can provides a CDN for footer markup, but as far as I know Canada.ca doesn't provide this. It would be nice to have the footer complete on install.": "https://www.drupal.org/files/issues/2023-05-16/wxt-library-add-canada-ca-footer-twig-extension-3195014-31.patch"
@@ -619,9 +649,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.2"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.4"
             },
-            "time": "2024-02-01T13:30:40+00:00"
+            "time": "2024-02-14T21:52:37+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -3869,27 +3899,30 @@
         },
         {
             "name": "drupal/config_ignore",
-            "version": "2.4.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_ignore.git",
-                "reference": "8.x-2.4"
+                "reference": "8.x-3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "e0e45dde2d6927c5d26de59f352792fb6cf26554"
+                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "00335fc1ddeb4ed93f245dd6963d99b3c084c052"
             },
             "require": {
-                "drupal/config_filter": "^1 || ^2",
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/config_filter": "^1.8||^2.2",
+                "drush/drush": "^10 || ^11 || ^12"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1676045435",
+                    "version": "8.x-3.2",
+                    "datestamp": "1705226226",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3898,7 +3931,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3917,12 +3950,11 @@
                     "homepage": "https://www.drupal.org/user/413139"
                 }
             ],
-            "description": "Ignore certain configuration during import.",
+            "description": "Ignore certain configuration during import and export.",
             "homepage": "http://drupal.org/project/config_ignore",
             "support": {
                 "source": "https://git.drupalcode.org/project/config_ignore",
-                "issues": "https://drupal.org/project/config_ignore",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
+                "issues": "http://drupal.org/project/config_ignore"
             }
         },
         {
@@ -8916,17 +8948,17 @@
         },
         {
             "name": "drupal/migrate_tools",
-            "version": "6.0.2",
+            "version": "6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_tools.git",
-                "reference": "6.0.2"
+                "reference": "6.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_tools-6.0.2.zip",
-                "reference": "6.0.2",
-                "shasum": "9d6346306e52a6741f3eb52e32caaa95a2752ad0"
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-6.0.4.zip",
+                "reference": "6.0.4",
+                "shasum": "63c571aefece96b199ce8b8f90da648186502be4"
             },
             "require": {
                 "drupal/core": ">=9.1",
@@ -8944,8 +8976,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.2",
-                    "datestamp": "1694604959",
+                    "version": "6.0.4",
+                    "datestamp": "1707330330",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -19563,7 +19595,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/embed_block": 20,
         "drupal/filebrowser": 5,
         "drupal/ckeditor_codemirror": 10,
         "drupal/simple_gmap": 20,
