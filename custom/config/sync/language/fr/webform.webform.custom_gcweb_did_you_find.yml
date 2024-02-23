@@ -1,0 +1,22 @@
+title: 'Custom GCWeb - Avez-vous trouvé ce que vous cherchiez'
+elements: |
+  did_you_find_answer:
+    '#title': 'Avez-vous trouvé ce que vous cherchiez?'
+  initial_page_text:
+    '#text': "<h2 class=\"mrgn-tp-sm h5\">Avez-vous trouvé ce que vous cherchiez?</h2>\r\n"
+  actions_02:
+    '#wizard_next__label': Non
+  what_was_wrong:
+    '#title': 'Qu’est-ce qui n’allait pas?'
+    '#options':
+      problem1: 'Je ne peux pas <strong>trouver</strong> l’information'
+      problem2: 'L''information est difficile à <strong>comprendre</strong>'
+      problem3: 'Il y avait une erreur / quelque chose <strong>ne fonctionnait pas</strong>'
+      problem4: 'Autre raison'
+  problem6:
+    '#title': 'Veuillez fournir plus de détails'
+    '#description': "<p><strong>Vous ne recevrez aucune réponse. Les numéros de téléphone et les adresses électroniques seront supprimés.</strong></p>\r\n\r\n<p class=\"small\">Maximum de 300 caractères</p>"
+  actions_01:
+    '#submit__label': Soumettre
+settings:
+  confirmation_message: "<div class=\"gc-pg-hlpfl-thnk\">\r\n<p class=\"h3 mrgn-tp-sm mrgn-bttm-sm\"><span aria-hidden=\"true\" class=\"fa-check-circle far mrgn-rght-sm text-success\"> </span>Merci de vos commentaires</p>\r\n</div>"

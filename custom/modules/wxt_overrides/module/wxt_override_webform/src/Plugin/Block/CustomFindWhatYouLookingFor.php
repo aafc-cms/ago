@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\wxt_ext_webform\Plugin\Block;
+namespace Drupal\wxt_override_webform\Plugin\Block;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
@@ -14,15 +14,15 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Provides a 'FindWhatYouLookingFor' block.
+ * Provides a 'CustomFindWhatYouLookingFor' block.
  *
  * @Block(
- *  id = "find_what_you_looking_for",
+ *  id = "custom_find_what_you_looking_for",
  *  admin_label = @Translation("Did You Find What You Were Looking For"),
- *   category = @Translation("WxT Webform")
+ *   category = @Translation("Custom Webform")
  * )
  */
-class FindWhatYouLookingFor extends BlockBase implements ContainerFactoryPluginInterface {
+class CustomFindWhatYouLookingFor extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * The request stack.
@@ -46,7 +46,7 @@ class FindWhatYouLookingFor extends BlockBase implements ContainerFactoryPluginI
   protected $tokenManager;
 
   /**
-   * Creates a FindWhatYouLookingFor instance.
+   * Creates a CustomFindWhatYouLookingFor instance.
    *
    * @param array $configuration
    *   A configuration array containing information about the plugin instance.

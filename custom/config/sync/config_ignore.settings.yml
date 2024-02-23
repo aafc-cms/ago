@@ -37,6 +37,9 @@ ignored_config_entities:
   - system.menu.devel
   - ultimate_cron.job.password_policy_cron
   - warmer.settings
+  - webform.webform.*
+  - ~webform.webform.custom_gcweb_did_you_find
+  - ~block.block.customdidyoufindwhatyouwerelookingfor
   - ~block.block.aafctheme_datemodifiedblock
   - ~block.block.aafctheme_footer
   - ~block.block.aafctheme_footerfr
