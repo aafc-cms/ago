@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce89fd9014d9d10d6203757e71f32aed",
+    "content-hash": "ba4134499f4a58a16c2b07abba9f7f97",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -383,16 +383,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "10.1.8.4",
+            "version": "10.1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "7c201fbc1f9bc910fad0d348bfca8577ee898be7"
+                "reference": "5be11e2d7ab9f7254868ae820c159c7a7c8cd8ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=7c201fbc1f9bc910fad0d348bfca8577ee898be7",
-                "reference": "7c201fbc1f9bc910fad0d348bfca8577ee898be7",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=5be11e2d7ab9f7254868ae820c159c7a7c8cd8ef",
+                "reference": "5be11e2d7ab9f7254868ae820c159c7a7c8cd8ef",
                 "shasum": ""
             },
             "require": {
@@ -607,6 +607,9 @@
                     "drupal/warmer": {
                         "3368778 - Drush 12 compatibility": "https://git.drupalcode.org/project/warmer/-/merge_requests/13.patch"
                     },
+                    "drupal/webform": {
+                        "3389539 - AJAX error for css route of webform": "https://www.drupal.org/files/issues/2023-11-21/3389539-ajax-add-css-compatibility-19.patch"
+                    },
                     "drupal/wxt_library": {
                         "part 1 When installing and enabling the Canada.ca theme, the footer is missing the menu and other elements. Stats Can provides a CDN for footer markup, but as far as I know Canada.ca doesn't provide this. It would be nice to have the footer complete on install.": "https://www.drupal.org/files/issues/2023-05-16/wxt-library-add-canada-ca-footer-twig-extension-3195014-31.patch"
                     },
@@ -649,9 +652,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.4"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.5"
             },
-            "time": "2024-02-14T21:52:37+00:00"
+            "time": "2024-02-23T15:54:22+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -14928,16 +14931,16 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "0.5.1",
+            "version": "0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/php-svg-lib.git",
-                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456"
+                "reference": "732faa9fb4309221e2bd9b2fda5de44f947133aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
-                "reference": "8a8a1ebcf6aea861ef30197999f096f7bd4b4456",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/732faa9fb4309221e2bd9b2fda5de44f947133aa",
+                "reference": "732faa9fb4309221e2bd9b2fda5de44f947133aa",
                 "shasum": ""
             },
             "require": {
@@ -14968,9 +14971,9 @@
             "homepage": "https://github.com/PhenX/php-svg-lib",
             "support": {
                 "issues": "https://github.com/dompdf/php-svg-lib/issues",
-                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.1"
+                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.2"
             },
-            "time": "2023-12-11T20:56:08+00:00"
+            "time": "2024-02-07T12:49:40+00:00"
         },
         {
             "name": "phootwork/collection",
