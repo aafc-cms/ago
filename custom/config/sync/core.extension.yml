@@ -213,6 +213,7 @@ module:
   wxt_ext_webform: 0
   wxt_ext_workflow: 0
   wxt_library: 0
+  wxt_override_webform: 0
   wxt_overrides: 0
   wxt_translation: 0
   menu_admin_per_menu: 1
