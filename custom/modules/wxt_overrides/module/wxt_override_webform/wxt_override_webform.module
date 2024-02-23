@@ -28,16 +28,6 @@ function wxt_override_webform_theme($existing, $type, $theme, $path) {
   ];
 }
 
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function wxt_override_webform_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
-  if (!empty($variables['element']['#webform']) && !empty($variables['element']['#webform_key'])) {
-    $webform = $variables['element']['#webform'];
-    $field_name = $variables['element']['#webform_key'];
-    $suggestions[] = 'form_element__' . $webform . '__' . $field_name;
-  }
-}
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
