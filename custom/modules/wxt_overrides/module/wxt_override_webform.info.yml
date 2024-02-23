@@ -1,0 +1,6 @@
+name: WxT Override Webform
+type: module
+description: This module is alphabetically after wxt_ext_webform so can override it without changing the weight.
+package: WxT
+core_version_requirement: ^10 || ^11
+  - wxt_overrides
