@@ -1,4 +1,4 @@
-uuid: null
+uuid: bde726aa-9e93-4e9a-9b9a-0aad7e49283f
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - block_class
     - system
     - wxt_ext_blocks
-    - wxt_ext_webform
+    - wxt_override_webform
   theme:
     - aafctheme
 third_party_settings:
@@ -19,7 +19,7 @@ third_party_settings:
 id: customdidyoufindwhatyouwerelookingfor
 theme: aafctheme
 region: content_footer
-weight: -12
+weight: -15
 provider: null
 plugin: custom_find_what_you_looking_for
 settings:
@@ -32,4 +32,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/department/partners-agencies/canadian-pari-mutuel/contact/test-page-huan-eng-changed-march-4-2023\r\n/ministere/partenaires-agences/canadienne-pari-mutuel/communiquer/test-page-huan-fra-changed-march-7-2023\r\n/department/library-agriculture/test-page-lakshman-huan-duplicate-attribute-xmllangen\r\n/ministere/bibliotheque-lagriculture/test-page-lakshman-fr-huan-duplicate-attribute-xmllangen\r\n"
+    pages: "/contact\r\n/coordonnees\r\n"

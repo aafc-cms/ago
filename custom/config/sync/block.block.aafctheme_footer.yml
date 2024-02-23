@@ -21,7 +21,7 @@ _core:
 id: aafctheme_footer
 theme: aafctheme
 region: footer
-weight: -11
+weight: -9
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

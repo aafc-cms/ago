@@ -16,7 +16,7 @@ third_party_settings:
 id: hautdepieddepage
 theme: aafctheme
 region: footer
-weight: -12
+weight: -11
 provider: null
 plugin: 'menu_block:footer-top-fr'
 settings:

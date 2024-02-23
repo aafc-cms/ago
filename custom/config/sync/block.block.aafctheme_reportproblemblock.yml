@@ -21,7 +21,7 @@ _core:
 id: aafctheme_reportproblemblock
 theme: aafctheme
 region: content_footer
-weight: -14
+weight: -16
 provider: null
 plugin: report_problem_block
 settings:
@@ -43,5 +43,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: "/department/partners-agencies/canadian-pari-mutuel/contact/test-page-huan-eng-changed-march-4-2023\r\n/ministere/partenaires-agences/canadienne-pari-mutuel/communiquer/test-page-huan-fra-changed-march-7-2023\r\n/department/library-agriculture/test-page-lakshman-huan-duplicate-attribute-xmllangen\r\n/ministere/bibliotheque-lagriculture/test-page-lakshman-fr-huan-duplicate-attribute-xmllangen"
+    negate: false
+    pages: /this-page-does-not-exist
