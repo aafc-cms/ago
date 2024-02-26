@@ -173,6 +173,7 @@ module:
   video_embed_media: 0
   view_custom_table: 0
   views_bootstrap: 0
+  views_bulk_operations: 0
   views_data_export: 0
   views_infinite_scroll: 0
   views_published_or_roles: 0

@@ -6,9 +6,9 @@ ignored_config_entities:
   - agri_admin.settings
   - 'autologout.*'
   - autologout.settings
+  - 'block.block.*'
   - block.block.media
   - block.block.media_2
-  - 'block.block.*'
   - css_editor.theme.aafctheme
   - devel.settings
   - devel.toolbar.settings
@@ -38,13 +38,13 @@ ignored_config_entities:
   - ultimate_cron.job.password_policy_cron
   - warmer.settings
   - 'webform.webform.*'
-  - ~block.block.customdidyoufindwhatyouwerelookingfor
-  - ~block.block.aafctheme_reportproblemblock
   - ~block.block.aafctheme_datemodifiedblock
   - ~block.block.aafctheme_footer
   - ~block.block.aafctheme_footerfr
   - ~block.block.aafctheme_footertop
+  - ~block.block.aafctheme_reportproblemblock
   - ~block.block.aafctheme_sharewidgetblock
+  - ~block.block.customdidyoufindwhatyouwerelookingfor
   - ~block.block.customdidyoufindwhatyouwerelookingfor
   - ~block.block.footertop
   - ~block.block.hautdepieddepage
