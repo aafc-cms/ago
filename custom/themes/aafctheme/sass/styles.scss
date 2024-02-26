@@ -8,6 +8,7 @@
 
 @import 'anonymous/restrictions';
 @import 'anonymous/print_program_pages_view.scss';
+@import 'components/breadcrumb';
 @import 'components/draft-pending-views';
 @import 'components/container-fluid';
 @import 'components/front';
@@ -20,6 +21,7 @@
 @import 'regions/header';
 @import 'regions/highlighted-not-front';
 @import 'regions/highlighted-front-only';
+@import 'regions/footer';
 
 //@import 'layouts/header';
 //@import 'layouts/footer';
