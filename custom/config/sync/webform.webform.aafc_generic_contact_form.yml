@@ -426,7 +426,7 @@ settings:
   confirmation_type: page
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Your enquiry has been submitted and will be given due consideration.'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -527,7 +527,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'AAFC: Contact Us/AAC: Contactez NousAAFC: Contact Us/AAC: Contactez Nous: [webform_submission:values:subject]'
+      subject: 'AAFC: Contact us/AAC: Contactez-nous: [webform_submission:values:subject]'
       body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false

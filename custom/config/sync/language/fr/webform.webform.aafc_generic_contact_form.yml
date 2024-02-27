@@ -40,3 +40,5 @@ elements: |
   actions:
     '#submit__label': 'Envoyer le message'
 title: 'Formulaire de communication'
+settings:
+  confirmation_message: 'Votre demande a &eacute;t&eacute; soumise et sera d&ucirc;ment prise en consid&eacute;ration.'
