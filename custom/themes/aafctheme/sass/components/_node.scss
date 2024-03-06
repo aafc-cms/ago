@@ -13,9 +13,10 @@ body.user-logged-in.published-no {
     background-color: pink;
     border: 3px solid hotpink;
   }
-  div.region-header h1 {
-    background-color: pink;
-    border: 3px solid hotpink;
+  div.region-header h1#wb-cont {
+    border-bottom: 0.18em solid hotpink;
+    border-image: linear-gradient(to right, hotpink 71px, transparent 71px);
+    border-image-slice: 1;
   }
 }
 
@@ -30,9 +31,10 @@ body.user-logged-in.published-no.pending-draft {
     background-color: #FFECA9;
     border: 3px solid orange;
   }
-  div.region-header h1 {
-    background-color: #FFECA9;
-    border: 3px solid orange;
+  div.region-header h1#wb-cont {
+    border-bottom: 0.18em solid orange;
+    border-image: linear-gradient(to right, orange 71px, transparent 71px);
+    border-image-slice: 1;
   }
 }
 
@@ -41,9 +43,10 @@ body.user-logged-in[class*='archiv'] {
     background-color: blanchedalmond;
     border: 3px solid saddlebrown;
   }
-  div.region-header h1 {
-    background-color: blanchedalmond;
-    border: 3px solid saddlebrown;
+  div.region-header h1#wb-cont {
+    border-bottom: 0.18em solid saddlebrown;
+    border-image: linear-gradient(to right, saddlebrown 71px, transparent 71px);
+    border-image-slice: 1;
   }
 }
 
@@ -59,9 +62,10 @@ body.user-logged-in.viewer.published-no {
     background-color: unset;
     border: unset;
   }
-  div.region-header h1 {
-    background-color: unset;
-    border: unset;
+  div.region-header h1#wb-cont {
+    border-bottom: unset;
+    border-image: unset;
+    border-image-slice: unset;
   }
 }
 
@@ -72,9 +76,10 @@ body.user-logged-in.viewer.published-no.pending-draft {
     background-color: unset;
     border: unset;
   }
-  div.region-header h1 {
-    background-color: unset;
-    border: unset;
+  div.region-header h1#wb-cont {
+    border-bottom: unset;
+    border-image: unset;
+    border-image-slice: unset;
   }
 }
 
@@ -83,9 +88,10 @@ body.user-logged-in.viewer[class*='archiv'] {
     background-color: unset;
     border: unset;
   }
-  div.region-header h1 {
-    background-color: unset;
-    border: unset;
+  div.region-header h1#wb-cont {
+    border-bottom: unset;
+    border-image: unset;
+    border-image-slice: unset;
   }
 }
 
