@@ -145,93 +145,99 @@ body.user-logged-in.published-no article {
   border: 3px solid hotpink;
 }
 /* line 16, ../sass/components/_node.scss */
-body.user-logged-in.published-no div.region-header h1 {
-  background-color: pink;
-  border: 3px solid hotpink;
+body.user-logged-in.published-no div.region-header h1#wb-cont {
+  border-bottom: 0.18em solid hotpink;
+  border-image: linear-gradient(to right, hotpink 71px, transparent 71px);
+  border-image-slice: 1;
 }
 
 /* The following code will override the body.is-unpublished background-color that drupal sets by default */
-/* line 23, ../sass/components/_node.scss */
+/* line 24, ../sass/components/_node.scss */
 body.is-unpublished {
   background-color: white;
 }
 
 /* Unpublished revision pending to overwrite the published revision */
-/* line 29, ../sass/components/_node.scss */
+/* line 30, ../sass/components/_node.scss */
 body.user-logged-in.published-no.pending-draft article {
   background-color: #FFECA9;
   border: 3px solid orange;
 }
-/* line 33, ../sass/components/_node.scss */
-body.user-logged-in.published-no.pending-draft div.region-header h1 {
-  background-color: #FFECA9;
-  border: 3px solid orange;
+/* line 34, ../sass/components/_node.scss */
+body.user-logged-in.published-no.pending-draft div.region-header h1#wb-cont {
+  border-bottom: 0.18em solid orange;
+  border-image: linear-gradient(to right, orange 71px, transparent 71px);
+  border-image-slice: 1;
 }
 
-/* line 40, ../sass/components/_node.scss */
+/* line 42, ../sass/components/_node.scss */
 body.user-logged-in[class*='archiv'] article {
   background-color: blanchedalmond;
   border: 3px solid saddlebrown;
 }
-/* line 44, ../sass/components/_node.scss */
-body.user-logged-in[class*='archiv'] div.region-header h1 {
-  background-color: blanchedalmond;
-  border: 3px solid saddlebrown;
+/* line 46, ../sass/components/_node.scss */
+body.user-logged-in[class*='archiv'] div.region-header h1#wb-cont {
+  border-bottom: 0.18em solid saddlebrown;
+  border-image: linear-gradient(to right, saddlebrown 71px, transparent 71px);
+  border-image-slice: 1;
 }
 
-/* line 51, ../sass/components/_node.scss */
+/* line 54, ../sass/components/_node.scss */
 body.user-anonymous #edit-body-etuf-fr-0-format,
 body.user-anonymous #edit-body-0-format {
   display: none;
 }
 
-/* line 58, ../sass/components/_node.scss */
+/* line 61, ../sass/components/_node.scss */
 body.user-logged-in.viewer.published-no article {
   background-color: unset;
   border: unset;
 }
-/* line 62, ../sass/components/_node.scss */
-body.user-logged-in.viewer.published-no div.region-header h1 {
-  background-color: unset;
-  border: unset;
+/* line 65, ../sass/components/_node.scss */
+body.user-logged-in.viewer.published-no div.region-header h1#wb-cont {
+  border-bottom: unset;
+  border-image: unset;
+  border-image-slice: unset;
 }
 
 /* Unpublished revision pending to overwrite the published revision */
-/* line 71, ../sass/components/_node.scss */
+/* line 75, ../sass/components/_node.scss */
 body.user-logged-in.viewer.published-no.pending-draft article {
   background-color: unset;
   border: unset;
 }
-/* line 75, ../sass/components/_node.scss */
-body.user-logged-in.viewer.published-no.pending-draft div.region-header h1 {
-  background-color: unset;
-  border: unset;
+/* line 79, ../sass/components/_node.scss */
+body.user-logged-in.viewer.published-no.pending-draft div.region-header h1#wb-cont {
+  border-bottom: unset;
+  border-image: unset;
+  border-image-slice: unset;
 }
 
-/* line 82, ../sass/components/_node.scss */
+/* line 87, ../sass/components/_node.scss */
 body.user-logged-in.viewer[class*='archiv'] article {
   background-color: unset;
   border: unset;
 }
-/* line 86, ../sass/components/_node.scss */
-body.user-logged-in.viewer[class*='archiv'] div.region-header h1 {
-  background-color: unset;
-  border: unset;
+/* line 91, ../sass/components/_node.scss */
+body.user-logged-in.viewer[class*='archiv'] div.region-header h1#wb-cont {
+  border-bottom: unset;
+  border-image: unset;
+  border-image-slice: unset;
 }
 
-/* line 92, ../sass/components/_node.scss */
+/* line 98, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.published-no main .field--name-body::before,
 html:lang(en) body.viewer.published-no main .field--name-body::before {
   content: "Draft Version";
 }
 
-/* line 97, ../sass/components/_node.scss */
+/* line 103, ../sass/components/_node.scss */
 html:lang(fr) body.anonymous.published-no main .field--name-body::before,
 html:lang(fr) body.viewer.published-no main .field--name-body::before {
   content: "En brouillon";
 }
 
-/* line 102, ../sass/components/_node.scss */
+/* line 108, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.published-no main .field--name-body::before,
 html:lang(fr) body.anonymous.published-no main .field--name-body::before,
 html:lang(en) body.viewer.published-no main .field--name-body::before,
@@ -253,19 +259,19 @@ html:lang(fr) body.viewer.published-no main .field--name-body::before {
   text-shadow: 2px 2px #666;
 }
 
-/* line 123, ../sass/components/_node.scss */
+/* line 129, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(en) body.viewer.pending-draft main .field--name-body::before {
   content: "Pending Draft";
 }
 
-/* line 128, ../sass/components/_node.scss */
+/* line 134, ../sass/components/_node.scss */
 html:lang(fr) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   content: "Brouillon en attente";
 }
 
-/* line 133, ../sass/components/_node.scss */
+/* line 139, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(fr) body.anonymous.pending-draft main .field--name-body::before,
 html:lang(en) body.viewer.pending-draft main .field--name-body::before,
@@ -286,19 +292,19 @@ html:lang(fr) body.viewer.pending-draft main .field--name-body::before {
   text-shadow: 2px 2px #666;
 }
 
-/* line 153, ../sass/components/_node.scss */
+/* line 159, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.published-no-is-archived main .field--name-body::before,
 html:lang(en) body.viewer.published-no-is-archived main .field--name-body::before {
   content: "Archived Version";
 }
 
-/* line 158, ../sass/components/_node.scss */
+/* line 164, ../sass/components/_node.scss */
 html:lang(fr) body.anonymous.published-no-is-archived main .field--name-body::before,
 html:lang(fr) body.viewer.published-no-is-archived main .field--name-body::before {
   content: "Version archivée";
 }
 
-/* line 163, ../sass/components/_node.scss */
+/* line 169, ../sass/components/_node.scss */
 html:lang(en) body.anonymous.published-no-is-archived main .field--name-body::before,
 html:lang(fr) body.anonymous.published-no-is-archived main .field--name-body::before,
 html:lang(en) body.viewer.published-no-is-archived main .field--name-body::before,
@@ -320,7 +326,7 @@ html:lang(fr) body.viewer.published-no-is-archived main .field--name-body::befor
   text-shadow: 2px 2px #666;
 }
 
-/* line 186, ../sass/components/_node.scss */
+/* line 192, ../sass/components/_node.scss */
 body.node-1 div.followus.experimental h2.mrgn-tp-lg.h3 {
   display: block;
 }
