@@ -49,6 +49,6 @@ class AdminHelper {
     }
     $json = json_encode($jsonarray, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
     $fp = $filedirectory . "cache_warming.json";
-    $file = file_save_data($json, $fp, FileSystemInterface::EXISTS_REPLACE);
+    $file = \Drupal::service('file.repository')->writeData($json, $fp, FileSystemInterface::EXISTS_REPLACE);
   }
 }
