@@ -185,8 +185,10 @@
         },
         "patches": {
             "drupal/linkchecker": {
-                "321320 - Allow linkchecker in a non-standard environment, host and port substitution. TRY THIS PATCH IN CLOUD FOR TESTS":
-                "https://www.drupal.org/files/issues/2024-03-08/linkchecker2x-non_standard_env-3213210-27.patch"
+                "321320 - Allow linkchecker in a non-standard environment, host and port substitution without skip published option.":
+                "https://www.drupal.org/files/issues/2024-03-08/linkchecker2x-non_standard_env-3213210-31.patch",
+                "3426637 - Skip unpublished, new patch":
+                "https://www.drupal.org/files/issues/2024-03-08/linkchecker_renamed_setting-skip-unpublished-3426637-2.patch"
             },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
