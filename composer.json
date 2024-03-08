@@ -184,6 +184,10 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/linkchecker": {
+                "321320 - Allow linkchecker in a non-standard environment, host and port substitution. TRY NEWER PATCH IN CLOUD FOR A TEST, IGNORE THIS ONE":
+                "https://www.drupal.org/files/issues/2024-03-08/linkchecker2x-non_standard_env-3213210-27.patch"
+            },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
                 "build/wxt_split_password_policy.patch"
@@ -264,6 +268,10 @@
                 }
             },
             "agrcmsx/dxbase": {
+                "drupal/linkchecker": {
+                    "321320 - Allow linkchecker in a non-standard environment, host and port substitution. TRY NEWER PATCH IN CLOUD FOR A TEST, IGNORE THIS ONE":
+                    "https://www.drupal.org/files/issues/2022-05-09/3213210-22.patch"
+                },
                 "drupal/webform": {
                     "Enter drupal/webform patch #3212867 description here":
                     "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch",
