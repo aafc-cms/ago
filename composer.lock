@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10878d18022191b3108380cf498f52b1",
+    "content-hash": "49919dd9d49740ae46521951afe2ed88",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -383,16 +383,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "10.1.8.6",
+            "version": "10.1.8.7",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "b9e0dceab3a737c7e555ae9c97896c31c23f97a5"
+                "reference": "d9bb7dffc6a2900ddb87d7572ec830831f81ce6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=b9e0dceab3a737c7e555ae9c97896c31c23f97a5",
-                "reference": "b9e0dceab3a737c7e555ae9c97896c31c23f97a5",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=d9bb7dffc6a2900ddb87d7572ec830831f81ce6d",
+                "reference": "d9bb7dffc6a2900ddb87d7572ec830831f81ce6d",
                 "shasum": ""
             },
             "require": {
@@ -587,7 +587,8 @@
                     },
                     "drupal/linkchecker": {
                         "Linkchecker interval , 2 minute interval for debugging purposes": "https://www.drupal.org/files/issues/2021-05-07/linkchecker-interval_for_debugging-3212816-3.patch",
-                        "Allow linkchecker to work in a non-standard environment, provide host and port substitution.": "https://www.drupal.org/files/issues/2022-05-09/3213210-22.patch"
+                        "321320 - Allow linkchecker in a non-standard environment, host and port substitution without skip published option.": "https://www.drupal.org/files/issues/2024-03-08/linkchecker2x-non_standard_env-3213210-31.patch",
+                        "3426637 - Skip unpublished, new patch": "https://www.drupal.org/files/issues/2024-03-08/linkchecker_renamed_setting-skip-unpublished-3426637-2.patch"
                     },
                     "drupal/moderation_sidebar": {
                         "Synchronize moderation states between all translations of the entity": "https://www.drupal.org/files/issues/2020-06-17/sync_all_translations_states-3143559-18.patch"
@@ -656,9 +657,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.6"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/10.1.8.7"
             },
-            "time": "2024-02-27T12:09:28+00:00"
+            "time": "2024-03-08T15:27:15+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -8145,17 +8146,17 @@
         },
         {
             "name": "drupal/linkchecker",
-            "version": "2.0.0-alpha1",
+            "version": "2.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkchecker.git",
-                "reference": "2.0.0-alpha1"
+                "reference": "2.0.0-alpha2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkchecker-2.0.0-alpha1.zip",
-                "reference": "2.0.0-alpha1",
-                "shasum": "ee0a058ca14a776284fdc3f784f5edac01a5ded3"
+                "url": "https://ftp.drupal.org/files/projects/linkchecker-2.0.0-alpha2.zip",
+                "reference": "2.0.0-alpha2",
+                "shasum": "87a6843707dd457049336c3320cc6000179925f9"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10.0",
@@ -8167,8 +8168,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-alpha1",
-                    "datestamp": "1674444668",
+                    "version": "2.0.0-alpha2",
+                    "datestamp": "1705475131",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
