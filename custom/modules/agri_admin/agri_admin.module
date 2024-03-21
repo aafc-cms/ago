@@ -85,8 +85,13 @@ function agri_admin_page_attachments(array &$page) {
     if ($current_route == 'entity.node.edit_form' || $current_route == 'node.add') {
       $entity_id = NULL;
       $uuid = NULL;
+      $page['#attached']['drupalSettings']['special']['found_demo_topic'] = FALSE;
       if (AgriAdminHelper::getSampleTopicImageUuidAndEntityId($uuid, $entity_id)) {
         $page['#attached']['drupalSettings']['special']['found_demo_topic'] = TRUE;
+        if (is_null($uuid)) {
+          $uuid = FALSE;
+          $page['#attached']['drupalSettings']['special']['found_demo_topic'] = FALSE;
+        }
         $page['#attached']['drupalSettings']['special']['media_uuid'] = $uuid;
         $page['#attached']['drupalSettings']['special']['media_entity_id'] = $entity_id;
       }
@@ -388,7 +393,8 @@ function agri_admin_node_update(EntityInterface $entity) {
  * Implements hook_entity_type_predelete().
  */
 function agri_admin_media_predelete(EntityInterface $entity) {
-  if (strpos($entity->getName(), 'pecial_title520x') > 0 ||
+  if (strpos($entity->getName(), 'pecial_title825x') > 0 ||
+    strpos($entity->getName(), 'pecial_title520x') > 0 ||
     strpos($entity->getName(), 'top-banner-') > 0 ||
     strpos($entity->getName(), 'interlude-') > 0 ||
     strpos($entity->getName(), 'con-twitter-') > 0 ||
@@ -477,7 +483,8 @@ function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id)
     if (strpos($form_id, 'media') !== FALSE || strpos($form_id, 'delete')) {
       $media = Media::load($mid);
       $show_button = TRUE;
-      if (strpos($media->getName(), 'pecial_title520x') >= 1 ||
+      if (strpos($media->getName(), 'pecial_title825x') >= 1 ||
+        strpos($entity->getName(), 'pecial_title520x') > 0 ||
         strpos($media->getName(), 'top-banner-') > 0 ||
         strpos($media->getName(), 'interlude-') > 0 ||
         strpos($media->getName(), 'con-twitter-') > 0 ||

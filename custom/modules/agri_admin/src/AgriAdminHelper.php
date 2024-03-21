@@ -4,6 +4,7 @@ namespace Drupal\agri_admin;
 
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\Entity\Node;
+use Drupal\media\Entity\Media;
 use Drupal\access_unpublished\Entity\AccessToken;
 
 /**
@@ -1085,7 +1086,7 @@ class AgriAdminHelper {
     // static::addToLog(__function__);
     $database = \Drupal::database();
     $sql = "select fid, uuid from file_managed where uri like :filename_pattern";
-    $result = $database->query($sql, [':filename_pattern' => '%pecial_title520x200.png']);
+    $result = $database->query($sql, [':filename_pattern' => '%pecial_title825x200.png']);
     $fid = 0;
     if ($result) {
       while ($row = $result->fetchAssoc()) {
@@ -1184,4 +1185,129 @@ class AgriAdminHelper {
     return $tablename;
   }
 
+  public static function createMediaEntity($media_file = 'special_title825x200.png', $public_dir = 'legacy') {
+    $fid = 0;
+    $directory = $public_dir . '/' . $media_file;
+    static::addToLog("media_file: " . $media_file, TRUE);
+    static::addToLog("directory: " . $directory, TRUE);
+    $database = \Drupal::database();
+    $sql = "select fid, uuid from file_managed where uri like :filename_pattern";
+    $result = $database->query($sql, [':filename_pattern' => '%' . $media_file]);
+    $fid = 0;
+    $special_exists = TRUE;
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['fid']) || is_null($row['fid'])) {
+          $special_exists = FALSE;
+        }
+        $uuid = $row['uuid'];
+        $fid = $row['fid'];
+      }
+    }
+    else {
+      $special_exists = FALSE;
+    }
+    // Reset the result.
+    $result = NULL;
+    if (!$special_exists && $file = \Drupal\file\Entity\File::create(['uri' => 'public://' . $directory, 'status' => 1, 'uid' => 1])) {
+      $existing_files = \Drupal::entityTypeManager()
+        ->getStorage('file')
+        ->loadByProperties([
+        'uri' => 'public://' . $directory,
+      ]);
+      if (count($existing_files)) {
+        $existing = reset($existing_files);
+        $file->fid = $existing->id();
+        $file->setOriginalId($existing->id());
+        $file->setFilename($existing->getFilename());
+        $file->save();
+      }
+      else {
+        $file->save();
+      }
+    }
+    $database = \Drupal::database();
+    $sql = "select fid, uuid from file_managed where uri like :filename_pattern";
+    $result = $database->query($sql, [':filename_pattern' => '%' .  $media_file]);
+    if ($result) {
+      while ($row = $result->fetchAssoc()) {
+        if (!isset($row['fid']) || is_null($row['fid'])) {
+          return FALSE;
+        }
+        $uuid = $row['uuid'];
+        $fid = $row['fid'];
+      }
+    }
+    if ($fid) {
+      $file = \Drupal\file\Entity\File::load($fid);
+    }
+    static::addToLog("directory " . $directory, TRUE);
+    $path_parts = pathinfo($directory);
+    $filename = $path_parts['basename'];
+    $fileExtension = $path_parts['extension'];
+    $bundleType = '';
+    switch (strtolower($fileExtension)) {
+      case "doc":
+      case "docx":
+      case "json":
+      case "pdf":
+      case "ppt":
+      case "xls":
+      case "xlsm":
+      case "xlsx":
+        $bundleType = 'document';
+        $media = Media::create([
+          'bundle'           => $bundleType,
+          'uid'              => 1,
+          'title'       => $filename,
+          'field_document' => [
+            'target_id' => $file->id()
+          ],
+        ]);
+        $media->setName($filename)->setPublished(TRUE)->save();
+        break;
+      case "gif":
+      case "jfif":
+      case "jpg":
+      case "jpeg":
+      case "png":
+      case "tif":
+        $bundleType = 'image';
+        $media = Media::create([
+          'bundle'           => $bundleType,
+          'uid'              => 1,
+          /*'alt'       => $filename,*/ // WCAG says no , filename should not be same as title attribute. agrcms/d8#179 gitlab.
+          'image' => [
+            'target_id' => $file->id()
+          ],
+        ]);
+        $media->setName($filename)->setPublished(TRUE)->save();
+        break;
+      case "mp3":
+        $bundleType = 'audio_file';
+        $media = Media::create([
+          'bundle'           => $bundleType,
+          'uid'              => 1,
+          /*'title'       => $filename,*/ // WCAG says no , filename should not be same as title attribute. agrcms/d8#179.
+          'field_media_audio_file' => [
+            'target_id' => $file->id()
+          ],
+        ]);
+        $media->setName($filename)->setPublished(TRUE)->save();
+      case "mp4":
+      case "wmv":
+        $bundleType = 'video_file';
+        $media = Media::create([
+      'bundle'           => $bundleType,
+      'uid'              => 1,
+      /*'title'       => $filename,*/ // WCAG says no , filename should not be same as title attribute. agrcms/d8#179.
+      'field_media_video_file' => [
+        'target_id' => $file->id()
+      ],
+      ]);
+      $media->setName($filename)->setPublished(TRUE)->save();
+        break;
+
+    }
+  }
 }
