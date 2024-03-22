@@ -1,0 +1,14 @@
+uuid: d8e3a686-4874-4bf7-afd7-f73eb84c941a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+id: media.w0825px
+label: 'width 825px special'
+targetEntityType: media
+cache: true
