@@ -484,7 +484,7 @@ function agri_admin_form_alter(&$form, FormStateInterface $form_state, $form_id)
       $media = Media::load($mid);
       $show_button = TRUE;
       if (strpos($media->getName(), 'pecial_title825x') >= 1 ||
-        strpos($entity->getName(), 'pecial_title520x') > 0 ||
+        strpos($media->getName(), 'pecial_title520x') > 0 ||
         strpos($media->getName(), 'top-banner-') > 0 ||
         strpos($media->getName(), 'interlude-') > 0 ||
         strpos($media->getName(), 'con-twitter-') > 0 ||
