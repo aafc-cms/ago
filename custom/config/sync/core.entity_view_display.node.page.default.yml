@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
+    - field.field.node.page.field_dcterms_title_override_eng
+    - field.field.node.page.field_dcterms_title_override_fra
     - field.field.node.page.field_description
     - field.field.node.page.field_issued
     - field.field.node.page.field_keywords
@@ -155,6 +157,22 @@ content:
       link: true
     third_party_settings: {  }
     weight: 18
+    region: top
+  field_dcterms_title_override_eng:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: top
+  field_dcterms_title_override_fra:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
     region: top
   field_description:
     type: string
