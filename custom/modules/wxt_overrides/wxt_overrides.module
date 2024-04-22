@@ -168,7 +168,9 @@ function wxt_overrides_page_attachments(array &$page) {
   // Add page meta.
   $summary = '';
   $route_match = Utils::getRouteName();
-  if ($route_match == 'entity.node.canonical' && isset($page['#attached']['html_head'])) {
+
+  if (($route_match == 'entity.node.canonical' || $route_match == 'entity.node.revision' || $route_match == 'entity.node.latest_version') &&
+       isset($page['#attached']['html_head'])) {
     $metatags_module_head = $page['#attached']['html_head'];
     foreach ($metatags_module_head as $key => $value) {
       if (isset($value[0]['#attributes']['name'])) {
@@ -181,6 +183,7 @@ function wxt_overrides_page_attachments(array &$page) {
 
         if ($name == 'keywords') {
           $content = $value[0]['#attributes']['content'];
+
           $keywords = [
             '#tag' => 'meta',
             '#attributes' => [
@@ -214,7 +217,6 @@ function wxt_overrides_page_attachments(array &$page) {
             ],
           ];
           unset($page['#attached']['html_head'][$key]);
-          $page['#attached']['html_head'][] = [$dctermstitle, 'dcterms.title'];
         }
 
         if ($name == 'dcterms.type') {
@@ -319,6 +321,23 @@ function wxt_overrides_page_attachments(array &$page) {
       ];
     }
 
+    if ($langId == 'en') {
+      $dcterms_title_override = $node->get('field_dcterms_title_override_eng')->getString();
+    }
+    elseif ($langId == 'fr') {
+      $dcterms_title_override = $node->get('field_dcterms_title_override_fra')->getString();
+    }
+
+    if (!empty($dcterms_title_override)) {
+      $dctermstitle = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name'  => 'dcterms.title',
+          'content'   => $dcterms_title_override,
+        ],
+      ];
+    }
+
     if (!isset($dctermstype)) {
       $dctermstype = [
         '#tag' => 'meta',
@@ -370,6 +389,7 @@ function wxt_overrides_page_attachments(array &$page) {
       ],
     ];
 
+    $page['#attached']['html_head'][] = [$dctermstitle, 'dcterms.title'];
     $page['#attached']['html_head'][] = [$dctermsissued, 'dcterms.issued'];
     $page['#attached']['html_head'][] = [$dctermsmodified, 'dcterms.modified'];
     $page['#attached']['html_head'][] = [$dctermstype, 'dcterms.type'];

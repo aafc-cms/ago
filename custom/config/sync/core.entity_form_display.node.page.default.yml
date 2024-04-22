@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.page.field_created_by
     - field.field.node.page.field_dc_date_created
     - field.field.node.page.field_dcterms_subject
+    - field.field.node.page.field_dcterms_title_override_eng
+    - field.field.node.page.field_dcterms_title_override_fra
     - field.field.node.page.field_description
     - field.field.node.page.field_issued
     - field.field.node.page.field_keywords
@@ -40,6 +42,8 @@ third_party_settings:
   field_group:
     group_aafc_metadata_group:
       children:
+        - field_dcterms_title_override_eng
+        - field_dcterms_title_override_fra
         - field_description
         - field_keywords
         - field_created_by
@@ -224,7 +228,7 @@ content:
     third_party_settings: {  }
   field_created_by:
     type: string_textfield
-    weight: 17
+    weight: 32
     region: content
     settings:
       size: 60
@@ -232,7 +236,7 @@ content:
     third_party_settings: {  }
   field_dc_date_created:
     type: datetime_default
-    weight: 18
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -242,9 +246,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_dcterms_title_override_eng:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dcterms_title_override_fra:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_description:
     type: string_textfield
-    weight: 15
+    weight: 30
     region: content
     settings:
       size: 60
@@ -252,13 +272,13 @@ content:
     third_party_settings: {  }
   field_issued:
     type: datetime_default
-    weight: 19
+    weight: 34
     region: content
     settings: {  }
     third_party_settings: {  }
   field_keywords:
     type: string_textfield
-    weight: 16
+    weight: 31
     region: content
     settings:
       size: 60
@@ -293,7 +313,7 @@ content:
     third_party_settings: {  }
   field_modified:
     type: datetime_default
-    weight: 20
+    weight: 35
     region: content
     settings: {  }
     third_party_settings: {  }
