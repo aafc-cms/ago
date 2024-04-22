@@ -1,0 +1,19 @@
+uuid: 21bc6521-0278-4864-b735-cbe96b276b57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dcterms_title_override_fra
+    - node.type.page
+id: node.page.field_dcterms_title_override_fra
+field_name: field_dcterms_title_override_fra
+entity_type: node
+bundle: page
+label: 'dcterms:title override (French)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
