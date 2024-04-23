@@ -1,0 +1,19 @@
+uuid: 95ffd693-519f-46d1-993c-871d29020618
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dcterms_title_override_eng
+    - node.type.page
+id: node.page.field_dcterms_title_override_eng
+field_name: field_dcterms_title_override_eng
+entity_type: node
+bundle: page
+label: 'dcterms:title override (English)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
