@@ -183,7 +183,6 @@ function wxt_overrides_page_attachments(array &$page) {
 
         if ($name == 'keywords') {
           $content = $value[0]['#attributes']['content'];
-
           $keywords = [
             '#tag' => 'meta',
             '#attributes' => [
@@ -389,7 +388,9 @@ function wxt_overrides_page_attachments(array &$page) {
       ],
     ];
 
-    $page['#attached']['html_head'][] = [$dctermstitle, 'dcterms.title'];
+    if (isset($dctermstitle)) {
+      $page['#attached']['html_head'][] = [$dctermstitle, 'dcterms.title'];
+    }
     $page['#attached']['html_head'][] = [$dctermsissued, 'dcterms.issued'];
     $page['#attached']['html_head'][] = [$dctermsmodified, 'dcterms.modified'];
     $page['#attached']['html_head'][] = [$dctermstype, 'dcterms.type'];
