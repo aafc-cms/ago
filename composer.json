@@ -184,6 +184,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/linkchecker": {
+                "3426637 - Skip unpublished, new patch": "https://git.drupalcode.org/project/linkchecker/-/merge_requests/62.patch"
+            },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
                 "build/wxt_split_password_policy.patch"
@@ -249,6 +252,9 @@
                     "3248765 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2021-11-12/footnotes-provide-instance-visibility-to-links-3248765-5.patch",
                     "3119883 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2022-02-04/footnotes-value-as-placeholder-3119883-8.patch",
                     "3204959 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2021-11-16/footnotes-basic-styles-for-footnote-text-field-3204959-4.patch"
+                },
+                "drupal/linkchecker": {
+                    "3426637 - Skip unpublished, new patch": "https://www.drupal.org/files/issues/2024-03-08/linkchecker_renamed_setting-skip-unpublished-3426637-2.patch"
                 },
                 "drupal/moderation_sidebar": {
                     "3194841 - Override patch 3 with patch 7 instead.":
@@ -368,7 +374,8 @@
         "drupal/webform_revision_ui": "^1.0@alpha",
         "drupal/wxt_chart_stability": "^1.0@alpha",
         "egulias/email-validator": "4.0.2 as 3.2.6",
-        "drupal/swiftmailer": "^2.4.0"
+        "drupal/swiftmailer": "^2.4.0",
+        "drupal/linkchecker": "2.0.x-dev as 2.0.0-alpha2"
     },
     "authors": [
         {
