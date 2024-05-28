@@ -22,7 +22,7 @@ body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="view
   display: none;
 }
 /* line 12, ../sass/anonymous/_print_program_pages_view.scss */
-body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] tr.print-all-steps-program-pages td.views-field-draggableviews {
+body.role-is-anonymous.anonymous.user-anonymous form[data-drupal-selector^="views-form-print-all-steps-of-program-"] td.views-field-draggableviews {
   display: none;
 }
 /* line 15, ../sass/anonymous/_print_program_pages_view.scss */
