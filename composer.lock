@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49919dd9d49740ae46521951afe2ed88",
+    "content-hash": "1d5e00358f48e748600d36a3eb4b8b8d",
     "packages": [
         {
             "name": "agrcms/lightning",
@@ -8146,33 +8146,30 @@
         },
         {
             "name": "drupal/linkchecker",
-            "version": "2.0.0-alpha2",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkchecker.git",
-                "reference": "2.0.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkchecker-2.0.0-alpha2.zip",
-                "reference": "2.0.0-alpha2",
-                "shasum": "87a6843707dd457049336c3320cc6000179925f9"
+                "reference": "d76c0c5bca20c358a51436f04b6efc3855ec8657"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10.0",
-                "drupal/dynamic_entity_reference": "^3.0 || ^4.0"
+                "drupal/dynamic_entity_reference": "^1.16 || ^2.0 || ^3.0 || ^4.0"
             },
             "require-dev": {
                 "drupal/redirect": "^1.8"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.0-alpha2",
-                    "datestamp": "1705475131",
+                    "version": "2.0.0-alpha2+3-dev",
+                    "datestamp": "1713550775",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -9943,27 +9940,28 @@
         },
         {
             "name": "drupal/safedelete",
-            "version": "1.0.55",
+            "version": "1.0.56",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/safedelete.git",
-                "reference": "1.0.55"
+                "reference": "1.0.56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.55.zip",
-                "reference": "1.0.55",
-                "shasum": "d8c052749b9c37926853b98d37c983949bf1e594"
+                "url": "https://ftp.drupal.org/files/projects/safedelete-1.0.56.zip",
+                "reference": "1.0.56",
+                "shasum": "eee492e0797258d5a5d11bab531ee22a3a6b724f"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
-                "drupal/linkit": "*"
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/linkit": "*",
+                "ezyang/htmlpurifier": "^4.17"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.55",
-                    "datestamp": "1704828666",
+                    "version": "1.0.56",
+                    "datestamp": "1715034193",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -19595,6 +19593,12 @@
     "packages-dev": [],
     "aliases": [
         {
+            "package": "drupal/linkchecker",
+            "version": "2.0.9999999.9999999-dev",
+            "alias": "2.0.0-alpha2",
+            "alias_normalized": "2.0.0.0-alpha2"
+        },
+        {
             "package": "egulias/email-validator",
             "version": "4.0.2.0",
             "alias": "3.2.6",
@@ -19609,7 +19613,8 @@
         "drupal/ckeditor4_codemirror": 20,
         "drupal/filehash_report": 10,
         "drupal/webform_revision_ui": 15,
-        "drupal/wxt_chart_stability": 15
+        "drupal/wxt_chart_stability": 15,
+        "drupal/linkchecker": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
