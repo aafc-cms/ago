@@ -12,6 +12,20 @@ use Drupal\agri_admin\AgriAdminHelper;
 use Drupal\agri_admin\Utils;
 
 /**
+ * Implements hook_ckeditor_settings_alter().
+ *
+ * Provide a custom css file for CKEditor version 4.
+ */
+function wxt_overrides_ckeditor_settings_alter(array &$page) {
+  $path = \Drupal::service('extension.list.module')->getPath('wxt_overrides');
+  // Load the followus css file in CKEditor.
+  $settings['contentsCss'] = [
+    $path . '/css/followus.css',
+  ];
+}
+
+
+/**
  * Implements hook_page_attachments().
  *
  * Provide aafc metatag elements in the head to each page.

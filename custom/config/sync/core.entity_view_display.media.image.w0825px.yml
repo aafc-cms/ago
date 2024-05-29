@@ -1,21 +1,41 @@
-uuid: 6abd8472-f727-4094-b577-692ad3f38f65
+uuid: 64d6351e-c963-4c6a-b524-a572d8a47d41
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.w0825px
     - field.field.media.image.field_aafc_category
     - field.field.media.image.field_image_link
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
+    - image.style.w0825px_special
     - media.type.image
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
-id: media.image.default
+id: media.image.w0825px
 targetEntityType: media
 bundle: image
-mode: default
-content: {  }
+mode: w0825px
+content:
+  image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: w0825px_special
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   entity_print_view_epub: true
@@ -25,7 +45,6 @@ hidden:
   field_image_link: true
   field_media_image: true
   field_media_in_library: true
-  image: true
   langcode: true
   name: true
   thumbnail: true

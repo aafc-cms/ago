@@ -9,6 +9,7 @@ dependencies:
     - core.entity_view_mode.media.thumbnail
     - core.entity_view_mode.media.token
     - core.entity_view_mode.media.w0520px
+    - core.entity_view_mode.media.w0825px
     - core.entity_view_mode.media.w100
     - core.entity_view_mode.media.w1000
     - core.entity_view_mode.media.w1200
@@ -160,6 +161,7 @@ filters:
         thumbnail: thumbnail
         token: token
         w0520px: w0520px
+        w0825px: w0825px
         w100: w100
         w1000: w1000
         w1200: w1200
@@ -272,6 +274,12 @@ filters:
       auto: ''
       block: '0'
       exclude_above: '0'
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -46
+    settings: {  }
   wxt_chart_stability_compatibilityfilter:
     id: wxt_chart_stability_compatibilityfilter
     provider: wxt_chart_stability
@@ -285,10 +293,4 @@ filters:
     provider: wxt_ext_blocks
     status: false
     weight: -32
-    settings: {  }
-  filter_image_lazy_load:
-    id: filter_image_lazy_load
-    provider: filter
-    status: true
-    weight: -46
     settings: {  }
