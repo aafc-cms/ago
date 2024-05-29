@@ -68,6 +68,12 @@ function agri_admin_preprocess_html(&$variables) {
  * Adds the agri-admin libraries to each page.
  */
 function agri_admin_page_attachments(array &$page) {
+
+  $current_route_anonymous = \Drupal::routeMatch()->getRouteName();
+  if ($current_route_anonymous == 'view.print_all_steps_of_program_advance_payments_program.page_1') {
+    $page['#attached']['library'][] = 'agri_admin/print_all_steps_of_program';
+  }
+
   $user = \Drupal::currentUser();
   if ($user->hasPermission('aafc admin styles')) {
     $page['#attached']['library'][] = 'agri_admin/agri-admin';
@@ -609,8 +615,6 @@ function agri_admin_node_presave(EntityInterface $entity) {
         $entity->set('field_modified', $dt->format('Y-m-d'));
       }
     }
-
-    // AgriAdminHelper::addToLog('update_date_modified_str: ' . $update_date_modified_str, TRUE);.
   }
 
   foreach ($roles as $value) {

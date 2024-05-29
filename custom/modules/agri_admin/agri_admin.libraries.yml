@@ -64,3 +64,10 @@ agri_moderated_content:
   dependencies:
     - core/jquery
     - core/drupalSettings
+
+print_all_steps_of_program:
+  js:
+    js/print-all-steps-of-program.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
