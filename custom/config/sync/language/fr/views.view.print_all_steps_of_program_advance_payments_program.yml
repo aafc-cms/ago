@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      title: 'Imprimer toutes les étapes du programme de paiements anticipés'
+      fields:
+        title:
+          label: Titre

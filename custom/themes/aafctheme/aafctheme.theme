@@ -286,7 +286,7 @@ function aafctheme_preprocess_input__button__submit(&$vars) {
     $label = (string) $vars['label'];
     // \Drupal\agri_admin\AgriAdminHelper::addToLog('debug? : <pre>' . print_r(array_keys($vars),TRUE) . '</pre>' , TRUE);
     if ($label == 'Appliquer aux éléments sélectionnés' || $label == 'Apply to selected items') {
-      $label = t('Download PDF version');
+      $label = t('Download PDF');
       $vars['label'] = $label;
     }
   }
