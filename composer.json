@@ -373,8 +373,6 @@
         "drupal/filehash_report": "^1.0@beta",
         "drupal/webform_revision_ui": "^1.0@alpha",
         "drupal/wxt_chart_stability": "^1.0@alpha",
-        "egulias/email-validator": "4.0.2 as 3.2.6",
-        "drupal/swiftmailer": "^2.4.0",
         "drupal/linkchecker": "2.0.x-dev as 2.0.0-alpha2"
     },
     "authors": [
