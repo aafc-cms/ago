@@ -32,6 +32,7 @@ dependencies:
     - block_class
     - block_content
     - comment
+    - config_translation
     - content_moderation
     - content_translation
     - contextual
@@ -182,6 +183,7 @@ permissions:
   - 'translate block_content'
   - 'translate branch taxonomy_term'
   - 'translate category taxonomy_term'
+  - 'translate configuration'
   - 'translate dcterms_subject taxonomy_term'
   - 'translate image media'
   - 'translate intended_audience taxonomy_term'
