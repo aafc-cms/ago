@@ -68,9 +68,8 @@ function agri_admin_preprocess_html(&$variables) {
  * Adds the agri-admin libraries to each page.
  */
 function agri_admin_page_attachments(array &$page) {
-
   $current_route_anonymous = \Drupal::routeMatch()->getRouteName();
-  if ($current_route_anonymous == 'view.print_all_steps_of_program_advance_payments_program.page_1') {
+  if (strpos($current_route_anonymous,'view.print_all_steps_of_program_') !== FALSE) {
     $page['#attached']['library'][] = 'agri_admin/print_all_steps_of_program';
   }
 
