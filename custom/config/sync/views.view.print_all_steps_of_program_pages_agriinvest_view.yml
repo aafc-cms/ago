@@ -20,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Print all steps of AgriInvest program pages'
+      title: 'Print all steps of AgriInvest program'
       fields:
         node_bulk_form:
           id: node_bulk_form
