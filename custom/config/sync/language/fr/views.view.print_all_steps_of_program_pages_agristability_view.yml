@@ -1,4 +1,7 @@
 display:
   default:
     display_options:
-      title: 'Imprimer toutes les étapes des pages du programme Agri-stabilité'
+      title: 'Imprimer toutes les étapes du programme Agri-stabilité'
+      fields:
+        title:
+          label: Titre
