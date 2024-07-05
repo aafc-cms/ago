@@ -92,16 +92,18 @@ var Special = function() {
         //touche pas
         oldcontent = CKEDITOR.instances["edit-body-0-value"].getData();
         oldcontentother = CKEDITOR.instances[Special.otherLangBodySelector].getData();
-        var imgplaceholder = '<img class="img-responsive" alt="#" src="https://design.canada.ca/coded-layout/images/theme-topic-img-825x200.jpg">';
+        var imgplaceholder = '<div data-bgimg="https://design.canada.ca/coded-layout/images/theme-topic-img-825x200.jpg" class="mrgn-tp-xl wb-init wb-bgimg-inited" id="wb-auto-4" style="background-image: url(&quot;https://design.canada.ca/coded-layout/images/theme-topic-img-825x200.jpg&quot;);"></div>';
         if (Special.specialsettings.found_demo_topic) {
           var uuid = Special.specialsettings.media_uuid;
           var entity_id = Special.specialsettings.media_entity_id;
-          imgplaceholder = '<drupal-media data-entity-type="media" data-entity-uuid="'+uuid+'" data-view-mode="w0825px"></drupal-media>';
+          //'drupal-media' adds 'Edit media' button to the image in edit mode. However the button renders improperly
+          //if the image size is too big. So disable it for now.
+          //imgplaceholder = '<drupal-media data-entity-type="media" data-entity-uuid="'+uuid+'" data-view-mode="w0825px"></drupal-media>';
         }
         oldtitle = $('#edit-title-0-value').val();
         oldtitleother = $(Special.otherLangTitleSelector).val();
-        newcontent = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="intro col-md-6 col-sm-12 mrgn-bttm-md"><h1 class="mrgn-tp-lg" property="name" id="'+Special.h1SpecialId+'">'+oldtitle+'</h1><p class="pagetag">1-2 sentences that describe the topics and top tasks that can be accessed on this page.</p></div><div class="col-md-6 pstn-rght-md mrgn-tp-lg hidden-sm hidden-xs guidance-js-hide">'+imgplaceholder+'</div></div>';
-        newcontentother = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="intro col-md-6 col-sm-12 mrgn-bttm-md"><h1 class="mrgn-tp-lg" property="name" id="'+Special.h1SpecialId+'">'+oldtitleother+'</h1><p class="pagetag">1 ou 2 phrases d’introduction qui définissent les sous-sujets et les tâches principales qui peuvent être consultés sur cette page.</p></div><div class="col-md-6 pstn-rght-md mrgn-tp-lg hidden-sm hidden-xs guidance-js-hide">'+imgplaceholder+'</div></div>';
+        newcontent = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="intro col-md-6 col-sm-12 mrgn-bttm-md"><h1 class="mrgn-tp-lg" property="name" id="'+Special.h1SpecialId+'">'+oldtitle+'</h1><p class="pagetag">1-2 sentences that describe the topics and top tasks that can be accessed on this page.</p></div><div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs provisional gc-topic-bg">'+imgplaceholder+'</div></div>';
+        newcontentother = '<div id="'+Special.spSpecialSelectorId+'" class="row profile"><div class="intro col-md-6 col-sm-12 mrgn-bttm-md"><h1 class="mrgn-tp-lg" property="name" id="'+Special.h1SpecialId+'">'+oldtitleother+'</h1><p class="pagetag">1 ou 2 phrases d’introduction qui définissent les sous-sujets et les tâches principales qui peuvent être consultés sur cette page.</p></div><div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs provisional gc-topic-bg">'+imgplaceholder+'</div></div>';
 
         // when checking the special title checkbox
         if (this.checked) {

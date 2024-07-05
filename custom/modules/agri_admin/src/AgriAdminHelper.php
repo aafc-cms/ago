@@ -1196,6 +1196,7 @@ class AgriAdminHelper {
     $fid = 0;
     $special_exists = TRUE;
     if ($result) {
+      // note that $result can point to an empty resultset
       while ($row = $result->fetchAssoc()) {
         if (!isset($row['fid']) || is_null($row['fid'])) {
           $special_exists = FALSE;
@@ -1204,9 +1205,9 @@ class AgriAdminHelper {
         $fid = $row['fid'];
       }
     }
-    else {
-      $special_exists = FALSE;
-    }
+
+    $special_exists = $fid != 0;
+
     // Reset the result.
     $result = NULL;
     if (!$special_exists && $file = \Drupal\file\Entity\File::create(['uri' => 'public://' . $directory, 'status' => 1, 'uid' => 1])) {
@@ -1294,18 +1295,19 @@ class AgriAdminHelper {
           ],
         ]);
         $media->setName($filename)->setPublished(TRUE)->save();
+        break;
       case "mp4":
       case "wmv":
         $bundleType = 'video_file';
         $media = Media::create([
-      'bundle'           => $bundleType,
-      'uid'              => 1,
-      /*'title'       => $filename,*/ // WCAG says no , filename should not be same as title attribute. agrcms/d8#179.
-      'field_media_video_file' => [
-        'target_id' => $file->id()
-      ],
-      ]);
-      $media->setName($filename)->setPublished(TRUE)->save();
+          'bundle'           => $bundleType,
+          'uid'              => 1,
+          /*'title'       => $filename,*/ // WCAG says no , filename should not be same as title attribute. agrcms/d8#179.
+          'field_media_video_file' => [
+            'target_id' => $file->id()
+          ],
+        ]);
+        $media->setName($filename)->setPublished(TRUE)->save();
         break;
 
     }
