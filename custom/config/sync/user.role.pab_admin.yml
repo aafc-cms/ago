@@ -36,6 +36,7 @@ dependencies:
     - content_moderation
     - content_translation
     - contextual
+    - draggableviews
     - dropzonejs
     - entity_browser
     - file
@@ -78,6 +79,7 @@ permissions:
   - 'access block library'
   - 'access content overview'
   - 'access contextual links'
+  - 'access draggableviews'
   - 'access files overview'
   - 'access media overview'
   - 'access otherbrowser entity browser pages'
