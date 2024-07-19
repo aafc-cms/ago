@@ -1,25 +1,22 @@
 uuid: 2908821c-50c9-461a-a0f6-12f757afb650
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - webform.webform.gcweb_did_you_find
   module:
-    - block_class
     - system
     - wxt_ext_blocks
     - wxt_ext_webform
   theme:
     - aafctheme
 third_party_settings:
-  block_class:
-    classes: 'col-sm-7 col-lg-6'
   wxt_ext_blocks:
     display_title_invisible: 0
 id: didyoufindwhatyouwerelookingfor
 theme: aafctheme
-region: sidebar_first
-weight: -11
+region: content_footer
+weight: -10
 provider: null
 plugin: find_what_you_looking_for
 settings:
@@ -32,4 +29,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/department/partners-agencies/canadian-pari-mutuel/contact/test-page-huan-eng-changed-march-4-2023\r\n/ministere/partenaires-agences/canadienne-pari-mutuel/communiquer/test-page-huan-fra-changed-march-7-2023\r\n/department/library-agriculture/test-page-lakshman-huan-duplicate-attribute-xmllangen\r\n/ministere/bibliotheque-lagriculture/test-page-lakshman-fr-huan-duplicate-attribute-xmllangen\r\n"
+    pages: "/contact\r\n/coordonnees\r\n/contact/regional-offices\r\n/coordonnees/bureaux-regionaux"

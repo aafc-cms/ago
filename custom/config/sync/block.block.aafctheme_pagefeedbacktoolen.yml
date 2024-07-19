@@ -1,0 +1,37 @@
+uuid: 18ff75a0-18eb-4da2-a9ea-563139de7426
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5ff747f2-57b7-4d4f-8772-ad91ec721281'
+  module:
+    - block_class
+    - block_content
+    - system
+    - wxt_ext_blocks
+  theme:
+    - aafctheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-8 col-md-9 col-lg-9'
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: aafctheme_pagefeedbacktoolen
+theme: aafctheme
+region: content_footer
+weight: -17
+provider: null
+plugin: 'block_content:5ff747f2-57b7-4d4f-8772-ad91ec721281'
+settings:
+  id: 'block_content:5ff747f2-57b7-4d4f-8772-ad91ec721281'
+  label: 'Page Feedback Tool EN'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/node/3310\r\n/contact\r\n/coordonnees\r\n/contact/regional-offices\r\n/coordonnees/bureaux-regionaux\r\n/contact/test-page-90\r\n/coordonnees/page-essaie-90"

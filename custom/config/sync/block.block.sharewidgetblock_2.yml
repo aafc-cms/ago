@@ -1,6 +1,6 @@
 uuid: 42d00f60-47d1-42e9-8292-92c3b93c4652
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - block_class
@@ -11,13 +11,13 @@ dependencies:
     - aafctheme
 third_party_settings:
   block_class:
-    classes: 'col-sm-3 col-sm-offset-1 col-lg-offset-3 pull-right'
+    classes: 'col-sm-3 col-sm-offset-1 col-lg-offset-3'
   wxt_ext_blocks:
     display_title_invisible: 0
 id: sharewidgetblock_2
 theme: aafctheme
 region: content_footer
-weight: -13
+weight: -12
 provider: null
 plugin: share_widget_block
 settings:

@@ -1,6 +1,6 @@
 uuid: c24f07fa-6390-476a-b03c-d8027c407739
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - block_class
@@ -45,5 +45,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
+    negate: false
     pages: "/department/partners-agencies/canadian-pari-mutuel/contact/test-page-huan-eng-changed-march-4-2023\r\n/ministere/partenaires-agences/canadienne-pari-mutuel/communiquer/test-page-huan-fra-changed-march-7-2023\r\n/department/library-agriculture/test-page-lakshman-huan-duplicate-attribute-xmllangen\r\n/ministere/bibliotheque-lagriculture/test-page-lakshman-fr-huan-duplicate-attribute-xmllangen\r\n"
