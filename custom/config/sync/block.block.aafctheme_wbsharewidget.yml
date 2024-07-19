@@ -1,0 +1,32 @@
+uuid: 308865bd-7b49-467b-b1ea-3833aeda8935
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:110988f5-dfdb-4124-a38d-c7b73a89f0b1'
+  module:
+    - block_class
+    - block_content
+    - wxt_ext_blocks
+  theme:
+    - aafctheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-4 col-md-3 pull-right'
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: aafctheme_wbsharewidget
+theme: aafctheme
+region: content_footer
+weight: -16
+provider: null
+plugin: 'block_content:110988f5-dfdb-4124-a38d-c7b73a89f0b1'
+settings:
+  id: 'block_content:110988f5-dfdb-4124-a38d-c7b73a89f0b1'
+  label: WB-ShareWidget
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

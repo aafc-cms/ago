@@ -16,7 +16,7 @@ third_party_settings:
 id: gccontextualfooter
 theme: aafctheme
 region: footer
-weight: -14
+weight: -15
 provider: null
 plugin: 'menu_block:footer-contextual'
 settings:
