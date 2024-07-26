@@ -10,6 +10,7 @@ dependencies:
     - node.type.webform
     - taxonomy.vocabulary.aafc_type
     - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.dcterms_subject
     - workflows.workflow.editorial
   module:
     - better_exposed_filters
@@ -1189,7 +1190,7 @@ display:
                 value:
                   editorial-archived: editorial-archived
               4:
-                title: 'Draft or Published'
+                title: Draft/Published
                 operator: in
                 value:
                   editorial-draft: editorial-draft
@@ -1336,6 +1337,59 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_subject_target_id_1:
+          id: field_subject_target_id_1
+          table: node__field_subject
+          field: field_subject_target_id
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_subject_target_id_1_op
+            label: 'aafc.subject (field_subject)'
+            description: null
+            use_operator: false
+            operator: field_subject_target_id_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_subject_target_id_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: 'aafc.subject (selection)'
+            description: ''
+            identifier: field_subject_target_id_1
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'None selected'
+                operator: empty
+                value: {  }
+              2:
+                title: 'Some selected'
+                operator: 'not empty'
+                value: {  }
+          reduce_duplicates: false
+          vid: category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
         field_subject_target_id:
           id: field_subject_target_id
           table: node__field_subject
@@ -1350,7 +1404,7 @@ display:
           exposed: true
           expose:
             operator_id: field_subject_target_id_op
-            label: 'aafc:subject'
+            label: 'aafc.subject (values)'
             description: ''
             use_operator: false
             operator: field_subject_target_id_op
@@ -1367,6 +1421,12 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1386,6 +1446,168 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_dcterms_subject_target_id_1:
+          id: field_dcterms_subject_target_id_1
+          table: node__field_dcterms_subject
+          field: field_dcterms_subject_target_id
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_dcterms_subject_target_id_1_op
+            label: 'dcterms.subject (field_dcterms_subject)'
+            description: null
+            use_operator: false
+            operator: field_dcterms_subject_target_id_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_dcterms_subject_target_id_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: 'dcterms.subject (selection)'
+            description: ''
+            identifier: field_dcterms_subject_target_id_1
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'None selected'
+                operator: empty
+                value: {  }
+              2:
+                title: 'Some selected'
+                operator: 'not empty'
+                value: {  }
+          reduce_duplicates: false
+          vid: dcterms_subject
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_dcterms_subject_target_id:
+          id: field_dcterms_subject_target_id
+          table: node__field_dcterms_subject
+          field: field_dcterms_subject_target_id
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_dcterms_subject_target_id_op
+            label: 'dcterms.subject (values)'
+            description: ''
+            use_operator: false
+            operator: field_dcterms_subject_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_dcterms_subject_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: dcterms_subject
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_meta_type_target_id_1:
+          id: field_meta_type_target_id_1
+          table: node__field_meta_type
+          field: field_meta_type_target_id
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_meta_type_target_id_1_op
+            label: 'dcterms.type (field_meta_type)'
+            description: null
+            use_operator: false
+            operator: field_meta_type_target_id_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_meta_type_target_id_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: 'dcterms.type (selection)'
+            description: ''
+            identifier: field_meta_type_target_id_1
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'None selected'
+                operator: empty
+                value: {  }
+              2:
+                title: 'Some selected'
+                operator: 'not empty'
+                value: {  }
+          reduce_duplicates: false
+          vid: aafc_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
         field_meta_type_target_id:
           id: field_meta_type_target_id
           table: node__field_meta_type
@@ -1400,7 +1622,7 @@ display:
           exposed: true
           expose:
             operator_id: field_meta_type_target_id_op
-            label: aafc-dcterms-gctype
+            label: 'dcterms.type (values)'
             description: ''
             use_operator: false
             operator: field_meta_type_target_id_op
@@ -1417,6 +1639,12 @@ display:
               creator: '0'
               editor: '0'
               reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
             reduce: false
           is_grouped: false
           group_info:
