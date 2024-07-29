@@ -1783,6 +1783,58 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        revision_log:
+          id: revision_log
+          table: node_revision
+          field: revision_log
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: revision_log
+          plugin_id: string
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: revision_log_op
+            label: 'Revision log message contains'
+            description: ''
+            use_operator: false
+            operator: revision_log_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: revision_log
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+              pab_admin: '0'
+              qa: '0'
+              ia: '0'
+              viewer: '0'
+              gcds: '0'
+              gcdp: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         name_1:
           id: name_1
           table: users_field_data
@@ -1992,9 +2044,8 @@ display:
             uid: uid
             moderation_state: moderation_state
             revision_timestamp: revision_timestamp
-            field_peer_review-revision_id: field_peer_review-revision_id
-            field_tracking_number-revision_id: field_tracking_number-revision_id
-            is_locked: is_locked
+            field_peer_review__revision_id: field_peer_review__revision_id
+            field_tracking_number__revision_id: field_tracking_number__revision_id
             name_1: name_1
             operations: operations
           default: '-1'
@@ -2005,8 +2056,8 @@ display:
               empty_column: false
               responsive: ''
             nid:
-              sortable: false
-              default_sort_order: asc
+              sortable: true
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -2046,23 +2097,16 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_peer_review-revision_id:
+            field_peer_review__revision_id:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_tracking_number-revision_id:
+            field_tracking_number__revision_id:
               sortable: false
               default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            is_locked:
-              sortable: true
-              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
