@@ -705,8 +705,8 @@ display:
           plugin_id: datetime
           operator: between
           value:
-            min: ' '
-            max: ' '
+            min: ' -365 day'
+            max: ' +1 day'
             value: ''
             type: date
           group: 1
@@ -931,26 +931,66 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            changed: changed
-            title: title
-            moderation_state: moderation_state
+            nid: nid
+            title_1: title_1
+            view_node: view_node
+            uid_1: uid_1
+            type: type
+            field_issued_1: field_issued_1
+            created: created
+            field_modified: field_modified
           default: '-1'
           info:
-            changed:
+            nid:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title_1:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            title:
+            view_node:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            moderation_state:
+            uid_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            type:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_issued_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_modified:
               sortable: false
               default_sort_order: asc
               align: ''
