@@ -228,9 +228,9 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
-          draggable_views_reference: this
+          draggable_views_reference: 'print_all_steps_of_program_advance_payments_program:page_1'
           draggable_views_null_order: after
-          draggable_views_pass_arguments: false
+          draggable_views_pass_arguments: 0
       arguments: {  }
       filters:
         nid:
