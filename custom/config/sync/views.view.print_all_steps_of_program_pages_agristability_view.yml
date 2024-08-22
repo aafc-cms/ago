@@ -5,6 +5,7 @@ dependencies:
   module:
     - draggableviews
     - node
+    - user
     - views_bootstrap
 id: print_all_steps_of_program_pages_agristability_view
 label: print_all_steps_of_program_pages_agristability_view
@@ -206,8 +207,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -420,6 +422,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags: {  }
   page_1:
     id: page_1
@@ -439,4 +442,5 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
+        - user.permissions
       tags: {  }
