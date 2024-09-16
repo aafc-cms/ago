@@ -193,6 +193,9 @@
             },
             "drupal/draggableviews": {
                 "3407717 - Override viewsFormSubmit method": "https://git.drupalcode.org/project/draggableviews/-/merge_requests/29.patch"
+            },
+            "drupal/core": {
+                "3221375 - Wrong language field labels after `drush cr` because of Drush language negotiation.": "https://www.drupal.org/files/issues/2024-02-23/3221375_lost-field-labels-translations.patch"
             }
         },
         "patches-ignore": {
