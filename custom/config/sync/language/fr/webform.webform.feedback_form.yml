@@ -1,0 +1,12 @@
+elements: |
+  was_this_information_useful_:
+    '#title': 'Ces renseignements vous ont-ils été utiles?'
+    '#options':
+      'Yes': Oui
+      'No': Non
+    '#required_error': 'Ce champ est obligatoire.'
+  help_us_make_this_site_better_meet_your_needs_please_submit_comm:
+    '#title': "Aidez-nous à mieux répondre à vos besoins. S'il vous plaît soumettre vos commentaires sur les améliorations que vous aimeriez voir."
+settings:
+  confirmation_message: "<h2>Merci!</h2>\r\n\r\n<p>Vos commentaires ont été envoyés.</p>"
+  confirmation_back_label: Retour
