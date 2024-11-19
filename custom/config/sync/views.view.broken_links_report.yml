@@ -6,6 +6,7 @@ dependencies:
     - system.menu.admin
     - user.role.administrator
     - user.role.creator
+    - user.role.pab_admin
   module:
     - csv_serialization
     - linkchecker
@@ -819,6 +820,7 @@ display:
           role:
             administrator: administrator
             creator: creator
+            pab_admin: pab_admin
       cache:
         type: tag
         options: {  }
@@ -1412,7 +1414,9 @@ display:
     position: 1
     display_options:
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/reports/linkchecker
       menu:
         type: normal
