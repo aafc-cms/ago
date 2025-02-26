@@ -2,7 +2,7 @@
   "name": "agrcmsx/config",
   "type": "drupal-custom-module",
   "require": {
-    "composer/installers": "^1.2"
+    "composer/installers": "*"
   }
 }
 

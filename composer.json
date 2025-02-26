@@ -39,91 +39,71 @@
             "url": "custom/themes/aafctheme"
         },
         {
-          "type": "path",
-          "url": "custom/modules/lightning"
-        },
-        {
-          "type": "path",
-          "url": "custom/modules/lightning_install",
-          "options": {
-            "symlink": true
-          }
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_banner_block"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_core"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_audio"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_bulk_upload"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_document"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_image"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_instagram"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_slideshow"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_twitter"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_media_video"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_page"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_layout"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_landing_page"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_map_block"
-        },
-        {
-            "type": "path",
-            "url": "custom/modules/lightning_workflow"
-        },
-        {
             "type": "path",
             "url": "custom/config"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "cdubz/ckeditor5-source-editing-codemirror",
+                "version": "35.1.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "ckeditor5-source-editing-codemirror"
+                },
+                "dist": {
+                    "url": "https://registry.npmjs.org/@cdubz/ckeditor5-source-editing-codemirror/-/ckeditor5-source-editing-codemirror-35.1.0.tgz",
+                    "type": "tar"
+                },
+                "require": {
+                    "composer/installers": "^1 || ^2"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "codemirror/codemirror",
+                "version": "5.65.8",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "codemirror"
+                },
+                "dist": {
+                    "url": "https://registry.npmjs.org/codemirror/-/codemirror-5.65.8.tgz",
+                    "type": "tar"
+                },
+                "require": {
+                    "composer/installers": "^1 || ^2"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "nnnick/chartjs",
+                "version": "v4.4.7",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chartjs/dist"
+                },
+                "dist": {
+                    "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js",
+                    "type": "file"
+                },
+                "require": {
+                    "composer/installers": "*"
+                }
+            }
         }
+
     ],
     "scripts": {
         "post-root-package-install": [
             "DrupalWxT\\WxT\\ScriptHandler::postCreateProject"
         ],
         "pre-install-cmd": [
-            "if [ -d html/sites/default ]; then chmod 775 html/sites/default; fi"
+            "if [ -d html/sites/default ]; then chmod 775 html/sites/default; fi;"
         ],
         "post-install-cmd": [
             "bash post_install.sh"
@@ -135,7 +115,19 @@
             "composer install"
         ]
     },
+    "require-dev": {
+        "drupal/coder": "^8.3.7",
+        "phpmd/phpmd": "@stable",
+        "mikey179/vfsstream": "~1.2",
+        "squizlabs/php_codesniffer": "^3.3"
+    },
     "extra": {
+        "merge-plugin": {
+            "include": [
+                "html/modules/contrib/webform/composer.libraries.json",
+                "html/modules/contrib/ckeditor4_codemirror/composer.libraries.json"
+            ]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "html/"
@@ -184,18 +176,17 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/linkchecker": {
-                "3426637 - Skip unpublished, new patch": "https://git.drupalcode.org/project/linkchecker/-/merge_requests/62.patch"
+            "drupal/core": {
+                "core breadcrumb empty patch":
+                "build/core_breadcrumb_empty.patch"
+            },
+            "drupal/safedelete": {
+                "3320470 - Allow override of the bulk operation validation with a checkbox":
+                "https://www.drupal.org/files/issues/2022-12-02/make-bulk-publish-verification-configurable-3320470-06.patch"
             },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
                 "build/wxt_split_password_policy.patch"
-            },
-            "drupal/draggableviews": {
-                "3407717 - Override viewsFormSubmit method": "https://git.drupalcode.org/project/draggableviews/-/merge_requests/29.patch"
-            },
-            "drupal/core": {
-                "3221375 - Wrong language field labels after `drush cr` because of Drush language negotiation.": "https://www.drupal.org/files/issues/2024-02-23/3221375_lost-field-labels-translations.patch"
             }
         },
         "patches-ignore": {
@@ -205,6 +196,11 @@
                     "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent":
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                }
+            },
+            "agrcmsx/dxbase": {
+                "drupal/entity_embed": {
+                    "3481413 - Fix PHP error": "https://www.drupal.org/files/issues/2024-10-17/entity_embed-3481413.patch"
                 }
             },
             "drupalwxt/wxt": {
@@ -243,28 +239,23 @@
                     "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch",
                     "1356276 - Overrides for profile and sub profile use 686 instead of 656": "https://www.drupal.org/files/issues/2021-06-29/D91x-1356276-656.patch"
                 },
-                "drupal/bootstrap": {
-                    "3209773 - patch included with bootstrap 3.2.5/3.2.4, only needed if using 3.2.3": "https://www.drupal.org/files/issues/2021-08-24/bootstrap-toggle_undefined-3209773-8.patch"
+                "drupal/layout_builder_st": {
+                    "3420063 - Fix member call to getConfig() on null in OverridesSectionStorage.php": "https://git.drupalcode.org/project/layout_builder_st/-/merge_requests/6.diff"
                 },
-                "drupal/ctools": {
-                    "is in dev patch":
-                    "https://www.drupal.org/files/issues/entityview-cache-metadata-2874176-2.patch"
+                "drupal/entity_embed": {
+                    "3481413 - Fix PHP error": "https://www.drupal.org/files/issues/2024-10-17/entity_embed-3481413.patch"
                 },
-                "drupal/field_group": {
-                    "3111107 - Remove patch , no longer works, override it with patch 10.":
-                    "https://www.drupal.org/files/issues/2020-02-04/3111107-2--fix-translations.patch"
-                },
-                "drupal/footnotes": {
-                    "3248765 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2021-11-12/footnotes-provide-instance-visibility-to-links-3248765-5.patch",
-                    "3119883 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2022-02-04/footnotes-value-as-placeholder-3119883-8.patch",
-                    "3204959 - Included in latest footnotes release.": "https://www.drupal.org/files/issues/2021-11-16/footnotes-basic-styles-for-footnote-text-field-3204959-4.patch"
-                },
-                "drupal/linkchecker": {
-                    "3426637 - Skip unpublished, new patch": "https://www.drupal.org/files/issues/2024-03-08/linkchecker_renamed_setting-skip-unpublished-3426637-2.patch"
+                "drupal/linkit": {
+                    "Detect and strip base URL from pasted URLs to increase matching hits":
+                    "https://www.drupal.org/files/issues/2021-02-02/3078075-26.patch"
                 },
                 "drupal/moderation_sidebar": {
                     "3194841 - Override patch 3 with patch 7 instead.":
                     "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
+                },
+                "drupal/password_policy": {
+                    "ignore password policy patch which is no longer needed with upgrade":
+                    "https://www.drupal.org/files/issues/2023-05-23/password_policy-d10.patch"
                 },
                 "drupal/page_manager": {
                     "3151905 ignore smulvih changes":
@@ -281,9 +272,6 @@
                     "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch",
                     "Enter drupal/webform patch 3279930": "https://www.drupal.org/files/issues/2022-05-11/webform-strpos-php81-webform-requirements-3279930-2.patch"
                 },
-                "drupal/bootstrap": {
-                  "3173776 - patch included with bootstrap 3.2.5/3.2.4, only needed if using 3.2.3": "https://www.drupal.org/files/issues/2020-09-29/bootstrap-3173776-3.patch"
-                },
                 "drupal/pathauto": {
                     "3107144 - Is only in latest releases.":
                     "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
@@ -295,91 +283,41 @@
             },
             "drupal/lightning_core": {
                 "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order ignore 8.8.x patch":
-                    "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order ignore 9.0.x patch":
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
                     "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent":
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
                     "overrides for profile and sub profile use 633 instead of 631":
-                    "https://www.drupal.org/files/issues/2020-12-11/1356276-631-by-mpotter-balsama-phenaproxima.patch"
-                }
-            },
-            "acquia/lightning": {
-                "drupal/core": {
+                    "https://www.drupal.org/files/issues/2020-12-11/1356276-631-by-mpotter-balsama-phenaproxima.patch",
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
                     "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent":
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                 }
+                }
             }
         }
     },
     "require": {
-        "agrcmsx/dxbase": "10.1.8.7",
-        "agrcmsx/aafctheme": "*",
+        "agrcmsx/dxbase": "10.4.0.10",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/config": "*",
-        "agrcmsx/prefer_latest_content": "*",
+        "agrcmsx/aafctheme": "*",
         "agrcmsx/wxt_overrides": "*",
-        "agrcms/lightning": "*",
-        "agrcms/lightning_banner_block": "*",
-        "agrcms/lightning_core": "*",
-        "agrcms/lightning_install": "*",
-        "agrcms/lightning_landing_page": "*",
-        "agrcms/lightning_layout": "*",
-        "agrcms/lightning_map_block": "*",
-        "agrcms/lightning_media": "*",
-        "agrcms/lightning_media_audio": "*",
-        "agrcms/lightning_media_bulk_upload": "*",
-        "agrcms/lightning_media_document": "*",
-        "agrcms/lightning_media_image": "*",
-        "agrcms/lightning_media_instagram": "*",
-        "agrcms/lightning_media_slideshow": "*",
-        "agrcms/lightning_media_twitter": "*",
-        "agrcms/lightning_media_video": "*",
-        "agrcms/lightning_page": "*",
-        "agrcms/lightning_workflow": "*",
-        "composer/installers": "^1.2 || ^2",
-        "cweagans/composer-patches": "^1.7.2",
-        "cypresslab/gitelephant": "^4.4.3",
-        "drupal/autologout": "1.3",
-        "drupal/bootstrap_site_alert": "^1.9",
-        "drupal/dropzonejs": "2.7.0",
-        "drupal/entity_translation_unified_form": "^2.0-rc2",
-        "drupal/filebrowser": "^3.1@RC",
-        "drupal/file_replace": "^1.2",
-        "drupal/honeypot": "^2.0",
-        "drupal/purge": "^3.2",
-        "drupal/reroute_email": "^2.0",
-	"drupal/simple_sitemap": "^4.1.4",
-        "drupal/title_length": "^2.0",
-        "drupal/varnish_purge": "^2.1",
-        "drupal/view_custom_table": "^2.0",
+        "agrcmsx/prefer_latest_content": "*",
+        "drupal/filebrowser": "^3.1",
         "drupal/media_library_edit": "^3.0",
-        "drupal/webform_translation_permissions": "^2.0",
-        "drupal/entity_embed": "^1.0",
-        "drupal/video_embed_field": "^2.0",
-        "drupal/crop": "^2.2",
-        "drupal/autologout": "^1.3",
-        "drupal/ckeditor_codemirror": "^3.0@beta",
-        "drupal/context_stack": "^1.0",
-        "drupal/views_bootstrap": "^5.3",
-        "drupal/webform": "^6.2.0",
-        "drupal/moderation_dashboard": "^1",
+        "drupal/reroute_email": "^2.3@RC",
+        "drupal/title_length": "^2.1",
+        "drupal/webform_translation_permissions": "2.0.x-dev",
+        "oomphinc/composer-installers-extender": "^1 || ^2",
         "drupal/simple_gmap": "4.0.x-dev",
-        "drupal/entity_print": "^2.11",
-	"drupal/ckeditor4_codemirror": "dev-1.0.x",
         "w8tcha/ckeditor-codemirror": "*",
         "wikimedia/composer-merge-plugin": "^2.1",
-        "mikehaertl/phpwkhtmltopdf": "~2.1",
-        "tecnickcom/tcpdf": "~6",
-        "drupal/draggableviews": "^2.1",
-        "drupal/filehash_report": "^1.0@beta",
-        "drupal/webform_revision_ui": "^1.0@alpha",
-        "drupal/wxt_chart_stability": "^1.0@alpha",
-        "drupal/linkchecker": "2.0.x-dev as 2.0.0-alpha2"
+        "drupal/wxt_chart_stability": "^1.0@beta",
+        "egulias/email-validator": "4.0.2 as 3.2.6",
+        "drupal/swiftmailer": "^2.4",
+        "nnnick/chartjs": "^4.4"
     },
     "authors": [
         {
@@ -393,12 +331,18 @@
         ]
     },
     "config": {
+        "secure-http": false,
+        "prestissimo": {
+            "maxConnections": 10,
+            "minConnections": 5
+        },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "oomphinc/composer-installers-extender": true,
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "wikimedia/composer-merge-plugin": true
         }
     }
