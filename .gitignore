@@ -9,3 +9,6 @@ html
 html/robots.txt
 custom/php/resources/prod/Internet-Internet/MISB-DGSIM/ATS-SEA/includes/.drush/
 custom/modules/agri_admin/.sass-cache
+
+# ddev
+.ddev
