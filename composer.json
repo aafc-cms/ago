@@ -318,7 +318,8 @@
         "egulias/email-validator": "4.0.2 as 3.2.6",
         "drupal/swiftmailer": "^2.4",
         "nnnick/chartjs": "^4.4",
-        "drupal/entity_print": "^2.15"
+        "drupal/entity_print": "^2.15",
+        "drupal/draggableviews": "^2.1"
     },
     "authors": [
         {
