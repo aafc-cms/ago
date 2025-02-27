@@ -2,6 +2,7 @@
 
 use \Drupal\agri_admin\AgriAdminHelper;
 use \Drupal\Core\File\FileSystemInterface;
+use \Drupal\Core\File\FileExists;
 use \Drupal\field\Entity\FieldStorageConfig;
 use \Drupal\field\Entity\FieldConfig;
 use \Drupal\media\Entity\Media;
@@ -343,7 +344,7 @@ function agri_admin_update_8007() {
     AgriAdminHelper::addToLog(DRUPAL_ROOT . '/' . $path_to_agri_admin . '/campaign/images/' . ' debug image path');
     $file_repository = \Drupal::service('file.repository');
 
-    $image = $file_repository->writeData($image_data, "public://campaign/example/" . $image_name, FileSystemInterface::EXISTS_REPLACE);
+    $image = $file_repository->writeData($image_data, "public://campaign/example/" . $image_name, FileExists::Replace);
 
     $alt_text = 'Example campaign media alt attribute for ' . $image_name;
     $title_text = 'Example media title attribute for ' . $image_name;
