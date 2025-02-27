@@ -21,7 +21,7 @@ _core:
 id: aafctheme_reportproblemblock
 theme: aafctheme
 region: content_footer
-weight: -16
+weight: -15
 provider: null
 plugin: report_problem_block
 settings:

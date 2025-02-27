@@ -18,7 +18,7 @@ _core:
 id: aafctheme_datemodifiedblock
 theme: aafctheme
 region: content_footer
-weight: -12
+weight: -16
 provider: null
 plugin: date_modified_block
 settings:
