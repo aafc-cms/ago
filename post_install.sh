@@ -147,7 +147,7 @@ if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   popd;
   echo "End of upgrade for the gcweb library, now upgraded to gcweb 14.5.0 and wet-boew 4.0.74."
 else
-  echo "The wet-boew.js date published ($FOUND_DATE) is already newer than the expected minimum $REF_DATE. No action is necessary."
+  echo "The wet-boew.js date published ($FOUND_DATE) is already as new or newer than the expected minimum $REF_DATE. No action is necessary."
 fi
 if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
