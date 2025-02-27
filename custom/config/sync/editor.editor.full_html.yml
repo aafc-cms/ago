@@ -20,8 +20,8 @@ settings:
       - specialCharacters
       - superscript
       - subscript
+      - cite
       - heading
-      - codeBlock
       - outdent
       - indent
       - horizontalLine
@@ -41,8 +41,11 @@ settings:
       - panel
       - '|'
       - link
+      - block
       - drupalMedia
       - code
+      - findAndReplace
+      - fullScreen
   plugins:
     ckeditor5_alignment:
       enabled_alignments:
@@ -50,50 +53,6 @@ settings:
         - justify
         - left
         - right
-    ckeditor5_codeBlock:
-      languages:
-        -
-          label: 'Plain text'
-          language: plaintext
-        -
-          label: C
-          language: c
-        -
-          label: 'C#'
-          language: cs
-        -
-          label: C++
-          language: cpp
-        -
-          label: CSS
-          language: css
-        -
-          label: Diff
-          language: diff
-        -
-          label: HTML
-          language: html
-        -
-          label: Java
-          language: java
-        -
-          label: JavaScript
-          language: javascript
-        -
-          label: PHP
-          language: php
-        -
-          label: Python
-          language: python
-        -
-          label: Ruby
-          language: ruby
-        -
-          label: TypeScript
-          language: typescript
-        -
-          label: XML
-          language: xml
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -106,6 +65,11 @@ settings:
         reversed: true
         startIndex: true
       multiBlock: true
+    ckeditor5_plugin_pack_find_and_replace__find_and_replace:
+      ui_type: dialog
+    ckeditor5_plugin_pack_word_count__word_count:
+      word_count_enabled: true
+      word_count_mode: words_chars
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     ckeditor_codemirror_source_editing:
