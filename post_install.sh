@@ -75,7 +75,8 @@ configureSettingsFile () {
   if ! grep -q "STRICT_TRANS_TABLES" $settings_file; then
     echo "`hostname`" > temptesthostname.txt
     if ! grep -q "ryzen" temptesthostname.txt; then
-      echo "Drupal 9 no longer needs the init_commands because we switch to mysql 5.7";
+      echo ""
+#      echo "Drupal 9 no longer needs the init_commands because we switch to mysql 5.7";
 #      search_str="^( +)'driver' => 'mysql',"
 #      new_db_init="\1'driver' => 'mysql',\n    'init_commands' => [\n      'sql_mode' => \"SET sql_mode = 'STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,TRADITIONAL,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'\",\n    ],"
 #      sed -r "s/${search_str}/${new_db_init}/gm" $settings_file > ${settings_file}_temp;
@@ -111,7 +112,23 @@ configureSettingsFile () {
 configureSettingsFile
 
 
-if [ -d "html/libraries" ]; then
+# File to verify.
+BOEW_FILE="html/libraries/wet-boew/js/wet-boew.js"
+
+# Date v4.0.74 was published.
+REF_DATE="2024-01-16"
+
+# Extract the first date found in this format " - YYYY-MM-DD"
+FOUND_DATE=$(grep -oE ' - [0-9]{4}-[0-9]{2}-[0-9]{2}' "$BOEW_FILE" | awk '{print $2}' | head -n 1)
+
+# Verify if a date was found.
+if [[ -z "$FOUND_DATE" ]]; then
+  echo "No date was found in $BOEW_FILE"
+fi
+
+# Compare the date published for the wet-boew.js with the expected date.
+if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
+  echo "The wet-boew.js published date of ($FOUND_DATE) is older than the expected version published date $REF_DATE. therefore upgrade to v4.0.74..."
   echo "Begin upgrade of gcweb library from 10.something to 14.5.0 and wet-boew from 4.0.50 to 4.0.74."
   pushd html/libraries;
   rm tmp -rf;
@@ -129,6 +146,8 @@ if [ -d "html/libraries" ]; then
   rm ../libraries/tmp -r;
   popd;
   echo "End of upgrade for the gcweb library, now upgraded to gcweb 14.5.0 and wet-boew 4.0.74."
+else
+  echo "The wet-boew.js date published ($FOUND_DATE) is already newer than the expected minimum $REF_DATE. No action is necessary."
 fi
 if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
@@ -188,14 +207,14 @@ if ! grep -q "upgrade-insecure-requests" $htaccess_file; then
   fi
 fi
 
-if [ ! -L "html/libraries/wet-boew/js/deps/jsonpointer.js" ]; then
+if [ ! -f "html/libraries/wet-boew/js/deps/jsonpointer.js" ] && [ ! -L "html/libraries/wet-boew/js/deps/jsonpointer.js" ]; then
   pushd html/libraries/wet-boew/js/deps;
   echo "ln -s ../../../../../custom/js/jsonpointer.js jsonpointer.js;";
         ln -s ../../../../../custom/js/jsonpointer.js jsonpointer.js
   echo "workaround for dcrid 1615574131931;"
   popd
 fi
-if [ ! -L "html/libraries/wet-boew/js/deps/json-patch.js" ]; then
+if [ ! -f "html/libraries/wet-boew/js/deps/json-patch.js" ] && [ ! -L "html/libraries/wet-boew/js/deps/json-patch.js" ]; then
   pushd html/libraries/wet-boew/js/deps;
   echo "ln -s ../../../../../custom/js/json-patch.js json-patch.js;";
         ln -s ../../../../../custom/js/json-patch.js json-patch.js
@@ -312,16 +331,6 @@ else
   echo "chmod 555 html/sites/default"
         chmod 555 html/sites/default
 fi
-
-if [ ! -L html/modules/contrib/wxt_ext_translation ]; then
-  echo "For Drupal 9, probably no longer need to look at restoring wxt_ext_translation as this upgrade related bug was fixed upstream by statcan wxt maintainers."
-  #echo `pwd`
-  #pushd html/modules/contrib/
-  #ln -s ../../../custom/archives/wxt_ext_translation wxt_ext_translation
-  #popd
-  #echo `pwd`
-fi
-
 
 if grep -q "# Directories" $robotstxt_file; then
   if ! grep -q "AAFC Directives" $robotstxt_file; then
