@@ -5,9 +5,9 @@ dependencies:
   config:
     - filter.format.webform_default
   module:
-    - ckeditor5
+    - ckeditor
 format: webform_default
-editor: ckeditor5
+editor: ckeditor
 settings:
   toolbar:
     rows:
@@ -50,5 +50,4 @@ settings:
             - Source
             - Maximize
   plugins: {  }
-image_upload:
-  status: false
+image_upload: {  }
