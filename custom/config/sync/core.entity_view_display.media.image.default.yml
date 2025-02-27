@@ -17,16 +17,16 @@ bundle: image
 mode: default
 content:
   image:
-   type: image
-   label: hidden
-   settings:
-    image_link: ''
-    image_style: ''
-    image_loading:
-      attribute: lazy
-   third_party_settings: {  }
-   weight: 0
-   region: content
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   entity_print_view_epub: true

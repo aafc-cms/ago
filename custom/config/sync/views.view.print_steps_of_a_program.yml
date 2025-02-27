@@ -230,7 +230,7 @@ display:
           exposed: false
           draggable_views_reference: 'print_steps_of_a_program:page_1'
           draggable_views_null_order: after
-          draggable_views_pass_arguments: false
+          draggable_views_pass_arguments: 0
       arguments: {  }
       filters:
         status:

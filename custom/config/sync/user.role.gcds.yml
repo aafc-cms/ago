@@ -17,6 +17,8 @@ permissions:
   - 'create folders'
   - 'delete filebrowser metadata entity entities'
   - 'delete files'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete listings'
   - 'delete own files'
   - 'download archive'

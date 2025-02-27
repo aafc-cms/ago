@@ -9,6 +9,7 @@ dependencies:
     - comment
     - contact
     - file
+    - file_delete
     - filter
     - media
     - search
@@ -28,6 +29,8 @@ permissions:
   - 'access user contact forms'
   - 'access user profiles'
   - 'access_unpublished node landing_page'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete own files'
   - 'edit own comments'
   - 'post comments'

@@ -26,13 +26,13 @@ third_party_settings:
       status: false
       settings:
         age: 1
-    minimum_age_to_delete: 12
+    minimum_age_to_delete: 18
     minimum_revisions_to_keep: 4
     only_drafts:
       status: true
       settings:
-        age: 6
-    when_to_delete: 6
+        age: 18
+    when_to_delete: 18
 _core:
   default_config_hash: nb_cPUs4dvoXeLvPMQYwg1oWcQ5-nE7TcwKGs_VsiHg
 name: 'Internal page'

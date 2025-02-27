@@ -1257,6 +1257,7 @@ display:
                 advanced:
                   collapsible: false
                   is_secondary: false
+                  collapsible_disable_automatic_open: false
       defaults:
         exposed_form: false
         filters: true

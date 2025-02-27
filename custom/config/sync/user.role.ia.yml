@@ -15,6 +15,7 @@ dependencies:
     - content_moderation
     - content_translation
     - file
+    - file_delete
     - moderated_content_bulk_publish
     - node
     - system
@@ -36,6 +37,8 @@ permissions:
   - 'create terms in aafc_type'
   - 'create terms in category'
   - 'create terms in dcterms_subject'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete own files'
   - 'edit any landing_page content'
   - 'edit any page content'
