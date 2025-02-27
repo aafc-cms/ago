@@ -178,7 +178,9 @@
         "patches": {
             "drupal/core": {
                 "core breadcrumb empty patch":
-                "build/core_breadcrumb_empty.patch"
+                "build/core_breadcrumb_empty.patch",
+                "hack core patch for 10x4x branch only during upgrade":
+                "build/hack_patch_remove_later.patch"
             },
             "drupal/safedelete": {
                 "3320470 - Allow override of the bulk operation validation with a checkbox":
