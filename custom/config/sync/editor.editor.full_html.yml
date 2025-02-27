@@ -88,13 +88,6 @@ settings:
         autoFormatOnStart: 0
         autoFormatOnModeChange: 0
         autoFormatOnUncomment: 1
-    tokenbrowser:
-      token_types:
-        current-date: current-date
-        current-page: current-page
-        current-user: current-user
-        language: language
-        site: site
 image_upload:
   status: true
   scheme: public

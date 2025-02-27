@@ -93,17 +93,11 @@ settings:
         autoFormatOnStart: 0
         autoFormatOnModeChange: 0
         autoFormatOnUncomment: 1
-    tokenbrowser:
-      token_types:
-        current-date: current-date
-        current-page: current-page
-        language: language
-        site: site
 image_upload:
   status: true
   scheme: public
   directory: inline-images
-  max_size: ''
+  max_size: null
   max_dimensions:
     width: 900
     height: null
