@@ -32,6 +32,10 @@ else
     live=1
   fi
 fi
+if [ "`hostname`" == "ryzen" ] && [ -f custom/config/splits/live/git_status.settings.yml ]; then
+  live=1
+  sed -i "s+^repository_root: .*$+repository_root: `pwd`+g" custom/config/splits/live/git_status.settings.yml
+fi
 configureSettingsFile () {
   if [ ! -f html/sites/default/settings.php ]; then
     printf "Creating your settings.php file\n";
