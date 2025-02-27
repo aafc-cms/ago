@@ -5,11 +5,7 @@ display:
       fields:
         title:
           separator: ', '
-        revision_log:
-          separator: ', '
-        revision_uid:
-          separator: ', '
-        revision_timestamp:
+        created:
           separator: ', '
       pager:
         options:
@@ -28,21 +24,18 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
   block_1:
-    display_title: 'Tout le contenu récemment publié'
+    display_title: 'Recently created'
     display_options:
-      title: 'Tout le contenu récemment publié'
+      title: 'Recently Created'
   block_2:
-    display_title: 'Mon activité'
+    display_title: 'Content you created'
     display_options:
-      title: 'Mon activité'
-      empty:
-        area_text_custom:
-          content: "Le journal d'activité est vide."
+      title: 'Content you created'
       arguments:
         uid:
           exception:
             title: All
         'null':
-          admin_label: 'Logged-in user'
+          admin_label: 'Current user'
           exception:
             title: All

@@ -1900,6 +1900,7 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+              autosubmit_textfield_minimum_length: 3
             filter:
               name:
                 plugin_id: default
@@ -1908,6 +1909,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               bundle:
                 plugin_id: default
                 advanced:
@@ -1918,6 +1920,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               status:
                 plugin_id: default
                 advanced:
@@ -1928,6 +1931,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               langcode:
                 plugin_id: default
                 advanced:
@@ -1938,12 +1942,14 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               field_aafc_category_target_id:
                 plugin_id: default
                 advanced:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
       filters:
         name:
           id: name

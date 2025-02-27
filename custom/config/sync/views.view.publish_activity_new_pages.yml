@@ -595,6 +595,7 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
+              autosubmit_textfield_minimum_length: 3
             sort:
               plugin_id: default
             filter:
@@ -1933,6 +1934,7 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
+              autosubmit_textfield_minimum_length: 3
             filter:
               field_issued_value:
                 plugin_id: bef_datepicker
@@ -1940,6 +1942,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               type:
                 plugin_id: default
                 advanced:
@@ -1950,6 +1953,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               langcode:
                 plugin_id: default
                 advanced:
@@ -1960,6 +1964,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
       defaults:
         exposed_form: false
         fields: true

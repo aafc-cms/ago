@@ -1,15 +1,11 @@
+label: 'Moderation Dashboard In Review'
 display:
   default:
     display_title: Maître
     display_options:
+      title: 'Moderation Dashboard in Review'
       fields:
         title:
-          separator: ', '
-        revision_log:
-          separator: ', '
-        revision_uid:
-          separator: ', '
-        revision_timestamp:
           separator: ', '
       pager:
         options:
@@ -27,22 +23,23 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-  block_1:
-    display_title: 'Tout le contenu récemment publié'
-    display_options:
-      title: 'Tout le contenu récemment publié'
-  block_2:
-    display_title: 'Mon activité'
-    display_options:
-      title: 'Mon activité'
       empty:
         area_text_custom:
-          content: "Le journal d'activité est vide."
+          content: 'There is no content available for review.'
+  block_1:
+    display_title: 'In review'
+  block_2:
+    display_title: 'In draft'
+    display_options:
+      title: 'In draft'
+  block_3:
+    display_title: 'Your drafts'
+    display_options:
+      title: 'Your drafts'
+      empty:
+        area_text_custom:
+          content: 'No draft content was found.'
       arguments:
         uid:
-          exception:
-            title: All
-        'null':
-          admin_label: 'Logged-in user'
           exception:
             title: All

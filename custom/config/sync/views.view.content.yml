@@ -686,6 +686,7 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
+              autosubmit_textfield_minimum_length: 3
             pager:
               plugin_id: default
               advanced:
@@ -698,6 +699,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               title:
                 plugin_id: default
                 advanced:
@@ -705,6 +707,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               type:
                 plugin_id: default
                 advanced:
@@ -715,6 +718,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               name:
                 plugin_id: default
                 advanced:
@@ -722,6 +726,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               moderation_state:
                 plugin_id: default
                 advanced:
@@ -732,6 +737,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               field_subject_target_id:
                 plugin_id: default
                 advanced:
@@ -742,6 +748,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               field_meta_type_target_id:
                 plugin_id: default
                 advanced:
@@ -752,6 +759,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               langcode:
                 plugin_id: default
                 advanced:
@@ -762,18 +770,21 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               revision_timestamp:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               field_modified_value:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               field_managing_branch_value:
                 plugin_id: default
                 advanced:
@@ -784,6 +795,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
               field_campaign_value:
                 plugin_id: bef
                 advanced:
@@ -794,6 +806,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
