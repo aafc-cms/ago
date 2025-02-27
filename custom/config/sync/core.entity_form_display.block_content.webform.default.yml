@@ -1,0 +1,45 @@
+uuid: ed702063-f2bb-46ba-a10b-9670f57b6888
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webform
+    - field.field.block_content.webform.field_email
+  module:
+    - content_moderation
+    - webform
+id: block_content.webform.default
+targetEntityType: block_content
+bundle: webform
+mode: default
+content:
+  field_email:
+    type: webform_entity_reference_select
+    weight: 102
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

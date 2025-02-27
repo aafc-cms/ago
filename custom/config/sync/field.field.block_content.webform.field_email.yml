@@ -1,0 +1,25 @@
+uuid: 0dc514fe-27b9-44b1-a21b-4079d8898be5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webform
+    - field.storage.block_content.field_email
+  module:
+    - webform
+id: block_content.webform.field_email
+field_name: field_email
+entity_type: block_content
+bundle: webform
+label: email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform
