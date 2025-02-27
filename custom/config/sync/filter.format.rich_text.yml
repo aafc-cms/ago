@@ -42,7 +42,6 @@ dependencies:
     - linkit
     - media
     - slick
-    - toc_filter
     - token_filter
     - url_embed
     - wxt_chart_stability
@@ -52,104 +51,117 @@ _core:
   default_config_hash: LQ7Z_f1qIeAP7aiyHGBwlgjdsAHzwISN1_6-Dvv_fVY
 name: 'Rich Text'
 format: rich_text
-weight: -10
+weight: -9
 filters:
-  filter_align:
-    id: filter_align
-    provider: filter
-    status: true
-    weight: -49
-    settings: {  }
-  filter_caption:
-    id: filter_caption
-    provider: filter
-    status: true
-    weight: -48
-    settings: {  }
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
     status: false
-    weight: -39
+    weight: -32
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_media_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'
+  custom_modal_filter:
+    id: custom_modal_filter
+    provider: wxt_ext_blocks
+    status: false
+    weight: -29
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: -47
+    weight: -45
+    settings: {  }
+  embed_block:
+    id: embed_block
+    provider: embed_block
+    status: false
+    weight: -39
     settings: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
+    status: true
+    weight: -42
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -35
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
     status: true
     weight: -46
     settings: {  }
   filter_html:
     id: filter_html
     provider: filter
-    status: false
-    weight: -40
+    status: true
+    weight: -49
     settings:
-      allowed_html: '<em id name class="*"> <strong id name class="*"> <cite id name class="*"> <footer id name role class="*"> <blockquote id name class="*"> <code id name class="*"> <ul id name role type class="*"> <ol id name role type start class="*"> <li id name class="*"> <dl id name class="*"> <dt id name class="*"> <dd id name class="*"> <br> <img id name src alt data-entity-type data-entity-uuid data-align data-caption typeof width height class="*"> <a href id name title target hreflang data-entity-type data-entity-uuid tabindex role class="*"> <p id name class="*"> <h1 id name role class="*"> <h2 id name role class="*"> <h3 id name role class="*"> <h4 id name role class="*"> <h5 id name role class="*"> <h6 id name role class="*"> <sub id name class="*"> <sup id name class="*"> <table id name role class="*"> <thead role class="*"> <tr id name role class="*"> <th id name scope role class="*"> <tbody role class="*"> <td id name colspan role class="*"> <video id name role class="*"> <audio id name role class="*"> <b id name> <div id name aria-labelledby data-parent role class="*"> <button id name aria-controls aria-expanded data-target data-toggle type class="*"> <hr id name class="*"> <figure id name role class="*"> <figcaption id name role class="*"> <span id name role class="*"> <drupal-entity data-entity-type data-view-mode data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title class="*"> <section id name role class="*"> <pre> <s> <caption id name class="*"> <tfoot id name class="*"> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption role alt title class="*"> <embed-block data-block-id id class="*"> <script type>'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h2 class> <h3 class> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <s> <sub> <sup> <blockquote> <a href data-entity-type data-entity-uuid data-entity-substitution> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align> <div class="text-align-left text-align-center text-align-right text-align-justify"> <section class> <header class> <details class> <drupal-entity alt title data-align data-caption data-entity-embed-display data-entity-embed-display-settings data-view-mode data-entity-uuid data-langcode data-embed-button="media_browser node url" data-entity-type>'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: false
-    weight: -36
-    settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -37
+    weight: -36
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -35
+    weight: -34
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -38
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -44
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: false
-    weight: -38
+    weight: -37
     settings:
       filter_url_length: 128
-  token_filter:
-    id: token_filter
-    provider: token_filter
-    status: true
-    weight: -43
-    settings:
-      replace_empty: '0'
-  url_embed_convert_links:
-    id: url_embed_convert_links
-    provider: url_embed
-    status: false
-    weight: -34
-    settings:
-      url_prefix: ''
-  url_embed:
-    id: url_embed
-    provider: url_embed
-    status: true
-    weight: -45
-    settings: {  }
   linkit:
     id: linkit
     provider: linkit
     status: true
-    weight: -50
+    weight: -48
     settings:
       title: false
   media_embed:
     id: media_embed
     provider: media
     status: true
-    weight: -44
+    weight: -41
     settings:
       default_view_mode: default
       allowed_view_modes:
@@ -191,27 +203,6 @@ filters:
         image: image
         video: video
         video_file: video_file
-  blazy_filter:
-    id: blazy_filter
-    provider: blazy
-    status: false
-    weight: -33
-    settings:
-      media_switch: ''
-      hybrid_style: ''
-      box_style: ''
-      box_media_style: ''
-      box_caption: ''
-      filter_tags:
-        img: img
-        iframe: iframe
-      use_data_uri: '0'
-  embed_block:
-    id: embed_block
-    provider: embed_block
-    status: true
-    weight: -42
-    settings: {  }
   slick_filter:
     id: slick_filter
     provider: slick
@@ -223,6 +214,7 @@ filters:
         title: '0'
       optionset: default
       layout: ''
+      admin_uri: '/en/admin/config/content/formats/manage/rich_text?destination=/en/admin/config/content/formats&ajax_form=1&_wrapper_format=drupal_ajax'
       background: false
       box_caption: ''
       box_caption_custom: ''
@@ -256,46 +248,46 @@ filters:
       override: false
       preserve_keys: false
       visible_items: null
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: -40
+    settings:
+      replace_empty: false
+  url_embed:
+    id: url_embed
+    provider: url_embed
+    status: true
+    weight: -43
+    settings:
+      enable_responsive: true
+      default_ratio: '66.7'
+  url_embed_convert_links:
+    id: url_embed_convert_links
+    provider: url_embed
+    status: false
+    weight: -33
+    settings:
+      url_prefix: ''
   wxt_add_table_attribute_filter:
     id: wxt_add_table_attribute_filter
     provider: wxt_ext_editor
     status: false
     weight: -31
     settings:
-      responsive: '1'
-      replace_classes: '1'
-      replace_all_classes: '1'
+      responsive: true
+      replace_classes: true
+      replace_all_classes: true
       classes: 'wb-tables table'
       whitelist_classes: ''
-      add_datatable_attribute: '0'
+      add_datatable_attribute: false
       datatable_options: ''
-  toc_filter:
-    id: toc_filter
-    provider: toc_filter
-    status: true
-    weight: -41
-    settings:
-      type: wxt
-      auto: ''
-      block: '0'
-      exclude_above: '0'
-  filter_image_lazy_load:
-    id: filter_image_lazy_load
-    provider: filter
-    status: true
-    weight: -46
-    settings: {  }
   wxt_chart_stability_compatibilityfilter:
     id: wxt_chart_stability_compatibilityfilter
     provider: wxt_chart_stability
     status: true
-    weight: -99
+    weight: -50
     settings:
       clean: '<td>&nbsp;</td>'
       desired: '<td></td>'
-  custom_modal_filter:
-    id: custom_modal_filter
-    provider: wxt_ext_blocks
-    status: false
-    weight: -32
-    settings: {  }
