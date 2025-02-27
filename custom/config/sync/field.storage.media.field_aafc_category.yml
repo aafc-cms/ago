@@ -1,4 +1,4 @@
-uuid: fb7c7597-51d9-45cc-8134-d5477b5e40d3
+uuid: dba05046-2dd4-4130-91e1-a067ff9e08df
 langcode: en
 status: true
 dependencies:
@@ -8,13 +8,13 @@ dependencies:
 id: media.field_aafc_category
 field_name: field_aafc_category
 entity_type: media
-type: entity_reference
 settings:
-  target_type: taxonomy_term
-module: core
+  exclude_entity_types: false
+  entity_type_ids:
+    taxonomy_term: taxonomy_term
 locked: false
 cardinality: 1
-translatable: true
+translatable: false
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
