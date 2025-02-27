@@ -1,5 +1,0 @@
-name: 'Dynamic Entity Reference'
-type: module
-description: 'Empty module to flush'
-package: Custom
-core_version_requirement: ^10 || ^11
