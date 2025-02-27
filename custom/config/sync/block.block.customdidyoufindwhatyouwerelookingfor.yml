@@ -19,7 +19,7 @@ third_party_settings:
 id: customdidyoufindwhatyouwerelookingfor
 theme: aafctheme
 region: content_footer
-weight: -15
+weight: -13
 provider: null
 plugin: custom_find_what_you_looking_for
 settings:

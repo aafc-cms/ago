@@ -21,7 +21,6 @@ ignored_config_entities:
   - field.storage.user.field_pending_expire_sent
   - filebrowser.settings
   - linkchecker.settings
-  - mailsystem.settings
   - node.type.landing_page
   - node.type.page
   - password_policy
@@ -30,10 +29,6 @@ ignored_config_entities:
   - simple_sitemap.sitemap.index
   - simple_sitemap.type.default_hreflang
   - simple_sitemap.type.index
-  - smtp
-  - smtp.settings
-  - symfony_mailer_lite.symfony_mailer_lite_transport.smtp
-  - system.mail
   - system.menu.devel
   - ultimate_cron.job.password_policy_cron
   - warmer.settings

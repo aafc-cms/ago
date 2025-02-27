@@ -1,0 +1,8 @@
+uuid: 9448bb7a-1a77-4d64-98e7-7a432dd89304
+langcode: en
+status: true
+dependencies: {  }
+id: webform
+label: Webform
+revision: 0
+description: 'Block for webform embedding in CKEditor'
