@@ -391,7 +391,7 @@ if grep -q "Connected" test-connection.txt; then
   echo "Connected to the database, setting up the db views now.";
   #Run Create or Replace View sql command
   echo  "Creating view: drush sql-query --file=../custom/dbviews/search_node_url.sql";
-                        drush sql-query --file=../custom/dbviews/search_node_url.sql;
+                        drush sql-query --file=../custom/dbviews/search_node_url.sql 2>/dev/null;
 else
   echo "The database is not yet configured, cannot install the db views at this time.";
 fi
