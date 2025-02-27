@@ -10,5 +10,6 @@ third_party_settings:
     description: ''
 id: media.w0825px
 label: 'width 825px special'
+description: ''
 targetEntityType: media
 cache: true

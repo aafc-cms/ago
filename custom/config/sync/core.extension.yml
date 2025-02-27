@@ -19,6 +19,8 @@ module:
   bootstrap_layouts: 0
   breakpoint: 0
   button_link: 0
+  ckeditor: 0
+  ckeditor4_codemirror: 0
   ckeditor5: 0
   ckeditor_abbreviation: 0
   ckeditor_codemirror: 0

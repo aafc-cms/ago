@@ -616,6 +616,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 15
           total_pages: null
           id: 0
@@ -2007,8 +2008,8 @@ display:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               type:
                 plugin_id: default
                 advanced:
@@ -2017,8 +2018,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               langcode:
                 plugin_id: default
                 advanced:
@@ -2027,8 +2028,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       defaults:
         exposed_form: false
       rendering_language: '***LANGUAGE_entity_translation***'

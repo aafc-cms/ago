@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: webform
 label: Webform
-revision: 0
+revision: false
 description: 'Block for webform embedding in CKEditor'

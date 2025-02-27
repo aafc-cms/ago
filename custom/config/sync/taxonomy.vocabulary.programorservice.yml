@@ -6,3 +6,4 @@ name: 'Program or service'
 vid: programorservice
 description: 'Program or service'
 weight: 0
+new_revision: false

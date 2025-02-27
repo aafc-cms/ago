@@ -6,3 +6,4 @@ name: 'aafc:subject'
 vid: category
 description: 'Metatag – Options list for “aafc:subject”'
 weight: 0
+new_revision: false

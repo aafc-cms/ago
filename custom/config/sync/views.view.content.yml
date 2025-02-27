@@ -1,4 +1,4 @@
-uuid: null
+uuid: d06dcc96-da63-407b-83c1-5965438f2700
 langcode: en
 status: true
 dependencies:
@@ -645,6 +645,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 25
           total_pages: null
           id: 0
@@ -695,15 +696,15 @@ display:
                 advanced:
                   placeholder_text: ''
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               title:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               type:
                 plugin_id: default
                 advanced:
@@ -712,15 +713,15 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               name:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               moderation_state:
                 plugin_id: default
                 advanced:
@@ -729,8 +730,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_subject_target_id:
                 plugin_id: default
                 advanced:
@@ -739,8 +740,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_meta_type_target_id:
                 plugin_id: default
                 advanced:
@@ -749,8 +750,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               langcode:
                 plugin_id: default
                 advanced:
@@ -759,20 +760,20 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               revision_timestamp:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_modified_value:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_managing_branch_value:
                 plugin_id: default
                 advanced:
@@ -781,8 +782,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_campaign_value:
                 plugin_id: bef
                 advanced:
@@ -791,8 +792,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
@@ -801,7 +802,7 @@ display:
         options:
           perm: 'access content overview'
       cache:
-        type: tag
+        type: none
       empty:
         area_text_custom:
           id: area_text_custom

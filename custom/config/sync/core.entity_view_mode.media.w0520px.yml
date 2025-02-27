@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.w0520px
 label: 'width 520px special'
+description: ''
 targetEntityType: media
 cache: true
