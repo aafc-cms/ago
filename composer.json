@@ -234,10 +234,6 @@
                 "core breadcrumb empty patch":
                 "build/core_breadcrumb_empty.patch"
             },
-            "drupal/wxt_library": {
-                "3195014 - Twig extension used by aafctheme.":
-                "https://www.drupal.org/files/issues/2023-05-16/wxt-library-add-canada-ca-footer-twig-extension-3195014-31.patch"
-            },
             "drupal/safedelete": {
                 "3320470 - Allow override of the bulk operation validation with a checkbox":
                 "https://www.drupal.org/files/issues/2022-12-02/make-bulk-publish-verification-configurable-3320470-06.patch"
@@ -245,6 +241,14 @@
             "drupal/entity_translation_unified_form": {
                 "ETUF workaround is temporary, figure this out, why agrisource no issue, but AAFC has issue?":
                 "build/etuf-why-this-cause-agrisource-no-issue.patch"
+            },
+            "drupal/wxt_library": {
+                "3195014 - Twig extension used by aafctheme.":
+                "https://www.drupal.org/files/issues/2023-05-16/wxt-library-add-canada-ca-footer-twig-extension-3195014-31.patch"
+            },
+            "drupalwxt/wxt_library": {
+                "3195014 - Twig extension used by aafctheme.":
+                "https://www.drupal.org/files/issues/2023-05-16/wxt-library-add-canada-ca-footer-twig-extension-3195014-31.patch"
             },
             "drupalwxt/wxt": {
                 "Allow split of password policy":
