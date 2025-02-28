@@ -179,7 +179,7 @@
         "merge-plugin": {
             "include": [
                 "html/modules/contrib/webform/composer.libraries.json",
-                "html/modules/contrib/ckeditor4_codemirror/composer.libraries.json"
+                "html/modules/contrib/ckeditor_codemirror/composer.libraries.json"
             ]
         },
         "drupal-scaffold": {
@@ -325,13 +325,13 @@
                     "3194841 - Override patch 3 with patch 7 instead.":
                     "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
                 },
+                "drupal/page_manager": {
+                    "Enter drupal/page_manager patch #2752227 description here":
+                    "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch"
+                },
                 "drupal/password_policy": {
                     "ignore password policy patch which is no longer needed with upgrade":
                     "https://www.drupal.org/files/issues/2023-05-23/password_policy-d10.patch"
-                },
-                "drupal/page_manager": {
-                    "3151905 ignore smulvih changes":
-                    "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch"
                 },
                 "drupal/panels": {
                     "patch desc 2900531":
