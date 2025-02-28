@@ -179,7 +179,7 @@
         "merge-plugin": {
             "include": [
                 "html/modules/contrib/webform/composer.libraries.json",
-                "html/modules/contrib/ckeditor4_codemirror/composer.libraries.json"
+                "html/modules/contrib/ckeditor_codemirror/composer.libraries.json"
             ]
         },
         "drupal-scaffold": {
