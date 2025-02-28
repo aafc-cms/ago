@@ -259,8 +259,6 @@
     <footer id="wb-info" data-ajax-append="{{ gcweb_cdn_footer_url }}{{ language }}.html .brand">
       <div class="landscape" data-ajax-replace="{{ gcweb_cdn_footer_url }}{{ language }}.html .wb-navcurr"></div>
     </footer>
-  {% elseif gcweb_cdn_footer_canada_ca_enabled %}
-    {{ return_footer_structure() }}
   {% else %}
     {% block footer %}
       <footer id="wb-info">
