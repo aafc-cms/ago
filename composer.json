@@ -378,7 +378,8 @@
         "drupal/draggableviews": "^2.1",
         "drupal/key": "1.x-dev as 1.19",
         "drupal/votingapi": "4.0.x-dev as 3.0.1",
-        "drupal/dynamic_entity_reference": "^3.2"
+        "drupal/dynamic_entity_reference": "^3.2",
+        "drupal/meaofd": "^1.0"
     },
     "authors": [
         {
