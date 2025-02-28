@@ -846,13 +846,13 @@ display:
               autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
               autosubmit_hide: false
               input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
-              autosubmit_textfield_minimum_length: 3
             filter:
               nid:
                 plugin_id: default
@@ -1769,86 +1769,6 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        langcode:
-          id: langcode
-          table: node_field_revision
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: langcode_op
-            label: Language
-            description: ''
-            use_operator: false
-            operator: langcode_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: langcode
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              creator: '0'
-              editor: '0'
-              reviewer: '0'
-            reduce: false
-          is_grouped: true
-          group_info:
-            label: Language
-            description: ''
-            identifier: langcode
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: '1'
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: 'Interface text language'
-                operator: in
-                value:
-                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-                  all: '0'
-                  '***LANGUAGE_site_default***': '0'
-                  en: '0'
-                  fr: '0'
-                  und: '0'
-                  zxx: '0'
-              2:
-                title: English
-                operator: in
-                value:
-                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-                  en: en
-                  all: '0'
-                  '***LANGUAGE_site_default***': '0'
-                  fr: '0'
-                  und: '0'
-                  zxx: '0'
-              3:
-                title: French
-                operator: in
-                value:
-                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-                  fr: fr
-                  all: '0'
-                  '***LANGUAGE_site_default***': '0'
-                  en: '0'
-                  und: '0'
-                  zxx: '0'
         latest_revision:
           id: latest_revision
           table: node_revision
@@ -2036,6 +1956,86 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        langcode:
+          id: langcode
+          table: node_field_revision
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: langcode
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              creator: '0'
+              editor: '0'
+              reviewer: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: Language
+            description: ''
+            identifier: langcode
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: '1'
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Interface text language'
+                operator: in
+                value:
+                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+                  all: '0'
+                  '***LANGUAGE_site_default***': '0'
+                  en: '0'
+                  fr: '0'
+                  und: '0'
+                  zxx: '0'
+              2:
+                title: English
+                operator: in
+                value:
+                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+                  en: en
+                  all: '0'
+                  '***LANGUAGE_site_default***': '0'
+                  fr: '0'
+                  und: '0'
+                  zxx: '0'
+              3:
+                title: French
+                operator: in
+                value:
+                  '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+                  fr: fr
+                  all: '0'
+                  '***LANGUAGE_site_default***': '0'
+                  en: '0'
+                  und: '0'
+                  zxx: '0'
         type_1:
           id: type_1
           table: node_field_data
@@ -2317,7 +2317,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -2344,7 +2343,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
