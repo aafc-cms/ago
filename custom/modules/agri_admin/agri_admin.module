@@ -562,6 +562,26 @@ function agri_admin_node_presave(EntityInterface $entity) {
       }
     }
 
+    $entity_log_message = $entity->get('revision_log')->getString();
+// Use a database query to get the current revision ID of a node.
+    $connection = Database::getConnection();
+      $query = $connection->select('node_field_data', 'nfd')
+      ->fields('nfd', ['vid'])
+      ->condition('nfd.nid', $entity_id)
+      ->condition('nfd.langcode', $langcode);
+
+    $current_revision_id = $query->execute()->fetchField();
+    if (isset($current_revision_id) && is_numeric($current_revision_id)) {
+      $current_revision = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($current_revision_id);
+      $current_revision_log_message = $current_revision->get('revision_log')->getString();
+
+      if ($current_revision->isPublished() && $moderation_state == 'draft') {
+        if ($entity_log_message == NULL && $current_revision_log_message != NULL) {
+          $entity->set('revision_log', ' ');
+        }
+      }
+    }
+
     $peer_review_status = '';
     if ($content_type == 'page' || $content_type == 'landing_page') {
       $update_date_modified_str = $entity->get('field_update_date_modified')->getString();
