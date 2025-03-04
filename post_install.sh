@@ -117,39 +117,39 @@ configureSettingsFile
 
 
 # File to verify.
-BOEW_FILE="html/libraries/wet-boew/js/wet-boew.js"
+GCWEB_FILE="html/libraries/theme-gcweb/js/theme.js"
 
-# Date v4.0.74 was published.
-REF_DATE="2024-01-16"
+# Date v16.2.0 was published.
+REF_DATE="2025-02-04"
 
 # Extract the first date found in this format " - YYYY-MM-DD"
-FOUND_DATE=$(grep -oE ' - [0-9]{4}-[0-9]{2}-[0-9]{2}' "$BOEW_FILE" | awk '{print $2}' | head -n 1)
+FOUND_DATE=$(grep -oE ' - [0-9]{4}-[0-9]{2}-[0-9]{2}' "$GCWEB_FILE" | awk '{print $2}' | head -n 1)
 
 # Verify if a date was found.
 if [[ -z "$FOUND_DATE" ]]; then
-  echo "No date was found in $BOEW_FILE"
+  echo "No date was found in $GCWEB_FILE"
 fi
 
 # Compare the date published for the wet-boew.js with the expected date.
 if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   echo "The wet-boew.js published date of ($FOUND_DATE) is older than the expected version published date $REF_DATE. therefore upgrade to v4.0.74..."
-  echo "Begin upgrade of gcweb library from 10.something to 14.5.0 and wet-boew from 4.0.50 to 4.0.74."
+  echo "Begin upgrade of gcweb library from 14.6.5 to 16.3.0 with wet-boew at 4.0.85."
   pushd html/libraries;
   rm tmp -rf;
   mkdir tmp;
   pushd tmp;
-  wget https://github.com/wet-boew/wet-boew/releases/download/v4.0.74/wet-boew-dist-4.0.74.zip
-  wget https://github.com/wet-boew/GCWeb/releases/download/v14.5.0/themes-dist-14.5.0-gcweb.zip
-  unzip wet-boew-dist-4.0.74.zip
-  mv ../wet-boew wet-boew_orig
-  mv wet-boew-dist-4.0.74/wet-boew ../
-  unzip themes-dist-14.5.0-gcweb.zip
+  #wget https://github.com/wet-boew/wet-boew/releases/download/v4.0.85/wet-boew-dist-4.0.85.zip
+  wget https://github.com/wet-boew/GCWeb/releases/download/v16.2.0/themes-dist-16.2.0-gcweb.zip
+  #unzip wet-boew-dist-4.0.85.zip
+  #mv ../wet-boew wet-boew_orig
+  #mv wet-boew-dist-4.0.85/wet-boew ../
+  unzip themes-dist-16.2.0-gcweb.zip
   mv ../theme-gcweb theme-gcweb_orig
-  mv themes-dist-14.5.0-gcweb/GCWeb ../theme-gcweb
+  mv themes-dist-16.2.0-gcweb/GCWeb ../theme-gcweb
   popd
   rm ../libraries/tmp -r;
   popd;
-  echo "End of upgrade for the gcweb library, now upgraded to gcweb 14.5.0 and wet-boew 4.0.74."
+  echo "End of upgrade for the gcweb library, now upgraded to gcweb 16.2.0 and wet-boew 4.0.85."
 else
   echo "The wet-boew.js date published ($FOUND_DATE) is already as new or newer than the expected minimum $REF_DATE. No action is necessary."
 fi
