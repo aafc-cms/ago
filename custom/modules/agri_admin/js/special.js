@@ -66,32 +66,37 @@ var Special = function() {
       //$("#edit-title-0-value").keyup(function() {
       $("#edit-title-0-value").change(function() {
         if (Special.specialChecked) {
+          var editorContainer = $(".js-form-item-body-0-value .ck-editor__editable");
+
           var titleVal = $("#edit-title-0-value").val();
-          if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null) {
-            CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId).setHtml(titleVal);
+          if (editorContainer.find("#" + Special.spSpecialSelectorId).length === 0) {
+            editorContainer.find("#" + Special.h1SpecialId).html(titleVal);
           }
-          else if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId) != null) {
-            CKEDITOR.instances["edit-body-0-value"].document.getById(Special.h1SpecialId).setHtml(titleVal);
+          else if (editorContainer.find("#" + Special.h1SpecialId).length === 0) {
+            editorContainer.find("#" + Special.h1SpecialId).html(titleVal);
           }
         }
       });
         //$("#edit-title-etuf-fr-0-value").keyup(function() {
       $(Special.otherLangTitleSelector).change(function() {
         if (Special.specialChecked) {
+          var editorContainer = $(".js-form-item-body-0-value .ck-editor__editable");
           var titleValFr = $(Special.otherLangTitleSelector).val();
-          if(CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null){
-            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValFr);
+          if(editorContainer.find("#" + Special.spSpecialSelectorId).length === 0){
+            editorContainer.find("#" + Special.h1SpecialId).html(titleValFr);
           }
           else if (Special.specialChecked) {
-            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.h1SpecialId).setHtml(titleValFr);
+            editorContainer.find("#" + Special.h1SpecialId).html(titleValFr);
           }
         }
       });
 
-      $("#edit-field-special-value").change(function() {      
+      $("#edit-field-special-value").change(function() {
+        var editorContainer = $(".js-form-item-body-0-value .ck-editor__editable");
+        var editorOtherContainer = $(".js-form-item-body-etuf-fr-0-value .ck-editor__editable");
         //touche pas
-        oldcontent = CKEDITOR.instances["edit-body-0-value"].getData();
-        oldcontentother = CKEDITOR.instances[Special.otherLangBodySelector].getData();
+        oldcontent = editorContainer.val();
+        oldcontentother = editorOtherContainer.val();
         var imgplaceholder = '<div data-bgimg="https://design.canada.ca/coded-layout/images/theme-topic-img-825x200.jpg" class="mrgn-tp-xl wb-init wb-bgimg-inited" id="wb-auto-4" style="background-image: url(&quot;https://design.canada.ca/coded-layout/images/theme-topic-img-825x200.jpg&quot;);"></div>';
         if (Special.specialsettings.found_demo_topic) {
           var uuid = Special.specialsettings.media_uuid;
@@ -108,27 +113,39 @@ var Special = function() {
         // when checking the special title checkbox
         if (this.checked) {
           Special.specialChecked = true;
-          if (CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) == null) {
-            CKEDITOR.instances["edit-body-0-value"].setData(newcontent + oldcontent);
-          }
-          else{}
-          if (CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) == null) {
-            CKEDITOR.instances[Special.otherLangBodySelector].setData(newcontentother + oldcontentother);
-          }
-          else{}
+
+          getCKEditorInstance("edit-body-0-value", function (editorInstance) {
+            let currentContent = editorInstance.getData();
+
+            if (currentContent.indexOf(Special.spSpecialSelectorId) === -1) {
+              editorInstance.setData(newcontent + currentContent);
+            }
+          });
+
+          getCKEditorInstance("edit-body-etuf-fr-0-value", function (editorInstance) {
+            let currentContent = editorInstance.getData();
+
+            if (currentContent.indexOf(Special.spSpecialSelectorId) === -1) {
+              editorInstance.setData(newcontentother + currentContent);
+            }
+          });
         }
 
         // when unchecking the special title checkbox
         else {
           Special.specialChecked = false;
-          if(CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId) != null) {
-            CKEDITOR.instances["edit-body-0-value"].document.getById(Special.spSpecialSelectorId).remove();
-          }
-          else {}
-          if (CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId) != null) {
-            CKEDITOR.instances[Special.otherLangBodySelector].document.getById(Special.spSpecialSelectorId).remove();
-          }
-          else {}
+
+          getCKEditorInstance("edit-body-0-value", function (editorInstance) {
+            let contentContainer = $("<div>").html(editorInstance.getData());
+            contentContainer.find("#sp_special").remove();
+            editorInstance.setData(contentContainer.html());
+          });
+
+          getCKEditorInstance(Special.otherLangBodySelector, function (editorInstance) {
+            let contentContainer = $("<div>").html(editorInstance.getData());
+            contentContainer.find("#sp_special").remove();
+            editorInstance.setData(contentContainer.html());
+          });
         }
 
       });
@@ -171,7 +188,25 @@ var Special = function() {
     Special.mouse.y = event.clientY;
   }
 
+  function getCKEditorInstance(fieldId, callback, retries = 10) {
+    let editorContainer = document.querySelector(`[data-drupal-selector="${fieldId}"] ~ .ck-editor`);
 
+    if (editorContainer) {
+      let editorInstance = editorContainer.querySelector(".ck-editor__editable").ckeditorInstance;
+
+      if (editorInstance) {
+        callback(editorInstance);
+        return;
+      }
+    }
+
+    // Retry if CKEditor 5 is not ready
+    if (retries > 0) {
+      setTimeout(() => getCKEditorInstance(fieldId, callback, retries - 1), 200);
+    } else {
+      console.error(`CKEditor 5 instance for ${fieldId} not found.`);
+    }
+  }
 
   /**
    * Expose functions and variables
