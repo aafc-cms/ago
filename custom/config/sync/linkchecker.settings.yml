@@ -21,10 +21,10 @@ extract:
     editor_file_reference: '0'
     embed_block: '0'
     filter_url: '0'
-    filter_htmlcorrector: '0'
     filter_html_image_secure: '0'
-    filter_html_escape: '0'
     filter_html: '0'
+    filter_htmlcorrector: '0'
+    filter_html_escape: '0'
     slick_filter: '0'
     toc_filter: '0'
     token_filter: '0'
@@ -34,9 +34,6 @@ extract:
 check:
   connections_max: 8
   disable_link_check_for_urls: |-
-    example.com
-    example.net
-    example.org
     linkedin.com
     collab.agr.gc.ca
     directinfo.agr.gc.ca
