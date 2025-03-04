@@ -133,7 +133,7 @@ fi
 # Compare the date published for the wet-boew.js with the expected date.
 if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   echo "The wet-boew.js published date of ($FOUND_DATE) is older than the expected version published date $REF_DATE. therefore upgrade to v4.0.74..."
-  echo "Begin upgrade of gcweb library from 14.6.5 to 16.3.0 with wet-boew at 4.0.85."
+  echo "Begin upgrade of gcweb library from 14.6.0 to 16.3.0 with wet-boew at 4.0.85."
   pushd html/libraries;
   rm tmp -rf;
   mkdir tmp;
