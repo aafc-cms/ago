@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f440d983d8867dac1248a4770472da15",
+    "content-hash": "30c9b3c8336dd8ce9cffd3e85eef6869",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "11.1.2.3",
+            "version": "11.1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "9b9f3e333516e337f958b20ad3ae1f58e92b9942"
+                "reference": "af2444aee52be0254735ce8c4da1fba39b4d68e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=9b9f3e333516e337f958b20ad3ae1f58e92b9942",
-                "reference": "9b9f3e333516e337f958b20ad3ae1f58e92b9942",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=af2444aee52be0254735ce8c4da1fba39b4d68e4",
+                "reference": "af2444aee52be0254735ce8c4da1fba39b4d68e4",
                 "shasum": ""
             },
             "require": {
@@ -257,10 +257,6 @@
                     "drupal/wxt_bootstrap": {
                         "part 2 When installing and enabling the Canada.ca theme, the footer is missing the menu and other elements. Stats Can provides a CDN for footer markup, but as far as I know Canada.ca doesn't provide this. It would be nice to have the footer complete on install.": "https://www.drupal.org/files/issues/2021-01-27/wxt-bootstrap-add-canada-ca-footer-settings-3195014-2.patch"
                     },
-                    "drupal/layout_builder_st": {
-                        "3420063 - Fix getConfig() on null in OverridesSectionStorage": "https://www.drupal.org/files/issues/2024-03-29/layout_builder_st-call_to_a_member_function_getconfig-3420063-26.patch",
-                        "3069964 - Argument 1 passed to isTranslation must implement SectionStorageInterface, null given.": "https://www.drupal.org/files/issues/2025-01-02/3069964-null-fix.patch"
-                    },
                     "drupal/views_data_export": {
                         "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
                     },
@@ -368,9 +364,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.2.3"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.2.4"
             },
-            "time": "2025-02-20T19:32:51+00:00"
+            "time": "2025-03-04T11:00:49+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",

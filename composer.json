@@ -362,7 +362,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "11.1.2.3",
+        "agrcmsx/dxbase": "11.1.2.4",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/config": "*",
