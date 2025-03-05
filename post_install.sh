@@ -130,9 +130,9 @@ if [[ -z "$FOUND_DATE" ]]; then
   echo "No date was found in $GCWEB_FILE"
 fi
 
-# Compare the date published for the wet-boew.js with the expected date.
+# Compare the date published for the gcweb theme.js with the expected date.
 if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
-  echo "The wet-boew.js published date of ($FOUND_DATE) is older than the expected version published date $REF_DATE. therefore upgrade to v4.0.74..."
+  echo "The gcweb theme.js published date of ($FOUND_DATE) is older than the expected version published date $REF_DATE. therefore upgrade to v16.2.0..."
   echo "Begin upgrade of gcweb library from 14.6.0 to 16.3.0 with wet-boew at 4.0.85."
   pushd html/libraries;
   rm tmp -rf;
@@ -151,7 +151,7 @@ if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   popd;
   echo "End of upgrade for the gcweb library, now upgraded to gcweb 16.2.0 and wet-boew 4.0.85."
 else
-  echo "The wet-boew.js date published ($FOUND_DATE) is already as new or newer than the expected minimum $REF_DATE. No action is necessary."
+  echo "The gcweb theme.js date published ($FOUND_DATE) is already as new or newer than the expected minimum $REF_DATE. No action is necessary."
 fi
 if [ -f custom/splash/.htaccess ]; then
   cp custom/splash/.htaccess html/.htaccess
