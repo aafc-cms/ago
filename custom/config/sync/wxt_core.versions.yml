@@ -78,6 +78,7 @@ history: 9.4.11
 honeypot: 2.1.2
 image: 9.4.11
 image_widget_crop: 2.3.0
+imce: 3.1.2
 inline_entity_form: 1.0.0-rc12
 inline_form_errors: 9.4.11
 jquery_ui: 1.6.0

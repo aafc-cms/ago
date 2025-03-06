@@ -17,7 +17,7 @@ display:
       arguments:
         uid:
           exception:
-            title: All
+            title: Tout
   page_1:
     display_title: Page
     display_options:
