@@ -35,6 +35,7 @@ dependencies:
     - linkit
     - media
     - slick
+    - toc_filter
     - token_filter
     - url_embed
     - wxt_chart_stability
@@ -157,7 +158,7 @@ filters:
         title: '0'
       optionset: default
       layout: ''
-      admin_uri: '/en/admin/config/content/formats/manage/webform?destination=/en/admin/config/content/formats&ajax_form=1&_wrapper_format=drupal_ajax'
+      admin_uri: '/en/admin/config/content/formats/manage/webform?destination=/en/admin/config/content/formats&ajax_form=1&_wrapper_format=drupal_ajax&_wrapper_format=drupal_ajax'
       background: false
       box_caption: ''
       box_caption_custom: ''
@@ -191,6 +192,16 @@ filters:
       override: false
       preserve_keys: false
       visible_items: null
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
+    status: false
+    weight: 0
+    settings:
+      type: default
+      auto: ''
+      block: false
+      exclude_above: false
   token_filter:
     id: token_filter
     provider: token_filter

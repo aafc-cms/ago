@@ -37,6 +37,7 @@ settings:
       - link
       - block
       - drupalMedia
+      - imce_image
       - '|'
       - sourceEditing
       - code
@@ -70,7 +71,7 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     ckeditor_codemirror_source_editing:
-      enable: false
+      enable: true
       mode: htmlmixed
       options:
         autoCloseBrackets: true
