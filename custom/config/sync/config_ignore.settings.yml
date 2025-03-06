@@ -44,3 +44,4 @@ ignored_config_entities:
   - ~block.block.footertop
   - ~block.block.hautdepieddepage
   - ~webform.webform.custom_gcweb_did_you_find
+  - ~webform.webform.settings

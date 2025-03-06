@@ -41,8 +41,8 @@ display:
       arguments:
         uid:
           exception:
-            title: All
+            title: Tout
         'null':
           admin_label: 'Logged-in user'
           exception:
-            title: All
+            title: Tout

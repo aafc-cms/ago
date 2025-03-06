@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: RUwrG7wWV4Ub64Us9Wn4rm9qshWG3yKfNeT_LpB6fYs
 langcode: en
 settings:
   default_status: open
@@ -14,8 +12,8 @@ settings:
   default_reset_button_label: Reset
   default_delete_button_label: Delete
   default_form_submit_once: false
-  default_form_open_message: 'This form has not yet been opened to submissions.'
-  default_form_close_message: 'Sorry&hellip; This form is closed to new submissions.'
+  default_form_open_message: ''
+  default_form_close_message: ''
   default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
   default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
   default_form_access_denied_message: 'Please login to access this form.'
@@ -39,13 +37,13 @@ settings:
   default_preview_prev_button_label: '< Previous'
   default_preview_label: Preview
   default_preview_title: '[webform:title]: Preview'
-  default_preview_message: 'Please review your submission. Your submission is not complete until you press the &quot;Submit&quot; button!'
+  default_preview_message: ''
   default_draft_button_label: 'Save Draft'
   default_draft_saved_message: 'Submission saved. You may return to this form later and it will restore the current values.'
   default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
   default_draft_pending_single_message: 'You have a pending draft for this webform. <a href="#">Load your pending draft</a>.'
   default_draft_pending_multiple_message: 'You have pending drafts for this webform. <a href="#">View your pending drafts</a>.'
-  default_confirmation_message: 'New submission added to [webform:title].'
+  default_confirmation_message: ''
   default_confirmation_back_label: 'Back to form'
   default_confirmation_noindex: true
   default_limit_total_message: 'No more submissions are permitted.'
@@ -72,11 +70,23 @@ settings:
   default_previous_submission_message: 'You have already submitted this webform. <a href="#">View your previous submission</a>.'
   default_previous_submissions_message: 'You have already submitted this webform. <a href="#">View your previous submissions</a>.'
   default_autofill_message: 'This submission has been autofilled with your previous submission.'
-  form_classes: "container-inline clearfix\r\nform--inline clearfix\r\nmessages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
+  form_classes: |
+    container-inline clearfix
+    form--inline clearfix
+    messages messages--error
+    messages messages--warning
+    messages messages--status
   button_classes: ''
-  preview_classes: "messages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
-  confirmation_classes: "messages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
-  confirmation_back_classes: "button\r\n"
+  preview_classes: |
+    messages messages--error
+    messages messages--warning
+    messages messages--status
+  confirmation_classes: |
+    messages messages--error
+    messages messages--warning
+    messages messages--status
+  confirmation_back_classes: |
+    button
   default_share: false
   default_share_node: false
   default_share_theme_name: ''
@@ -116,9 +126,28 @@ element:
   machine_name_pattern: a-z0-9_
   empty_message: '{Empty}'
   allowed_tags: admin
-  wrapper_classes: "container-inline clearfix\r\nform--inline clearfix\r\nmessages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
-  classes: "container-inline clearfix\r\nform--inline clearfix\r\nmessages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
-  horizontal_rule_classes: "webform-horizontal-rule--solid\r\nwebform-horizontal-rule--dashed\r\nwebform-horizontal-rule--dotted\r\nwebform-horizontal-rule--gradient\r\nwebform-horizontal-rule--thin\r\nwebform-horizontal-rule--medium\r\nwebform-horizontal-rule--thick\r\nwebform-horizontal-rule--flaired\r\nwebform-horizontal-rule--glyph\r\n"
+  wrapper_classes: |
+    container-inline clearfix
+    form--inline clearfix
+    messages messages--error
+    messages messages--warning
+    messages messages--status
+  classes: |
+    container-inline clearfix
+    form--inline clearfix
+    messages messages--error
+    messages messages--warning
+    messages messages--status
+  horizontal_rule_classes: |
+    webform-horizontal-rule--solid
+    webform-horizontal-rule--dashed
+    webform-horizontal-rule--dotted
+    webform-horizontal-rule--gradient
+    webform-horizontal-rule--thin
+    webform-horizontal-rule--medium
+    webform-horizontal-rule--thick
+    webform-horizontal-rule--flaired
+    webform-horizontal-rule--glyph
   default_description_display: ''
   default_more_title: More
   default_section_title_tag: h2
@@ -130,8 +159,8 @@ element:
     password_confirm: password_confirm
 html_editor:
   disabled: false
-  element_format: webform_default
-  mail_format: webform_default
+  element_format: webform
+  mail_format: webform
   tidy: true
   make_unused_managed_files_temporary: true
 file:
