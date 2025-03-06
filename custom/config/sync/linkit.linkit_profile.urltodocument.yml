@@ -27,7 +27,7 @@ matchers:
     id: 'entity:file'
     uuid: f0629534-a4cb-4f2a-b1a7-086dbb835e68
     settings:
-      metadata: 'by [file:owner] [file:name] [file:original:changed]'
+      metadata: 'by [file:owner:account-name] [file:name] [file:original:changed]'
       bundles: null
       group_by_bundle: null
       substitution_type: file
