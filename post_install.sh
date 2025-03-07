@@ -118,6 +118,7 @@ configureSettingsFile
 
 # File to verify.
 GCWEB_FILE="html/libraries/theme-gcweb/js/theme.js"
+GCWEB_MIN_FILE="html/libraries/theme-gcweb/js/theme.min.js"
 
 # Date v16.2.0 was published.
 REF_DATE="2025-02-04"
@@ -146,8 +147,11 @@ if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   unzip themes-dist-16.2.0-gcweb.zip
   mv ../theme-gcweb theme-gcweb_orig
   mv themes-dist-16.2.0-gcweb/GCWeb ../theme-gcweb
-  cd ../theme-gcweb
+  popd;
+  pushd html/libraries/theme-gcweb
   patch -p1 < ../../../custom/patches/theme-gcweb-jquery4-compatibility.patch
+  popd;
+  cp $GCWEB_FILE $GCWEB_MIN_FILE;
   popd
   rm ../libraries/tmp -r;
   popd;
@@ -402,4 +406,26 @@ else
   echo "The database is not yet configured, cannot install the db views at this time.";
 fi
 rm test-connection.txt;
+
+if [[ "$FOUND_DATE" -eq "2025-02-04" ]] && [ -d "html/libraries" ]; then
+  echo "version 16.2.0 of gcweb is detected";
+  if [ -f "$GCWEB_FILE" ]; then
+    FILE_SIZE=$(stat -c%s "$GCWEB_FILE")
+    if [ "$FILE_SIZE" -lt 203066 ]; then
+      echo "$GCWEB_FILE for GCWeb 16.2.0 requires patching for jQuery 4 compatibility."
+      # File is smaller than expected 203066 bytes.
+      echo "Applying patch..."
+      pushd html/libraries/theme-gcweb
+      patch -p1 < ../../../custom/patches/theme-gcweb-jquery4-compatibility.patch
+      popd;
+      # Ensure the min file is also the patched version.
+      cp $GCWEB_FILE $GCWEB_MIN_FILE;
+      echo "The min file is now the patched version of theme.js."
+    else
+      echo "$GCWEB_FILE for GCWeb 16.2.0 was previously patched for jQuery 4 compatibility."
+    fi
+  else
+    echo "File does not exist: $GCWEB_FILE"
+  fi
+fi
 
