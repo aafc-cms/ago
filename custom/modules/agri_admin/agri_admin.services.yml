@@ -12,3 +12,9 @@ services:
 
   agri_admin.entity_print_filename_generator.inner:
     alias: entity_print.filename_generator
+  agri_admin.route_alter:
+    class: Drupal\agri_admin\Hooks\SearchHelpRouteAlter
+    arguments: ['@logger.factory']
+    tags:
+      - { name: event_subscriber }
+
