@@ -146,6 +146,8 @@ if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   unzip themes-dist-16.2.0-gcweb.zip
   mv ../theme-gcweb theme-gcweb_orig
   mv themes-dist-16.2.0-gcweb/GCWeb ../theme-gcweb
+  cd ../theme-gcweb
+  patch -p1 < ../../../custom/patches/theme-gcweb-jquery4-compatibility.patch
   popd
   rm ../libraries/tmp -r;
   popd;
