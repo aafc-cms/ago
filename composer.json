@@ -234,6 +234,10 @@
                 "core breadcrumb empty patch":
                 "build/core_breadcrumb_empty.patch"
             },
+            "drupal/core": {
+                "3161212 - If a user is deleted, can hit this bug: breadcrumb empty patch.":
+                "https://www.drupal.org/files/issues/2025-01-28/3161212-32.patch"
+            },
             "drupal/safedelete": {
                 "3320470 - Allow override of the bulk operation validation with a checkbox":
                 "https://www.drupal.org/files/issues/2022-12-02/make-bulk-publish-verification-configurable-3320470-06.patch"
