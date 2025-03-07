@@ -41,6 +41,7 @@ dependencies:
     - entity_browser
     - file
     - file_delete
+    - file_replace
     - filebrowser
     - filehash_report
     - filter
@@ -140,6 +141,7 @@ permissions:
   - 'delete files'
   - 'delete files immediately'
   - 'delete files override usage'
+  - 'delete media'
   - 'delete own files'
   - 'delete token'
   - 'dropzone upload files'
@@ -177,6 +179,7 @@ permissions:
   - 'perform search and replace'
   - 'perform search only'
   - 'renew token'
+  - 'replace files'
   - 'revert all revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'

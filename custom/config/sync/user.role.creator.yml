@@ -146,6 +146,7 @@ permissions:
   - 'delete files'
   - 'delete files immediately'
   - 'delete files override usage'
+  - 'delete media'
   - 'delete own files'
   - 'delete own webform'
   - 'delete token'
