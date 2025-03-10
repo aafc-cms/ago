@@ -105,7 +105,7 @@ configureSettingsFile () {
   else
     chmod 775 html/sites/default;
     chmod 664 $settings_file;
-    ./post_install_helper.php "force_split=dev";
+#    ./post_install_helper.php "force_split=dev";
   fi
 
   # Fix previously configured environments.
