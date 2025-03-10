@@ -145,16 +145,16 @@ if [[ "$FOUND_DATE" < "$REF_DATE" ]] && [ -d "html/libraries" ]; then
   #mv ../wet-boew wet-boew_orig
   #mv wet-boew-dist-4.0.85/wet-boew ../
   unzip themes-dist-16.2.0-gcweb.zip
-  mv ../theme-gcweb theme-gcweb_orig
+  if [ -d "../theme-gcweb" ]; then
+    mv ../theme-gcweb theme-gcweb_orig
+  fi
   mv themes-dist-16.2.0-gcweb/GCWeb ../theme-gcweb
-  popd;
+  popd;popd;
   pushd html/libraries/theme-gcweb
   patch -p1 < ../../../custom/patches/theme-gcweb-jquery4-compatibility.patch
   popd;
   cp $GCWEB_FILE $GCWEB_MIN_FILE;
-  popd
-  rm ../libraries/tmp -r;
-  popd;
+  rm html/libraries/tmp -r;
   echo "End of upgrade for the gcweb library, now upgraded to gcweb 16.2.0 and wet-boew 4.0.85."
 else
   echo "The gcweb theme.js date published ($FOUND_DATE) is already as new or newer than the expected minimum $REF_DATE. No action is necessary."
