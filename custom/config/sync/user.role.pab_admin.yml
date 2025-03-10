@@ -141,7 +141,6 @@ permissions:
   - 'delete files'
   - 'delete files immediately'
   - 'delete files override usage'
-  - 'delete media'
   - 'delete own files'
   - 'delete token'
   - 'dropzone upload files'
