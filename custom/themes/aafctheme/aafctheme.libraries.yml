@@ -6,6 +6,7 @@ framework:
 drupal.aafctheme:
   js:
     js/drupal.aafctheme.js: {}
+    js/aafc_datatables.js: {}
   dependencies:
     - core/jquery
     - core/drupal
