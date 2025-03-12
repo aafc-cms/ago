@@ -10,7 +10,7 @@
         var table = $(event.target);
 
         // Ensure the pagination element exists
-        once('remove-aria-pressed', '.dataTables_paginate', context).forEach((pagination) => {
+        once('remove-aria-pressed', '.dataTables_paginate .pagination', context).forEach((pagination) => {
           pagination.querySelectorAll('.paginate_button').forEach((button) => {
             button.removeAttribute('aria-pressed');
           });
