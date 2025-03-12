@@ -8,7 +8,12 @@ dependencies:
     - core.entity_view_mode.media.linked
     - core.entity_view_mode.media.thumbnail
     - core.entity_view_mode.media.token
+    - core.entity_view_mode.media.w0520px
+    - core.entity_view_mode.media.w0825px
+    - core.entity_view_mode.media.w100
     - core.entity_view_mode.media.w133
+    - core.entity_view_mode.media.w166
+    - core.entity_view_mode.media.w175
     - core.entity_view_mode.media.w200
     - core.entity_view_mode.media.w250
     - core.entity_view_mode.media.w300
@@ -22,13 +27,14 @@ dependencies:
     - core.entity_view_mode.media.w900
   module:
     - blazy
+    - ck5_block_embed
     - embed_block
     - linkit
     - media
     - slick
-    - token_filter
+    - toc_filter
     - url_embed
-    - wxt_ext_editor
+    - wxt_chart_stability
 name: 'No Editor Full'
 format: no_editor_full
 weight: -7
@@ -48,6 +54,12 @@ filters:
         img: img
         iframe: iframe
       use_data_uri: '0'
+  ck5_block_embed:
+    id: ck5_block_embed
+    provider: ck5_block_embed
+    status: true
+    weight: 100
+    settings: {  }
   embed_block:
     id: embed_block
     provider: embed_block
@@ -84,7 +96,12 @@ filters:
         linked: linked
         thumbnail: thumbnail
         token: token
+        w0520px: w0520px
+        w0825px: w0825px
+        w100: w100
         w133: w133
+        w166: w166
+        w175: w175
         w200: w200
         w250: w250
         w300: w300
@@ -103,14 +120,27 @@ filters:
     status: false
     weight: 4
     settings:
+      caption:
+        alt: '0'
+        title: '0'
       optionset: default
       layout: ''
+      admin_uri: '/en/admin/config/content/formats/manage/no_editor_full?destination=/en/admin/config/content/formats'
       background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
       responsive_image_style: ''
+      box_style: ''
       image_style: ''
       media_switch: ''
       ratio: ''
       thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
       skin: ''
       overridables:
         arrows: '0'
@@ -127,29 +157,31 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
-  token_filter:
-    id: token_filter
-    provider: token_filter
+      preserve_keys: false
+      visible_items: null
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
     status: false
     weight: 0
     settings:
-      replace_empty: false
+      type: default
+      auto: ''
+      block: false
+      exclude_above: false
   url_embed:
     id: url_embed
     provider: url_embed
     status: true
     weight: 0
-    settings: {  }
-  wxt_add_table_attribute_filter:
-    id: wxt_add_table_attribute_filter
-    provider: wxt_ext_editor
-    status: false
-    weight: 0
     settings:
-      responsive: true
-      replace_classes: true
-      replace_all_classes: true
-      classes: 'wb-tables table'
-      whitelist_classes: ''
-      add_datatable_attribute: false
-      datatable_options: ''
+      enable_responsive: true
+      default_ratio: '66.7'
+  wxt_chart_stability_compatibilityfilter:
+    id: wxt_chart_stability_compatibilityfilter
+    provider: wxt_chart_stability
+    status: false
+    weight: -99
+    settings:
+      clean: '<td>&nbsp;</td>'
+      desired: '<td></td>'

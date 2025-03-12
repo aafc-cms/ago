@@ -35,7 +35,7 @@ settings:
       - insertTable
       - '|'
       - link
-      - block
+      - ck5BlockEmbed__default
       - drupalMedia
       - imce_image
       - '|'

@@ -41,7 +41,7 @@ settings:
       - panel
       - '|'
       - link
-      - block
+      - ck5BlockEmbed__default
       - drupalMedia
       - code
       - findAndReplace

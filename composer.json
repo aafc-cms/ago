@@ -396,7 +396,8 @@
         "drupal/votingapi": "4.0.x-dev as 3.0.1",
         "drupal/dynamic_entity_reference": "^3.2",
         "drupal/meaofd": "^1.0",
-        "drupal/imce": "^3.1"
+        "drupal/imce": "^3.1",
+        "drupal/ck5_block_embed": "^1.0"
     },
     "authors": [
         {
