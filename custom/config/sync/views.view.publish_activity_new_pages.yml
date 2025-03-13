@@ -559,7 +559,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 15
+          items_per_page: 25
           total_pages: null
           id: 0
           tags:
@@ -590,12 +590,12 @@ display:
               autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
               autosubmit_hide: false
               input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
-              autosubmit_textfield_minimum_length: 3
             sort:
               plugin_id: default
             filter:
@@ -707,7 +707,7 @@ display:
           plugin_id: datetime
           operator: between
           value:
-            min: ' -365 day'
+            min: ' -36500 day'
             max: ' +1 day'
             value: ''
             type: date
@@ -1590,7 +1590,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 300
+          items_per_page: 0
       filters:
         latest_revision:
           id: latest_revision
@@ -1641,8 +1641,8 @@ display:
           plugin_id: datetime
           operator: between
           value:
-            min: ' '
-            max: ' '
+            min: ' -36500 day'
+            max: ' +1 day'
             value: ''
             type: date
           group: 1
@@ -1780,7 +1780,7 @@ display:
             widget: select
             multiple: false
             remember: false
-            default_group: All
+            default_group: '1'
             default_group_multiple: {  }
             group_items:
               1:
@@ -1888,7 +1888,7 @@ display:
         default: '0'
       filename: ''
       automatic_download: true
-      export_limit: 300
+      export_limit: 0
       store_in_public_file_directory: false
       custom_redirect_path: false
       redirect_to_display: none
@@ -1928,13 +1928,13 @@ display:
               autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
               autosubmit_hide: false
               input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
-              autosubmit_textfield_minimum_length: 3
             filter:
               field_issued_value:
                 plugin_id: bef_datepicker
