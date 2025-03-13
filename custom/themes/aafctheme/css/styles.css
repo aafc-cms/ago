@@ -720,6 +720,7 @@ body.anonymous #wb-lng li {
 /* line 88, ../sass/_legacy-styles.scss */
 .most-requested h2 {
   font-size: 1.2em;
+  white-space: nowrap;
 }
 
 /* line 92, ../sass/_legacy-styles.scss */
