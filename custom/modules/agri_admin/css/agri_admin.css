@@ -466,7 +466,7 @@ div.view.view-moderated-content .view-filters .form-item--field-newstype-target-
 
 body[class*=moderationdashboard] nav[aria-label=Tabs],
 body[class*=moderationdashboard] nav[aria-label=Onglets] {
-  visibility: hidden;
+  display: none;
 }
 body[class*=moderationdashboard] body[class*=moderationdashboard] nav.mrgn-tp-md {
   margin-top: 0px;
