@@ -1,25 +1,19 @@
-label: 'Moderation Dashboard'
 display:
   default:
     display_title: Maître
     display_options:
-      title: 'Moderation Dashboard'
+      title: 'Tableau de bord de modération'
       fields:
-        name:
-          separator: ', '
+        name: {  }
       exposed_form:
         options:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       arguments:
         uid:
           exception:
             title: Tout
   page_1:
-    display_title: Page
     display_options:
-      menu:
-        title: 'Moderation Dashboard'
+      menu: {  }

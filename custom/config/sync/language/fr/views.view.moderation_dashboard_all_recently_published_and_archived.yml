@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      title: 'Tout le contenu récemment archivé'
+  block_1:
+    display_options:
+      title: 'Tout le contenu récemment publié'

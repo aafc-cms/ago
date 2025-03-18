@@ -1,7 +1,7 @@
 display:
   block_1:
     display_options:
-      title: 'Toutes les révisions en brouillon'
+      title: 'Tout le contenu en brouillon'
       empty:
         area_text_custom:
           content: "Il n'y a pas de brouillon de contenu."
