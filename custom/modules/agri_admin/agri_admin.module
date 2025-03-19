@@ -685,16 +685,19 @@ function _helper_locking_content($action, $entity_id, $bundle, $entity_obj = NUL
     if ($action == 'insert' || $action == 'update') {
       $current_user = \Drupal::currentUser();
       $current_user_id = $current_user->id();
-      if ($action == 'update') {
-        // AgriAdminHelper::getLatestRevision($entity_id, $vid);.
-        $latest = $entity_obj;
-      }
-      if ($action == 'insert') {
-        $latest = $entity_obj;
-      }
+      $latest = $entity_obj;
+
       $current_author_id = $latest->getOwnerId();
-      if (!isset($current_author_id)) {
+      if (empty($current_author_id)) {
         $current_author_id = $current_user_id;
+      }
+      else {
+        // Ensure the user exists before calling methods on it.
+        $author = User::load($current_author_id);
+        if (!$author) {
+          // Fallback if the author user is deleted
+          $current_author_id = $current_user_id;
+        }
       }
 
       $lock_service = \Drupal::service('content_lock');
