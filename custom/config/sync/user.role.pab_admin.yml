@@ -137,6 +137,7 @@ permissions:
   - 'create url aliases'
   - 'create video media'
   - 'create video_file media'
+  - 'delete any file'
   - 'delete content translations'
   - 'delete files'
   - 'delete files immediately'
