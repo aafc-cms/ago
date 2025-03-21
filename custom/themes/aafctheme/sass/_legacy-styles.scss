@@ -14,12 +14,7 @@ body.path-frontpage main.col-md-12 {
        line-height: 26px;
        margin-top: 0
 }
-#wb-srch{
-margin-right: 15px;
-}
-#wb-srch input, .srchbox input {
-  margin-right: 125px;
-}
+
 #wb-lng li {
   margin-right: 0 !important;
 }
@@ -52,26 +47,16 @@ ol, ul {
 #searchoptions{
   line-height: 1.25em;
 }
-#wb-bc{
-  margin-left: -30px;
-  margin-top: 15px;
-}
 .navbar img {
   width: auto !important;
 }
 .col-sm-12.bs-region.bs-region--bottom{
   padding-right: 0;
 }
-.container-fluid {
-  margin-right: 15px;
-}
 .region.region-search{
   margin-top: -0.75em;
-  right: 15px;
 }
-#wb-srch input, .srchbox input {
-  margin-right: 90px;
-}
+
 .breadcrumb {
   padding: 8px 20px;
 }
@@ -141,21 +126,79 @@ ul.feeds-cont li a {
 
 @media screen and (max-width: 1200px) {
   .featured {
-       padding-left:.8em;
-       }
+    padding-left:.8em;
+  }
+
+  .theme-gcweb #wb-srch form {
+    .select-wrapper {
+      width: 100%
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
-.list-responsive-3 > li {
+  .list-responsive-3 > li {
     width: 33%;
-       }
+  }
+
+  #custom-search-block-form {
+    #q {
+      max-width: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  #custom-search-block-form {
+    .form-group {
+      margin-bottom: 5px;
+    }
+
+    #searchoptions {
+      margin-right: -10px;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
 
-.btn-call-to-action {
-       font-size: 19px !important;
-       }
+  .theme-gcweb #wb-srch form {
+    .form-group {
+      margin-left: 0px;
+      padding: 0px;
+    }
+
+    .form-item {
+      width: 100%;
+
+      .select-wrapper,
+      #searchoptions {
+        width: 100%;
+      }
+    }
+
+    #edit-actions-search {
+      width: 100%;
+
+      #wb-srch-sub {
+        width: 100%;
+        margin-left: 0px;
+
+        .icon {
+          margin-right: 5px;
+        }
+
+        .sr-only {
+          position: relative;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .btn-call-to-action {
+    font-size: 19px !important;
+  }
 
 .most-requested li {
        font-size: 19px;

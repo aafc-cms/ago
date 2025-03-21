@@ -8,7 +8,6 @@
 
 @import 'anonymous/restrictions';
 @import 'anonymous/print_program_pages_view.scss';
-@import 'components/breadcrumb';
 @import 'components/draft-pending-views';
 @import 'components/container-fluid';
 @import 'components/followus';
@@ -21,8 +20,7 @@
 @import 'components/didyoufind-webform';
 //@import 'components/services-request-webform';
 @import 'regions/header';
-@import 'regions/highlighted-not-front';
-@import 'regions/highlighted-front-only';
+@import 'regions/highlighted';
 @import 'regions/footer';
 
 //@import 'layouts/header';
@@ -94,21 +92,5 @@ div.wb-share.mrgn-bttm-sm.pull-right.wb-init.wb-share-inited {
   width: 100%;
   a.shr-opn.wb-lbx.btn.btn-default {
     display: block;
-  }
-}
-/* END BUG FIX FOR LAYOUT BUILDER */
-@media (max-width: 844px) and (min-width: 768px) {
-  #wb-srch input, .srchbox input {
-    right: 100px;
-  }
- .form-inline .select-wrapper {
-    right: 100px;
-    position: relative;
-  }
-}
-@media screen and (max-width: 767px) {
-  #wb-srch input, .srchbox input {
-    margin-right: 160px;
-    border-right: 1px solid #ddd;
   }
 }

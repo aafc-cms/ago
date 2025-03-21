@@ -99,6 +99,34 @@ var AAFCFrontend = function() {
     AAFCFrontend.initSlideshow();
     searchInterface();
     initialized = true;
+
+    var $form = $('#custom-search-block-form');
+
+    // Get all direct div children of the form
+    var $divs = $form.children('div');
+
+    if ($divs.length >= 3) {
+      // First div: col-sm-12
+      $divs.eq(0)
+        .removeClass(function (index, className) {
+          return (className.match(/col-sm-\d+/g) || []).join(' ');
+        })
+        .addClass('col-sm-12');
+
+      // Second div: col-sm-10
+      $divs.eq(1)
+        .removeClass(function (index, className) {
+          return (className.match(/col-sm-\d+/g) || []).join(' ');
+        })
+        .addClass('col-sm-10');
+
+      // Third div: col-sm-2
+      $divs.eq(2)
+        .removeClass(function (index, className) {
+          return (className.match(/col-sm-\d+/g) || []).join(' ');
+        })
+        .addClass('col-sm-2');
+    }
   }
 
 
@@ -203,9 +231,9 @@ var AAFCFrontend = function() {
 
 
   function searchInterface() {
-    //if(!AAFCOnline.isIE()){
-    //  alert('notIE');
-    //}
+    // Insert screen-reader text inside search button
+    $('#wb-srch-sub').append('<span class="sr-only">Search</span>');
+
     AAFCFrontend.updateformaction();
     $("#q").change(function(){
       var searchval = $('#q').val();
