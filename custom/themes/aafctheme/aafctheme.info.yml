@@ -29,6 +29,9 @@ regions:
 libraries:
   - 'aafctheme/global-styling'
 
+ckeditor5-stylesheets:
+  - css/ckeditor5.css
+
 #libraries:
 #  - 'aafctheme/framework'
 
