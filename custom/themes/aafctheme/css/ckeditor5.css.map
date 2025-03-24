@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";AAAA,gBAAiB;EAChB,MAAM,EAAE,eAAe;;;AAEvB,iCAAiB;EACb,UAAU,EAAE,IAAI",
+"mappings": ";AAAA,gBAAiB;EAChB,MAAM,EAAE,eAAe;;;AAEvB;4BACY;EACR,UAAU,EAAE,IAAI",
 "sources": ["../sass/ckeditor5.scss"],
 "names": [],
 "file": "ckeditor5.css"
