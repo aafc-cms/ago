@@ -32,6 +32,7 @@ dependencies:
     - agri_admin
     - block
     - block_content
+    - ck5_block_embed
     - comment
     - contact
     - content_moderation
@@ -210,6 +211,7 @@ permissions:
   - 'update content translations'
   - 'update media'
   - 'use advanced search'
+  - 'use ck5 block embed button'
   - 'use editorial transition archive'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
