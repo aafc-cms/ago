@@ -1,7 +1,8 @@
 .ck-editor__main {
 	height: 100% !important;
 
-	.CodeMirror-wrap {
+	.CodeMirror-wrap,
+	.CodeMirror {
 	    min-height: 100%;
 	}
 }

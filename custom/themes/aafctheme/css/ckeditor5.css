@@ -3,7 +3,8 @@
   height: 100% !important;
 }
 /* line 4, ../sass/ckeditor5.scss */
-.ck-editor__main .CodeMirror-wrap {
+.ck-editor__main .CodeMirror-wrap,
+.ck-editor__main .CodeMirror {
   min-height: 100%;
 }
 

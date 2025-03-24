@@ -81,7 +81,7 @@ settings:
         autoCloseTags: true
         folding: true
         lineNumbers: true
-        lineWrapping: false
+        lineWrapping: true
         matchBrackets: true
         matchTags: true
         searchBottom: true
