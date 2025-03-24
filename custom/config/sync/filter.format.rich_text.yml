@@ -49,6 +49,7 @@ dependencies:
     - wxt_chart_stability
     - wxt_ext_blocks
     - wxt_ext_editor
+    - wxt_overrides
 _core:
   default_config_hash: LQ7Z_f1qIeAP7aiyHGBwlgjdsAHzwISN1_6-Dvv_fVY
 name: 'Rich Text'
@@ -256,6 +257,12 @@ filters:
       override: false
       preserve_keys: false
       visible_items: null
+  span_link_fix_filter:
+    id: span_link_fix_filter
+    provider: wxt_overrides
+    status: true
+    weight: 100
+    settings: {  }
   toc_filter:
     id: toc_filter
     provider: toc_filter
