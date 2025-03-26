@@ -24,14 +24,17 @@ class SpanLinkFixFilter extends FilterBase {
    * {@inheritdoc}
    */
   public function process($text, $langcode) {
-    $pattern = '#<span class="list-group-item">([^<]+)</span>\s*<a([^>]+)><span class="list-group-item">([^<]+)</span></a>#i';
+    $pattern = '#<span class="([^"]*\blist-group-item\b[^"]*)">([^<]+)</span>\s*<a([^>]+)><span class="([^"]*\blist-group-item\b[^"]*)">([^<]+)</span></a>#i';
 
     $text = preg_replace_callback($pattern, function ($matches) {
-      $before_text = $matches[1];         // The text in the first span
-      $link_attrs = $matches[2];          // All attributes in the <a>
-      $link_text = $matches[3];           // The text inside the second span
+      $span1_classes = $matches[1];   // All classes from the first span
+      $before_text = $matches[2];     // Text from the first span
+      $link_attrs = $matches[3];      // Attributes on the <a> tag
+      $span2_classes = $matches[4];   // All classes from the second span
+      $link_text = $matches[5];       // Text inside the second span
 
-      return '<span class="list-group-item">' . $before_text . '<a' . $link_attrs . '>' . $link_text . '</a></span>';
+      // Rebuild the merged output using the original classes from the first span
+      return '<span class="' . $span1_classes . '">' . $before_text . '<a' . $link_attrs . '>' . $link_text . '</a></span>';
     }, $text);
 
     return new FilterProcessResult($text);
