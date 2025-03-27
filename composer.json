@@ -258,6 +258,9 @@
             "drupal/linkchecker": {
                 "Check for null parent_entity_type_id":
                 "build/linkchecker.patch"
+            },
+            "wet-boew/wet-boew": {
+                "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
             }
         },
         "patches-ignore": {

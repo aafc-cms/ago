@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84b880fb8535b3d9e03f4e2d71250f24",
+    "content-hash": "937e2b5717ac9629e558466847d0cbdd",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
-            "version": "dev-11.1.x-wxt-6.1.x",
+            "version": "dev-feat-fix-span-link-steps",
             "dist": {
                 "type": "path",
                 "url": "custom/themes/aafctheme",
@@ -28,7 +28,7 @@
         },
         {
             "name": "agrcmsx/agri_admin",
-            "version": "dev-11.1.x-wxt-6.1.x",
+            "version": "dev-feat-fix-span-link-steps",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_admin",
@@ -44,7 +44,7 @@
         },
         {
             "name": "agrcmsx/agri_reports",
-            "version": "dev-11.1.x-wxt-6.1.x",
+            "version": "dev-feat-fix-span-link-steps",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_reports",
@@ -60,7 +60,7 @@
         },
         {
             "name": "agrcmsx/config",
-            "version": "dev-11.1.x-wxt-6.1.x",
+            "version": "dev-feat-fix-span-link-steps",
             "dist": {
                 "type": "path",
                 "url": "custom/config",
@@ -370,7 +370,7 @@
         },
         {
             "name": "agrcmsx/prefer_latest_content",
-            "version": "dev-11.1.x-wxt-6.1.x",
+            "version": "dev-feat-fix-span-link-steps",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/prefer_latest_content",
@@ -386,7 +386,7 @@
         },
         {
             "name": "agrcmsx/wxt_overrides",
-            "version": "dev-11.1.x-wxt-6.1.x",
+            "version": "dev-feat-fix-span-link-steps",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/wxt_overrides",
