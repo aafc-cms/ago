@@ -25,7 +25,6 @@ settings:
       - indent
       - outdent
       - blockQuote
-      - insertTable
       - '-'
       - '|'
       - link
