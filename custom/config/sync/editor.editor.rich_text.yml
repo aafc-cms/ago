@@ -42,7 +42,6 @@ settings:
       - '|'
       - ck5BlockEmbed__default
       - drupalMedia
-      - alert
       - panel
       - findAndReplace
       - fullScreen
