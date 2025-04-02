@@ -36,7 +36,6 @@ settings:
       - undo
       - redo
       - '|'
-      - alert
       - panel
       - '|'
       - link
