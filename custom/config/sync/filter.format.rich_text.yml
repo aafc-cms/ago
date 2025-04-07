@@ -212,6 +212,12 @@ filters:
         image: image
         video: video
         video_file: video_file
+  p_video_remove_filter:
+    id: p_video_remove_filter
+    provider: wxt_overrides
+    status: true
+    weight: 100
+    settings: {  }
   slick_filter:
     id: slick_filter
     provider: slick
