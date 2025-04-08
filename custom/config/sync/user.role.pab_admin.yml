@@ -138,6 +138,8 @@ permissions:
   - 'create video media'
   - 'create video_file media'
   - 'delete any file'
+  - 'delete any landing_page content'
+  - 'delete any page content'
   - 'delete content translations'
   - 'delete files'
   - 'delete files immediately'
