@@ -269,6 +269,12 @@ filters:
     status: true
     weight: 100
     settings: {  }
+  table_tfoot_fix_filter:
+    id: table_tfoot_fix_filter
+    provider: wxt_overrides
+    status: true
+    weight: 101
+    settings: {  }
   toc_filter:
     id: toc_filter
     provider: toc_filter
