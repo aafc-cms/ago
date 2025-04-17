@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "937e2b5717ac9629e558466847d0cbdd",
+    "content-hash": "1e127d35647d9d814eda9e6a9b1882de",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
-            "version": "dev-feat-fix-span-link-steps",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/themes/aafctheme",
@@ -28,7 +28,7 @@
         },
         {
             "name": "agrcmsx/agri_admin",
-            "version": "dev-feat-fix-span-link-steps",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_admin",
@@ -44,7 +44,7 @@
         },
         {
             "name": "agrcmsx/agri_reports",
-            "version": "dev-feat-fix-span-link-steps",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_reports",
@@ -60,7 +60,7 @@
         },
         {
             "name": "agrcmsx/config",
-            "version": "dev-feat-fix-span-link-steps",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/config",
@@ -370,7 +370,7 @@
         },
         {
             "name": "agrcmsx/prefer_latest_content",
-            "version": "dev-feat-fix-span-link-steps",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/prefer_latest_content",
@@ -386,7 +386,7 @@
         },
         {
             "name": "agrcmsx/wxt_overrides",
-            "version": "dev-feat-fix-span-link-steps",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/wxt_overrides",
@@ -12212,7 +12212,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/votingapi.git",
-                "reference": "1f392236260a2640bff6aea2c8237a4e0983729e"
+                "reference": "010514d0b35e4790faef182a466a0acd82016d22"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11"
@@ -12227,7 +12227,7 @@
                 },
                 "drupal": {
                     "version": "4.0.x-dev",
-                    "datestamp": "1740552053",
+                    "datestamp": "1741652645",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -12328,17 +12328,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.3.0-beta1",
+            "version": "6.3.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.3.0-beta1"
+                "reference": "6.3.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0-beta1.zip",
-                "reference": "6.3.0-beta1",
-                "shasum": "f712d463e883b678d7147b5c80bd8f9da72f13f8"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0-beta2.zip",
+                "reference": "6.3.0-beta2",
+                "shasum": "02e45bf3716c6e81846a9b77837782a43053e6f9"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11.0"
@@ -12383,8 +12383,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.3.0-beta1",
-                    "datestamp": "1736275819",
+                    "version": "6.3.0-beta2",
+                    "datestamp": "1742582977",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -12414,6 +12414,10 @@
                 {
                     "name": "liam morland",
                     "homepage": "https://www.drupal.org/user/493050"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
                 },
                 {
                     "name": "quicksketch",
@@ -21085,13 +21089,13 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/key": 20,
         "drupal/votingapi": 20,
+        "drupal/key": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
