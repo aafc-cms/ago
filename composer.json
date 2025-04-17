@@ -268,6 +268,18 @@
                 "drupal/page_manager": {
                     "Enter drupal/page_manager patch #2752227 description here":
                     "https://www.drupal.org/files/issues/2018-07-05/page_manager-incorrect-page_title-2752227-32-8.x.4.x.patch"
+                },
+                "drupal/entity_embed": {
+                    "3481413 - Fix PHP error": "https://www.drupal.org/files/issues/2024-10-17/entity_embed-3481413.patch"
+                },
+                "drupal/webform": {
+                    "Enter drupal/webform patch #3212867 description here":
+                    "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch",
+                    "Enter drupal/webform patch 3279930": "https://www.drupal.org/files/issues/2022-05-11/webform-strpos-php81-webform-requirements-3279930-2.patch"
+                },
+                "drupal/pathauto": {
+                    "3107144 - Is only in latest releases.":
+                    "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
                 }
             },
             "acquia/lightning": {
@@ -276,11 +288,6 @@
                     "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent":
                     "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                }
-            },
-            "agrcmsx/dxbase": {
-                "drupal/entity_embed": {
-                    "3481413 - Fix PHP error": "https://www.drupal.org/files/issues/2024-10-17/entity_embed-3481413.patch"
                 }
             },
             "drupalwxt/wxt": {
@@ -346,17 +353,6 @@
                     "https://www.drupal.org/files/issues/classes_should_be_array-2900531-2.patch"
                 }
             },
-            "agrcmsx/dxbase": {
-                "drupal/webform": {
-                    "Enter drupal/webform patch #3212867 description here":
-                    "https://www.drupal.org/files/issues/2021-05-07/3212867-3.patch",
-                    "Enter drupal/webform patch 3279930": "https://www.drupal.org/files/issues/2022-05-11/webform-strpos-php81-webform-requirements-3279930-2.patch"
-                },
-                "drupal/pathauto": {
-                    "3107144 - Is only in latest releases.":
-                    "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
-                }
-            },
             "drupal/pathauto": {
                 "3107144 - Is only in latest releases.":
                 "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
@@ -393,12 +389,10 @@
         "drupal/entity_print": "^2.15",
         "drupal/draggableviews": "^2.1",
         "drupal/key": "1.x-dev as 1.19",
-        "drupal/votingapi": "4.0.x-dev as 3.0.1",
         "drupal/dynamic_entity_reference": "^3.2",
         "drupal/meaofd": "^1.0",
         "drupal/imce": "^3.1",
-        "drupal/ck5_block_embed": "^1.0",
-        "drupal/devel_php": "^1.7"
+        "drupal/ck5_block_embed": "^1.0"
     },
     "authors": [
         {
