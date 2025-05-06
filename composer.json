@@ -255,10 +255,6 @@
                 "3481223 - Updated file upload validators.":
                 "https://git.drupalcode.org/project/file_replace/-/merge_requests/7.patch"
             },
-            "drupal/linkchecker": {
-                "Check for null parent_entity_type_id":
-                "build/linkchecker.patch"
-            },
             "wet-boew/wet-boew": {
                 "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
             }
@@ -374,7 +370,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "11.1.2.4",
+        "agrcmsx/dxbase": "11.1.2.5",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/config": "*",

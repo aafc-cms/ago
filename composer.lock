@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e127d35647d9d814eda9e6a9b1882de",
+    "content-hash": "280e7a31d1f14da07f0e8f0c3f5f9dc8",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "11.1.2.4",
+            "version": "11.1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "af2444aee52be0254735ce8c4da1fba39b4d68e4"
+                "reference": "a7baba1439ba5ca504a02a11e765a7ee99a19f0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=af2444aee52be0254735ce8c4da1fba39b4d68e4",
-                "reference": "af2444aee52be0254735ce8c4da1fba39b4d68e4",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=a7baba1439ba5ca504a02a11e765a7ee99a19f0a",
+                "reference": "a7baba1439ba5ca504a02a11e765a7ee99a19f0a",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +237,8 @@
                         "3409881 - Font awesome patch , for D10.1.6 compatibility.": "https://www.drupal.org/files/issues/2023-12-19/wxt5-3409880-03.patch"
                     },
                     "drupal/linkchecker": {
-                        "3426268 - Check on demand": "https://www.drupal.org/files/issues/2024-03-08/linkchecker-allow-to-check-links-on-demand-3426268-4.patch",
+                        "3426268 - Check on demand": "https://www.drupal.org/files/issues/2025-05-05/3426268-13_0.patch",
+                        "3522806 - Check for null parent_entity_type_id": "https://www.drupal.org/files/issues/2025-05-05/3522806-04.patch",
                         "Linkchecker interval , 2 minute interval for debugging purposes": "https://www.drupal.org/files/issues/2021-05-07/linkchecker-interval_for_debugging-3212816-3.patch",
                         "321320 - Allow linkchecker in a non-standard environment, host and port substitution without skip published option.": "https://www.drupal.org/files/issues/2024-12-30/3213210-40.patch"
                     },
@@ -364,9 +365,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.2.4"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.2.5"
             },
-            "time": "2025-03-04T11:00:49+00:00"
+            "time": "2025-05-05T21:53:36+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -21089,13 +21090,13 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/votingapi": 20,
         "drupal/key": 20,
+        "drupal/votingapi": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
