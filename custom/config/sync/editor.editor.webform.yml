@@ -35,6 +35,7 @@ settings:
       - link
       - ck5BlockEmbed__default
       - drupalMedia
+      - cke5_table_fix_dummy
       - imce_image
       - '|'
       - sourceEditing

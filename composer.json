@@ -81,32 +81,6 @@
         {
             "type": "package",
             "package": {
-                "name": "drupaloverride/layout_builder_st",
-                "version": "dev-master",
-                "type": "drupal-module",
-                "source": {
-                    "url": "https://git.drupalcode.org/issue/layout_builder_st-3431600.git",
-                    "type": "git",
-                    "reference": "3431600-automated-drupal-11"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "drupaloverride/toc_api",
-                "version": "dev-master",
-                "type": "drupal-module",
-                "source": {
-                    "url": "https://git.drupalcode.org/issue/toc_api-3455312.git",
-                    "type": "git",
-                    "reference": "3455312-drupal11-fixes"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "drupaloverride/webform_revision_ui",
                 "version": "dev-master",
                 "type": "drupal-module",
@@ -231,8 +205,6 @@
         },
         "patches": {
             "drupal/core": {
-                "3161212 - If a user is deleted, can hit this bug: breadcrumb empty patch.": "https://www.drupal.org/files/issues/2025-01-28/3161212-32.patch",
-                "3352384 - Add Exception for TypeError Argument must be String": "https://www.drupal.org/files/issues/2024-11-07/TypeError_htmlspecialchars_ArgumentNustBeTypeString_ArrayGiven-3352384-62.patch",
                 "core breadcrumb empty patch": "build/core_breadcrumb_empty.patch"
             },
             "drupal/filebrowser": {
@@ -250,10 +222,6 @@
             "drupalwxt/wxt": {
                 "Allow split of password policy":
                 "build/wxt_split_password_policy.patch"
-            },
-            "drupal/file_replace": {
-                "3481223 - Updated file upload validators.":
-                "https://git.drupalcode.org/project/file_replace/-/merge_requests/7.patch"
             },
             "wet-boew/wet-boew": {
                 "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
@@ -322,9 +290,6 @@
                     "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch",
                     "1356276 - Overrides for profile and sub profile use 686 instead of 656": "https://www.drupal.org/files/issues/2021-06-29/D91x-1356276-656.patch"
                 },
-                "drupal/layout_builder_st": {
-                    "3420063 - Fix member call to getConfig() on null in OverridesSectionStorage.php": "https://git.drupalcode.org/project/layout_builder_st/-/merge_requests/6.diff"
-                },
                 "drupal/entity_embed": {
                     "3481413 - Fix PHP error": "https://www.drupal.org/files/issues/2024-10-17/entity_embed-3481413.patch"
                 },
@@ -370,7 +335,7 @@
         }
     },
     "require": {
-        "agrcmsx/dxbase": "11.1.2.5",
+        "agrcmsx/dxbase": "11.1.3.0",
         "agrcmsx/agri_admin": "*",
         "agrcmsx/agri_reports": "*",
         "agrcmsx/config": "*",
@@ -386,9 +351,6 @@
         "drupal/draggableviews": "^2.1",
         "drupal/key": "1.x-dev as 1.19",
         "drupal/dynamic_entity_reference": "^3.2",
-        "drupal/meaofd": "^1.0",
-        "drupal/imce": "^3.1",
-        "drupal/ck5_block_embed": "^1.0",
         "drupal/devel_php": "^1.7"
     },
     "authors": [
