@@ -290,9 +290,6 @@
                     "https://www.drupal.org/files/issues/2020-12-13/1356276-633-by-mpotter-balsama-phenaproxima-9.1.0-9.2.x.patch",
                     "1356276 - Overrides for profile and sub profile use 686 instead of 656": "https://www.drupal.org/files/issues/2021-06-29/D91x-1356276-656.patch"
                 },
-                "drupal/layout_builder_st": {
-                    "3420063 - Fix member call to getConfig() on null in OverridesSectionStorage.php": "https://git.drupalcode.org/project/layout_builder_st/-/merge_requests/6.diff"
-                },
                 "drupal/entity_embed": {
                     "3481413 - Fix PHP error": "https://www.drupal.org/files/issues/2024-10-17/entity_embed-3481413.patch"
                 },
