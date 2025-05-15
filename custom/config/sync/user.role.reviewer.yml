@@ -17,6 +17,7 @@ dependencies:
     - media.type.video_file
     - node.type.landing_page
     - node.type.page
+    - node.type.webform
     - workflows.workflow.block_publishing
     - workflows.workflow.publishing
   module:
@@ -133,6 +134,7 @@ permissions:
   - 'translate image media'
   - 'translate landing_page node'
   - 'translate page node'
+  - 'translate webform node'
   - 'update any media'
   - 'update content translations'
   - 'update media'

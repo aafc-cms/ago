@@ -182,6 +182,7 @@ permissions:
   - 'translate interface'
   - 'translate menu_link_content'
   - 'translate page node'
+  - 'translate webform node'
   - 'update any media'
   - 'update content translations'
   - 'update media'
