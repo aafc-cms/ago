@@ -1,11 +1,11 @@
-uuid: e9f3335b-fe08-45e3-adce-abcf1749204f
+uuid: 97d84e7c-c3b0-4a8d-a711-f4184914c62f
 langcode: en
 status: open
 dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 1
+uid: null
 template: false
 archive: false
 id: add_email
@@ -23,36 +23,56 @@ elements: |-
       '#type': webform_markup
       '#markup': |-
         <header class="panel-heading">
-        <h3 class="panel-title">Lenders: Sign up for alerts</h3>
+        <h3 class="panel-title">Sign up for alerts</h3>
         </header>
 
         <div class="panel-body">
-        <p>Subscribe to receive email reminders and notifications when there are changes to any of the CALA Program lender guidelines, bulletins, procedures, specifications, or publications.</p>
+        <p>Subscribe as a lender or a producer.</p>
+
+        <p><strong>Lenders</strong><br />
+        Subscribe to receive email reminders and notifications when there are changes to any of the CALA Program lender guidelines, bulletins, procedures, specifications, or publications&nbsp;and to receive information about other related AAFC programs and initiatives.</p>
+
+        <p><strong>Producers</strong><br />
+        Subscribe to receive informational emails about the program and information about other related AAFC programs and initiatives.</p>
 
         <details><summary>
         <h4>Privacy notice statement</h4>
         </summary>
 
-        <p>The personal information collected on this subscription form is collected under the authority of the <a href="https://laws-lois.justice.gc.ca/eng/acts/f-2.7/index.html"> <cite>Canadian Agricultural Loans Act</cite> </a> for the purposes of sending participating lenders:</p>
+        <p>The personal information collected on this subscription form is collected under the authority of the <a href="https://laws-lois.justice.gc.ca/eng/acts/f-2.7/index.html"> <cite>Canadian Agricultural Loans Act</cite> </a> for the purposes of sending participating lenders and producers:</p>
 
         <ul>
         	<li>Informational emails about the program</li>
         	<li>Notice of upcoming training sessions</li>
         	<li>Program evaluation surveys</li>
+        	<li>Information about related AAFC programs</li>
         </ul>
 
-        <p>Details of the collection, use, disclosure, and retention of personal information are described in Personal Information Bank: <cite>Canadian Agricultural Loans Act</cite> (AAFC PPU 165). Financial facilities and lenders choosing not to provide the information requested will not to be added to the program’s subscription list and will not receive electronic correspondences from AAFC. or be asked to participate in training sessions or program evaluation surveys.</p>
+        <p>Details of the collection, use, disclosure, and retention of personal information are described in Personal Information Bank: <cite>Canadian Agricultural Loans Act</cite> (AAFC PPU 165). Financial facilities, lenders and producers choosing not to provide the information requested will not to be added to the program’s subscription list and will not receive electronic correspondences from AAFC or be asked to participate in training sessions or program evaluation surveys.</p>
 
         <p>Personal information will be handled in accordance with the <cite>Privacy Act</cite>. Individuals have the right to the protection and correction of, and access to, their personal information. For personal information under the control of AAFC, these rights may be exercised by contacting the AAFC Access to Information and Privacy Director at <a href="mailto:aafc.atip-aiprp.aac@agr.gc.ca">aafc.atip-aiprp.aac@agr.gc.ca</a>. Individuals also have the right to file a complaint with the Office of the Privacy Commissioner of Canada concerning AAFC’s handling of their personal information.</p>
         </details>
 
-        <p class="mrgn-tp-lg">Please enter your email address in the box below then click the Subscribe button.</p>
+        <p class="mrgn-tp-lg">Please enter your email address in the box below, choose "Lender" or "Producer," then click the Subscribe button.</p>
         </div>
+    producer_lender:
+      '#type': radios
+      '#title': Producer/Lender
+      '#title_display': none
+      '#options':
+        Lender: Lender
+        Producer: Producer
+      '#wrapper_attributes':
+        style: 'margin-left: 16px; margin-top: -30px'
     email_address:
       '#type': email
       '#title': 'Email Address'
       '#title_display': none
       '#required_error': 'Please provide valid email address.'
+      '#unique': true
+      '#unique_entity': true
+      '#unique_user': true
+      '#unique_error': 'The email address you submitted is already subscribed. If you have any questions, please contact the program.'
       '#pattern': '^[^\s@]+@[^\s@]+$'
       '#pattern_error': 'Please provide valid email address.'
       '#states':
@@ -60,9 +80,9 @@ elements: |-
           ':input[name="email_address"]':
             empty: true
       '#attributes':
-        style: 'margin-left: 16px; margin-top: -20px'
+        style: 'margin-left: 16px'
       '#label_attributes':
-        style: 'margin-left: 16px; margin-top: -20px'
+        style: 'margin-left: 16px; margin-top: 0px'
     actions:
       '#type': webform_actions
       '#title': 'Submit button(s)'
@@ -72,7 +92,7 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
   ajax_progress_type: ''
   ajax_effect: ''
@@ -277,10 +297,11 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: "Canadian Agricultural Loans Act Program lenders' subscription list"
-      body: "<p>Submitted on [current-date:long]</p>\r\n\r\n<p>Submitted by:&nbsp;[webform_submission:values:email_address]</p>\r\n\r\n<p>The above email address has been added to the <a href=\"https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fagriculture.canada.ca%2Fen%2Fprograms%2Fcanadian-agricultural-loans-act%2Fcontact-information&amp;data=05%7C02%7CDeepani.Waidyaratne%40AGR.GC.CA%7C1a3957e037cc4eef43a208dd0b2d89ef%7C9da98bb118574cc387519a49e35d24cd%7C0%7C0%7C638679012404164385%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=%2FcWtPDpt0xBUO0PaWP5%2FXWTxY%2BPcaa3pfK9SIeoCroM%3D&amp;reserved=0\" target=\"_blank\" title=\"https://agriculture.canada.ca/en/programs/canadian-agricultural-loans-act/contact-information\">Canadian Agricultural Loans Act Program</a> lenders' subscription list.<br />\r\n<br />\r\nIf you did not make this request or would like to unsubscribe, please send an email to <a href=\"mailto:aafc.CALA-LCPA.aac@agr.gc.ca\" target=\"_blank\" title=\"mailto:aafc.cala-lcpa.aac@agr.gc.ca\">aafc.CALA-LCPA.aac@agr.gc.ca</a> or call us toll-free at 1-866-367-8506.</p>"
+      subject: "Canadian Agricultural Loans Act Program [webform_submission:values:producer_lender:raw]s' subscription list"
+      body: "<p>Submitted on [current-date:long]</p>\r\n\r\n<p>Submitted by:&nbsp;[webform_submission:values:email_address]</p>\r\n\r\n<p>The above email address has been added to the <a href=\"https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fagriculture.canada.ca%2Fen%2Fprograms%2Fcanadian-agricultural-loans-act%2Fcontact-information&amp;data=05%7C02%7CDeepani.Waidyaratne%40AGR.GC.CA%7C1a3957e037cc4eef43a208dd0b2d89ef%7C9da98bb118574cc387519a49e35d24cd%7C0%7C0%7C638679012404164385%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=%2FcWtPDpt0xBUO0PaWP5%2FXWTxY%2BPcaa3pfK9SIeoCroM%3D&amp;reserved=0\" target=\"_blank\" title=\"https://agriculture.canada.ca/en/programs/canadian-agricultural-loans-act/contact-information\">Canadian Agricultural Loans Act Program</a>&nbsp;[webform_submission:values:producer_lender:raw]s' subscription list.<br />\r\n<br />\r\nIf you did not make this request or would like to unsubscribe, please send an email to <a href=\"mailto:aafc.CALA-LCPA.aac@agr.gc.ca\" target=\"_blank\" title=\"mailto:aafc.cala-lcpa.aac@agr.gc.ca\">aafc.CALA-LCPA.aac@agr.gc.ca</a> or call us toll-free at 1-866-367-8506.</p>"
       excluded_elements:
         markup: markup
+        producer_lender: producer_lender
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
