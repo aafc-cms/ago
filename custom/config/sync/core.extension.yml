@@ -190,7 +190,6 @@ module:
   views_published_or_roles: 0
   views_ui: 0
   webform: 0
-  webform_access: 0
   webform_node: 0
   webform_revision_ui: 0
   webform_translation_permissions: 0
