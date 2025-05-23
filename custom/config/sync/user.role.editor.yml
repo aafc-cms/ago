@@ -56,7 +56,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - webform
     - webform_node
     - wxt_core
@@ -83,7 +82,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access tokens overview'
   - 'access toolbar'
-  - 'access tour'
   - 'access webform overview'
   - 'access_unpublished block_content basic'
   - 'access_unpublished block_content footer_french'

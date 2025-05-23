@@ -66,7 +66,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - webform
     - webform_revision_ui
     - webform_translation_permissions
@@ -99,7 +98,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access tokens overview'
   - 'access toolbar'
-  - 'access tour'
   - 'access user contact forms'
   - 'access user profiles'
   - 'access webform overview'

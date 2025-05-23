@@ -63,7 +63,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - views_ui
     - webform
     - webform_node
@@ -93,7 +92,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access tokens overview'
   - 'access toolbar'
-  - 'access tour'
   - 'access webform overview'
   - 'access webform submission user'
   - 'access_unpublished block_content basic'
