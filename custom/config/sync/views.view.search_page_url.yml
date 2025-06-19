@@ -790,7 +790,7 @@ display:
             creator: creator
             pab_admin: pab_admin
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
