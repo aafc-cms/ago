@@ -20,7 +20,6 @@ settings:
       - specialCharacters
       - superscript
       - subscript
-      - cite
       - heading
       - outdent
       - indent
@@ -45,6 +44,7 @@ settings:
       - code
       - findAndReplace
       - fullScreen
+      - cke5_label_fix_dummy
   plugins:
     ckeditor5_alignment:
       enabled_alignments:

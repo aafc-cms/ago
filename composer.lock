@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f83f76aebe4b690b55dd05e3f943458",
+    "content-hash": "95f843e40608ee241086e38cb8cad095",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -3475,6 +3475,51 @@
             "homepage": "https://www.drupal.org/project/ck5_block_embed",
             "support": {
                 "source": "https://git.drupalcode.org/project/ck5_block_embed"
+            }
+        },
+        {
+            "name": "drupal/ckeditor5_label_fix",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor5_label_fix.git",
+                "reference": "9ef6231ac007cfc27f8da03e5fd0c46e81ec2e5c"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1751159598",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                },
+                {
+                    "name": "smulvih2",
+                    "homepage": "https://www.drupal.org/user/795442"
+                }
+            ],
+            "description": "Prevents CKEditor5 from mangling label and anchor nesting.",
+            "homepage": "https://www.drupal.org/project/ckeditor5_label_fix",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditor5_label_fix"
             }
         },
         {
@@ -21044,6 +21089,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/ckeditor5_label_fix": 20,
         "drupal/key": 20,
         "drupal/votingapi": 20,
         "phpmd/phpmd": 0

@@ -351,7 +351,8 @@
         "drupal/draggableviews": "^2.1",
         "drupal/key": "1.x-dev as 1.19",
         "drupal/dynamic_entity_reference": "^3.2",
-        "drupal/devel_php": "^1.7"
+        "drupal/devel_php": "^1.7",
+        "drupal/ckeditor5_label_fix": "^1.0@dev"
     },
     "authors": [
         {
