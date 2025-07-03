@@ -35,6 +35,7 @@ dependencies:
   module:
     - blazy
     - ck5_block_embed
+    - ckeditor5_label_fix
     - editor
     - embed_block
     - entity_embed
@@ -157,6 +158,12 @@ filters:
     weight: -40
     settings:
       filter_url_length: 128
+  label_link_fix_filter:
+    id: label_link_fix_filter
+    provider: ckeditor5_label_fix
+    status: true
+    weight: 101
+    settings: {  }
   linkit:
     id: linkit
     provider: linkit
