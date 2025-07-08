@@ -28,14 +28,14 @@ body.path-admin {
     .form-item--revision-timestamp-min,
     .form-item--field-modified-value-min,
     .form-item--changed-min {
-      margin: 0.25rem 0.5rem 0.5rem 0;
-      max-width: 135px;
+      margin: 0.25rem 0.5rem 0rem 0;
+      max-width: 140px;
     }
     .form-item--revision-timestamp-max,
     .form-item--field-modified-value-max,
     .form-item--changed-max {
-      margin: 0.25rem 0.5rem 0.5rem 0;
-      max-width: 120px;
+      margin: 0.25rem 0.5rem 0.5rem 0.75rem;
+      max-width: 130px;
     }
     #edit-revision-timestamp-wrapper,
     #edit-field-modified-value-wrapper {
