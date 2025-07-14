@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc5cedaad2ddeb92793106d9049cddda",
+    "content-hash": "2e301921c69a3716ac584d239ab73624",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "11.1.3.6",
+            "version": "11.1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "624bff7d2c88b6671ab293874e650a0ea8c52b30"
+                "reference": "d824575e72db6417d9b545d766c4381621445375"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=624bff7d2c88b6671ab293874e650a0ea8c52b30",
-                "reference": "624bff7d2c88b6671ab293874e650a0ea8c52b30",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=d824575e72db6417d9b545d766c4381621445375",
+                "reference": "d824575e72db6417d9b545d766c4381621445375",
                 "shasum": ""
             },
             "require": {
@@ -175,7 +175,7 @@
                 "drupal/workflow": "1.x-dev@dev",
                 "drupal/wxt_chart_stability": "^1.0@beta",
                 "drupaloverride/webform_revision_ui": "*",
-                "drupalwxt/wxt": "6.1.x-dev",
+                "drupalwxt/wxt": "^6.1.1",
                 "drush/drush": "^12 || ^13",
                 "nnnick/chartjs": "^4.4",
                 "w8tcha/ckeditor-codemirror": "1.18.5"
@@ -373,9 +373,9 @@
             "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.3.6"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.3.7"
             },
-            "time": "2025-06-02T22:20:14+00:00"
+            "time": "2025-07-14T15:45:50+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",

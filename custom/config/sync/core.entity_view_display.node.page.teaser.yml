@@ -50,14 +50,13 @@ content:
     weight: 100
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 101
     region: content
 hidden:
   comment: true
   content_moderation_control: true
-  entity_print_view_epub: true
-  entity_print_view_pdf: true
-  entity_print_view_word_docx: true
   field_campaign: true
   field_campaign_color: true
   field_created_by: true

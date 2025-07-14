@@ -35,6 +35,7 @@ dependencies:
   module:
     - bootstrap_layouts
     - layout_builder
+    - layout_builder_restrictions
     - layout_library
     - metatag
     - user
@@ -118,6 +119,13 @@ third_party_settings:
         third_party_settings: {  }
   layout_library:
     enable: true
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 _core:
   default_config_hash: bLoSGDYNsrP1DViTgR6L7C_VCpRkDyRUZlW9gFqjpxQ
 id: node.landing_page.full
@@ -144,9 +152,6 @@ content:
     region: content
 hidden:
   body: true
-  entity_print_view_epub: true
-  entity_print_view_pdf: true
-  entity_print_view_word_docx: true
   field_campaign: true
   field_campaign_color: true
   field_created_by: true

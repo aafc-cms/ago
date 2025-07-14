@@ -18,7 +18,8 @@ content:
   embed_code:
     type: twitter_embed
     label: hidden
-    settings: {  }
+    settings:
+      conversation: false
     third_party_settings: {  }
     weight: 1
     region: content

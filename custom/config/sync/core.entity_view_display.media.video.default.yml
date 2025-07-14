@@ -45,6 +45,8 @@ content:
       responsive: true
       width: 854
       height: 480
+      title_format: '@provider | @title'
+      title_fallback: true
     third_party_settings: {  }
     weight: 3
     region: content
@@ -64,9 +66,6 @@ content:
     weight: 2
     region: content
 hidden:
-  entity_print_view_epub: true
-  entity_print_view_pdf: true
-  entity_print_view_word_docx: true
   field_aafc_category: true
   field_media_in_library: true
   field_media_video_file: true
