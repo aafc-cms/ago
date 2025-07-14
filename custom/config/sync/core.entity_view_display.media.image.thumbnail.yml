@@ -12,7 +12,6 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
-    - field_formatter
     - image
 _core:
   default_config_hash: Gb3qN_HZzqfFf4728OIYBwnMVryxUzlsWkmOY56idC8
@@ -21,15 +20,6 @@ targetEntityType: media
 bundle: image
 mode: thumbnail
 content:
-  field_media_in_library:
-    type: field_link
-    label: above
-    settings:
-      type: ''
-      settings: {  }
-    third_party_settings: {  }
-    weight: 9
-    region: content
   image:
     type: image
     label: hidden
@@ -46,6 +36,7 @@ hidden:
   field_aafc_category: true
   field_image_link: true
   field_media_image: true
+  field_media_in_library: true
   langcode: true
   name: true
   thumbnail: true
