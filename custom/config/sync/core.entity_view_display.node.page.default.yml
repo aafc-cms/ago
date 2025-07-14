@@ -101,6 +101,7 @@ third_party_settings:
       allowed_layouts: {  }
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
+      restricted_categories: {  }
 _core:
   default_config_hash: Kfxnq5Imio9VFBoNa_PIkzXoTmjz_T-EY3mOrwDTddU
 id: node.page.default
@@ -292,9 +293,6 @@ content:
 hidden:
   comment: true
   content_moderation_control: true
-  entity_print_view_epub: true
-  entity_print_view_pdf: true
-  entity_print_view_word_docx: true
   field_lead_title: true
   field_meta_tags: true
   langcode: true

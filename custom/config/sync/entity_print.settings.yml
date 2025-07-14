@@ -6,4 +6,5 @@ print_engines:
   pdf_engine: dompdf
   epub_engine: ''
   word_docx_engine: ''
+enabled_entity_type_ids: {  }
 base_url: 'http://localhost:8000'
