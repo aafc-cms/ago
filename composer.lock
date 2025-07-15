@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e301921c69a3716ac584d239ab73624",
+    "content-hash": "49d474a032d3b1d29ba1faca81f8faf9",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -7633,17 +7633,17 @@
         },
         {
             "name": "drupal/jquery_downgrade",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_downgrade.git",
-                "reference": "1.0.1"
+                "reference": "1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_downgrade-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "12c75f82cb8e2f0a706edff6a6e6c535ddff83ad"
+                "url": "https://ftp.drupal.org/files/projects/jquery_downgrade-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "252e7f587ceff484305df74decd8a37d7698cd38"
             },
             "require": {
                 "drupal/core": "^11 || ^12"
@@ -7651,11 +7651,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1739317048",
+                    "version": "1.0.2",
+                    "datestamp": "1752602542",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -7667,6 +7667,10 @@
                 {
                     "name": "joseph.olstad",
                     "homepage": "https://www.drupal.org/user/1321830"
+                },
+                {
+                    "name": "smulvih2",
+                    "homepage": "https://www.drupal.org/user/795442"
                 }
             ],
             "description": "Replaces jQuery 4 with jQuery 3 on specific pages.",
@@ -8747,17 +8751,17 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "7.0.5",
+            "version": "7.0.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "7.0.5"
+                "reference": "7.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-7.0.5.zip",
-                "reference": "7.0.5",
-                "shasum": "58baf9f76c46c73e02639ac79857889c52c46113"
+                "url": "https://ftp.drupal.org/files/projects/linkit-7.0.7.zip",
+                "reference": "7.0.7",
+                "shasum": "aa10493dfa34f4f8ce51313d47c66b21b9596f3e"
             },
             "require": {
                 "drupal/core": "^10.1 || ^11"
@@ -8769,8 +8773,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.0.5",
-                    "datestamp": "1750458295",
+                    "version": "7.0.7",
+                    "datestamp": "1752264962",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12999,7 +13003,7 @@
         },
         {
             "name": "drupalwxt/wxt",
-            "version": "6.1.x-dev",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
@@ -13225,7 +13229,7 @@
             "description": "Project template for Drupal 10 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://github.com/drupalwxt/wxt/issues",
-                "source": "https://github.com/drupalwxt/wxt/tree/6.1.x"
+                "source": "https://github.com/drupalwxt/wxt/tree/6.1.1"
             },
             "time": "2025-07-03T02:31:11+00:00"
         },
