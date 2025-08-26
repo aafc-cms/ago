@@ -228,8 +228,7 @@
                 "https://git.drupalcode.org/project/draggableviews/-/merge_requests/29.diff"
             },
             "drupalwxt/wxt": {
-                "Allow split of password policy":
-                "build/wxt_split_password_policy.patch"
+                "Allow split of password policy": "build/wxt_split_password_policy.patch"
             },
             "wet-boew/wet-boew": {
                 "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
@@ -253,23 +252,6 @@
                     "3107144 - Is only in latest releases.":
                     "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
                 }
-            },
-            "drupalwxt/wxt": {
-                "drupal/core": {
-                    "850600 - Postgresql patch we're not using postgresql": "https://www.drupal.org/files/issues/postgresql_ssl_dsn-850600-3.patch"
-                },
-                "drupal/linkit": {
-                    "3078075 - Detect and strip base URL from pasted URLs":
-                    "https://www.drupal.org/files/issues/2025-07-02/linkit-detect-strip-base-url-3078075-118.patch"
-                },
-                "drupal/password_policy": {
-                    "ignore password policy patch which is no longer needed with upgrade":
-                    "https://www.drupal.org/files/issues/2023-05-23/password_policy-d10.patch"
-                }
-            },
-            "drupal/pathauto": {
-                "3107144 - Is only in latest releases.":
-                "https://www.drupal.org/files/issues/2020-01-17/pathauto-3107144-2.patch"
             }
         }
     },
