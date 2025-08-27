@@ -18,6 +18,7 @@ dependencies:
     - file_delete
     - moderated_content_bulk_publish
     - node
+    - safedelete_menu_report
     - system
     - taxonomy
     - toolbar
@@ -43,6 +44,7 @@ permissions:
   - 'edit any landing_page content'
   - 'edit any page content'
   - 'moderated content bulk publish'
+  - safedelete-report
   - 'translate aafc_type taxonomy_term'
   - 'translate category taxonomy_term'
   - 'translate dcterms_subject taxonomy_term'

@@ -150,6 +150,7 @@ reroute_email: 2.1.1
 responsive_image: 9.4.11
 rest: 9.4.11
 safedelete: 1.0.36
+safedelete_menu_report: 1.0.68
 scanner: 0.0.0
 search: 9.4.11
 serialization: 9.4.11
