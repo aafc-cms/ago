@@ -1,0 +1,28 @@
+uuid: a8c208cf-bdad-4c05-94fb-6b537ad72a36
+langcode: en
+status: true
+dependencies:
+  module:
+    - safedelete_menu_report
+_core:
+  default_config_hash: LfaCEN55MK5Exvb-vSCnPcZRosDjJMFVqlkX2t0tNzs
+title: 'Safedelete Menu Report snapshot (generate)'
+id: safedelete_menu_report_generate
+weight: 0
+module: safedelete_menu_report
+callback: safedelete_menu_report_generate_snapshot
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '*/30 * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration: {  }

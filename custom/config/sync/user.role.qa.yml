@@ -10,6 +10,7 @@ dependencies:
     - file_delete
     - panels
     - panels_ipe
+    - safedelete_menu_report
     - system
     - toolbar
 id: qa
@@ -25,6 +26,7 @@ permissions:
   - 'delete files immediately'
   - 'delete files override usage'
   - 'delete own files'
+  - safedelete-report
   - 'use ipe with page manager'
   - 'use panels dashboard'
   - 'view any unpublished content'
