@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7861275e95494dacdfe6fb9dc0b246da",
+    "content-hash": "95dd398da270985ff69511504aeb7544",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
@@ -76,16 +76,16 @@
         },
         {
             "name": "agrcmsx/dxbase",
-            "version": "11.1.3.8",
+            "version": "11.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/agrcms/dxbase.git",
-                "reference": "fa42dd07db2bbd97845f5403a976239a9945488b"
+                "reference": "0d2949efdd17afb3b34f33e45347ecf83faf61ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=fa42dd07db2bbd97845f5403a976239a9945488b",
-                "reference": "fa42dd07db2bbd97845f5403a976239a9945488b",
+                "url": "https://gitlab.com/api/v4/projects/agrcms%2Fdxbase/repository/archive.zip?sha=0d2949efdd17afb3b34f33e45347ecf83faf61ff",
+                "reference": "0d2949efdd17afb3b34f33e45347ecf83faf61ff",
                 "shasum": ""
             },
             "require": {
@@ -269,7 +269,7 @@
                         "2979229 - Like only option.": "https://www.drupal.org/files/issues/2024-05-06/2979229-9-like-only-option-for-2.0.patch"
                     },
                     "drupal/layout_builder_st": {
-                        "3069964 - Null fix for moderation dashboard, otherwise WSOD on login": "https://www.drupal.org/files/issues/2025-01-02/3069964-null-fix.patch"
+                        "3069964 - Null fix for moderation dashboard, otherwise WSOD on login": "https://www.drupal.org/files/issues/2025-08-27/layout_builder_st-3069964-41.patch"
                     },
                     "drupal/views_data_export": {
                         "Save to predictable folder": "https://www.drupal.org/files/issues/2021-01-08/1875456-82.patch"
@@ -369,12 +369,12 @@
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "WxT optimal base for Drupal 8/9 sites built with the WxT distribution.",
+            "description": "WxT optimal base for Drupal 11 sites built with the WxT distribution.",
             "support": {
                 "issues": "https://gitlab.com/agrcms/dxbase/-/issues",
-                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.3.8"
+                "source": "https://gitlab.com/agrcms/dxbase/-/tree/11.1.4.0"
             },
-            "time": "2025-08-08T12:55:01+00:00"
+            "time": "2025-08-27T16:52:20+00:00"
         },
         {
             "name": "agrcmsx/prefer_latest_content",
@@ -407,21 +407,6 @@
             "transport-options": {
                 "relative": true
             }
-        },
-        {
-            "name": "algolia/places",
-            "version": "1.19.0",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/places.js/-/places.js-1.19.0.tgz"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "algolia.places"
-            },
-            "license": [
-                "MIT"
-            ]
         },
         {
             "name": "asm89/stack-cors",
@@ -14489,21 +14474,6 @@
             ]
         },
         {
-            "name": "jquery/geocomplete",
-            "version": "1.7.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/ubilabs/geocomplete/archive/refs/tags/1.7.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.geocomplete"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
             "name": "jquery/hotkeys",
             "version": "0.2.0",
             "dist": {
@@ -14513,21 +14483,6 @@
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.hotkeys"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/icheck",
-            "version": "1.0.2 ",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drgullin/icheck/zipball/8a6eb37bd7dab1e843c1b630c91c6398ff409d05"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.icheck"
             },
             "license": [
                 "MIT"
@@ -14633,21 +14588,6 @@
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.timepicker"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/toggles",
-            "version": "4.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/simontabor/jquery-toggles/archive/refs/tags/v4.0.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.toggles"
             },
             "license": [
                 "MIT"
