@@ -45,7 +45,6 @@ dependencies:
     - paragraphs
     - path
     - pathauto
-    - safedelete_menu_report
     - search
     - shortcut
     - system
@@ -129,7 +128,6 @@ permissions:
   - 'edit own video_file media'
   - 'notify of path changes'
   - 'renew token'
-  - safedelete-report
   - 'skip comment approval'
   - 'translate image media'
   - 'translate landing_page node'
