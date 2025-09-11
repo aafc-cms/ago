@@ -2,5 +2,3 @@ _core:
   default_config_hash: 1dhGRLAacWzxRZvDjBqn48bAFJ6vKe8KNYbvdPqOpNE
 menus:
   - sidebar
-bundle: landing_page
-moderation_state: archived
