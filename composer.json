@@ -232,6 +232,9 @@
             },
             "wet-boew/wet-boew": {
                 "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
+            },
+            "drupalwxt/wxt_bootstrap": {
+                "3545573 - additional form validation fixes": "https://patch-diff.githubusercontent.com/raw/drupalwxt/wxt_bootstrap/pull/35.diff"
             }
         },
         "patches-ignore": {
