@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95dd398da270985ff69511504aeb7544",
+    "content-hash": "daeb72520bcdbbcf0b4ed04fb2045e9f",
     "packages": [
         {
             "name": "agrcmsx/aafctheme",
-            "version": "dev-safedelete_menu_report-cron-fix",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/themes/aafctheme",
@@ -28,7 +28,7 @@
         },
         {
             "name": "agrcmsx/agri_admin",
-            "version": "dev-safedelete_menu_report-cron-fix",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_admin",
@@ -44,7 +44,7 @@
         },
         {
             "name": "agrcmsx/agri_reports",
-            "version": "dev-safedelete_menu_report-cron-fix",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/agri_reports",
@@ -60,7 +60,7 @@
         },
         {
             "name": "agrcmsx/config",
-            "version": "dev-safedelete_menu_report-cron-fix",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/config",
@@ -378,7 +378,7 @@
         },
         {
             "name": "agrcmsx/prefer_latest_content",
-            "version": "dev-safedelete_menu_report-cron-fix",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/prefer_latest_content",
@@ -394,7 +394,7 @@
         },
         {
             "name": "agrcmsx/wxt_overrides",
-            "version": "dev-safedelete_menu_report-cron-fix",
+            "version": "dev-11.1.x-wxt-6.1.x",
             "dist": {
                 "type": "path",
                 "url": "custom/modules/wxt_overrides",
