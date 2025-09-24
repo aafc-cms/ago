@@ -228,7 +228,8 @@
                 "https://git.drupalcode.org/project/draggableviews/-/merge_requests/29.diff"
             },
             "drupalwxt/wxt": {
-                "Allow split of password policy": "build/wxt_split_password_policy.patch"
+                "Allow split of password policy": "build/wxt_split_password_policy.patch",
+                "3545573 - additional form validation fixes": "https://patch-diff.githubusercontent.com/raw/drupalwxt/wxt/pull/332.diff"
             },
             "wet-boew/wet-boew": {
                 "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
