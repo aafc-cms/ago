@@ -1,20 +1,19 @@
 elements: |
   descriptionoffeedbackform:
-    '#text': "<p>Faites-nous parvenir vos questions ou commentaires à l'aide de ce formulaire.</p>\r\n\r\n<section>\r\n<details class=\"mrgn-bttm-md open\"><summary>\r\n<h2 class=\"h5\">Avis de confidentialité</h2>\r\n</summary>\r\n\r\n<p>Les renseignements demandés dans le présent formulaire seront utilisés pour répondre à votre demande de renseignements et sont recueillis conformément à la <a href=\"http://laws-lois.justice.gc.ca/fra/lois/A-9/index.html\">Loi sur le ministère de l'Agriculture et de l'Agroalimentaire</a>. Les renseignements personnels seront protégés conformément à la <a href=\"http://laws-lois.justice.gc.ca/fra/lois/p-21/index.html\">Loi sur la protection des renseignements personnels</a> et décrits dans le Fichier de renseignements personnels <a href=\"https://www.canada.ca/fr/secretariat-conseil-tresor/services/acces-information-protection-reseignements-personnels/acces-information/renseignements-programmes-fonds-renseignements/fichiers-renseignements-personnels-ordinaires.html#pou914\">AAC POU 914 (Communications publiques)</a>. Toute personne a le droit d'accéder aux renseignements personnels que détient Agriculture et Agroalimentaire Canada à son sujet et de demander la correction d'erreurs en communiquant avec notre coordonnateur de l'accès à l'information et de la protection des renseignements personnels à <a href=\"mailto:aafc.atip-aiprp.aac@canada.ca\">aafc.atip-aiprp.aac@canada.ca</a>.</p>\r\n</details>\r\n</section>\r\n"
+    '#text': "<p>Faites-nous parvenir vos questions ou commentaires à l'aide de ce formulaire.</p>\r\n\r\n<section>\r\n<details class=\"mrgn-bttm-md open\"><summary>\r\n<h2 class=\"h5\">Avis de confidentialité</h2>\r\n</summary>\r\n\r\n<p>Les renseignements demandés dans ce formulaire, y compris votre adresse de courriel, seront utilisés pour répondre à votre demande de renseignements et sont recueillis conformément à la <cite><a href=\"https://laws-lois.justice.gc.ca/fra/lois/a-9/index.html\">Loi sur le ministère de l'Agriculture et de l'Agroalimentaire</a></cite>.</p>\r\n\r\n<p>AAC vous demande de ne pas inclure de renseignements personnels de nature délicate (comme votre numéro d'assurance sociale, votre état de santé ou des détails sur votre situation financière) dans votre message.</p>\r\n\r\n<p>Les renseignements personnels seront protégés conformément à la <cite><a href=\"https://lois-laws.justice.gc.ca/fra/lois/p-21/index.html\">Loi sur la protection des renseignements personnels</a></cite> et décrits dans le Fichier de renseignements personnels <a href=\"https://www.canada.ca/fr/secretariat-conseil-tresor/services/acces-information-protection-reseignements-personnels/acces-information/info-source/fichiers-renseignements-personnels-ordinaires.html#pou914\">AAC POU 914 (Communications publiques)</a>.</p>\r\n\r\n<p>Toute personne a le droit d'accéder aux renseignements personnels que détient Agriculture et Agroalimentaire Canada à son sujet et de demander la correction d'erreurs en communiquant avec notre coordonnateur de l'accès à l'information et de la protection des renseignements personnels à l’adresse <a href=\"mailto:aafc.atip-aiprp.aac@agr.gc.ca\">aafc.atip-aiprp.aac@agr.gc.ca</a>. Toute personne peut aussi <a href=\"https://www.priv.gc.ca/fr/signaler-un-probleme/deposer-une-plainte-officielle-concernant-la-protection-de-la-vie-privee/deposer-une-plainte-visant-une-institution-du-gouvernement-federal/\">déposer une plainte</a> auprès du Commissariat à la protection de la vie privée si elle a des préoccupations quant au traitement de ses renseignements personnels par AAC.</p>\r\n</details>\r\n</section>\r\n"
   denotesmandatoryfield:
     '#text': "<p class=\"text-danger\">* indique un champ obligatoire</p>\r\n"
   subject:
-    '#title': Sujet
     '#options':
       'Working or studying in Canada (including the Temporary Foreign Workers Program)': 'Travailler ou étudier au Canada (y compris du Programme d’aide des travailleurs étrangers temporaires)'
       'International assistance for agriculture': 'Aide internationale pour l’agriculture'
-      'Grants, funding, and programs (excluding the Temporary Foreign Workers Program)': 'Subventions, financement et programmes (à l''exclusion du Programme d’aide des travailleurs étrangers temporaires)'
+      'Grants, funding, and programs (excluding the Temporary Foreign Workers Program)': "Subventions, financement et programmes (à l'exclusion du Programme d’aide des travailleurs étrangers temporaires)"
       'Importing and exporting': 'Importation et exportation'
       'Food safety and food labelling': 'Salubrité des aliments et étiquetage des aliments'
       'Travelling with pets': 'Voyager avec des animaux de compagnie'
       'Accounts payable (National Capital Region)': 'Comptes créditeurs (Région de la capitale nationale)'
       'Accounts receivable (National Capital Region)': 'Comptes débiteurs (Région de la capitale nationale)'
-      'Central Experimental Farm (buildings, attractions and maintenance)': 'Ferme expérimentale centrale (bâtiments, points d''intérêt et entretien)'
+      'Central Experimental Farm (buildings, attractions and maintenance)': "Ferme expérimentale centrale (bâtiments, points d'intérêt et entretien)"
       Other: Autre
   yourmessage:
     '#title': 'Votre message'
@@ -41,4 +40,4 @@ elements: |
     '#submit__label': 'Envoyer le message'
 title: 'Formulaire de communication'
 settings:
-  confirmation_message: 'Votre demande a &eacute;t&eacute; soumise et sera d&ucirc;ment prise en consid&eacute;ration.'
+  confirmation_message: '<p>Votre demande a été soumise et sera dûment prise en considération.</p>'
