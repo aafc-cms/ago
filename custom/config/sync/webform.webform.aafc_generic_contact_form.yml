@@ -1,7 +1,12 @@
 uuid: c4669a00-fdbf-4d09-a078-277094feae1e
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - wxt_ext_webform
+third_party_settings:
+  wxt_ext_webform:
+    wet_inline_validation: 1
 weight: 0
 open: null
 close: null
@@ -16,17 +21,21 @@ elements: |-
   descriptionoffeedbackform:
     '#type': processed_text
     '#text': |
-      <p>Use this form to send us your questions or comments.
-      </p>
+      <p>Use this form to send us your questions or comments.</p>
+
       <section>
-        <details class="mrgn-bttm-md open">
-          <summary>
-            <h2 class="h5">Privacy statement
-            </h2>
-          </summary>
-          <p>Information collected on this form will be used to respond to your enquiry and is collected under the authority of the <a href="http://laws-lois.justice.gc.ca/eng/acts/A-9/index.html">Department of Agriculture and Agri-Food Act</a>. The personal information will be protected in accordance with the <a href="http://lois-laws.justice.gc.ca/eng/acts/P-21/index.html">Privacy Act</a> and described in Personal Information Bank <a href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu914">AAFC PSU 914 (Public Communications)</a>. Individuals have the right to access their personal information held by Agriculture and Agri-Food Canada and to request changes to incorrect personal information by contacting our Access to Information and Privacy Coordinator at <a href="mailto:aafc.atip-aiprp.aac@canada.ca">aafc.atip-aiprp.aac@canada.ca</a>.
-          </p>
-        </details>
+      <details class="mrgn-bttm-md open"><summary>
+      <h2 class="h5">Privacy statement</h2>
+      </summary>
+
+      <p>Information collected on this form, including your email address, will be used to respond to your enquiry and is collected under the authority of the <cite><a href="http://laws-lois.justice.gc.ca/eng/acts/A-9/index.html">Department of Agriculture and Agri-Food Act</a></cite>.</p>
+
+      <p>AAFC asks that you do not include sensitive personal information (such as your social insurance number, medical status, or details about your finances) in your message.</p>
+
+      <p>Any personal information submitted will be protected in accordance with the <cite><a href="http://lois-laws.justice.gc.ca/eng/acts/P-21/index.html">Privacy Act</a></cite> and is described in Personal Information Bank <a href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu914">AAFC PSU 914 (Public Communications)</a>.</p>
+
+      <p>Individuals have the right to access their personal information held by Agriculture and Agri-Food Canada and to request changes to incorrect personal information by contacting our Access to Information and Privacy Coordinator at <a href="mailto:aafc.atip-aiprp.aac@agr.gc.ca">aafc.atip-aiprp.aac@agr.gc.ca</a>. Individuals also have the right to <a href="https://www.priv.gc.ca/en/report-a-concern/file-a-formal-privacy-complaint/file-a-complaint-about-a-federal-institution/">file a complaint</a> with the Office of the Privacy Commissioner if they have concerns about AAFC’s handling of their personal information.</p>
+      </details>
       </section>
     '#format': full_html
   denotesmandatoryfield:
@@ -91,236 +100,8 @@ elements: |-
     '#type': webform_actions
     '#title': 'Submit button(s)'
     '#submit__label': 'Send message'
-css: |-
-  form.webform-submission-form fieldset strong.error {
-    margin-bottom: 5px;
-    margin-top: 1px;
-  }
-  form.webform-submission-form fieldset .fieldset-wrapper {
-    position: relative;
-    margin-left: 15px;
-    margin-top: 30px;
-  }
-  div.form-item label.control-label.js-form-required.form-required,
-  fieldset span.fieldset-legend.js-form-required.form-required {
-    position: relative;
-    margin-bottom: 0px;
-  }
-  section.alert-danger ul.item-list__comma-list li {
-    display: block;
-  }
-  form.webform-submission-form div.form-item div.form-item--error-message.alert.alert-danger::before,
-  div.form-item--error-message.alert.alert-danger::before,
-  div.region-content form div.form-item label[for="*-required-"]::after,
-  div.form-item label.control-label.js-form-required.form-required::after,
-  fieldset span.fieldset-legend.js-form-required.form-required::after {
-    content: none;
-  }
-  div#edit-actions,
-  div#edit-cancel-link  {
-    display: inline-block;
-    padding-right: 30px;
-  }
-  div[class^="form-type-"].form-type-textarea label.form-required::before,
-  fieldset[class^="webform-type-"] span.form-required::before,
-  fieldset[class^=".webform-radio"] span.form-required::before,
-  fieldset[class^=".webform-check"] span.form-required::before,
-  div.form-item label.control-label.js-form-required.form-required::before,
-  fieldset span.fieldset-legend.js-form-required.form-required::before {
-    content: "";
-    background-image: url(https://agriculture.canada.ca/themes/custom/wxt_bootstrap/images/required.svg);
-    display: inline-block;
-    line-height: 1;
-    color: #e00;
-    background-size: 7px 7px;
-    width: 7px;
-    vertical-align: super;
-    margin-left: 4px;
-    height: 7px;
-    position: absolute;
-    top: 7px;
-    left: -15px;
-  }
-  .webform-element-description {
-    font-size: 16px;
-    color: #333;
-  }
-  div.region-content form label[for="*-required-"] {
-    position: relative;
-    margin-bottom: 0px;
-  }
-  div.form-item--error-message.alert.alert-danger {
-    border-image: none !important;
-    margin-bottom: 5px;
-    margin-left: 0px;
-    font-weight: bold;
-    background: #f3e9e8;
-    border-color: #d3080c;
-  }
-  form.webform-submission-form div.form-item.form-item-programorservice.form-group,
-  div.form-group.error.has-error label + div.select-wrapper {
-    margin-bottom: 0px;
-  }
-  div.form-group.error.has-error label + div.select-wrapper select.form-select {
-    width: 100%;
-  }
-  div.region.region-highlighted ul li {
-    display: block;
-  }
-  div.region.region-highlighted  ul li a {
-    display: list-item;
-    list-style-position: inside;
-    margin-top: 15px;
-  }
-  div.region.region-highlighted  ul li::after {
-    content: none;
-  }
-  div.region.region-highlighted  h2.sr-only {
-    position: relative;
-    font-size: 24px;
-    width: 100%;
-    height: 100%;
-    padding-top: 30px;
-  }
-  form.webform-submission-form label.control-label.js-form-required.form-required {
-    padding-bottom: 5px;
-  }
-  body.path-webform div.fieldset-wrapper .alert-sm {
-    display: flow-root;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  body.path-webform fieldset.required.error legend span {
-    color: #a94442;
-  }
-  form[id$="-add-form"] section.alert ul li a {
-    font-weight: normal;
-  }
-  form.webform-submission-form div.form-item .description {
-    margin-left: 10px;
-  }
-  form.webform-submission-form label.control-label.form-required {
-    color: #000;
-    margin-left: 10px;
-  }
-  form.webform-submission-form label.control-label.form-required strong.error {
-    margin-left: -10px;
-  }
-
-  section.alert-danger button.close {
-    opacity: unset;
-    border: 1px solid white;
-    padding: 0px 9px 3px 9px;
-    font-size: 30px;
-  }
-
-  section.alert-danger button.close:hover {
-    border-radius: 3px;
-    border-color: #999;
-    box-shadow: 0px 0px 5px #999;
-  }
-
-  body.anonymous.path-webform ul.tabs--primary.nav.nav-tabs {
-   display: none;
-  }
-
-  form.webform-submission-form section.alert.alert-danger.alert-dismissible button.close {
-    display: none;
-  }
-
-  form.webform-submission-form label.control-label.js-form-required.form-required span strong.required {
-    display: none;
-  }
-javascript: |-
-  (function ($, Drupal) { // WCAG fix issue #463 : 
-  // WCAG fix issue #463 :
-      var psWebForm = $('body.formaafcgenericcontactform');
-      var divDescription = $('div#edit-descriptionoffeedbackform');
-      var divErrorMSG    = $('div.highlighted');
-      var countErr = 1;
-      var subcountErr = 1;
-      var reqvalMSGPrefix = "";
-      var reqvalMSGMiddle = "";
-      var reqvalMSGSuffix = "";
-      var invalidPhoneNumSuffix = "";
-      var subinvalidPhoneNumSuffix = "";
-      var invalidEmailSuffix = "";
-      var subinvalidEmailSuffix = "";
-      var h2prefix = "";
-      if (typeof(psWebForm) && (psWebForm !== null)) {
-        // Fixes WCAG issue #463
-        if ($('html').attr('lang') == 'en') {
-          $(".form-required").append("<span style='color: #e00;'>&nbsp;(required)</span>");
-          h2prefix = "The form could not be submitted because ";
-          reqvalMSGPrefix = "Error ";
-          reqvalMSGMiddle = ": ";
-          reqvalMSGSuffix = " - This field is required.";
-          subreqvalMSGSuffix = ": This field is required.";
-          invalidPhoneNumSuffix = " - Please specify a valid phone number.";
-          subinvalidPhoneNumSuffix = ": Please specify a valid phone number.";
-          invalidEmailSuffix = " - Please specify a valid email.";
-          subinvalidEmailSuffix = ": Please specify a valid email.";
-        }
-        else {
-          $(".form-required").append("<span style='color: #e00;'>&nbsp;(obligatoire)</span>");
-          h2prefix = "Le formulaire n'a pu être soumis car ";
-          reqvalMSGPrefix = "Erreur ";
-          reqvalMSGMiddle = " : ";
-          reqvalMSGSuffix = " - Ce champ est obligatoire.";
-          subreqvalMSGSuffix = " : Ce champ est obligatoire.";
-          invalidPhoneNumSuffix = " - Veuillez fournir un numéro de téléphone valide.";
-          subinvalidPhoneNumSuffix = ": Veuillez fournir un numéro de téléphone valide.";
-          invalidEmailSuffix = " - Veuillez spécifier une courriel valide.";
-          subinvalidEmailSuffix = ": Veuillez spécifier une courriel valide.";
-        }
-        if ((typeof($('div.highlighted')) !== "undefined") && (typeof(divDescription) !== "undefined")) {
-          if( (divErrorMSG !== null) && (divDescription !== null) ) {
-            $('div.highlighted').detach().insertAfter(divDescription);
-            $( "section.alert.alert-danger.alert-dismissible ul li a" ).each(function(index, element) {
-              console.log(($(element).attr('href')));
-              if (($(element).attr('href')) == "#edit-phone-number-1613-666-6666-") {
-                $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + invalidPhoneNumSuffix );
-              }
-              else if (($(element).attr('href')) == "#edit-emailaddress") {
-                if ($("input#edit-emailaddress").val()) {
-                  $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " + $(this).text()  + invalidEmailSuffix );
-                }
-                else {
-                $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
-              }
-              
-              }
-              else {
-                $(this).text(reqvalMSGPrefix + countErr.toString() + reqvalMSGMiddle+ " " +$(this).text()  + reqvalMSGSuffix );
-              }
-              countErr = countErr +1;
-            });           var originstring = $( "h2.sr-only").next().text();
-            $("h2.sr-only").text(h2prefix + originstring); // set the error msg into h2
-            $("h2.sr-only").next().remove();               // remove extra html p element
-            //new logic for WCAG in Drupal Core 9.3
-            if ((typeof($('div.form-item.has-error')) !== "undefined")) {
-              $( "div.alert.alert-danger").each(function(index) {
-                var divrequiredfield = $(this).prev().prev();
-                if ($(this).parent().find("input[data-drupal-selector='edit-phone-number-1613-666-6666-']").val()) {
-                  $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subinvalidPhoneNumSuffix );
-                }
-                else if ($(this).parent().find("input[data-drupal-selector='edit-emailaddress']").val()) {
-                  $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subinvalidEmailSuffix );
-                }
-                else {
-                  $(this).text(reqvalMSGPrefix + subcountErr.toString()  + subreqvalMSGSuffix );
-                }
-                subcountErr = subcountErr +1;
-                if ((typeof(divrequiredfield) !== "undefined")) {
-                  $(this).detach().insertAfter(divrequiredfield);
-                }
-              });
-            }
-          }
-        }
-      }
-  })(window.jQuery, window.Drupal, window.drupalSettings);
+css: ''
+javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
@@ -350,7 +131,7 @@ settings:
   form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: true
-  form_disable_inline_errors: false
+  form_disable_inline_errors: true
   form_required: false
   form_autofocus: false
   form_details_toggle: false
