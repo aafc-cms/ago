@@ -1,4 +1,6 @@
 elements: |
+  markup:
+    '#markup': "<header class=\"panel-heading\">\r\n<h3 class=\"panel-title\">Rétroaction</h3>\r\n</header>"
   was_this_information_useful_:
     '#title': 'Ces renseignements vous ont-ils été utiles?'
     '#options':
