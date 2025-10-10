@@ -300,21 +300,21 @@ function wxt_overrides_page_attachments(array &$page) {
     if ($node->get('field_description')->first()) {
       $field_description_value = $node->get('field_description')->first()->getString();
     }
+
     if (isset($field_description_value)) {
-      if (strlen($field_description_value) == strlen($summary)) {
-        $summary_description = $field_description_value;
-      }
-      else {
-        if (strpos($field_description_value, $summary) !== false) {
-          $summary_description = $field_description_value;
-        }
-        else {
-          $summary_description = $field_description_value . '; '. $summary;
-        }
-      }
-    }
-    else {
+      // use typed in description
+      $summary_description = $field_description_value;
+    } else if ($node->get('body')->summary != ''){
+      // use [node:summary]
       $summary_description = $summary;
+    } else {
+      // pick the first paragraph from body
+      preg_match('/<p.*>(.+)<\/p>/U', $node->get('body')->value, $matches);
+      if (count($matches) > 1) {
+        $summary_description = $matches[1];
+      } else {
+        $summary_description = $summary;
+      }
     }
 
     $dctermsdescription = [
