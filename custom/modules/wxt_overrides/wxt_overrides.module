@@ -10,6 +10,7 @@ use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\agri_admin\AgriAdminHelper;
 use Drupal\agri_admin\Utils;
+use Drupal\Component\Render\PlainTextOutput;
 
 /**
  * Implements hook_ckeditor_settings_alter().
@@ -311,7 +312,7 @@ function wxt_overrides_page_attachments(array &$page) {
       // pick the first paragraph from body
       preg_match('/<p.*>(.+)<\/p>/U', $node->get('body')->value, $matches);
       if (count($matches) > 1) {
-        $summary_description = $matches[1];
+        $summary_description = PlainTextOutput::renderFromHtml($matches[1]);
       } else {
         $summary_description = $summary;
       }
