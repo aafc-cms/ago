@@ -305,15 +305,24 @@ function wxt_overrides_page_attachments(array &$page) {
     if (isset($field_description_value)) {
       // use typed in description
       $summary_description = $field_description_value;
-    } else if ($node->get('body')->summary != ''){
+    }
+    else if ($node->get('body')->summary != ''){
       // use [node:summary]
       $summary_description = $summary;
-    } else {
+    }
+    else {
       // pick the first paragraph from body
-      preg_match('/<p.*>(.+)<\/p>/U', $node->get('body')->value, $matches);
+      // Skip comments.
+      $config = HTMLPurifier_Config::createDefault();
+      // Activate the removal of comments.
+      $config->set('Core.RemoveProcessingInstructions', true);
+      $purifier = new HTMLPurifier($config);
+      $formbody = $purifier->purify($node->get('body')->value);
+      preg_match('/<p.*>(.+)<\/p>/U', $formbody, $matches);
       if (count($matches) > 1) {
         $summary_description = PlainTextOutput::renderFromHtml($matches[1]);
-      } else {
+      }
+      else {
         $summary_description = $summary;
       }
     }
