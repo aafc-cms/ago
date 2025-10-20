@@ -28,6 +28,7 @@ dependencies:
   module:
     - blazy
     - ck5_block_embed
+    - ckeditor5_label_fix
     - embed_block
     - linkit
     - media
@@ -35,6 +36,7 @@ dependencies:
     - toc_filter
     - url_embed
     - wxt_chart_stability
+    - wxt_overrides
 name: 'No Editor Full'
 format: no_editor_full
 weight: -7
@@ -75,6 +77,12 @@ filters:
       allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title>'
       filter_html_help: true
       filter_html_nofollow: false
+  label_link_fix_filter:
+    id: label_link_fix_filter
+    provider: ckeditor5_label_fix
+    status: true
+    weight: 101
+    settings: {  }
   linkit:
     id: linkit
     provider: linkit
@@ -82,6 +90,7 @@ filters:
     weight: 0
     settings:
       title: true
+      media_substitution: metadata
   media_embed:
     id: media_embed
     provider: media
@@ -198,7 +207,7 @@ filters:
   wxt_chart_stability_compatibilityfilter:
     id: wxt_chart_stability_compatibilityfilter
     provider: wxt_chart_stability
-    status: false
+    status: true
     weight: -99
     settings:
       clean: '<td>&nbsp;</td>'

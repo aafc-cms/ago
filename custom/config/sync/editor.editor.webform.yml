@@ -41,6 +41,7 @@ settings:
       - sourceEditing
       - code
       - fullScreen
+      - fontawesome
       - '|'
       - findAndReplace
   plugins:
