@@ -229,13 +229,13 @@
             },
             "drupalwxt/wxt": {
                 "Allow split of password policy": "build/wxt_split_password_policy.patch",
-                "3545573 - additional form validation fixes": "https://patch-diff.githubusercontent.com/raw/drupalwxt/wxt/pull/332.diff"
+                "3545573 - additional form validation fixes": "https://www.drupal.org/files/issues/2025-10-22/wxt-wetboew-validation-v2-3545573-16.patch"
             },
             "wet-boew/wet-boew": {
                 "Fix flot charts for jQuery4": "patches/wet-boew-fix-flot-charts-jquery4.patch"
             },
             "drupalwxt/wxt_bootstrap": {
-                "3545573 - additional form validation fixes": "https://patch-diff.githubusercontent.com/raw/drupalwxt/wxt_bootstrap/pull/35.diff"
+                "3545573 - additional form validation fixes": "https://www.drupal.org/files/issues/2025-10-22/wxt-bootstrapwetboew-validation-v2-3545573-16.patch"
             }
         },
         "patches-ignore": {
