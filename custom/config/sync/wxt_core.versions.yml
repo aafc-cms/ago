@@ -75,6 +75,8 @@ filebrowser: 3.0.0
 filehash: 1.11.0
 filehash_report: 1.0.0-beta4
 filter: 9.4.11
+fontawesome: 3.0.0
+fontawesome_iconpicker_widget: 3.0.0
 form_options_attributes: 2.0.2
 git_status: 1.0.0-alpha6
 help: 9.4.11
@@ -206,6 +208,7 @@ wxt_ext_blocks: 4.4.2
 wxt_ext_comment: 4.4.2
 wxt_ext_config: 4.4.2
 wxt_ext_editor: 4.4.2
+wxt_ext_fontawesome: 6.1.0
 wxt_ext_landing_page: 4.4.2
 wxt_ext_layout: 4.4.2
 wxt_ext_media: 4.4.2
