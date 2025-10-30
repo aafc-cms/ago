@@ -1,3 +1,10 @@
+
+body.node-edit .ck .ck-button[data-cke-tooltip-text*="fontawesome" i],
+body.node-add .ck .ck-button[data-cke-tooltip-text*="fontawesome" i] {
+  visibility: hidden !important;
+  pointer-events: none;
+}
+
 body.node-edit .hidden-input-box .form-items-inline, body.node-add .hidden-input-box .form-items-inline {
   display: none;
 }
