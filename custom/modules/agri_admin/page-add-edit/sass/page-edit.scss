@@ -2,6 +2,11 @@
 @import 'components/input/date';
 @import 'components/input/campaign_color';
 
+body.node-edit .ck .ck-button[data-cke-tooltip-text*="fontawesome" i],
+body.node-add .ck .ck-button[data-cke-tooltip-text*="fontawesome" i] {
+  visibility: hidden !important;
+  pointer-events: none;
+}
 
 @media screen and (min-width: 992px) {
   #edit-group-special {
