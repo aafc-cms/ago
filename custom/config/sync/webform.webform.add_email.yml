@@ -1,7 +1,12 @@
 uuid: 97d84e7c-c3b0-4a8d-a711-f4184914c62f
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - wxt_ext_webform
+third_party_settings:
+  wxt_ext_webform:
+    wet_inline_validation: 1
 weight: 0
 open: null
 close: null
@@ -67,7 +72,6 @@ elements: |-
     email_address:
       '#type': email
       '#title': 'Email Address'
-      '#title_display': none
       '#required_error': 'Please provide valid email address.'
       '#unique': true
       '#unique_entity': true
