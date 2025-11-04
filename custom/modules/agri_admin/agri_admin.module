@@ -940,8 +940,12 @@ function agri_admin_form_node_form_alter(&$form, FormStateInterface $form_state,
         $form['field_tracking_number']['widget'][0]['value']['#default_value'] = '';
       }
       elseif ($moderation_state == 'draft' &&  empty($peer_review_status)) {
+// Client wants the Peer Review Status field disabled at all times.
+// Making the minimal change for this release in case client wants it enabled in the future.
+        $form['field_peer_review']['#disabled'] = TRUE;
+// The line below is now redundant. So, commenting out.
         // Do not enable peer reviewed.
-        $form['field_peer_review']['widget']['#options_attributes']['peer_reviewed']['disabled'] = 'disabled';
+//        $form['field_peer_review']['widget']['#options_attributes']['peer_reviewed']['disabled'] = 'disabled';
       }
     } //End handle Peer_Review for page/landing_page only.
   }// End page/landing_page.
