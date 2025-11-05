@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_modified
-    - field.storage.node.field_peer_review
     - field.storage.node.field_tracking_number
     - node.type.landing_page
     - node.type.page
@@ -556,68 +555,6 @@ display:
               past_format: '@interval ago'
               granularity: 2
               refresh: 60
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_peer_review__revision_id:
-          id: field_peer_review__revision_id
-          table: node_revision__field_peer_review
-          field: field_peer_review__revision_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Peer review'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -2202,8 +2139,8 @@ display:
             type: type
             uid: uid
             moderation_state: moderation_state
+            field_modified: field_modified
             revision_timestamp: revision_timestamp
-            field_peer_review__revision_id: field_peer_review__revision_id
             field_tracking_number__revision_id: field_tracking_number__revision_id
             name_1: name_1
             operations: operations
@@ -2249,16 +2186,16 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            revision_timestamp:
+            field_modified:
               sortable: true
               default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_peer_review__revision_id:
-              sortable: false
-              default_sort_order: asc
+            revision_timestamp:
+              sortable: true
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -2375,7 +2312,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_modified'
-        - 'config:field.storage.node.field_peer_review'
         - 'config:field.storage.node.field_tracking_number'
         - 'config:workflow_list'
   moderated_content:
@@ -2401,6 +2337,5 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_modified'
-        - 'config:field.storage.node.field_peer_review'
         - 'config:field.storage.node.field_tracking_number'
         - 'config:workflow_list'
