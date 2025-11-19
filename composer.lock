@@ -3677,17 +3677,17 @@
         },
         {
             "name": "drupal/ckeditor5_table_fix",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_table_fix.git",
-                "reference": "1.0.1"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor5_table_fix-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "2682f2eeaac274a641f176cb7479f5e1688a41a0"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor5_table_fix-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "2ea6add63b1d4a3959a64e106822406147d63660"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
@@ -3695,11 +3695,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1747186326",
+                    "version": "1.0.4",
+                    "datestamp": "1763524711",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
