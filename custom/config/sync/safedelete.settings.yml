@@ -1,18 +1,19 @@
+_core:
+  default_config_hash: fw3EOzS6vL5yxwXT8vzWpkI-N5aKCinQC1_Zu9WHJyY
 bundle:
   landing_page: landing_page
   page: page
-  dir_listing: 0
-  webform: 0
-limit: '30'
+  dir_listing: '0'
+  webform: '0'
+limit: 30
 delete_button: 0
-safearchive: true
+exceptionofnodes: ''
+safearchive: 1
 orphanedpagedefinition:
   landing_page: landing_page
   page: page
-  dir_listing: 0
-  webform: 0
+  dir_listing: '0'
+  webform: '0'
 orphanedpagewithoutmenulink: landing_page
-_core:
-  default_config_hash: fw3EOzS6vL5yxwXT8vzWpkI-N5aKCinQC1_Zu9WHJyY
-exceptionofnodes: ''
 enforce_bulk_publish_verify_checkpagepublished: true
+check_published_only: true
