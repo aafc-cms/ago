@@ -9,6 +9,13 @@ limit: 30
 delete_button: 0
 exceptionofnodes: ''
 safearchive: 1
+safeanchors: true
+safebaseurlother: ''
+safebaseurlother2: ''
+safeenableotherbaseurl: 0
+safeenableotherbaseurl2: 0
+safeenableprefix: 0
+safeprefix: ''
 orphanedpagedefinition:
   landing_page: landing_page
   page: page
