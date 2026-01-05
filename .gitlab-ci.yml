@@ -1,3 +1,8 @@
+#Set the default tags so that our tests run on our desired gitlab runner(s) without burning up our monthly shared ci time.
+default:
+  tags:
+    - agrisource
+
 stages:
   - test
   - d8x
